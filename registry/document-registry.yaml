@@ -243,8 +243,8 @@ documents:
     category: "registry"
     authority: "navigation-aid"
     importance_level: "A"
-    sha256: "bcf4a028ea6e450691e6a9c73e9c2ba9a0977ec2d6074c51dd2df87f399fe39e"
-    size_bytes: 1860
+    sha256: "1132750350c921eccf9af955b2d7543e82669e635754bd7dd6e20ec356f9b2d1"
+    size_bytes: 1824
     preferred_loading: "read-first"
   - document_id: "F3B4F17ADE1CE039"
     path: "registry/context-loading-rules.md"
@@ -261,8 +261,8 @@ documents:
     category: "registry"
     authority: "navigation-aid"
     importance_level: "A"
-    sha256: "ba70eed218a6379c81eb19b6fbb40292b81e55b91b6f1dd8286e87d477585b65"
-    size_bytes: 2829
+    sha256: "c6b000e49f4dbc132f59b8f077fd2c89adcac24be7fec557609d3ce85ab1cefc"
+    size_bytes: 3118
     preferred_loading: "read-first"
   - document_id: "903B34A9E98FB098"
     path: "registry/operational-improvements.md"
@@ -708,8 +708,8 @@ documents:
     category: "task-evidence"
     authority: "navigation-aid"
     importance_level: "A"
-    sha256: "4b31e331ca73b99a2c5615c4916d5dd6b1ee8d0927420d0321b5a8bcc589de9e"
-    size_bytes: 4434
+    sha256: "c5a1d9fbfa651190c8880d5345b1cfa92b2bee9984646ebae41ddc655e3722e6"
+    size_bytes: 4597
     preferred_loading: "read-first"
   - document_id: "D9C5177937404A8C"
     path: "tasks/TASK-004/architecture-review.md"
