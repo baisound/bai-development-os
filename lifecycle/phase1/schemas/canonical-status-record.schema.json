@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "canonical-status-record.schema.json",
+  "title": "Canonical Status Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["record_schema_version", "task_id", "project_id", "record_revision", "task_status", "current_phase", "gate_status", "authorization_status", "archive_status", "status_reason", "entered_at", "updated_at", "last_verified_at", "requested_by", "authorized_by", "applied_by", "authorization_reference", "authoritative_evidence", "blocking_items", "next_eligible_phases", "verification_result", "last_transition_id", "content_checksum"],
+  "properties": {
+    "record_schema_version": { "const": "1.1.0" },
+    "task_id": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" },
+    "project_id": { "const": "javascript-roulette" },
+    "record_revision": { "type": "integer", "minimum": 1 },
+    "task_status": { "enum": ["DRAFT", "ACTIVE", "PAUSED", "BLOCKED", "STALLED", "COMPLETED", "CANCELLED", "REJECTED", "ARCHIVED"] },
+    "current_phase": { "enum": ["TASK_DEFINITION", "DESIGN", "FINAL_PLAN", "IMPLEMENTATION_AUTHORIZATION", "IMPLEMENTATION", "TESTING", "IMPLEMENTATION_REVIEW", "FINAL_JUDGMENT", "POLICY_REVIEW", "CLOSURE", "ARCHIVE"] },
+    "gate_status": { "enum": ["NOT_EVALUATED", "READY", "NOT_READY", "PASS", "FAIL", "NOT_CONFIRMED", "BLOCKED"] },
+    "authorization_status": { "enum": ["NOT_REQUIRED", "PENDING", "AUTHORIZED", "DENIED", "EXPIRED", "REVOKED"] },
+    "archive_status": { "enum": ["NOT_ELIGIBLE", "REVIEW_PENDING", "READY", "DEFERRED", "ARCHIVED"] },
+    "status_reason": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "entered_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "last_verified_at": { "type": "string", "format": "date-time" },
+    "requested_by": { "type": "object" },
+    "authorized_by": { "type": "object" },
+    "applied_by": { "type": "object" },
+    "authorization_reference": { "type": "object" },
+    "authoritative_evidence": { "type": "array", "minItems": 1 },
+    "blocking_items": { "type": "array" },
+    "next_eligible_phases": { "type": "array" },
+    "verification_result": { "enum": ["PASS", "FAIL", "NOT_CONFIRMED"] },
+    "last_transition_id": { "type": "string", "minLength": 1 },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  }
+}

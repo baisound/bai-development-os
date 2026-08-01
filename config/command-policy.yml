@@ -1,0 +1,21 @@
+allowed:
+
+  git:
+    - status
+    - diff
+    - rev-parse
+
+  npm:
+    - test
+    - run build
+    - run dev
+    - install --package-lock-only --ignore-scripts
+
+  node:
+    - node
+    - npx vitest
+
+  shell:
+    - ls
+    - pwd
+    - cat

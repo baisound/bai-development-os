@@ -1,0 +1,32 @@
+{
+  "version": "1.1.0",
+  "lease_timeout_seconds": 60,
+  "lease_extension_allowed": false,
+  "forward_phases": [
+    "TASK_DEFINITION",
+    "DESIGN",
+    "FINAL_PLAN",
+    "IMPLEMENTATION_AUTHORIZATION",
+    "IMPLEMENTATION",
+    "TESTING",
+    "IMPLEMENTATION_REVIEW",
+    "FINAL_JUDGMENT",
+    "POLICY_REVIEW",
+    "CLOSURE",
+    "ARCHIVE"
+  ],
+  "rework_reason_codes": [
+    "REWORK_DESIGN",
+    "REWORK_FINAL_PLAN",
+    "REDESIGN_REQUIRED",
+    "AUTHORIZATION_PLAN_REWORK",
+    "REWORK_TEST_FAILURE",
+    "REWORK_REVIEW_FINDING",
+    "REWORK_JUDGE_FIX",
+    "REVIEW_EVIDENCE_REQUIRED",
+    "REWORK_POLICY_VERIFY",
+    "REWORK_POLICY_IMPLEMENTATION"
+  ],
+  "undefined_transition": "UNDEFINED_TRANSITION",
+  "terminal_reopen": "TERMINAL_REOPEN_FORBIDDEN"
+}

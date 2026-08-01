@@ -1,0 +1,89 @@
+schema_version: "1.0"
+purpose: "Roleごとの最小Contextを定義し、不要な全文読込を防止する。"
+field_definitions:
+  role: "Canonical Role名。AgentやSession名ではない。"
+  always_load: "Role開始時に必ず読む軽量文書。"
+  conditional_load: "Assignmentの内容に応じて必要な場合だけ読む文書。"
+  prohibited_default_load: "明示理由なしに一括読込してはいけない文書群。"
+  hard_stop_conditions: "発生時に推測せず停止する条件。"
+roles:
+  - role: "Orchestrator"
+    always_load:
+      - "registry/current-state.md"
+      - "registry/document-registry.yaml"
+      - "active Task summary"
+      - "roles/README-Orchestrator.md"
+    conditional_load:
+      - "latest binding result required for routing"
+      - "relevant authority and workflow sections"
+    prohibited_default_load:
+      - "all TASK history"
+      - "all DOCX files"
+    hard_stop_conditions:
+      - "authority unclear"
+      - "canonical source conflict"
+      - "budget or context limit exceeded"
+  - role: "Builder"
+    always_load:
+      - "active Task summary"
+      - "approved plan or amendment"
+      - "specific assignment and allowed paths"
+      - "roles/README-Builder.md"
+    conditional_load:
+      - "specific findings or defects"
+      - "relevant schema and matrix sections"
+    prohibited_default_load:
+      - "unrelated reviews"
+      - "completed historical TASK artifacts"
+    hard_stop_conditions:
+      - "implementation not authorized"
+      - "protected file change required"
+  - role: "Critic"
+    always_load:
+      - "review target"
+      - "review mode"
+      - "roles/README-Critic.md"
+    conditional_load:
+      - "relevant architecture or responsibility boundary sections"
+      - "prior response when resolving findings"
+    prohibited_default_load:
+      - "all implementation history"
+    hard_stop_conditions:
+      - "review scope unclear"
+      - "mandatory source unreadable"
+  - role: "Judge"
+    always_load:
+      - "binding proposal / response / review chain"
+      - "roles/README-Judge.md"
+      - "authority specification"
+    conditional_load:
+      - "exact canonical source sections under dispute"
+    prohibited_default_load:
+      - "unrelated task history"
+    hard_stop_conditions:
+      - "critical evidence missing"
+      - "canonical conflict"
+  - role: "Tester"
+    always_load:
+      - "acceptance criteria"
+      - "implementation or fix report"
+      - "roles/README-Tester.md"
+    conditional_load:
+      - "prior defect evidence relevant to retest"
+      - "runtime and tests under examination"
+    prohibited_default_load:
+      - "all design conversation"
+    hard_stop_conditions:
+      - "test would corrupt canonical state"
+      - "required environment unavailable"
+  - role: "Project Policy"
+    always_load:
+      - "final implementation evidence"
+      - "residual risk"
+      - "roles/README-Project-Policy.md"
+    conditional_load:
+      - "governance and closure sections"
+    prohibited_default_load:
+      - "all intermediate implementation attempts"
+    hard_stop_conditions:
+      - "policy impact cannot be determined"
