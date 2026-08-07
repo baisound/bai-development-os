@@ -1,20 +1,25 @@
 # AI Task Summary — TASK-004
 
-## Current Cross-Repository Sync Position
+## Current Governance Position
 
-- Historical Phase 1 / Canonical Promotion Baseline: `3ce360ba5cef063cd046d88ce007d42c0b54a275`
-- Current Project Local HEAD: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Parent: `1caa275ce86e29166b00eb7c1f6958e4496622f7`
-- Local `origin/main` reference: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Project verified remote baseline: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Workspace initial verified remote baseline: `f61e98e731ca61b1a97ee8901bcc9ac94d818283`
-- Remote verification: confirmed over the network
-- Cross-repository synchronization: verified through the baselines above
-- Project branch: `main`; Project worktree: `clean`
-- TASK-004: `ACTIVE`; Canonical lifecycle: `ACTIVE / DESIGN`
-- Completion Review: `TASK_COMPLETION_REVISION_REQUIRED`
-- Workspace synchronization: verified through the baselines above
-- Next Role: `Orchestrator`
+- Canonical Record: `ACTIVE / DESIGN`
+- Canonical Record Note: `DESIGN` is a Phase 1 prototype fixture and does not represent the full observed technical result.
+- Task status: `ACTIVE`; this is not TASK-004 overall Completion.
+- Phase 1: technically completed and Judge-approved; this is not TASK-004 overall completion.
+- Phase 1.5 Context Guard Core MVP: reduced-scope technical milestone recognized at commit `1caa275ce86e29166b00eb7c1f6958e4496622f7`; implementation, tests, and review completed; Completion Judge `APPROVED_WITH_CONDITIONS`.
+- Phase 1.6: `PHASE_1_6_P0`; transferred work package; `NOT_STARTED / NOT_AUTHORIZED`.
+- Phase 5A Closure MVP / Completion Transition MVP: design partially completed; `PAUSED_BY_OWNER_PRIORITY`; Judge `APPROVED_WITH_CONDITIONS`; Final Plan Consistency `NOT_READY`; implementation `NOT_AUTHORIZED / NOT_STARTED`.
+- Completion Review: `TASK_COMPLETION_REVISION_REQUIRED`; not rerun in this update.
+- Closure: `NOT_CONFIRMED`; Archive: `NOT_ELIGIBLE`.
+- `PHASE_1_6_P0`: transferred work remains not closed; formal kickoff, Task definition, design, and authorization have not started.
+- Workspace Registry synchronization is outside this project-local update and remains unauthorized.
+- The invalid `DESIGN → POLICY_REVIEW` Candidate was not adopted.
+- No Transition Log history was added.
+- Formal Lifecycle Recovery Route: undecided and not approved.
+- Next Role: `Orchestrator`.
+- Resume Checkpoint: invalidated; not current resume authority.
+- Next action: prepare the Phase 1.6 formal kickoff package.
+- The recognized Phase 1.5 milestone commit is `1caa275…`; this summary update does not create a Lifecycle Transition.
 
 ## Artifact Inventory
 
@@ -46,17 +51,8 @@
 
 ## Current TASK-004 Position
 
-- TASK-004 Phase 1 implementation is approved and evidence-bounded.
-- D-01 through D-06 and IC4-01 through IC6-01 are `CLOSED`.
-- Verification is `88 PASS / 0 FAIL` and `23 / 23 PASS`; Critical / High is `0 / 0`.
-- Architecture Ver.2.1 and TASK-004 Lifecycle Foundation Ver.1.3 are `CURRENT_CANONICAL`.
-- Cross-format consistency is `CROSS_FORMAT_CONSISTENCY_PASS`.
-- Registry synchronization update is applied and verified under Owner authorization; cross-repository synchronization is verified through the recorded Project and Workspace remote baselines.
-- Project local and Workspace commits are complete; Completion Review, Archive, Tag, Release, TASK-005, and TASK-006 remain unstarted.
-
-## Canonical Promotion
-
-- Effective date: `2026-07-31`
-- Historical Phase 1 / Canonical Promotion Baseline: `3ce360ba5cef063cd046d88ce007d42c0b54a275`
-- Consistency Evidence: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md`
-- Documentation Manifest: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/documentation-decision-manifest.md`
+- Phase 1 technical completion remains approved without changing the Canonical prototype fixture.
+- Phase 1.5 reduced-scope completion is recognized with `APPROVED_WITH_CONDITIONS`; Foundation-wide items remain transferred to `PHASE_1_6_P0`.
+- Phase 1.6 is not started or authorized.
+- Phase 5A remains paused; its Final Plan Consistency is not ready and implementation is not authorized.
+- TASK-004 remains `ACTIVE / DESIGN`; Completion Review remains revision-required; Closure is not confirmed; Archive is not eligible.

@@ -153,3 +153,20 @@ TASK-004 will formally define:
 - Context, Cost, and Model controls.
 
 Until then, Orchestrator MUST treat those areas as governed but not fully formalized.
+
+---
+
+# Adaptive Development Governance Routing
+
+Before activating development Roles, Orchestrator classifies the requested change with `selectDevelopmentProfile()` or an equivalent validated implementation.
+
+Routing MUST account for system scale, feature scale, criticality, failure impact, reversibility, novelty, and high-risk flags. Orchestrator MUST NOT require the same Role chain for every Task.
+
+- DEV-0/DEV-1: compress low-value ceremony and use targeted validation.
+- DEV-2: normal focused design/test/review.
+- DEV-3: require high-assurance Critic and regression coverage.
+- DEV-4: require architecture/failure-mode review, independent Critic/Tester, Judge, and expanded core/consumer regression.
+
+Localized fixes re-run only impacted gates/tests plus profile-required regression. Full workflow restart is reserved for changes that invalidate upstream assumptions.
+
+Adaptive profile selection controls workflow depth only; model-routing policy remains separate.

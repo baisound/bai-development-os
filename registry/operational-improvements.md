@@ -28,3 +28,15 @@ This registry records improvements discovered through real operation. These item
 5. Session state must be disposable and recoverable from artifacts.
 6. Budget exhaustion, timeout, empty commands, and repeated failed attempts trigger Safe Stop.
 7. Cost reduction must not weaken authority, evidence, testing, or historical integrity.
+
+## Product Extraction Addendum — 2026-08-08
+
+| ID | Improvement | Decision / Status | Planned integration |
+|---|---|---|---|
+| OP-013 | Repository / Product Boundary Correction | Implemented in extraction working tree | Standalone `bai-development-os`; consumer adapters |
+| OP-014 | Adaptive Development Governance | Core foundation implemented; verification required | DEV-0 through DEV-4 workflow-depth selector |
+| OP-015 | Impact-scoped Revalidation | Adopted with Adaptive Governance | Avoid full workflow restart for localized fixes |
+
+### Adaptive Governance Principle
+
+Development assurance depth is proportional to system scale, feature scale, criticality, failure impact, reversibility, novelty, and high-risk boundaries. Cost reduction is achieved by removing unnecessary governance work, not by weakening tests for critical functions. The selector does not modify permanent model-routing policy.

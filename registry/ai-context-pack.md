@@ -1,48 +1,55 @@
-# AI Development OS — Lightweight Context Pack
+# BAI Development OS — Lightweight Context Pack
 
 ## Start Here
 
 1. `registry/current-state.md`
 2. `registry/context-loading-rules.md`
-3. `registry/document-registry.yaml`
-4. Active Task summary
+3. `PROJECT.md`
+4. Active OS Task summary
 5. Active Role specification
-6. Only the required source sections
+6. Only the source sections required by the assignment
 
 ## System Identity
 
-AI Development OS is a governance and execution framework for safe, evidence-driven, multi-Role development. Canonical Roles remain distinct from Agents and Sessions.
+BAI Development OS is a standalone reusable development foundation. It is not a subsystem of `javascript-roulette`.
 
-## Canonical Roles
+Canonical OS root:
 
-- Orchestrator
-- Builder
-- Critic
-- Judge
-- Tester
-- Project Policy
+```text
+/home/baisound/bai-development-os
+```
+
+Reference consumer:
+
+```text
+/home/baisound/projects/javascript-roulette
+```
 
 ## Current Priority
 
-Current Project: `javascript-roulette`; Active Task: `TASK-004`.
-Project Local HEAD is `ff72c7d12a2174251f83219a2792bc84bd1ff088` with
-parent `1caa275ce86e29166b00eb7c1f6958e4496622f7`. The Project remote main
-is verified at the same commit. The Workspace initial bootstrap commit and
-verified remote baseline are `f61e98e731ca61b1a97ee8901bcc9ac94d818283`.
-GitHub remote verification is complete over the network, and
-cross-repository synchronization is verified through these baselines. The
-historical Phase 1 / Canonical Promotion Baseline
-`3ce360ba5cef063cd046d88ce007d42c0b54a275` is retained as historical
-metadata. Canonical lifecycle remains `ACTIVE / DESIGN`; Completion Review is
-`TASK_COMPLETION_REVISION_REQUIRED`; Next Role is `Orchestrator`. Do not start
-Completion Review, a Lifecycle Transition, Phase 1.6, a new Task, or a video
-Task.
+- TASK-004 remains the active OS foundation Task.
+- P0.0 corrects repository/product ownership.
+- P0.1 adds Adaptive Development Governance so development depth is proportional to change size and criticality.
+- Phase 1.6 is not implicitly authorized by the extraction.
+
+## Adaptive Routing Rule
+
+Before choosing a Role sequence, classify the change into DEV-0 through DEV-4. Small peripheral work must not receive foundation-level ceremony. Core/foundation work must receive stronger Critic and test assurance. Localized fixes re-run impacted gates/tests plus profile-required regression instead of restarting the entire workflow.
+
+Adaptive profile selection does not modify permanent model-routing policy.
+
+## Roadmap Identity
+
+- TASK-005 Knowledge OS
+- TASK-006 Registry / Resolver / Automation
+- TASK-007 Monitoring & Dashboard
+- TASK-008 External Integration
+- TASK-009 is not currently defined
 
 ## Non-negotiable Rules
 
-- No implementation without explicit authorization.
-- Final Plan and approved amendments govern implementation.
-- Tester, Critic, and Judge remain independent in authority even when executed by one runtime.
-- Unknown or contradictory state triggers Safe Stop.
-- Historical evidence is not overwritten.
-- Summary-first loading reduces cost; exact source is required for binding details.
+- Historical Evidence is preserved.
+- Consumer projects do not host copies of OS core implementation.
+- Unknown or contradictory authority state Safe Stops.
+- Context is loaded summary-first and impact-first.
+- Safety-critical testing is not reduced for token economy.
