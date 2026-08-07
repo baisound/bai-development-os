@@ -30,16 +30,11 @@ TASK_DEFINITION
 → ARCHIVE_READINESS_DECISION
 ```
 
-## Important limitation
+## Formal Lifecycle Foundation
 
-The final Task Lifecycle state model is reserved for TASK-004.
+TASK-004 is complete and its Lifecycle Foundation is authoritative. All governed Tasks MUST use the formal Status/Phase/Gate/Authorization model, append-only transition evidence, recovery checkpoint rules, Context/Cost/Model controls, and distinct Closure/Archive readiness decisions.
 
-Until TASK-004 is approved:
-
-- do not invent authoritative state transitions,
-- do not claim formal closure or archive completion without required records,
-- use the flow above as operational routing guidance,
-- preserve current evidence and route unresolved governance decisions.
+PAUSED, BLOCKED, and STALLED are distinct safe-stop states. Resume requires a valid checkpoint plus the state-specific recovery evidence. Completion is not Archive; Archive requires separate readiness and post-archive verification.
 
 ## Routing
 
@@ -63,3 +58,13 @@ Closure Readiness and Archive Readiness are separate decisions.
 
 Accepted risks, unresolved high-severity findings, missing canonical status records, or verification failure may block closure or archive.
 
+
+---
+
+# Adaptive Development Profile Selection
+
+Before selecting a Role sequence, the Orchestrator MUST classify the requested change using the Adaptive Development Governance Specification. The selected DEV profile determines which reviews, tests, evidence, and gates are actually required.
+
+A fixed Builder -> Critic -> Judge -> Tester chain MUST NOT be applied mechanically to every change. DEV-0/DEV-1 may compress or omit unnecessary review roles. DEV-3/DEV-4 MUST strengthen Critic and test assurance. Rework MUST be impact-scoped rather than restarting the entire workflow unless the change invalidates the broader design.
+
+The profile selector MUST NOT silently change the model-routing policy.

@@ -1,0 +1,83 @@
+{
+  "manifest": {
+    "archive_manifest_version": "1.0.0",
+    "archive_id": "346080af-2728-4bc7-a908-42410823e8b7",
+    "task_id": "TASK-004",
+    "destination": "IN_PLACE_READ_ONLY_AFTER_COMMIT_TAG",
+    "retention": "INDEFINITE",
+    "files": [
+      {
+        "path": "architecture/BAI_Development_OS_Architecture_Ver2.4.md",
+        "checksum": "sha256:3647a7f691e2d8539399958bc7bc4f86f07af79eca35a79060460cb359b3243a"
+      },
+      {
+        "path": "architecture/BAI_Development_OS_Architecture_Ver2.4.docx",
+        "checksum": "sha256:1644ee28513f61f643bf0fb65ae8811563c86b0e41e0e40b0952b80ce9fc9686"
+      },
+      {
+        "path": "architecture/BAI_Development_OS_Architecture_Ver2.4.summary.md",
+        "checksum": "sha256:fa650d6f7f992cbc737b45ee7ec7311ef02e9cdacfba19fe885a6fa2b61bec41"
+      },
+      {
+        "path": "specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md",
+        "checksum": "sha256:92a6284282cb6abc60f8b5f63b8a75a67f7ef3dcef562914e9499b67b8c28d28"
+      },
+      {
+        "path": "specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx",
+        "checksum": "sha256:2769fd94ce36ee6d8ab64fc6f89f30905a02ce74e94bfc0dffde878d77728395"
+      },
+      {
+        "path": "specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.summary.md",
+        "checksum": "sha256:cb8397c9903742c2063474ae89e29d4493ba352e9d09d6c18b40263f5c1986b4"
+      },
+      {
+        "path": "tasks/TASK-004/TASK-004.summary.md",
+        "checksum": "sha256:f3e43142389a7f5ec438707b581629bb84ab88f90598fedee0f7b40f19869c84"
+      },
+      {
+        "path": "tasks/TASK-004/phase2-to-6-final-verification.md",
+        "checksum": "sha256:b8f116374c30107b308ec263377d8a57149f44235cf2f1b11db29fc0895ed0e5"
+      },
+      {
+        "path": "tasks/TASK-004/phase2-to-6-critic-review.md",
+        "checksum": "sha256:8fcaaa288057f6a39e806c00d989878f3d66da2795d6eec84cb5fa7ab67ec3ff"
+      },
+      {
+        "path": "tasks/TASK-004/task004-final-judge-decision.md",
+        "checksum": "sha256:cff88ac35b4e2264d3e54e2afce08883705cd78df8ff63ab4a7b4a428385a3a9"
+      },
+      {
+        "path": "tasks/TASK-004/task004-final-closure-readiness.md",
+        "checksum": "sha256:b9ce2aac859c61d98be1f82db3e2cb26f8d445179354ef1e1cf7f680ede3cd0b"
+      },
+      {
+        "path": "tasks/TASK-004/task004-final-completion-record.md",
+        "checksum": "sha256:0e7c9d71be6ef3adc57c95014d600c3b937f96b01e474f7f074ab9189de0028b"
+      },
+      {
+        "path": "tasks/TASK-004/phase6-system-sync-verify.json",
+        "checksum": "sha256:32c3c21ef1bd813beac1142b722c6beab5c6dea9251ec953650173330eded065"
+      }
+    ],
+    "references": [
+      "ARCHITECTURE-V2.4",
+      "LIFECYCLE-V1.6",
+      "TASK004-COMPLETION"
+    ],
+    "knowledge_provenance": [
+      "TASK-004",
+      "Architecture-Ver2.4",
+      "Lifecycle-Foundation-Ver1.6"
+    ],
+    "created_at": "2026-08-07T18:25:00.000Z"
+  },
+  "verified": {
+    "result": "ARCHIVE_VERIFIED",
+    "archive_id": "346080af-2728-4bc7-a908-42410823e8b7",
+    "file_count": 13
+  },
+  "readiness": {
+    "result": "ARCHIVE_READY",
+    "missing": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/adaptive-development-profile.schema.json",
+  "title": "BAI Development OS Adaptive Development Change Classification",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "system_scale": { "enum": ["LOCAL", "PROJECT", "MULTI_PROJECT", "FOUNDATION"] },
+    "feature_scale": { "enum": ["MICRO", "SMALL", "MEDIUM", "LARGE"] },
+    "criticality": { "enum": ["AUXILIARY", "STANDARD", "CORE", "FOUNDATION"] },
+    "failure_impact": { "enum": ["LOW", "MODERATE", "HIGH", "CRITICAL"] },
+    "reversibility": { "enum": ["EASY", "MODERATE", "HARD"] },
+    "novelty": { "enum": ["ROUTINE", "ADAPTATION", "NEW_ARCHITECTURE"] },
+    "change_kind": { "enum": ["DOC_ONLY", "TEST_ONLY", "CONFIG", "BUGFIX", "FEATURE", "REFACTOR", "ARCHITECTURE"] },
+    "touches_security": { "type": "boolean" },
+    "touches_authorization": { "type": "boolean" },
+    "touches_state_machine": { "type": "boolean" },
+    "data_migration": { "type": "boolean" },
+    "cross_project_contract": { "type": "boolean" },
+    "external_side_effects": { "type": "boolean" }
+  }
+}

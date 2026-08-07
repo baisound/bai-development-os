@@ -1,0 +1,22 @@
+# Resume Checkpoint
+
+- checkpoint_id:
+- task_id:
+- status_revision:
+- saved_status:
+- saved_phase:
+- last_completed_action:
+- next_action:
+- required_files:
+- working_tree_state:
+- environment_fingerprint:
+- running_processes:
+- external_dependencies:
+- authorization_snapshot:
+- budget_snapshot:
+- unconfirmed_items:
+- invalidation_triggers:
+- expires_at:
+- emergency_stop: false
+- resume_requires_owner: false
+- content_checksum:

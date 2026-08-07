@@ -1,38 +1,47 @@
-# AI Development OS — Workspace-Level Specifications
+# BAI Development OS
 
-This directory contains canonical specifications shared by every AI-managed project in the BAISOUND workspace.
+BAI Development OS is a standalone, reusable foundation for AI-assisted software and creative-technology development.
 
-## Directory roles
+It is intentionally separated from any one consumer project. The historical `javascript-roulette` repository is now a reference consumer/regression fixture rather than the host of OS core development.
 
-- `common/`: shared vocabulary, authority, evidence, artifact, and workflow rules.
-- `roles/`: Role-specific operational specifications.
+## Core areas
 
-Project-specific tasks, templates, configuration, evidence, and history remain under:
+- `src/context-guard/` — Context selection, permit, override, evidence binding, activation safety
+- `src/lifecycle/` — Canonical Task lifecycle state and durable transitions
+- `src/governance/` — Adaptive development profile selection
+- `common/` — shared authority, evidence, artifact, vocabulary, and workflow rules
+- `roles/` — Builder, Critic, Tester, Judge, Orchestrator, Project Policy specifications
+- `registry/` — current state and document/context indexes
+- `tasks/TASK-004/` — current OS foundation Task history and evidence
+- `context-guard/` / `lifecycle/` / `schemas/` — machine-readable contracts
+- `tests/` — core regression and assurance tests
+
+## Adaptive development governance
+
+BAI Development OS does **not** force every change through the same amount of ceremony. The required design depth, Critic/Tester/Judge participation, test density, evidence level, and revalidation scope are selected from the actual change characteristics: system scale, feature scale, criticality, failure impact, reversibility, novelty, and high-risk boundaries.
+
+The profile system changes **development process depth**, not the permanent model-selection policy.
+
+## Consumer example
 
 ```text
-projects/<project-name>/docs/ai-team/
+/home/baisound/projects/javascript-roulette/.bai-os/project.json
 ```
 
-## Precedence
+A consumer project keeps its own source and Task evidence. Shared OS implementation remains here.
 
-1. Approved AI Development OS design and Lifecycle Specification
-2. Workspace-level common specifications
-3. Workspace-level Role specification
-4. Project-specific `PROJECT.md`
-5. Active task artifacts and current authorized prompt
-6. Temporary notes
-7. Historical discussion
+## Verification
 
-A project-specific rule may add a constraint, but it MUST NOT silently weaken a workspace-level safety or authorization rule.
+```bash
+npm test
+npm run check:boundaries
+```
 
-## Modification rule
+See `MIGRATION.md` for the repository rename and product-extraction procedure.
 
-All AI-managed projects may read this directory.
 
-Agents MUST NOT modify this directory unless the user explicitly authorizes a workspace-level specification update.
+## TASK-004 Lifecycle Foundation Completion
 
-## TASK-004 reservation
+As of 2026-08-08, TASK-004 implements the full Lifecycle Foundation through Phase 6: recovery/checkpoint control, Context Manifest and trust/freshness control, Cost and capability-based Model routing, Closure/Archive/dependency/migration control, and authorized System File synchronization. The current machine canonical references are `architecture/BAI_Development_OS_Architecture_Ver2.4.md` and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`. TASK-004 is completed after final verification; archive remains an independent readiness/commit boundary. Permanent model-selection policy remains separate from Adaptive Development Governance.
 
-The final Lifecycle Specification, Canonical Status Record, Closure Readiness, Archive Readiness, Resume, Rollback, Context, Cost, and Model-control rules will be formalized by TASK-004.
-
-Until then, the existing workflow specification is authoritative operational guidance but does not invent final lifecycle states.
+Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-control`, `./closure`, `./archive`, `./dependency`, and `./system-sync`.

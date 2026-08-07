@@ -1,26 +1,35 @@
 # README for AI Agents
 
-This directory contains both human-readable and AI-readable documentation.
+BAI Development OS is a standalone product rooted at `/home/baisound/bai-development-os`.
 
 ## Default Entry Point
 
 Read in this order:
 
-1. `registry/ai-context-pack.md`
-2. `registry/current-state.md`
+1. `registry/current-state.md`
+2. `registry/ai-context-pack.md`
 3. `registry/context-loading-rules.md`
-4. `registry/document-registry.yaml`
+4. `PROJECT.md`
 5. `tasks/<ACTIVE_TASK>/<ACTIVE_TASK>.summary.md`
-6. `roles/README-<ACTIVE_ROLE>.md`
-7. The exact source sections required by the assignment
+6. Adaptive Development Profile result
+7. `roles/README-<REQUIRED_ROLE>.md` only for Roles required by that profile
+8. Exact source sections required by the assignment
 
-## Canonical Format Policy
+## Product Boundary
 
-- Markdown is the preferred machine-readable format.
-- DOCX remains a human-readable copy.
-- Adjacent `*.summary.md` files are loading aids, not binding sources.
-- When Markdown and DOCX differ, stop and report the conflict unless a higher-authority artifact defines precedence.
+Do not treat `/home/baisound/projects/javascript-roulette` as the OS root. Consumer repositories keep project-local source and evidence only.
 
-## Cost Rule
+## Adaptive Development Rule
 
-Do not read all documents by default. Do not repeatedly extract DOCX when a Markdown copy exists.
+Do not mechanically run every Role for every change. Use DEV-0 through DEV-4 to select the necessary design, review, testing, and evidence depth. Core/foundation changes require stronger assurance; small peripheral changes use compressed governance.
+
+## Model Policy Boundary
+
+Adaptive Development Governance changes workflow depth, not permanent model-selection policy.
+
+
+## TASK-004 Completed Lifecycle Contract
+
+TASK-004 is the completed Lifecycle Foundation baseline. Use `architecture/BAI_Development_OS_Architecture_Ver2.4.md` and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` as current machine canonicals. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
+
+Adaptive Development Governance still changes workflow depth rather than permanent model-selection policy.

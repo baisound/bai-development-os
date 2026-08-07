@@ -1,1188 +1,1738 @@
-schema_version: "1.0"
-registry_generated_at: "2026-07-27T13:31:07"
-purpose: "AI向けの文書探索・優先読込・整合性確認に使用する索引。正本文書そのものではない。"
+schema_version: '1.1'
+registry_generated_at: '2026-08-08T03:15:00+09:00'
+purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
-  document_id: "パスから生成した安定識別子。権限や正本性を意味しない。"
-  path: "ai-teamルートからの相対パス。"
-  title: "文書タイトル。Markdownでは先頭見出しから抽出する。"
-  category: "文書の責務分類。"
-  authority: "正本、写し、Evidence、補助索引などの位置付け。"
-  importance_level: "A=毎回、B=条件付き、C=必要時、D=監査時のみ。"
-  sha256: "ファイル内容のSHA-256。変更検出用であり、内容の正しさは保証しない。"
-  size_bytes: "ファイルサイズ。読込コスト見積りの補助。"
-  preferred_loading: "推奨読込方針。"
+  document_id: パスから生成した安定識別子。権限や正本性を意味しない。
+  path: BAI Development OSルートからの相対パス。
+  title: 文書タイトル。Markdownでは先頭見出しから抽出する。
+  category: 文書の責務分類。
+  authority: 正本、写し、Evidence、補助索引などの位置付け。
+  importance_level: A=毎回、B=条件付き、C=必要時、D=監査時のみ。
+  sha256: ファイル内容のSHA-256。変更検出用であり、内容の正しさは保証しない。
+  size_bytes: ファイルサイズ。読込コスト見積りの補助。
+  preferred_loading: 推奨読込方針。
 documents:
-  - document_id: "3B1BB0D79619CBC9"
-    path: "README-AI.md"
-    title: "README for AI Agents"
-    category: "workspace-document"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "ff904fc4e07837954dbad635acc16557508c9f6add9572ef388a4ace819068b4"
-    size_bytes: 847
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "B335630551682C19"
-    path: "README.md"
-    title: "AI Development OS — Workspace-Level Specifications"
-    category: "workspace-document"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "25104b96eeabe8475118b9064a609a67cebce0487c29c719d3d98e5afea0b17a"
-    size_bytes: 1415
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "8EC74867938C777A"
-    path: "architecture/AI_Development_OS_Architecture_Ver1.0.docx"
-    title: "AI_Development_OS_Architecture_Φ¿¡Φ¿êµ¢╕_Ver1.1_τ╡▒σÉêµ║ûσéÖτëê.docx"
-    category: "architecture"
-    authority: "human-readable-copy"
-    importance_level: "C"
-    sha256: "b134a8c066dc6b4dc2349abcd585281c3ba75f401379fb273e295891e3c31c93"
-    size_bytes: 65467
-    preferred_loading: "on-demand"
-  - document_id: "548F6F14333993A4"
-    path: "architecture/AI_Development_OS_Architecture_Ver1.0.md"
-    title: "AI-readable canonical copy generated from the adjacent DOCX."
-    category: "architecture"
-    authority: "machine-readable-canonical-copy"
-    importance_level: "C"
-    sha256: "49c5cd5d1ba85870bed7d6776a6162397bdf4d4070df56467d98e1400887c509"
-    size_bytes: 61865
-    preferred_loading: "on-demand"
-  - document_id: "5390C8B409EC616A"
-    path: "architecture/AI_Development_OS_Architecture_Ver1.0.summary.md"
-    title: "AI Summary — AI-readable canonical copy generated from the adjacent DOCX."
-    category: "architecture"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "8fce82d3e94f2213990378757cd2cac89c7ab4ac5842f949ca150ce2a007dd2e"
-    size_bytes: 5725
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "E0611D071CF96932"
-    path: "architecture/AI_Development_OS_Architecture_Ver2.0.docx"
-    title: "AI_Development_OS_Architecture_設計書_Ver2.0_持続可能開発・現状記録統合版.docx"
-    category: "architecture"
-    authority: "human-readable-copy"
-    status: "SUPERSEDED_HISTORICAL_BASELINE"
-    writable: false
-    superseded_by: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1"
-    importance_level: "C"
-    sha256: "30e0fdd353fd94407e1f7b1c4e3782f214b976fc351cc49535d51dbfb3207159"
-    size_bytes: 73360
-    preferred_loading: "on-demand"
-  - document_id: "167BE6BA96714791"
-    path: "architecture/AI_Development_OS_Architecture_Ver2.0.md"
-    title: "AI-readable canonical copy generated from the adjacent DOCX."
-    category: "architecture"
-    authority: "machine-readable-canonical-copy"
-    status: "SUPERSEDED_HISTORICAL_BASELINE"
-    writable: false
-    superseded_by: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1"
-    importance_level: "C"
-    sha256: "1ae1803eebc26bac9ded0479b6d7167e624afb537fc5fc23c562a1a13cde381e"
-    size_bytes: 78126
-    preferred_loading: "on-demand"
-  - document_id: "060C9E34E219D36E"
-    path: "architecture/AI_Development_OS_Architecture_Ver2.0.summary.md"
-    title: "AI Summary — AI-readable canonical copy generated from the adjacent DOCX."
-    category: "architecture"
-    authority: "navigation-aid"
-    status: "SUPERSEDED_HISTORICAL_BASELINE"
-    writable: false
-    superseded_by: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1"
-    importance_level: "B"
-    sha256: "44af5430ee583a91700066cabe1deaffa4382e21c9ea47e9b122310db4809c3a"
-    size_bytes: 5865
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "3543854C9018DEDE"
-    path: "archive/role-specifications/pre-v2/README.md"
-    title: "Pre-v2 Role Specifications Archive"
-    category: "archive"
-    authority: "supporting-artifact"
-    importance_level: "D"
-    sha256: "ee8d01ddc9cd3d13135c6ad6811277f53bd918edb53ec2250fa4f1fbb5378171"
-    size_bytes: 255
-    preferred_loading: "audit-only"
-  - document_id: "1F2AF461C6936CF2"
-    path: "common/Artifact-Specification.md"
-    title: "Artifact Specification"
-    category: "common-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "cb89e41a421fde650648c37768f8037213c9727e8a9450188b9d635659f1ee7a"
-    size_bytes: 3951
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "365E0882CB9D1D0C"
-    path: "common/Authority-Specification.md"
-    title: "Authority Specification"
-    category: "common-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "38459f8a96a21e03bd55cdd219dfe21ae017c8edbf0027ebc12df66e14c0076d"
-    size_bytes: 1885
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "5B7A7DED873DF6B2"
-    path: "common/Evidence-Specification.md"
-    title: "Evidence Specification"
-    category: "common-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "a81b65133bc45ca7e044e7484229f2b1731be85c25508b425852e23fed4759c6"
-    size_bytes: 1509
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "7650F11F4F02F04E"
-    path: "common/README-Common.md"
-    title: "Common Role Specification"
-    category: "common-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "51084f366de8699a76fb27ddb289b4e9542cf8fc2f00f5a839998bcbd39ff882"
-    size_bytes: 2787
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "6E5DA3D48C70DEB6"
-    path: "common/Vocabulary-Specification.md"
-    title: "Vocabulary Specification"
-    category: "common-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "4351feb4e623c0a5ee8ed42d9a62da0e991ad8f214390e8c35edd6dd2e8a4800"
-    size_bytes: 2039
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "C1F2A3B9266498FD"
-    path: "common/Workflow-Specification.md"
-    title: "Workflow Specification"
-    category: "common-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "54a8da9dcaee9350a05b02af3936a362573daa0061987ab57e8797789438d829"
-    size_bytes: 1888
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "927DE6577978D659"
-    path: "common/common-specifications.summary.md"
-    title: "AI Summary — Common Specifications"
-    category: "common-specification"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "f6e7d2bca08c747c8b6b73c6437a0bc8995fababfbb4dedb9ab3599a59f02374"
-    size_bytes: 2358
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "1C24D28B28058C31"
-    path: "config/.gitkeep"
-    title: ".gitkeep"
-    category: "configuration"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    size_bytes: 0
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "6E8C7FDEC58C9CB5"
-    path: "config/README.md"
-    title: "Project AI-Team Configuration"
-    category: "configuration"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "0e461f0c0fac926a0ee4422bf5192045a52ba6981d70cd308b3221a24e00506a"
-    size_bytes: 184
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "A4431CEA1F132B7A"
-    path: "config/command-policy.yml"
-    title: "command-policy.yml"
-    category: "configuration"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "a7b0a35d9253b7050936fa0f498df1acc9f66801f5a961204633f5f3d09d6bab"
-    size_bytes: 232
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "C3B673D7F9FEDA0D"
-    path: "lifecycle/phase1/config/transition-matrix.json"
-    title: "transition-matrix.json"
-    category: "runtime-state-or-schema"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "425649ac0c4c1039ad5aadeab2625a821cd6cd9d40482fb4522d7100921b2ee1"
-    size_bytes: 759
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "19CAB4DA2BB8ADCA"
-    path: "lifecycle/phase1/schemas/canonical-status-record.schema.json"
-    title: "canonical-status-record.schema.json"
-    category: "runtime-state-or-schema"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "0fbd882a9b20a0ce45d3484e5cb24c12fdecfb38ba4f1bb641cb080bef11542c"
-    size_bytes: 2422
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "3D92DD3D39FC93CD"
-    path: "lifecycle/phase1/tasks/TASK-004/canonical-status.json"
-    title: "canonical-status.json"
-    category: "task-evidence"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "ca16e0fa96171f8da35c0a98ea30e1cc5dcabda6f2bb64d34d0ed33f217c74a7"
-    size_bytes: 1667
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "EAA03DD54A107D62"
-    path: "lifecycle/phase1/tasks/TASK-004/migration-mapping.jsonl"
-    title: "migration-mapping.jsonl"
-    category: "task-evidence"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    size_bytes: 0
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "80D5EEDAC43DA0C0"
-    path: "lifecycle/phase1/tasks/TASK-004/transition-log.jsonl"
-    title: "transition-log.jsonl"
-    category: "task-evidence"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    size_bytes: 0
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "1EF866BCD4C452BA"
-    path: "registry/ai-context-pack.md"
-    title: "AI Development OS — Lightweight Context Pack"
-    category: "registry"
-    authority: "navigation-aid"
-    importance_level: "A"
-    sha256: "1132750350c921eccf9af955b2d7543e82669e635754bd7dd6e20ec356f9b2d1"
-    size_bytes: 1824
-    preferred_loading: "read-first"
-  - document_id: "F3B4F17ADE1CE039"
-    path: "registry/context-loading-rules.md"
-    title: "Context Loading Rules"
-    category: "registry"
-    authority: "navigation-aid"
-    importance_level: "A"
-    sha256: "7bea650b3bf576303e40276ace44330e4c971f2458ca00823de15d0d2cdf0165"
-    size_bytes: 2879
-    preferred_loading: "read-first"
-  - document_id: "273700F9733DD9C4"
-    path: "registry/current-state.md"
-    title: "AI Development OS — Current State"
-    category: "registry"
-    authority: "navigation-aid"
-    importance_level: "A"
-    sha256: "c6b000e49f4dbc132f59b8f077fd2c89adcac24be7fec557609d3ce85ab1cefc"
-    size_bytes: 3118
-    preferred_loading: "read-first"
-  - document_id: "903B34A9E98FB098"
-    path: "registry/operational-improvements.md"
-    title: "Operational Improvements Registry"
-    category: "registry"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "31ef702fcc721537c470642303c7d93af0cc3967f8930157617b2d13e462adb3"
-    size_bytes: 1912
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "B29D9C6CD49F9C42"
-    path: "resume-check.mjs"
-    title: "resume-check.mjs"
-    category: "workspace-document"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "ac76b3e42e7200e70fb743a4ac9aa96077ccd02bc52fc05bfafe734b8d011497"
-    size_bytes: 50
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "C37C551EE19C092B"
-    path: "reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.docx"
-    title: "TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.docx"
-    category: "review"
-    authority: "human-readable-copy"
-    importance_level: "C"
-    sha256: "8f99f0081eb3b2afe1a2f71a9681d2f9c965116a7aa354fbdbd63aff86f61b98"
-    size_bytes: 43718
-    preferred_loading: "on-demand"
-  - document_id: "485EEF7217A1DA4D"
-    path: "reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.md"
-    title: "AI-readable canonical copy generated from the adjacent DOCX."
-    category: "review"
-    authority: "supporting-artifact"
-    importance_level: "C"
-    sha256: "39acb2bd7e6170f255f02950af66d0c22dace1ce7c38e73e8823a94917b09165"
-    size_bytes: 15684
-    preferred_loading: "on-demand"
-  - document_id: "2F2372321F6974A5"
-    path: "reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.summary.md"
-    title: "AI Summary — AI-readable canonical copy generated from the adjacent DOCX."
-    category: "review"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "0da355f24776f482f578c6c353191e2e7247a24cee653026fabc2e2a98089432"
-    size_bytes: 5045
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "52D16D0E0E38EDE4"
-    path: "roles/README-Builder.md"
-    title: "Builder Role Specification"
-    category: "role-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "f1e6fd8f9cbe4c771858774118c334addf60c9e7072b41ad892796ad4f590326"
-    size_bytes: 3960
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "D02A74F2AEBEFDDA"
-    path: "roles/README-Critic.md"
-    title: "Critic Role Specification"
-    category: "role-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "610d3e652e437c3c14ec4bb12c0aef749893af27c70b1202ec62ee88e780e1b0"
-    size_bytes: 2975
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "79EE3CE8DC4EE5EB"
-    path: "roles/README-Judge.md"
-    title: "Judge Role Specification"
-    category: "role-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "4c9be7cecd4c6a8befedd697bcc445a6d0e18524e6c138a704642cf033b716b8"
-    size_bytes: 3477
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "E0D97CF40F5BDE13"
-    path: "roles/README-Orchestrator.md"
-    title: "Orchestrator Role Specification"
-    category: "role-specification"
-    authority: "shared-specification"
-    importance_level: "A"
-    sha256: "9f050e122c959eb9915b91b0548bf0c89c07b8444ad871cc7fb4a08a4c40364a"
-    size_bytes: 3705
-    preferred_loading: "read-first"
-  - document_id: "DADBCFFACDF7DDE7"
-    path: "roles/README-Project-Policy.md"
-    title: "Project Policy Agent Role Specification"
-    category: "role-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "d845adb982726a793228804196805c97c7d5a330cfa164b7313edb010c1e7de7"
-    size_bytes: 5188
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "1046F2F456FD2635"
-    path: "roles/README-Tester.md"
-    title: "Tester Role Specification"
-    category: "role-specification"
-    authority: "shared-specification"
-    importance_level: "B"
-    sha256: "a8069da59e25512b2d05105ba1fcce83f9a55c23ca42cc5979eb2ed9840917b5"
-    size_bytes: 3311
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "56A283DA5B59D664"
-    path: "roles/roles.summary.md"
-    title: "AI Summary — Canonical Roles"
-    category: "role-specification"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "7c8d8ed2d160d1885f0076b648f192a802392c22a02bd85c7eda096f0f2f7818"
-    size_bytes: 2553
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "FCD6748ADDC60940"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_詳細設計書_Ver1.1_レビュー反映版.docx"
-    title: "TASK-004_AI_Development_OS_Lifecycle_Foundation_Φ⌐│τ┤░Φ¿¡Φ¿êµ¢╕_Ver1.1_πâ¼πâôπâÑπâ╝σÅìµÿáτëê.docx"
-    category: "specification"
-    authority: "human-readable-copy"
-    status: "HISTORICAL_SOURCE"
-    writable: false
-    importance_level: "C"
-    sha256: "895eb9126b7365ebc600944fe5a17c2b0fc4d02aadeb7d5c9c25cc1230419cf9"
-    size_bytes: 48753
-    preferred_loading: "on-demand"
-  - document_id: "2D8C9D6890787F77"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.md"
-    title: "AI-readable canonical copy generated from the adjacent DOCX."
-    category: "specification"
-    authority: "machine-readable-canonical-copy"
-    status: "HISTORICAL_SOURCE"
-    writable: false
-    importance_level: "C"
-    sha256: "4377a0cc87b75996a849d4bcf2d0b05b6490a7ba1353f0a1a3c864ea4220dc98"
-    size_bytes: 23456
-    preferred_loading: "on-demand"
-  - document_id: "66FF7B023C1CEE3C"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.summary.md"
-    title: "AI Summary — AI-readable canonical copy generated from the adjacent DOCX."
-    category: "specification"
-    authority: "navigation-aid"
-    status: "HISTORICAL_SOURCE"
-    writable: false
-    importance_level: "B"
-    sha256: "7df84d9bcfafc9941667fecdce4c5ea163ef3e94715e5c742b6ada79719605d2"
-    size_bytes: 4893
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "E0CB35308F2DD73C"
-    path: "tasks/.gitkeep"
-    title: ".gitkeep"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "B"
-    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-    size_bytes: 0
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "98C8D34E4BDDD94D"
-    path: "tasks/README-MIGRATION-NOTICE.md"
-    title: "Migration Notice"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "B"
-    sha256: "a62ab769fea15698106729e6db0993db4610618992e1ac6ac5a042089a3c8a7d"
-    size_bytes: 177
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "1FC0DD6E74D474B3"
-    path: "tasks/TASK-001/TASK-001.summary.md"
-    title: "AI Task Summary — TASK-001"
-    category: "task-evidence"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "157da13d97935acb9b10aacd43ad65c6801b4f3b579cf918cdd91301d217e06b"
-    size_bytes: 920
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "85DCC5B23B4AE0F9"
-    path: "tasks/TASK-001/builder-proposal.md"
-    title: "Builder Proposal (Final Round 3)"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "56557c5d7cb7d61de9679e906d02d0037f5dd5b9db8461488de376efc5d80515"
-    size_bytes: 4441
-    preferred_loading: "on-demand"
-  - document_id: "0C3544D6BA4C42EC"
-    path: "tasks/TASK-001/builder-response.md"
-    title: "Builder Response (Round 3)"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "20cccaec5083a59581e107e4471286ad0b0102fea6f38932b8d9d55892745e04"
-    size_bytes: 2859
-    preferred_loading: "on-demand"
-  - document_id: "44173AC598516F78"
-    path: "tasks/TASK-001/critic-review.md"
-    title: "Critic Review History"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "32d951a5e7c8481586a242b272fa5f693690f8fd82b3e266b638b7b915c1439f"
-    size_bytes: 18059
-    preferred_loading: "on-demand"
-  - document_id: "FD1A160679D2BA3E"
-    path: "tasks/TASK-001/judge-decision.md"
-    title: "Round 3 Final Judge Decision"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "aa3b8bc9b956382fc38c043208b8a0cffc022c6997b5c750ce8175276f263afe"
-    size_bytes: 6161
-    preferred_loading: "on-demand"
-  - document_id: "48F211C6C3B0BBEC"
-    path: "tasks/TASK-001/task.md"
-    title: "TASK-001"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "6077b8113fa0f371f41573386728783a89ce6597e40ccb6d1fc96439622a87f8"
-    size_bytes: 2161
-    preferred_loading: "on-demand"
-  - document_id: "654A2E0E2DB14F4B"
-    path: "tasks/TASK-002/TASK-002.summary.md"
-    title: "AI Task Summary — TASK-002"
-    category: "task-evidence"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "10e0bd55e35e933dd289238a666f5d9a51e53f8c3e45ebdc1d822368732a010d"
-    size_bytes: 1557
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "6316CD377565026A"
-    path: "tasks/TASK-002/builder-proposal.md"
-    title: "Builder Proposal (TASK-002 Redesign - Round 1 Revised)"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "ba1e8c6b920a531032a1e358fdc33234f5db1c9b824c9905a0e01d283a6f43dd"
-    size_bytes: 18481
-    preferred_loading: "on-demand"
-  - document_id: "F56F7CF38A06EEA5"
-    path: "tasks/TASK-002/builder-response.md"
-    title: "Builder Response for TASK-002 (Round 1)"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "4c974fb8dc8327cf9e7a15b634be8224828996917f3534c308ea3cb0c76273f6"
-    size_bytes: 7924
-    preferred_loading: "on-demand"
-  - document_id: "02E649AA5DEE42E4"
-    path: "tasks/TASK-002/critic-review.md"
-    title: "Critic Review for TASK-002"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "43b48a0829ee337a2caa0a3f4f3630830546dd0afc3792ae8acde51bcde6ec6b"
-    size_bytes: 9277
-    preferred_loading: "on-demand"
-  - document_id: "D18ABBD7F0E81059"
-    path: "tasks/TASK-002/final-implementation-decision.md"
-    title: "TASK-002 Final Implementation Decision"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "0212d19f79f55ffe81e96a36e3ae23c1de6871359bfa108515ecc779ad36cd5f"
-    size_bytes: 2626
-    preferred_loading: "on-demand"
-  - document_id: "9CE41CCC27562E3D"
-    path: "tasks/TASK-002/final-plan.md"
-    title: "Final Implementation Plan for TASK-002"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "b97b813b4d2ebf4ed306fcc0d32123bb2e25a804b2484dbe04e65de6318fecbb"
-    size_bytes: 25279
-    preferred_loading: "on-demand"
-  - document_id: "0753052D7162E6BC"
-    path: "tasks/TASK-002/implementation-review.md"
-    title: "TASK-002 Implementation Review"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "3c8f1091dbafc3fe6b72daf31a327adbef767045816edae503de91d39511e1dd"
-    size_bytes: 12867
-    preferred_loading: "on-demand"
-  - document_id: "C7AB1141CB9837C9"
-    path: "tasks/TASK-002/judge-decision.md"
-    title: "TASK-002 Final Plan Consistency Check"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "bb2bd4a0195d41f9b1c4c920508eb07f660cca2738ad8afb27e38944b9fcbacc"
-    size_bytes: 1346
-    preferred_loading: "on-demand"
-  - document_id: "ADD7005DE5E38D9F"
-    path: "tasks/TASK-002/project-policy-review.md"
-    title: "TASK-002 Project Policy Review"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "ff239a98f72f8b76412119bb900dd3eb737e4de4137add041b890945b81a7106"
-    size_bytes: 15232
-    preferred_loading: "on-demand"
-  - document_id: "DD3E6A2186C5EF76"
-    path: "tasks/TASK-002/task.md"
-    title: "TASK-002"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "1647b0d562107dc8918b27ec70258c4ac39560e313405ad143f64f4ab2cba38d"
-    size_bytes: 14265
-    preferred_loading: "on-demand"
-  - document_id: "BEB2303B5B90DE81"
-    path: "tasks/TASK-002/test-report.md"
-    title: "TASK-002 Independent Test Report"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "c7a6a47b016e15b75f88df45749eda018770f97d33f7f205160b3d5053026e9b"
-    size_bytes: 9216
-    preferred_loading: "on-demand"
-  - document_id: "B7EB9C1A0041246C"
-    path: "tasks/TASK-003/TASK-003.summary.md"
-    title: "AI Task Summary — TASK-003"
-    category: "task-evidence"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "5e1df46c1372dda1d185826c7f59d9767e1fb695bae94336570c9e73ab3befb2"
-    size_bytes: 1957
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "2AC25C4DD4D502E4"
-    path: "tasks/TASK-003/builder-proposal.md"
-    title: "TASK-003 Builder Proposal — Automated Regression Test Foundation"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "6ffc0645b6d8e43e7a2cfc5cb411179e5f60f9aa13c9418e5c2b2d58e1c0b1f1"
-    size_bytes: 21488
-    preferred_loading: "on-demand"
-  - document_id: "9CC72B52574C5E31"
-    path: "tasks/TASK-003/builder-response.md"
-    title: "TASK-003 Builder Response"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "788235a6cc5b44057efcadbed696fc2d78d31441dc6890f74c62a09afad5fed8"
-    size_bytes: 4601
-    preferred_loading: "on-demand"
-  - document_id: "B4F1109AB5373734"
-    path: "tasks/TASK-003/critic-review.md"
-    title: "Critic Review for TASK-003"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "86db2bf006386964dea8e99c085bb22c4f9595dfa79added769bfd150835ebcf"
-    size_bytes: 16205
-    preferred_loading: "on-demand"
-  - document_id: "3F98A010E1342BD5"
-    path: "tasks/TASK-003/final-implementation-decision.md"
-    title: "TASK-003 Final Implementation Decision"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "e4a5d7f66d12a0ac8be36203438ca1d72fcc2bc9cb0a17daf2b9b5817bc6022e"
-    size_bytes: 2554
-    preferred_loading: "on-demand"
-  - document_id: "759198B174C2E1DC"
-    path: "tasks/TASK-003/final-plan-consistency-check.md"
-    title: "TASK-003 Final Plan Consistency Check"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "595e7be6445cd9aab02bbbb650d2e8a524d03da4dec2cee8ac2a7bf6a71a530d"
-    size_bytes: 3306
-    preferred_loading: "on-demand"
-  - document_id: "ADF4B6C89529CE49"
-    path: "tasks/TASK-003/final-plan.md"
-    title: "Final Plan"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "6e7596951ec51e863339e3d64d325c9dd346183ae686b556e418252a8bc10c24"
-    size_bytes: 14867
-    preferred_loading: "on-demand"
-  - document_id: "EE4A87E99AA583AF"
-    path: "tasks/TASK-003/implementation-report.md"
-    title: "TASK-003 Implementation Report"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "6874462542566fe3d8fb95377c74360c739df8732a2b05ec8c3ae4c2b9b794be"
-    size_bytes: 4595
-    preferred_loading: "on-demand"
-  - document_id: "9C7BFA64A79F1B5F"
-    path: "tasks/TASK-003/implementation-review.md"
-    title: "TASK-003 Implementation Review"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "f18d459ef4751fb4b529baf3c8b4b8c2deaf0b64f984eb079435cacbc58fb098"
-    size_bytes: 6535
-    preferred_loading: "on-demand"
-  - document_id: "73B7E7B99CB7E4D5"
-    path: "tasks/TASK-003/judge-decision.md"
-    title: "TASK-003 Judge Decision"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "3fac590ae12b5e77ef435e5d935a0660000a73370184314d6b147c5c96681946"
-    size_bytes: 3698
-    preferred_loading: "on-demand"
-  - document_id: "9438D290D3AEE132"
-    path: "tasks/TASK-003/project-policy-review.md"
-    title: "TASK-003 Project Policy Review"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "28c654b163fcccb23bc0a7aad5c73605fbef1b0a8f040c903f8b8cc243a54e40"
-    size_bytes: 5572
-    preferred_loading: "on-demand"
-  - document_id: "A6599D7BD7CDE537"
-    path: "tasks/TASK-003/provenance-exception.md"
-    title: "TASK-003 Provenance Exception Authorization"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "ab90bcf0114c8b7b6c91f69c31422b7e344d12d27d4a4ab024252b6ed7652550"
-    size_bytes: 7254
-    preferred_loading: "on-demand"
-  - document_id: "A156FBB1DB7E7B69"
-    path: "tasks/TASK-003/task.md"
-    title: "TASK-003 — Automated Regression Test Foundation"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "fe16b7435ddb1fcfad98a3306f905a18689bdd5b92701cc17c24c1d15db75254"
-    size_bytes: 4374
-    preferred_loading: "on-demand"
-  - document_id: "8F0463BD12B61004"
-    path: "tasks/TASK-003/test-report.md"
-    title: "TASK-003 Independent Test Report"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "c2a08791be01e42c317b647a5c8d580d2bd6699e7ce4e1a9afe5572a7f8a3775"
-    size_bytes: 9923
-    preferred_loading: "on-demand"
-  - document_id: "E5F2CC23B3D085B3"
-    path: "tasks/TASK-004/TASK-004.summary.md"
-    title: "AI Task Summary — TASK-004"
-    category: "task-evidence"
-    authority: "navigation-aid"
-    importance_level: "A"
-    sha256: "c5a1d9fbfa651190c8880d5345b1cfa92b2bee9984646ebae41ddc655e3722e6"
-    size_bytes: 4597
-    preferred_loading: "read-first"
-  - document_id: "D9C5177937404A8C"
-    path: "tasks/TASK-004/architecture-review.md"
-    title: "Architecture Review"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "1abdf10b40ad035f0184a809e830dc283f1a4acdb10533c74236243e953ce904"
-    size_bytes: 6460
-    preferred_loading: "on-demand"
-  - document_id: "CDF79B546ACD78BF"
-    path: "tasks/TASK-004/builder-proposal.md"
-    title: "Builder Proposal"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "dcd97f32913733316a36e449b4186e651d502a629480afadc436804949a436be"
-    size_bytes: 30542
-    preferred_loading: "on-demand"
-  - document_id: "4F95A5B80A1BD927"
-    path: "tasks/TASK-004/builder-response.md"
-    title: "Builder Response"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "ead77075fd06d695bb9fc39f34c5dc5801433244fcc60ec330ea73e2e051e288"
-    size_bytes: 15510
-    preferred_loading: "on-demand"
-  - document_id: "05104D666B7F657D"
-    path: "tasks/TASK-004/critic-review.md"
-    title: "Critic Review"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "6eb7e7f69e0cb9ac2676ba0ff993b96a1d16b85d11b1f63c9a170298f9703320"
-    size_bytes: 6012
-    preferred_loading: "on-demand"
-  - document_id: "9E1A04C46681F661"
-    path: "tasks/TASK-004/design-amendment-d05-d06.md"
-    title: "D-05 / D-06 Design Amendment Proposal"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "cd6b53964f97735234c48a34b0b6b69276e8bee40579a31812421c057c163a56"
-    size_bytes: 10609
-    preferred_loading: "on-demand"
-  - document_id: "37651A5776C1FD88"
-    path: "tasks/TASK-004/final-plan-consistency-check.md"
-    title: "Final Plan Consistency Check"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "62aac6574f3ddbf8ebc443f8596aa64ddd1a0c13c12d36747ed432883c058920"
-    size_bytes: 13599
-    preferred_loading: "on-demand"
-  - document_id: "A53D44F242603936"
-    path: "tasks/TASK-004/final-plan.md"
-    title: "Final Plan"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "d14d95136546dc207c2cbd8009faac455906270d5bd8630adaba38d9212ee5f8"
-    size_bytes: 24710
-    preferred_loading: "on-demand"
-  - document_id: "E821EA48AA581552"
-    path: "tasks/TASK-004/implementation-fix-report.md"
-    title: "Implementation Fix Report"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "3b3feccfb51a92a6ceaee0aa31140f0594bee1a1eb98e509d55ffab046ff4cfa"
-    size_bytes: 9628
-    preferred_loading: "on-demand"
-  - document_id: "55ED21EF8B95E74C"
-    path: "tasks/TASK-004/implementation-report.md"
-    title: "Implementation Report"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "fedbbfca112bb51fb80ba3cf367063750075e5493a96fe0818c4a9332a096866"
-    size_bytes: 5536
-    preferred_loading: "on-demand"
-  - document_id: "FE2BCA7047173D21"
-    path: "tasks/TASK-004/judge-amendment-decision.md"
-    title: "Judge Amendment Decision"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "808af72e258f37d1afce897b01c6ddea1b68e6fd45ed3dee4e65d127fd7a13b4"
-    size_bytes: 10848
-    preferred_loading: "on-demand"
-  - document_id: "17AF55DA424D4989"
-    path: "tasks/TASK-004/judge-decision-d05-d06.md"
-    title: "Judge Decision — D-05 / D-06 Design Amendment"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "05e79967e150030afe563875fd2366102c9fe1f6974059a41b2acc978608350f"
-    size_bytes: 13197
-    preferred_loading: "on-demand"
-  - document_id: "EAAC85E3D791F063"
-    path: "tasks/TASK-004/judge-decision.md"
-    title: "Judge Decision"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "6d2adeb7c844c40a2a11d727a810ad7fb02baaf007f1ed0080734a26cbd071f0"
-    size_bytes: 14491
-    preferred_loading: "on-demand"
-  - document_id: "5940CCD880F0C0DC"
-    path: "tasks/TASK-004/retest-report-02.md"
-    title: "Retest Report — Cycle 2"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "320010d181ba7149ded0bbc4402d9e6ce80820fd13969e8b865bee63f31f4617"
-    size_bytes: 11672
-    preferred_loading: "on-demand"
-  - document_id: "28780CEDE21ECBD3"
-    path: "tasks/TASK-004/retest-report.md"
-    title: "Retest Report"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "04146b6996ea897c824e9a59f89e57a936bb5cf006f78c7c4c850494523f2f4b"
-    size_bytes: 13990
-    preferred_loading: "on-demand"
-  - document_id: "DBB7D8061B827B8E"
-    path: "tasks/TASK-004/task.md"
-    title: "TASK-004 — AI Development OS Lifecycle Foundation"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "23089fdd310bbef66d81e08c0266d399d137daaeddfd36ef70fbc7259c9491b3"
-    size_bytes: 16230
-    preferred_loading: "on-demand"
-  - document_id: "07684F41523E9FB1"
-    path: "tasks/TASK-004/test-report.md"
-    title: "Test Report"
-    category: "task-evidence"
-    authority: "task-evidence-with-scope-defined-by-artifact"
-    importance_level: "C"
-    sha256: "8383540a244595e624ece7fe5b279e7f56da2174cbd8905544add7b50e01ecf4"
-    size_bytes: 17209
-    preferred_loading: "on-demand"
-  - document_id: "8C3EEC268F30FD4D"
-    path: "templates/builder-proposal.template.md"
-    title: "Builder Proposal"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "770bcafdae0ed52bafeaf3e704307c64718d880b1d6bc419d66c6f058d45dace"
-    size_bytes: 494
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "30A9F2CE5183124B"
-    path: "templates/builder-response.template.md"
-    title: "Builder Response"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "50e62b77c5a916c507dc1c90b23c3ab83f4000d8358512a070e99b48ee71aedb"
-    size_bytes: 389
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "56D322376368152B"
-    path: "templates/critic-review.template.md"
-    title: "Critic Review"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "42dbc0a726bb11590d3c6775d1de4ff265d3c6f911f6356d248ba8bb9a47260e"
-    size_bytes: 421
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "FCB0A04CD6DC912A"
-    path: "templates/final-implementation-decision.template.md"
-    title: "Final Implementation Decision"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "e3cd8431a3c9dbb776e8e973473a6fc411734c1c1ca8dcf858053d74428fcd20"
-    size_bytes: 518
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "4310356105E338A5"
-    path: "templates/final-plan-consistency-check.template.md"
-    title: "Final Plan Consistency Check"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "20b19ae5be1f7828fe1ae0255292eaa4b466314511e78e4e20c471428fb599df"
-    size_bytes: 490
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "8C5672E5AE38DE5F"
-    path: "templates/final-plan.template.md"
-    title: "Final Plan"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "da8ed15afa3b932cc9f0c3b07ba8889978c364ca454e35b4a67f3a79ed885a4b"
-    size_bytes: 459
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "6ACC5A93FA5D00E2"
-    path: "templates/implementation-fix-report.template.md"
-    title: "Implementation Fix Report"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "4a2e5a3fde03098420112e0f64ac4bef343ae05851991279d3c4da0f1b9d45b5"
-    size_bytes: 442
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "CC9BADFDC410948E"
-    path: "templates/implementation-handoff.template.md"
-    title: "Implementation Handoff"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "8b86a9bc2a744d60b95aaffeede1c332ce174bf8171b2e918656f6328f81bbc5"
-    size_bytes: 432
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "CC9DB692940EA7A4"
-    path: "templates/implementation-report.template.md"
-    title: "Implementation Report"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "fffbe202b1a63154e1d9f84e53959d206ade53e4b97a58a7110c60984dbe920a"
-    size_bytes: 358
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "BC84D70562E54793"
-    path: "templates/implementation-review.template.md"
-    title: "Implementation Review"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "f107604f0247350122d406ac0b03d65c09ab2807235e28a99682f4f6d87c991e"
-    size_bytes: 675
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "47D26E2932312C6A"
-    path: "templates/judge-decision.template.md"
-    title: "Judge Decision"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "4dd0a4073f910a4ecc2999a5f2d9bd46598c47cca860daf5f342c5ac4c70adcb"
-    size_bytes: 404
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "F2E9D45247422E4F"
-    path: "templates/project-policy-review.template.md"
-    title: "Project Policy Review"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "f76ebbfb86164af7893536ddad39e1946bd5e3a9b2e6a3aeff7c2aeb3000d48f"
-    size_bytes: 866
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "A18CF128C9226B83"
-    path: "templates/retest-report.template.md"
-    title: "Retest Report"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "c05274bf3888ae9fd44b159032237ee20e683cc2d47e60bbedf8a05822ab2ed7"
-    size_bytes: 490
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "74351BB60998FFD5"
-    path: "templates/task.template.md"
-    title: "TASK-XXX — Title"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "5a25b232354dafd899f583488b23b30a6c6000055f1a5a60961583a5c1268d4f"
-    size_bytes: 407
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "B2383E15A156F440"
-    path: "templates/templates.summary.md"
-    title: "AI Summary — Artifact Templates"
-    category: "template"
-    authority: "navigation-aid"
-    importance_level: "B"
-    sha256: "af2aa3e1167f45f08c25e08d7e8db880dc9dde7f8e30e6ef1ae78a3225823dd5"
-    size_bytes: 2012
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "45296949C18C87E9"
-    path: "templates/test-report.template.md"
-    title: "Test Report"
-    category: "template"
-    authority: "supporting-artifact"
-    importance_level: "B"
-    sha256: "5d136008d593705825d61f126e4fe79ba62ae5b532c9a7208e0efac3f7cf2dc1"
-    size_bytes: 824
-    preferred_loading: "summary-or-on-demand"
-  - document_id: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_HUMAN"
-    path: "architecture/AI_Development_OS_Architecture_Ver2.1.docx"
-    title: "AI Development OS Architecture Ver.2.1"
-    category: "architecture"
-    authority: "human_canonical_companion"
-    importance_level: "C"
-    sha256: "090e49b13b28fac438e4b816dd89b8b1157444e3d11e27c195e8be8ce0f12714"
-    size_bytes: 56446
-    preferred_loading: "on-demand"
-    status: "CURRENT_CANONICAL"
-    freshness_status: "CURRENT"
-    effective_date: "2026-07-31"
-    last_verified_at: "2026-07-31"
-    verified_by: "Orchestrator"
-    previous_version: "2.0"
-    supersedes: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0"
-    consistency_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md"
-    baseline_commit: "3ce360ba5cef063cd046d88ce007d42c0b54a275"
-  - document_id: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_MACHINE"
-    path: "architecture/AI_Development_OS_Architecture_Ver2.1.md"
-    title: "AI Development OS Architecture Ver.2.1"
-    category: "architecture"
-    authority: "machine_canonical_authority"
-    importance_level: "A"
-    sha256: "f62e2dd679204ea93b936ed968b4957eff1e63522430108abec7ccef8f597edc"
-    size_bytes: 86364
-    preferred_loading: "on-demand"
-    status: "CURRENT_CANONICAL"
-    freshness_status: "CURRENT"
-    effective_date: "2026-07-31"
-    last_verified_at: "2026-07-31"
-    verified_by: "Orchestrator"
-    previous_version: "2.0"
-    supersedes: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0"
-    consistency_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md"
-    baseline_commit: "3ce360ba5cef063cd046d88ce007d42c0b54a275"
-  - document_id: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_SUMMARY"
-    path: "architecture/AI_Development_OS_Architecture_Ver2.1.summary.md"
-    title: "AI Summary — AI Development OS Architecture Ver.2.1"
-    category: "architecture"
-    authority: "context_economy_summary"
-    importance_level: "B"
-    sha256: "a06ce082b7bb40f61289ded81a1f061cce9e8ffe216ae3f8274ba88cc2da7f49"
-    size_bytes: 2869
-    preferred_loading: "on-demand"
-    status: "CURRENT_CANONICAL"
-    freshness_status: "CURRENT"
-    effective_date: "2026-07-31"
-    last_verified_at: "2026-07-31"
-    verified_by: "Orchestrator"
-    previous_version: "2.0"
-    supersedes: "AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0"
-    consistency_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md"
-    baseline_commit: "3ce360ba5cef063cd046d88ce007d42c0b54a275"
-  - document_id: "TASK_004_LIFECYCLE_FOUNDATION_VER1_3_HUMAN"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.docx"
-    title: "TASK-004 AI Development OS Lifecycle Foundation Ver.1.3"
-    category: "specification"
-    authority: "human_canonical_companion"
-    importance_level: "C"
-    sha256: "da41c567291bd1d7ad3f3f79f4c35c20a6c3b543de3e1ab6e5ccb0e9d96c1e70"
-    size_bytes: 36955
-    preferred_loading: "on-demand"
-    status: "CURRENT_CANONICAL"
-    freshness_status: "CURRENT"
-    effective_date: "2026-07-31"
-    last_verified_at: "2026-07-31"
-    verified_by: "Orchestrator"
-    previous_version: "1.2"
-    supersedes: "TASK_004_LIFECYCLE_FOUNDATION_VER1_2"
-    baseline_source: "/home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md"
-    coverage_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md"
-    consistency_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md"
-    baseline_commit: "3ce360ba5cef063cd046d88ce007d42c0b54a275"
-    implementation_status: "IMPLEMENTATION_APPROVED"
-    verification_status: "88 PASS / 0 FAIL; 23 / 23 PASS"
-    critical: 0
-    high: 0
-  - document_id: "TASK_004_LIFECYCLE_FOUNDATION_VER1_3_MACHINE"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.md"
-    title: "TASK-004 AI Development OS Lifecycle Foundation Ver.1.3"
-    category: "specification"
-    authority: "machine_canonical_authority"
-    importance_level: "A"
-    sha256: "a754216874973bcf701de5b9be21807663ba7a8d26c4c0c2d9efaa30a156e6cd"
-    size_bytes: 60907
-    preferred_loading: "on-demand"
-    status: "CURRENT_CANONICAL"
-    freshness_status: "CURRENT"
-    effective_date: "2026-07-31"
-    last_verified_at: "2026-07-31"
-    verified_by: "Orchestrator"
-    previous_version: "1.2"
-    supersedes: "TASK_004_LIFECYCLE_FOUNDATION_VER1_2"
-    baseline_source: "/home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md"
-    coverage_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md"
-    consistency_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md"
-    baseline_commit: "3ce360ba5cef063cd046d88ce007d42c0b54a275"
-    implementation_status: "IMPLEMENTATION_APPROVED"
-    verification_status: "88 PASS / 0 FAIL; 23 / 23 PASS"
-    critical: 0
-    high: 0
-  - document_id: "TASK_004_LIFECYCLE_FOUNDATION_VER1_3_SUMMARY"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.summary.md"
-    title: "AI Summary — TASK-004 Lifecycle Foundation Ver.1.3"
-    category: "specification"
-    authority: "context_economy_summary"
-    importance_level: "B"
-    sha256: "3cc918bf412550699d0708976bd8c52769c00090b0d960939a7d28bccf3db4d2"
-    size_bytes: 3042
-    preferred_loading: "on-demand"
-    status: "CURRENT_CANONICAL"
-    freshness_status: "CURRENT"
-    effective_date: "2026-07-31"
-    last_verified_at: "2026-07-31"
-    verified_by: "Orchestrator"
-    previous_version: "1.2"
-    supersedes: "TASK_004_LIFECYCLE_FOUNDATION_VER1_2"
-    baseline_source: "/home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md"
-    coverage_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md"
-    consistency_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md"
-    baseline_commit: "3ce360ba5cef063cd046d88ce007d42c0b54a275"
-    implementation_status: "IMPLEMENTATION_APPROVED"
-    verification_status: "88 PASS / 0 FAIL; 23 / 23 PASS"
-    critical: 0
-    high: 0
-  - document_id: "TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_HUMAN"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.docx"
-    title: "TASK-004 Lifecycle Foundation Ver.1.2"
-    category: "historical-baseline"
-    authority: "immutable_attachment_baseline"
-    importance_level: "D"
-    sha256: "810bd78c90622ca50a25a5bb5368822288b214177b7bb4e882da4993a8beaa45"
-    size_bytes: 56241
-    preferred_loading: "audit-only"
-    status: "IMMUTABLE_ATTACHMENT_BASELINE"
-    writable: false
-    effective_date: "2026-07-31"
-    verified_by: "Orchestrator"
-  - document_id: "TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_MACHINE"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md"
-    title: "TASK-004 Lifecycle Foundation Ver.1.2"
-    category: "historical-baseline"
-    authority: "immutable_attachment_baseline"
-    importance_level: "D"
-    sha256: "732e12d3270b45f1fe9d2b05b7e32a162958e1517a600851d0507dcdb79d5549"
-    size_bytes: 50827
-    preferred_loading: "audit-only"
-    status: "IMMUTABLE_ATTACHMENT_BASELINE"
-    writable: false
-    effective_date: "2026-07-31"
-    verified_by: "Orchestrator"
-  - document_id: "TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_SUMMARY"
-    path: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.summary.md"
-    title: "TASK-004 Lifecycle Foundation Ver.1.2"
-    category: "historical-baseline"
-    authority: "immutable_attachment_baseline"
-    importance_level: "D"
-    sha256: "d11fecf159c6f298f7883faee40403cbc6c204645a41c08218d4a2fb6ab3af78"
-    size_bytes: 9793
-    preferred_loading: "audit-only"
-    status: "IMMUTABLE_ATTACHMENT_BASELINE"
-    writable: false
-    effective_date: "2026-07-31"
-    verified_by: "Orchestrator"
-
+- document_id: C1603EE6A674BB75
+  path: MIGRATION.md
+  title: BAI Development OS Product Extraction / Repository Rename
+  category: migration-record
+  authority: owner-directed-migration
+  importance_level: A
+  sha256: e9f528c63d3a9305208244e6da13c1615d50fe5ace69963ed1c6b5f304172673
+  size_bytes: 1221
+  preferred_loading: read-first
+- document_id: E4A35DF86123614D
+  path: PROJECT.md
+  title: BAI Development OS
+  category: workspace-document
+  authority: product-authority
+  importance_level: A
+  sha256: 6eb510a2d4404d847b6777f1174c71e2244c7c7b70d8a91356a841275b0f4a44
+  size_bytes: 1963
+  preferred_loading: read-first
+- document_id: 3B1BB0D79619CBC9
+  path: README-AI.md
+  title: README for AI Agents
+  category: workspace-document
+  authority: supporting-artifact
+  importance_level: B
+  sha256: e06f14ba3427e85e7fbbf70fcafba1ded2af87ff7043bcc0915cf57719852352
+  size_bytes: 1667
+  preferred_loading: summary-or-on-demand
+- document_id: B335630551682C19
+  path: README.md
+  title: AI Development OS — Workspace-Level Specifications
+  category: workspace-document
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 54b88033b00c0b70391106dae96c15215e5772825a4fcfbc06ed92afa682aef9
+  size_bytes: 2748
+  preferred_loading: summary-or-on-demand
+- document_id: 8EC74867938C777A
+  path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
+  title: AI_Development_OS_Architecture_Φ¿¡Φ¿êµ¢╕_Ver1.1_τ╡▒σÉêµ║ûσéÖτëê.docx
+  category: architecture
+  authority: human-readable-copy
+  importance_level: C
+  sha256: b134a8c066dc6b4dc2349abcd585281c3ba75f401379fb273e295891e3c31c93
+  size_bytes: 65467
+  preferred_loading: on-demand
+- document_id: 548F6F14333993A4
+  path: architecture/AI_Development_OS_Architecture_Ver1.0.md
+  title: AI-readable canonical copy generated from the adjacent DOCX.
+  category: architecture
+  authority: machine-readable-canonical-copy
+  importance_level: C
+  sha256: 49c5cd5d1ba85870bed7d6776a6162397bdf4d4070df56467d98e1400887c509
+  size_bytes: 61865
+  preferred_loading: on-demand
+- document_id: 5390C8B409EC616A
+  path: architecture/AI_Development_OS_Architecture_Ver1.0.summary.md
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
+  category: architecture
+  authority: navigation-aid
+  importance_level: B
+  sha256: 8fce82d3e94f2213990378757cd2cac89c7ab4ac5842f949ca150ce2a007dd2e
+  size_bytes: 5725
+  preferred_loading: summary-or-on-demand
+- document_id: E0611D071CF96932
+  path: architecture/AI_Development_OS_Architecture_Ver2.0.docx
+  title: AI_Development_OS_Architecture_設計書_Ver2.0_持続可能開発・現状記録統合版.docx
+  category: architecture
+  authority: human-readable-copy
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1
+  importance_level: C
+  sha256: 30e0fdd353fd94407e1f7b1c4e3782f214b976fc351cc49535d51dbfb3207159
+  size_bytes: 73360
+  preferred_loading: on-demand
+- document_id: 167BE6BA96714791
+  path: architecture/AI_Development_OS_Architecture_Ver2.0.md
+  title: AI-readable canonical copy generated from the adjacent DOCX.
+  category: architecture
+  authority: machine-readable-canonical-copy
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1
+  importance_level: C
+  sha256: 1ae1803eebc26bac9ded0479b6d7167e624afb537fc5fc23c562a1a13cde381e
+  size_bytes: 78126
+  preferred_loading: on-demand
+- document_id: 060C9E34E219D36E
+  path: architecture/AI_Development_OS_Architecture_Ver2.0.summary.md
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
+  category: architecture
+  authority: navigation-aid
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1
+  importance_level: B
+  sha256: 44af5430ee583a91700066cabe1deaffa4382e21c9ea47e9b122310db4809c3a
+  size_bytes: 5865
+  preferred_loading: summary-or-on-demand
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_HUMAN
+  path: architecture/AI_Development_OS_Architecture_Ver2.1.docx
+  title: AI Development OS Architecture Ver.2.1
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  sha256: 090e49b13b28fac438e4b816dd89b8b1157444e3d11e27c195e8be8ce0f12714
+  size_bytes: 56446
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-07-31'
+  last_verified_at: '2026-07-31'
+  verified_by: Orchestrator
+  previous_version: '2.0'
+  supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
+  writable: false
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_HUMAN
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_MACHINE
+  path: architecture/AI_Development_OS_Architecture_Ver2.1.md
+  title: AI Development OS Architecture Ver.2.1
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  sha256: f62e2dd679204ea93b936ed968b4957eff1e63522430108abec7ccef8f597edc
+  size_bytes: 86364
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-07-31'
+  last_verified_at: '2026-07-31'
+  verified_by: Orchestrator
+  previous_version: '2.0'
+  supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
+  writable: false
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_MACHINE
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_SUMMARY
+  path: architecture/AI_Development_OS_Architecture_Ver2.1.summary.md
+  title: AI Summary — AI Development OS Architecture Ver.2.1
+  category: architecture
+  authority: context_economy_summary
+  importance_level: B
+  sha256: a06ce082b7bb40f61289ded81a1f061cce9e8ffe216ae3f8274ba88cc2da7f49
+  size_bytes: 2869
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-07-31'
+  last_verified_at: '2026-07-31'
+  verified_by: Orchestrator
+  previous_version: '2.0'
+  supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
+  writable: false
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_SUMMARY
+- document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_HUMAN
+  path: architecture/BAI_Development_OS_Architecture_Ver2.2.docx
+  title: BAI Development OS Architecture Ver.2.2
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  sha256: 8752e477c2dea7d9d9a998ab0d4c4315494abf14e72244d3c46d43e856df8ebe
+  size_bytes: 57772
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '2.1'
+  supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_HUMAN
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  writable: false
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_HUMAN
+- document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_MACHINE
+  path: architecture/BAI_Development_OS_Architecture_Ver2.2.md
+  title: BAI Development OS Architecture Ver.2.2
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  sha256: fc5659466cefc327cfa527f15a5ba005c3d1ddda6f903449970d14c2c841712b
+  size_bytes: 91030
+  preferred_loading: read-first
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '2.1'
+  supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_MACHINE
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  writable: false
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_MACHINE
+- document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_SUMMARY
+  path: architecture/BAI_Development_OS_Architecture_Ver2.2.summary.md
+  title: AI Summary — BAI Development OS Architecture Ver.2.2
+  category: architecture
+  authority: context_economy_summary
+  importance_level: B
+  sha256: 999b0e2b66c6e78135ec7bd3930881861681c8d7733ac33366d8811b4bfc461b
+  size_bytes: 1994
+  preferred_loading: read-first
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '2.1'
+  supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_SUMMARY
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  writable: false
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_SUMMARY
+- document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_HUMAN
+  path: architecture/BAI_Development_OS_Architecture_Ver2.3.docx
+  title: BAI Development OS Architecture Ver.2.3
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  previous_version: '2.2'
+  supersedes: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_HUMAN
+  status: CURRENT_CANONICAL
+  freshness_status: CURRENT
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  sha256: 791f7a8e2cad0a02e0839d57dc2cb93b5cfdb11057a3ea332df30b04b67ca8d2
+  size_bytes: 59847
+- document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_MACHINE
+  path: architecture/BAI_Development_OS_Architecture_Ver2.3.md
+  title: BAI Development OS Architecture Ver.2.3
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  previous_version: '2.2'
+  supersedes: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_MACHINE
+  status: CURRENT_CANONICAL
+  freshness_status: CURRENT
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  sha256: b073957827f64b9912104299268d5334f6fd102e514915be2bbe18b85b16f36f
+  size_bytes: 97705
+- document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_SUMMARY
+  path: architecture/BAI_Development_OS_Architecture_Ver2.3.summary.md
+  title: AI Summary — BAI Development OS Architecture Ver.2.3
+  category: architecture
+  authority: context_economy_summary
+  importance_level: B
+  preferred_loading: read-first
+  previous_version: '2.2'
+  supersedes: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_SUMMARY
+  status: CURRENT_CANONICAL
+  freshness_status: CURRENT
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  sha256: 51affd0f6f77a759c8e3a8a95a4eca5b76392dcf40c0b409a2ece1eea5d00103
+  size_bytes: 1640
+- document_id: 90552F574B527198
+  path: architecture/BAI_Development_OS_Architecture_Ver2.4.docx
+  title: BAI_Development_OS_Architecture_Ver2.4.docx
+  category: architecture
+  authority: human-readable-copy
+  importance_level: C
+  sha256: 1644ee28513f61f643bf0fb65ae8811563c86b0e41e0e40b0952b80ce9fc9686
+  size_bytes: 62717
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+- document_id: 44CB683B99E2502F
+  path: architecture/BAI_Development_OS_Architecture_Ver2.4.md
+  title: BAI Development OS Architecture Ver.2.4 — TASK-004 Lifecycle Foundation Complete
+  category: architecture
+  authority: machine-readable-canonical-copy
+  importance_level: A
+  sha256: 3647a7f691e2d8539399958bc7bc4f86f07af79eca35a79060460cb359b3243a
+  size_bytes: 104713
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+- document_id: 8716533E1FB06B14
+  path: architecture/BAI_Development_OS_Architecture_Ver2.4.summary.md
+  title: BAI Development OS Architecture Ver.2.4 — Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  sha256: fa650d6f7f992cbc737b45ee7ec7311ef02e9cdacfba19fe885a6fa2b61bec41
+  size_bytes: 934
+  preferred_loading: always
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+- document_id: B920A9AE26507732
+  path: architecture/BAI_Development_OS_Product_Boundary_and_Adaptive_Governance_Addendum_Ver1.0.md
+  title: BAI Development OS Product Boundary and Adaptive Governance Addendum Ver.1.0
+  category: architecture
+  authority: operational-addendum
+  importance_level: A
+  sha256: 43cb70a9025aeccd84f9113f1b56c50c61a1fb7e3b3da978016cde26c69ae21b
+  size_bytes: 2802
+  preferred_loading: read-first
+- document_id: 3543854C9018DEDE
+  path: archive/role-specifications/pre-v2/README.md
+  title: Pre-v2 Role Specifications Archive
+  category: archive
+  authority: supporting-artifact
+  importance_level: D
+  sha256: ee8d01ddc9cd3d13135c6ad6811277f53bd918edb53ec2250fa4f1fbb5378171
+  size_bytes: 255
+  preferred_loading: audit-only
+- document_id: 1F2AF461C6936CF2
+  path: common/Artifact-Specification.md
+  title: Artifact Specification
+  category: common-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: cb89e41a421fde650648c37768f8037213c9727e8a9450188b9d635659f1ee7a
+  size_bytes: 3951
+  preferred_loading: summary-or-on-demand
+- document_id: 365E0882CB9D1D0C
+  path: common/Authority-Specification.md
+  title: Authority Specification
+  category: common-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: 38459f8a96a21e03bd55cdd219dfe21ae017c8edbf0027ebc12df66e14c0076d
+  size_bytes: 1885
+  preferred_loading: summary-or-on-demand
+- document_id: 5B7A7DED873DF6B2
+  path: common/Evidence-Specification.md
+  title: Evidence Specification
+  category: common-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: a81b65133bc45ca7e044e7484229f2b1731be85c25508b425852e23fed4759c6
+  size_bytes: 1509
+  preferred_loading: summary-or-on-demand
+- document_id: 7650F11F4F02F04E
+  path: common/README-Common.md
+  title: Common Role Specification
+  category: common-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: de3f2bf0f84082227f8671cb8dfaa9cd7073332c43b08610567522af70d8e773
+  size_bytes: 3068
+  preferred_loading: summary-or-on-demand
+- document_id: 6E5DA3D48C70DEB6
+  path: common/Vocabulary-Specification.md
+  title: Vocabulary Specification
+  category: common-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: 4351feb4e623c0a5ee8ed42d9a62da0e991ad8f214390e8c35edd6dd2e8a4800
+  size_bytes: 2039
+  preferred_loading: summary-or-on-demand
+- document_id: C1F2A3B9266498FD
+  path: common/Workflow-Specification.md
+  title: Workflow Specification
+  category: common-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: 6a6cd787f1cf82de1d8a01865f674a9c0b93ded04e8f810c18c5d7fccd03ae22
+  size_bytes: 2771
+  preferred_loading: summary-or-on-demand
+- document_id: 927DE6577978D659
+  path: common/common-specifications.summary.md
+  title: AI Summary — Common Specifications
+  category: common-specification
+  authority: navigation-aid
+  importance_level: B
+  sha256: f6e7d2bca08c747c8b6b73c6437a0bc8995fababfbb4dedb9ab3599a59f02374
+  size_bytes: 2358
+  preferred_loading: summary-or-on-demand
+- document_id: 1C24D28B28058C31
+  path: config/.gitkeep
+  title: .gitkeep
+  category: configuration
+  authority: supporting-artifact
+  importance_level: B
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  size_bytes: 0
+  preferred_loading: summary-or-on-demand
+- document_id: 6E8C7FDEC58C9CB5
+  path: config/README.md
+  title: Project AI-Team Configuration
+  category: configuration
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 0e461f0c0fac926a0ee4422bf5192045a52ba6981d70cd308b3221a24e00506a
+  size_bytes: 184
+  preferred_loading: summary-or-on-demand
+- document_id: A4431CEA1F132B7A
+  path: config/command-policy.yml
+  title: command-policy.yml
+  category: configuration
+  authority: supporting-artifact
+  importance_level: B
+  sha256: a7b0a35d9253b7050936fa0f498df1acc9f66801f5a961204633f5f3d09d6bab
+  size_bytes: 232
+  preferred_loading: summary-or-on-demand
+- document_id: C3B673D7F9FEDA0D
+  path: lifecycle/phase1/config/transition-matrix.json
+  title: transition-matrix.json
+  category: runtime-state-or-schema
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 425649ac0c4c1039ad5aadeab2625a821cd6cd9d40482fb4522d7100921b2ee1
+  size_bytes: 759
+  preferred_loading: summary-or-on-demand
+- document_id: 19CAB4DA2BB8ADCA
+  path: lifecycle/phase1/schemas/canonical-status-record.schema.json
+  title: canonical-status-record.schema.json
+  category: runtime-state-or-schema
+  authority: supporting-artifact
+  importance_level: B
+  sha256: d138e0fa3f0a1307dd2bb5524670019e6d43640cf0c40c324183a86a2162713c
+  size_bytes: 2424
+  preferred_loading: summary-or-on-demand
+- document_id: 3D92DD3D39FC93CD
+  path: lifecycle/phase1/tasks/TASK-004/canonical-status.json
+  title: canonical-status.json
+  category: task-evidence
+  authority: supporting-artifact
+  importance_level: B
+  sha256: ca16e0fa96171f8da35c0a98ea30e1cc5dcabda6f2bb64d34d0ed33f217c74a7
+  size_bytes: 1667
+  preferred_loading: summary-or-on-demand
+- document_id: EAA03DD54A107D62
+  path: lifecycle/phase1/tasks/TASK-004/migration-mapping.jsonl
+  title: migration-mapping.jsonl
+  category: task-evidence
+  authority: supporting-artifact
+  importance_level: B
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  size_bytes: 0
+  preferred_loading: summary-or-on-demand
+- document_id: 80D5EEDAC43DA0C0
+  path: lifecycle/phase1/tasks/TASK-004/transition-log.jsonl
+  title: transition-log.jsonl
+  category: task-evidence
+  authority: supporting-artifact
+  importance_level: B
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  size_bytes: 0
+  preferred_loading: summary-or-on-demand
+- document_id: 7AE45AD102EAB3B6
+  path: package.json
+  title: package.json
+  category: configuration
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: 4dad12b4cb8bd3744e0ec68679521a4c1a1de262d09a27c0782b39c1d81fde82
+  size_bytes: 2050
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+- document_id: 1EF866BCD4C452BA
+  path: registry/ai-context-pack.md
+  title: AI Development OS — Lightweight Context Pack
+  category: registry
+  authority: navigation-aid
+  importance_level: A
+  sha256: 6832a2d6e089f62460f70e2dfb00056ca969387625c1383d09a3c58112af11bc
+  size_bytes: 2415
+  preferred_loading: read-first
+- document_id: F3B4F17ADE1CE039
+  path: registry/context-loading-rules.md
+  title: Context Loading Rules
+  category: registry
+  authority: navigation-aid
+  importance_level: A
+  sha256: bffca7f2c17a6480286ac8029152683f6572b0fc68612674487c61f8ebbf5f2a
+  size_bytes: 2902
+  preferred_loading: read-first
+- document_id: 273700F9733DD9C4
+  path: registry/current-state.md
+  title: AI Development OS — Current State
+  category: registry
+  authority: navigation-aid
+  importance_level: A
+  sha256: ba459642ba5ef86aff55b3f55884850fd141e5e51a99092b192b6e2be275cebe
+  size_bytes: 4813
+  preferred_loading: read-first
+- document_id: 903B34A9E98FB098
+  path: registry/operational-improvements.md
+  title: Operational Improvements Registry
+  category: registry
+  authority: navigation-aid
+  importance_level: B
+  sha256: 8128027727de173a04ba5ac6ef7a7ac1cd7aa58eabff4ce300f0cccd8355b420
+  size_bytes: 2825
+  preferred_loading: summary-or-on-demand
+- document_id: B29D9C6CD49F9C42
+  path: resume-check.mjs
+  title: resume-check.mjs
+  category: workspace-document
+  authority: supporting-artifact
+  importance_level: B
+  sha256: ac76b3e42e7200e70fb743a4ac9aa96077ccd02bc52fc05bfafe734b8d011497
+  size_bytes: 50
+  preferred_loading: summary-or-on-demand
+- document_id: C37C551EE19C092B
+  path: reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.docx
+  title: TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.docx
+  category: review
+  authority: human-readable-copy
+  importance_level: C
+  sha256: 8f99f0081eb3b2afe1a2f71a9681d2f9c965116a7aa354fbdbd63aff86f61b98
+  size_bytes: 43718
+  preferred_loading: on-demand
+- document_id: 485EEF7217A1DA4D
+  path: reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.md
+  title: AI-readable canonical copy generated from the adjacent DOCX.
+  category: review
+  authority: supporting-artifact
+  importance_level: C
+  sha256: 39acb2bd7e6170f255f02950af66d0c22dace1ce7c38e73e8823a94917b09165
+  size_bytes: 15684
+  preferred_loading: on-demand
+- document_id: 2F2372321F6974A5
+  path: reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.summary.md
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
+  category: review
+  authority: navigation-aid
+  importance_level: B
+  sha256: 0da355f24776f482f578c6c353191e2e7247a24cee653026fabc2e2a98089432
+  size_bytes: 5045
+  preferred_loading: summary-or-on-demand
+- document_id: 52D16D0E0E38EDE4
+  path: roles/README-Builder.md
+  title: Builder Role Specification
+  category: role-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: f1e6fd8f9cbe4c771858774118c334addf60c9e7072b41ad892796ad4f590326
+  size_bytes: 3960
+  preferred_loading: summary-or-on-demand
+- document_id: D02A74F2AEBEFDDA
+  path: roles/README-Critic.md
+  title: Critic Role Specification
+  category: role-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: 610d3e652e437c3c14ec4bb12c0aef749893af27c70b1202ec62ee88e780e1b0
+  size_bytes: 2975
+  preferred_loading: summary-or-on-demand
+- document_id: 79EE3CE8DC4EE5EB
+  path: roles/README-Judge.md
+  title: Judge Role Specification
+  category: role-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: 4c9be7cecd4c6a8befedd697bcc445a6d0e18524e6c138a704642cf033b716b8
+  size_bytes: 3477
+  preferred_loading: summary-or-on-demand
+- document_id: E0D97CF40F5BDE13
+  path: roles/README-Orchestrator.md
+  title: Orchestrator Role Specification
+  category: role-specification
+  authority: shared-specification
+  importance_level: A
+  sha256: 1a5a138f9106850bf443e0cbe869e46e9a5bd0f4b55ce1c4939bfa66a8de5340
+  size_bytes: 4896
+  preferred_loading: read-first
+- document_id: DADBCFFACDF7DDE7
+  path: roles/README-Project-Policy.md
+  title: Project Policy Agent Role Specification
+  category: role-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: d845adb982726a793228804196805c97c7d5a330cfa164b7313edb010c1e7de7
+  size_bytes: 5188
+  preferred_loading: summary-or-on-demand
+- document_id: 1046F2F456FD2635
+  path: roles/README-Tester.md
+  title: Tester Role Specification
+  category: role-specification
+  authority: shared-specification
+  importance_level: B
+  sha256: a8069da59e25512b2d05105ba1fcce83f9a55c23ca42cc5979eb2ed9840917b5
+  size_bytes: 3311
+  preferred_loading: summary-or-on-demand
+- document_id: 56A283DA5B59D664
+  path: roles/roles.summary.md
+  title: AI Summary — Canonical Roles
+  category: role-specification
+  authority: navigation-aid
+  importance_level: B
+  sha256: 5da520967c3daa9b7a6b5bc7b7ca44d6efd27791204e021358b88d17b26ada53
+  size_bytes: 2841
+  preferred_loading: summary-or-on-demand
+- document_id: 326E113CD2C37727
+  path: schemas/archive/archive-manifest.schema.json
+  title: archive-manifest.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: 5edf90a08f73a026360427e8143228b9cba1f3e58afbce0c7c4e71dfc8759f0a
+  size_bytes: 488
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+- document_id: 0A7F18D0311FAD52
+  path: schemas/closure/completion-record.schema.json
+  title: completion-record.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: f59e252de5bd0ed939bbf889bfac6715364a71afc4aca99efb9e70d4bd2e5c27
+  size_bytes: 503
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+- document_id: 5B928649952C9083
+  path: schemas/context-control/context-manifest.schema.json
+  title: context-manifest.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: 062df0751c04217ada45b5601634592e124202372de592cdb9f100b36a971eaa
+  size_bytes: 680
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+- document_id: COST_GUARD_BUDGET_SCHEMA
+  path: schemas/cost-guard/cost-budget.schema.json
+  title: Cost Guard Budget Schema
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: 41c10de779458670ebd2902bd161c76a629ef06564f4a67d1deed9cfaee92b36
+  size_bytes: 673
+- document_id: EXECUTION_BUDGET_POLICY_SCHEMA
+  path: schemas/cost-guard/execution-budget-policy.schema.json
+  title: Execution Budget Policy Schema
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: 2c532827acb33bc190b9133e826c04b44fdae7bc544e65276c368917df171390
+  size_bytes: 580
+- document_id: FOUNDATION_GUARD_ENTRY_REGISTRY_SCHEMA
+  path: schemas/foundation-guard/activation-entry-registry.schema.json
+  title: Foundation Guard Activation Entry Registry Schema
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: e1f9c437bd16802ad1fca5c00610edd54019d495a3b031b240afdf7439e27da8
+  size_bytes: 880
+- document_id: FOUNDATION_GUARD_REQUEST_SCHEMA
+  path: schemas/foundation-guard/foundation-activation-request.schema.json
+  title: Foundation Guard Activation Request Schema
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: e5e34f3462f78a3ac178d5640ba5d8b5f5d2b2706a1e6831cd59eb0dda478d56
+  size_bytes: 840
+- document_id: E11DD5C6A5AF2F1E
+  path: schemas/governance/adaptive-development-profile.schema.json
+  title: Adaptive Development Profile Schema
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: 10e21a675fbc76b60799e3b318e6b0226f9a5ec9db5715b161b57ed258765379
+  size_bytes: 1164
+  preferred_loading: on-demand
+- document_id: D019707390AE9B11
+  path: schemas/lifecycle/resume-checkpoint.schema.json
+  title: resume-checkpoint.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: f53d5ee04b7d6a46d287cb614e8181677cb2428e83fd2aaace15f2eb5d0440bc
+  size_bytes: 960
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+- document_id: 3254EA7EC30C0295
+  path: schemas/model-control/model-profile.schema.json
+  title: model-profile.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: 709ea48a7e09e91406cce25daa2779be66ef94015a5a9431520d289111139ee8
+  size_bytes: 671
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+- document_id: 6AA8CA9D43887598
+  path: schemas/system-sync/system-sync-plan.schema.json
+  title: system-sync-plan.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  sha256: 2dc0b48ec4ae9ce07d2425e2f09078156ec22518974152a09b3c74e6e2e7e3b0
+  size_bytes: 353
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+- document_id: 3C2BEB063427BEC3
+  path: specifications/Adaptive_Development_Governance_Specification_Ver1.0.md
+  title: Adaptive Development Governance Specification Ver.1.0
+  category: specification
+  authority: shared-specification
+  importance_level: A
+  sha256: 49f87e88b57f690ba0584fad9e232f6faa4519d50ca39c7485ecf9f3e73b8e43
+  size_bytes: 6155
+  preferred_loading: read-first
+- document_id: 2D8C9D6890787F77
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.md
+  title: AI-readable canonical copy generated from the adjacent DOCX.
+  category: specification
+  authority: machine-readable-canonical-copy
+  status: HISTORICAL_SOURCE
+  writable: false
+  importance_level: C
+  sha256: 4377a0cc87b75996a849d4bcf2d0b05b6490a7ba1353f0a1a3c864ea4220dc98
+  size_bytes: 23456
+  preferred_loading: on-demand
+- document_id: 66FF7B023C1CEE3C
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.summary.md
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
+  category: specification
+  authority: navigation-aid
+  status: HISTORICAL_SOURCE
+  writable: false
+  importance_level: B
+  sha256: 7df84d9bcfafc9941667fecdce4c5ea163ef3e94715e5c742b6ada79719605d2
+  size_bytes: 4893
+  preferred_loading: summary-or-on-demand
+- document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_HUMAN
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.docx
+  title: TASK-004 Lifecycle Foundation Ver.1.2
+  category: historical-baseline
+  authority: immutable_attachment_baseline
+  importance_level: D
+  sha256: 810bd78c90622ca50a25a5bb5368822288b214177b7bb4e882da4993a8beaa45
+  size_bytes: 56241
+  preferred_loading: audit-only
+  status: IMMUTABLE_ATTACHMENT_BASELINE
+  writable: false
+  effective_date: '2026-07-31'
+  verified_by: Orchestrator
+- document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_MACHINE
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  title: TASK-004 Lifecycle Foundation Ver.1.2
+  category: historical-baseline
+  authority: immutable_attachment_baseline
+  importance_level: D
+  sha256: 732e12d3270b45f1fe9d2b05b7e32a162958e1517a600851d0507dcdb79d5549
+  size_bytes: 50827
+  preferred_loading: audit-only
+  status: IMMUTABLE_ATTACHMENT_BASELINE
+  writable: false
+  effective_date: '2026-07-31'
+  verified_by: Orchestrator
+- document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_SUMMARY
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.summary.md
+  title: TASK-004 Lifecycle Foundation Ver.1.2
+  category: historical-baseline
+  authority: immutable_attachment_baseline
+  importance_level: D
+  sha256: d11fecf159c6f298f7883faee40403cbc6c204645a41c08218d4a2fb6ab3af78
+  size_bytes: 9793
+  preferred_loading: audit-only
+  status: IMMUTABLE_ATTACHMENT_BASELINE
+  writable: false
+  effective_date: '2026-07-31'
+  verified_by: Orchestrator
+- document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_HUMAN
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.docx
+  title: TASK-004 AI Development OS Lifecycle Foundation Ver.1.3
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  sha256: da41c567291bd1d7ad3f3f79f4c35c20a6c3b543de3e1ab6e5ccb0e9d96c1e70
+  size_bytes: 36955
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-07-31'
+  last_verified_at: '2026-07-31'
+  verified_by: Orchestrator
+  previous_version: '1.2'
+  supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_2
+  baseline_source: /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  coverage_evidence: /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
+  implementation_status: IMPLEMENTATION_APPROVED
+  verification_status: 88 PASS / 0 FAIL; 23 / 23 PASS
+  critical: 0
+  high: 0
+  writable: false
+  superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_HUMAN
+- document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_MACHINE
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.md
+  title: TASK-004 AI Development OS Lifecycle Foundation Ver.1.3
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  sha256: a754216874973bcf701de5b9be21807663ba7a8d26c4c0c2d9efaa30a156e6cd
+  size_bytes: 60907
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-07-31'
+  last_verified_at: '2026-07-31'
+  verified_by: Orchestrator
+  previous_version: '1.2'
+  supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_2
+  baseline_source: /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  coverage_evidence: /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
+  implementation_status: IMPLEMENTATION_APPROVED
+  verification_status: 88 PASS / 0 FAIL; 23 / 23 PASS
+  critical: 0
+  high: 0
+  writable: false
+  superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_MACHINE
+- document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_SUMMARY
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.summary.md
+  title: AI Summary — TASK-004 Lifecycle Foundation Ver.1.3
+  category: specification
+  authority: context_economy_summary
+  importance_level: B
+  sha256: 3cc918bf412550699d0708976bd8c52769c00090b0d960939a7d28bccf3db4d2
+  size_bytes: 3042
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-07-31'
+  last_verified_at: '2026-07-31'
+  verified_by: Orchestrator
+  previous_version: '1.2'
+  supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_2
+  baseline_source: /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  coverage_evidence: /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
+  implementation_status: IMPLEMENTATION_APPROVED
+  verification_status: 88 PASS / 0 FAIL; 23 / 23 PASS
+  critical: 0
+  high: 0
+  writable: false
+  superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_SUMMARY
+- document_id: FCD6748ADDC60940
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_詳細設計書_Ver1.1_レビュー反映版.docx
+  title: TASK-004_AI_Development_OS_Lifecycle_Foundation_Φ⌐│τ┤░Φ¿¡Φ¿êµ¢╕_Ver1.1_πâ¼πâôπâÑπâ╝σÅìµÿáτëê.docx
+  category: specification
+  authority: human-readable-copy
+  status: HISTORICAL_SOURCE
+  writable: false
+  importance_level: C
+  sha256: 895eb9126b7365ebc600944fe5a17c2b0fc4d02aadeb7d5c9c25cc1230419cf9
+  size_bytes: 48753
+  preferred_loading: on-demand
+- document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_HUMAN
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.docx
+  title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.4
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  sha256: 34cfc7048511a6b147e025f347367bd4d3f739fd996160e953ccba76eedef9f0
+  size_bytes: 37778
+  preferred_loading: on-demand
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '1.3'
+  supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_HUMAN
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  implementation_status: IMPLEMENTATION_APPROVED_PLUS_P0_EXTRACTION
+  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
+  critical: 0
+  high: 0
+  writable: false
+  superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_HUMAN
+- document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_MACHINE
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.md
+  title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.4
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  sha256: 346c7c7fd1245963d226e6350ac1489140fd1a9e4c5e6ab632bf2f1dc5ca83d0
+  size_bytes: 64401
+  preferred_loading: read-first
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '1.3'
+  supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_MACHINE
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  implementation_status: IMPLEMENTATION_APPROVED_PLUS_P0_EXTRACTION
+  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
+  critical: 0
+  high: 0
+  writable: false
+  superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_MACHINE
+- document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_SUMMARY
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.summary.md
+  title: AI Summary — TASK-004 BAI Development OS Lifecycle Foundation Ver.1.4
+  category: specification
+  authority: context_economy_summary
+  importance_level: B
+  sha256: 58fe3807f778d496ed91b4479efab3ecb33f3b9079aa708f9b20e3ddbd7c6bcc
+  size_bytes: 1683
+  preferred_loading: read-first
+  status: SUPERSEDED_CANONICAL_BASELINE
+  freshness_status: HISTORICAL
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '1.3'
+  supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_SUMMARY
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  implementation_status: IMPLEMENTATION_APPROVED_PLUS_P0_EXTRACTION
+  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
+  critical: 0
+  high: 0
+  writable: false
+  superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_SUMMARY
+- document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_HUMAN
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.docx
+  title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.5
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  previous_version: '1.4'
+  supersedes: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_HUMAN
+  implementation_status: PHASE_1_6_TO_1_8_TECHNICALLY_COMPLETED_MVP
+  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
+  critical: 0
+  high: 0
+  status: CURRENT_CANONICAL
+  freshness_status: CURRENT
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  sha256: af72a923079a9836f0e2c63696a01aa88303f2416cbc4d6a60f8a7cb454066d8
+  size_bytes: 39138
+- document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_MACHINE
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.md
+  title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.5
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  previous_version: '1.4'
+  supersedes: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_MACHINE
+  implementation_status: PHASE_1_6_TO_1_8_TECHNICALLY_COMPLETED_MVP
+  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
+  critical: 0
+  high: 0
+  status: CURRENT_CANONICAL
+  freshness_status: CURRENT
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  sha256: 8b33bb0d13044486c6bc5c53a59a5189fc85a19314cf0edb1748f1984a16966c
+  size_bytes: 68574
+- document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_SUMMARY
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.summary.md
+  title: AI Summary — TASK-004 BAI Development OS Lifecycle Foundation Ver.1.5
+  category: specification
+  authority: context_economy_summary
+  importance_level: B
+  preferred_loading: read-first
+  previous_version: '1.4'
+  supersedes: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_SUMMARY
+  implementation_status: PHASE_1_6_TO_1_8_TECHNICALLY_COMPLETED_MVP
+  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
+  critical: 0
+  high: 0
+  status: CURRENT_CANONICAL
+  freshness_status: CURRENT
+  effective_date: '2026-08-08'
+  last_verified_at: '2026-08-08'
+  verified_by: Orchestrator
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  sha256: 99ac8b27b3e1549b2768d13aaafa06cae35a160bcbfcb295d4dd29015c4ae05f
+  size_bytes: 1338
+- document_id: 454C24AE07C2AAD7
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
+  title: TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
+  category: specification
+  authority: human-readable-copy
+  importance_level: C
+  sha256: 2769fd94ce36ee6d8ab64fc6f89f30905a02ce74e94bfc0dffde878d77728395
+  size_bytes: 41005
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+- document_id: D91AFBEBD278C13F
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md
+  title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6 — Phase 2–6 and Task Completion Integrated
+  category: specification
+  authority: machine-readable-canonical-copy
+  importance_level: A
+  sha256: 92a6284282cb6abc60f8b5f63b8a75a67f7ef3dcef562914e9499b67b8c28d28
+  size_bytes: 73507
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+- document_id: DE85D5793C06773A
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.summary.md
+  title: TASK-004 Lifecycle Foundation Ver.1.6 — Summary
+  category: specification
+  authority: navigation-aid
+  importance_level: A
+  sha256: cb8397c9903742c2063474ae89e29d4493ba352e9d09d6c18b40263f5c1986b4
+  size_bytes: 802
+  preferred_loading: always
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+- document_id: E0CB35308F2DD73C
+  path: tasks/.gitkeep
+  title: .gitkeep
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: B
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+  size_bytes: 0
+  preferred_loading: summary-or-on-demand
+- document_id: 98C8D34E4BDDD94D
+  path: tasks/README-MIGRATION-NOTICE.md
+  title: Migration Notice
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: B
+  sha256: a62ab769fea15698106729e6db0993db4610618992e1ac6ac5a042089a3c8a7d
+  size_bytes: 177
+  preferred_loading: summary-or-on-demand
+- document_id: E5F2CC23B3D085B3
+  path: tasks/TASK-004/TASK-004.summary.md
+  title: AI Task Summary — TASK-004
+  category: task-evidence
+  authority: navigation-aid
+  importance_level: A
+  sha256: f3e43142389a7f5ec438707b581629bb84ab88f90598fedee0f7b40f19869c84
+  size_bytes: 2761
+  preferred_loading: read-first
+- document_id: D9C5177937404A8C
+  path: tasks/TASK-004/architecture-review.md
+  title: Architecture Review
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 1abdf10b40ad035f0184a809e830dc283f1a4acdb10533c74236243e953ce904
+  size_bytes: 6460
+  preferred_loading: on-demand
+- document_id: CDF79B546ACD78BF
+  path: tasks/TASK-004/builder-proposal.md
+  title: Builder Proposal
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: dcd97f32913733316a36e449b4186e651d502a629480afadc436804949a436be
+  size_bytes: 30542
+  preferred_loading: on-demand
+- document_id: 4F95A5B80A1BD927
+  path: tasks/TASK-004/builder-response.md
+  title: Builder Response
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: ead77075fd06d695bb9fc39f34c5dc5801433244fcc60ec330ea73e2e051e288
+  size_bytes: 15510
+  preferred_loading: on-demand
+- document_id: 05104D666B7F657D
+  path: tasks/TASK-004/critic-review.md
+  title: Critic Review
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 6eb7e7f69e0cb9ac2676ba0ff993b96a1d16b85d11b1f63c9a170298f9703320
+  size_bytes: 6012
+  preferred_loading: on-demand
+- document_id: 9E1A04C46681F661
+  path: tasks/TASK-004/design-amendment-d05-d06.md
+  title: D-05 / D-06 Design Amendment Proposal
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: cd6b53964f97735234c48a34b0b6b69276e8bee40579a31812421c057c163a56
+  size_bytes: 10609
+  preferred_loading: on-demand
+- document_id: 37651A5776C1FD88
+  path: tasks/TASK-004/final-plan-consistency-check.md
+  title: Final Plan Consistency Check
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 62aac6574f3ddbf8ebc443f8596aa64ddd1a0c13c12d36747ed432883c058920
+  size_bytes: 13599
+  preferred_loading: on-demand
+- document_id: A53D44F242603936
+  path: tasks/TASK-004/final-plan.md
+  title: Final Plan
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: d14d95136546dc207c2cbd8009faac455906270d5bd8630adaba38d9212ee5f8
+  size_bytes: 24710
+  preferred_loading: on-demand
+- document_id: E821EA48AA581552
+  path: tasks/TASK-004/implementation-fix-report.md
+  title: Implementation Fix Report
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: d8e8f97f193ba3c4fab332ff5ff9d84209671eeffcc92feec488a004c29cf13b
+  size_bytes: 26144
+  preferred_loading: on-demand
+- document_id: 55ED21EF8B95E74C
+  path: tasks/TASK-004/implementation-report.md
+  title: Implementation Report
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: fedbbfca112bb51fb80ba3cf367063750075e5493a96fe0818c4a9332a096866
+  size_bytes: 5536
+  preferred_loading: on-demand
+- document_id: FE2BCA7047173D21
+  path: tasks/TASK-004/judge-amendment-decision.md
+  title: Judge Amendment Decision
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 808af72e258f37d1afce897b01c6ddea1b68e6fd45ed3dee4e65d127fd7a13b4
+  size_bytes: 10848
+  preferred_loading: on-demand
+- document_id: 17AF55DA424D4989
+  path: tasks/TASK-004/judge-decision-d05-d06.md
+  title: Judge Decision — D-05 / D-06 Design Amendment
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 05e79967e150030afe563875fd2366102c9fe1f6974059a41b2acc978608350f
+  size_bytes: 13197
+  preferred_loading: on-demand
+- document_id: EAAC85E3D791F063
+  path: tasks/TASK-004/judge-decision.md
+  title: Judge Decision
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 6d2adeb7c844c40a2a11d727a810ad7fb02baaf007f1ed0080734a26cbd071f0
+  size_bytes: 14491
+  preferred_loading: on-demand
+- document_id: FE65D57165C63A09
+  path: tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  title: TASK-004 P0.0 / P0.1 Extraction Verification
+  category: task-evidence
+  authority: owner-directed-verification
+  importance_level: A
+  sha256: ef1c0e9de34995f5d01f3c1d271d30b2456fdd2b11d5899ddb41ea8e493131d3
+  size_bytes: 3345
+  preferred_loading: read-first
+- document_id: 501A705251F2FA1F
+  path: tasks/TASK-004/p0.0-product-boundary-correction.md
+  title: TASK-004 P0.0 Repository / Product Boundary Correction
+  category: task-evidence
+  authority: owner-directed-corrective-work
+  importance_level: A
+  sha256: ff6dfd6d7c8015c1678c586a17664710eccb566c5559de4f3897e185ed449629
+  size_bytes: 1576
+  preferred_loading: read-first
+- document_id: 28CEE7C8248F56DD
+  path: tasks/TASK-004/p0.1-adaptive-development-governance.md
+  title: TASK-004 P0.1 Adaptive Development Governance
+  category: task-evidence
+  authority: owner-directed-corrective-work
+  importance_level: A
+  sha256: f36919d3ccf107f0d827f15d4333de1cf0a8f207618019ca016546e3b2ffead5
+  size_bytes: 1156
+  preferred_loading: read-first
+- document_id: TASK004_P16_FINAL_PLAN
+  path: tasks/TASK-004/phase1.6-foundation-guard-final-plan.md
+  title: Phase 1.6 Foundation Guard Final Plan
+  category: task-evidence
+  authority: final-plan
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 872cd6c143066c898484bb687affc80075e32f70eae7c37896e8f82082fe5f17
+  size_bytes: 1730
+- document_id: TASK004_P16_IMPLEMENTATION_VERIFY
+  path: tasks/TASK-004/phase1.6-foundation-guard-implementation-and-verification.md
+  title: Phase 1.6 Foundation Guard Implementation and Verification
+  category: task-evidence
+  authority: verification-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 4466701f34f550215410930404cee64aa8a3e795343e9a99ee93f5dda48a9c54
+  size_bytes: 2694
+- document_id: TASK004_P16_P18_COMPLETION
+  path: tasks/TASK-004/phase1.6-to-1.8-completion-record.md
+  title: Phase 1.6–1.8 Completion Record
+  category: task-evidence
+  authority: milestone-record
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 1119c29040584a4b93fe09e559d280d4b4160905b010aad3395c8574a7d44ea7
+  size_bytes: 1451
+- document_id: TASK004_P16_P18_FINAL_VERIFY
+  path: tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  title: Phase 1.6–1.8 Final Verification
+  category: task-evidence
+  authority: verification-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 60a60d892e603a68e4762227e703ae0c04d63f8fd8aa6a301636b48d404fc81c
+  size_bytes: 3933
+- document_id: TASK004_P16_P18_OWNER_AUTH
+  path: tasks/TASK-004/phase1.6-to-1.8-owner-implementation-authorization.md
+  title: Phase 1.6–1.8 Owner Implementation Authorization
+  category: task-evidence
+  authority: owner-authorization
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: d26f8dfd461a209bd04aede00a28db78226d4cb5c2fbf8f804555a066e1091b8
+  size_bytes: 1519
+- document_id: TASK004_P17_FINAL_PLAN
+  path: tasks/TASK-004/phase1.7-cost-guard-final-plan.md
+  title: Phase 1.7 Cost Guard Final Plan
+  category: task-evidence
+  authority: final-plan
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 546c0d977d1a240adada826e21ffc4f9865e6ef8064fbf087f78ba7c0ba36a3f
+  size_bytes: 1537
+- document_id: TASK004_P17_IMPLEMENTATION_VERIFY
+  path: tasks/TASK-004/phase1.7-cost-guard-implementation-and-verification.md
+  title: Phase 1.7 Cost Guard Implementation and Verification
+  category: task-evidence
+  authority: verification-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 9d6fabb7f6e55aab5aa0c21a2b3137cd498666bf3090941f630e3e8a5e46d080
+  size_bytes: 1878
+- document_id: TASK004_P18_FINAL_PLAN
+  path: tasks/TASK-004/phase1.8-execution-budget-final-plan.md
+  title: Phase 1.8 Execution Budget Final Plan
+  category: task-evidence
+  authority: final-plan
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: e8a2b3592ec00a0cd677b8b1af7d99ab5d35b1095777f3c0d99c09545824177c
+  size_bytes: 1169
+- document_id: TASK004_P18_IMPLEMENTATION_VERIFY
+  path: tasks/TASK-004/phase1.8-execution-budget-implementation-and-verification.md
+  title: Phase 1.8 Execution Budget Implementation and Verification
+  category: task-evidence
+  authority: verification-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_MILESTONE_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 76e596226124f0e61f3854ee6559ecd71640ac4e2c6ff5b29b9d1db518a5f9c2
+  size_bytes: 1667
+- document_id: C2A91977C2B63BF2
+  path: tasks/TASK-004/phase2-recovery-implementation-and-verification.md
+  title: TASK-004 Phase 2 — Recovery Control Implementation and Verification
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: 03931e40e24095351202893a88c70194a95f32c39d86bee62dc83e09ead7c760
+  size_bytes: 1324
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 6F6F033167CCBE3B
+  path: tasks/TASK-004/phase2-to-6-critic-review.md
+  title: TASK-004 Phase 2–6 Critic Review
+  category: review
+  authority: independent-review-evidence
+  importance_level: B
+  sha256: 8fcaaa288057f6a39e806c00d989878f3d66da2795d6eec84cb5fa7ab67ec3ff
+  size_bytes: 1062
+  preferred_loading: on-demand
+  status: FINAL_TASK004_REVIEW
+  effective_date: '2026-08-08'
+- document_id: 895F3F819D3467C3
+  path: tasks/TASK-004/phase2-to-6-final-verification.md
+  title: TASK-004 Phase 2–6 Final Verification
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: b8f116374c30107b308ec263377d8a57149f44235cf2f1b11db29fc0895ed0e5
+  size_bytes: 3543
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 32A90D2B403C2000
+  path: tasks/TASK-004/phase2-to-6-owner-implementation-authorization.md
+  title: TASK-004 Phase 2–6 Owner Implementation Authorization
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: e210a4a10abc9b706b637d3064be052787df4e85b0f8b7493f9cf8ca28496191
+  size_bytes: 991
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 50CE25D83B08F6CD
+  path: tasks/TASK-004/phase3-context-control-implementation-and-verification.md
+  title: TASK-004 Phase 3 — Context Control Implementation and Verification
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: e21e62a8b27137d427469906d6cf54143ca9d896f54b21c9a5729b1527e51378
+  size_bytes: 952
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 2895C8D9B4A35DCC
+  path: tasks/TASK-004/phase4-cost-model-control-implementation-and-verification.md
+  title: TASK-004 Phase 4 — Cost / Model Control Implementation and Verification
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: ff17eba0925879eb82f0e49a567d3fab9c8511ff4ceae83b19278b6bf4958444
+  size_bytes: 1082
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 9158E9CE57FDCC07
+  path: tasks/TASK-004/phase5-closure-archive-migration-implementation-and-verification.md
+  title: TASK-004 Phase 5 — Closure / Archive / Historical Migration Implementation and Verification
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: 7574cc7969539e5b2fb60a0a558a5041dbc3b22cd1370e72e89a3e760a54eb8e
+  size_bytes: 1266
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: EE3D491FB718C900
+  path: tasks/TASK-004/phase6-system-sync-implementation-and-verification.md
+  title: TASK-004 Phase 6 — System Synchronization Implementation and Verification
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: 40b3a518021412b8138dcac0acb7cb553b22bf998b7ceed2bce6405405110eb6
+  size_bytes: 1123
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 36FDDAC32A216970
+  path: tasks/TASK-004/phase6-system-sync-verify.json
+  title: phase6-system-sync-verify.json
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: 32c3c21ef1bd813beac1142b722c6beab5c6dea9251ec953650173330eded065
+  size_bytes: 5404
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: PRODUCT_EXTRACTION_DOCUMENTATION_CONSISTENCY_CHECK
+  path: tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  title: TASK-004 Product Extraction Documentation Consistency Check
+  category: task-evidence
+  authority: verification-evidence
+  importance_level: A
+  sha256: e308da3978bcb58f8d6bc30467247e9e160e12bb0ddff7170f1c3682280de259
+  size_bytes: 1367
+  preferred_loading: read-first
+  status: CURRENT_VERIFICATION_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 5940CCD880F0C0DC
+  path: tasks/TASK-004/retest-report-02.md
+  title: Retest Report — Cycle 2
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 320010d181ba7149ded0bbc4402d9e6ce80820fd13969e8b865bee63f31f4617
+  size_bytes: 11672
+  preferred_loading: on-demand
+- document_id: 28780CEDE21ECBD3
+  path: tasks/TASK-004/retest-report.md
+  title: Retest Report
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 04146b6996ea897c824e9a59f89e57a936bb5cf006f78c7c4c850494523f2f4b
+  size_bytes: 13990
+  preferred_loading: on-demand
+- document_id: DBB7D8061B827B8E
+  path: tasks/TASK-004/task.md
+  title: TASK-004 — AI Development OS Lifecycle Foundation
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 23089fdd310bbef66d81e08c0266d399d137daaeddfd36ef70fbc7259c9491b3
+  size_bytes: 16230
+  preferred_loading: on-demand
+- document_id: 9D6FBF8502D93F9D
+  path: tasks/TASK-004/task004-final-archive-manifest.json
+  title: task004-final-archive-manifest.json
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: 5e0887a1fc9ae4efa39bfa8fea72ca730da827ebf7eadc3ef7f560ff101fae50
+  size_bytes: 3153
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: BA595EE7600A661B
+  path: tasks/TASK-004/task004-final-archive-readiness.md
+  title: TASK-004 Final Archive Readiness
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: 278999859c27e81b6e4a940d3acf0709171f907f6f38222d7fbd5623b45c288a
+  size_bytes: 1303
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: CD5A71F4C63E5E32
+  path: tasks/TASK-004/task004-final-closure-readiness.md
+  title: TASK-004 Final Closure Readiness
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: b9ce2aac859c61d98be1f82db3e2cb26f8d445179354ef1e1cf7f680ede3cd0b
+  size_bytes: 1372
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 09B709794D047DF0
+  path: tasks/TASK-004/task004-final-completion-record.md
+  title: TASK-004 Final Completion Record
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: 0e7c9d71be6ef3adc57c95014d600c3b937f96b01e474f7f074ab9189de0028b
+  size_bytes: 1614
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: C093CF91B120D1CA
+  path: tasks/TASK-004/task004-final-judge-decision.md
+  title: TASK-004 Final Judge Decision
+  category: task-evidence
+  authority: evidence
+  importance_level: B
+  sha256: cff88ac35b4e2264d3e54e2afce08883705cd78df8ff63ab4a7b4a428385a3a9
+  size_bytes: 1894
+  preferred_loading: on-demand
+  status: FINAL_TASK004_EVIDENCE
+  effective_date: '2026-08-08'
+- document_id: 07684F41523E9FB1
+  path: tasks/TASK-004/test-report.md
+  title: Test Report
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  sha256: 8383540a244595e624ece7fe5b279e7f56da2174cbd8905544add7b50e01ecf4
+  size_bytes: 17209
+  preferred_loading: on-demand
+- document_id: 9E418877F783F089
+  path: templates/archive-readiness.template.md
+  title: Archive Readiness
+  category: template
+  authority: supporting-artifact
+  importance_level: C
+  sha256: 034a99aa584ec1e66a5ee1e4f46493e31d9ed6250954a3215a78219dbeed1656
+  size_bytes: 213
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+- document_id: 8C3EEC268F30FD4D
+  path: templates/builder-proposal.template.md
+  title: Builder Proposal
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 770bcafdae0ed52bafeaf3e704307c64718d880b1d6bc419d66c6f058d45dace
+  size_bytes: 494
+  preferred_loading: summary-or-on-demand
+- document_id: 30A9F2CE5183124B
+  path: templates/builder-response.template.md
+  title: Builder Response
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 50e62b77c5a916c507dc1c90b23c3ab83f4000d8358512a070e99b48ee71aedb
+  size_bytes: 389
+  preferred_loading: summary-or-on-demand
+- document_id: B8244775454757A8
+  path: templates/closure-readiness.template.md
+  title: Closure Readiness
+  category: template
+  authority: supporting-artifact
+  importance_level: C
+  sha256: ca00dd9aa88ecdd8851f4003c7507b30b3f9fc401e5657e4665649fd6089f7be
+  size_bytes: 220
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+- document_id: D9205717815B907F
+  path: templates/context-manifest.template.md
+  title: Context Manifest
+  category: template
+  authority: supporting-artifact
+  importance_level: C
+  sha256: 66c730f60100187c4e9741590754c15d4bf3e3a9b3a928ad6f0f637d6e17df50
+  size_bytes: 263
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+- document_id: 56D322376368152B
+  path: templates/critic-review.template.md
+  title: Critic Review
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 42dbc0a726bb11590d3c6775d1de4ff265d3c6f911f6356d248ba8bb9a47260e
+  size_bytes: 421
+  preferred_loading: summary-or-on-demand
+- document_id: FCB0A04CD6DC912A
+  path: templates/final-implementation-decision.template.md
+  title: Final Implementation Decision
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: e3cd8431a3c9dbb776e8e973473a6fc411734c1c1ca8dcf858053d74428fcd20
+  size_bytes: 518
+  preferred_loading: summary-or-on-demand
+- document_id: 4310356105E338A5
+  path: templates/final-plan-consistency-check.template.md
+  title: Final Plan Consistency Check
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 20b19ae5be1f7828fe1ae0255292eaa4b466314511e78e4e20c471428fb599df
+  size_bytes: 490
+  preferred_loading: summary-or-on-demand
+- document_id: 8C5672E5AE38DE5F
+  path: templates/final-plan.template.md
+  title: Final Plan
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: da8ed15afa3b932cc9f0c3b07ba8889978c364ca454e35b4a67f3a79ed885a4b
+  size_bytes: 459
+  preferred_loading: summary-or-on-demand
+- document_id: 6ACC5A93FA5D00E2
+  path: templates/implementation-fix-report.template.md
+  title: Implementation Fix Report
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 4a2e5a3fde03098420112e0f64ac4bef343ae05851991279d3c4da0f1b9d45b5
+  size_bytes: 442
+  preferred_loading: summary-or-on-demand
+- document_id: CC9BADFDC410948E
+  path: templates/implementation-handoff.template.md
+  title: Implementation Handoff
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 8b86a9bc2a744d60b95aaffeede1c332ce174bf8171b2e918656f6328f81bbc5
+  size_bytes: 432
+  preferred_loading: summary-or-on-demand
+- document_id: CC9DB692940EA7A4
+  path: templates/implementation-report.template.md
+  title: Implementation Report
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: fffbe202b1a63154e1d9f84e53959d206ade53e4b97a58a7110c60984dbe920a
+  size_bytes: 358
+  preferred_loading: summary-or-on-demand
+- document_id: BC84D70562E54793
+  path: templates/implementation-review.template.md
+  title: Implementation Review
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: f107604f0247350122d406ac0b03d65c09ab2807235e28a99682f4f6d87c991e
+  size_bytes: 675
+  preferred_loading: summary-or-on-demand
+- document_id: 47D26E2932312C6A
+  path: templates/judge-decision.template.md
+  title: Judge Decision
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 4dd0a4073f910a4ecc2999a5f2d9bd46598c47cca860daf5f342c5ac4c70adcb
+  size_bytes: 404
+  preferred_loading: summary-or-on-demand
+- document_id: F2E9D45247422E4F
+  path: templates/project-policy-review.template.md
+  title: Project Policy Review
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: f76ebbfb86164af7893536ddad39e1946bd5e3a9b2e6a3aeff7c2aeb3000d48f
+  size_bytes: 866
+  preferred_loading: summary-or-on-demand
+- document_id: 8F0DDE7A748D25EA
+  path: templates/resume-checkpoint.template.md
+  title: Resume Checkpoint
+  category: template
+  authority: supporting-artifact
+  importance_level: C
+  sha256: fc83aee4671e399e192c23d9cb4b04dd48925669f25b3f20f6cbf42db2740876
+  size_bytes: 432
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+- document_id: A18CF128C9226B83
+  path: templates/retest-report.template.md
+  title: Retest Report
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: c05274bf3888ae9fd44b159032237ee20e683cc2d47e60bbedf8a05822ab2ed7
+  size_bytes: 490
+  preferred_loading: summary-or-on-demand
+- document_id: 74351BB60998FFD5
+  path: templates/task.template.md
+  title: TASK-XXX — Title
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 5a25b232354dafd899f583488b23b30a6c6000055f1a5a60961583a5c1268d4f
+  size_bytes: 407
+  preferred_loading: summary-or-on-demand
+- document_id: B2383E15A156F440
+  path: templates/templates.summary.md
+  title: AI Summary — Artifact Templates
+  category: template
+  authority: navigation-aid
+  importance_level: B
+  sha256: af2aa3e1167f45f08c25e08d7e8db880dc9dde7f8e30e6ef1ae78a3225823dd5
+  size_bytes: 2012
+  preferred_loading: summary-or-on-demand
+- document_id: 45296949C18C87E9
+  path: templates/test-report.template.md
+  title: Test Report
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  sha256: 5d136008d593705825d61f126e4fe79ba62ae5b532c9a7208e0efac3f7cf2dc1
+  size_bytes: 824
+  preferred_loading: summary-or-on-demand
 current_canonical_document_sets:
-  effective_date: "2026-07-31"
-  promotion_authority: "Owner"
-  consistency_result: "CROSS_FORMAT_CONSISTENCY_PASS"
-  consistency_evidence: "/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md"
+  effective_date: '2026-08-08'
+  promotion_authority: Owner
+  consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase2-to-6-final-verification.md
   architecture:
-    document_id: "AI_DEVELOPMENT_OS_ARCHITECTURE"
-    version: "2.1"
-    status: "CURRENT_CANONICAL"
-    human: "architecture/AI_Development_OS_Architecture_Ver2.1.docx"
-    machine: "architecture/AI_Development_OS_Architecture_Ver2.1.md"
-    summary: "architecture/AI_Development_OS_Architecture_Ver2.1.summary.md"
+    document_id: AI_DEVELOPMENT_OS_ARCHITECTURE
+    version: '2.4'
+    status: CURRENT_CANONICAL
+    human: architecture/BAI_Development_OS_Architecture_Ver2.4.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.4.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.4.summary.md
   task_004_lifecycle:
-    document_id: "TASK_004_LIFECYCLE_FOUNDATION"
-    version: "1.3"
-    status: "CURRENT_CANONICAL"
-    human: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.docx"
-    machine: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.md"
-    summary: "specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.summary.md"
-  registry_sync_status: "IN_PROGRESS"
-  commit_status: "NOT_COMMITTED"
+    document_id: TASK_004_LIFECYCLE_FOUNDATION
+    version: '1.6'
+    status: CURRENT_CANONICAL
+    human: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
+    machine: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md
+    summary: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.summary.md
+  task_004_status: COMPLETED
+  closure_status: CLOSURE_READY
+  archive_status: READY_NOT_ARCHIVED
+  registry_sync_status: CURRENT_AFTER_TASK004_COMPLETION
+  commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
+product_root: /home/baisound/bai-development-os
+registry_status: CURRENT_AFTER_TASK004_COMPLETION

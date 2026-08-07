@@ -1,0 +1,196 @@
+{
+  "plan": {
+    "sync_plan_version": "1.0.0",
+    "sync_id": "fc46b1e7-fa8d-4b2e-8205-c4923bb48a01",
+    "updates": [
+      {
+        "kind": "README",
+        "path": "README.md",
+        "must_contain": [
+          "TASK-004 Lifecycle Foundation Completion",
+          "Ver2.4",
+          "Ver1.6"
+        ]
+      },
+      {
+        "kind": "README",
+        "path": "README-AI.md",
+        "must_contain": [
+          "TASK-004 Completed Lifecycle Contract",
+          "Ver2.4",
+          "Ver1.6"
+        ]
+      },
+      {
+        "kind": "README",
+        "path": "PROJECT.md",
+        "must_contain": [
+          "TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`",
+          "TASK-005"
+        ]
+      },
+      {
+        "kind": "COMMON",
+        "path": "common/Workflow-Specification.md",
+        "must_contain": [
+          "TASK-004"
+        ]
+      },
+      {
+        "kind": "COMMON",
+        "path": "common/README-Common.md",
+        "must_contain": [
+          "TASK-004"
+        ]
+      },
+      {
+        "kind": "ROLE",
+        "path": "roles/README-Orchestrator.md",
+        "must_contain": [
+          "TASK-004"
+        ]
+      },
+      {
+        "kind": "ROLE",
+        "path": "roles/roles.summary.md",
+        "must_contain": [
+          "TASK-004"
+        ]
+      },
+      {
+        "kind": "REGISTRY",
+        "path": "registry/current-state.md",
+        "must_contain": [
+          "TASK-004: `COMPLETED`",
+          "Architecture Ver.2.4",
+          "Foundation Ver.1.6",
+          "READY / NOT_ARCHIVED"
+        ]
+      },
+      {
+        "kind": "REGISTRY",
+        "path": "registry/ai-context-pack.md",
+        "must_contain": [
+          "TASK-004 Lifecycle Foundation is `COMPLETED`",
+          "TASK-005"
+        ]
+      },
+      {
+        "kind": "REGISTRY",
+        "path": "registry/context-loading-rules.md",
+        "must_contain": [
+          "Adaptive Profile Rule"
+        ]
+      },
+      {
+        "kind": "TEMPLATE",
+        "path": "templates/resume-checkpoint.template.md",
+        "must_contain": [
+          "checkpoint"
+        ]
+      },
+      {
+        "kind": "TEMPLATE",
+        "path": "templates/context-manifest.template.md",
+        "must_contain": [
+          "Context"
+        ]
+      },
+      {
+        "kind": "TEMPLATE",
+        "path": "templates/closure-readiness.template.md",
+        "must_contain": [
+          "Closure"
+        ]
+      },
+      {
+        "kind": "TEMPLATE",
+        "path": "templates/archive-readiness.template.md",
+        "must_contain": [
+          "Archive"
+        ]
+      },
+      {
+        "kind": "PACKAGE",
+        "path": "package.json",
+        "must_contain": [
+          "\"version\": \"0.2.0\"",
+          "\"./system-sync\""
+        ]
+      }
+    ],
+    "scope": [
+      "TASK-004",
+      "PHASE-6",
+      "SYSTEM_SYNC",
+      "FINAL_POST_COMMIT"
+    ],
+    "policy_update_authorized": true
+  },
+  "result": {
+    "result": "SYSTEM_SYNC_VERIFIED",
+    "sync_id": "fc46b1e7-fa8d-4b2e-8205-c4923bb48a01",
+    "files": [
+      {
+        "path": "README.md",
+        "checksum": "sha256:54b88033b00c0b70391106dae96c15215e5772825a4fcfbc06ed92afa682aef9"
+      },
+      {
+        "path": "README-AI.md",
+        "checksum": "sha256:e06f14ba3427e85e7fbbf70fcafba1ded2af87ff7043bcc0915cf57719852352"
+      },
+      {
+        "path": "PROJECT.md",
+        "checksum": "sha256:6eb510a2d4404d847b6777f1174c71e2244c7c7b70d8a91356a841275b0f4a44"
+      },
+      {
+        "path": "common/Workflow-Specification.md",
+        "checksum": "sha256:6a6cd787f1cf82de1d8a01865f674a9c0b93ded04e8f810c18c5d7fccd03ae22"
+      },
+      {
+        "path": "common/README-Common.md",
+        "checksum": "sha256:de3f2bf0f84082227f8671cb8dfaa9cd7073332c43b08610567522af70d8e773"
+      },
+      {
+        "path": "roles/README-Orchestrator.md",
+        "checksum": "sha256:1a5a138f9106850bf443e0cbe869e46e9a5bd0f4b55ce1c4939bfa66a8de5340"
+      },
+      {
+        "path": "roles/roles.summary.md",
+        "checksum": "sha256:5da520967c3daa9b7a6b5bc7b7ca44d6efd27791204e021358b88d17b26ada53"
+      },
+      {
+        "path": "registry/current-state.md",
+        "checksum": "sha256:ba459642ba5ef86aff55b3f55884850fd141e5e51a99092b192b6e2be275cebe"
+      },
+      {
+        "path": "registry/ai-context-pack.md",
+        "checksum": "sha256:6832a2d6e089f62460f70e2dfb00056ca969387625c1383d09a3c58112af11bc"
+      },
+      {
+        "path": "registry/context-loading-rules.md",
+        "checksum": "sha256:bffca7f2c17a6480286ac8029152683f6572b0fc68612674487c61f8ebbf5f2a"
+      },
+      {
+        "path": "templates/resume-checkpoint.template.md",
+        "checksum": "sha256:fc83aee4671e399e192c23d9cb4b04dd48925669f25b3f20f6cbf42db2740876"
+      },
+      {
+        "path": "templates/context-manifest.template.md",
+        "checksum": "sha256:66c730f60100187c4e9741590754c15d4bf3e3a9b3a928ad6f0f637d6e17df50"
+      },
+      {
+        "path": "templates/closure-readiness.template.md",
+        "checksum": "sha256:ca00dd9aa88ecdd8851f4003c7507b30b3f9fc401e5657e4665649fd6089f7be"
+      },
+      {
+        "path": "templates/archive-readiness.template.md",
+        "checksum": "sha256:034a99aa584ec1e66a5ee1e4f46493e31d9ed6250954a3215a78219dbeed1656"
+      },
+      {
+        "path": "package.json",
+        "checksum": "sha256:4dad12b4cb8bd3744e0ec68679521a4c1a1de262d09a27c0782b39c1d81fde82"
+      }
+    ]
+  }
+}

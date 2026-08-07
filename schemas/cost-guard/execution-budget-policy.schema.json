@@ -1,0 +1,9 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.dev/schemas/cost-guard/execution-budget-policy.schema.json",
+  "type":"object","additionalProperties":false,
+  "properties":{
+    "max_retry_attempts":{"type":"integer","minimum":0},"max_review_cycles":{"type":"integer","minimum":0},"max_artifact_bytes":{"type":"integer","minimum":0},
+    "max_model_call_cost_microusd":{"type":["integer","null"],"minimum":0},"soft_limit_ratio":{"type":"number","exclusiveMinimum":0,"exclusiveMaximum":1},"hard_stop_on_quota_error":{"type":"boolean"}
+  }
+}

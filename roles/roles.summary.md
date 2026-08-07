@@ -45,3 +45,8 @@
 ## Loading Policy
 
 Load only the active Role specification. Orchestrator may load the next Role specification for routing checks, but must not perform that Role's work.
+
+
+## TASK-004 Phase 2–6 Completion
+
+TASK-004 lifecycle baseline is formalized through TASK-004 completion. Recovery/Resume, Context, Cost/Model, Closure/Archive, and System Sync are no longer reserved concepts. Current canonicals: Architecture Ver.2.4 and Lifecycle Foundation Ver.1.6.

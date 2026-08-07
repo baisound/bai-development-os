@@ -1,0 +1,10 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.dev/schemas/cost-guard/cost-budget.schema.json",
+  "type":"object","additionalProperties":false,
+  "properties":{
+    "soft_limit_ratio":{"type":"number","exclusiveMinimum":0,"exclusiveMaximum":1},
+    "task":{"$ref":"#/$defs/dimension"},"role":{"$ref":"#/$defs/dimension"},"session":{"$ref":"#/$defs/dimension"}
+  },
+  "$defs":{"dimension":{"type":"object","additionalProperties":false,"properties":{"max_input_tokens":{"type":["integer","null"],"minimum":0},"max_output_tokens":{"type":["integer","null"],"minimum":0},"max_cost_microusd":{"type":["integer","null"],"minimum":0}}}}
+}

@@ -1,0 +1,11 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.dev/schemas/foundation-guard/foundation-activation-request.schema.json",
+  "type":"object","additionalProperties":true,
+  "required":["project_id","task_id","role","session_id","activation_entry_id","requester_identity","phase","scope","correlation_id","selected_inputs"],
+  "properties":{
+    "project_id":{"type":"string","minLength":1},"task_id":{"type":"string","minLength":1},"role":{"type":"string","minLength":1},"session_id":{"type":"string","minLength":1},
+    "activation_entry_id":{"type":"string","minLength":1},"requester_identity":{"type":"string","minLength":1},"phase":{"type":"string","minLength":1},"scope":{"type":"string","minLength":1},
+    "correlation_id":{"type":"string","minLength":1},"selected_inputs":{"type":"array"}
+  }
+}

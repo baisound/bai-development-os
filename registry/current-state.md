@@ -1,66 +1,78 @@
-# AI Development OS — Current State
+# BAI Development OS — Current State
 
 ## Snapshot
 
-- Active Project: `javascript-roulette`
-- Active Task: `TASK-004`
-- Active Scope: TASK-004 cross-repository semantic sync
-- Architecture current canonical: Ver.2.1
-- TASK-004 Lifecycle Foundation current canonical: Ver.1.3
-- Latest implementation judgment: `IMPLEMENTATION_APPROVED`
-- Project Policy: `POLICY_PASS_WITH_CONDITIONS`
-- Documentation synchronization: `DOCUMENTATION_SYNC_V2_COMPLETE_WITH_CONDITIONS`
-- Cross-format consistency: `CROSS_FORMAT_CONSISTENCY_PASS`
-- Current Gate: Canonical documentation promotion and registry synchronization
-- Gate Readiness: `IN_PROGRESS`
-- Implementation Authorization: `AUTHORIZED` for the evidence-bounded TASK-004 Phase 1 implementation
-- Historical Phase 1 Baseline: `3ce360ba5cef063cd046d88ce007d42c0b54a275`
-- Current Project Local HEAD: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Parent Commit: `1caa275ce86e29166b00eb7c1f6958e4496622f7`
-- Local `origin/main` reference: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Project Remote main verified baseline: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Workspace Initial Bootstrap Commit: `f61e98e731ca61b1a97ee8901bcc9ac94d818283`
-- Workspace Remote verified baseline: `f61e98e731ca61b1a97ee8901bcc9ac94d818283`
-- GitHub remote verification: confirmed over the network
-- Previous DNS failure: no longer a current blocking condition
-- Project branch: `main`
-- Project worktree: `clean`
-- Cross-repository synchronization: synchronized and verified through the baselines above
-- Last Updated: `2026-07-31`
-- Updated By: `Orchestrator`, Owner-authorized promotion
+- Product: `BAI Development OS`
+- Canonical Product Root: `/home/baisound/bai-development-os`
+- Reference Consumer: `/home/baisound/projects/javascript-roulette`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.4`
+- Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
+- TASK-004: `COMPLETED`
+- Closure: `PASS / CLOSURE_READY`
+- Archive capability: `TECHNICALLY_COMPLETED`
+- TASK-004 repository Archive: `READY / NOT_ARCHIVED`; local completion commit exists and Archive Manifest post-commit verification passes; push/tag remains a separate repository operation
+- Phase 1: technically completed and Judge-approved
+- Phase 1.5: Context Guard Core MVP `APPROVED_WITH_CONDITIONS` historical milestone
+- Phase 1.6: Foundation Guard `TECHNICALLY_COMPLETED_MVP`
+- Phase 1.7: Cost Guard `TECHNICALLY_COMPLETED_MVP`
+- Phase 1.8: Execution Budget Guard `TECHNICALLY_COMPLETED_MVP`
+- Phase 2: Recovery Control `TECHNICALLY_COMPLETED`
+- Phase 3: Context Control `TECHNICALLY_COMPLETED`
+- Phase 4: Cost / Model Control `TECHNICALLY_COMPLETED`
+- Phase 5: Closure / Archive / Migration `TECHNICALLY_COMPLETED`
+- Phase 6: System Synchronization `TECHNICALLY_COMPLETED`
+- Model-routing permanent vendor policy: unchanged
+- Next canonical development route: `TASK-005 — Knowledge OS` (`NOT_STARTED / NOT_AUTHORIZED`)
+- Last Updated: `2026-08-08`
 
-## Confirmed Results
+## Product Boundary
 
-- D-01 through D-06: `CLOSED`
-- IC4-01 through IC6-01: `CLOSED`
-- Full tests: `88 PASS / 0 FAIL`
-- Independent probes: `23 / 23 PASS`
-- Critical / High: `0 / 0`
-- Architecture Ver.2.1 and TASK-004 Ver.1.3: `CURRENT_CANONICAL`
-- Historical baselines preserved and immutable
+BAI Development OS is standalone. `javascript-roulette` is a Reference Consumer / Regression Project and is not an OS-core host. Historical Evidence may retain former `/home/baisound/projects/ai-team` and `javascript-roulette/docs/ai-team` paths; those paths are historical evidence rather than current operational roots.
 
-## Source Evidence
+## Adaptive Development Governance
 
-- Consistency Evidence: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md`
-- Final Implementation Judgment: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/final-implementation-judgment.md`
-- Project Policy Review: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/project-policy-review.md`
-- Documentation Decision Manifest: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/documentation-decision-manifest.md`
+Development depth is selected from `DEV_0_QUICK` through `DEV_4_FOUNDATION_CRITICAL` using system scale, feature scale, criticality, failure impact, reversibility, novelty, scope, and high-risk boundaries. CORE has a DEV-3 safety floor; FOUNDATION/CRITICAL uses DEV-4. Token economy cannot weaken required critical testing/review. Permanent model selection remains a separate policy concern.
 
-## Deferred / Pending
+## TASK-004 Delivered Foundation
 
-- Completion Review: `TASK_COMPLETION_REVISION_REQUIRED`
-- Closure: `NOT_CONFIRMED`
-- Archive: `NOT_ELIGIBLE`
-- Commit / Push / Tag / Release: Workspace bootstrap commit and push completed; Tag / Release `NOT_EXECUTED`
-- TASK-000, TASK-005, TASK-006: `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`
+- Foundation-wide activation Permit/registry/state binding, TOCTOU revalidation, audit and Gateway enforcement.
+- Atomic Task/Role/Session Cost reservation/actual/release ledger and execution-budget Hard Stops.
+- Integrity-bound Resume Checkpoints, distinct PAUSED/BLOCKED/STALLED semantics, Emergency Stop resume authority and rollback planning.
+- Context Manifest with Trust/Freshness/Sensitivity/conflict/invalidation/token controls.
+- Capability/context/tool/privacy/reliability/independence/cost/latency/availability/deprecation-aware Model Routing.
+- Closure Readiness, Completion Record, Archive Manifest/readiness, dependency cycle protection and historical migration mapping.
+- Authorized System File synchronization with path confinement, checksum/content verification and fail-closed behavior.
 
-## Next Routing
+## Critic Findings Resolved
 
-- Next Role: Orchestrator
-- Next Artifact: Semantic synchronization verification record
-- Owner Approval Required: `YES`
+1. Persisted Permit canonical identity verification strengthened.
+2. Cost reservation/settlement concurrency made atomic.
+3. Archive file verification symlink escape closed with canonical realpath containment.
+4. System Sync symlink escape closed with canonical realpath containment.
 
-## Cost and Context Incident
+## Final Verification
 
-- API usage reached approximately USD 44 during one month of development.
-- Summary-first loading and canonical document resolution remain required controls.
+Binding evidence: `tasks/TASK-004/phase2-to-6-final-verification.md`.
+
+- BAI Development OS: `234 / 234 PASS`
+- Product Boundary: `PASS`
+- Required root exports: `14 / 14`
+- JavaScript Roulette reference consumer tests: `10 / 10 PASS`
+- Active/current-surface scoped `git diff --cached --check`: `PASS` before local completion commit; historical imported Evidence whitespace is preserved
+- Canonical DOCX visual QA: Architecture Ver.2.4 `63 pages`; Lifecycle Foundation Ver.1.6 `40 pages`; all pages inspected
+- Secret-pattern scan over active implementation/system surfaces: no match
+
+Consumer Vite build was not re-executed in the isolated artifact because dependency installation could not retrieve the pinned Vite package from the available package registry. Consumer source was not changed by TASK-004 Phase 2–6; its executable core regression remains `10 / 10 PASS` and Product Boundary verification passes.
+
+## Roadmap
+
+1. TASK-005 — Knowledge OS
+2. TASK-006 — Registry / Resolver / Automation
+3. TASK-007 — Monitoring & Dashboard
+4. TASK-008 — External Integration
+
+TASK-009 is not defined in the current canonical OS roadmap.
+
+## Routing Rule
+
+TASK-004 is complete and MUST NOT be reopened for ordinary enhancements. A defect or enhancement found later is handled by a new follow-up Task. TASK-005 is the next planned canonical route but is not silently authorized by TASK-004 completion.

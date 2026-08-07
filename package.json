@@ -1,0 +1,41 @@
+{
+  "name": "bai-development-os",
+  "version": "0.2.0",
+  "private": true,
+  "description": "BAI Development OS core governance, lifecycle, context guard, and reusable project-development foundation",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./context-guard": "./src/context-guard/index.mjs",
+    "./lifecycle/phase1": "./src/lifecycle/phase1/index.mjs",
+    "./governance/adaptive-profile": "./src/governance/adaptive-development-profile.mjs",
+    "./foundation-guard": "./src/foundation-guard/index.mjs",
+    "./cost-guard": "./src/cost-guard/index.mjs",
+    "./governance/execution-budget": "./src/governance/execution-budget-policy.mjs",
+    "./lifecycle/recovery": "./src/lifecycle/recovery/index.mjs",
+    "./lifecycle/migration": "./src/lifecycle/migration.mjs",
+    "./context-control": "./src/context-control/index.mjs",
+    "./model-control": "./src/model-control/index.mjs",
+    "./closure": "./src/closure/index.mjs",
+    "./archive": "./src/archive/index.mjs",
+    "./dependency": "./src/dependency/index.mjs",
+    "./system-sync": "./src/system-sync/index.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "test:governance": "node --test tests/governance/*.test.mjs",
+    "test:context-guard": "node --test tests/context-guard/*.test.mjs",
+    "test:lifecycle": "node --test tests/lifecycle/*.test.mjs tests/lifecycle/recovery/*.test.mjs",
+    "check:boundaries": "node scripts/check-product-boundaries.mjs",
+    "test:foundation-guard": "node --test tests/foundation-guard/*.test.mjs",
+    "test:cost-guard": "node --test tests/cost-guard/*.test.mjs",
+    "test:recovery": "node --test tests/lifecycle/recovery/*.test.mjs",
+    "test:context-control": "node --test tests/context-control/*.test.mjs",
+    "test:model-control": "node --test tests/model-control/*.test.mjs",
+    "test:closure": "node --test tests/closure/*.test.mjs tests/archive/*.test.mjs tests/dependency/*.test.mjs",
+    "test:system-sync": "node --test tests/system-sync/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}

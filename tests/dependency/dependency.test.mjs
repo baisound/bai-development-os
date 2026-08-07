@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';import test from 'node:test';import {detectDependencyCycles,evaluateDependencies} from '../../src/dependency/index.mjs';
+test('P5 dependency graph detects cycles',()=>{const tasks=[{task_id:'A',dependency_task_ids:['B']},{task_id:'B',dependency_task_ids:['A']}];assert.equal(detectDependencyCycles(tasks).length,1);assert.throws(()=>evaluateDependencies(tasks[0],tasks),e=>e.code==='DEPENDENCY_CYCLE');});
+test('P5 unmet dependency blocks task',()=>{const tasks=[{task_id:'A',dependency_task_ids:['B']},{task_id:'B',task_status:'ACTIVE'}];assert.equal(evaluateDependencies(tasks[0],tasks).result,'DEPENDENCY_BLOCKED');});
+test('P5 completed dependencies are ready',()=>{const tasks=[{task_id:'A',dependency_task_ids:['B']},{task_id:'B',task_status:'COMPLETED'}];assert.equal(evaluateDependencies(tasks[0],tasks).result,'DEPENDENCY_READY');});

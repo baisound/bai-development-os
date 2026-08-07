@@ -8,7 +8,7 @@
   "properties": {
     "record_schema_version": { "const": "1.1.0" },
     "task_id": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" },
-    "project_id": { "const": "javascript-roulette" },
+    "project_id": { "type": "string", "minLength": 1 },
     "record_revision": { "type": "integer", "minimum": 1 },
     "task_status": { "enum": ["DRAFT", "ACTIVE", "PAUSED", "BLOCKED", "STALLED", "COMPLETED", "CANCELLED", "REJECTED", "ARCHIVED"] },
     "current_phase": { "enum": ["TASK_DEFINITION", "DESIGN", "FINAL_PLAN", "IMPLEMENTATION_AUTHORIZATION", "IMPLEMENTATION", "TESTING", "IMPLEMENTATION_REVIEW", "FINAL_JUDGMENT", "POLICY_REVIEW", "CLOSURE", "ARCHIVE"] },

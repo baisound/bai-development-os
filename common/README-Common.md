@@ -92,3 +92,8 @@ No Role may:
 - convert an advisory recommendation into a workflow transition,
 - mark an accepted risk as resolved without evidence,
 - claim release, closure, or archive completion without the required evidence and authority.
+
+
+## TASK-004 Phase 2–6 Completion
+
+Lifecycle Foundation is formalized through TASK-004 completion. Recovery/Resume, Context, Cost/Model, Closure/Archive, and System Sync are no longer reserved concepts. Current canonicals: Architecture Ver.2.4 and Lifecycle Foundation Ver.1.6.

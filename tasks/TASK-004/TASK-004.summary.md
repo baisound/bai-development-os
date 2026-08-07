@@ -1,62 +1,55 @@
 # AI Task Summary — TASK-004
 
-## Current Cross-Repository Sync Position
+## Final Position
 
-- Historical Phase 1 / Canonical Promotion Baseline: `3ce360ba5cef063cd046d88ce007d42c0b54a275`
-- Current Project Local HEAD: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Parent: `1caa275ce86e29166b00eb7c1f6958e4496622f7`
-- Local `origin/main` reference: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Project verified remote baseline: `ff72c7d12a2174251f83219a2792bc84bd1ff088`
-- Workspace initial verified remote baseline: `f61e98e731ca61b1a97ee8901bcc9ac94d818283`
-- Remote verification: confirmed over the network
-- Cross-repository synchronization: verified through the baselines above
-- Project branch: `main`; Project worktree: `clean`
-- TASK-004: `ACTIVE`; Canonical lifecycle: `ACTIVE / DESIGN`
-- Completion Review: `TASK_COMPLETION_REVISION_REQUIRED`
-- Workspace synchronization: verified through the baselines above
-- Next Role: `Orchestrator`
+- Task: `TASK-004 — AI Development OS Lifecycle Foundation`
+- Product Root: `/home/baisound/bai-development-os`
+- Overall Task Status: `COMPLETED`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.4`
+- Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
+- Closure: `PASS / CLOSURE_READY`
+- Archive capability: `TECHNICALLY_COMPLETED`
+- Repository Archive: `READY / NOT_ARCHIVED`; local completion commit verified, push/tag remains separate
 
-## Artifact Inventory
+## Completed Milestones
 
-| Artifact | Detected status/result | SHA-256 |
-|---|---|---|
-| `architecture-review.md` | No explicit result detected | `1abdf10b40ad035f0184a809e830dc283f1a4acdb10533c74236243e953ce904` |
-| `builder-proposal.md` | No explicit result detected | `dcd97f32913733316a36e449b4186e651d502a629480afadc436804949a436be` |
-| `builder-response.md` | Decision=ACCEPT | `ead77075fd06d695bb9fc39f34c5dc5801433244fcc60ec330ea73e2e051e288` |
-| `critic-review.md` | No explicit result detected | `6eb7e7f69e0cb9ac2676ba0ff993b96a1d16b85d11b1f63c9a170298f9703320` |
-| `design-amendment-d05-d06.md` | No explicit result detected | `cd6b53964f97735234c48a34b0b6b69276e8bee40579a31812421c057c163a56` |
-| `final-plan-consistency-check.md` | No explicit result detected | `62aac6574f3ddbf8ebc443f8596aa64ddd1a0c13c12d36747ed432883c058920` |
-| `final-plan.md` | Judge Result=APPROVED_WITH_CONDITIONS; Final Plan Result=READY_FOR_CONSISTENCY_CHECK | `d14d95136546dc207c2cbd8009faac455906270d5bd8630adaba38d9212ee5f8` |
-| `implementation-fix-report.md` | Result=10 PASS / 0 FAIL. | `3b3feccfb51a92a6ceaee0aa31140f0594bee1a1eb98e509d55ffab046ff4cfa` |
-| `implementation-report.md` | No explicit result detected | `fedbbfca112bb51fb80ba3cf367063750075e5493a96fe0818c4a9332a096866` |
-| `judge-amendment-decision.md` | Amendment Decision=AMENDMENT_APPROVED_WITH_CONDITIONS | `808af72e258f37d1afce897b01c6ddea1b68e6fd45ed3dee4e65d127fd7a13b4` |
-| `judge-decision-d05-d06.md` | No explicit result detected | `05e79967e150030afe563875fd2366102c9fe1f6974059a41b2acc978608350f` |
-| `judge-decision.md` | No explicit result detected | `6d2adeb7c844c40a2a11d727a810ad7fb02baaf007f1ed0080734a26cbd071f0` |
-| `retest-report-02.md` | No explicit result detected | `320010d181ba7149ded0bbc4402d9e6ce80820fd13969e8b865bee63f31f4617` |
-| `retest-report.md` | No explicit result detected | `04146b6996ea897c824e9a59f89e57a936bb5cf006f78c7c4c850494523f2f4b` |
-| `task.md` | Status=APPROVED_FOR_DESIGN; Current Phase=TASK_DEFINITION_COMPLETE | `23089fdd310bbef66d81e08c0266d399d137daaeddfd36ef70fbc7259c9491b3` |
-| `test-report.md` | No explicit result detected | `8383540a244595e624ece7fe5b279e7f56da2174cbd8905544add7b50e01ecf4` |
+| Scope | Result |
+| --- | --- |
+| Phase 1 | technically completed and Judge-approved |
+| Phase 1.5 Context Guard Core MVP | `APPROVED_WITH_CONDITIONS` historical milestone |
+| P0.0 Product Boundary Correction | implemented |
+| P0.1 Adaptive Development Governance | implemented |
+| Phase 1.6 Foundation Guard | `TECHNICALLY_COMPLETED_MVP` |
+| Phase 1.7 Cost Guard | `TECHNICALLY_COMPLETED_MVP` |
+| Phase 1.8 Execution Budget Guard | `TECHNICALLY_COMPLETED_MVP` |
+| Phase 2 Recovery Control | `TECHNICALLY_COMPLETED` |
+| Phase 3 Context Control | `TECHNICALLY_COMPLETED` |
+| Phase 4 Cost / Model Control | `TECHNICALLY_COMPLETED` |
+| Phase 5 Closure / Archive / Migration | `TECHNICALLY_COMPLETED` |
+| Phase 6 System Synchronization | `TECHNICALLY_COMPLETED` |
+| TASK-004 | `COMPLETED` |
 
-## Loading Policy
+## Final Assurance
 
-- Start with this summary and `registry/current-state.md`.
-- Load `task.md` for scope and authority.
-- Load the latest relevant decision and plan artifact for the current gate.
-- Do not load all historical reviews and reports unless investigating a contradiction, defect history, or amendment.
+TASK-004 is foundation-critical work and was completed under `DEV_4_FOUNDATION_CRITICAL`. Blocking Critic findings found during implementation were fixed before completion, including Archive/System Sync symlink trust-boundary defects. The final OS suite passes `234 / 234`; the reference consumer core suite passes `10 / 10`; Product Boundary and root-export verification pass.
 
-## Current TASK-004 Position
+## Binding Final Evidence
 
-- TASK-004 Phase 1 implementation is approved and evidence-bounded.
-- D-01 through D-06 and IC4-01 through IC6-01 are `CLOSED`.
-- Verification is `88 PASS / 0 FAIL` and `23 / 23 PASS`; Critical / High is `0 / 0`.
-- Architecture Ver.2.1 and TASK-004 Lifecycle Foundation Ver.1.3 are `CURRENT_CANONICAL`.
-- Cross-format consistency is `CROSS_FORMAT_CONSISTENCY_PASS`.
-- Registry synchronization update is applied and verified under Owner authorization; cross-repository synchronization is verified through the recorded Project and Workspace remote baselines.
-- Project local and Workspace commits are complete; Completion Review, Archive, Tag, Release, TASK-005, and TASK-006 remain unstarted.
+1. `phase2-to-6-owner-implementation-authorization.md`
+2. `phase2-recovery-implementation-and-verification.md`
+3. `phase3-context-control-implementation-and-verification.md`
+4. `phase4-cost-model-control-implementation-and-verification.md`
+5. `phase5-closure-archive-migration-implementation-and-verification.md`
+6. `phase6-system-sync-implementation-and-verification.md`
+7. `phase2-to-6-critic-review.md`
+8. `phase2-to-6-final-verification.md`
+9. `task004-final-judge-decision.md`
+10. `task004-final-closure-readiness.md`
+11. `task004-final-completion-record.md`
+12. `task004-final-archive-readiness.md`
 
-## Canonical Promotion
+Historical Phase 1/1.5/1.6–1.8 evidence remains immutable and may describe TASK-004 as ACTIVE at its original point in time.
 
-- Effective date: `2026-07-31`
-- Historical Phase 1 / Canonical Promotion Baseline: `3ce360ba5cef063cd046d88ce007d42c0b54a275`
-- Consistency Evidence: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/cross-format-consistency-check.md`
-- Documentation Manifest: `/home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/documentation-decision-manifest.md`
+## Next Route
+
+TASK-005 — Knowledge OS. TASK-005 is planned but is `NOT_STARTED / NOT_AUTHORIZED` by this completion record. Later Lifecycle Foundation corrections use a new follow-up Task rather than reopening TASK-004.

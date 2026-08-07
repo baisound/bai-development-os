@@ -1,0 +1,38 @@
+const permitRows = [
+  ['PL-01','MISSING_PERMIT','DENY','REJECT'],['PL-02','MALFORMED_PERMIT','DENY','NEW_PERMIT'],['PL-03','UNKNOWN_PERMIT','DENY','OWNER_OR_NEW_PERMIT'],
+  ['PL-04','EXPIRED_PERMIT','DENY','NEW_PERMIT'],['PL-05','REVOKED_PERMIT','DENY','NEW_PERMIT'],['PL-06','STALE_PERMIT_REVISION','DENY','REVALIDATE'],
+  ['PL-07','REPLAYED_PERMIT','DENY','REJECT'],['PL-08','ALREADY_CONSUMED','DENY','REJECT'],['PL-09','DUPLICATE_PERMIT_ID','DENY','OWNER_RECOVERY'],
+  ['PL-10','ROLE_MISMATCH','DENY','NEW_PERMIT'],['PL-11','TASK_MISMATCH','DENY','NEW_PERMIT'],['PL-12','PHASE_SCOPE_MISMATCH','DENY','NEW_PERMIT'],
+  ['PL-13','ISSUER_MISMATCH','DENY','NEW_PERMIT'],['PL-14','REQUESTER_MISMATCH','DENY','NEW_PERMIT'],['PL-15','CONFIG_REVISION_MISMATCH','DENY','RE_PREFLIGHT'],
+  ['PL-16','OVERRIDE_REVISION_MISMATCH','DENY','RE_PREFLIGHT'],['PL-17','LEDGER_READ_FAILURE','DENY','OWNER_RECOVERY'],['PL-18','LEDGER_WRITE_FAILURE','DENY','EVIDENCE_BOUNDED_RETRY'],
+  ['PL-19','PARTIAL_WRITE','UNCERTAIN','OWNER_RECOVERY'],['PL-20','CONCURRENT_CONSUMPTION','DENY_LOSER','NO_BLIND_RETRY'],['PL-21','CRASH_BEFORE_CONSUME','DENY','REVALIDATE'],
+  ['PL-22','CRASH_DURING_CONSUME','UNCERTAIN','OWNER_RECOVERY'],['PL-23','CRASH_AFTER_CONSUME','RECONCILE','LEDGER_RECONCILE'],['PL-24','RESTART_UNRESOLVED','UNCERTAIN','OWNER_RECOVERY'],
+  ['PL-25','CLOCK_UNCERTAINTY','DENY','SYSTEM_CLOCK_RECOVERY'],['PL-26','AUDIT_RECORDING_FAILURE','DENY','AUDIT_RECOVERY'],['PL-27','UNSUPPORTED_PERMIT_VERSION','DENY','NEW_PERMIT'],
+  ['PL-28','CORRUPTED_LEDGER_RECORD','DENY','OWNER_RECOVERY'],
+];
+export const PERMIT_LEDGER_FAULT_MATRIX = Object.freeze(permitRows.map(([id,fault,decision,recovery]) => Object.freeze({
+  id, owner: 'FOUNDATION_GUARD', precondition: 'ROLE_ACTIVATION_REQUEST', stimulus: fault, decision,
+  durable_evidence: 'PERMIT_LEDGER_OR_FOUNDATION_AUDIT', error_class: fault, recovery, oracle: `FAIL_CLOSED_${id}`, applicability: 'APPLICABLE',
+})));
+
+const toctouRows = [
+  ['T-01','PERMIT_VALIDITY_TO_ACTIVATION','PERMIT_REREAD'],['T-02','RESERVATION_TO_CONSUMPTION','EXCLUSIVE_LEASE'],['T-03','ROLE_AUTHORIZATION_TO_STARTUP','BINDING_REVALIDATION'],
+  ['T-04','TASK_STATE_TO_EXECUTION','STATE_REVISION_RECHECK'],['T-05','PHASE_STATE_TO_EXECUTION','STATE_REVISION_RECHECK'],['T-06','CONFIG_READ_TO_DECISION','CONFIG_CHECKSUM_RECHECK'],
+  ['T-07','OVERRIDE_READ_TO_DECISION','OVERRIDE_BINDING_RECHECK'],['T-08','REGISTRY_LOOKUP_TO_ACTIVATION','REGISTRY_REVISION_RECHECK'],['T-09','ENTRY_REGISTRATION_TO_DISPATCH','GATEWAY_OWNERSHIP_CHECK'],
+  ['T-10','FILESYSTEM_EVIDENCE_TO_USE','IDENTITY_HASH_REREAD'],['T-11','PROCESS_RESTART_TO_USE','DURABLE_LEDGER_RECONCILIATION'],['T-12','CONCURRENT_ACTIVATION','EXCLUSIVE_LEASE'],
+  ['T-13','REVOCATION_TO_USE','LEDGER_REREAD'],['T-14','EXPIRY_TO_USE','CLOCK_REREAD'],['T-15','TASK_PHASE_CHANGE_TO_USE','STATE_REVISION_RECHECK'],
+  ['T-16','CONFIG_REVISION_CHANGE','CONFIG_CHECKSUM_RECHECK'],['T-17','OVERRIDE_REVISION_CHANGE','OVERRIDE_BINDING_RECHECK'],
+];
+export const TOCTOU_MATRIX = Object.freeze(toctouRows.map(([id,boundary,mechanism]) => Object.freeze({ id, boundary, mutation_window: 'BETWEEN_CHECK_AND_USE', consistency_mechanism: mechanism, expected: 'FAIL_CLOSED_ON_MUTATION', oracle: `MUTATION_${id}`, applicability: 'APPLICABLE' })));
+
+export function assertFoundationMatricesComplete() {
+  const requiredPermitFields=['id','owner','precondition','stimulus','decision','durable_evidence','error_class','recovery','oracle','applicability'];
+  const requiredToctouFields=['id','boundary','mutation_window','consistency_mechanism','expected','oracle','applicability'];
+  const permitIds=new Set(PERMIT_LEDGER_FAULT_MATRIX.map(row=>row.id)); const toctouIds=new Set(TOCTOU_MATRIX.map(row=>row.id));
+  if(permitIds.size!==28||toctouIds.size!==17) throw new Error('FOUNDATION_GUARD_MATRIX_INCOMPLETE');
+  for(const row of PERMIT_LEDGER_FAULT_MATRIX) if(requiredPermitFields.some(field=>!row[field])) throw new Error('FOUNDATION_GUARD_MATRIX_INCOMPLETE');
+  for(const row of TOCTOU_MATRIX) if(requiredToctouFields.some(field=>!row[field])) throw new Error('FOUNDATION_GUARD_MATRIX_INCOMPLETE');
+  for(let i=1;i<=28;i+=1) if(!permitIds.has(`PL-${String(i).padStart(2,'0')}`)) throw new Error('FOUNDATION_GUARD_MATRIX_INCOMPLETE');
+  for(let i=1;i<=17;i+=1) if(!toctouIds.has(`T-${String(i).padStart(2,'0')}`)) throw new Error('FOUNDATION_GUARD_MATRIX_INCOMPLETE');
+  return true;
+}
