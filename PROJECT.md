@@ -24,17 +24,18 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.7.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.8.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
+- `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
 
-TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 is also `COMPLETED` and provides the governed Knowledge Operating System: immutable Knowledge Assets, deterministic resolution, Knowledge Packs, usage/verification/effectiveness, promotion/demotion, freshness/invalidation/impact and Knowledge Governance.
+TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 is `COMPLETED` and provides the governed Knowledge Operating System. TASK-006 is also `COMPLETED` and provides the Orchestration & Automation Foundation: Workspace Registry/Multi-Project Index, runtime/project/risk/Knowledge resolution, Role Startup, instruction compilation, Owner Decision Support, reliability/document synchronization, sandbox probes, Advanced Guard, conditional automation and verified Completion Outbox consumption.
 
 ## Roadmap
 
 - `TASK-005`: Knowledge OS — `COMPLETED`
-- `TASK-006`: Workspace Registry / Resolver / Automation foundation — next route
-- `TASK-007`: Monitoring & Dashboard
+- `TASK-006`: Workspace Registry / Resolver / Automation foundation — `COMPLETED`
+- `TASK-007`: Monitoring & Dashboard — next route
 - `TASK-008`: External Integration
 - `TASK-009`: Security / Supply Chain / Integrity Hardening
 - `TASK-010`: Release / Distribution / Consumer Upgrade OS
@@ -57,6 +58,7 @@ Node.js >= 20.19.0
 npm test
 npm run check:boundaries
 npm run test:knowledge
+npm run test:automation
 ```
 
 ## Post-TASK-005 Roadmap Refinement

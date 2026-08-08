@@ -11,46 +11,37 @@
 
 ## System Identity
 
-BAI Development OS is a standalone reusable development foundation rooted at:
-
-```text
-/home/baisound/bai-development-os
-```
+Canonical root: `/home/baisound/bai-development-os`.
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.7.md` (+ `.docx`, `.summary.md`)
-- `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ `.docx`, `.summary.md`)
-- `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.8.md` (+ `.docx`, `.summary.md`)
+- `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ companion set)
+- `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ companion set)
+- `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md` (+ companion set)
 
-Reference consumer:
-
-```text
-/home/baisound/projects/javascript-roulette
-```
+Reference consumer: `/home/baisound/projects/javascript-roulette`.
 
 ## Current Priority
 
-- TASK-004 Lifecycle Foundation is `COMPLETED` and is a read-only completed baseline for ordinary future work.
-- TASK-005 Knowledge OS is `COMPLETED`.
-- The next planned route is TASK-006 Workspace Registry / Resolver / Automation (`NOT_STARTED`).
-- Lifecycle defects discovered later are routed to a new follow-up Task rather than reopening TASK-004.
+- TASK-004 Lifecycle Foundation: `COMPLETED`.
+- TASK-005 Knowledge OS: `COMPLETED`.
+- TASK-006 Orchestration & Automation Foundation: `COMPLETED`.
+- Next planned route: TASK-007 Monitoring & Dashboard (`NOT_STARTED / NOT_AUTHORIZED`).
 
 ## Adaptive Routing Rule
 
-Before choosing a Role sequence, classify the change into DEV-0 through DEV-4. Small peripheral work must not receive foundation-level ceremony. Core/foundation work receives stronger Critic and test assurance. Localized fixes re-run impacted gates/tests plus profile-required regression instead of restarting the entire workflow.
+Classify changes into DEV-0 through DEV-4 before selecting Role/review/test depth. Small peripheral work should not receive foundation-level ceremony. CORE/FOUNDATION/CRITICAL work retains safety floors. This does not permanently select a model vendor.
 
-Adaptive profile selection does not modify permanent model-routing policy.
+## Completed Runtime Composition
 
-## Completed TASK-004 / TASK-005 Capabilities
+`Registry/Project Index → Runtime Probe → Project/Risk → TASK-005 Knowledge → TASK-004 Context Manifest → Role Startup → Instruction → Automation Plan → Owner Proposal only when required → Authorized Execution/Verification`.
 
-TASK-004 provides Recovery/Checkpoint, Context Control, atomic Cost Guard, Model Routing, Closure/Archive/Migration/Dependency and authorized System Sync. TASK-005 adds governed Knowledge Assets, deterministic resolution, Knowledge Packs, persistent usage/verification evidence, promotion/demotion, freshness/invalidation/impact and Knowledge Governance. Use current canonical documents for exact contracts.
+Registry is not content authority; Automation cannot self-authorize or own Lifecycle/Knowledge canonical state. Already-authorized reversible scope-bound implementation without external side effects can proceed without duplicate Owner confirmation; dangerous/external/irreversible/policy actions stay Owner-gated.
 
 ## Roadmap Identity
 
-- TASK-005 Knowledge OS — COMPLETED
-- TASK-006 Registry / Resolver / Automation — NEXT
-- TASK-007 Monitoring & Dashboard
+- TASK-007 Monitoring & Dashboard — NEXT
 - TASK-008 External Integration
 - TASK-009 Security / Supply Chain / Integrity Hardening
 - TASK-010 Release / Distribution / Consumer Upgrade OS
@@ -68,8 +59,6 @@ TASK-009〜014 are reserved roadmap items only and are not implicitly authorized
 - Unknown or contradictory authority state Safe Stops.
 - Context is loaded summary-first and impact-first.
 - Safety-critical testing is not reduced for token economy.
-- A completed Task is not reopened for ordinary enhancement.
-
-## Post-TASK-005 Roadmap Refinement
-
-TASK-009〜014 now also reserve Knowledge crash consistency, Pack distribution compatibility, cross-project isolation/conformance, repository fsck/recovery/compaction, Domain Knowledge extension points, and evidence-based resolver/confidence/freshness calibration. No TASK-015 is reserved by this refinement.
+- Registry/index/derived state never becomes canonical content authority.
+- Owner Proposal is not authorization.
+- Completed Tasks are not reopened for ordinary enhancement.

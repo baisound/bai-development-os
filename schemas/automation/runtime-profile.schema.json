@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://baisound.dev/schemas/automation/runtime-profile.schema.json","title":"BAI Runtime Profile",
+  "type":"object","additionalProperties":false,"required":["runtime_profile_version","platform","shell","transport","path_style","probe_evidence","environment_tags","capabilities","observed_not_inferred"],
+  "properties":{"runtime_profile_version":{"const":"1.0.0"},"platform":{"enum":["linux","darwin","win32"]},"shell":{"enum":["bash","sh","zsh","fish","powershell","cmd"]},"transport":{"enum":["LOCAL_PROCESS","WSL_BRIDGE","REMOTE_SHELL","CONTAINER","UNKNOWN"]},"path_style":{"enum":["POSIX","WINDOWS"]},"probe_evidence":{"type":["string","null"]},"environment_tags":{"type":"array","items":{"type":"string"}},"capabilities":{"type":"array","items":{"type":"string"}},"observed_not_inferred":{"const":true}}
+}

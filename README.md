@@ -51,7 +51,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005 is completed; TASK-006 is now the next development route.
+The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005 and TASK-006 are completed; TASK-007 Monitoring & Dashboard is now the next development route.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -60,4 +60,4 @@ As of 2026-08-08, TASK-005 is completed. Knowledge is no longer an informal note
 
 ## Post-TASK-005 Roadmap Refinement
 
-TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added; TASK-006 remains next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.
+TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added. TASK-006 is completed; TASK-007 is now next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.

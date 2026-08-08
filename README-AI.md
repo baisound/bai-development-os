@@ -37,4 +37,9 @@ Adaptive Development Governance still changes workflow depth rather than permane
 
 ## TASK-005 Completed Knowledge Contract
 
-TASK-005 is completed. Load `tasks/TASK-005/TASK-005.summary.md` and the Ver.1.2 Knowledge canonical only when Knowledge behavior is relevant. Knowledge Pack is a TASK-004 Context Source and never a Context Manifest authority. Do not use Workspace Registry as Knowledge content authority. The next route is TASK-006.
+TASK-005 is completed. Load `tasks/TASK-005/TASK-005.summary.md` and the Ver.1.2 Knowledge canonical only when Knowledge behavior is relevant. Knowledge Pack is a TASK-004 Context Source and never a Context Manifest authority. Do not use Workspace Registry as Knowledge content authority. TASK-006 Orchestration & Automation is completed. The next route is TASK-007 Monitoring & Dashboard.
+
+
+## TASK-006 Automation Baseline
+
+Load `tasks/TASK-006/TASK-006.summary.md` and the Ver.1.0 automation canonical when Registry/Runtime/Resolver/Startup/Automation behavior is relevant. Registry is an index, Automation cannot self-authorize, and Lifecycle/Knowledge canonical authority remain TASK-004/TASK-005. Runtime export: `AutomationOS`.

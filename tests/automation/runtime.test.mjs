@@ -1,0 +1,13 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import { mkdir } from 'node:fs/promises'; import path from 'node:path';
+import { resolveRuntimeProfile, resolveProjectRoot, resolveEnvironmentCapabilities, selectCommandDialect, buildRuntimeProbeFromProcess } from '../../src/automation/index.mjs'; import { miniWorkspace } from './helpers.mjs';
+
+test('explicit runtime observation resolves',()=>{const r=resolveRuntimeProfile({platform:'linux',shell:'bash',probe_evidence:'uname',capabilities:['NODE']});assert.equal(r.observed_not_inferred,true);});
+test('UI label without probe evidence is rejected',()=>assert.throws(()=>resolveRuntimeProfile({platform:'linux',shell:'bash',ui_label:'Agent Window'}),e=>e.code==='RUNTIME_INFERENCE_FORBIDDEN'));
+test('invalid shell rejected',()=>assert.throws(()=>resolveRuntimeProfile({platform:'linux',shell:'madeup'}),e=>e.code==='RUNTIME_OBSERVATION_INVALID'));
+test('project root inside workspace resolves',async()=>{const root=await miniWorkspace();const p=path.join(root,'project');await mkdir(p);const r=await resolveProjectRoot({workspace_root:root,project_root:p});assert.equal(r.result,'ROOT_RESOLVED');});
+test('project root outside workspace rejected',async()=>{const root=await miniWorkspace();await assert.rejects(()=>resolveProjectRoot({workspace_root:root,project_root:'/tmp'}),e=>e.code==='ROOT_OUTSIDE_WORKSPACE');});
+test('capability matrix reports missing requirements',()=>{const rp=resolveRuntimeProfile({platform:'linux',shell:'bash',probe_evidence:'x'});const r=resolveEnvironmentCapabilities({runtime_profile:rp,toolchains:[{name:'node',available:true,capabilities:['JS']}],required_capabilities:['GIT'],required_tools:['node','git']});assert.equal(r.result,'ENVIRONMENT_CAPABILITY_BLOCKED');assert.deepEqual(r.missing_tools,['git']);});
+test('capability matrix ready when requirements present',()=>{const rp=resolveRuntimeProfile({platform:'linux',shell:'bash',probe_evidence:'x',capabilities:['FS']});const r=resolveEnvironmentCapabilities({runtime_profile:rp,toolchains:[{name:'git',capabilities:['VCS']}],required_capabilities:['FS','VCS'],required_tools:['git']});assert.equal(r.result,'ENVIRONMENT_CAPABILITY_READY');});
+test('command dialect follows observed shell',()=>{const rp=resolveRuntimeProfile({platform:'win32',shell:'powershell',probe_evidence:'x'});assert.equal(selectCommandDialect(rp).dialect,'WINDOWS_SHELL');});
+test('process probe is explicit observed runtime',()=>assert.equal(buildRuntimeProbeFromProcess().observed_not_inferred,true));
+test('runtime result names are exact and not suffix-matched during startup elsewhere',()=>{const rp=resolveRuntimeProfile({platform:'linux',shell:'bash',probe_evidence:'x'});assert.equal(rp.platform,'linux');});

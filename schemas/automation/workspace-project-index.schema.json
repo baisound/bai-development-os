@@ -1,0 +1,12 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.dev/schemas/automation/workspace-project-index.schema.json",
+  "title":"BAI Workspace Project Index",
+  "type":"object","additionalProperties":false,
+  "required":["project_index_version","workspace_root","projects","generated_at","content_authority","content_checksum"],
+  "properties":{
+    "project_index_version":{"const":"1.0.0"},"workspace_root":{"type":"string","minLength":1},
+    "projects":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["project_id","root","manifest_path","manifest_sha256","status","consumer","tags"],"properties":{"project_id":{"type":"string","minLength":1},"root":{"type":"string","minLength":1},"manifest_path":{"type":"string","minLength":1},"manifest_sha256":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"},"status":{"type":"string","minLength":1},"consumer":{"type":"boolean"},"tags":{"type":"array","items":{"type":"string"}}}}},
+    "generated_at":{"type":"string","format":"date-time"},"content_authority":{"const":false},"content_checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}
+  }
+}

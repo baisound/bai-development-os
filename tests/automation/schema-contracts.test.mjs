@@ -1,0 +1,3 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import { readFile } from 'node:fs/promises';
+const files=['authorization-proposal.schema.json','automation-plan.schema.json','canonical-document-manifest.schema.json','derived-sync-ack.schema.json','role-startup-package.schema.json','runtime-profile.schema.json','session-record.schema.json','workspace-project-index.schema.json','workspace-registry.schema.json'];
+for(const file of files)test(`TASK-006 schema contract parses: ${file}`,async()=>{const schema=JSON.parse(await readFile(new URL(`../../schemas/automation/${file}`,import.meta.url),'utf8'));assert.equal(schema.$schema,'https://json-schema.org/draft/2020-12/schema');assert.ok(schema.$id);assert.equal(schema.type,'object');});

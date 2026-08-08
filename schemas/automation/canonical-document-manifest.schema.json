@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://baisound.dev/schemas/automation/canonical-document-manifest.schema.json","title":"BAI Canonical Document Manifest",
+  "type":"object","additionalProperties":false,"required":["document_manifest_version","manifest_id","documents","content_authority","content_checksum"],
+  "properties":{"document_manifest_version":{"const":"1.0.0"},"manifest_id":{"type":"string"},"documents":{"type":"array","items":{"type":"object","required":["document_id","version","status","markdown_path","summary_path"],"properties":{"document_id":{"type":"string"},"version":{"type":"string"},"status":{"type":"string"},"markdown_path":{"type":"string"},"summary_path":{"type":"string"},"docx_path":{"type":"string"},"sha256":{"type":"object"}}}},"content_authority":{"const":false},"content_checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}}
+}

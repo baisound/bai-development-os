@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://baisound.dev/schemas/automation/derived-sync-ack.schema.json","title":"BAI Derived Synchronization Acknowledgement",
+  "type":"object","additionalProperties":false,"required":["ack_version","task_id","idempotency_key","canonical_checksum","derived_result","ack_checksum"],
+  "properties":{"ack_version":{"const":"1.0.0"},"task_id":{"type":"string"},"idempotency_key":{"type":"string"},"canonical_checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"},"derived_result":{},"ack_checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}}
+}

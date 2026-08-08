@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://baisound.dev/schemas/automation/automation-plan.schema.json","title":"BAI Conditional Automation Plan",
+  "type":"object","additionalProperties":false,"required":["automation_plan_version","plan_id","run_id","session_id","task_id","phase","actions","owner_approval_required","lifecycle_mutation_authority","knowledge_content_authority"],
+  "properties":{"automation_plan_version":{"const":"1.0.0"},"plan_id":{"type":"string"},"run_id":{"type":"string"},"session_id":{"type":"string"},"task_id":{"type":"string"},"phase":{"type":"string"},"actions":{"type":"array","items":{"type":"object"}},"owner_approval_required":{"type":"boolean"},"lifecycle_mutation_authority":{"const":false},"knowledge_content_authority":{"const":false}}
+}

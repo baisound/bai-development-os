@@ -1,0 +1,5 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","$id":"https://baisound.dev/schemas/automation/session-record.schema.json","title":"BAI Automation Session Record",
+  "type":"object","additionalProperties":false,"required":["session_record_version","project_id","task_id","role","run_id","session_id","startup_checksum","status","attempt","created_at","content_checksum"],
+  "properties":{"session_record_version":{"const":"1.0.0"},"project_id":{"type":"string"},"task_id":{"type":"string"},"role":{"type":"string"},"run_id":{"type":"string"},"session_id":{"type":"string"},"startup_checksum":{"type":"string"},"status":{"type":"string"},"attempt":{"type":"integer","minimum":0},"created_at":{"type":"string","format":"date-time"},"content_checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}}
+}

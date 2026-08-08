@@ -5,65 +5,66 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.7`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.8`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
+- Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
 - TASK-004: `COMPLETED`
 - TASK-005: `COMPLETED`
-- Next canonical development route: `TASK-006 — Workspace Registry / Resolver / Automation` (`NOT_STARTED`)
+- TASK-006: `COMPLETED`
+- Next canonical development route: `TASK-007 — Monitoring & Dashboard` (`NOT_STARTED / NOT_AUTHORIZED`)
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-08`
 
 ## Product Boundary
 
-BAI Development OS is standalone. `javascript-roulette` is a Reference Consumer / Regression Project and is not an OS-core host. Historical Evidence may retain former roots; those are point-in-time evidence, not operational roots.
+BAI Development OS is standalone. Consumer projects do not host OS core. Registry/index state is derived and never replaces canonical product, Lifecycle, Knowledge or Owner authority.
 
 ## Completed Foundation
 
-TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archive/Migration and System Sync foundations. TASK-005 adds the governed Knowledge Operating System on top without taking ownership of Task Lifecycle state.
+TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archive/Migration and System Sync. TASK-005 adds governed Knowledge Assets, deterministic resolution, version-pinned Knowledge Packs, usage/effectiveness and Knowledge Governance. TASK-006 composes both into governed Registry/Runtime/Resolver/Startup/Instruction/Reliability/Document/Automation runtime without taking their authority.
 
-## TASK-005 Delivered Knowledge Contract
+## TASK-006 Delivered Automation Contract
 
-- Knowledge Asset Status, Maturity and Enforcement are separate axes.
-- Asset revisions are immutable/sequential and checksum-bound.
-- Asset Event and Usage histories are hash-chained.
-- Scope/applicability, Source Trust, Sensitivity, Confidence and freshness are explicit.
-- Resolver behavior is deterministic and Mandatory conflict/absence fails closed.
-- Knowledge Pack pins revision/checksum and cannot bypass TASK-004 Context Manifest.
-- Usage/deviation/verification/effectiveness are auditable.
-- Global/Mandatory high-impact Governance retains Owner safety floors.
-- Invalid Knowledge emits Impact Analysis but does not mutate Task Lifecycle Status.
-- Fourteen TASK-004 Failure Knowledge records are migrated as `CANDIDATE` only.
+- Workspace Registry and explicit Multi-Project Project Index are rebuildable indexes, not content authority.
+- Runtime/project/root facts require current probe evidence and root confinement.
+- Project risk delegates to Adaptive Development Governance; TASK-006 does not create a second risk policy.
+- TASK-005 Knowledge Pack enters role execution only through TASK-004 Context Manifest.
+- Role Startup Package binds Task/Phase/Role/Runtime/Risk/Knowledge/Auth/Paths/Evidence and prompt checksum.
+- Owner Decision Support creates authorization proposals but never self-authorizes.
+- Already-authorized, reversible, scope-bound implementation without external side effects can automate without redundant Owner confirmation.
+- Irreversible/external/policy/publish/send/delete/global-promotion/unknown actions remain Owner-gated.
+- Mutation/fault injection requires authorization and isolated sandbox.
+- Verified Completion Outbox consumption is idempotent; derived sync failure never rolls canonical completion back.
 
 ## Final Verification
 
-- TASK-005 Knowledge suite: `75 / 75 PASS`
-- Full BAI Development OS suite: `309 / 309 PASS`
+- TASK-006 dedicated suite: `116 / 116 PASS`
+- Full BAI Development OS suite: `425 / 425 PASS`
 - Product Boundary: `PASS`
-- Root Knowledge export: `PASS`
+- Root `AutomationOS` export: `PASS`
+- Automation schemas: `9 / 9 PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `190 documents / Missing 0 / Hash-Size mismatch 0`
-- Canonical DOCX visual QA: `Architecture Ver.2.7 74/74 pages PASS; Knowledge OS 21/21 pages PASS`
+- Canonical DOCX visual QA: `Architecture Ver.2.8 79/79 pages PASS; TASK-006 Ver.1.0 27/27 pages PASS`
 
 ## Accepted Residual
 
-Knowledge Asset revision/current/event persistence is fail-closed but not a single power-loss-atomic filesystem transaction. Verification detects partial state. Journal recovery/automatic repair is reserved for later hardening/self-maintenance Tasks.
+Multi-file derived documentation synchronization is prevalidated/fail-safe but not a single crash-atomic filesystem transaction. Journal/recovery/repair hardening remains allocated to TASK-009/TASK-012. Local derived outbox acknowledgement is not a distributed transaction coordinator.
 
 ## Roadmap
 
-1. TASK-006 — Registry / Resolver / Automation
-2. TASK-007 — Monitoring & Dashboard
-3. TASK-008 — External Integration
-4. TASK-009 — Security / Supply Chain / Integrity Hardening
-5. TASK-010 — Release / Distribution / Consumer Upgrade OS
-6. TASK-011 — Multi-Project Conformance & Compatibility Lab
-7. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
-8. TASK-013 — Domain Adapter / Plugin SDK
-9. TASK-014 — Adaptive Governance Calibration & Policy Learning
+1. TASK-007 — Monitoring & Dashboard
+2. TASK-008 — External Integration
+3. TASK-009 — Security / Supply Chain / Integrity Hardening
+4. TASK-010 — Release / Distribution / Consumer Upgrade OS
+5. TASK-011 — Multi-Project Conformance & Compatibility Lab
+6. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
+7. TASK-013 — Domain Adapter / Plugin SDK
+8. TASK-014 — Adaptive Governance Calibration & Policy Learning
 
-TASK-009–014 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED` items. TASK-006 is next but is not automatically active merely because TASK-005 completed.
+TASK-009–014 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-007 is the next route but is not automatically active merely because TASK-006 completed.
 
-## Post-TASK-005 Roadmap Refinement
+## Registry Integrity
 
-TASK-005-derived future work was allocated into existing TASK-009〜014 rather than creating TASK-015. The additions cover crash-consistent Knowledge persistence, Pack release compatibility, cross-project isolation, repository fsck/recovery/compaction, Domain Knowledge extensions, and resolver/confidence/freshness calibration. All remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-006 remains next.
+- Document Registry: `214 documents / Missing 0 / Hash-Size mismatch 0`

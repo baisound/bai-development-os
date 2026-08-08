@@ -1,0 +1,15 @@
+import test from 'node:test'; import assert from 'node:assert/strict';
+import { buildRoleStartupPackage, validateRoleActivation } from '../../src/automation/index.mjs'; import { runtimeReady, projectResolved, riskResolved, noKnowledge, lifecycle, modelProfiles, modelRequest } from './helpers.mjs';
+const base=()=>({project_id:'P1',task_id:'TASK-006',role:'Builder',phase:'IMPLEMENTATION',runtime_resolution:runtimeReady,project_resolution:projectResolved,risk_resolution:riskResolved,knowledge_integration:noKnowledge,lifecycle_snapshot:lifecycle,model_profiles:modelProfiles,model_request:modelRequest,canonical_sources:[{source_id:'task',path:'tasks/TASK-006/task.md',trust_level:'CANONICAL',sensitivity:'INTERNAL',content_checksum:'sha256:'+'a'.repeat(64),token_estimate:50}],allowed_paths:['src/automation/**'],protected_paths:['tasks/TASK-004/**'],stop_conditions:['NOT_AUTHORIZED'],expected_outputs:['implementation']});
+
+test('startup package binds lifecycle context model and scope',()=>{const p=buildRoleStartupPackage(base());assert.equal(p.task_id,'TASK-006');assert.equal(p.model_route.model.model_id,'m1');assert.match(p.prompt_binding_checksum,/^sha256:/);});
+test('invalid runtime blocks startup',()=>assert.throws(()=>buildRoleStartupPackage({...base(),runtime_resolution:{result:'ENVIRONMENT_CAPABILITY_BLOCKED'}}),e=>e.code==='INVALID_START_RUNTIME'));
+test('invalid project blocks startup',()=>assert.throws(()=>buildRoleStartupPackage({...base(),project_resolution:{result:'NO'}}),e=>e.code==='INVALID_START_PROJECT'));
+test('invalid risk blocks startup',()=>assert.throws(()=>buildRoleStartupPackage({...base(),risk_resolution:null}),e=>e.code==='INVALID_START_RISK'));
+test('unresolved knowledge blocks startup',()=>assert.throws(()=>buildRoleStartupPackage({...base(),knowledge_integration:{result:'KNOWLEDGE_INTEGRATION_BLOCKED'}}),e=>e.code==='INVALID_START_KNOWLEDGE'));
+test('model route failure blocks startup',()=>assert.throws(()=>buildRoleStartupPackage({...base(),model_profiles:[]}),e=>e.code==='INVALID_START_MODEL'));
+test('activation detects task change',()=>{const p=buildRoleStartupPackage(base());assert.throws(()=>validateRoleActivation(p,{task_id:'OTHER'}),e=>e.code==='INVALID_START_TASK_CHANGED');});
+test('activation detects status revision change',()=>{const p=buildRoleStartupPackage(base());assert.throws(()=>validateRoleActivation(p,{status_revision:2}),e=>e.code==='INVALID_START_STATUS_CHANGED');});
+test('activation enforces owner approval when required by current action',()=>{const p=buildRoleStartupPackage(base());assert.throws(()=>validateRoleActivation(p,{owner_approval_required:true,owner_authorized:false}),e=>e.code==='INVALID_START_NOT_AUTHORIZED');});
+test('activation succeeds for bound state',()=>{const p=buildRoleStartupPackage(base());assert.equal(validateRoleActivation(p,{task_id:'TASK-006',status_revision:1,phase:'IMPLEMENTATION'}).result,'ROLE_ACTIVATION_VALID');});
+test('NOT_READY suffix cannot bypass runtime readiness check',()=>assert.throws(()=>buildRoleStartupPackage({...base(),runtime_resolution:{result:'NOT_READY'}}),e=>e.code==='INVALID_START_RUNTIME'));

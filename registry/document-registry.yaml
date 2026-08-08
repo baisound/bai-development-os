@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T10:29:00+09:00'
+registry_generated_at: '2026-08-08T10:58:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 7b399d085729d002598e79d5123a2beac47b84921251d7777a8172638669ad15
-  size_bytes: 3009
+  sha256: cdcd4a6808938d18787e2b9c926645c1ffeb54dcf31132aa47faefc68fa7df82
+  size_bytes: 3324
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 36e7e444e26eacea6d2bd2fca006047c007ef8d46cd74a808bd4eb09f653e152
-  size_bytes: 2028
+  sha256: 66c538f467aec1458b761678002bb6d8d8a31622c5c702aa7a432e7160a20585
+  size_bytes: 2445
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: fa50a352ea2ee430edb0b87e19d2fe9ca3f1b003ec273456269b349b2a465765
-  size_bytes: 4079
+  sha256: e6efc8f8270b315069bcdc9209d5f6640140e2f2af86419b957022ab63d288f7
+  size_bytes: 4138
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: b8d7717eff7746a4c81fec441009e7c7bf5f06bf82805d5076b2904f08e29e2a
-  size_bytes: 2162
+  sha256: a05cfac189b1d2140f22d3b98bac1de3bc59cd799e8fb8f28aa41774e0b3bdd4
+  size_bytes: 2314
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6171102df4077172b4ef2ede3c7341066853e730eaa5e7b20add1d53b3c022b4
-  size_bytes: 3439
+  sha256: 7bfd7ceac2c096247a5f9cf52ad8462ccd04589c0ac6511935e8a5ec6907ad7a
+  size_bytes: 3000
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: b9f27f3a19c02c02e7719e44b5b8a2d2cb89d33254f9f5280aaa226a1f393c42
-  size_bytes: 3843
+  sha256: 98c2c64810b86f4446c8d065c8c25d030da56078737524c680789e4f507b3566
+  size_bytes: 4011
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -2117,12 +2117,14 @@ documents:
   authority: machine-readable-canonical-copy
   importance_level: A
   preferred_loading: summary-first
-  status: CURRENT_CANONICAL
+  status: SUPERSEDED_HISTORICAL_BASELINE
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   previous_version: '2.6'
   sha256: 57a6d9615e40f2cc5fc53e9363014e31a3c10e6e6518721d765226b6a0a7414d
   size_bytes: 127208
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_7_HUMAN
   path: architecture/BAI_Development_OS_Architecture_Ver2.7.docx
   title: BAI_Development_OS_Architecture_Ver2.7.docx
@@ -2130,12 +2132,14 @@ documents:
   authority: human-readable-copy
   importance_level: C
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL_COMPANION
+  status: SUPERSEDED_HISTORICAL_BASELINE
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   previous_version: '2.6'
   sha256: 5b49ad42c3e8378624aee5c55a56e3b395caa1a4dc7ff44c5724174820af427f
   size_bytes: 69404
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_7_SUMMARY
   path: architecture/BAI_Development_OS_Architecture_Ver2.7.summary.md
   title: BAI Development OS Architecture Ver.2.7 — Summary
@@ -2143,10 +2147,12 @@ documents:
   authority: navigation-aid
   importance_level: A
   preferred_loading: always
-  status: CURRENT_CANONICAL_SUMMARY
+  status: SUPERSEDED_HISTORICAL_BASELINE
   effective_date: '2026-08-08'
   sha256: 363c2a2b7e4609fdb66ac613805094ef5422ccb652d121b3a66b1b97a8fccbe2
   size_bytes: 1196
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8
 - document_id: POST_TASK005_ROADMAP_REFINEMENT_VER1_0
   path: architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS — Post-TASK-005 Roadmap Refinement Ver.1.0
@@ -2169,18 +2175,288 @@ documents:
   effective_date: '2026-08-08'
   sha256: 630d43a68e5644826d76fbf7ef825b1215945b4f2d885a576345507440bf4f80
   size_bytes: 2003
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8
+  path: architecture/BAI_Development_OS_Architecture_Ver2.8.md
+  title: BAI Development OS Architecture Ver.2.8 — TASK-006 Orchestration & Automation Completion
+  category: architecture
+  authority: machine-readable-canonical-copy
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '2.7'
+  sha256: 41b471e8665b855bd938abc2caf2211ae6f14effd561d3ea4270deda4dee968c
+  size_bytes: 133685
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8_HUMAN
+  path: architecture/BAI_Development_OS_Architecture_Ver2.8.docx
+  title: BAI_Development_OS_Architecture_Ver2.8.docx
+  category: architecture
+  authority: human-readable-copy
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '2.7'
+  sha256: 942cf335eade4c2f73556ca25dd88a7cd7129b863d3265275e52c354cc2dc1eb
+  size_bytes: 71289
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8_SUMMARY
+  path: architecture/BAI_Development_OS_Architecture_Ver2.8.summary.md
+  title: BAI Development OS Architecture Ver.2.8 — AI Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+  sha256: 6a3f567d2fb69ae8cadf55edc70cc221aa6d310424a85076b9e6380cb274cdb8
+  size_bytes: 1393
+- document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
+  path: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md
+  title: TASK-006 BAI Development OS Orchestration & Automation Foundation Detailed Design Ver.1.0
+  category: specification
+  authority: machine-readable-canonical-copy
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: ac4d6537ff4335f3ed9169960c98d06c1640b5e7c052c0960c531850237bf79c
+  size_bytes: 20211
+- document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION_HUMAN
+  path: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
+  title: TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
+  category: specification
+  authority: human-readable-copy
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 94364c9fc22887c89a0592196493f77e5a8e94a3750603ed836f99d2ea366ee8
+  size_bytes: 46577
+- document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION_SUMMARY
+  path: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.summary.md
+  title: TASK-006 Orchestration & Automation Foundation Ver.1.0 — AI Summary
+  category: specification
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+  sha256: 2475929df201a671b0fe4da01a31119dbb53eca8e506c610602c8d4656733ad7
+  size_bytes: 1804
+- document_id: 0E24D2E083AC3924
+  path: tasks/TASK-006/task.md
+  title: TASK-006 — BAI Development OS Orchestration & Automation Foundation
+  category: task-evidence
+  authority: task-definition
+  importance_level: A
+  preferred_loading: summary-first
+  status: COMPLETED
+  effective_date: '2026-08-08'
+  sha256: 82eb37706dacae982e219391556158ddbfadda417db56cb46a0e398006de2f21
+  size_bytes: 2591
+- document_id: 284DC24E67BC9075
+  path: tasks/TASK-006/TASK-006.summary.md
+  title: TASK-006 Summary
+  category: task-evidence
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: summary-first
+  status: COMPLETED_SUMMARY
+  effective_date: '2026-08-08'
+  sha256: 2a93b8fef6d9f1110e3c3c205e22f4d84e38f26ce10ec0e1fbc2aa5db4cb751e
+  size_bytes: 801
+- document_id: 1F06F2AF67272A00
+  path: tasks/TASK-006/detailed-design.md
+  title: TASK-006 Detailed Design Record
+  category: task-evidence
+  authority: design-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: COMPLETED_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 77f0781b24c0b7426c11aa1a567fb89bf5399086ea499dde37406189d0a1a1bb
+  size_bytes: 1315
+- document_id: E62A81F8FA5F9040
+  path: tasks/TASK-006/implementation-report.md
+  title: TASK-006 Implementation Report
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: COMPLETED_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 7b38c8a7c4c6ddeef68d6af49bc895aa8d1950bf3958bdbca1a4f97d0ebec3fd
+  size_bytes: 1427
+- document_id: 7E2BD51B62ABA38D
+  path: tasks/TASK-006/test-report.md
+  title: TASK-006 Test Report
+  category: task-evidence
+  authority: test-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: COMPLETED_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 9b394c3bde9cfad258863e4b1ea760c6c3ddd58419e4dbbed2f7b7f1dc020f82
+  size_bytes: 1199
+- document_id: 23979978AF8C94DA
+  path: tasks/TASK-006/critic-review.md
+  title: TASK-006 Independent Critic Review
+  category: task-evidence
+  authority: critic-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: PASS
+  effective_date: '2026-08-08'
+  sha256: 3332e1865619e6dcc248c41f441294790def5eebe84822464eb9888a6f4c02dd
+  size_bytes: 1159
+- document_id: 11243EB3E7FD1A7E
+  path: tasks/TASK-006/final-implementation-decision.md
+  title: TASK-006 Final Implementation Decision
+  category: task-evidence
+  authority: decision-evidence
+  importance_level: A
+  preferred_loading: summary-first
+  status: APPROVED_COMPLETE
+  effective_date: '2026-08-08'
+  sha256: 4f696c9d4551f4573c3250ee04a09b507e7b928771d0130ef6dd5bcf61166724
+  size_bytes: 506
+- document_id: DF89ED8942B54D5A
+  path: tasks/TASK-006/task006-final-completion-record.md
+  title: TASK-006 Final Completion Record
+  category: task-evidence
+  authority: completion-evidence
+  importance_level: A
+  preferred_loading: summary-first
+  status: COMPLETED
+  effective_date: '2026-08-08'
+  sha256: 313688d34830537b8f2af03c433b62ebdfc8ee619b60cefb39a9517aee7f3efe
+  size_bytes: 1553
+- document_id: CB731B1DD00FED45
+  path: tasks/TASK-006/document-sync-and-visual-qa.md
+  title: TASK-006 Canonical Document Sync and Visual QA
+  category: task-evidence
+  authority: documentation-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: PASS
+  effective_date: '2026-08-08'
+  sha256: c578562f190e990a5625fde626634120ab7da8d52f00cc2882af2215c0c8f595
+  size_bytes: 1711
+- document_id: 67FE2B2D7D842E64
+  path: schemas/automation/authorization-proposal.schema.json
+  title: authorization-proposal.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: 4b13a7e8cf9e64a991e24c69ecdb8f5df79ab2218fccebfb2846bcbb8244731e
+  size_bytes: 1484
+- document_id: E33B44F56E19747E
+  path: schemas/automation/automation-plan.schema.json
+  title: automation-plan.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: d89fe216e4801b603dc4884e511d266d23d0629e779b969bb33467fe9483ecf5
+  size_bytes: 808
+- document_id: 39D157DE8D26EA6E
+  path: schemas/automation/canonical-document-manifest.schema.json
+  title: canonical-document-manifest.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: 4cbde79279cd424b58d67972358349801c0152c65ef42f108ec3d533ccaf01b4
+  size_bytes: 908
+- document_id: DE086DF3EF83F521
+  path: schemas/automation/derived-sync-ack.schema.json
+  title: derived-sync-ack.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: 4dbe2c759c1ef5e052b21412d8e244e7deca2fa04975062a0377ca505a05f65b
+  size_bytes: 624
+- document_id: 503018FA9A36B3C0
+  path: schemas/automation/role-startup-package.schema.json
+  title: role-startup-package.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: cb504343228462c25d0e550140ae2b9fe5d3268a277877c9be186a0545036be7
+  size_bytes: 1626
+- document_id: 6DC7586A97670137
+  path: schemas/automation/runtime-profile.schema.json
+  title: runtime-profile.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: db39616b8936dfb0729cb65abad783bf5e6eea59a35562c6eecb81243c6166ff
+  size_bytes: 881
+- document_id: F52E59D283735E1E
+  path: schemas/automation/session-record.schema.json
+  title: session-record.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: 9580648ce993285eb1728d310e9fd92af6be1bf32dc715c034d1e0c9fd32cceb
+  size_bytes: 817
+- document_id: E7AA92E90BC7B402
+  path: schemas/automation/workspace-project-index.schema.json
+  title: workspace-project-index.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: 58bcbabe81ed17696bed7a902470a25df77635bde99978bd5f8531f2d9337791
+  size_bytes: 1164
+- document_id: 0DE5888C56EF962E
+  path: schemas/automation/workspace-registry.schema.json
+  title: workspace-registry.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  sha256: 094903fbb97774b71d08a94e154177dd68a2d4e7f3e1d299d35f8c123670dd25
+  size_bytes: 1270
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner
   consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-005/document-sync-and-visual-qa.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-006/document-sync-and-visual-qa.md
   architecture:
-    document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_7
-    version: '2.7'
+    document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8
+    version: '2.8'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.7.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.7.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.7.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.8.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.8.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.8.summary.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
@@ -2191,7 +2467,7 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_TASK005_ROADMAP_REFINEMENT
+  registry_sync_status: CURRENT_AFTER_TASK006_COMPLETION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
   roadmap_expansion_status: TASK_009_TO_TASK_014_REFINED_AFTER_TASK005_NOT_AUTHORIZED
   task_005_knowledge:
@@ -2202,7 +2478,15 @@ current_canonical_document_sets:
     machine: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
-  task_006_status: NEXT_NOT_STARTED
-  next_canonical_route: TASK-006 — Workspace Registry / Resolver / Automation
+  task_006_status: COMPLETED
+  next_canonical_route: TASK-007 — Monitoring & Dashboard
+  task_006_orchestration_automation:
+    document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
+    version: '1.0'
+    status: CURRENT_CANONICAL
+    human: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
+    machine: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md
+    summary: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.summary.md
+  task_007_status: NEXT_NOT_STARTED_NOT_AUTHORIZED
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK005_ROADMAP_REFINEMENT
+registry_status: CURRENT_AFTER_TASK006_COMPLETION

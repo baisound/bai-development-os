@@ -13,3 +13,4 @@ export * as ArchiveControl from './archive/index.mjs';
 export * as DependencyControl from './dependency/index.mjs';
 export * as SystemSync from './system-sync/index.mjs';
 export * as KnowledgeOS from './knowledge/index.mjs';
+export * as AutomationOS from './automation/index.mjs';
