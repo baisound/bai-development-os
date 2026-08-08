@@ -1,0 +1,4 @@
+import { buildConnectorRegistry } from './registry.mjs';
+import { createIntegrationRequest } from './request.mjs';
+import { IntegrationGateway } from './gateway.mjs';
+export function createIntegrationService({root,connectors=[],credential_resolver=null,monitoring_sink=null,clock,max_retries=2,retry_delay_ms=0,cost_budgets=null}={}){const registry=buildConnectorRegistry(connectors.map(x=>x.manifest??x));const runtime=Object.fromEntries(connectors.filter(x=>x.invoke).map(x=>[(x.manifest??x).connector_id,x]));const gateway=new IntegrationGateway({root,registry,connectors:runtime,credential_resolver,monitoring_sink,clock,max_retries,retry_delay_ms,cost_budgets});return Object.freeze({registry,gateway,createRequest:(input)=>createIntegrationRequest(input),execute:(input)=>gateway.execute(input?.integration_request_version?input:createIntegrationRequest(input))});}

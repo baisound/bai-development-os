@@ -16,3 +16,5 @@ export * as KnowledgeOS from './knowledge/index.mjs';
 export * as AutomationOS from './automation/index.mjs';
 
 export * as MonitoringOS from './monitoring/index.mjs';
+
+export * as IntegrationOS from './integration/index.mjs';

@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/integration/integration-response.schema.json",
+  "title": "BAI Integration Response",
+  "type": "object",
+  "required": [
+    "integration_response_version",
+    "request_id",
+    "connector_id",
+    "capability",
+    "operation",
+    "ok",
+    "trust",
+    "canonical",
+    "requires_review_for_canonicalization",
+    "attempt",
+    "received_at",
+    "data",
+    "metadata"
+  ],
+  "properties": {
+    "integration_response_version": {
+      "const": "1.0.0"
+    },
+    "request_id": {
+      "type": "string"
+    },
+    "connector_id": {
+      "type": "string"
+    },
+    "capability": {
+      "type": "string"
+    },
+    "operation": {
+      "type": "string"
+    },
+    "ok": {
+      "const": true
+    },
+    "trust": {
+      "enum": [
+        "UNTRUSTED",
+        "REFERENCE",
+        "REVIEW_REQUIRED",
+        "VERIFIED"
+      ]
+    },
+    "canonical": {
+      "const": false
+    },
+    "requires_review_for_canonicalization": {
+      "type": "boolean"
+    },
+    "attempt": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "received_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "data": {},
+    "metadata": {
+      "type": "object"
+    },
+    "replayed": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

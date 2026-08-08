@@ -20,6 +20,7 @@ Current canonical design set:
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ companion set)
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md` (+ companion set)
 - `specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md` (+ companion set)
+- `specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.md` (+ companion set)
 
 Reference consumer: `/home/baisound/projects/javascript-roulette`.
 
@@ -29,7 +30,8 @@ Reference consumer: `/home/baisound/projects/javascript-roulette`.
 - TASK-005 Knowledge OS: `COMPLETED`.
 - TASK-006 Orchestration & Automation Foundation: `COMPLETED`.
 - TASK-007 Monitoring & Dashboard: `COMPLETED`.
-- Next planned route: TASK-008 External Integration (`NOT_STARTED / NOT_AUTHORIZED`).
+- TASK-008 External Integration: `COMPLETED`.
+- Next planned route: TASK-009 Security / Supply Chain / Integrity Hardening (`NOT_STARTED / NOT_AUTHORIZED`).
 
 ## Adaptive Routing Rule
 
@@ -44,7 +46,7 @@ Registry is not content authority; Automation cannot self-authorize or own Lifec
 ## Roadmap Identity
 
 - TASK-007 Monitoring & Dashboard — COMPLETED
-- TASK-008 External Integration — NEXT
+- TASK-008 External Integration — COMPLETED
 - TASK-009 Security / Supply Chain / Integrity Hardening
 - TASK-010 Release / Distribution / Consumer Upgrade OS
 - TASK-011 Multi-Project Conformance & Compatibility Lab
@@ -68,9 +70,14 @@ TASK-009〜015 are reserved roadmap items only and are not implicitly authorized
 
 ## Post-TASK-006 refinement
 
-TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement. TASK-008 remains the next route after TASK-007 completion.
+TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement. TASK-008 is completed; TASK-009 is now the next route.
 
 
 ## Post-TASK-007 refinement
 
-TASK-007 is not reopened. Monitoring productization is reserved in TASK-009〜015: integrity/privacy, schema/release compatibility, multi-project isolation, retention/repair/rebuild, collector/renderer/exporter plugins, adaptive threshold/anomaly/SLO calibration, and distributed telemetry/trace/HA. External alert delivery remains TASK-008. All later tasks remain unstarted and unauthorized.
+TASK-007 is not reopened. Monitoring productization is reserved in TASK-009〜015: integrity/privacy, schema/release compatibility, multi-project isolation, retention/repair/rebuild, collector/renderer/exporter plugins, adaptive threshold/anomaly/SLO calibration, and distributed telemetry/trace/HA. External alert delivery baseline is now implemented by TASK-008. All later tasks remain unstarted and unauthorized.
+
+
+## TASK-008 External Integration Completion
+
+As of 2026-08-08, TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only when external connector behavior is relevant. `IntegrationOS` is a vendor-neutral capability/authorization gateway; it does not own TASK-004 Lifecycle/Cost authority, TASK-005 Knowledge authority, or canonicalization. External responses remain noncanonical references. Run `npm run test:integration`. TASK-009 is next but remains `NOT_STARTED / NOT_AUTHORIZED`.

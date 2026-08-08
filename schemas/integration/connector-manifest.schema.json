@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/integration/connector-manifest.schema.json",
+  "title": "BAI Integration Connector Manifest",
+  "type": "object",
+  "required": [
+    "connector_manifest_version",
+    "connector_id",
+    "kind",
+    "status",
+    "connector_version",
+    "response_trust",
+    "capabilities",
+    "content_checksum"
+  ],
+  "properties": {
+    "connector_manifest_version": {
+      "const": "1.0.0"
+    },
+    "connector_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "GITHUB",
+        "MCP",
+        "EXTERNAL_AI",
+        "VIDEO",
+        "AUDIO",
+        "COMMUNICATION",
+        "STORAGE",
+        "WEBHOOK",
+        "GENERIC"
+      ]
+    },
+    "status": {
+      "enum": [
+        "ENABLED",
+        "DISABLED",
+        "DEGRADED"
+      ]
+    },
+    "connector_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "response_trust": {
+      "enum": [
+        "UNTRUSTED",
+        "REFERENCE",
+        "REVIEW_REQUIRED",
+        "VERIFIED"
+      ]
+    },
+    "credential_provider": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "operations",
+          "side_effect",
+          "requires_authorization",
+          "retry_safe",
+          "idempotency_required",
+          "cost_metered",
+          "license_sensitive",
+          "required_scopes",
+          "allowed_data_classes",
+          "max_payload_bytes",
+          "max_timeout_ms"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "side_effect": {
+            "enum": [
+              "NONE",
+              "REVERSIBLE",
+              "EXTERNAL",
+              "IRREVERSIBLE"
+            ]
+          },
+          "requires_authorization": {
+            "type": "boolean"
+          },
+          "retry_safe": {
+            "type": "boolean"
+          },
+          "idempotency_required": {
+            "type": "boolean"
+          },
+          "cost_metered": {
+            "type": "boolean"
+          },
+          "license_sensitive": {
+            "type": "boolean"
+          },
+          "required_scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowed_data_classes": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "PUBLIC",
+                "INTERNAL",
+                "CONFIDENTIAL",
+                "RESTRICTED"
+              ]
+            }
+          },
+          "max_payload_bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "max_cost_microusd": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "max_timeout_ms": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "content_checksum": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": false
+}

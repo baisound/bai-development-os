@@ -91,7 +91,7 @@ TASK-015 is intentionally optional; simple single-machine projects continue usin
 |---|---|---|---|
 | OP-035 | Verified source freshness/provenance must be visible in dashboards | Implemented | TASK-007 |
 | OP-036 | Monitoring Event crash-journal / tail repair | Roadmap reserved | TASK-009 / TASK-012 |
-| OP-037 | External alert delivery adapters | Roadmap reserved | TASK-008 |
+| OP-037 | External alert delivery adapters | Baseline implemented | TASK-008 |
 | OP-038 | Monitoring threshold evidence calibration | Roadmap reserved | TASK-014 |
 | OP-039 | Distributed telemetry/event observation | Roadmap reserved | TASK-015 |
 
@@ -111,3 +111,17 @@ TASK-007 remains read-only and completed; future notification/repair/calibration
 | OP-046 | Distributed telemetry, trace propagation, clock-skew/order, backpressure and HA collectors | Roadmap reserved | TASK-015 |
 
 External alert delivery itself remains TASK-008. TASK-007 stays read-only and `COMPLETED`; OP-040〜046 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED` future responsibilities.
+
+
+## TASK-008 External Integration Completion Addendum — 2026-08-08
+
+| ID | Improvement | Decision / Status | Planned integration |
+|---|---|---|---|
+| OP-047 | Bound authorization for external side effects | Implemented | TASK-008 |
+| OP-048 | Credential-reference-only runtime secret boundary | Implemented | TASK-008 |
+| OP-049 | Semantic idempotency conflict detection | Implemented | TASK-008 |
+| OP-050 | License-sensitive generation terms provenance | Implemented | TASK-008 |
+| OP-051 | Abort-aware connector timeout and timer cleanup | Implemented | TASK-008 |
+| OP-052 | External connector Cost Guard reservation/actual/release | Implemented | TASK-008 |
+
+Crash-consistent audit persistence, security/privacy hardening, multi-project connector conformance, self-repair, connector Plugin SDK, adaptive policy calibration and distributed connector/rate/event coordination remain post-TASK-008 responsibilities of TASK-009〜015.

@@ -52,7 +52,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005, TASK-006 and TASK-007 are completed; TASK-008 External Integration is now the next development route.
+The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005 through TASK-008 are completed; TASK-009 Security / Supply Chain / Integrity Hardening is now the next development route.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -61,17 +61,22 @@ As of 2026-08-08, TASK-005 is completed. Knowledge is no longer an informal note
 
 ## Post-TASK-005 Roadmap Refinement
 
-TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added. TASK-006 and TASK-007 are completed; TASK-008 is now next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.
+TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added. TASK-006 through TASK-008 are completed; TASK-009 is now next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 is completed; TASK-008 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
+TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 and TASK-008 are completed; TASK-009 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
 
 ## TASK-007 Monitoring & Dashboard Completion
 
-As of 2026-08-08, TASK-007 is completed. Monitoring remains read-only derived observability: verified source provenance, Lifecycle/Quality/Automation/Context/Cost/Model/Knowledge/Registry/Integration/Governance/System metrics, deterministic alerts, health, audit correlation, trends, multi-project dashboard and standalone escaped HTML. Run `npm run test:monitoring`. TASK-008 External Integration is the next route and is not automatically authorized.
+As of 2026-08-08, TASK-007 is completed. Monitoring remains read-only derived observability: verified source provenance, Lifecycle/Quality/Automation/Context/Cost/Model/Knowledge/Registry/Integration/Governance/System metrics, deterministic alerts, health, audit correlation, trends, multi-project dashboard and standalone escaped HTML. Run `npm run test:monitoring`. TASK-008 External Integration is now completed.
 
 
 ## Post-TASK-007 Roadmap Refinement
 
-TASK-007 remains completed. Monitoring productization is reserved in TASK-009〜015 for integrity/privacy, schema compatibility, multi-project conformance, retention/repair, plugin extension, adaptive threshold/SLO calibration and distributed telemetry. External alert delivery remains TASK-008. See `architecture/BAI_Development_OS_Post_TASK007_Roadmap_Refinement_Ver1.0.md`.
+TASK-007 remains completed. Monitoring productization is reserved in TASK-009〜015 for integrity/privacy, schema compatibility, multi-project conformance, retention/repair, plugin extension, adaptive threshold/SLO calibration and distributed telemetry. External alert delivery baseline is implemented in TASK-008. See `architecture/BAI_Development_OS_Post_TASK007_Roadmap_Refinement_Ver1.0.md`.
+
+
+## TASK-008 External Integration Completion
+
+As of 2026-08-08, TASK-008 is completed. `IntegrationOS` provides vendor-neutral Connector Manifest/Registry, capability policy, credential references, bound external authorization, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation controls, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring integration. Run `npm run test:integration`. TASK-009 is next and is not automatically authorized.

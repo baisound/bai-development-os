@@ -5,16 +5,18 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.11`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.12`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
 - Current Monitoring/Dashboard Canonical: `TASK-007 BAI Development OS Monitoring & Dashboard Ver.1.0`
+- Current External Integration Canonical: `TASK-008 BAI Development OS External Integration Ver.1.0`
 - TASK-004: `COMPLETED`
 - TASK-005: `COMPLETED`
 - TASK-006: `COMPLETED`
 - TASK-007: `COMPLETED`
-- Next canonical development route: `TASK-008 — External Integration` (`NOT_STARTED / NOT_AUTHORIZED`)
+- TASK-008: `COMPLETED`
+- Next canonical development route: `TASK-009 — Security / Supply Chain / Integrity Hardening` (`NOT_STARTED / NOT_AUTHORIZED`)
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-08`
 
@@ -24,7 +26,7 @@ BAI Development OS is standalone. Consumer projects do not host OS core. Registr
 
 ## Completed Foundation
 
-TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archive/Migration and System Sync. TASK-005 adds governed Knowledge Assets, deterministic resolution, version-pinned Knowledge Packs, usage/effectiveness and Knowledge Governance. TASK-006 composes both into governed Registry/Runtime/Resolver/Startup/Instruction/Reliability/Document/Automation runtime without taking their authority. TASK-007 observes those layers through verified source/provenance contracts and produces rebuildable metrics, alerts, audit traces, trends and dashboards without taking canonical authority.
+TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archive/Migration and System Sync. TASK-005 adds governed Knowledge Assets, deterministic resolution, version-pinned Knowledge Packs, usage/effectiveness and Knowledge Governance. TASK-006 composes both into governed Registry/Runtime/Resolver/Startup/Instruction/Reliability/Document/Automation runtime without taking their authority. TASK-007 observes those layers through verified source/provenance contracts and produces rebuildable metrics, alerts, audit traces, trends and dashboards without taking canonical authority. TASK-008 adds a vendor-neutral Integration Gateway that governs external capabilities, credentials, side effects, cost, trust, audit and monitoring without turning external responses into canonical truth.
 
 ## TASK-006 Delivered Automation Contract
 
@@ -41,41 +43,45 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 
 ## Final Verification
 
-- TASK-007 dedicated Monitoring suite: `59 / 59 PASS`
-- Full BAI Development OS suite: `484 / 484 PASS`
+- TASK-008 dedicated Integration suite: `77 / 77 PASS`
+- Full BAI Development OS suite: `561 / 561 PASS`
 - Product Boundary: `PASS`
-- Root `MonitoringOS` export: `PASS`
-- Monitoring schemas: `4 / 4 PASS`
+- Root `IntegrationOS` export: `PASS`
+- Integration schemas: `6 / 6 PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
-- Canonical DOCX visual QA: `Architecture 80 / 80 PASS; TASK-007 design 10 / 10 PASS`
+- Canonical DOCX visual QA: `Architecture 88 / 88 PASS; TASK-008 design 6 / 6 PASS`
 
 ## Accepted Residual
 
-Multi-file derived documentation synchronization remains non-crash-atomic and Monitoring Event JSONL append is fail-detecting rather than journal-recovering. Journal/recovery/repair hardening remains allocated to TASK-009/TASK-012. Local derived outbox acknowledgement remains non-distributed; optional distributed orchestration is TASK-015.
+Integration Audit JSONL is hash-chained/fail-detecting but not WAL/journal crash-recovering; process-local rate limiting is intentionally non-distributed; adapter cancellation relies on adapters honoring the supplied AbortSignal. Integrity/journal hardening belongs TASK-009/TASK-012, distributed rate/event coordination TASK-015, and plugin/productization refinements TASK-013/TASK-014.
 
 ## Roadmap
 
-1. TASK-008 — External Integration
-2. TASK-009 — Security / Supply Chain / Integrity Hardening
-3. TASK-010 — Release / Distribution / Consumer Upgrade OS
-4. TASK-011 — Multi-Project Conformance & Compatibility Lab
-5. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
-6. TASK-013 — Domain Adapter / Plugin SDK
-7. TASK-014 — Adaptive Governance Calibration & Policy Learning
-8. TASK-015 — Distributed Orchestration & Event Fabric
+1. TASK-009 — Security / Supply Chain / Integrity Hardening
+2. TASK-010 — Release / Distribution / Consumer Upgrade OS
+3. TASK-011 — Multi-Project Conformance & Compatibility Lab
+4. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
+5. TASK-013 — Domain Adapter / Plugin SDK
+6. TASK-014 — Adaptive Governance Calibration & Policy Learning
+7. TASK-015 — Distributed Orchestration & Event Fabric
 
-TASK-009–015 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-008 is the next route but is not automatically active merely because TASK-007 completed.
+TASK-009–015 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-009 is the next route but is not automatically active merely because TASK-008 completed.
 
 ## Registry Integrity
 
-- Document Registry: `243 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `264 documents / Missing 0 / Hash-Size mismatch 0`
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006-derived future work is allocated to TASK-009〜014 for integrity, release compatibility, multi-consumer conformance, self-repair, plugin extension and adaptive calibration. TASK-015 is newly reserved for optional distributed event/orchestration semantics because the current Completion Outbox acknowledgement is local and not a distributed coordinator. TASK-009〜015 remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-008 is next.
+TASK-006-derived future work is allocated to TASK-009〜014 for integrity, release compatibility, multi-consumer conformance, self-repair, plugin extension and adaptive calibration. TASK-015 is newly reserved for optional distributed event/orchestration semantics because the current Completion Outbox acknowledgement is local and not a distributed coordinator. TASK-009〜015 remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-009 is next.
 
 
 ## Post-TASK-007 Roadmap Refinement
 
-TASK-007 remains `COMPLETED`. Monitoring hardening/productization is allocated to TASK-009〜015: integrity/privacy, schema/release compatibility, multi-project isolation/noisy-neighbor conformance, retention/repair/rebuild, plugin extension, adaptive thresholds/anomaly/SLO calibration, and distributed telemetry/trace/HA. External notification delivery remains TASK-008. No future Task is authorized by this refinement.
+TASK-007 remains `COMPLETED`. Monitoring hardening/productization is allocated to TASK-009〜015: integrity/privacy, schema/release compatibility, multi-project isolation/noisy-neighbor conformance, retention/repair/rebuild, plugin extension, adaptive thresholds/anomaly/SLO calibration, and distributed telemetry/trace/HA. The external notification/connector delivery baseline is now implemented by TASK-008. No future Task is authorized by this refinement.
+
+
+## TASK-008 External Integration Completion
+
+TASK-008 remains an execution boundary, not a new source of authority. Connector manifests are immutable/checksummed; capabilities are least-privilege; external or irreversible actions require bound authorization/idempotency; credentials stay reference-only; license-sensitive generation requires terms provenance; TASK-004 Cost Guard may reserve/record/release external cost; inbound webhooks remain `UNTRUSTED` references; connector responses remain `canonical:false` even when `VERIFIED`. TASK-009 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/integration/integration-audit-record.schema.json",
+  "title": "BAI Integration Audit Record",
+  "type": "object",
+  "required": [
+    "seq",
+    "event_type",
+    "at",
+    "details",
+    "previous_record_checksum",
+    "record_checksum"
+  ],
+  "properties": {
+    "seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "event_type": {
+      "enum": [
+        "REQUEST_ACCEPTED",
+        "REQUEST_BLOCKED",
+        "EXECUTION_STARTED",
+        "RETRY_SCHEDULED",
+        "EXECUTION_SUCCEEDED",
+        "EXECUTION_FAILED",
+        "IDEMPOTENT_REPLAY"
+      ]
+    },
+    "at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "request_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "connector_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "capability": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "operation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "idempotency_key": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "details": {
+      "type": "object"
+    },
+    "previous_record_checksum": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "record_checksum": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": false
+}
