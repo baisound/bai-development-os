@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.15`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.16`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
@@ -52,7 +52,7 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 - Security schemas: `9 / 9 PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
-- Canonical DOCX visual QA: `Architecture Ver.2.15 113 / 113 PASS; TASK-009 design 5 / 5 PASS`
+- Canonical DOCX visual QA: `Architecture Ver.2.16 116 / 116 PASS; TASK-009 design 5 / 5 PASS`
 
 ## Accepted Residual
 
@@ -71,11 +71,11 @@ TASK-009 is `COMPLETED`. TASK-010–015 retain their consolidated future scopes;
 
 ## Registry Integrity
 
-- Document Registry: `299 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `304 documents / Missing 0 / Hash-Size mismatch 0`
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006-derived future work is allocated to TASK-009〜014 for integrity, release compatibility, multi-consumer conformance, self-repair, plugin extension and adaptive calibration. TASK-015 is newly reserved for optional distributed event/orchestration semantics because the current Completion Outbox acknowledgement is local and not a distributed coordinator. TASK-009〜015 remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-009 is next.
+TASK-006-derived future work is allocated to TASK-009〜014 for integrity, release compatibility, multi-consumer conformance, self-repair, plugin extension and adaptive calibration. TASK-015 is newly reserved for optional distributed event/orchestration semantics because the current Completion Outbox acknowledgement is local and not a distributed coordinator. Historical TASK-006 refinement note: TASK-009〜015 were then future work; TASK-009 is now COMPLETED and TASK-010 is next.
 
 
 ## Post-TASK-007 Roadmap Refinement
@@ -85,26 +85,31 @@ TASK-007 remains `COMPLETED`. Monitoring hardening/productization is allocated t
 
 ## TASK-008 External Integration Completion
 
-TASK-008 remains an execution boundary, not a new source of authority. Connector manifests are immutable/checksummed; capabilities are least-privilege; external or irreversible actions require bound authorization/idempotency; credentials stay reference-only; license-sensitive generation requires terms provenance; TASK-004 Cost Guard may reserve/record/release external cost; inbound webhooks remain `UNTRUSTED` references; connector responses remain `canonical:false` even when `VERIFIED`. TASK-009 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+TASK-008 remains an execution boundary, not a new source of authority. Connector manifests are immutable/checksummed; capabilities are least-privilege; external or irreversible actions require bound authorization/idempotency; credentials stay reference-only; license-sensitive generation requires terms provenance; TASK-004 Cost Guard may reserve/record/release external cost; inbound webhooks remain `UNTRUSTED` references; connector responses remain `canonical:false` even when `VERIFIED`. Historical TASK-008 refinement note: TASK-009 was next at that point; TASK-009 is now COMPLETED and TASK-010 is next.
 
 ## Post-TASK-008 Roadmap Refinement
 
-Architecture Ver.2.14 is the current canonical architecture. TASK-008 remains `COMPLETED`. Its deferred productization scope is now concretely allocated across TASK-009〜015: credential/vault and connector security; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport SDK; adaptive integration policy calibration; and optional distributed integration/event coordination. No TASK-016 is created. TASK-009 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+Historical TASK-008 refinement note: Architecture Ver.2.14 was canonical at that point; current authority is Architecture Ver.2.16. TASK-008 remains `COMPLETED`. Its deferred productization scope is now concretely allocated across TASK-009〜015: credential/vault and connector security; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport SDK; adaptive integration policy calibration; and optional distributed integration/event coordination. No TASK-016 is created. Historical TASK-008 refinement note: TASK-009 was next at that point; TASK-009 is now COMPLETED and TASK-010 is next.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.16 Part XV is the sole current consolidated roadmap scope; TASK-009 is completed and TASK-010〜015 use Part XV. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## Roadmap Consolidation Verification
 
-- Current Roadmap Authority for TASK-009〜015: `Architecture Ver.2.14 Part XV`
-- Accumulated roadmap source sections preserved: `33 / 33 PASS`
+- Current Roadmap Authority: `Architecture Ver.2.16 Part XV`; TASK-009 completed, TASK-010〜015 future consolidated scope
+- Accumulated roadmap source sections preserved: `39 / 39 PASS`
 - Silent requirement deletions: `0`
 - TASK-013 original Domain Adapter / Plugin SDK identity: `PRESERVED`
-- Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`
+- Historical Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`; Current Ver.2.16 QA: `116 / 116 PASS`
 - Historical addenda: `HISTORICAL_EVOLUTION`
 - Roadmap machine check: `ROADMAP_CONSOLIDATION_PASS`
 
 ## TASK-009 Security / Supply Chain / Integrity Completion
 
 TASK-009 is `COMPLETED`. `SecurityOS` now provides shared trusted-path/atomic-write, secret/vault lease, signing/provenance, journal/WAL recovery, signed/tamper-evident ledger, replay protection, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Knowledge persistence uses the shared crash-consistent journal; Owner Approval/Completion Outbox can require signed evidence; Monitoring and Integration use shared integrity boundaries. TASK-010 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+
+
+## Post-TASK-009 Roadmap Refinement
+
+Architecture Ver.2.16 is `CURRENT_CANONICAL`. TASK-009 remains `COMPLETED`. TASK-009-derived productionization work is allocated losslessly to TASK-010〜015: release trust-chain/signing/security migration; multi-project security isolation/conformance; SecurityOS fsck/recovery/repair; production Vault/KMS/HSM/sandbox/provider plugins; evidence-based security-policy calibration; and optional distributed security coordination. Roadmap preservation baseline is now `39 / 39 PASS`. TASK-010 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`.

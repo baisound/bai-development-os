@@ -47,7 +47,7 @@ Load `tasks/TASK-006/TASK-006.summary.md` and the Ver.1.0 automation canonical w
 
 ## TASK-007 Monitoring Baseline
 
-TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.15.
+TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.16.
 
 
 ## TASK-008 External Integration Baseline
@@ -56,8 +56,13 @@ TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External In
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.16 Part XV is the sole current consolidated roadmap scope; TASK-009 is completed and TASK-010〜015 use Part XV. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 loading rule
 
-TASK-009 is completed. Load `tasks/TASK-009/TASK-009.summary.md` and `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md` only when security/integrity behavior is relevant. `SecurityOS` is a shared protection/verification layer, not authorization or canonical domain authority. Current Architecture is Ver.2.15; TASK-010 is next.
+TASK-009 is completed. Load `tasks/TASK-009/TASK-009.summary.md` and `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md` only when security/integrity behavior is relevant. `SecurityOS` is a shared protection/verification layer, not authorization or canonical domain authority. Current Architecture is Ver.2.16; TASK-010 is next.
+
+
+## Post-TASK-009 routing note
+
+Use Architecture Ver.2.16 Part XV for future TASK-010〜015 scope. The roadmap lossless baseline is 39 source sections. TASK-009 is completed; its production residuals are already incorporated into TASK-010〜015 and must not be re-added as a separate task unless a future explicit supersession requires it.

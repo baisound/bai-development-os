@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T15:11:00+09:00'
+registry_generated_at: '2026-08-08T15:55:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: effb4b5af1448c1be51b2703bbba96d3ec1ca7581cbd62d831cd4349be148cd3
-  size_bytes: 7353
+  sha256: 65c355fb85ce43323f7d6638481971b82cb84601d8b23b91c41d662a7fe4b7af
+  size_bytes: 7496
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 34abc2e7d0bf9f2516d733127128325d5ce2936b721cd16e919f1af74cc373a6
-  size_bytes: 4529
+  sha256: b372ece53fab8ceda252a5f91cc1635ff0b48b4db5178d360a281b5b747e200c
+  size_bytes: 4917
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: f88c6aa6ff907fffc277e2dc380cab4fa3543524b1ed6e9ddd1dffd9e495700c
-  size_bytes: 7303
+  sha256: f2f53dc0284057c5ad0ad4ed5a616cd0b7ceced480241385306ac0e08669d750
+  size_bytes: 7862
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: c2e140073881aea50b636a868bd09b0f9b3e2d51e050ad2da04b6427b10c639f
-  size_bytes: 6458
+  sha256: 3922e00e6e1b62de6806d806d7279d40421324eb2e52494ef69bc1c94631347e
+  size_bytes: 6979
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,7 +494,7 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 898f01d0cd7004a269ecc99a601ae27924a42a7c6b800522ca720cdf0286b5a2
+  sha256: f59ca8b47c9882475355ea786e7cde5ab39e1d1e1f45d47366d320996b202a3d
   size_bytes: 3881
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 63a2c02bed372ccd2399a32f34edb2f11d2f23d4b1e338f6c466baaddef27cbc
-  size_bytes: 8556
+  sha256: 57aac526177d71259f19078a2f626bd2b56ad378132c4ca855b1fa3116a40793
+  size_bytes: 9498
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 6ffcde4fc3e05e6fd38871d176b51bf6b212be2ed87bdd52b7c1f0093082d157
-  size_bytes: 10554
+  sha256: 8d60b033866f50ba9b6c349d61a1e2eed5c3ee5caf1ed5b378466b878a5d8940
+  size_bytes: 11046
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -3140,14 +3140,15 @@ documents:
   title: BAI Development OS Architecture Ver.2.14 — Consolidated Current Roadmap Authority
   category: architecture
   authority: machine_canonical_authority
-  importance_level: A
-  preferred_loading: read-first
-  status: CURRENT_CANONICAL
+  importance_level: C
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
   effective_date: '2026-08-08'
   verified_by: Orchestrator
-  writable: true
+  writable: false
   sha256: b97f86da4d7e33b12aeec3e578665a3d1ba971277b14be960c2e4590b87e5303
   size_bytes: 238880
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_16
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_14_HUMAN
   path: architecture/BAI_Development_OS_Architecture_Ver2.14.docx
   title: BAI Development OS Architecture Ver.2.14
@@ -3155,25 +3156,27 @@ documents:
   authority: human_canonical_companion
   importance_level: C
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL
+  status: SUPERSEDED_HISTORICAL_BASELINE
   effective_date: '2026-08-08'
   verified_by: Orchestrator
-  writable: true
+  writable: false
   sha256: 23d92bab29b4eb48c5a1b84a90a5565f9d233cd2992daaa9e11fa2878c5a756e
   size_bytes: 99576
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_16
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_14_SUMMARY
   path: architecture/BAI_Development_OS_Architecture_Ver2.14.summary.md
   title: BAI Development OS Architecture Ver.2.14 — AI Summary
   category: architecture
   authority: navigation-aid
-  importance_level: A
-  preferred_loading: read-first
-  status: CURRENT_CANONICAL
+  importance_level: C
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
   effective_date: '2026-08-08'
   verified_by: Orchestrator
-  writable: true
+  writable: false
   sha256: 3beede669dc5f06410e5d11bdee51afd95bbb0a7809c2cb576cd9bebab9614c5
   size_bytes: 1723
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_16
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_14_QA
   path: architecture/BAI_Development_OS_Architecture_Ver2.14.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.14 — Document Sync and Visual QA
@@ -3218,10 +3221,13 @@ documents:
   title: BAI Development OS Architecture Ver.2.15 — TASK-009 Security / Supply Chain / Integrity Completion
   category: architecture
   authority: machine_canonical_authority
-  importance_level: A
+  importance_level: C
   sha256: 0c6c6f06ee27d87a8cc1daa06e794bcff36c5fab67b03de9ec6a3f21b35160c2
   size_bytes: 244377
-  preferred_loading: read-first
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_16
 - document_id: 0F06673484C5586B
   path: architecture/BAI_Development_OS_Architecture_Ver2.15.docx
   title: BAI_Development_OS_Architecture_Ver2.15.docx
@@ -3231,15 +3237,21 @@ documents:
   sha256: 334d5b89f06c1a50d35f7a1807af32f16cbd7c3da98eec057ec618aea342cd32
   size_bytes: 101211
   preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_16
 - document_id: 30BE82D118F75F03
   path: architecture/BAI_Development_OS_Architecture_Ver2.15.summary.md
   title: BAI Development OS Architecture Ver.2.15 — AI Summary
   category: architecture
   authority: navigation-aid
-  importance_level: A
+  importance_level: C
   sha256: 8ad282ea7298af8ffb46bb46bea0db1266fca8d67aa81b23bcabd9e6566d1fce
   size_bytes: 1335
-  preferred_loading: read-first
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_16
 - document_id: 3B2E648E9D8322CA
   path: architecture/BAI_Development_OS_Architecture_Ver2.15.document-sync-and-visual-qa.md
   title: Architecture Ver.2.15 Document Sync & Visual QA
@@ -3249,6 +3261,8 @@ documents:
   sha256: 43009d37c2e730ac9838844214c0626cf677c9b000a284d9e38269425c0db93b
   size_bytes: 536
   preferred_loading: summary-or-on-demand
+  status: HISTORICAL_QA_PASS
+  writable: false
 - document_id: 3E9ECD69BCE46F49
   path: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md
   title: TASK-009 BAI Development OS Security, Supply Chain & Integrity Hardening Detailed Design Ver.1.0
@@ -3429,6 +3443,71 @@ documents:
   sha256: 8dcf8bab0895878e288bfb5df61896725c4108c41a1386afbecadf59b1b073ea
   size_bytes: 818
   preferred_loading: on-demand
+- document_id: 57112A3AFC5460EE
+  path: architecture/BAI_Development_OS_Architecture_Ver2.16.md
+  title: BAI Development OS Architecture Ver.2.16 — Post-TASK-009 Security Roadmap Refinement
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: true
+  sha256: 750c5fa69979876e8574e03f6877e27c207aa5cc4ea7539bf5718a1ceb14eaf5
+  size_bytes: 255154
+- document_id: C6E3EACA67340EA9
+  path: architecture/BAI_Development_OS_Architecture_Ver2.16.docx
+  title: BAI Development OS Architecture Ver.2.16
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: true
+  sha256: 1e771913087841432cc42432d2f9664c9f7954cd11e0f75cc6ed75a3c6ea5b33
+  size_bytes: 103632
+- document_id: D79298BAC988D0B9
+  path: architecture/BAI_Development_OS_Architecture_Ver2.16.summary.md
+  title: BAI Development OS Architecture Ver.2.16 — AI Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: true
+  sha256: 229dee7b56dd1234e123771ee672c7415d7763a7a293cae6ef76c92163090729
+  size_bytes: 1347
+- document_id: C4429450ABE49192
+  path: architecture/BAI_Development_OS_Post_TASK009_Roadmap_Refinement_Ver1.0.md
+  title: BAI Development OS — Post-TASK-009 Roadmap Refinement Ver.1.0
+  category: architecture-addendum
+  authority: roadmap-record
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: ACTIVE_ROADMAP_RECORD
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: true
+  sha256: 3bd35e13df001b5a7b20e204345673efb550bd38879781ab3fd1020557a1762d
+  size_bytes: 8567
+- document_id: 7A4950437541BD83
+  path: architecture/BAI_Development_OS_Architecture_Ver2.16.document-sync-and-visual-qa.md
+  title: Architecture Ver.2.16 Document Sync and Visual QA Evidence
+  category: verification-evidence
+  authority: verification-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: false
+  sha256: 2b869a3dcd37272df36f248d3cbd41a0854a99ab69143c87e0239b3750b60d83
+  size_bytes: 1062
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner

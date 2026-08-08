@@ -71,7 +71,7 @@ TASK-009〜015 are reserved roadmap items only and are not implicitly authorized
 
 ## Post-TASK-006 refinement
 
-TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement. TASK-008 is completed; TASK-009 is now the next route.
+TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement. Historical TASK-006 refinement note: TASK-009 was then the next route; TASK-009 is now COMPLETED and TASK-010 is next.
 
 
 ## Post-TASK-007 refinement
@@ -81,20 +81,25 @@ TASK-007 is not reopened. Monitoring productization is reserved in TASK-009〜01
 
 ## TASK-008 External Integration Completion
 
-As of 2026-08-08, TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only when external connector behavior is relevant. `IntegrationOS` is a vendor-neutral capability/authorization gateway; it does not own TASK-004 Lifecycle/Cost authority, TASK-005 Knowledge authority, or canonicalization. External responses remain noncanonical references. Run `npm run test:integration`. TASK-009 is next but remains `NOT_STARTED / NOT_AUTHORIZED`.
+As of 2026-08-08, TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only when external connector behavior is relevant. `IntegrationOS` is a vendor-neutral capability/authorization gateway; it does not own TASK-004 Lifecycle/Cost authority, TASK-005 Knowledge authority, or canonicalization. External responses remain noncanonical references. Run `npm run test:integration`. Historical note: TASK-009 was next at that refinement point; TASK-009 is now COMPLETED and TASK-010 is next.
 
 ## Post-TASK-008 refinement
 
-Load Architecture Ver.2.15 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
+Load Architecture Ver.2.16 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.16 Part XV is the sole current consolidated roadmap scope; TASK-009 is completed and TASK-010〜015 use Part XV. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## Consolidated Roadmap Loading Rule
 
-For TASK-009〜015, Part XV of Architecture Ver.2.14 is the sole complete current scope. Older roadmap parts/addenda are provenance only. TASK-013 remains the general cross-domain Domain Adapter / Plugin SDK; later Knowledge/Automation/Monitoring/Connector plugin scopes are cumulative subdomains, not replacements.
+For future TASK-010〜015, Part XV of Architecture Ver.2.16 is the sole complete current scope; TASK-009 is governed by its completed Ver.1.0 design and Part XVI. Older roadmap parts/addenda are provenance only. TASK-013 remains the general cross-domain Domain Adapter / Plugin SDK; later Knowledge/Automation/Monitoring/Connector plugin scopes are cumulative subdomains, not replacements.
 
 ## TASK-009 Current Context
 
 TASK-009 is completed. For security/integrity work load `tasks/TASK-009/TASK-009.summary.md`, then the Ver.1.0 machine canonical if detailed rules are required. SecurityOS primitives protect other subsystems but do not take their authority. TASK-010 is the next route and remains unstarted/unauthorized.
+
+
+## Post-TASK-009 roadmap context
+
+Architecture Ver.2.16 is current. For TASK-010〜015 load Part XV first. TASK-009 residuals have been assigned to those tasks and the roadmap checker preserves `39 / 39` accumulated source sections. TASK-010 is next but remains unstarted/unauthorized.

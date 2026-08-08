@@ -65,7 +65,7 @@ TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 and TASK-008 are completed; TASK-009 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
+TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 and TASK-008 are completed; TASK-009 is COMPLETED; TASK-010 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
 
 ## TASK-007 Monitoring & Dashboard Completion
 
@@ -79,15 +79,20 @@ TASK-007 remains completed. Monitoring productization is reserved in TASK-009〜
 
 ## TASK-008 External Integration Completion
 
-As of 2026-08-08, TASK-008 is completed. `IntegrationOS` provides vendor-neutral Connector Manifest/Registry, capability policy, credential references, bound external authorization, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation controls, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring integration. Run `npm run test:integration`. TASK-009 is next and is not automatically authorized.
+As of 2026-08-08, TASK-008 is completed. `IntegrationOS` provides vendor-neutral Connector Manifest/Registry, capability policy, credential references, bound external authorization, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation controls, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring integration. Run `npm run test:integration`. Historical note: TASK-009 was next at TASK-008 completion; TASK-009 is now COMPLETED and TASK-010 is next.
 
 ### Post-TASK-008 roadmap refinement
-TASK-008 remains completed. Architecture Ver.2.14 assigns its deferred productization scope to TASK-009〜015; TASK-009 is next but remains not started/not authorized.
+TASK-008 remains completed. Architecture Ver.2.14 assigns its deferred productization scope to TASK-009〜015; Historical note: TASK-009 was next at that refinement point; TASK-009 is now COMPLETED and TASK-010 is next.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.15 preserves Part XV as the lossless consolidated roadmap lineage; TASK-009 is realized by Part XVI and its Detailed Design Ver.1.0. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.15 preserves Part XV as the lossless consolidated roadmap lineage; TASK-009 is realized by Part XVI and its Detailed Design Ver.1.0. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 Security / Integrity
 
 As of 2026-08-08, TASK-009 is completed. `SecurityOS` provides shared path/atomic-write, secret/vault lease, signing, crash-consistent journal, signed/tamper-evident ledger, replay, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Run `npm run test:security` and `npm run check:security`. TASK-010 is next and remains not started/not authorized.
+
+
+## Post-TASK-009 Roadmap Refinement
+
+Architecture Ver.2.16 incorporates TASK-009-derived future work into the existing TASK-010〜015 scopes: secure release trust-chain/migration, multi-project SecurityOS conformance, security fsck/recovery, production security-provider plugins, adaptive security-policy calibration and optional distributed security coordination. No TASK-016 is created. TASK-010 remains next and unauthorized.

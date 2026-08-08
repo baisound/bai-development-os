@@ -147,3 +147,8 @@ Problem: future TASK scope accumulated across multiple appendices, making partia
 ## TASK-009 completion — 2026-08-08
 
 Shared SecurityOS primitives now replace duplicated security/path/integrity mechanisms where practical. Crash-consistent Knowledge mutation, signed Owner Approval/Outbox option, durable webhook replay, egress/DLP, supply-chain/SBOM and shared security conformance are implemented. Remaining real-provider KMS/HSM/Vault/container sandbox productization belongs TASK-013; automatic repair TASK-012; distributed coordination TASK-015.
+
+
+## Post-TASK-009 Security Productization Allocation
+
+TASK-009 implementation exposed production-layer follow-ons that are now reserved in existing roadmap owners: release trust chain/security migration (TASK-010), multi-project security isolation/conformance (TASK-011), SecurityOS fsck/recovery (TASK-012), Vault/KMS/HSM/sandbox/provider plugins (TASK-013), evidence-based security calibration (TASK-014), and optional distributed security coordination (TASK-015). No TASK-016 is created.

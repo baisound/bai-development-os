@@ -68,32 +68,37 @@ npm run test:integration
 
 ## Post-TASK-005 Roadmap Refinement
 
-TASK-005-derived improvements have been allocated into existing TASK-009〜014: crash-consistent Knowledge persistence, Knowledge distribution compatibility, cross-project Knowledge isolation/conformance, repository fsck/recovery/compaction, Domain Knowledge extension points, and evidence-based resolver/confidence/freshness calibration. No TASK-015 is created. These additions remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
+Historical TASK-005 refinement note: improvements were allocated into TASK-009〜014 for crash-consistent Knowledge persistence, distribution compatibility, cross-project isolation/conformance, repository repair, Domain Knowledge extension points and calibration. TASK-009 is now COMPLETED; remaining future ownership is consolidated under TASK-010〜014. TASK-015 had not yet been created at that point.
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006-derived improvements strengthen TASK-009〜014 with orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and evidence-based automation calibration. TASK-015 is newly reserved for optional Distributed Orchestration & Event Fabric: durable event delivery, replay/DLQ, worker leases, ordering/idempotency and cross-project Saga compensation. All remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-009 is now the next route.
+TASK-006-derived improvements strengthen TASK-009〜014 with orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and evidence-based automation calibration. TASK-015 is newly reserved for optional Distributed Orchestration & Event Fabric: durable event delivery, replay/DLQ, worker leases, ordering/idempotency and cross-project Saga compensation. Historical TASK-006 refinement note: those items were future at that point; TASK-009 is now COMPLETED and TASK-010 is next.
 
 
 ## Post-TASK-007 Roadmap Refinement
 
-TASK-007-derived productization work is allocated to TASK-009〜015: monitoring integrity/privacy, schema/release compatibility, multi-project isolation/noisy-neighbor conformance, retention/repair/rebuild, collector/renderer/exporter plugins, adaptive thresholds/anomaly/SLO calibration, and distributed telemetry/trace/HA. External alert delivery baseline is implemented by TASK-008; later security/release/conformance/repair/plugin/calibration/distributed hardening remains TASK-009〜015. All future additions remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
+Historical TASK-007 refinement note: Monitoring productization was allocated to TASK-009〜015. TASK-009 security work is now COMPLETED; remaining release/conformance/repair/plugin/calibration/distributed work is consolidated under TASK-010〜015 and remains unstarted/unauthorized.
 
 
 ## TASK-008 External Integration Completion
 
 TASK-008 is `COMPLETED`. `IntegrationOS` provides a vendor-neutral external execution boundary with checksummed Connector Manifest/Registry, least-privilege capability resolution, credential references, bound Owner authorization, data/payload constraints, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation context, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring emission. External connector success never makes returned data canonical by itself.
 
-Final verification: dedicated Integration `77/77 PASS`, full OS `561/561 PASS`, consumer `10/10 PASS`, Product Boundary PASS, Integration schemas `6/6 PASS`, Architecture Ver.2.12 DOCX `88/88 PASS`, TASK-008 design DOCX `6/6 PASS`. Next route: TASK-009 (`NOT_STARTED / NOT_AUTHORIZED`).
+Final verification: dedicated Integration `77/77 PASS`, full OS `561/561 PASS`, consumer `10/10 PASS`, Product Boundary PASS, Integration schemas `6/6 PASS`, Architecture Ver.2.12 DOCX `88/88 PASS`, TASK-008 design DOCX `6/6 PASS`. Historical TASK-008 completion route: TASK-009 was next at that point; TASK-009 is now COMPLETED and TASK-010 is next.
 
 ## Post-TASK-008 Roadmap Refinement
 
-TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.15 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
+TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.16 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.16 Part XV is the sole current consolidated roadmap scope; TASK-009 is completed and TASK-010〜015 use Part XV. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 Completion
 
-TASK-009 Security / Supply Chain / Integrity Hardening is completed under `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md`. SecurityOS is a reusable primitive layer and does not replace subsystem authority. Final technical baseline: Security 64/64, full OS 625/625, Consumer 10/10, Product Boundary PASS, Roadmap 33/33, Security Conformance 9 schemas PASS. TASK-010 is next.
+TASK-009 Security / Supply Chain / Integrity Hardening is completed under `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md`. SecurityOS is a reusable primitive layer and does not replace subsystem authority. Final technical baseline: Security 64/64, full OS 625/625, Consumer 10/10, Product Boundary PASS, Roadmap 39/39, Security Conformance 9 schemas PASS. TASK-010 is next.
+
+
+## Post-TASK-009 Roadmap Refinement
+
+TASK-009 remains completed. Architecture Ver.2.16 folds its accepted residuals into TASK-010〜015 without creating TASK-016. `npm run check:roadmap` now verifies 39 accumulated roadmap source sections. TASK-010 is next and remains not started/not authorized.
