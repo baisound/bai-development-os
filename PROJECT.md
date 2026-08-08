@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.8.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.9.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -43,8 +43,9 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-012`: Self-Maintenance / Drift Detection / Safe Auto-Repair
 - `TASK-013`: Domain Adapter / Plugin SDK
 - `TASK-014`: Adaptive Governance Calibration & Policy Learning
+- `TASK-015`: Distributed Orchestration & Event Fabric
 
-TASK-009〜014 are roadmap reservations only: `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-009〜015 are roadmap reservations only: `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Governance
 
@@ -64,3 +65,7 @@ npm run test:automation
 ## Post-TASK-005 Roadmap Refinement
 
 TASK-005-derived improvements have been allocated into existing TASK-009〜014: crash-consistent Knowledge persistence, Knowledge distribution compatibility, cross-project Knowledge isolation/conformance, repository fsck/recovery/compaction, Domain Knowledge extension points, and evidence-based resolver/confidence/freshness calibration. No TASK-015 is created. These additions remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
+
+## Post-TASK-006 Roadmap Refinement
+
+TASK-006-derived improvements strengthen TASK-009〜014 with orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and evidence-based automation calibration. TASK-015 is newly reserved for optional Distributed Orchestration & Event Fabric: durable event delivery, replay/DLQ, worker leases, ordering/idempotency and cross-project Saga compensation. All remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-007 remains next.

@@ -68,3 +68,18 @@ These entries expand the product after TASK-008 and do not reopen TASK-004. All 
 | OP-027 | Resolver / confidence / freshness evidence calibration | Roadmap reserved | TASK-014 |
 
 No TASK-015 is created; these improvements extend existing reserved responsibility boundaries.
+
+
+## Post-TASK-006 Orchestration Expansion Addendum — 2026-08-08
+
+| ID | Improvement | Decision / Status | Planned integration |
+|---|---|---|---|
+| OP-028 | Crash-consistent derived sync / Registry / Outbox mutation and approval/event integrity | Roadmap reserved | TASK-009 |
+| OP-029 | Versioned automation/startup/approval/outbox compatibility and migration | Roadmap reserved | TASK-010 |
+| OP-030 | Concurrent multi-consumer orchestration and isolation conformance | Roadmap reserved | TASK-011 |
+| OP-031 | Registry/Outbox/Runtime Evidence fsck, replay, dead-letter and safe repair | Roadmap reserved | TASK-012 |
+| OP-032 | Runtime Probe / Resolver / Compiler / Classifier / Executor / Sync extension SDK | Roadmap reserved | TASK-013 |
+| OP-033 | Owner-gate / automation / retry / prompt / probe effectiveness calibration | Roadmap reserved | TASK-014 |
+| OP-034 | Distributed Orchestration & Event Fabric | New roadmap reservation | TASK-015 |
+
+TASK-015 is intentionally optional; simple single-machine projects continue using TASK-006 local orchestration. All items remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.

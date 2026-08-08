@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.8`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.9`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
@@ -46,11 +46,11 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 - Automation schemas: `9 / 9 PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
-- Canonical DOCX visual QA: `Architecture Ver.2.8 79/79 pages PASS; TASK-006 Ver.1.0 27/27 pages PASS`
+- Canonical DOCX visual QA: `Architecture Ver.2.9 83/83 pages PASS; TASK-006 Ver.1.0 27/27 pages PASS`
 
 ## Accepted Residual
 
-Multi-file derived documentation synchronization is prevalidated/fail-safe but not a single crash-atomic filesystem transaction. Journal/recovery/repair hardening remains allocated to TASK-009/TASK-012. Local derived outbox acknowledgement is not a distributed transaction coordinator.
+Multi-file derived documentation synchronization is prevalidated/fail-safe but not a single crash-atomic filesystem transaction. Journal/recovery/repair hardening remains allocated to TASK-009/TASK-012. Local derived outbox acknowledgement is not a distributed transaction coordinator; optional distributed orchestration is now reserved as TASK-015.
 
 ## Roadmap
 
@@ -62,9 +62,14 @@ Multi-file derived documentation synchronization is prevalidated/fail-safe but n
 6. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
 7. TASK-013 — Domain Adapter / Plugin SDK
 8. TASK-014 — Adaptive Governance Calibration & Policy Learning
+9. TASK-015 — Distributed Orchestration & Event Fabric
 
-TASK-009–014 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-007 is the next route but is not automatically active merely because TASK-006 completed.
+TASK-009–015 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-007 is the next route but is not automatically active merely because TASK-006 completed.
 
 ## Registry Integrity
 
-- Document Registry: `214 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `219 documents / Missing 0 / Hash-Size mismatch 0`
+
+## Post-TASK-006 Roadmap Refinement
+
+TASK-006-derived future work is allocated to TASK-009〜014 for integrity, release compatibility, multi-consumer conformance, self-repair, plugin extension and adaptive calibration. TASK-015 is newly reserved for optional distributed event/orchestration semantics because the current Completion Outbox acknowledgement is local and not a distributed coordinator. TASK-009〜015 remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-007 remains next.

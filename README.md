@@ -61,3 +61,7 @@ As of 2026-08-08, TASK-005 is completed. Knowledge is no longer an informal note
 ## Post-TASK-005 Roadmap Refinement
 
 TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added. TASK-006 is completed; TASK-007 is now next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.
+
+## Post-TASK-006 Roadmap Refinement
+
+TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 remains next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.

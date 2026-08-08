@@ -15,7 +15,7 @@ Canonical root: `/home/baisound/bai-development-os`.
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.8.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.9.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ companion set)
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ companion set)
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md` (+ companion set)
@@ -49,8 +49,9 @@ Registry is not content authority; Automation cannot self-authorize or own Lifec
 - TASK-012 Self-Maintenance / Drift Detection / Safe Auto-Repair
 - TASK-013 Domain Adapter / Plugin SDK
 - TASK-014 Adaptive Governance Calibration & Policy Learning
+- TASK-015 Distributed Orchestration & Event Fabric
 
-TASK-009〜014 are reserved roadmap items only and are not implicitly authorized.
+TASK-009〜015 are reserved roadmap items only and are not implicitly authorized.
 
 ## Non-negotiable Rules
 
@@ -62,3 +63,7 @@ TASK-009〜014 are reserved roadmap items only and are not implicitly authorized
 - Registry/index/derived state never becomes canonical content authority.
 - Owner Proposal is not authorization.
 - Completed Tasks are not reopened for ordinary enhancement.
+
+## Post-TASK-006 refinement
+
+TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement.
