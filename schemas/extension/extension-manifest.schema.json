@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/extension/extension-manifest.schema.json",
+  "title": "Extension Manifest",
+  "type": "object",
+  "required": ["extension_manifest_version", "extension_id", "extension_version", "domains", "trust_level", "execution_mode", "execution_contract", "capabilities", "compatibility", "content_checksum"],
+  "properties": {
+    "extension_manifest_version": {"const": "1.0.0"},
+    "extension_id": {"type": "string", "minLength": 1},
+    "extension_version": {"type": "string", "minLength": 5},
+    "domains": {"type": "array", "items": {"type": "string"}},
+    "trust_level": {"enum": ["OFFICIAL", "COMMUNITY", "PROJECT_LOCAL"]},
+    "execution_mode": {"enum": ["DECLARATIVE", "SANDBOXED", "IN_PROCESS_TRUSTED"]},
+    "execution_contract": {
+      "type": "object",
+      "required": ["implementation_checksum"],
+      "properties": {"implementation_checksum": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"}},
+      "additionalProperties": false
+    },
+    "capabilities": {"type": "array"},
+    "compatibility": {"type": "object"},
+    "content_checksum": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": true
+}

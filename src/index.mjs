@@ -26,3 +26,5 @@ export * as ReleaseOS from './release/index.mjs';
 export * as ConformanceOS from './conformance/index.mjs';
 
 export * as MaintenanceOS from './maintenance/index.mjs';
+
+export * as ExtensionOS from './extension/index.mjs';

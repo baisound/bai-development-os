@@ -198,3 +198,8 @@ TASK-012 is `COMPLETED`. The common MaintenanceOS baseline realizes the shared f
 ## Post-TASK-012 Maintenance Productization Allocation
 
 TASK-012 follow-ons are reserved in existing owners: maintenance/reconciliation provider SDKs (TASK-013), evidence-based maintenance calibration (TASK-014), and optional distributed repair/fencing/recovery (TASK-015). Opaque external effects remain fail-closed until a specialized reconciler proves state.
+
+
+## TASK-013 ExtensionOS Completion Allocation
+
+TASK-013 is `COMPLETED`. The common ExtensionOS baseline realizes the general Domain Adapter / Plugin SDK and the plugin/provider extension responsibilities accumulated from Knowledge, Automation, Monitoring, Integration, Security, Release, Conformance and Maintenance. Executable provider provenance, sandbox/trust boundaries, dependency safety, durable Registry and Conformance are implemented. Domain/vendor-specific provider packages can now be added without modifying Core. Adaptive provider/policy calibration belongs TASK-014; optional distributed/remote extension coordination belongs TASK-015.

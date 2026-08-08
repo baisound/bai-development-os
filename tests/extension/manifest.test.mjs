@@ -1,0 +1,23 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import { createExtensionManifest,verifyExtensionManifest,evaluateExtensionCompatibility,ExtensionError } from '../../src/extension/index.mjs';
+import { baseManifest } from './helpers.mjs';
+test('manifest creates immutable checksummed contract',()=>{const m=baseManifest();assert.equal(m.extension_manifest_version,'1.0.0');assert.match(m.content_checksum,/^[a-f0-9]{64}$/);assert(Object.isFrozen(m));});
+test('manifest rejects invalid id',()=>assert.throws(()=>baseManifest({extension_id:'../bad'}),e=>e.code==='EXTENSION_ID_INVALID'));
+test('manifest rejects invalid semver',()=>assert.throws(()=>baseManifest({extension_version:'v1'})));
+test('manifest rejects invalid trust',()=>assert.throws(()=>baseManifest({trust_level:'UNKNOWN'}),e=>e.code==='EXTENSION_TRUST_INVALID'));
+test('manifest rejects invalid execution mode',()=>assert.throws(()=>baseManifest({execution_mode:'SHELL'}),e=>e.code==='EXTENSION_EXECUTION_MODE_INVALID'));
+test('manifest requires capability operations',()=>assert.throws(()=>baseManifest({capabilities:[{capability_id:'x',operations:[]}]}),e=>e.code==='EXTENSION_CAPABILITY_INVALID'));
+test('manifest rejects duplicate capability id',()=>assert.throws(()=>baseManifest({capabilities:[{capability_id:'x',operations:['a']},{capability_id:'x',operations:['b']}]}),e=>e.code==='EXTENSION_CAPABILITY_DUPLICATE'));
+test('manifest rejects unknown side effect',()=>assert.throws(()=>baseManifest({capabilities:[{capability_id:'x',operations:['a'],side_effect:'WORLD'}]}),e=>e.code==='EXTENSION_SIDE_EFFECT_INVALID'));
+test('external side effects require authorization by default',()=>{const m=baseManifest({capabilities:[{capability_id:'x',operations:['a'],side_effect:'EXTERNAL'}]});assert.equal(m.capabilities[0].requires_authorization,true);});
+test('manifest sorts permissions and domains',()=>{const m=baseManifest({domains:['WEB','AUDIO','WEB'],permissions:['z','a','z']});assert.deepEqual(m.domains,['AUDIO','WEB']);assert.deepEqual(m.permissions,['a','z']);});
+test('manifest tamper fails verification',()=>{const m=structuredClone(baseManifest());m.display_name='tampered';assert.throws(()=>verifyExtensionManifest(m),e=>e.code==='EXTENSION_MANIFEST_TAMPERED');});
+test('compatibility passes in range',()=>{const m=baseManifest({compatibility:{os_min:'0.7.0',os_max:'0.9.0',platforms:[process.platform],architectures:[process.arch]}});assert.equal(evaluateExtensionCompatibility(m,{os_version:'0.8.0',platform:process.platform,architecture:process.arch}).status,'COMPATIBLE');});
+test('compatibility blocks old OS',()=>{const m=baseManifest({compatibility:{os_min:'1.0.0'}});assert.deepEqual(evaluateExtensionCompatibility(m,{os_version:'0.8.0'}).reasons,['OS_VERSION']);});
+test('compatibility blocks platform mismatch',()=>{const m=baseManifest({compatibility:{platforms:['impossible-os']}});assert(evaluateExtensionCompatibility(m,{os_version:'1.0.0',platform:process.platform}).reasons.includes('PLATFORM'));});
+test('compatibility blocks architecture mismatch',()=>{const m=baseManifest({compatibility:{architectures:['quantum128']}});assert(evaluateExtensionCompatibility(m,{os_version:'1.0.0',architecture:process.arch}).reasons.includes('ARCHITECTURE'));});
+test('compatibility requires declared dependencies',()=>{const m=baseManifest({compatibility:{required_extensions:['dep.a']}});assert.deepEqual(evaluateExtensionCompatibility(m,{os_version:'1.0.0',installed_extension_ids:[]}).reasons,['DEPENDENCY:dep.a']);});
+
+test('capability permissions must be declared at manifest level',()=>assert.throws(()=>baseManifest({capabilities:[{capability_id:'x',operations:['go'],permissions:['SECRET_READ']}] }),e=>e.code==='EXTENSION_CAPABILITY_PERMISSION_UNDECLARED'));
+test('dependency version ranges are normalized',()=>{const m=baseManifest({compatibility:{dependencies:[{extension_id:'dep',min_version:'1.0.0',max_version:'2.0.0',require_enabled:true}]}});assert.equal(m.compatibility.dependencies[0].extension_id,'dep');assert.equal(m.compatibility.dependencies[0].require_enabled,true);});
+test('duplicate dependency rejected',()=>assert.throws(()=>baseManifest({compatibility:{dependencies:['dep','dep']}}),e=>e.code==='EXTENSION_DEPENDENCY_DUPLICATE'));

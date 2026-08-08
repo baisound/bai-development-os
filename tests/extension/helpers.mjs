@@ -1,0 +1,4 @@
+import { createExtensionManifest } from '../../src/extension/index.mjs';
+export const TEST_IMPLEMENTATION_CHECKSUM='1111111111111111111111111111111111111111111111111111111111111111';
+export const baseManifest=(overrides={})=>{const mode=overrides.execution_mode??'DECLARATIVE';return createExtensionManifest({extension_id:'ext.test',extension_version:'1.0.0',domains:['WEB'],trust_level:'OFFICIAL',execution_mode:'DECLARATIVE',capabilities:[{capability_id:'domain.artifact_validator',operations:['validate']}],...(mode!=='DECLARATIVE'?{execution_contract:{implementation_checksum:TEST_IMPLEMENTATION_CHECKSUM}}:{}),...overrides});};
+export const providerFor=(cap='domain.artifact_validator',op='validate',fn=async({payload})=>({ok:true,payload}),extra={})=>({implementation_checksum:TEST_IMPLEMENTATION_CHECKSUM,capabilities:{[cap]:{[op]:fn}},...extra});

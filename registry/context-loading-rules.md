@@ -1,86 +1,33 @@
-# Context Loading Rules
+# BAI Development OS — Context Loading Rules
 
-## Goal
+## 1. Default order
 
-Reduce context and token consumption without weakening correctness, authority, evidence, or critical testing.
+1. `registry/current-state.md`
+2. `registry/ai-context-pack.md`
+3. `PROJECT.md`
+4. Active/completed Task summary relevant to the assignment
+5. Exact canonical sections/modules needed for the decision
 
-## Required Loading Order
+Do not load the whole Architecture or every prior Task by default.
 
-1. Read `registry/current-state.md`.
-2. Read `registry/ai-context-pack.md`.
-3. Read `PROJECT.md`.
-4. Read the active Task summary.
-5. Read the selected Adaptive Development Profile result.
-6. Read the active Role specification only when that Role is required by the selected profile.
-7. Read only the source sections and implementation files affected by the assignment.
-8. Load a full canonical document only when a binding decision or unresolved conflict requires it.
-9. Read DOCX only when no valid Markdown authority is available for the required detail.
+## 2. Current architecture and roadmap
 
-## Root Rule
+Architecture Ver.2.23 is current. Part XV is the sole consolidated roadmap authority and preserves `51 / 51` accepted source sections. For TASK-014〜015 scope, load Part XV first. Historical roadmap/addendum sections are provenance only.
 
-BAI Development OS canonical root:
+## 3. Completed subsystem loading
 
-```text
-/home/baisound/bai-development-os
-```
+For TASK-004〜013, load `tasks/TASK-XXX/<summary>` first where available, then the corresponding specification only if exact runtime contracts are needed. Never use a historical completion note to override a later current canonical.
 
-Consumer project roots are supplied by project adapters such as `.bai-os/project.json`; they are not hardcoded into OS runtime source.
+For Extension behavior, start with `tasks/TASK-013/TASK-013.summary.md`; then load `specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.md` and only the relevant `src/extension/` modules/tests.
 
-## Importance Levels
+## 4. Evidence and authority
 
-- **A — Always:** current state, active Task scope, assignment, authority boundary, selected development profile.
-- **B — Conditional:** relevant final plan/amendment, common specification, required Role specification, impacted tests.
-- **C — On demand:** Architecture, detailed specifications, reviews, older cycle evidence.
-- **D — Audit only:** archived artifacts, obsolete versions, completed historical intermediate artifacts.
+A successful test, Plugin trust label, Connector result, Conformance report, Preview, Repair Plan, Registry entry or Dashboard value is evidence/derived state, not authorization or Canonical truth. Preserve Lifecycle/Owner/Knowledge/Security/Release authority boundaries.
 
-## Adaptive Profile Rule
+## 5. Context Economy
 
-The selected DEV profile determines context depth as well as workflow depth.
+Use DEV-0〜DEV-4 to select review/test/context depth. Do not raise Context Guard limits to accommodate duplicated history. Prefer current summaries and exact source sections. Historical evolution is loaded only when investigating provenance, regressions or supersession.
 
-- DEV-0/DEV-1: impacted files and minimal authority only.
-- DEV-2: focused design, relevant implementation, targeted regression.
-- DEV-3: detailed design, Critic inputs, boundary/negative and regression evidence.
-- DEV-4: architecture/failure-mode sources, core contracts, consumer fixtures, fault/recovery evidence.
+## 6. Extension execution context
 
-A high-assurance profile may load more evidence because correctness requires it. Context Economy MUST NOT be used to suppress evidence required for critical verification.
-
-## Summary Rule
-
-A `*.summary.md` file is a navigation/loading aid. It does not replace the source for binding decisions, exact wording, schemas, matrices, or acceptance criteria.
-
-## Hash Rule
-
-When a summary or registry entry records a source SHA-256 and the hash still matches, do not re-read the full source merely to confirm it is unchanged. A hash match proves unchanged bytes, not correctness of a prior interpretation.
-
-## Prohibited Loading Behavior
-
-- Loading every document "just in case."
-- Re-reading unchanged DOCX for every Role.
-- Passing an entire previous conversation to each Role.
-- Loading all historical review/retest cycles when only the current unresolved defect matters.
-- Restarting all Role sessions after a localized fix when the selected profile only requires impacted revalidation.
-- Using cost reduction to weaken required foundation-critical tests.
-## Roadmap Retrieval Rule
-
-For completed `TASK-009`, load TASK-009 Ver.1.0 plus Architecture Part XVI when needed. For completed `TASK-010`, load TASK-010 Ver.1.0 plus Architecture Ver.2.17 Part XVIII when needed. For completed `TASK-012`, load `tasks/TASK-012/TASK-012.summary.md` first and Self-Maintenance Ver.1.0 when exact maintenance contracts are required. For future `TASK-013` through `TASK-015`, load Architecture Ver.2.22 Part XV (or its summary for navigation) as the current complete consolidated scope. Parts VI/VIII/X/XII/XIV and post-TASK addenda are Historical Evolution and MUST NOT be used alone as current task scope. Load them only for provenance/evolution analysis.
-
-If a retrieved historical fragment says a future Task is undefined or shows only one refinement slice, resolve it against Part XV before making a routing or scope decision.
-
-## TASK-009 security context rule
-
-Do not load the entire SecurityOS implementation by default. Start from `tasks/TASK-009/TASK-009.summary.md`; load the Detailed Design Ver.1.0 and only the relevant security module/schema/test when a task actually touches path safety, secrets, signing, journaling, replay, egress/DLP, supply-chain or sandbox behavior.
-
-
-Historical post-TASK-010 note: Architecture Ver.2.18/2.19 Part XV carried TASK-011〜015. Current routing after TASK-011 completion uses Ver.2.19 Part XV for TASK-012〜015. `BAI_Development_OS_Post_TASK010_Roadmap_Refinement_Ver1.0.md` is provenance only; do not load it as a substitute for Part XV.
-
-
-For completed `TASK-011`, load `tasks/TASK-011/TASK-011.summary.md` first and TASK-011 Ver.1.0 when exact conformance contracts are required. For future `TASK-013` through `TASK-015`, Architecture Ver.2.22 Part XV remains the single current consolidated scope. Do not treat SIMULATED/DECLARED conformance evidence as REAL execution evidence.
-
-## Post-TASK-011 roadmap loading
-
-For TASK-013〜015 current scope, load Architecture Ver.2.22 Part XV first. For completed TASK-012, load its summary/design first. Load `BAI_Development_OS_Post_TASK011_Roadmap_Refinement_Ver1.0.md` only for provenance of TASK-011-derived additions. Historical addenda must not override Part XV.
-
-
-## TASK-012 maintenance loading
-
-For Maintenance behavior, load `tasks/TASK-012/TASK-012.summary.md` then `specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md`. Architecture Ver.2.22 Part XXII gives the completion integration. Never treat a Maintenance repair plan as Owner authorization or trust evidence. For next TASK-013 work, Architecture Ver.2.22 Part XV is the current consolidated scope.
+Do not load or execute provider implementation merely to discover a Manifest. Executable Extension code requires implementation-checksum binding. `IN_PROCESS_TRUSTED` requires independent trust evidence; `SANDBOXED` must execute through a Sandbox Runner. Sandbox-required capability cannot be converted to in-process execution for convenience. External side effects remain governed by IntegrationOS/Owner authorization.

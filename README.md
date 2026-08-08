@@ -52,7 +52,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-012 are completed; TASK-013 Domain Adapter / Plugin SDK is now the next development route, while TASK-013〜015 remain future and unauthorized.
+The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-013 are completed. TASK-014 is the next development route; TASK-014〜015 remain future and unauthorized.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -65,7 +65,7 @@ TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 through TASK-010 are completed; TASK-011 and TASK-012 are completed; TASK-013 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
+TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 through TASK-013 are completed; TASK-014 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
 
 ## TASK-007 Monitoring & Dashboard Completion
 
@@ -79,44 +79,49 @@ TASK-007 remains completed. Monitoring productization is reserved in TASK-009〜
 
 ## TASK-008 External Integration Completion
 
-As of 2026-08-08, TASK-008 is completed. `IntegrationOS` provides vendor-neutral Connector Manifest/Registry, capability policy, credential references, bound external authorization, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation controls, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring integration. Run `npm run test:integration`. Historical note: TASK-009 was next at TASK-008 completion; TASK-009 and TASK-010 are now COMPLETED and TASK-011 and TASK-012 are completed; TASK-013 is next.
+As of 2026-08-08, TASK-008 is completed. `IntegrationOS` provides vendor-neutral Connector Manifest/Registry, capability policy, credential references, bound external authorization, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation controls, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring integration. Run `npm run test:integration`. Historical note: TASK-009 was next at TASK-008 completion; TASK-009 through TASK-013 are now COMPLETED; TASK-014 is next.
 
 ### Post-TASK-008 roadmap refinement
-TASK-008 remains completed. Architecture Ver.2.14 assigns its deferred productization scope to TASK-009〜015; Historical note: TASK-009 was next at that refinement point; TASK-009 and TASK-010 are now COMPLETED and TASK-011 and TASK-012 are completed; TASK-013 is next.
+TASK-008 remains completed. Architecture Ver.2.14 assigns its deferred productization scope to TASK-009〜015; Historical note: TASK-009 was next at that refinement point; TASK-009 through TASK-013 are now COMPLETED; TASK-014 is next.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.22 Part XV is the single lossless consolidated roadmap authority. Completed TASK-009〜012 behavior is governed by each subsystem canonical/completion Part; historical roadmap sections remain provenance only. The lossless checker preserves all 51 accumulated source sections, and TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.23 Part XV is the single lossless consolidated roadmap authority. Completed TASK-009〜012 behavior is governed by each subsystem canonical/completion Part; historical roadmap sections remain provenance only. The lossless checker preserves all 51 accumulated source sections, and TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 Security / Integrity
 
-As of 2026-08-08, TASK-009 is completed. `SecurityOS` provides shared path/atomic-write, secret/vault lease, signing, crash-consistent journal, signed/tamper-evident ledger, replay, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Run `npm run test:security` and `npm run check:security`. TASK-010 has since completed; TASK-011 and TASK-012 are completed; TASK-013 is next.
+As of 2026-08-08, TASK-009 is completed. `SecurityOS` provides shared path/atomic-write, secret/vault lease, signing, crash-consistent journal, signed/tamper-evident ledger, replay, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Run `npm run test:security` and `npm run check:security`. TASK-010 through TASK-013 are completed; TASK-014 is next.
 
 
 ## Post-TASK-009 Roadmap Refinement
 
-Historical TASK-009 refinement is preserved. Current authority is Architecture Ver.2.22. TASK-010〜012 are completed; TASK-013 is next and unauthorized. No TASK-016 is created.
+Historical TASK-009 refinement is preserved. Current authority is Architecture Ver.2.23. TASK-010〜013 are completed; TASK-014 is next and unauthorized. No TASK-016 is created.
 
 
 ## TASK-010 Release / Distribution Completion
 
-`ReleaseOS` is now the canonical release/distribution/consumer-upgrade foundation. It provides strict SemVer, signed manifests/bundles, trust-anchor lifecycle, compatibility and migration preview, offline acquisition, transactional install/update, Owner-gated downgrade/rollback, portable subsystem bundles, canary gates, diagnostics and installation attestation. Validation: TASK-010 91/91, full OS 716/716, Consumer 10/10, Release schemas 8/8. Architecture Ver.2.18 was the post-TASK-010 roadmap baseline; TASK-010 Ver.1.0 remains its subsystem canonical. Current architecture authority is Ver.2.22; TASK-011 and TASK-012 are completed; TASK-013 is next.
+`ReleaseOS` is now the canonical release/distribution/consumer-upgrade foundation. It provides strict SemVer, signed manifests/bundles, trust-anchor lifecycle, compatibility and migration preview, offline acquisition, transactional install/update, Owner-gated downgrade/rollback, portable subsystem bundles, canary gates, diagnostics and installation attestation. Validation: TASK-010 91/91, full OS 716/716, Consumer 10/10, Release schemas 8/8. Architecture Ver.2.18 was the post-TASK-010 roadmap baseline; TASK-010 Ver.1.0 remains its subsystem canonical. Current architecture authority is Ver.2.23; TASK-011〜013 are completed; TASK-014 is next.
 
 
 ## Post-TASK-010 Roadmap Refinement
 
-Historical post-TASK-010 refinement is preserved in Architecture lineage. Architecture Ver.2.22 Part XV remains the current lossless roadmap authority with `51 / 51` source sections. TASK-011 and TASK-012 are completed; TASK-013 is next and unauthorized.
+Historical post-TASK-010 refinement is preserved in Architecture lineage. Architecture Ver.2.23 Part XV remains the current lossless roadmap authority with `51 / 51` source sections. TASK-011〜013 are completed; TASK-014 is next and unauthorized.
 
 
 ## TASK-011 Multi-Project Conformance Completion
 
-TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Architecture Ver.2.22 is current canonical; TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Architecture Ver.2.23 is current canonical; TASK-012 and TASK-013 are `COMPLETED`; TASK-014 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Post-TASK-011 Roadmap Refinement
 
-TASK-011 remains `COMPLETED`. Architecture Ver.2.22 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
+TASK-011 remains `COMPLETED`. Architecture Ver.2.23 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 and TASK-013 are `COMPLETED`; TASK-014 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-014〜015 remain future and unauthorized.
 
 
 ## TASK-012 Self-Maintenance Completion
 
-TASK-012 is `COMPLETED`. `MaintenanceOS` provides read-only fsck, immutable/checksummed findings, bounded repair planning, durable single-use repair execution, `owner_authorization_ref`, immediate auto-repair revalidation, checkpoint/rollback/quarantine, drift/retention and subsystem adapters. It never manufactures Canonical/Trust authority or promotes SIMULATED/DECLARED Conformance evidence. Run `npm run test:maintenance` and `npm run check:maintenance`. Architecture Ver.2.22 is current; TASK-013 is next and unauthorized.
+TASK-012 is `COMPLETED`. `MaintenanceOS` provides read-only fsck, immutable/checksummed findings, bounded repair planning, durable single-use repair execution, `owner_authorization_ref`, immediate auto-repair revalidation, checkpoint/rollback/quarantine, drift/retention and subsystem adapters. It never manufactures Canonical/Trust authority or promotes SIMULATED/DECLARED Conformance evidence. Run `npm run test:maintenance` and `npm run check:maintenance`. Architecture Ver.2.23 is current; TASK-013 is completed and TASK-014 is next and unauthorized.
+
+
+## TASK-013 ExtensionOS Completion
+
+TASK-013 is `COMPLETED`. `ExtensionOS` supplies the single cross-domain Adapter/Plugin SDK with checksummed Manifest/Provider provenance, compatibility/dependency lifecycle, Capability Broker, trust/sandbox/authorization/resource boundaries, Domain Policy/Test/Evidence Packs, artifact gates, subsystem hooks, durable Registry, Extension Conformance and eight reference domains. Verification: Extension 161/161, OS 1059/1059, Consumer 10/10. Current Architecture: Ver.2.23. TASK-014 is next but not started/authorized.

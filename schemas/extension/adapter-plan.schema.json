@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/extension/adapter-plan.schema.json",
+  "title": "Contract-Assisted Adapter Plan",
+  "type": "object",
+  "required": ["adapter_plan_version", "plan_status", "authority_effect", "source_type", "source_ref", "extension_id", "generated_artifacts", "prohibited_automatic_actions", "content_checksum"],
+  "properties": {
+    "adapter_plan_version": {"const": "1.0.0"},
+    "plan_status": {"const": "NON_EXECUTABLE_BUILD_TIME_PLAN"},
+    "authority_effect": {"const": "NONE"},
+    "source_type": {"enum": ["OPENAPI", "MCP"]},
+    "source_ref": {"type": "string", "minLength": 1},
+    "extension_id": {"type": "string", "minLength": 1},
+    "domains": {"type": "array", "items": {"type": "string"}},
+    "requested_capabilities": {"type": "array", "items": {"type": "string"}},
+    "generated_artifacts": {"type": "array", "items": {"type": "string"}},
+    "prohibited_automatic_actions": {"type": "array", "items": {"type": "string"}},
+    "content_checksum": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": true
+}

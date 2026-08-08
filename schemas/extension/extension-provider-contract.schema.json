@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/extension/extension-provider-contract.schema.json",
+  "title": "Extension Provider Contract",
+  "type": "object",
+  "required": ["implementation_checksum", "capabilities"],
+  "properties": {
+    "extension_id": {"type": ["string", "null"]},
+    "implementation_checksum": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "capabilities": {"type": "object"}
+  },
+  "additionalProperties": true
+}

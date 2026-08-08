@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T19:08:26+09:00'
+registry_generated_at: '2026-08-08T19:45:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: da025237a652a1b887022a747d8267ec453808035042fcccba627547a2635814
-  size_bytes: 4501
+  sha256: 65db17a545141fa8c27d1a06dbf8c65485589b5fc2677eea6bfbe5b6e7324936
+  size_bytes: 4719
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 5c253ba1098528ba0e53384d737568807245b34661adc1cafa0693b9e1819c2e
-  size_bytes: 7455
+  sha256: 7cf31c74bcc262d4be7a1b77dbb118f58fcf254f4dc4c0763da7bdeeeed9f432
+  size_bytes: 3161
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 241889db521cd4b18ee4614980b844289a84e8295869a8957353bc00dc422fa1
-  size_bytes: 10184
+  sha256: a1b9b568872c02e7f7e59ad8979b3d284f5f7d8e225e2fd3d3d76d827ce30cc3
+  size_bytes: 10608
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: 5c9c949a143c65f73d1cc4673a637e8c45f7840f2b6a78b5a2b07a9dddf07aca
-  size_bytes: 3582
+  sha256: e17fd37e337860ccdb0c3504aaeed9a54e8bbeb07e28670ea4f69c664fc0a406
+  size_bytes: 3801
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 0a839b8657a40f8ae6f32cf467526110004f56259d35438dcec6c5c0529cb5ca
-  size_bytes: 10294
+  sha256: 2f704536387de627a8e35e94592d610262258a48abe8c8e94975b1c8b47aaecb
+  size_bytes: 2841
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: b246bc20bbfd54a1a846e1ee1ed6105886180c18dd44998dfe771b881a45f040
-  size_bytes: 5513
+  sha256: 0bc01c2958d9f26c3c35c5814cfbf39467a0672b6be860286b7279b9f9ef0c0e
+  size_bytes: 2161
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 73eb12f5be82124492ba315516e10e7de3ca6dcab497628372272ab64f07bc96
-  size_bytes: 10691
+  sha256: e4bfbe4743c4a2113495c03913bd60ffbc3e21bd03542c0c76b9bcbba973f357
+  size_bytes: 3445
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 4f31e59b2d4b59bf1da29c1a4d1755c5a910f0c825b8f5ac0d2ed012cfc85b03
-  size_bytes: 14983
+  sha256: ffc0c20610cd4237df510fef177957e56853db99d211af675079dae62b14f5f2
+  size_bytes: 15635
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -4639,14 +4639,15 @@ documents:
   title: BAI Development OS Architecture Ver.2.22 — Post-TASK-012 Maintenance Roadmap Refinement
   category: architecture
   authority: machine_canonical_authority
-  importance_level: A
-  preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  importance_level: C
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: fe35e092ea31215a32002d0173047bac5fcad898567ab5abfcfa0369d5c08d45
   size_bytes: 301176
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_23
 - document_id: 316EFD9DAE227128
   path: architecture/BAI_Development_OS_Architecture_Ver2.22.docx
   title: BAI Development OS Architecture Ver.2.22
@@ -4654,33 +4655,35 @@ documents:
   authority: human_canonical_companion
   importance_level: C
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: 66b5eba8e73ab4218c328332464f7fb905fbff438b236934be1260df45c2fef1
   size_bytes: 116666
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_23
 - document_id: EADEF3FE6B7B6BEF
   path: architecture/BAI_Development_OS_Architecture_Ver2.22.summary.md
   title: BAI Development OS Architecture Ver.2.22 — AI Summary
   category: architecture
   authority: navigation-aid
-  importance_level: A
-  preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  importance_level: C
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: fc1b3ca417194c0408bf9b9ec9218401a548517efad9c93528a61fec5867d2c2
   size_bytes: 1008
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_23
 - document_id: A4F01451FF911DC2
   path: architecture/BAI_Development_OS_Architecture_Ver2.22.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.22 — Document Sync and Visual QA
   category: verification-evidence
   authority: verification-evidence
   importance_level: B
-  preferred_loading: summary-or-on-demand
-  status: PASS
+  preferred_loading: on-demand
+  status: HISTORICAL_QA_PASS
   writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
@@ -4699,18 +4702,369 @@ documents:
   verified_by: Orchestrator
   sha256: fda267967b3aaf1e345d698959a0e76747c97c4a4721bc953104bd8e8011430a
   size_bytes: 8483
+- document_id: B85EEB451989DAA2
+  path: architecture/BAI_Development_OS_Architecture_Ver2.23.md
+  title: BAI Development OS Architecture Ver.2.23 — TASK-013 Domain Adapter / Plugin SDK Completion
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 0d44ed0a2e893b2f0c05454fbb9f80355fc81a28d5231835d7beac8e186a4d91
+  size_bytes: 309256
+- document_id: EB0661E2D8B49ECB
+  path: architecture/BAI_Development_OS_Architecture_Ver2.23.docx
+  title: BAI Development OS Architecture Ver.2.23
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 645b030a576e56ba7400142f6c9411c611620f7782302c995db62a8ce20712a9
+  size_bytes: 119528
+- document_id: 1FDABB5097D54345
+  path: architecture/BAI_Development_OS_Architecture_Ver2.23.summary.md
+  title: BAI Development OS Architecture Ver.2.23 — AI Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 3571d16a0e10ec1c16047170d607f98b15879187b79c6150a258b8b6bd172ef2
+  size_bytes: 687
+- document_id: 53AFD8A3F54AC66D
+  path: architecture/BAI_Development_OS_Architecture_Ver2.23.document-sync-and-visual-qa.md
+  title: BAI Development OS Architecture Ver.2.23 — Document Sync and Visual QA
+  category: verification-evidence
+  authority: verification-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: e765828fce8133c63fbe72fba5409437ac02d182a9cc73e753edebbb1c81ab0d
+  size_bytes: 801
+- document_id: 36DF6C624C128BF1
+  path: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.md
+  title: TASK-013 Domain Adapter / Plugin SDK Detailed Design Ver.1.0
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 5a45299391a12673669c4c60b2abc08c63a6b86c061642396168bc4e490eb5ad
+  size_bytes: 11427
+- document_id: BF1036B5659E8D95
+  path: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.docx
+  title: TASK-013 Domain Adapter / Plugin SDK Detailed Design Ver.1.0
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: d570f85a9ac7e6f1ee2eb8bd4c7a1af0993095164c91c7d1757d267335041f64
+  size_bytes: 41461
+- document_id: FE59B610F01F0527
+  path: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.summary.md
+  title: TASK-013 Domain Adapter / Plugin SDK Detailed Design Ver.1.0 — AI Summary
+  category: specification
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 2f78bcc99e67e90b98a0add51594b3d26fc0ed6f5b902b1185e2d36fd6ff800c
+  size_bytes: 801
+- document_id: 36F30F03C4FF7CF3
+  path: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.document-sync-and-visual-qa.md
+  title: TASK-013 Domain Adapter / Plugin SDK Detailed Design Ver.1.0 — Document Sync and Visual QA
+  category: verification-evidence
+  authority: verification-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: b2f9944c0bfec72a9b5a037a9125c3ec132cf7b21e82dcb74d54d37de0c2bec6
+  size_bytes: 695
+- document_id: 8355F9CBDE8B74B8
+  path: tasks/TASK-013/task.md
+  title: TASK-013 Task Definition
+  category: task-definition
+  authority: task-definition
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 125bf1fb138e52c21c98535974f13f9ac1d7a66e6b5cdf4a9e58b3d8ea2e05b3
+  size_bytes: 358
+- document_id: 2913C29AFAC98636
+  path: tasks/TASK-013/detailed-design.md
+  title: TASK-013 Detailed Design Evidence
+  category: task-evidence
+  authority: design-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 70b282e49236db9c4a88cd6b2888e3b53788d87fd32d51be1da22bb712165c5c
+  size_bytes: 379
+- document_id: 5834C654A747B010
+  path: tasks/TASK-013/implementation-report.md
+  title: TASK-013 Implementation Report
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: ebedc8f0944e836c2ecd5d945020b11def2988a70ff8ffc79fbf71f7c1b86886
+  size_bytes: 510
+- document_id: E9A18E0290B80502
+  path: tasks/TASK-013/critic-review.md
+  title: TASK-013 Critic Review
+  category: task-evidence
+  authority: critic-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 7f174a27399d958cc1b06f15e096ca1cbf5860bb1cfcc321e8761f1103c35f71
+  size_bytes: 545
+- document_id: 86C62799C358341F
+  path: tasks/TASK-013/test-report.md
+  title: TASK-013 Test Report
+  category: task-evidence
+  authority: test-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 9950ed07e65d4d6eb7e29e020eab339403333b8aaa4388fb85020997a5d53009
+  size_bytes: 645
+- document_id: 7DB4A4308A9BDFF8
+  path: tasks/TASK-013/final-implementation-decision.md
+  title: TASK-013 Final Implementation Decision
+  category: task-evidence
+  authority: decision-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: cb0884538fc00a0ba9b2dd448064526c890d32a9bd128bb727706427bb70b8d0
+  size_bytes: 309
+- document_id: 0D23FA7B13692DA9
+  path: tasks/TASK-013/task013-final-completion-record.md
+  title: TASK-013 Final Completion Record
+  category: task-evidence
+  authority: completion-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: f7db90934585cb4027479d001a6cfa81c1c057450963cb492b8c3e9a4cba741e
+  size_bytes: 583
+- document_id: 1DD9C96F30338403
+  path: tasks/TASK-013/TASK-013.summary.md
+  title: TASK-013 Summary
+  category: task-evidence
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: b806887a5b6c94991d56ecef34dc337c71762e95d9881de6cc745e40e568fec0
+  size_bytes: 383
+- document_id: 10DF2BE9BB759E05
+  path: tasks/TASK-013/extension-baseline.json
+  title: TASK-013 Extension Baseline
+  category: task-evidence
+  authority: extension-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: VERIFIED
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 722df9113a516be1bccd410fb2265f17043a2ff5e10c78361202be121d275ad6
+  size_bytes: 364
+- document_id: A59566AF0713663E
+  path: schemas/extension/adapter-plan.schema.json
+  title: ExtensionOS Schema — adapter-plan.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 75b3410b613cd93da3663e74be6d4511bcb686ea3fd368b16ce39c31bd1a3eab
+  size_bytes: 1126
+- document_id: 30B32FDFECDE3128
+  path: schemas/extension/artifact-evaluation.schema.json
+  title: ExtensionOS Schema — artifact-evaluation.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 4333fa9ca521f69ed0da237806ba46e48f00b945be5f88f91f414fb0b001f261
+  size_bytes: 424
+- document_id: 6D856B63E97DD9D5
+  path: schemas/extension/domain-pack.schema.json
+  title: ExtensionOS Schema — domain-pack.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 17bce1a9c8eb398fa9176bbab00491d29b7790ed4234324a409af9a2dbe1e8d0
+  size_bytes: 548
+- document_id: 98229AD6C68E1CC4
+  path: schemas/extension/extension-conformance-report.schema.json
+  title: ExtensionOS Schema — extension-conformance-report.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 22dce97845e616fc35d27d16a0b6f8fd7ea9f9b73b02e6ab848ce55ca185bea5
+  size_bytes: 425
+- document_id: 89BAC0189CE105F9
+  path: schemas/extension/extension-hook.schema.json
+  title: ExtensionOS Schema — extension-hook.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 050868b191b4dc162741fcdd062a4704f0972e2e95c89e97e50c92c4601c4cd3
+  size_bytes: 427
+- document_id: 72B8D74663631496
+  path: schemas/extension/extension-invocation.schema.json
+  title: ExtensionOS Schema — extension-invocation.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 2a06e4aa8176bab6b2b1e3df2cddc0596296ca15f3790193569ac35f60c4cc1f
+  size_bytes: 425
+- document_id: 554D9FB97410386F
+  path: schemas/extension/extension-manifest.schema.json
+  title: ExtensionOS Schema — extension-manifest.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 883bbe54382feda0f396e5b3d095d9061a739ef07d4fc02a5a1c35e78c1c01d2
+  size_bytes: 1234
+- document_id: 0DA6320C51FD32ED
+  path: schemas/extension/extension-provider-contract.schema.json
+  title: ExtensionOS Schema — extension-provider-contract.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: f86c0abde760354a048ff1e255a1652c7687a890f847c8d5d30c5e6ee8d851aa
+  size_bytes: 485
+- document_id: 1AB6703AF1CCAC8F
+  path: schemas/extension/extension-registry.schema.json
+  title: ExtensionOS Schema — extension-registry.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: dc5c9a15dbb4806c943e7224aedfde03b4c6649d970d14ae74b05fe93cf6338c
+  size_bytes: 549
+- document_id: AC1CADA4BB4D339E
+  path: schemas/extension/extension-result.schema.json
+  title: ExtensionOS Schema — extension-result.schema
+  category: schema
+  authority: machine-contract
+  importance_level: C
+  preferred_loading: on-demand
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: cc039fa3bf56641847da2421f7f585619e11d08b3225ae9e1f3620b155cd454b
+  size_bytes: 311
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner
   consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.22.document-sync-and-visual-qa.md
+  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.23.document-sync-and-visual-qa.md
   architecture:
-    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_22
-    version: '2.22'
+    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_23
+    version: '2.23'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.22.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.22.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.22.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.23.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.23.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.23.summary.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
@@ -4721,9 +5075,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_POST_TASK012_ROADMAP_REFINEMENT
+  registry_sync_status: CURRENT_AFTER_TASK013_COMPLETION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK_013_TO_TASK_015_RESERVED_NOT_AUTHORIZED
+  roadmap_expansion_status: TASK_014_TO_TASK_015_RESERVED_NOT_AUTHORIZED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -4733,7 +5087,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK-013 — Domain Adapter / Plugin SDK
+  next_canonical_route: TASK-014 — Adaptive Governance Calibration & Policy Learning
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -4790,6 +5144,21 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 51
-  roadmap_refinement_status: POST_TASK012_INTEGRATED_TASK013_TO_TASK015_NOT_AUTHORIZED
+  roadmap_refinement_status: POST_TASK012_INTEGRATED_TASK013_COMPLETED_TASK014_TO_TASK015_NOT_AUTHORIZED
+  task_013_status: COMPLETED
+  task_013_domain_adapter_plugin_sdk:
+    document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
+    version: '1.0'
+    status: CURRENT_CANONICAL
+    human: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.docx
+    machine: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.md
+    summary: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_POST_TASK012_ROADMAP_REFINEMENT
+registry_status: CURRENT_AFTER_TASK013_COMPLETION
+registry_status_details:
+  documents: 421
+  missing: 0
+  hash_size_mismatch: 0
+  current_architecture: '2.23'
+  current_task: TASK-013 COMPLETED
+  next_task: TASK-014

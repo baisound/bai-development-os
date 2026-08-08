@@ -12,81 +12,49 @@ Read in this order:
 4. `PROJECT.md`
 5. `tasks/<ACTIVE_TASK>/<ACTIVE_TASK>.summary.md`
 6. Adaptive Development Profile result
-7. `roles/README-<REQUIRED_ROLE>.md` only for Roles required by that profile
-8. Exact source sections required by the assignment
+7. Only the exact canonical source/modules required by the assignment
 
-## Product Boundary
+## Product and authority boundary
 
-Do not treat `/home/baisound/projects/javascript-roulette` as the OS root. Consumer repositories keep project-local source and evidence only.
+Consumer repositories such as `/home/baisound/projects/javascript-roulette` are reference/consumer projects, not the OS root. Derived Registry, Dashboard, Preview, Conformance and Maintenance outputs do not become Canonical authority. Adaptive Development Governance changes workflow depth, not permanent model-vendor policy.
 
-## Adaptive Development Rule
+## Current canonicals
 
-Do not mechanically run every Role for every change. Use DEV-0 through DEV-4 to select the necessary design, review, testing, and evidence depth. Core/foundation changes require stronger assurance; small peripheral changes use compressed governance.
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.23.md`
+- TASK-004 Lifecycle: Ver.1.6
+- TASK-005 KnowledgeOS: Ver.1.2
+- TASK-006 AutomationOS: Ver.1.0
+- TASK-007 MonitoringOS: Ver.1.0
+- TASK-008 IntegrationOS: Ver.1.0
+- TASK-009 SecurityOS: Ver.1.0
+- TASK-010 ReleaseOS: Ver.1.0
+- TASK-011 ConformanceOS: Ver.1.0
+- TASK-012 MaintenanceOS: Ver.1.0
+- TASK-013 ExtensionOS / Domain Adapter / Plugin SDK: Ver.1.0
 
-## Model Policy Boundary
+TASK-004〜013 are `COMPLETED`. TASK-014 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`. TASK-015 remains `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
 
-Adaptive Development Governance changes workflow depth, not permanent model-selection policy.
+## ExtensionOS loading rule
 
+For TASK-013 behavior, load `tasks/TASK-013/TASK-013.summary.md` first. Load `specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.md` only for exact Manifest, Provider, lifecycle, Broker, Pack, Hook, Artifact, Registry or Conformance contracts. `OFFICIAL` is not execution trust by itself; executable Providers require implementation-checksum binding and either independent in-process trust or sandbox mediation. Extensions never self-grant external authorization.
 
-## TASK-004 Completed Lifecycle Contract
+## Roadmap authority
 
-TASK-004 is the completed Lifecycle Foundation baseline. Use current Architecture `architecture/BAI_Development_OS_Architecture_Ver2.22.md` for product-level routing and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` for the TASK-004 Lifecycle contract. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
+Architecture Ver.2.23 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `51 / 51` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-014/015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
 
-Adaptive Development Governance still changes workflow depth rather than permanent model-selection policy.
+## Current verification baseline
 
+- ExtensionOS: `161 / 161 PASS`
+- Full OS: `1059 / 1059 PASS`
+- JavaScript Roulette Consumer: `10 / 10 PASS`
+- Extension Conformance: `10 schemas / 8 reference domains / 12 shared contracts PASS`
+- Roadmap: `51 / 51 PASS`
+- Security / Release / Conformance / Maintenance / Boundary: PASS
 
-## TASK-005 Completed Knowledge Contract
+## Safety reminders
 
-TASK-005 is completed. Load `tasks/TASK-005/TASK-005.summary.md` and the Ver.1.2 Knowledge canonical only when Knowledge behavior is relevant. Knowledge Pack is a TASK-004 Context Source and never a Context Manifest authority. Do not use Workspace Registry as Knowledge content authority. TASK-006 Orchestration & Automation, TASK-007 Monitoring & Dashboard, and TASK-008 External Integration are completed. TASK-009 Security / Supply Chain / Integrity Hardening is completed. The next route is TASK-010 Release / Distribution / Consumer Upgrade OS.
-
-
-## TASK-006 Automation Baseline
-
-Load `tasks/TASK-006/TASK-006.summary.md` and the Ver.1.0 automation canonical when Registry/Runtime/Resolver/Startup/Automation behavior is relevant. Registry is an index, Automation cannot self-authorize, and Lifecycle/Knowledge canonical authority remain TASK-004/TASK-005. Runtime export: `AutomationOS`.
-
-
-## TASK-007 Monitoring Baseline
-
-TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.22.
-
-
-## TASK-008 External Integration Baseline
-
-TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only for connector/external-side-effect work. `IntegrationOS` resolves connector capabilities, authorization, credential references, idempotency, retry/timeout/rate controls, Cost Guard reservations, license context, trust normalization, inbound webhook verification, audit and Monitoring. A successful connector response is never canonical merely because execution succeeded. Runtime export: `IntegrationOS`. TASK-009 and TASK-010 are completed. TASK-011 and TASK-012 are completed; TASK-013 is next and remains unauthorized until separately activated.
-
-## Consolidated Roadmap Authority
-
-Architecture Ver.2.22 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 51 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
-
-## TASK-009 loading rule
-
-TASK-009 is completed. Load `tasks/TASK-009/TASK-009.summary.md` and `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md` only when security/integrity behavior is relevant. `SecurityOS` is a shared protection/verification layer, not authorization or canonical domain authority. Current Architecture is Ver.2.22; TASK-009 through TASK-012 are completed; TASK-013 is next.
-
-
-## Post-TASK-009 routing note
-
-Use Architecture Ver.2.22 Part XV for future TASK-013〜015 scope. The post-TASK-009 historical baseline was 44 source sections; the current lossless baseline is 51 / 51. Historical refinements must not be re-added as duplicate tasks.
-
-
-## TASK-010 Current Context
-
-TASK-010 is completed. Load `tasks/TASK-010/TASK-010.summary.md`, then `specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md` when release/distribution/upgrade behavior is relevant. `ReleaseOS` owns release metadata, compatibility/migration planning and local governed release mutation, but does not grant Owner authorization or publish external releases by itself. Current Architecture is Ver.2.22. TASK-011 and TASK-012 are completed; TASK-013 is next and remains unstarted/unauthorized.
-
-
-## Post-TASK-010 Roadmap Refinement
-
-Historical post-TASK-010 refinement is preserved in Architecture lineage. Architecture Ver.2.22 Part XV remains the current lossless roadmap authority with `51 / 51` source sections. TASK-011 and TASK-012 are completed; TASK-013 is next and unauthorized.
-
-
-## TASK-011 Multi-Project Conformance Completion
-
-TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Architecture Ver.2.22 is current canonical; TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
-
-## Post-TASK-011 Roadmap Refinement
-
-TASK-011 remains `COMPLETED`. Architecture Ver.2.22 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
-
-
-## TASK-012 Self-Maintenance Completion
-
-TASK-012 is `COMPLETED`. `MaintenanceOS` provides read-only fsck, immutable/checksummed findings, bounded repair planning, durable single-use repair execution, `owner_authorization_ref`, immediate auto-repair revalidation, checkpoint/rollback/quarantine, drift/retention and subsystem adapters. It never manufactures Canonical/Trust authority or promotes SIMULATED/DECLARED Conformance evidence. Run `npm run test:maintenance` and `npm run check:maintenance`. Architecture Ver.2.22 is current; TASK-013 is next and unauthorized.
+- Do not infer authorization from a Task status, Plugin trust label, successful test, connector response, preview or repair plan.
+- Do not treat SIMULATED/DECLARED Conformance evidence as REAL execution evidence.
+- Do not weaken Context Guard, Security floors or Owner gates to make a test pass.
+- Do not execute untrusted Plugin code in-process; sandbox-required capability must stay sandboxed.
+- Do not persist executable function objects as trusted Registry state; restored executable Extensions require Provider reattachment/re-enable.

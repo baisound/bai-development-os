@@ -1,0 +1,3 @@
+# BAI Development OS Architecture Ver.2.23 — Summary
+
+`CURRENT_CANONICAL`. Ver.2.23 preserves the lossless 51-section Part XV roadmap and records TASK-013 completion in Part XXIV. `ExtensionOS` is now the common Domain Adapter / Plugin SDK for Video, Audio, BGM/SE, Streaming, Unity, Web, Desktop, Automation and subsystem provider extensions. It enforces checksummed Manifest/Provider provenance, lifecycle/dependencies, trust/sandbox/authorization boundaries, Capability Broker budgets, Domain Packs, hooks, artifact gates, durable Registry and Conformance. TASK-009〜013 are completed. TASK-014 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-015 remains proposed and unauthorized.

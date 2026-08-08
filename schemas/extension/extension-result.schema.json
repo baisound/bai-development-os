@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"bai://schemas/extension/extension-result.schema.json","title":"Extension Capability Result","type":"object","required":["status","extension_id","capability_id","operation"],"properties":{"status":{"const":"SUCCESS"}},"additionalProperties":true}

@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import os from 'node:os';import path from 'node:path';
+import { ExtensionRegistry,saveExtensionRegistrySnapshot,loadExtensionRegistrySnapshot,verifyExtensionRegistrySnapshot,createContractAssistedAdapterPlan } from '../../src/extension/index.mjs';
+import { baseManifest } from './helpers.mjs';
+
+test('registry snapshot persists through SecurityOS atomic write and verifies',async()=>{const root=await mkdtemp(path.join(os.tmpdir(),'bai-ext-'));const r=new ExtensionRegistry({os_version:'0.8.0'});r.install(baseManifest());r.validate('ext.test');r.enable('ext.test');await saveExtensionRegistrySnapshot(root,r.snapshot());const loaded=await loadExtensionRegistrySnapshot(root);assert.equal(loaded.entries[0].state,'ENABLED');assert.equal(verifyExtensionRegistrySnapshot(loaded),true);});
+test('tampered persisted registry is rejected',async()=>{const root=await mkdtemp(path.join(os.tmpdir(),'bai-ext-'));const r=new ExtensionRegistry({os_version:'0.8.0'});r.install(baseManifest());await saveExtensionRegistrySnapshot(root,r.snapshot());const file=path.join(root,'.bai-os/extension/registry.json');const obj=JSON.parse(await readFile(file,'utf8'));obj.revision=999;await writeFile(file,JSON.stringify(obj));await assert.rejects(()=>loadExtensionRegistrySnapshot(root),e=>e.code==='EXTENSION_REGISTRY_TAMPERED');});
+test('OpenAPI assisted adapter plan is non executable and grants no authority',()=>{const p=createContractAssistedAdapterPlan({source_type:'OPENAPI',source_ref:'specs/example.yaml',extension_id:'adapter.example',domains:['WEB'],requested_capabilities:['integration.connector']});assert.equal(p.plan_status,'NON_EXECUTABLE_BUILD_TIME_PLAN');assert.equal(p.authority_effect,'NONE');assert.ok(p.prohibited_automatic_actions.includes('GRANT_AUTHORIZATION'));assert.match(p.content_checksum,/^[a-f0-9]{64}$/);});
+test('MCP assisted adapter plan is non executable',()=>{const p=createContractAssistedAdapterPlan({source_type:'MCP',source_ref:'mcp://local/descriptor',extension_id:'adapter.mcp'});assert.equal(p.source_type,'MCP');assert.equal(p.authority_effect,'NONE');});
+test('unsupported contract source rejected',()=>{assert.throws(()=>createContractAssistedAdapterPlan({source_type:'WSDL',source_ref:'x',extension_id:'adapter.bad'}),e=>e.code==='EXTENSION_ADAPTER_SOURCE_INVALID');});

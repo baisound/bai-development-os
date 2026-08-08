@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/extension/extension-registry.schema.json",
+  "title": "Extension Registry Snapshot",
+  "type": "object",
+  "required": ["extension_registry_version", "revision", "entries", "content_checksum"],
+  "properties": {
+    "extension_registry_version": {"const": "1.0.0"},
+    "revision": {"type": "integer", "minimum": 0},
+    "entries": {"type": "array"},
+    "content_checksum": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  },
+  "additionalProperties": false
+}
