@@ -5,20 +5,22 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.16`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.17`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
 - Current Monitoring/Dashboard Canonical: `TASK-007 BAI Development OS Monitoring & Dashboard Ver.1.0`
 - Current External Integration Canonical: `TASK-008 BAI Development OS External Integration Ver.1.0`
 - Current Security / Integrity Canonical: `TASK-009 BAI Development OS Security / Supply Chain / Integrity Ver.1.0`
+- Current Release / Distribution Canonical: `TASK-010 BAI Development OS Release / Distribution / Consumer Upgrade OS Ver.1.0`
 - TASK-004: `COMPLETED`
 - TASK-005: `COMPLETED`
 - TASK-006: `COMPLETED`
 - TASK-007: `COMPLETED`
 - TASK-008: `COMPLETED`
 - TASK-009: `COMPLETED`
-- Next canonical development route: `TASK-010 — Release / Distribution / Consumer Upgrade OS` (`NOT_STARTED / NOT_AUTHORIZED`)
+- TASK-010: `COMPLETED`
+- Next canonical development route: `TASK-011 — Multi-Project Conformance & Compatibility Lab` (`NOT_STARTED / NOT_AUTHORIZED`)
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-08`
 
@@ -28,7 +30,7 @@ BAI Development OS is standalone. Consumer projects do not host OS core. Registr
 
 ## Completed Foundation
 
-TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archive/Migration and System Sync. TASK-005 adds governed Knowledge Assets, deterministic resolution, version-pinned Knowledge Packs, usage/effectiveness and Knowledge Governance. TASK-006 composes both into governed Registry/Runtime/Resolver/Startup/Instruction/Reliability/Document/Automation runtime without taking their authority. TASK-007 observes those layers through verified source/provenance contracts and produces rebuildable metrics, alerts, audit traces, trends and dashboards without taking canonical authority. TASK-008 adds a vendor-neutral Integration Gateway that governs external capabilities, credentials, side effects, cost, trust, audit and monitoring without turning external responses into canonical truth.
+TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archive/Migration and System Sync. TASK-005 adds governed Knowledge Assets, deterministic resolution, version-pinned Knowledge Packs, usage/effectiveness and Knowledge Governance. TASK-006 composes both into governed Registry/Runtime/Resolver/Startup/Instruction/Reliability/Document/Automation runtime without taking their authority. TASK-007 observes those layers through verified source/provenance contracts and produces rebuildable metrics, alerts, audit traces, trends and dashboards without taking canonical authority. TASK-008 adds a vendor-neutral Integration Gateway that governs external capabilities, credentials, side effects, cost, trust, audit and monitoring without turning external responses into canonical truth. TASK-009 adds shared SecurityOS integrity primitives. TASK-010 adds signed/versioned release manifests, trust-anchor lifecycle, compatibility and migration preview, offline bundles, crash-consistent install/update, Owner-gated downgrade/rollback, portable subsystem bundles, canary gates, diagnostics and installation attestation.
 
 ## TASK-006 Delivered Automation Contract
 
@@ -45,33 +47,34 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 
 ## Final Verification
 
-- TASK-009 dedicated Security suite: `64 / 64 PASS`
-- Full BAI Development OS suite: `625 / 625 PASS`
+- TASK-010 dedicated Release suite: `91 / 91 PASS`
+- Full BAI Development OS suite: `716 / 716 PASS`
 - Product Boundary: `PASS`
-- Root `SecurityOS` export: `PASS`
-- Security schemas: `9 / 9 PASS`
+- Root `ReleaseOS` export: `PASS`
+- Release schemas: `8 / 8 PASS`
+- Security Conformance: `9 schemas PASS`
+- Roadmap Consolidation: `39 / 39 PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
-- Canonical DOCX visual QA: `Architecture Ver.2.16 116 / 116 PASS; TASK-009 design 5 / 5 PASS`
+- Canonical DOCX visual QA: `Architecture Ver.2.17 118 / 118 PASS; TASK-010 design 3 / 3 PASS`
 
 ## Accepted Residual
 
-TASK-009 closes the shared local integrity baseline, but production adapters remain intentionally deferred: the current Vault and signing providers are reference/local implementations rather than real KMS/HSM/Vault backends; the sandbox is a logical policy boundary rather than OS/container isolation; release/migration productization belongs TASK-010, automated repository repair and reconciliation TASK-012, provider/plugin adapters TASK-013, adaptive security-policy calibration TASK-014, and distributed security/rate/event coordination TASK-015.
+TASK-010 closes the deterministic local ReleaseOS baseline. Stale filesystem operation-lock lease detection and crash-time automatic lock reclamation remain TASK-012/TASK-015 responsibilities; broad multi-project/platform/provider conformance belongs TASK-011; platform/package-manager/release-provider adapters belong TASK-013; evidence-based release/canary/rollback calibration belongs TASK-014; distributed release coordination belongs TASK-015. Actual GitHub publication remains an authorized TASK-008 external side effect rather than an implicit TASK-010 action.
 
 ## Roadmap
 
-1. TASK-010 — Release / Distribution / Consumer Upgrade OS
-2. TASK-011 — Multi-Project Conformance & Compatibility Lab
-3. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
-4. TASK-013 — Domain Adapter / Plugin SDK
-5. TASK-014 — Adaptive Governance Calibration & Policy Learning
-6. TASK-015 — Distributed Orchestration & Event Fabric
+1. TASK-011 — Multi-Project Conformance & Compatibility Lab
+2. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
+3. TASK-013 — Domain Adapter / Plugin SDK
+4. TASK-014 — Adaptive Governance Calibration & Policy Learning
+5. TASK-015 — Distributed Orchestration & Event Fabric
 
-TASK-009 is `COMPLETED`. TASK-010–015 retain their consolidated future scopes; TASK-010 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-009 and TASK-010 are `COMPLETED`. TASK-011–015 retain their consolidated future scopes; TASK-011 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Registry Integrity
 
-- Document Registry: `304 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `328 documents / Missing 0 / Hash-Size mismatch 0`
 
 ## Post-TASK-006 Roadmap Refinement
 
@@ -89,27 +92,32 @@ TASK-008 remains an execution boundary, not a new source of authority. Connector
 
 ## Post-TASK-008 Roadmap Refinement
 
-Historical TASK-008 refinement note: Architecture Ver.2.14 was canonical at that point; current authority is Architecture Ver.2.16. TASK-008 remains `COMPLETED`. Its deferred productization scope is now concretely allocated across TASK-009〜015: credential/vault and connector security; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport SDK; adaptive integration policy calibration; and optional distributed integration/event coordination. No TASK-016 is created. Historical TASK-008 refinement note: TASK-009 was next at that point; TASK-009 is now COMPLETED and TASK-010 is next.
+Historical TASK-008 refinement note: Architecture Ver.2.14 was canonical at that point; current authority is Architecture Ver.2.17. TASK-008 remains `COMPLETED`. Its deferred productization scope is now concretely allocated across TASK-009〜015: credential/vault and connector security; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport SDK; adaptive integration policy calibration; and optional distributed integration/event coordination. No TASK-016 is created. Historical TASK-008 refinement note: TASK-009 was next at that point; TASK-009 is now COMPLETED and TASK-010 is next.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.16 Part XV is the sole current consolidated roadmap scope; TASK-009 is completed and TASK-010〜015 use Part XV. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.17 Part XV remains the sole current consolidated roadmap scope for TASK-011〜015; TASK-009 and TASK-010 are completed. Part XVIII records TASK-010 completion. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## Roadmap Consolidation Verification
 
-- Current Roadmap Authority: `Architecture Ver.2.16 Part XV`; TASK-009 completed, TASK-010〜015 future consolidated scope
+- Current Roadmap Authority: `Architecture Ver.2.17 Part XV`; TASK-009/TASK-010 completed, TASK-011〜015 future consolidated scope
 - Accumulated roadmap source sections preserved: `39 / 39 PASS`
 - Silent requirement deletions: `0`
 - TASK-013 original Domain Adapter / Plugin SDK identity: `PRESERVED`
-- Historical Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`; Current Ver.2.16 QA: `116 / 116 PASS`
+- Historical Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`; Current Ver.2.17 QA: `118 / 118 PASS`
 - Historical addenda: `HISTORICAL_EVOLUTION`
 - Roadmap machine check: `ROADMAP_CONSOLIDATION_PASS`
 
 ## TASK-009 Security / Supply Chain / Integrity Completion
 
-TASK-009 is `COMPLETED`. `SecurityOS` now provides shared trusted-path/atomic-write, secret/vault lease, signing/provenance, journal/WAL recovery, signed/tamper-evident ledger, replay protection, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Knowledge persistence uses the shared crash-consistent journal; Owner Approval/Completion Outbox can require signed evidence; Monitoring and Integration use shared integrity boundaries. TASK-010 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+Historical TASK-009 completion state: `SecurityOS` provides shared trusted-path/atomic-write, secret/vault lease, signing/provenance, journal/WAL recovery, signed/tamper-evident ledger, replay protection, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Knowledge persistence uses the shared crash-consistent journal; Owner Approval/Completion Outbox can require signed evidence; Monitoring and Integration use shared integrity boundaries. TASK-010 has since completed and TASK-011 is now next.
 
 
 ## Post-TASK-009 Roadmap Refinement
 
-Architecture Ver.2.16 is `CURRENT_CANONICAL`. TASK-009 remains `COMPLETED`. TASK-009-derived productionization work is allocated losslessly to TASK-010〜015: release trust-chain/signing/security migration; multi-project security isolation/conformance; SecurityOS fsck/recovery/repair; production Vault/KMS/HSM/sandbox/provider plugins; evidence-based security-policy calibration; and optional distributed security coordination. Roadmap preservation baseline is now `39 / 39 PASS`. TASK-010 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+Historical post-TASK-009 refinement note: Architecture Ver.2.16 allocated TASK-009 residuals across TASK-010〜015. Current authority is Architecture Ver.2.17. TASK-010 is now `COMPLETED`; TASK-011 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Roadmap preservation remains `39 / 39 PASS`.
+
+
+## TASK-010 Release / Distribution / Consumer Upgrade Completion
+
+TASK-010 is `COMPLETED`. `ReleaseOS` provides strict SemVer, signed/checksummed Release Manifests, trust-anchor bootstrap/rotation, signed offline bundles, compatibility/security-profile evaluation, migration and upgrade preview, filesystem-serialized crash-consistent install/update, Owner-gated downgrade/rollback, portable subsystem bundles, cache/mirror/registry acquisition policy, canary promotion, diagnostics and installation attestation. Existing stronger Consumer Security Profiles cannot be weakened by caller input, undeclared bundle files are rejected, retired signing keys cannot sign newly created releases after retirement, and local release mutation is serialized. Architecture Ver.2.17 and TASK-010 Ver.1.0 are current canonical. TASK-011 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.

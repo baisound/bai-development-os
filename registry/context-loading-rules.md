@@ -62,7 +62,7 @@ When a summary or registry entry records a source SHA-256 and the hash still mat
 - Using cost reduction to weaken required foundation-critical tests.
 ## Roadmap Retrieval Rule
 
-For completed `TASK-009`, load Architecture Ver.2.15 Part XVI plus the TASK-009 Ver.1.0 canonical. For future `TASK-010` through `TASK-015`, load Architecture Ver.2.16 Part XV (or its summary for navigation) as the current complete consolidated scope. Parts VI/VIII/X/XII/XIV and post-TASK addenda are Historical Evolution and MUST NOT be used alone as current task scope. Load them only for provenance/evolution analysis.
+For completed `TASK-009`, load TASK-009 Ver.1.0 plus Architecture Part XVI when needed. For completed `TASK-010`, load TASK-010 Ver.1.0 plus Architecture Ver.2.17 Part XVIII when needed. For future `TASK-011` through `TASK-015`, load Architecture Ver.2.17 Part XV (or its summary for navigation) as the current complete consolidated scope. Parts VI/VIII/X/XII/XIV and post-TASK addenda are Historical Evolution and MUST NOT be used alone as current task scope. Load them only for provenance/evolution analysis.
 
 If a retrieved historical fragment says a future Task is undefined or shows only one refinement slice, resolve it against Part XV before making a routing or scope decision.
 

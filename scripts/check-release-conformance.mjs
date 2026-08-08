@@ -1,0 +1,11 @@
+import { readFile, readdir } from 'node:fs/promises';
+import path from 'node:path';
+const root=process.cwd();
+const required=['src/release/index.mjs','src/release/manifest.mjs','src/release/trust.mjs','src/release/bundle.mjs','src/release/compatibility.mjs','src/release/migration.mjs','src/release/installer.mjs','src/release/canary.mjs','src/release/diagnostics.mjs'];
+for(const rel of required) await readFile(path.join(root,rel));
+const schemas=(await readdir(path.join(root,'schemas/release'))).filter(x=>x.endsWith('.json'));
+if(schemas.length<8) throw new Error(`RELEASE_CONFORMANCE_SCHEMA_COUNT:${schemas.length}`);
+for(const f of schemas) JSON.parse(await readFile(path.join(root,'schemas/release',f),'utf8'));
+const pkg=JSON.parse(await readFile(path.join(root,'package.json'),'utf8'));
+if(pkg.exports?.['./release']!=='./src/release/index.mjs') throw new Error('RELEASE_EXPORT_MISSING');
+console.log(`RELEASE_CONFORMANCE_PASS schemas=${schemas.length}`);

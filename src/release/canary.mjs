@@ -1,0 +1,4 @@
+import { ReleaseError } from './errors.mjs';
+import { deepFreeze } from './util.mjs';
+export function evaluateCanary({health='UNKNOWN',critical_alerts=0,error_rate=0,minimum_samples=1,samples=0,maximum_error_rate=0.01}={}){const blockers=[];if(samples<minimum_samples)blockers.push('INSUFFICIENT_SAMPLES');if(health!=='HEALTHY')blockers.push('HEALTH_NOT_HEALTHY');if(critical_alerts>0)blockers.push('CRITICAL_ALERTS_PRESENT');if(error_rate>maximum_error_rate)blockers.push('ERROR_RATE_EXCEEDED');return deepFreeze({decision:blockers.length?'HOLD':'PROMOTE',blockers,health,critical_alerts,error_rate,samples,minimum_samples,maximum_error_rate});}
+export function assertCanaryPromotable(input){const r=evaluateCanary(input);if(r.decision!=='PROMOTE')throw new ReleaseError('RELEASE_CANARY_HOLD','canary not promotable',r);return r;}

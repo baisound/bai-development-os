@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/consumer-release-state.schema.json",
+  "type": "object",
+  "required": [
+    "consumer_release_state_version",
+    "os_version",
+    "channel",
+    "installed_at",
+    "manifest_checksum",
+    "key_id",
+    "schemas",
+    "security_profile",
+    "rollback_checkpoint_id"
+  ],
+  "properties": {
+    "consumer_release_state_version": {
+      "const": "1.0.0"
+    },
+    "os_version": {
+      "type": "string"
+    },
+    "schemas": {
+      "type": "object"
+    },
+    "security_profile": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "title": "Consumer Release State.Schema"
+}

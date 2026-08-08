@@ -47,22 +47,27 @@ Load `tasks/TASK-006/TASK-006.summary.md` and the Ver.1.0 automation canonical w
 
 ## TASK-007 Monitoring Baseline
 
-TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.16.
+TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.17.
 
 
 ## TASK-008 External Integration Baseline
 
-TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only for connector/external-side-effect work. `IntegrationOS` resolves connector capabilities, authorization, credential references, idempotency, retry/timeout/rate controls, Cost Guard reservations, license context, trust normalization, inbound webhook verification, audit and Monitoring. A successful connector response is never canonical merely because execution succeeded. Runtime export: `IntegrationOS`. TASK-009 is completed. TASK-010 is next and remains unauthorized until separately activated.
+TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only for connector/external-side-effect work. `IntegrationOS` resolves connector capabilities, authorization, credential references, idempotency, retry/timeout/rate controls, Cost Guard reservations, license context, trust normalization, inbound webhook verification, audit and Monitoring. A successful connector response is never canonical merely because execution succeeded. Runtime export: `IntegrationOS`. TASK-009 and TASK-010 are completed. TASK-011 is next and remains unauthorized until separately activated.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.16 Part XV is the sole current consolidated roadmap scope; TASK-009 is completed and TASK-010〜015 use Part XV. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.17 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 loading rule
 
-TASK-009 is completed. Load `tasks/TASK-009/TASK-009.summary.md` and `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md` only when security/integrity behavior is relevant. `SecurityOS` is a shared protection/verification layer, not authorization or canonical domain authority. Current Architecture is Ver.2.16; TASK-010 is next.
+TASK-009 is completed. Load `tasks/TASK-009/TASK-009.summary.md` and `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md` only when security/integrity behavior is relevant. `SecurityOS` is a shared protection/verification layer, not authorization or canonical domain authority. Current Architecture is Ver.2.17; TASK-010 is completed and TASK-011 is next.
 
 
 ## Post-TASK-009 routing note
 
-Use Architecture Ver.2.16 Part XV for future TASK-010〜015 scope. The roadmap lossless baseline is 39 source sections. TASK-009 is completed; its production residuals are already incorporated into TASK-010〜015 and must not be re-added as a separate task unless a future explicit supersession requires it.
+Use Architecture Ver.2.17 Part XV for future TASK-011〜015 scope. The roadmap lossless baseline is 39 source sections. TASK-009/TASK-010 are completed; historical refinements must not be re-added as duplicate tasks.
+
+
+## TASK-010 Current Context
+
+TASK-010 is completed. Load `tasks/TASK-010/TASK-010.summary.md`, then `specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md` when release/distribution/upgrade behavior is relevant. `ReleaseOS` owns release metadata, compatibility/migration planning and local governed release mutation, but does not grant Owner authorization or publish external releases by itself. Current Architecture is Ver.2.17. TASK-011 is next and remains unstarted/unauthorized.

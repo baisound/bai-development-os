@@ -24,7 +24,8 @@
     "./automation": "./src/automation/index.mjs",
     "./monitoring": "./src/monitoring/index.mjs",
     "./integration": "./src/integration/index.mjs",
-    "./security": "./src/security/index.mjs"
+    "./security": "./src/security/index.mjs",
+    "./release": "./src/release/index.mjs"
   },
   "scripts": {
     "test": "node --test",
@@ -45,7 +46,9 @@
     "test:integration": "node --test tests/external-integration/*.test.mjs tests/integration/task008*.test.mjs",
     "check:roadmap": "node scripts/check-roadmap-consolidation.mjs",
     "test:security": "node --test tests/security/*.test.mjs tests/integration/task009*.test.mjs",
-    "check:security": "node scripts/check-security-conformance.mjs"
+    "check:security": "node scripts/check-security-conformance.mjs",
+    "test:release": "node --test tests/release/*.test.mjs tests/integration/task010*.test.mjs",
+    "check:release": "node scripts/check-release-conformance.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

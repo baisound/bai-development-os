@@ -1,0 +1,2 @@
+import { deepFreeze, nowIso, sha256, stable } from './util.mjs';
+export function createComponentLockManifest(entries,{clock=()=>new Date()}={}){const normalized=[...entries].map(e=>({component:e.component,name:e.name,version:e.version,api_version:e.api_version??null,checksum:e.checksum??null})).sort((a,b)=>`${a.component}:${a.name}`.localeCompare(`${b.component}:${b.name}`));const body={component_lock_manifest_version:'1.0.0',created_at:nowIso(clock),entries:normalized};return deepFreeze({...body,lock_checksum:sha256(stable(body))});}

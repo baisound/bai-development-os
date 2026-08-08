@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import { createReleaseManifest,signReleaseManifest,verifyReleaseManifestStructure,verifyReleaseManifestSignature,compareReleaseManifests } from '../../src/release/manifest.mjs';
+import { keys,fixedClock } from './helpers.mjs';
+const artifact={path:'src/app.txt',checksum:'sha256:abc',size_bytes:3};
+test('create deterministic release manifest',()=>{const m=createReleaseManifest({os_version:'1.0.0',artifacts:[artifact],clock:fixedClock});assert.equal(m.channel,'stable');assert.ok(m.manifest_checksum.startsWith('sha256:'));});
+test('invalid channel rejected',()=>assert.throws(()=>createReleaseManifest({os_version:'1.0.0',channel:'dev',artifacts:[artifact]}),e=>e.code==='RELEASE_CHANNEL_INVALID'));
+test('duplicate artifact rejected',()=>assert.throws(()=>createReleaseManifest({os_version:'1.0.0',artifacts:[artifact,artifact]}),e=>e.code==='RELEASE_MANIFEST_DUPLICATE'));
+test('authorization-broadening migration rejected',()=>assert.throws(()=>createReleaseManifest({os_version:'1.0.0',artifacts:[artifact],migrations:[{migration_id:'m',component:'x',from_version:'1.0.0',to_version:'2.0.0',broadens_authorization:true}]}),e=>e.code==='RELEASE_MIGRATION_AUTHORIZATION_BROADENING'));
+test('manifest can be signed and verified',async()=>{const k=keys();const m=createReleaseManifest({os_version:'1.0.0',artifacts:[artifact]});const s=await signReleaseManifest(m,k.provider);assert.equal(verifyReleaseManifestSignature(s,{key_id:k.key_id,public_key_pem:k.public_key,status:'TRUSTED'}),true);});
+test('manifest tamper is detected',async()=>{const k=keys();const s=await signReleaseManifest(createReleaseManifest({os_version:'1.0.0',artifacts:[artifact]}),k.provider);assert.throws(()=>verifyReleaseManifestStructure({...s,os_version:'1.0.1'}),e=>e.code==='RELEASE_MANIFEST_CHECKSUM_MISMATCH');});
+test('compare install upgrade downgrade',()=>{const a=createReleaseManifest({os_version:'1.0.0',artifacts:[artifact]}),b=createReleaseManifest({os_version:'2.0.0',artifacts:[artifact]});assert.equal(compareReleaseManifests(null,a).direction,'INSTALL');assert.equal(compareReleaseManifests(a,b).direction,'UPGRADE');assert.equal(compareReleaseManifests(b,a).direction,'DOWNGRADE');});
+test('rollback target must be semver',()=>assert.throws(()=>createReleaseManifest({os_version:'1.0.0',artifacts:[artifact],rollback_target:'previous'}),e=>e.code==='RELEASE_SEMVER_INVALID'));
+test('unsafe artifact path rejected at manifest boundary',()=>assert.throws(()=>createReleaseManifest({os_version:'1.0.0',artifacts:[{path:'../escape',checksum:'sha256:x',size_bytes:1}]}),e=>e.code==='RELEASE_ARTIFACT_PATH_INVALID'));

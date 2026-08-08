@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/release-checkpoint.schema.json",
+  "type": "object",
+  "required": [
+    "release_checkpoint_version",
+    "checkpoint_id",
+    "created_at",
+    "files"
+  ],
+  "properties": {
+    "release_checkpoint_version": {
+      "const": "1.0.0"
+    },
+    "files": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true,
+  "title": "Release Checkpoint.Schema"
+}

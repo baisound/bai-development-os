@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import { parseSemver,compareSemver,satisfiesBounds,isUpgrade,isDowngrade } from '../../src/release/semver.mjs';
+test('parse valid semver',()=>assert.equal(parseSemver('1.2.3').minor,2));
+test('reject invalid semver',()=>assert.throws(()=>parseSemver('1.2'),e=>e.code==='RELEASE_SEMVER_INVALID'));
+test('compare patch',()=>assert.equal(compareSemver('1.0.1','1.0.0'),1));
+test('compare prerelease before stable',()=>assert.equal(compareSemver('1.0.0-rc.1','1.0.0'),-1));
+test('compare prerelease numeric',()=>assert.equal(compareSemver('1.0.0-rc.2','1.0.0-rc.10'),-1));
+test('bounds include endpoints',()=>assert.equal(satisfiesBounds('2.0.0',{min:'1.0.0',max:'2.0.0'}),true));
+test('upgrade helper',()=>assert.equal(isUpgrade('1.0.0','1.1.0'),true));
+test('downgrade helper',()=>assert.equal(isDowngrade('2.0.0','1.9.0'),true));

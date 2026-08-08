@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/release-bundle.schema.json",
+  "type": "object",
+  "required": [
+    "release_bundle_version",
+    "created_at",
+    "manifest",
+    "files",
+    "bundle_checksum"
+  ],
+  "properties": {
+    "release_bundle_version": {
+      "const": "1.0.0"
+    },
+    "manifest": {
+      "$ref": "release-manifest.schema.json"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "encoding",
+          "data",
+          "checksum",
+          "size_bytes"
+        ]
+      }
+    },
+    "bundle_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "title": "Release Bundle.Schema"
+}

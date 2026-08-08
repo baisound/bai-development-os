@@ -152,3 +152,13 @@ Shared SecurityOS primitives now replace duplicated security/path/integrity mech
 ## Post-TASK-009 Security Productization Allocation
 
 TASK-009 implementation exposed production-layer follow-ons that are now reserved in existing roadmap owners: release trust chain/security migration (TASK-010), multi-project security isolation/conformance (TASK-011), SecurityOS fsck/recovery (TASK-012), Vault/KMS/HSM/sandbox/provider plugins (TASK-013), evidence-based security calibration (TASK-014), and optional distributed security coordination (TASK-015). No TASK-016 is created.
+
+
+## TASK-010 Completion Residuals
+
+- TASK-011: prove ReleaseOS behavior across multiple consumers, platforms and provider/version combinations.
+- TASK-012: detect and safely reclaim stale local release-operation locks after crashes; fsck/reconcile release state.
+- TASK-013: add platform/package-manager/repository-release provider plugins without changing ReleaseOS core contracts.
+- TASK-014: calibrate canary, rollback, compatibility and acquisition policies from evidence while preserving fixed safety floors.
+- TASK-015: coordinate release locks, trust/key state, cost and rollout across multiple workers/machines when distributed topology requires it.
+- Actual GitHub publication remains an explicit authorized TASK-008 external side effect.

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/trust-anchor-set.schema.json",
+  "type": "object",
+  "required": [
+    "trust_anchor_set_version",
+    "revision",
+    "anchors"
+  ],
+  "properties": {
+    "trust_anchor_set_version": {
+      "const": "1.0.0"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key_id",
+          "status",
+          "public_key_pem",
+          "fingerprint"
+        ]
+      }
+    }
+  },
+  "additionalProperties": true,
+  "title": "Trust Anchor Set.Schema"
+}

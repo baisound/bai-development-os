@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/release-manifest.schema.json",
+  "type": "object",
+  "required": [
+    "release_manifest_version",
+    "os_version",
+    "channel",
+    "created_at",
+    "artifacts",
+    "schemas",
+    "compatibility",
+    "migrations",
+    "security_profile",
+    "manifest_checksum"
+  ],
+  "properties": {
+    "release_manifest_version": {
+      "const": "1.0.0"
+    },
+    "os_version": {
+      "type": "string"
+    },
+    "channel": {
+      "enum": [
+        "stable",
+        "candidate",
+        "canary"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "artifacts": {
+      "type": "array"
+    },
+    "schemas": {
+      "type": "object"
+    },
+    "compatibility": {
+      "type": "object"
+    },
+    "migrations": {
+      "type": "array"
+    },
+    "security_profile": {
+      "type": "object"
+    },
+    "manifest_checksum": {
+      "type": "string"
+    },
+    "key_id": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "title": "Release Manifest.Schema"
+}

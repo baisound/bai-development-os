@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/diagnostic-bundle.schema.json",
+  "type": "object",
+  "required": [
+    "diagnostic_bundle_version",
+    "os_version",
+    "project_id",
+    "created_at",
+    "schemas",
+    "provenance",
+    "items",
+    "bundle_checksum"
+  ],
+  "properties": {
+    "diagnostic_bundle_version": {
+      "const": "1.0.0"
+    },
+    "items": {
+      "type": "array"
+    },
+    "bundle_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "title": "Diagnostic Bundle.Schema"
+}

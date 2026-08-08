@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { createComponentLockManifest } from '../../src/release/component-lock.mjs';
+test('component lock manifest sorts deterministically',()=>{const l=createComponentLockManifest([{component:'connector',name:'z',version:'1'},{component:'connector',name:'a',version:'2'}]);assert.equal(l.entries[0].name,'a');assert.ok(l.lock_checksum.startsWith('sha256:'));});

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/upgrade-preview.schema.json",
+  "type": "object",
+  "required": [
+    "upgrade_preview_version",
+    "generated_at",
+    "direction",
+    "to",
+    "compatible",
+    "blockers",
+    "warnings",
+    "breaking_changes",
+    "migrations",
+    "mutation_permitted"
+  ],
+  "properties": {
+    "upgrade_preview_version": {
+      "const": "1.0.0"
+    },
+    "direction": {
+      "enum": [
+        "INSTALL",
+        "UPGRADE",
+        "DOWNGRADE",
+        "REINSTALL"
+      ]
+    },
+    "mutation_permitted": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": true,
+  "title": "Upgrade Preview.Schema"
+}

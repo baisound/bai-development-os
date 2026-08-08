@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/release/compatibility-report.schema.json",
+  "type": "object",
+  "required": [
+    "compatible",
+    "issues",
+    "warnings"
+  ],
+  "properties": {
+    "compatible": {
+      "type": "boolean"
+    },
+    "issues": {
+      "type": "array"
+    },
+    "warnings": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": false,
+  "title": "Compatibility Report.Schema"
+}
