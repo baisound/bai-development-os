@@ -79,3 +79,12 @@ TASK-013 did not lose its original Domain Adapter / Plugin SDK scope. The confus
 ## Future regression rule
 
 Any future Architecture version that changes TASK-009〜015 MUST compare against Ver.2.14 Part XV. A requirement may be removed only with explicit supersession evidence (reason, authority, replacement/migration path, and acceptance evidence).
+
+## Post-TASK-011 lossless extension audit
+
+- Prior accumulated roadmap source sections: `44`.
+- TASK-011-derived future source sections added: `4` (TASK-012〜015).
+- Current required source-section total under Architecture Ver.2.20: `48`.
+- Silent deletion allowed: `0`.
+- Machine verification: `npm run check:roadmap`.
+- TASK-011 remains completed; these additions do not reopen its core implementation.
