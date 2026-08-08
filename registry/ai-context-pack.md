@@ -31,7 +31,8 @@ Reference consumer: `/home/baisound/projects/javascript-roulette`.
 - TASK-006 Orchestration & Automation Foundation: `COMPLETED`.
 - TASK-007 Monitoring & Dashboard: `COMPLETED`.
 - TASK-008 External Integration: `COMPLETED`.
-- Next planned route: TASK-009 Security / Supply Chain / Integrity Hardening (`NOT_STARTED / NOT_AUTHORIZED`).
+- TASK-009 Security / Supply Chain / Integrity Hardening: `COMPLETED`.
+- Next planned route: TASK-010 Release / Distribution / Consumer Upgrade OS (`NOT_STARTED / NOT_AUTHORIZED`).
 
 ## Adaptive Routing Rule
 
@@ -84,7 +85,7 @@ As of 2026-08-08, TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.m
 
 ## Post-TASK-008 refinement
 
-Load Architecture Ver.2.14 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
+Load Architecture Ver.2.15 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
 
 ## Consolidated Roadmap Authority
 
@@ -93,3 +94,7 @@ Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜
 ## Consolidated Roadmap Loading Rule
 
 For TASK-009〜015, Part XV of Architecture Ver.2.14 is the sole complete current scope. Older roadmap parts/addenda are provenance only. TASK-013 remains the general cross-domain Domain Adapter / Plugin SDK; later Knowledge/Automation/Monitoring/Connector plugin scopes are cumulative subdomains, not replacements.
+
+## TASK-009 Current Context
+
+TASK-009 is completed. For security/integrity work load `tasks/TASK-009/TASK-009.summary.md`, then the Ver.1.0 machine canonical if detailed rules are required. SecurityOS primitives protect other subsystems but do not take their authority. TASK-010 is the next route and remains unstarted/unauthorized.

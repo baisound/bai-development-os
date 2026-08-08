@@ -143,3 +143,7 @@ TASK-008 remains `COMPLETED`. OP-053〜059 are `PROPOSED / NOT_STARTED / NOT_AUT
 ## Roadmap scope consolidation — 2026-08-08
 
 Problem: future TASK scope accumulated across multiple appendices, making partial retrieval semantically lossy even though source text was retained. Resolution: Architecture Ver.2.14 Part XV becomes the single current consolidated scope for TASK-009〜015, backed by a 33-section lossless merge audit. Future roadmap refinements must update consolidated scope and provenance together.
+
+## TASK-009 completion — 2026-08-08
+
+Shared SecurityOS primitives now replace duplicated security/path/integrity mechanisms where practical. Crash-consistent Knowledge mutation, signed Owner Approval/Outbox option, durable webhook replay, egress/DLP, supply-chain/SBOM and shared security conformance are implemented. Remaining real-provider KMS/HSM/Vault/container sandbox productization belongs TASK-013; automatic repair TASK-012; distributed coordination TASK-015.

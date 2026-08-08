@@ -1,0 +1,8 @@
+import test from 'node:test'; import assert from 'node:assert/strict';
+import { evaluateEgressTarget, validateRedirectTarget, isPrivateIp } from '../../src/security/network.mjs';
+test('allowed https public target passes with dns evidence',()=>assert.equal(evaluateEgressTarget({url:'https://api.example.com/x',allow_hosts:['*.example.com'],resolved_addresses:['93.184.216.34']}).decision,'ALLOW'));
+test('private IPv4 and loopback denied',()=>{assert.equal(isPrivateIp('10.0.0.1'),true);assert.throws(()=>evaluateEgressTarget({url:'https://10.0.0.1/',allow_hosts:['10.0.0.1']}),e=>e.code==='SECURITY_EGRESS_PRIVATE_DENIED');assert.throws(()=>evaluateEgressTarget({url:'https://localhost/',resolved_addresses:['127.0.0.1']}),e=>e.code==='SECURITY_EGRESS_PRIVATE_DENIED');});
+test('host allowlist enforced',()=>assert.throws(()=>evaluateEgressTarget({url:'https://evil.example.net/',allow_hosts:['api.example.com'],resolved_addresses:['93.184.216.34']}),e=>e.code==='SECURITY_EGRESS_HOST_DENIED'));
+test('dns evidence required for hostname',()=>assert.throws(()=>evaluateEgressTarget({url:'https://api.example.com/',allow_hosts:['api.example.com']}),e=>e.code==='SECURITY_EGRESS_DNS_EVIDENCE_REQUIRED'));
+test('url credentials rejected',()=>assert.throws(()=>evaluateEgressTarget({url:'https://user:pw@example.com/',resolved_addresses:['93.184.216.34']}),e=>e.code==='SECURITY_EGRESS_URL_CREDENTIALS_FORBIDDEN'));
+test('https downgrade redirect rejected',()=>assert.throws(()=>validateRedirectTarget('https://api.example.com/','http://api.example.com/',{allow_hosts:['api.example.com'],allow_protocols:['http:','https:'],resolved_addresses:['93.184.216.34']}),e=>e.code==='SECURITY_EGRESS_DOWNGRADE_DENIED'));

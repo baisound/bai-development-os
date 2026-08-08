@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { mkdtemp, mkdir, writeFile, symlink, rm, readFile } from 'node:fs/promises';
+import os from 'node:os'; import path from 'node:path';
+import { normalizeRelativePath, resolveExistingInside, resolveWritableInside, secureAtomicWrite } from '../../src/security/path.mjs';
+const tmp=()=>mkdtemp(path.join(os.tmpdir(),'bai-sec-path-'));
+test('relative path rejects traversal and absolute',()=>{assert.throws(()=>normalizeRelativePath('../x'),e=>e.code==='SECURITY_PATH_INVALID');assert.throws(()=>normalizeRelativePath('/tmp/x'),e=>e.code==='SECURITY_PATH_INVALID');});
+test('existing path inside root resolves',async()=>{const r=await tmp();try{await writeFile(path.join(r,'a.txt'),'ok');assert.equal(await resolveExistingInside(r,'a.txt'),path.join(r,'a.txt'));}finally{await rm(r,{recursive:true,force:true});}});
+test('symlink input is rejected',async()=>{const r=await tmp();const o=await tmp();try{await writeFile(path.join(o,'x'),'x');await symlink(path.join(o,'x'),path.join(r,'link'));await assert.rejects(()=>resolveExistingInside(r,'link'),e=>e.code==='SECURITY_SYMLINK_REJECTED');}finally{await rm(r,{recursive:true,force:true});await rm(o,{recursive:true,force:true});}});
+test('writable parent symlink escape is rejected',async()=>{const r=await tmp();const o=await tmp();try{await symlink(o,path.join(r,'escape'));await assert.rejects(()=>resolveWritableInside(r,'escape/x'),e=>['SECURITY_PATH_ESCAPE','SECURITY_SYMLINK_REJECTED'].includes(e.code));}finally{await rm(r,{recursive:true,force:true});await rm(o,{recursive:true,force:true});}});
+test('secure atomic write persists and syncs',async()=>{const r=await tmp();try{await secureAtomicWrite(r,'d/x.txt',Buffer.from('abc'));assert.equal(await readFile(path.join(r,'d/x.txt'),'utf8'),'abc');}finally{await rm(r,{recursive:true,force:true});}});

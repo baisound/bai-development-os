@@ -37,7 +37,7 @@ Adaptive Development Governance still changes workflow depth rather than permane
 
 ## TASK-005 Completed Knowledge Contract
 
-TASK-005 is completed. Load `tasks/TASK-005/TASK-005.summary.md` and the Ver.1.2 Knowledge canonical only when Knowledge behavior is relevant. Knowledge Pack is a TASK-004 Context Source and never a Context Manifest authority. Do not use Workspace Registry as Knowledge content authority. TASK-006 Orchestration & Automation, TASK-007 Monitoring & Dashboard, and TASK-008 External Integration are completed. The next route is TASK-009 Security / Supply Chain / Integrity Hardening.
+TASK-005 is completed. Load `tasks/TASK-005/TASK-005.summary.md` and the Ver.1.2 Knowledge canonical only when Knowledge behavior is relevant. Knowledge Pack is a TASK-004 Context Source and never a Context Manifest authority. Do not use Workspace Registry as Knowledge content authority. TASK-006 Orchestration & Automation, TASK-007 Monitoring & Dashboard, and TASK-008 External Integration are completed. TASK-009 Security / Supply Chain / Integrity Hardening is completed. The next route is TASK-010 Release / Distribution / Consumer Upgrade OS.
 
 
 ## TASK-006 Automation Baseline
@@ -47,13 +47,17 @@ Load `tasks/TASK-006/TASK-006.summary.md` and the Ver.1.0 automation canonical w
 
 ## TASK-007 Monitoring Baseline
 
-TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.14.
+TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.15.
 
 
 ## TASK-008 External Integration Baseline
 
-TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only for connector/external-side-effect work. `IntegrationOS` resolves connector capabilities, authorization, credential references, idempotency, retry/timeout/rate controls, Cost Guard reservations, license context, trust normalization, inbound webhook verification, audit and Monitoring. A successful connector response is never canonical merely because execution succeeded. Runtime export: `IntegrationOS`. TASK-009 is next and remains unauthorized until separately activated.
+TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only for connector/external-side-effect work. `IntegrationOS` resolves connector capabilities, authorization, credential references, idempotency, retry/timeout/rate controls, Cost Guard reservations, license context, trust normalization, inbound webhook verification, audit and Monitoring. A successful connector response is never canonical merely because execution succeeded. Runtime export: `IntegrationOS`. TASK-009 is completed. TASK-010 is next and remains unauthorized until separately activated.
 
 ## Consolidated Roadmap Authority
 
 Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+
+## TASK-009 loading rule
+
+TASK-009 is completed. Load `tasks/TASK-009/TASK-009.summary.md` and `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md` only when security/integrity behavior is relevant. `SecurityOS` is a shared protection/verification layer, not authorization or canonical domain authority. Current Architecture is Ver.2.15; TASK-010 is next.

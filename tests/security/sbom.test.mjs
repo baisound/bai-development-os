@@ -1,0 +1,5 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import { mkdtemp, writeFile, rm } from 'node:fs/promises'; import os from 'node:os'; import path from 'node:path';
+import { createPackageSbom, verifyPackageSbom } from '../../src/security/sbom.mjs';
+const tmp=()=>mkdtemp(path.join(os.tmpdir(),'bai-sec-sbom-'));
+test('package SBOM captures dependencies deterministically',async()=>{const r=await tmp();try{await writeFile(path.join(r,'package.json'),JSON.stringify({name:'x',version:'1.0.0',dependencies:{b:'2',a:'1'},devDependencies:{a:'1'}}));const s=await createPackageSbom(r,{clock:()=>new Date('2026-08-08T00:00:00Z')});assert.deepEqual(s.components.map(x=>x.name),['a','b']);assert.equal(verifyPackageSbom(s),true);}finally{await rm(r,{recursive:true,force:true});}});
+test('SBOM tamper rejected',async()=>{const r=await tmp();try{await writeFile(path.join(r,'package.json'),JSON.stringify({name:'x',version:'1'}));const s=structuredClone(await createPackageSbom(r));s.package.version='evil';assert.throws(()=>verifyPackageSbom(s),e=>e.code==='SECURITY_SBOM_CHECKSUM_INVALID');}finally{await rm(r,{recursive:true,force:true});}});

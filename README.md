@@ -52,7 +52,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005 through TASK-008 are completed; TASK-009 Security / Supply Chain / Integrity Hardening is now the next development route.
+The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005 through TASK-008 are completed; TASK-009 Security / Supply Chain / Integrity Hardening is completed; TASK-010 Release / Distribution / Consumer Upgrade OS is now the next development route.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -86,4 +86,8 @@ TASK-008 remains completed. Architecture Ver.2.14 assigns its deferred productiz
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.15 preserves Part XV as the lossless consolidated roadmap lineage; TASK-009 is realized by Part XVI and its Detailed Design Ver.1.0. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+
+## TASK-009 Security / Integrity
+
+As of 2026-08-08, TASK-009 is completed. `SecurityOS` provides shared path/atomic-write, secret/vault lease, signing, crash-consistent journal, signed/tamper-evident ledger, replay, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Run `npm run test:security` and `npm run check:security`. TASK-010 is next and remains not started/not authorized.

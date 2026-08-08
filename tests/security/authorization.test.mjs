@@ -1,0 +1,5 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import { generateKeyPairSync } from 'node:crypto';
+import { signAuthorizationEnvelope, verifyAuthorizationEnvelope } from '../../src/security/authorization.mjs';
+const base={approval_id:'A1',authorized:true,task_id:'TASK-009',phase:'IMPLEMENTATION',role:'Builder',expires_at:'2099-01-01T00:00:00Z'};
+test('signed owner authorization verifies binding',()=>{const {privateKey,publicKey}=generateKeyPairSync('ed25519');const a=signAuthorizationEnvelope(base,{private_key:privateKey,key_id:'OWNER'});assert.equal(verifyAuthorizationEnvelope(a,{public_key:publicKey,expected_key_id:'OWNER',required_binding:{task_id:'TASK-009',phase:'IMPLEMENTATION',role:'Builder'}}).result,'SECURITY_AUTHORIZATION_VERIFIED');});
+test('signed owner authorization tamper rejected',()=>{const {privateKey,publicKey}=generateKeyPairSync('ed25519');const a=signAuthorizationEnvelope(base,{private_key:privateKey,key_id:'OWNER'});assert.throws(()=>verifyAuthorizationEnvelope({...a,role:'Other'},{public_key:publicKey}),e=>e.code.startsWith('SECURITY_SIGNATURE_'));});

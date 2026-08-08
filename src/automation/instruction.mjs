@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { verifyAuthorizationEnvelope } from '../security/authorization.mjs';
 import { deepFreeze, requireString, stable } from './util.mjs';
 
 export class InstructionCompilationError extends Error { constructor(code,message=code){super(message);this.code=code;} }
@@ -16,10 +17,11 @@ export function createOwnerAuthorizationProposal(input={}){
   if(!input.current_state||!input.active_gate||!input.runtime_preflight) throw new InstructionCompilationError('OWNER_PROPOSAL_INVALID');
   return deepFreeze({authorization_proposal_version:'1.0.0',type:'AUTHORIZATION_PROPOSAL',task_id:input.task_id,phase:input.phase,requested_role:input.requested_role,owner_intent:input.owner_intent,current_state:structuredClone(input.current_state),active_gate:structuredClone(input.active_gate),critical_high_findings:[...(input.critical_high_findings??[])],allowed_paths:[...(input.allowed_paths??[])],protected_paths:[...(input.protected_paths??[])],runtime_preflight:structuredClone(input.runtime_preflight),risk_profile:structuredClone(input.risk_profile??{}),validation_plan:[...(input.validation_plan??[])],stop_conditions:[...(input.stop_conditions??[])],completion_pause:input.completion_pause??'PAUSE_BEFORE_IRREVERSIBLE_OR_EXTERNAL_SIDE_EFFECT',recommended_model_cost_tier:input.recommended_model_cost_tier??null,retry_classification:input.retry_classification??'BOUNDED',human_approval_summary:input.human_approval_summary??input.owner_intent,owner_approval_required:true,authorization_granted:false});
 }
-export function validateOwnerApproval(proposal,approval,{clock=()=>new Date()}={}){
+export function validateOwnerApproval(proposal,approval,{clock=()=>new Date(),security=null}={}){
   if(!proposal?.owner_approval_required) throw new InstructionCompilationError('OWNER_PROPOSAL_INVALID');
   if(!approval||approval.authorized!==true) throw new InstructionCompilationError('NOT_AUTHORIZED');
   if(approval.task_id!==proposal.task_id||approval.phase!==proposal.phase||approval.role!==proposal.requested_role) throw new InstructionCompilationError('AUTHORIZATION_SCOPE_MISMATCH');
   if(approval.expires_at && (Number.isNaN(Date.parse(approval.expires_at)) || Date.parse(approval.expires_at)<=clock().getTime())) throw new InstructionCompilationError('AUTHORIZATION_EXPIRED');
+  if(security?.require_signed===true){try{verifyAuthorizationEnvelope(approval,{public_key:security.public_key,expected_key_id:security.expected_key_id??null,required_binding:{task_id:proposal.task_id,phase:proposal.phase,role:proposal.requested_role},now:clock().getTime()});}catch(error){throw new InstructionCompilationError(error.code==='SECURITY_AUTHORIZATION_SIGNATURE_REQUIRED'?'AUTHORIZATION_SIGNATURE_REQUIRED':'AUTHORIZATION_SIGNATURE_INVALID',error.message);}}
   return deepFreeze({result:'OWNER_APPROVAL_VALID',approval_id:approval.approval_id??null,task_id:proposal.task_id,phase:proposal.phase,role:proposal.requested_role});
 }

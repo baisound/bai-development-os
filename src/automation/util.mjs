@@ -1,6 +1,7 @@
 import { createHash, randomUUID } from 'node:crypto';
-import { lstat, mkdir, open, realpath, rename, stat } from 'node:fs/promises';
+import { open, stat } from 'node:fs/promises';
 import path from 'node:path';
+import { resolveExistingInside as securityResolveExistingInside, resolveWritableInside as securityResolveWritableInside, secureAtomicWrite as securityAtomicWrite } from '../security/path.mjs';
 
 export const stable = (value) => JSON.stringify(sort(value));
 function sort(value){
@@ -37,40 +38,28 @@ export const normalizeRel = (rel, ErrorType, code='PATH_INVALID') => {
 };
 export async function resolveExistingInside(root, rel, ErrorType, {missingCode='PATH_MISSING', escapeCode='PATH_ESCAPE'}={}){
   const safe = normalizeRel(rel, ErrorType);
-  const rr = await realpath(root);
-  let target;
-  try { target = await realpath(path.join(rr, safe)); } catch { throw new ErrorType(missingCode, safe); }
-  if(target !== rr && !target.startsWith(rr + path.sep)) throw new ErrorType(escapeCode, safe);
-  return target;
+  try { return await securityResolveExistingInside(root, safe); }
+  catch (error) {
+    if (error?.code === 'SECURITY_PATH_MISSING' || error?.code === 'SECURITY_ROOT_MISSING') throw new ErrorType(missingCode, safe);
+    if (error?.code?.startsWith('SECURITY_')) throw new ErrorType(escapeCode, safe);
+    throw error;
+  }
 }
 export async function resolveWritableInside(root, rel, ErrorType, {escapeCode='PATH_ESCAPE'}={}){
   const safe = normalizeRel(rel, ErrorType);
-  const rr = await realpath(root);
-  const candidate = path.join(rr, safe);
-  const parent = path.dirname(candidate);
-  await mkdir(parent, {recursive:true});
-  const rp = await realpath(parent);
-  if(rp !== rr && !rp.startsWith(rr + path.sep)) throw new ErrorType(escapeCode, safe);
-  try {
-    const s = await lstat(candidate);
-    if(s.isSymbolicLink()) throw new ErrorType(escapeCode, safe);
-    const actual = await realpath(candidate);
-    if(actual !== rr && !actual.startsWith(rr + path.sep)) throw new ErrorType(escapeCode, safe);
-  } catch (error) {
-    if(error instanceof ErrorType) throw error;
-    if(error?.code !== 'ENOENT') throw error;
+  try { return await securityResolveWritableInside(root, safe); }
+  catch (error) {
+    if (error?.code?.startsWith('SECURITY_')) throw new ErrorType(escapeCode, safe);
+    throw error;
   }
-  return candidate;
 }
 export async function atomicWrite(root, rel, bytes, ErrorType){
-  const target = await resolveWritableInside(root, rel, ErrorType);
-  const temp = `${target}.tmp-${process.pid}-${Date.now()}`;
-  const handle = await open(temp, 'wx', 0o600);
-  try { await handle.writeFile(bytes); await handle.sync(); } finally { await handle.close(); }
-  await rename(temp, target);
-  const dir = await open(path.dirname(target), 'r');
-  try { await dir.sync(); } finally { await dir.close(); }
-  return target;
+  const safe = normalizeRel(rel, ErrorType);
+  try { return await securityAtomicWrite(root, safe, bytes); }
+  catch (error) {
+    if (error?.code?.startsWith('SECURITY_')) throw new ErrorType('PATH_ESCAPE', safe);
+    throw error;
+  }
 }
 export async function fileMeta(target){
   const s = await stat(target);

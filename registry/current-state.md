@@ -5,18 +5,20 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.14`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.15`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
 - Current Monitoring/Dashboard Canonical: `TASK-007 BAI Development OS Monitoring & Dashboard Ver.1.0`
 - Current External Integration Canonical: `TASK-008 BAI Development OS External Integration Ver.1.0`
+- Current Security / Integrity Canonical: `TASK-009 BAI Development OS Security / Supply Chain / Integrity Ver.1.0`
 - TASK-004: `COMPLETED`
 - TASK-005: `COMPLETED`
 - TASK-006: `COMPLETED`
 - TASK-007: `COMPLETED`
 - TASK-008: `COMPLETED`
-- Next canonical development route: `TASK-009 — Security / Supply Chain / Integrity Hardening` (`NOT_STARTED / NOT_AUTHORIZED`)
+- TASK-009: `COMPLETED`
+- Next canonical development route: `TASK-010 — Release / Distribution / Consumer Upgrade OS` (`NOT_STARTED / NOT_AUTHORIZED`)
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-08`
 
@@ -43,34 +45,33 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 
 ## Final Verification
 
-- TASK-008 dedicated Integration suite: `77 / 77 PASS`
-- Full BAI Development OS suite: `561 / 561 PASS`
+- TASK-009 dedicated Security suite: `64 / 64 PASS`
+- Full BAI Development OS suite: `625 / 625 PASS`
 - Product Boundary: `PASS`
-- Root `IntegrationOS` export: `PASS`
-- Integration schemas: `6 / 6 PASS`
+- Root `SecurityOS` export: `PASS`
+- Security schemas: `9 / 9 PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
-- Canonical DOCX visual QA: `Architecture 88 / 88 PASS; TASK-008 design 6 / 6 PASS`
+- Canonical DOCX visual QA: `Architecture Ver.2.15 113 / 113 PASS; TASK-009 design 5 / 5 PASS`
 
 ## Accepted Residual
 
-Integration Audit JSONL is hash-chained/fail-detecting but not WAL/journal crash-recovering; process-local rate limiting is intentionally non-distributed; adapter cancellation relies on adapters honoring the supplied AbortSignal. Integrity/journal hardening belongs TASK-009/TASK-012, distributed rate/event coordination TASK-015, and plugin/productization refinements TASK-013/TASK-014.
+TASK-009 closes the shared local integrity baseline, but production adapters remain intentionally deferred: the current Vault and signing providers are reference/local implementations rather than real KMS/HSM/Vault backends; the sandbox is a logical policy boundary rather than OS/container isolation; release/migration productization belongs TASK-010, automated repository repair and reconciliation TASK-012, provider/plugin adapters TASK-013, adaptive security-policy calibration TASK-014, and distributed security/rate/event coordination TASK-015.
 
 ## Roadmap
 
-1. TASK-009 — Security / Supply Chain / Integrity Hardening
-2. TASK-010 — Release / Distribution / Consumer Upgrade OS
-3. TASK-011 — Multi-Project Conformance & Compatibility Lab
-4. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
-5. TASK-013 — Domain Adapter / Plugin SDK
-6. TASK-014 — Adaptive Governance Calibration & Policy Learning
-7. TASK-015 — Distributed Orchestration & Event Fabric
+1. TASK-010 — Release / Distribution / Consumer Upgrade OS
+2. TASK-011 — Multi-Project Conformance & Compatibility Lab
+3. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
+4. TASK-013 — Domain Adapter / Plugin SDK
+5. TASK-014 — Adaptive Governance Calibration & Policy Learning
+6. TASK-015 — Distributed Orchestration & Event Fabric
 
-TASK-009–015 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-009 is the next route but is not automatically active merely because TASK-008 completed.
+TASK-009 is `COMPLETED`. TASK-010–015 retain their consolidated future scopes; TASK-010 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Registry Integrity
 
-- Document Registry: `275 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `299 documents / Missing 0 / Hash-Size mismatch 0`
 
 ## Post-TASK-006 Roadmap Refinement
 
@@ -103,3 +104,7 @@ Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜
 - Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`
 - Historical addenda: `HISTORICAL_EVOLUTION`
 - Roadmap machine check: `ROADMAP_CONSOLIDATION_PASS`
+
+## TASK-009 Security / Supply Chain / Integrity Completion
+
+TASK-009 is `COMPLETED`. `SecurityOS` now provides shared trusted-path/atomic-write, secret/vault lease, signing/provenance, journal/WAL recovery, signed/tamper-evident ledger, replay protection, egress/DLP, supply-chain/SBOM, dependency-risk and sandbox primitives. Knowledge persistence uses the shared crash-consistent journal; Owner Approval/Completion Outbox can require signed evidence; Monitoring and Integration use shared integrity boundaries. TASK-010 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.

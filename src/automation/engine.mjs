@@ -19,10 +19,10 @@ export function createAutomationPlan({startup_package,instruction,actions=[]}={}
   const classified=actions.map(action=>({...structuredClone(action),...classifyAutomationAction(action)}));
   return deepFreeze({automation_plan_version:'1.0.0',plan_id:randomUUID(),run_id:startup_package.run_id,session_id:startup_package.session_id,task_id:startup_package.task_id,phase:startup_package.phase,actions:classified,owner_approval_required:classified.some(x=>x.owner_approval_required),lifecycle_mutation_authority:false,knowledge_content_authority:false});
 }
-export async function executeConditionalAutomation(plan,{startup_package,current_state={},proposal=null,approval=null,executor}={}){
+export async function executeConditionalAutomation(plan,{startup_package,current_state={},proposal=null,approval=null,approval_security=null,executor}={}){
   if(!plan?.actions||typeof executor!=='function') throw new AutomationEngineError('AUTOMATION_EXECUTION_INVALID');
   validateRoleActivation(startup_package,current_state);
-  if(plan.owner_approval_required){ if(!proposal) throw new AutomationEngineError('AUTOMATION_OWNER_PROPOSAL_REQUIRED'); try{validateOwnerApproval(proposal,approval);}catch(error){throw new AutomationEngineError(error.code??'NOT_AUTHORIZED',error.message);} }
+  if(plan.owner_approval_required){ if(!proposal) throw new AutomationEngineError('AUTOMATION_OWNER_PROPOSAL_REQUIRED'); try{validateOwnerApproval(proposal,approval,{security:approval_security});}catch(error){throw new AutomationEngineError(error.code??'NOT_AUTHORIZED',error.message);} }
   const results=[];
   for(const action of plan.actions){
     if(action.classification==='SAFE_STOP_UNKNOWN_ACTION') throw new AutomationEngineError('AUTOMATION_UNKNOWN_ACTION');

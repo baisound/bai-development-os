@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T14:39:00+09:00'
+registry_generated_at: '2026-08-08T15:11:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 819d4b12b524da2b46007cf318f6a71e2fc1eefc590701bd4ffcaae6011671ad
-  size_bytes: 6941
+  sha256: effb4b5af1448c1be51b2703bbba96d3ec1ca7581cbd62d831cd4349be148cd3
+  size_bytes: 7353
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: d3ff22ba532e7ba69b0f625dfe59e6f8d6f1859ca4bffed7007f6915fdcc31e8
-  size_bytes: 4060
+  sha256: 34abc2e7d0bf9f2516d733127128325d5ce2936b721cd16e919f1af74cc373a6
+  size_bytes: 4529
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 033d8773250c2f3dd43e39abac24ddb1dd8c24ba0f2574a35ec8ffc02cf29b48
-  size_bytes: 6765
+  sha256: f88c6aa6ff907fffc277e2dc380cab4fa3543524b1ed6e9ddd1dffd9e495700c
+  size_bytes: 7303
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: 338ca6f02dd0d3339cc9bdfff66b381bcccc34675aa4f6e7731f5b7ded3015ff
-  size_bytes: 2700
+  sha256: eeaad716f675986caec9843780453b8eb4a5193ab1ceaf6783327a225ba029ef
+  size_bytes: 2913
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: f18474a0ade119d93d9d6af508e2dffc4532c4753bdf9469348e6b4e761aeb11
-  size_bytes: 6054
+  sha256: c2e140073881aea50b636a868bd09b0f9b3e2d51e050ad2da04b6427b10c639f
+  size_bytes: 6458
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: aab953e7104e0d359e9fa6965dac93c234793276f05a8f7f27058c1517a883ab
-  size_bytes: 3407
+  sha256: 898f01d0cd7004a269ecc99a601ae27924a42a7c6b800522ca720cdf0286b5a2
+  size_bytes: 3881
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: f8ad47cc2633375ddcd850d202d96813e305b16e4b81a597dc5fcd8f9e8b811e
-  size_bytes: 7775
+  sha256: 63a2c02bed372ccd2399a32f34edb2f11d2f23d4b1e338f6c466baaddef27cbc
+  size_bytes: 8556
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: c1667b4894a1ad148dedc0fc7d5c7e50ff550306a5f27fa06db3ef1d0ef29680
-  size_bytes: 10082
+  sha256: 6ffcde4fc3e05e6fd38871d176b51bf6b212be2ed87bdd52b7c1f0093082d157
+  size_bytes: 10554
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -3213,6 +3213,222 @@ documents:
   writable: true
   sha256: c869f3a135c917260081d3e685c17198b5760207d118a9679edcec676bf1fd60
   size_bytes: 1115
+- document_id: A1A8B76E61472BCA
+  path: architecture/BAI_Development_OS_Architecture_Ver2.15.md
+  title: BAI Development OS Architecture Ver.2.15 — TASK-009 Security / Supply Chain / Integrity Completion
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  sha256: 0c6c6f06ee27d87a8cc1daa06e794bcff36c5fab67b03de9ec6a3f21b35160c2
+  size_bytes: 244377
+  preferred_loading: read-first
+- document_id: 0F06673484C5586B
+  path: architecture/BAI_Development_OS_Architecture_Ver2.15.docx
+  title: BAI_Development_OS_Architecture_Ver2.15.docx
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  sha256: 334d5b89f06c1a50d35f7a1807af32f16cbd7c3da98eec057ec618aea342cd32
+  size_bytes: 101211
+  preferred_loading: on-demand
+- document_id: 30BE82D118F75F03
+  path: architecture/BAI_Development_OS_Architecture_Ver2.15.summary.md
+  title: BAI Development OS Architecture Ver.2.15 — AI Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  sha256: 8ad282ea7298af8ffb46bb46bea0db1266fca8d67aa81b23bcabd9e6566d1fce
+  size_bytes: 1335
+  preferred_loading: read-first
+- document_id: 3B2E648E9D8322CA
+  path: architecture/BAI_Development_OS_Architecture_Ver2.15.document-sync-and-visual-qa.md
+  title: Architecture Ver.2.15 Document Sync & Visual QA
+  category: verification-evidence
+  authority: verification-evidence
+  importance_level: B
+  sha256: 43009d37c2e730ac9838844214c0626cf677c9b000a284d9e38269425c0db93b
+  size_bytes: 536
+  preferred_loading: summary-or-on-demand
+- document_id: 3E9ECD69BCE46F49
+  path: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md
+  title: TASK-009 BAI Development OS Security, Supply Chain & Integrity Hardening Detailed Design Ver.1.0
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  sha256: 5660b75f911cf5b03cce51526e3f202985bb20882e6b535547e467d9a6931ec5
+  size_bytes: 12432
+  preferred_loading: read-first
+- document_id: B1532AB137E794F4
+  path: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.docx
+  title: TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.docx
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  sha256: 13164569e25295856da68960b8ef9c95e6a8a58cace399c0fd944c6bd8ae9ac9
+  size_bytes: 41241
+  preferred_loading: on-demand
+- document_id: AE235A0FF387627B
+  path: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.summary.md
+  title: TASK-009 Security / Supply Chain / Integrity — AI Summary
+  category: specification
+  authority: navigation-aid
+  importance_level: A
+  sha256: 1e5ef072c53795d85e717dbefbc9a7e0625743ac7aee8355e722fbabd0e695dc
+  size_bytes: 1026
+  preferred_loading: read-first
+- document_id: 12F945A40F9F4422
+  path: tasks/TASK-009/task.md
+  title: TASK-009 — Security, Supply Chain & Integrity Hardening
+  category: task-definition
+  authority: task-definition
+  importance_level: A
+  sha256: 849da57dba1fe53d76b7bd5a42fa5cd2d3419cb5251d21e397139fa566b1da8c
+  size_bytes: 650
+  preferred_loading: read-first
+- document_id: C2CFE09E7378774D
+  path: tasks/TASK-009/detailed-design.md
+  title: TASK-009 Detailed Design Record
+  category: task-evidence
+  authority: design-evidence
+  importance_level: B
+  sha256: 6a99d650e31423076b5f5a94c616a4381ba7559494e5d67c6206651b0624d048
+  size_bytes: 438
+  preferred_loading: summary-or-on-demand
+- document_id: D30A4A6E4EA1F184
+  path: tasks/TASK-009/implementation-report.md
+  title: TASK-009 Implementation Report
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: B
+  sha256: f0f3a89d3db22714c095c8026a542febe0162adb4b8291426541da05ee821975
+  size_bytes: 780
+  preferred_loading: summary-or-on-demand
+- document_id: 1C91479E536B8FD2
+  path: tasks/TASK-009/critic-review.md
+  title: TASK-009 Independent Critic Review
+  category: task-evidence
+  authority: critic-evidence
+  importance_level: B
+  sha256: ae19fe81c5d472cfa7c8348c4f802e08611c024d1e2721996253e5d7004a63a6
+  size_bytes: 684
+  preferred_loading: summary-or-on-demand
+- document_id: E4534277A05C2459
+  path: tasks/TASK-009/test-report.md
+  title: TASK-009 Test Report
+  category: task-evidence
+  authority: test-evidence
+  importance_level: B
+  sha256: 3ca3e872dff3f6b299d03c69e2093b1d7c78af3b93a4477046175f2fa44efe74
+  size_bytes: 338
+  preferred_loading: summary-or-on-demand
+- document_id: 9E559E91B5CEDF7F
+  path: tasks/TASK-009/final-implementation-decision.md
+  title: TASK-009 Final Implementation Decision
+  category: task-evidence
+  authority: decision-evidence
+  importance_level: B
+  sha256: f13809a867ddc3a5a38db280e8747897936ee07e1ec7bd67b3e4fc7856936778
+  size_bytes: 298
+  preferred_loading: summary-or-on-demand
+- document_id: 337019789D2540BA
+  path: tasks/TASK-009/task009-final-completion-record.md
+  title: TASK-009 Final Completion Record
+  category: task-evidence
+  authority: completion-evidence
+  importance_level: A
+  sha256: 28da98d83f57d717095398d421407135e264b7001dea95d51554624b870214c3
+  size_bytes: 595
+  preferred_loading: read-first
+- document_id: 05304C0BC132549C
+  path: tasks/TASK-009/TASK-009.summary.md
+  title: TASK-009 — AI Summary
+  category: task-evidence
+  authority: navigation-aid
+  importance_level: A
+  sha256: d65a6b77662e8bd5c3af7a54a8d654325c922c412a8f16209b4659c06960ea5b
+  size_bytes: 684
+  preferred_loading: read-first
+- document_id: B7CAB9F5308FADB2
+  path: schemas/security/dependency-risk-result.schema.json
+  title: dependency-risk-result.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: 0707920d13188ef18a1f884a6a57d056b6485acc0b24e90cf744a10bcc956c95
+  size_bytes: 459
+  preferred_loading: on-demand
+- document_id: F5DCA7837ADBF0BB
+  path: schemas/security/egress-decision.schema.json
+  title: egress-decision.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: 51d420ed1e74953c96499a84857a0992b1721d4dce4e8ca75ffb7dddd47b831e
+  size_bytes: 482
+  preferred_loading: on-demand
+- document_id: 034D2C69AC18D691
+  path: schemas/security/journal-manifest.schema.json
+  title: journal-manifest.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: 7021c1df91c3dee4168498d433a7470b446ba98a6d269333c22ddfdd8d159301
+  size_bytes: 777
+  preferred_loading: on-demand
+- document_id: 8E2480C69643EA3B
+  path: schemas/security/sandbox-policy.schema.json
+  title: sandbox-policy.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: e08ade51ff168c796eae945430c07f142327bdf74ac9c392828e32720db32a26
+  size_bytes: 743
+  preferred_loading: on-demand
+- document_id: 4F8ADB91070EA7A8
+  path: schemas/security/sbom.schema.json
+  title: sbom.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: d09bd02264e31f41cc60a0d23875bcc9ec672184a8f018b180be064c3674c407
+  size_bytes: 602
+  preferred_loading: on-demand
+- document_id: 8E2265E845F1025C
+  path: schemas/security/secret-reference.schema.json
+  title: secret-reference.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: b8598e34e0352bb749b9c55cc120fab19a4dda0260ef3a3976a0db56533d3594
+  size_bytes: 509
+  preferred_loading: on-demand
+- document_id: C8CF671E001BE7D6
+  path: schemas/security/security-ledger-record.schema.json
+  title: security-ledger-record.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: a4252ba8b348bfeb34ec703ccacf0ad4e8c66363094a12b99e1b110701aa487e
+  size_bytes: 602
+  preferred_loading: on-demand
+- document_id: 3438D0598325D71F
+  path: schemas/security/signed-envelope.schema.json
+  title: signed-envelope.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: 8a8699334ec03f73295298ed462a1cb4fc77629d12619e690d1e0e55258ced10
+  size_bytes: 560
+  preferred_loading: on-demand
+- document_id: 9E1BA34F31584C00
+  path: schemas/security/supply-chain-manifest.schema.json
+  title: supply-chain-manifest.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  sha256: 8dcf8bab0895878e288bfb5df61896725c4108c41a1386afbecadf59b1b073ea
+  size_bytes: 818
+  preferred_loading: on-demand
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner

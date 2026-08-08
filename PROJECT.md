@@ -47,7 +47,7 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-014`: Adaptive Governance Calibration & Policy Learning
 - `TASK-015`: Distributed Orchestration & Event Fabric
 
-TASK-009〜015 are roadmap reservations only: `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-009 is the next canonical development route but is not automatically authorized.
+TASK-009 is `COMPLETED`. TASK-010〜015 remain roadmap reservations; TASK-010 is the next canonical development route and remains `NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Governance
 
@@ -88,8 +88,12 @@ Final verification: dedicated Integration `77/77 PASS`, full OS `561/561 PASS`, 
 
 ## Post-TASK-008 Roadmap Refinement
 
-TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.14 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
+TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.15 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
 
 ## Consolidated Roadmap Authority
 
 Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+
+## TASK-009 Completion
+
+TASK-009 Security / Supply Chain / Integrity Hardening is completed under `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md`. SecurityOS is a reusable primitive layer and does not replace subsystem authority. Final technical baseline: Security 64/64, full OS 625/625, Consumer 10/10, Product Boundary PASS, Roadmap 33/33, Security Conformance 9 schemas PASS. TASK-010 is next.
