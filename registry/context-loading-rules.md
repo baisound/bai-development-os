@@ -12,13 +12,13 @@ Do not load the whole Architecture or every prior Task by default.
 
 ## 2. Current architecture and roadmap
 
-Architecture Ver.2.23 is current. Part XV is the sole consolidated roadmap authority and preserves `51 / 51` accepted source sections. For TASK-014〜015 scope, load Part XV first. Historical roadmap/addendum sections are provenance only.
+Architecture Ver.2.24 is current. Part XV is the sole consolidated roadmap authority and preserves `53 / 53` accepted source sections. For TASK-015 scope, load Part XV first. Historical roadmap/addendum sections are provenance only.
 
 ## 3. Completed subsystem loading
 
-For TASK-004〜013, load `tasks/TASK-XXX/<summary>` first where available, then the corresponding specification only if exact runtime contracts are needed. Never use a historical completion note to override a later current canonical.
+For TASK-004〜014, load `tasks/TASK-XXX/<summary>` first where available, then the corresponding specification only if exact runtime contracts are needed. Never use a historical completion note to override a later current canonical.
 
-For Extension behavior, start with `tasks/TASK-013/TASK-013.summary.md`; then load `specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.md` and only the relevant `src/extension/` modules/tests.
+For Calibration behavior, start with `tasks/TASK-014/TASK-014.summary.md`; then load `specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.md` and only the relevant `src/calibration/` modules/tests. For Extension behavior, continue to use the TASK-013 summary/specification and only relevant `src/extension/` modules/tests.
 
 ## 4. Evidence and authority
 
@@ -28,6 +28,6 @@ A successful test, Plugin trust label, Connector result, Conformance report, Pre
 
 Use DEV-0〜DEV-4 to select review/test/context depth. Do not raise Context Guard limits to accommodate duplicated history. Prefer current summaries and exact source sections. Historical evolution is loaded only when investigating provenance, regressions or supersession.
 
-## 6. Extension execution context
+## 6. Extension and Calibration execution context
 
-Do not load or execute provider implementation merely to discover a Manifest. Executable Extension code requires implementation-checksum binding. `IN_PROCESS_TRUSTED` requires independent trust evidence; `SANDBOXED` must execute through a Sandbox Runner. Sandbox-required capability cannot be converted to in-process execution for convenience. External side effects remain governed by IntegrationOS/Owner authorization.
+Do not load or execute provider implementation merely to discover a Manifest. Executable Extension code requires implementation-checksum binding. `IN_PROCESS_TRUSTED` requires independent trust evidence; `SANDBOXED` must execute through a Sandbox Runner. Sandbox-required capability cannot be converted to in-process execution for convenience. External side effects remain governed by IntegrationOS/Owner authorization. Calibration recommendations and Candidate state are advisory only. Do not load a recommendation as active policy unless it has PASS Counterfactual + Shadow evidence, matching Candidate checksums and explicit Owner/Policy authorization records.

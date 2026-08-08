@@ -20,7 +20,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 
 ## Current canonicals
 
-- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.23.md`
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.24.md`
 - TASK-004 Lifecycle: Ver.1.6
 - TASK-005 KnowledgeOS: Ver.1.2
 - TASK-006 AutomationOS: Ver.1.0
@@ -31,24 +31,26 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-011 ConformanceOS: Ver.1.0
 - TASK-012 MaintenanceOS: Ver.1.0
 - TASK-013 ExtensionOS / Domain Adapter / Plugin SDK: Ver.1.0
+- TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
 
-TASK-004〜013 are `COMPLETED`. TASK-014 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`. TASK-015 remains `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-004〜014 are `COMPLETED`. TASK-015 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
-## ExtensionOS loading rule
+## CalibrationOS loading rule
 
-For TASK-013 behavior, load `tasks/TASK-013/TASK-013.summary.md` first. Load `specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.md` only for exact Manifest, Provider, lifecycle, Broker, Pack, Hook, Artifact, Registry or Conformance contracts. `OFFICIAL` is not execution trust by itself; executable Providers require implementation-checksum binding and either independent in-process trust or sandbox mediation. Extensions never self-grant external authorization.
+For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.md` only for exact Evidence, Analytics, Recommendation, Candidate, Safety Floor, Counterfactual, Shadow, Activation or Ledger contracts. Recommendations have no authority effect; SIMULATED/DECLARED evidence cannot independently satisfy verified-evidence floors; activation requires Owner and Policy authorization.
 
 ## Roadmap authority
 
-Architecture Ver.2.23 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `51 / 51` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-014/015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
+Architecture Ver.2.24 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `53 / 53` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
 
 ## Current verification baseline
 
-- ExtensionOS: `161 / 161 PASS`
-- Full OS: `1059 / 1059 PASS`
+- CalibrationOS: `56 / 56 PASS`
+- Full OS: `1115 / 1115 PASS`
 - JavaScript Roulette Consumer: `10 / 10 PASS`
+- Calibration Conformance: `6 schemas / 10 subsystems / 20 catalog parameters PASS`
 - Extension Conformance: `10 schemas / 8 reference domains / 12 shared contracts PASS`
-- Roadmap: `51 / 51 PASS`
+- Roadmap: `53 / 53 PASS`
 - Security / Release / Conformance / Maintenance / Boundary: PASS
 
 ## Safety reminders
@@ -58,3 +60,5 @@ Architecture Ver.2.23 Part XV is the sole current consolidated roadmap scope. Th
 - Do not weaken Context Guard, Security floors or Owner gates to make a test pass.
 - Do not execute untrusted Plugin code in-process; sandbox-required capability must stay sandboxed.
 - Do not persist executable function objects as trusted Registry state; restored executable Extensions require Provider reattachment/re-enable.
+- Do not activate a Calibration Candidate without PASS Counterfactual + Shadow evaluations and both Owner/Policy authorization references.
+- Do not automatically lower DEV, Security, Release, Conformance, Maintenance or Extension safety floors in response to cost/noise findings.

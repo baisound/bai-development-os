@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.23`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.24`
 - Current Lifecycle Canonical: `TASK-004 Lifecycle Foundation Ver.1.6`
 - Current Knowledge Canonical: `TASK-005 Knowledge Operating System Ver.1.2`
 - Current Automation Canonical: `TASK-006 Orchestration & Automation Foundation Ver.1.0`
@@ -16,9 +16,9 @@
 - Current Conformance Canonical: `TASK-011 Multi-Project Conformance & Compatibility Lab Ver.1.0`
 - Current Maintenance Canonical: `TASK-012 Self-Maintenance / Drift Detection / Safe Auto-Repair Ver.1.0`
 - Current Extension Canonical: `TASK-013 Domain Adapter / Plugin SDK Ver.1.0`
-- TASK-004〜013: `COMPLETED`
-- Next canonical development route: `TASK-014 — Adaptive Governance Calibration & Policy Learning` (`NOT_STARTED / NOT_AUTHORIZED`)
-- TASK-015: `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`
+- Current Calibration Canonical: `TASK-014 Adaptive Governance Calibration & Policy Learning Ver.1.0`
+- TASK-004〜014: `COMPLETED`
+- Next canonical development route: `TASK-015 — Distributed Orchestration & Event Fabric` (`NOT_STARTED / NOT_AUTHORIZED`)
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-08`
 
@@ -26,14 +26,14 @@
 
 BAI Development OS is standalone. Consumer projects do not host OS Core. Registry/index/dashboard/preview state is derived and never replaces Canonical product, Lifecycle, Knowledge, Security, Release, Conformance, Maintenance or Owner authority.
 
-## Current ExtensionOS Baseline
+## Current CalibrationOS Baseline
 
-TASK-013 is `COMPLETED`. `ExtensionOS` provides one governed Domain Adapter / Plugin SDK for Video, Audio, BGM/SE, Streaming, Unity, Web, Desktop, Automation and subsystem providers. Executable Extensions bind Manifest checksum to Provider implementation checksum, use checksum-pinned in-process trust or sandbox execution, route capabilities through authorization/permission/resource gates, and cannot self-grant authority. Domain Policy/Test/Evidence Packs, artifact validation/preview/quality gates, subsystem hooks, durable Registry snapshots, Conformance and non-executable OpenAPI/MCP adapter plans are implemented.
+TASK-014 is `COMPLETED`. `CalibrationOS` converts verified operational Evidence into bounded advisory recommendations and checksummed Policy Candidates, evaluates them through immutable safety floors, Counterfactual replay and Shadow execution, and requires explicit Owner plus Policy authorization before activation. Recommendations never become authority by confidence alone. Adaptive Governance, Knowledge, Automation, Monitoring, Integration, Security, Release, Conformance, Maintenance and Extension calibration are covered by one cross-subsystem catalog.
 
 ## Verification
 
-- TASK-013 Extension suite: `161 / 161 PASS`
-- Full BAI Development OS: `1059 / 1059 PASS`
+- TASK-014 Calibration suite: `56 / 56 PASS`
+- Full BAI Development OS: `1115 / 1115 PASS`
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Extension Conformance: `10 schemas / 8 reference domains / 12 shared contracts PASS`
 - Maintenance Conformance: `PASS`
@@ -41,13 +41,13 @@ TASK-013 is `COMPLETED`. `ExtensionOS` provides one governed Domain Adapter / Pl
 - Release Conformance: `PASS`
 - Security Conformance: `PASS`
 - Product Boundary: `PASS`
-- Roadmap Consolidation: `51 / 51 PASS`
-- Root `ExtensionOS` export: `PASS`
-- Document Registry: `421 documents / Missing 0 / Hash-Size mismatch 0`
-- Architecture Ver.2.23 DOCX: `141 / 141 pages visual QA PASS`
-- TASK-013 Detailed Design Ver.1.0 DOCX: `4 / 4 pages visual QA PASS`
+- Roadmap Consolidation: `53 / 53 PASS`
+- Root `CalibrationOS` export: `PASS`
+- Document Registry: `445 documents / Missing 0 / Hash-Size mismatch 0`
+- Architecture Ver.2.24 DOCX: `142 / 142 pages visual QA PASS`
+- TASK-014 Detailed Design Ver.1.0 DOCX: `9 / 9 pages visual QA PASS`
 - Blocking Critic findings: `0`
 
 ## Accepted Residual
 
-Domain/vendor-specific Provider packages are implemented as Extensions rather than OS-Core work. TASK-014 owns evidence-based adaptive policy/calibration; TASK-015 owns optional distributed/remote coordination. Windows/macOS Conformance remains SIMULATED/CONDITIONAL until REAL evidence exists. Single-machine ExtensionOS remains first-class.
+TASK-015 owns optional distributed/remote coordination, worker identity/fencing, replicated Extension Registry coordination, distributed Calibration Evidence transport and late-result quarantine. Windows/macOS Conformance remains SIMULATED/CONDITIONAL until REAL evidence exists. Single-machine CalibrationOS and ExtensionOS remain first-class and do not require distributed topology.

@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T19:45:00+09:00'
+registry_generated_at: '2026-08-08T20:31:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 65db17a545141fa8c27d1a06dbf8c65485589b5fc2677eea6bfbe5b6e7324936
-  size_bytes: 4719
+  sha256: b65e1934abdba7211fa623a470df6197c11ee80303b16c3cf68143734a212c2b
+  size_bytes: 5456
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 7cf31c74bcc262d4be7a1b77dbb118f58fcf254f4dc4c0763da7bdeeeed9f432
-  size_bytes: 3161
+  sha256: 82da569c83227ef9d66ea3d95d34e7f8ad3cbd1aafb029d40b10388215a715c1
+  size_bytes: 3550
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: e17fd37e337860ccdb0c3504aaeed9a54e8bbeb07e28670ea4f69c664fc0a406
-  size_bytes: 3801
+  sha256: 2ec09bfd3566d79b31fe7cd79362c006a8d87e80803cd9fce718dca349fcfcba
+  size_bytes: 4032
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 2f704536387de627a8e35e94592d610262258a48abe8c8e94975b1c8b47aaecb
-  size_bytes: 2841
+  sha256: 40594b616f3f3fb0e759e83849f23d4824e231a8f6a1ac52d244fd6471af926f
+  size_bytes: 3091
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 0bc01c2958d9f26c3c35c5814cfbf39467a0672b6be860286b7279b9f9ef0c0e
-  size_bytes: 2161
+  sha256: af17c4f4ca42f06b5e127f9eead8b115ab6febacfa265ec462ce44e64d88845c
+  size_bytes: 2566
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: e4bfbe4743c4a2113495c03913bd60ffbc3e21bd03542c0c76b9bcbba973f357
-  size_bytes: 3445
+  sha256: b2c50bb5cafa47ecf567ab0fb1dd3aae17b617638f4f8e9ea2d2c7c181eba359
+  size_bytes: 3469
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: ffc0c20610cd4237df510fef177957e56853db99d211af675079dae62b14f5f2
-  size_bytes: 15635
+  sha256: 9cab08c6870a0a9e990c45dca72aaf333dbef52ba6232dde39f7a40c7e77d6ce
+  size_bytes: 17281
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -4709,12 +4709,13 @@ documents:
   authority: machine_canonical_authority
   importance_level: A
   preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: 0d44ed0a2e893b2f0c05454fbb9f80355fc81a28d5231835d7beac8e186a4d91
   size_bytes: 309256
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_24
 - document_id: EB0661E2D8B49ECB
   path: architecture/BAI_Development_OS_Architecture_Ver2.23.docx
   title: BAI Development OS Architecture Ver.2.23
@@ -4722,12 +4723,13 @@ documents:
   authority: human_canonical_companion
   importance_level: C
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: 645b030a576e56ba7400142f6c9411c611620f7782302c995db62a8ce20712a9
   size_bytes: 119528
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_24
 - document_id: 1FDABB5097D54345
   path: architecture/BAI_Development_OS_Architecture_Ver2.23.summary.md
   title: BAI Development OS Architecture Ver.2.23 — AI Summary
@@ -4735,12 +4737,13 @@ documents:
   authority: navigation-aid
   importance_level: A
   preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: 3571d16a0e10ec1c16047170d607f98b15879187b79c6150a258b8b6bd172ef2
   size_bytes: 687
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_24
 - document_id: 53AFD8A3F54AC66D
   path: architecture/BAI_Development_OS_Architecture_Ver2.23.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.23 — Document Sync and Visual QA
@@ -4748,7 +4751,7 @@ documents:
   authority: verification-evidence
   importance_level: B
   preferred_loading: summary-or-on-demand
-  status: PASS
+  status: HISTORICAL_QA_PASS
   writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
@@ -5053,18 +5056,330 @@ documents:
   verified_by: Orchestrator
   sha256: cc039fa3bf56641847da2421f7f585619e11d08b3225ae9e1f3620b155cd454b
   size_bytes: 311
+- document_id: 44C6F5EDD9B99439
+  path: architecture/BAI_Development_OS_Post_TASK013_Roadmap_Refinement_Ver1.0.md
+  title: 'BAI Development OS Post-TASK-013 Roadmap Refinement Ver.1.0'
+  category: 'roadmap-refinement'
+  authority: 'owner-directed-roadmap-record'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: ACTIVE_ROADMAP_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: a0ae6e76ad079cca99bbfbd9f47dc73f98e61bf774ce3500bd0ac55e5623c6c0
+  size_bytes: 4241
+- document_id: C599F043C4B310FC
+  path: architecture/BAI_Development_OS_Architecture_Ver2.24.md
+  title: 'BAI Development OS Architecture Ver.2.24 — TASK-014 Adaptive Governance Calibration & Policy Learning Completion'
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: 'read-first'
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 5c7a7315bf7eee1403767c1ffe916eacdcea3250d66ea23833b639ab8ead23ee
+  size_bytes: 320732
+- document_id: 39037B28AA587A3A
+  path: architecture/BAI_Development_OS_Architecture_Ver2.24.docx
+  title: BAI Development OS Architecture Ver.2.24
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: afab56c26c9890360ff280a8930ed1dd27b120f9eb92d8648f8c4c1c58f64623
+  size_bytes: 155285
+- document_id: 3DA308EF1DEACD83
+  path: architecture/BAI_Development_OS_Architecture_Ver2.24.summary.md
+  title: 'BAI Development OS Architecture Ver.2.24 — AI Summary'
+  category: architecture
+  authority: 'navigation-aid'
+  importance_level: A
+  preferred_loading: 'read-first'
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 827e64747ae170348da96b6ae160c0578e9403ca8d6015c3680bed6dc198009b
+  size_bytes: 1108
+- document_id: B2D6A1241C659EA2
+  path: 'architecture/BAI_Development_OS_Architecture_Ver2.24.document-sync-and-visual-qa.md'
+  title: 'BAI Development OS Architecture Ver.2.24 — Document Sync and Visual QA'
+  category: 'verification-evidence'
+  authority: 'verification-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 2fb5011043196e69e955fbe6a467c8fabd8d3e4d9e3531ce0b4899aeb76e74b3
+  size_bytes: 869
+- document_id: 59864D2EB6BB400E
+  path: 'specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.md'
+  title: 'TASK-014 Adaptive Governance Calibration & Policy Learning Detailed Design Ver.1.0'
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: 'read-first'
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: fe78a6b80b1d07f654ea1e051fa37af31c67ed5cf641472a3efc911d03473d49
+  size_bytes: 12289
+- document_id: 1A051948C9483B39
+  path: 'specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.docx'
+  title: 'TASK-014 Adaptive Governance Calibration & Policy Learning Detailed Design Ver.1.0'
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 70158849f9ef20d51a55c2a023228171679a2080805945251ed2d9432659a156
+  size_bytes: 29119
+- document_id: 9C42F82315962306
+  path: 'specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.summary.md'
+  title: 'TASK-014 Adaptive Governance Calibration & Policy Learning Detailed Design Ver.1.0 — AI Summary'
+  category: specification
+  authority: 'navigation-aid'
+  importance_level: A
+  preferred_loading: 'read-first'
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 7ec5f1d89b29b58edca10a7d6acca5a8b7aef560d1da4df85803a9ba2507d542
+  size_bytes: 646
+- document_id: 5CF4D4ED8C1490AE
+  path: 'specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.document-sync-and-visual-qa.md'
+  title: 'TASK-014 Adaptive Governance Calibration & Policy Learning Detailed Design Ver.1.0 — Document Sync and Visual QA'
+  category: 'verification-evidence'
+  authority: 'verification-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: da1fc5c36349ad11a3b026a1bddef773f4df1d32e282d2699003a071198530d1
+  size_bytes: 1005
+- document_id: 100F00E55BE9571E
+  path: 'tasks/TASK-014/task.md'
+  title: 'TASK-014 Task Definition'
+  category: 'task-definition'
+  authority: 'task-definition'
+  importance_level: A
+  preferred_loading: 'read-first'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: c6e5f8c15ba31fecf6e48caa09fdc8838e0ffe34ee5691bbf7035f156b169bec
+  size_bytes: 468
+- document_id: 6F68DD8DA100CF4E
+  path: 'tasks/TASK-014/detailed-design.md'
+  title: 'TASK-014 Detailed Design Evidence'
+  category: 'task-evidence'
+  authority: 'design-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: dca3e528d820368561b91ebaf9c98b3e16b61e9996062477eab316b2202be0bf
+  size_bytes: 550
+- document_id: C8B1E60E409BBA86
+  path: 'tasks/TASK-014/implementation-report.md'
+  title: 'TASK-014 Implementation Report'
+  category: 'task-evidence'
+  authority: 'implementation-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: c67b7fa70d890379ca6de069f234c96144237323dcc823c98688470b5e410119
+  size_bytes: 625
+- document_id: 2AC79E39DE9E6296
+  path: 'tasks/TASK-014/critic-review.md'
+  title: 'TASK-014 Independent Critic Review'
+  category: 'task-evidence'
+  authority: 'critic-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: cac6e0c87758086eee65b59b7ffb85080e80f63ee46e18e60f0b5a5c76ba948d
+  size_bytes: 471
+- document_id: 946B2E5F46923CA9
+  path: 'tasks/TASK-014/test-report.md'
+  title: 'TASK-014 Test Report'
+  category: 'task-evidence'
+  authority: 'test-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 13856f042c0c3c618d0d8ffcfa8456d4c0488173543646e74d2ab6e8f209aeae
+  size_bytes: 622
+- document_id: 6DA93CC7EDD89037
+  path: 'tasks/TASK-014/final-implementation-decision.md'
+  title: 'TASK-014 Final Implementation Decision'
+  category: 'task-evidence'
+  authority: 'decision-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: ff53925266bfd49a007ad242bcf17d4fc0995a5869251394ec13dcbf8c8f54b9
+  size_bytes: 512
+- document_id: 9D2E86FC47EC7CE4
+  path: 'tasks/TASK-014/task014-final-completion-record.md'
+  title: 'TASK-014 Final Completion Record'
+  category: 'task-evidence'
+  authority: 'completion-evidence'
+  importance_level: A
+  preferred_loading: 'read-first'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: bc076f14e2784cb9c1450821c951d08de07d77ca96f2629ae29e63dd29c1db48
+  size_bytes: 596
+- document_id: 5F1595641CB121A1
+  path: 'tasks/TASK-014/TASK-014.summary.md'
+  title: 'TASK-014 Summary'
+  category: 'task-evidence'
+  authority: 'navigation-aid'
+  importance_level: A
+  preferred_loading: 'read-first'
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 31d8342bedf917d97c1bc1ac9d0e58ee6bea61f7763bd2a9d403193dc4a8ff35
+  size_bytes: 475
+- document_id: BBD30F484D160D7F
+  path: 'tasks/TASK-014/calibration-baseline.json'
+  title: 'TASK-014 Calibration Baseline'
+  category: 'task-evidence'
+  authority: 'calibration-evidence'
+  importance_level: B
+  preferred_loading: 'summary-or-on-demand'
+  status: VERIFIED
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 4c09eea06bc33fa6072986fdc7ac5ed4aaa3bee5c2d35371103414da2b5853e4
+  size_bytes: 344
+- document_id: 5A05E9396B45CCCF
+  path: 'schemas/calibration/calibration-evaluation.schema.json'
+  title: 'CalibrationOS Schema — calibration-evaluation.schema'
+  category: schema
+  authority: 'machine-contract'
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 828c5f788365ea3224c1c18b529a9a26fac38dd34453137fe7ed0d32452589b5
+  size_bytes: 770
+- document_id: E562CDE93600D14E
+  path: 'schemas/calibration/calibration-evidence.schema.json'
+  title: 'CalibrationOS Schema — calibration-evidence.schema'
+  category: schema
+  authority: 'machine-contract'
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: ef7dd29cff96748b6acabb0796aa17d13fb9b76f3b27f00cb0ba48a22b2b5853
+  size_bytes: 1552
+- document_id: E83F1A2BAB6B1104
+  path: 'schemas/calibration/calibration-ledger-record.schema.json'
+  title: 'CalibrationOS Schema — calibration-ledger-record.schema'
+  category: schema
+  authority: 'machine-contract'
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 5d319ef438f43dac44fc4e2749a5ad50fb4f396a1fed2574b49a3a71aebff3a7
+  size_bytes: 710
+- document_id: A69261674F71EBD4
+  path: 'schemas/calibration/calibration-report.schema.json'
+  title: 'CalibrationOS Schema — calibration-report.schema'
+  category: schema
+  authority: 'machine-contract'
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 65b35ac0d121caf2b788904e61561083af64444ab8983f28c4f43f4bdff11588
+  size_bytes: 673
+- document_id: C06FC95AFFC915A4
+  path: 'schemas/calibration/calibration-snapshot.schema.json'
+  title: 'CalibrationOS Schema — calibration-snapshot.schema'
+  category: schema
+  authority: 'machine-contract'
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 4f7480d11791bd57a5fa07ae17210c9c984e254e5835831e7a0dd49922268f67
+  size_bytes: 413
+- document_id: 848F7EB77D05760D
+  path: 'schemas/calibration/policy-candidate.schema.json'
+  title: 'CalibrationOS Schema — policy-candidate.schema'
+  category: schema
+  authority: 'machine-contract'
+  importance_level: C
+  preferred_loading: 'on-demand'
+  status: ACTIVE
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 2a946809faeda5c4356e7c1bf67ba6fb6031d03b3ff73922cd836c72ee315de1
+  size_bytes: 899
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner
   consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.23.document-sync-and-visual-qa.md
+  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.24.document-sync-and-visual-qa.md
   architecture:
-    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_23
-    version: '2.23'
+    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_24
+    version: '2.24'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.23.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.23.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.23.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.24.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.24.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.24.summary.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
@@ -5075,9 +5390,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_TASK013_COMPLETION
+  registry_sync_status: CURRENT_AFTER_TASK014_COMPLETION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK_014_TO_TASK_015_RESERVED_NOT_AUTHORIZED
+  roadmap_expansion_status: TASK_015_RESERVED_NOT_AUTHORIZED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -5087,7 +5402,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK-014 — Adaptive Governance Calibration & Policy Learning
+  next_canonical_route: TASK-015 — Distributed Orchestration & Event Fabric
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -5143,8 +5458,8 @@ current_canonical_document_sets:
     human: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.docx
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
-  roadmap_lossless_source_count: 51
-  roadmap_refinement_status: POST_TASK012_INTEGRATED_TASK013_COMPLETED_TASK014_TO_TASK015_NOT_AUTHORIZED
+  roadmap_lossless_source_count: 53
+  roadmap_refinement_status: POST_TASK013_INTEGRATED_TASK014_COMPLETED_TASK015_NOT_AUTHORIZED
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -5153,12 +5468,20 @@ current_canonical_document_sets:
     human: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.docx
     machine: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.md
     summary: specifications/TASK-013_BAI_Development_OS_Domain_Adapter_Plugin_SDK_Ver1.0.summary.md
+  task_014_status: COMPLETED
+  task_014_adaptive_governance_calibration_policy_learning:
+    document_id: TASK_014_ADAPTIVE_GOVERNANCE_CALIBRATION_POLICY_LEARNING
+    version: '1.0'
+    status: CURRENT_CANONICAL
+    human: specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.docx
+    machine: specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.md
+    summary: specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK013_COMPLETION
+registry_status: CURRENT_AFTER_TASK014_COMPLETION
 registry_status_details:
-  documents: 421
+  documents: 445
   missing: 0
   hash_size_mismatch: 0
-  current_architecture: '2.23'
-  current_task: TASK-013 COMPLETED
-  next_task: TASK-014
+  current_architecture: '2.24'
+  current_task: TASK-014 COMPLETED
+  next_task: TASK-015

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/calibration/calibration-evidence",
+  "type": "object",
+  "required": [
+    "calibration_evidence_version",
+    "evidence_id",
+    "observed_at",
+    "project_id",
+    "subsystem",
+    "metric",
+    "value",
+    "evidence_class",
+    "source",
+    "content_checksum"
+  ],
+  "properties": {
+    "calibration_evidence_version": {
+      "const": "1.0.0"
+    },
+    "evidence_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "subsystem": {
+      "enum": [
+        "GOVERNANCE",
+        "KNOWLEDGE",
+        "AUTOMATION",
+        "MONITORING",
+        "INTEGRATION",
+        "SECURITY",
+        "RELEASE",
+        "CONFORMANCE",
+        "MAINTENANCE",
+        "EXTENSION"
+      ]
+    },
+    "metric": {
+      "type": "string",
+      "minLength": 1
+    },
+    "value": {
+      "type": "number"
+    },
+    "evidence_class": {
+      "enum": [
+        "REAL",
+        "SANDBOX",
+        "SIMULATED",
+        "DECLARED"
+      ]
+    },
+    "evidence_weight": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "content_checksum": {
+      "type": "string",
+      "pattern": "^sha256:"
+    }
+  },
+  "additionalProperties": true
+}

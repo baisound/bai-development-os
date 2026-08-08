@@ -1,0 +1,13 @@
+{
+  "task": "TASK-014",
+  "subsystem": "CalibrationOS",
+  "package_version": "0.9.0",
+  "dedicated_tests": {"passed": 56, "failed": 0},
+  "full_os_tests": {"passed": 1115, "failed": 0},
+  "schemas": 6,
+  "subsystems": 10,
+  "catalog_parameters": 20,
+  "blocking_critic_findings": 0,
+  "next_task": "TASK-015",
+  "next_task_authorized": false
+}

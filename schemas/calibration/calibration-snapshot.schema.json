@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/calibration/calibration-snapshot",
+  "type": "object",
+  "required": [
+    "calibration_snapshot_version",
+    "active_advisory_policy"
+  ],
+  "properties": {
+    "calibration_snapshot_version": {
+      "const": "1.0.0"
+    },
+    "active_advisory_policy": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

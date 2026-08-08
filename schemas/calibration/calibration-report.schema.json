@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/calibration/calibration-report",
+  "type": "object",
+  "required": [
+    "calibration_report_version",
+    "report_id",
+    "generated_at",
+    "evidence_count",
+    "recommendations",
+    "insufficient_evidence",
+    "safety_statement",
+    "content_checksum"
+  ],
+  "properties": {
+    "calibration_report_version": {
+      "const": "1.0.0"
+    },
+    "recommendations": {
+      "type": "array"
+    },
+    "insufficient_evidence": {
+      "type": "array"
+    },
+    "content_checksum": {
+      "type": "string",
+      "pattern": "^sha256:"
+    }
+  },
+  "additionalProperties": true
+}

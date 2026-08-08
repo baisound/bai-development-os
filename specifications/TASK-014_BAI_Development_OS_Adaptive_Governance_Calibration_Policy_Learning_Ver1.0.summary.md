@@ -1,0 +1,3 @@
+# TASK-014 Adaptive Governance Calibration & Policy Learning Ver.1.0 — Summary
+
+`CURRENT_CANONICAL / COMPLETED`. `CalibrationOS` implements a recommendation-first Evidence → Candidate → Safety → Counterfactual → Shadow → Owner+Policy authorization loop across Governance, Knowledge, Automation, Monitoring, Integration, Security, Release, Conformance, Maintenance and Extension. Verified REAL/SANDBOX evidence is required for actionable recommendations; safety/authority floors cannot be learned away. Baseline: Calibration `56/56`, full OS `1115/1115`; blocking Critic findings `0`. Next route: TASK-015, not started/not authorized.

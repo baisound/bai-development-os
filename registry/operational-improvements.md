@@ -203,3 +203,20 @@ TASK-012 follow-ons are reserved in existing owners: maintenance/reconciliation 
 ## TASK-013 ExtensionOS Completion Allocation
 
 TASK-013 is `COMPLETED`. The common ExtensionOS baseline realizes the general Domain Adapter / Plugin SDK and the plugin/provider extension responsibilities accumulated from Knowledge, Automation, Monitoring, Integration, Security, Release, Conformance and Maintenance. Executable provider provenance, sandbox/trust boundaries, dependency safety, durable Registry and Conformance are implemented. Domain/vendor-specific provider packages can now be added without modifying Core. Adaptive provider/policy calibration belongs TASK-014; optional distributed/remote extension coordination belongs TASK-015.
+
+## TASK-014 CalibrationOS Completion Allocation — 2026-08-08
+
+TASK-014 is `COMPLETED`. Evidence-based calibration responsibilities accumulated from Governance, Knowledge, Automation, Monitoring, Integration, Security, Release, Conformance, Maintenance and Extension are implemented as one bounded CalibrationOS rather than separate self-tuning engines. Recommendations remain advisory, mandatory safety floors remain immutable, and activation requires exact Candidate binding, PASS Counterfactual + Shadow evaluation, Owner authorization and Policy authorization.
+
+## Post-TASK-013 / TASK-014 Productization Allocation — 2026-08-08
+
+| ID | Improvement | State | Owner Task |
+|---|---|---|---|
+| OP-065 | Extension provider timeout/concurrency/resource/health calibration from REAL/SANDBOX evidence | Implemented | TASK-014 |
+| OP-066 | Cross-subsystem evidence sufficiency, robust anomaly and SLI/SLO calibration analytics | Implemented | TASK-014 |
+| OP-067 | Over-governance advisory, under-assurance blocking, oscillation detection and risk-reduction/cost ranking | Implemented | TASK-014 |
+| OP-068 | Immutable safety-floor evaluation plus Candidate checksum binding | Implemented | TASK-014 |
+| OP-069 | Counterfactual + Shadow proof and dual-authorized policy activation | Implemented | TASK-014 |
+| OP-070 | Distributed Calibration Evidence transport, worker identity/fencing, late-result quarantine and replicated extension coordination | Roadmap reserved | TASK-015 |
+
+TASK-015 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Single-machine operation remains first-class; distributed topology is optional rather than a prerequisite.

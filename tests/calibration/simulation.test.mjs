@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import { buildCalibrationReport } from '../../src/calibration/recommendation.mjs';
+import { createPolicyCandidate } from '../../src/calibration/policy.mjs';
+import { evaluatePolicyCandidateCases, verifyCalibrationEvaluation } from '../../src/calibration/simulation.mjs';
+import { evaluator, series } from './helpers.mjs';
+const candidate=()=>createPolicyCandidate({report:buildCalibrationReport(series()),selected_policy_keys:['governance.review_cycle_cap']});
+const cases=()=>[1,2,3].map(i=>({case_id:`c${i}`,baseCost:10,proposedCost:8,baseQuality:10,proposedQuality:10,baseRisk:1,proposedRisk:1}));
+test('counterfactual replay passes when cost falls without risk/quality regression',async()=>{const c=candidate();const e=await evaluatePolicyCandidateCases({candidate:c,mode:'COUNTERFACTUAL',cases:cases(),evaluator});assert.equal(e.result,'PASS');assert.equal(e.cost_delta,-6);assert.equal(verifyCalibrationEvaluation(e,c),true);});
+test('shadow evaluation passes under equivalent safety',async()=>{const c=candidate();const e=await evaluatePolicyCandidateCases({candidate:c,mode:'SHADOW',cases:cases(),evaluator});assert.equal(e.result,'PASS');});
+test('insufficient evaluation cases are explicit',async()=>{const c=candidate();const e=await evaluatePolicyCandidateCases({candidate:c,mode:'SHADOW',cases:[cases()[0]],evaluator,min_cases:3});assert.equal(e.result,'INSUFFICIENT');});
+test('quality regression fails evaluation',async()=>{const c=candidate();const bad=cases();bad[0].proposedQuality=9;const e=await evaluatePolicyCandidateCases({candidate:c,mode:'COUNTERFACTUAL',cases:bad,evaluator});assert.equal(e.result,'FAIL');});
+test('risk increase fails evaluation',async()=>{const c=candidate();const bad=cases();bad[0].proposedRisk=2;const e=await evaluatePolicyCandidateCases({candidate:c,mode:'COUNTERFACTUAL',cases:bad,evaluator});assert.equal(e.result,'FAIL');});
+test('mandatory violation fails regardless of cost gain',async()=>{const c=candidate();const bad=cases();bad[0].mandatory_violation=true;const e=await evaluatePolicyCandidateCases({candidate:c,mode:'COUNTERFACTUAL',cases:bad,evaluator});assert.equal(e.result,'FAIL');assert.equal(e.mandatory_violation_count,1);});

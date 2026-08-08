@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bai://schemas/calibration/calibration-evaluation",
+  "type": "object",
+  "required": [
+    "calibration_evaluation_version",
+    "evaluation_id",
+    "candidate_id",
+    "candidate_checksum",
+    "mode",
+    "result",
+    "case_count",
+    "mandatory_violation_count",
+    "content_checksum"
+  ],
+  "properties": {
+    "calibration_evaluation_version": {
+      "const": "1.0.0"
+    },
+    "mode": {
+      "enum": [
+        "COUNTERFACTUAL",
+        "SHADOW"
+      ]
+    },
+    "result": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "INSUFFICIENT"
+      ]
+    },
+    "content_checksum": {
+      "type": "string",
+      "pattern": "^sha256:"
+    }
+  },
+  "additionalProperties": true
+}
