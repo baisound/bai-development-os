@@ -86,7 +86,7 @@ TASK-008 remains completed. Architecture Ver.2.14 assigns its deferred productiz
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.15 preserves Part XV as the lossless consolidated roadmap lineage; TASK-009 is realized by Part XVI and its Detailed Design Ver.1.0. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 48 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.22 Part XV is the single lossless consolidated roadmap authority. Completed TASK-009〜012 behavior is governed by each subsystem canonical/completion Part; historical roadmap sections remain provenance only. The lossless checker preserves all 51 accumulated source sections, and TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 Security / Integrity
 
@@ -95,28 +95,28 @@ As of 2026-08-08, TASK-009 is completed. `SecurityOS` provides shared path/atomi
 
 ## Post-TASK-009 Roadmap Refinement
 
-Historical TASK-009 refinement is preserved. Current authority is Architecture Ver.2.21. TASK-010〜012 are completed; TASK-013 is next and unauthorized. No TASK-016 is created.
+Historical TASK-009 refinement is preserved. Current authority is Architecture Ver.2.22. TASK-010〜012 are completed; TASK-013 is next and unauthorized. No TASK-016 is created.
 
 
 ## TASK-010 Release / Distribution Completion
 
-`ReleaseOS` is now the canonical release/distribution/consumer-upgrade foundation. It provides strict SemVer, signed manifests/bundles, trust-anchor lifecycle, compatibility and migration preview, offline acquisition, transactional install/update, Owner-gated downgrade/rollback, portable subsystem bundles, canary gates, diagnostics and installation attestation. Validation: TASK-010 91/91, full OS 716/716, Consumer 10/10, Release schemas 8/8. Architecture Ver.2.18 was the post-TASK-010 roadmap baseline; TASK-010 Ver.1.0 remains its subsystem canonical. Current architecture authority is Ver.2.21; TASK-011 and TASK-012 are completed; TASK-013 is next.
+`ReleaseOS` is now the canonical release/distribution/consumer-upgrade foundation. It provides strict SemVer, signed manifests/bundles, trust-anchor lifecycle, compatibility and migration preview, offline acquisition, transactional install/update, Owner-gated downgrade/rollback, portable subsystem bundles, canary gates, diagnostics and installation attestation. Validation: TASK-010 91/91, full OS 716/716, Consumer 10/10, Release schemas 8/8. Architecture Ver.2.18 was the post-TASK-010 roadmap baseline; TASK-010 Ver.1.0 remains its subsystem canonical. Current architecture authority is Ver.2.22; TASK-011 and TASK-012 are completed; TASK-013 is next.
 
 
 ## Post-TASK-010 Roadmap Refinement
 
-Historical post-TASK-010 refinement is preserved in Architecture lineage. Architecture Ver.2.21 Part XV remains the current lossless roadmap authority with `48 / 48` source sections. TASK-011 and TASK-012 are completed; TASK-013 is next and unauthorized.
+Historical post-TASK-010 refinement is preserved in Architecture lineage. Architecture Ver.2.22 Part XV remains the current lossless roadmap authority with `51 / 51` source sections. TASK-011 and TASK-012 are completed; TASK-013 is next and unauthorized.
 
 
 ## TASK-011 Multi-Project Conformance Completion
 
-TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Architecture Ver.2.21 is current canonical; TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Architecture Ver.2.22 is current canonical; TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Post-TASK-011 Roadmap Refinement
 
-TASK-011 remains `COMPLETED`. Architecture Ver.2.21 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `48 / 48 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
+TASK-011 remains `COMPLETED`. Architecture Ver.2.22 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
 
 
 ## TASK-012 Self-Maintenance Completion
 
-TASK-012 is `COMPLETED`. `MaintenanceOS` provides read-only fsck, immutable/checksummed findings, bounded repair planning, durable single-use repair execution, `owner_authorization_ref`, immediate auto-repair revalidation, checkpoint/rollback/quarantine, drift/retention and subsystem adapters. It never manufactures Canonical/Trust authority or promotes SIMULATED/DECLARED Conformance evidence. Run `npm run test:maintenance` and `npm run check:maintenance`. Architecture Ver.2.21 is current; TASK-013 is next and unauthorized.
+TASK-012 is `COMPLETED`. `MaintenanceOS` provides read-only fsck, immutable/checksummed findings, bounded repair planning, durable single-use repair execution, `owner_authorization_ref`, immediate auto-repair revalidation, checkpoint/rollback/quarantine, drift/retention and subsystem adapters. It never manufactures Canonical/Trust authority or promotes SIMULATED/DECLARED Conformance evidence. Run `npm run test:maintenance` and `npm run check:maintenance`. Architecture Ver.2.22 is current; TASK-013 is next and unauthorized.

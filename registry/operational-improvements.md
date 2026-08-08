@@ -187,9 +187,14 @@ TASK-011 is `COMPLETED`. TASK-012 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Post-TASK-011 Roadmap Refinement
 
-TASK-011 remains `COMPLETED`. Architecture Ver.2.20 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `48 / 48 PASS`. TASK-012 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
+TASK-011 remains `COMPLETED`. Architecture Ver.2.20 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
 
 
 ## TASK-012 MaintenanceOS Completion Allocation
 
 TASK-012 is `COMPLETED`. The common MaintenanceOS baseline realizes the shared fsck/drift/repair framework underlying OP-019/025/031/043/056/061 and related Security/Conformance maintenance responsibilities. Domain/provider-specific rebuilders and atomic reconciliation contracts remain TASK-013; adaptive cadence/freshness/retention calibration remains TASK-014; distributed repair/fencing remains TASK-015. TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+
+
+## Post-TASK-012 Maintenance Productization Allocation
+
+TASK-012 follow-ons are reserved in existing owners: maintenance/reconciliation provider SDKs (TASK-013), evidence-based maintenance calibration (TASK-014), and optional distributed repair/fencing/recovery (TASK-015). Opaque external effects remain fail-closed until a specialized reconciler proves state.

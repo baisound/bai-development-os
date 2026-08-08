@@ -85,15 +85,15 @@ As of 2026-08-08, TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.m
 
 ## Post-TASK-008 refinement
 
-Architecture Ver.2.19 was a later historical baseline; load Architecture Ver.2.21 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
+Architecture Ver.2.19 was a later historical baseline; load Architecture Ver.2.22 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.21 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 48 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.22 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 51 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## Consolidated Roadmap Loading Rule
 
-For current future TASK-012〜015 work, Part XV of Architecture Ver.2.21 is the sole complete current scope; TASK-009 through TASK-011 are governed by their completed detailed designs and completion parts. Older roadmap parts/addenda are provenance only. TASK-013 remains the general cross-domain Domain Adapter / Plugin SDK; later Knowledge/Automation/Monitoring/Connector plugin scopes are cumulative subdomains, not replacements.
+For current future TASK-013〜015 work, Part XV of Architecture Ver.2.22 is the sole complete current scope; TASK-009 through TASK-012 are governed by their completed detailed designs and completion parts. Older roadmap parts/addenda are provenance only. TASK-013 remains the general cross-domain Domain Adapter / Plugin SDK; later Knowledge/Automation/Monitoring/Connector plugin scopes are cumulative subdomains, not replacements.
 
 ## TASK-009 Current Context
 
@@ -102,28 +102,33 @@ TASK-009 is completed. For security/integrity work load `tasks/TASK-009/TASK-009
 
 ## Post-TASK-009 roadmap context
 
-Architecture Ver.2.21 is current. TASK-011 is completed; for future TASK-012〜015 load Part XV first. The roadmap checker preserves `48 / 48` accumulated source sections. TASK-012 is completed; TASK-013 is next but remains unstarted/unauthorized.
+Architecture Ver.2.22 is current. TASK-011 is completed; for future TASK-012〜015 load Part XV first. The roadmap checker preserves `51 / 51` accumulated source sections. TASK-012 is completed; TASK-013 is next but remains unstarted/unauthorized.
 
 
 ## TASK-010 Current Context
 
-TASK-010 is completed. ReleaseOS provides strict SemVer, signed release/bundle contracts, trust-anchor rotation, compatibility/security-profile checks, migration/upgrade preview, transactional local install/update, Owner-gated downgrade/rollback, portable subsystem bundles, canary/diagnostic/attestation surfaces. Load `tasks/TASK-010/TASK-010.summary.md` first when relevant. Current Architecture is Ver.2.21. TASK-011 and TASK-012 are completed; TASK-013 is next and remains unstarted/unauthorized.
+TASK-010 is completed. ReleaseOS provides strict SemVer, signed release/bundle contracts, trust-anchor rotation, compatibility/security-profile checks, migration/upgrade preview, transactional local install/update, Owner-gated downgrade/rollback, portable subsystem bundles, canary/diagnostic/attestation surfaces. Load `tasks/TASK-010/TASK-010.summary.md` first when relevant. Current Architecture is Ver.2.22. TASK-011 and TASK-012 are completed; TASK-013 is next and remains unstarted/unauthorized.
 
 
 ## Post-TASK-010 roadmap context
 
-TASK-010 remains completed. Architecture Ver.2.18 folds TASK-010 implementation findings into the current Part XV scopes for TASK-011〜015. Load Part XV, not the historical addendum, for current requirements. New scope covers release portability/platform/provider conformance, release-state fsck/stale-lock recovery, release provider SDKs, adaptive canary/rollback/acquisition policy calibration, and optional distributed release coordination. Roadmap preservation baseline: `48 / 48`.
+TASK-010 remains completed. Architecture Ver.2.18 folds TASK-010 implementation findings into the current Part XV scopes for TASK-011〜015. Load Part XV, not the historical addendum, for current requirements. New scope covers release portability/platform/provider conformance, release-state fsck/stale-lock recovery, release provider SDKs, adaptive canary/rollback/acquisition policy calibration, and optional distributed release coordination. Roadmap preservation baseline: `51 / 51`.
 
 
 ## TASK-011 Multi-Project Conformance Completion
 
-TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Historical note: TASK-012 was `NEXT / NOT_STARTED / NOT_AUTHORIZED` at TASK-011 completion. Current Architecture is Ver.2.21; TASK-012 is now `COMPLETED` and TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Historical note: TASK-012 was `NEXT / NOT_STARTED / NOT_AUTHORIZED` at TASK-011 completion. Current Architecture is Ver.2.22; TASK-012 is `COMPLETED` and TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Post-TASK-011 Roadmap Refinement
 
-TASK-011 remains `COMPLETED`. Architecture Ver.2.21 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `48 / 48 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
+TASK-011 remains `COMPLETED`. Architecture Ver.2.22 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-013〜015 remain future and unauthorized.
 
 
 ## TASK-012 Self-Maintenance Completion
 
 TASK-012 is `COMPLETED`. Load `tasks/TASK-012/TASK-012.summary.md` first; load Self-Maintenance Ver.1.0 for exact repair contracts. MaintenanceOS fsck is read-only by default. Automatic repair requires low-risk/reversible state plus immediate revalidation. Canonical/Authority/Trust/destructive/ambiguous external state is Owner-required or quarantined. Incomplete repair execution requires explicit recovery; Conformance evidence levels cannot be fabricated. TASK-013 is next and remains unstarted/unauthorized.
+
+
+## Post-TASK-012 roadmap context
+
+Use Architecture Ver.2.22 Part XV for TASK-013〜015. TASK-012 is completed; its residuals are already incorporated into those future scopes. Lossless roadmap baseline: `51 / 51`. Do not create a duplicate TASK-016 for these items.

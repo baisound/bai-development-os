@@ -88,3 +88,15 @@ Any future Architecture version that changes TASK-009〜015 MUST compare against
 - Silent deletion allowed: `0`.
 - Machine verification: `npm run check:roadmap`.
 - TASK-011 remains completed; these additions do not reopen its core implementation.
+
+
+## Post-TASK-012 lossless extension audit
+
+- Prior accumulated roadmap source sections: `48`.
+- TASK-012-derived future source sections added: `3` (TASK-013〜015).
+- Current required source-section total under Architecture Ver.2.22: `51`.
+- Silent deletion allowed: `0`.
+- Machine verification: `npm run check:roadmap`.
+- TASK-012 remains completed; these additions do not reopen MaintenanceOS core implementation.
+- Allocation: Maintenance/reconciliation provider SDKs → TASK-013; evidence-driven maintenance policy calibration → TASK-014; optional distributed repair/fencing/recovery → TASK-015.
+- Mandatory TASK-012 safety floors remain fixed; no refinement may promote ambiguous external state into automatic repair or remove Owner/Trust/Canonical protections without explicit supersession authority and evidence.

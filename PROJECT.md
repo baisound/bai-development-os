@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.21.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.22.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -72,8 +72,8 @@ npm run test:integration
 
 ## Historical Roadmap / Completion Navigation
 
-TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.21 Part XV is the sole current consolidated roadmap authority (`48 / 48 PASS`); completed subsystem behavior is governed by each TASK-004〜012 canonical design. External publication remains TASK-008 authorized side-effect territory.
+TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.22 Part XV is the sole current consolidated roadmap authority (`51 / 51 PASS`); completed subsystem behavior is governed by each TASK-004〜012 canonical design. External publication remains TASK-008 authorized side-effect territory.
 
 ## TASK-012 Self-Maintenance Completion
 
-TASK-012 is `COMPLETED`: MaintenanceOS provides read-only fsck, bounded safe repair/recovery and cross-subsystem adapters. Baseline: 75/75 Maintenance, 898/898 OS, 10/10 Consumer. Architecture Ver.2.21 is current; TASK-013 is next and unauthorized.
+TASK-012 is `COMPLETED`: MaintenanceOS provides read-only fsck, bounded safe repair/recovery and cross-subsystem adapters. Baseline: 75/75 Maintenance, 898/898 OS, 10/10 Consumer. Architecture Ver.2.22 is current; TASK-013 is next and unauthorized.

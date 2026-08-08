@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.21`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.22`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
@@ -60,9 +60,9 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 - Conformance Conformance: `10 schemas PASS`
 - Release Conformance: `8 schemas PASS`
 - Security Conformance: `9 schemas PASS`
-- Roadmap Consolidation: `48 / 48 PASS`
+- Roadmap Consolidation: `51 / 51 PASS`
 - Blocking Critic findings: `0`
-- Canonical DOCX visual QA: `Architecture Ver.2.21 133 / 133 PASS; TASK-012 design 2 / 2 PASS`
+- Canonical DOCX visual QA: `Architecture Ver.2.22 137 / 137 PASS; TASK-012 design remains 2 / 2 PASS`
 
 ## Accepted Residual
 
@@ -82,28 +82,33 @@ Historical TASK-009 completion state: `SecurityOS` provides shared trusted-path/
 
 ## Post-TASK-009 Roadmap Refinement
 
-Historical post-TASK-009 refinement note: Architecture Ver.2.16 allocated TASK-009 residuals across TASK-010〜015; at that time Ver.2.17 later became authority, TASK-010 was completed, TASK-011 was next, and roadmap preservation was `39 / 39 PASS`. Current authority is Ver.2.21.
+Historical post-TASK-009 refinement note: Architecture Ver.2.16 allocated TASK-009 residuals across TASK-010〜015; at that time Ver.2.17 later became authority, TASK-010 was completed, TASK-011 was next, and roadmap preservation was `39 / 39 PASS`. Current authority is Ver.2.22.
 
 
 ## TASK-010 Release / Distribution / Consumer Upgrade Completion
 
-TASK-010 is `COMPLETED`. `ReleaseOS` provides strict SemVer, signed/checksummed Release Manifests, trust-anchor bootstrap/rotation, signed offline bundles, compatibility/security-profile evaluation, migration and upgrade preview, filesystem-serialized crash-consistent install/update, Owner-gated downgrade/rollback, portable subsystem bundles, cache/mirror/registry acquisition policy, canary promotion, diagnostics and installation attestation. Existing stronger Consumer Security Profiles cannot be weakened by caller input, undeclared bundle files are rejected, retired signing keys cannot sign newly created releases after retirement, and local release mutation is serialized. Architecture Ver.2.18 is a historical roadmap baseline; TASK-010 Ver.1.0 remains its subsystem canonical. Current architecture authority is Ver.2.21. TASK-011 and TASK-012 are completed; TASK-013 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+TASK-010 is `COMPLETED`. `ReleaseOS` provides strict SemVer, signed/checksummed Release Manifests, trust-anchor bootstrap/rotation, signed offline bundles, compatibility/security-profile evaluation, migration and upgrade preview, filesystem-serialized crash-consistent install/update, Owner-gated downgrade/rollback, portable subsystem bundles, cache/mirror/registry acquisition policy, canary promotion, diagnostics and installation attestation. Existing stronger Consumer Security Profiles cannot be weakened by caller input, undeclared bundle files are rejected, retired signing keys cannot sign newly created releases after retirement, and local release mutation is serialized. Architecture Ver.2.18 is a historical roadmap baseline; TASK-010 Ver.1.0 remains its subsystem canonical. Current architecture authority is Ver.2.22. TASK-011 and TASK-012 are completed; TASK-013 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
 
 
 ## Post-TASK-010 Roadmap Refinement
 
-TASK-010 remains `COMPLETED`. Architecture Ver.2.21 Part XV integrates five TASK-010-derived future sections directly into TASK-011〜015: release portability/conformance, release fsck/stale-lock recovery, release-provider SDKs, evidence-based release policy calibration, and optional distributed rollout coordination. The roadmap lossless baseline is now `48 / 48`. Historical note: TASK-011 was the next route at this refinement point. Current state: TASK-011 and TASK-012 are COMPLETED; TASK-013 is NEXT / NOT_STARTED / NOT_AUTHORIZED. Actual GitHub/registry publication remains a TASK-008 authorized external side effect.
+TASK-010 remains `COMPLETED`. Architecture Ver.2.22 Part XV integrates five TASK-010-derived future sections directly into TASK-011〜015: release portability/conformance, release fsck/stale-lock recovery, release-provider SDKs, evidence-based release policy calibration, and optional distributed rollout coordination. The roadmap lossless baseline is now `51 / 51`. Historical note: TASK-011 was the next route at this refinement point. Current state: TASK-011 and TASK-012 are COMPLETED; TASK-013 is NEXT / NOT_STARTED / NOT_AUTHORIZED. Actual GitHub/registry publication remains a TASK-008 authorized external side effect.
 
 
 ## TASK-011 Multi-Project Conformance & Compatibility Lab Completion
 
-TASK-011 is `COMPLETED`. `ConformanceOS` provides versioned fixtures, compatibility matrices, trusted/sandboxed Consumer Contract execution, project isolation, fairness/noisy-neighbor, provider/upgrade/portability probes and C0–C5 evidence-aware certification. Local two-Consumer baseline is `C3_MULTI_PROJECT PASS`; Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL. Architecture Ver.2.21 is current canonical. TASK-012 is completed; TASK-013 is the next unstarted/unauthorized route.
+TASK-011 is `COMPLETED`. `ConformanceOS` provides versioned fixtures, compatibility matrices, trusted/sandboxed Consumer Contract execution, project isolation, fairness/noisy-neighbor, provider/upgrade/portability probes and C0–C5 evidence-aware certification. Local two-Consumer baseline is `C3_MULTI_PROJECT PASS`; Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL. Architecture Ver.2.22 is current canonical. TASK-012 is completed; TASK-013 is the next unstarted/unauthorized route.
 
 ## Post-TASK-011 Roadmap Refinement
 
-Historical post-TASK-011 refinement: TASK-011 remained `COMPLETED`; four implementation-derived additions were consolidated into TASK-012〜015. Current Architecture is Ver.2.21; roadmap lossless baseline is `48 / 48 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+Historical post-TASK-011 refinement: TASK-011 remained `COMPLETED`; four implementation-derived additions were consolidated into TASK-012〜015. Current Architecture is Ver.2.22; roadmap lossless baseline is `51 / 51 PASS`. TASK-012 is `COMPLETED`; TASK-013 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 
 ## TASK-012 Self-Maintenance Completion
 
 TASK-012 is `COMPLETED`. `MaintenanceOS` provides immutable findings, read-only fsck, repair planning, durable single-use execution state, Owner-bound repair, immediate precondition revalidation, checkpoint/rollback/quarantine, drift/retention and cross-subsystem adapters. Automatic repair is restricted to low-risk reversible derived state; Canonical/Authority/Trust/destructive/ambiguous external state remains Owner-required or quarantined. Release lock v1.1 adds verifiable host/PID/owner-token/acquired-at evidence. Baseline: Maintenance `75/75`, full OS `898/898`, Consumer `10/10`, Roadmap `48/48`, all conformance/boundary gates PASS. TASK-013 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+
+
+## Post-TASK-012 Roadmap Refinement
+
+TASK-012 remains `COMPLETED`. Architecture Ver.2.22 allocates its accepted residuals to TASK-013 (domain/provider maintenance and reconciliation SDK), TASK-014 (maintenance policy/freshness/retention/cadence calibration), and TASK-015 (optional distributed repair/fencing/recovery). Roadmap preservation is `51 / 51 PASS`. TASK-013 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
