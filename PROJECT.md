@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.24.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.25.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -78,12 +78,17 @@ npm run check:calibration
 
 ## Historical Roadmap / Completion Navigation
 
-TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.24 Part XV is the sole current consolidated roadmap authority (`53 / 53 PASS`); completed subsystem behavior is governed by each TASK-004〜014 canonical design. External publication remains TASK-008 authorized side-effect territory.
+TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.25 Part XV is the sole current consolidated roadmap authority (`54 / 54 PASS`); completed subsystem behavior is governed by each TASK-004〜014 canonical design. External publication remains TASK-008 authorized side-effect territory.
 
 ## TASK-013 Domain Adapter / Plugin SDK Completion
 
-TASK-013 is `COMPLETED`: ExtensionOS provides the common cross-domain Manifest/Lifecycle/Capability/Pack/Hook/Artifact/Provider/Conformance boundary. Baseline: 161/161 Extension, 1059/1059 OS, 10/10 Consumer. Architecture Ver.2.24 is current; TASK-014 is completed; TASK-015 is next and unauthorized.
+TASK-013 is `COMPLETED`: ExtensionOS provides the common cross-domain Manifest/Lifecycle/Capability/Pack/Hook/Artifact/Provider/Conformance boundary. Baseline: 161/161 Extension, 1059/1059 OS, 10/10 Consumer. Architecture Ver.2.25 is current; TASK-014 is completed; TASK-015 is next and unauthorized.
 
 ## TASK-014 Adaptive Governance Calibration & Policy Learning Completion
 
-TASK-014 is `COMPLETED`. `CalibrationOS` provides evidence sufficiency, weighted analytics, adaptive-governance diagnostics, bounded cross-subsystem recommendations, immutable safety-floor review, Candidate checksum binding, Counterfactual and Shadow evaluation, dual-authorized activation and a tamper-evident durable calibration ledger. Baseline: 56/56 Calibration, 1115/1115 full OS, 10/10 Consumer. Architecture Ver.2.24 is current; TASK-015 remains next and unauthorized.
+TASK-014 is `COMPLETED`. `CalibrationOS` provides evidence sufficiency, weighted analytics, adaptive-governance diagnostics, bounded cross-subsystem recommendations, immutable safety-floor review, Candidate checksum binding, Counterfactual and Shadow evaluation, dual-authorized activation and a tamper-evident durable calibration ledger. Baseline: 56/56 Calibration, 1115/1115 full OS, 10/10 Consumer. Architecture Ver.2.25 is current; TASK-015 remains next and unauthorized.
+
+
+## Post-TASK-014 roadmap refinement
+
+Architecture Ver.2.25 adds the TASK-014-derived distributed CalibrationOS requirements to TASK-015: evidence deduplication/provenance, cohort-aware baselines, remote Counterfactual/Shadow evaluation, Candidate epoch/fencing, staged rollout/rollback, divergence detection and Cost Guard/backpressure. No TASK-016 is created. TASK-015 remains unauthorized until explicitly started.

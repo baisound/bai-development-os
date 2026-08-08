@@ -52,7 +52,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-013 are completed. TASK-014 is the next development route; TASK-014〜015 remain future and unauthorized.
+The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-014 are completed. TASK-015 is the next development route and remains unauthorized.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -65,7 +65,7 @@ TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 through TASK-013 are completed; TASK-014 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
+TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 through TASK-014 are completed; TASK-015 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
 
 ## TASK-007 Monitoring & Dashboard Completion
 
@@ -114,7 +114,7 @@ TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fi
 
 ## Post-TASK-011 Roadmap Refinement
 
-TASK-011 remains `COMPLETED`. Architecture Ver.2.23 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 and TASK-013 are `COMPLETED`; TASK-014 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-014〜015 remain future and unauthorized.
+TASK-011 remains `COMPLETED`. Architecture Ver.2.23 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 through TASK-014 are `COMPLETED`; TASK-015 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
 
 ## TASK-012 Self-Maintenance Completion
@@ -125,3 +125,8 @@ TASK-012 is `COMPLETED`. `MaintenanceOS` provides read-only fsck, immutable/chec
 ## TASK-013 ExtensionOS Completion
 
 TASK-013 is `COMPLETED`. `ExtensionOS` supplies the single cross-domain Adapter/Plugin SDK with checksummed Manifest/Provider provenance, compatibility/dependency lifecycle, Capability Broker, trust/sandbox/authorization/resource boundaries, Domain Policy/Test/Evidence Packs, artifact gates, subsystem hooks, durable Registry, Extension Conformance and eight reference domains. Verification: Extension 161/161, OS 1059/1059, Consumer 10/10. Current Architecture: Ver.2.23. TASK-014 is next but not started/authorized.
+
+
+## Post-TASK-014 Roadmap Refinement
+
+Architecture Ver.2.25 preserves 54/54 roadmap source sections and extends TASK-015 with optional distributed CalibrationOS coordination: provenance-preserving Evidence transport/deduplication, cohort-aware baselines, remote Counterfactual/Shadow evaluation, exact Candidate version/epoch propagation, fenced canary rollout, regression-driven governed rollback, policy-divergence detection and calibration quota/backpressure. TASK-014 remains completed and no TASK-016 is created by this refinement.

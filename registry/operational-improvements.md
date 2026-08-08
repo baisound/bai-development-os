@@ -220,3 +220,23 @@ TASK-014 is `COMPLETED`. Evidence-based calibration responsibilities accumulated
 | OP-070 | Distributed Calibration Evidence transport, worker identity/fencing, late-result quarantine and replicated extension coordination | Roadmap reserved | TASK-015 |
 
 TASK-015 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Single-machine operation remains first-class; distributed topology is optional rather than a prerequisite.
+
+
+## Post-TASK-014 Roadmap Refinement — 2026-08-08
+
+TASK-014 remains `COMPLETED`. Post-completion review assigns the remaining topology-dependent improvements to existing TASK-015 and intentionally creates no TASK-016.
+
+| ID | Improvement | Disposition | Owner |
+|---|---|---|---|
+| OP-071 | Distributed Calibration Evidence envelope with provenance/class/time-source/attestation and idempotent deduplication | Roadmap reserved | TASK-015 |
+| OP-072 | Cohort/topology-aware calibration baselines with partial-coverage and clock-skew uncertainty | Roadmap reserved | TASK-015 |
+| OP-073 | Remote Counterfactual + Shadow evaluation bound to exact Candidate checksum and worker/environment fingerprint | Roadmap reserved | TASK-015 |
+| OP-074 | Candidate version/activation-epoch propagation with lease/fencing and stale-result quarantine | Roadmap reserved | TASK-015 |
+| OP-075 | Staged/canary distributed policy rollout with post-activation SLO observation and governed rollback | Roadmap reserved | TASK-015 |
+| OP-076 | Distributed policy-divergence detection and reconciliation to canonical activated version | Roadmap reserved | TASK-015 |
+| OP-077 | Tamper-evident distributed calibration checkpoints/receipts without false global-atomic-ledger claims | Roadmap reserved | TASK-015 |
+| OP-078 | Calibration Evidence/evaluation quota, backpressure and Cost Guard controls | Roadmap reserved | TASK-015 |
+| OP-079 | Candidate explainability lineage and decomposable confidence/freshness/coverage evidence | Acceptance requirement | TASK-015 inherited from TASK-014 |
+| OP-080 | Optional learned-model/provider implementations stay behind existing Candidate/Safety/Evaluation/Authorization contract | Extension boundary, no new task | TASK-013/TASK-014 |
+
+TASK-015 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Distributed calibration remains opt-in; single-machine CalibrationOS does not inherit distributed coordination cost.

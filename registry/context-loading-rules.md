@@ -12,7 +12,7 @@ Do not load the whole Architecture or every prior Task by default.
 
 ## 2. Current architecture and roadmap
 
-Architecture Ver.2.24 is current. Part XV is the sole consolidated roadmap authority and preserves `53 / 53` accepted source sections. For TASK-015 scope, load Part XV first. Historical roadmap/addendum sections are provenance only.
+Architecture Ver.2.25 is current. Part XV is the sole consolidated roadmap authority and preserves `54 / 54` accepted source sections. For TASK-015 scope, load Part XV first. Historical roadmap/addendum sections are provenance only.
 
 ## 3. Completed subsystem loading
 
@@ -31,3 +31,6 @@ Use DEV-0〜DEV-4 to select review/test/context depth. Do not raise Context Guar
 ## 6. Extension and Calibration execution context
 
 Do not load or execute provider implementation merely to discover a Manifest. Executable Extension code requires implementation-checksum binding. `IN_PROCESS_TRUSTED` requires independent trust evidence; `SANDBOXED` must execute through a Sandbox Runner. Sandbox-required capability cannot be converted to in-process execution for convenience. External side effects remain governed by IntegrationOS/Owner authorization. Calibration recommendations and Candidate state are advisory only. Do not load a recommendation as active policy unless it has PASS Counterfactual + Shadow evidence, matching Candidate checksums and explicit Owner/Policy authorization records.
+
+
+For TASK-015 distributed CalibrationOS scope, load Architecture Ver.2.25 Part XV subsection 145.11 first. Load `architecture/BAI_Development_OS_Post_TASK014_Roadmap_Refinement_Ver1.0.md` only for provenance/audit. Do not create TASK-016 from TASK-014 residuals unless a later Owner decision identifies a genuinely independent product boundary.

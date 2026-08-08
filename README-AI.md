@@ -20,7 +20,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 
 ## Current canonicals
 
-- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.24.md`
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.25.md`
 - TASK-004 Lifecycle: Ver.1.6
 - TASK-005 KnowledgeOS: Ver.1.2
 - TASK-006 AutomationOS: Ver.1.0
@@ -41,7 +41,7 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 
 ## Roadmap authority
 
-Architecture Ver.2.24 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `53 / 53` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
+Architecture Ver.2.25 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `54 / 54` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
 
 ## Current verification baseline
 
@@ -62,3 +62,6 @@ Architecture Ver.2.24 Part XV is the sole current consolidated roadmap scope. Th
 - Do not persist executable function objects as trusted Registry state; restored executable Extensions require Provider reattachment/re-enable.
 - Do not activate a Calibration Candidate without PASS Counterfactual + Shadow evaluations and both Owner/Policy authorization references.
 - Do not automatically lower DEV, Security, Release, Conformance, Maintenance or Extension safety floors in response to cost/noise findings.
+
+
+Post-TASK-014 refinement: TASK-015 also owns distributed CalibrationOS evidence/evaluation/rollout coordination. Evidence class and authorization semantics remain invariant; distribution is opt-in; no TASK-016 was created.

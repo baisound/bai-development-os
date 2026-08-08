@@ -9,6 +9,7 @@ const task010RefinementPath = path.join(root, 'architecture/BAI_Development_OS_P
 const task011RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK011_Roadmap_Refinement_Ver1.0.md');
 const task012RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK012_Roadmap_Refinement_Ver1.0.md');
 const task013RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK013_Roadmap_Refinement_Ver1.0.md');
+const task014RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK014_Roadmap_Refinement_Ver1.0.md');
 
 const state = fs.readFileSync(statePath, 'utf8');
 const versionMatch = state.match(/Current Architecture Canonical: `BAI Development OS Architecture Ver\.([0-9.]+)`/);
@@ -99,7 +100,19 @@ for (const task of ['014','015']) {
   const body = task013Refinement.slice(bodyStart, next < 0 ? task013Refinement.length : next).trim();
   task013Sections.push({ heading, body });
 }
-const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections];
+const task014Refinement = fs.readFileSync(task014RefinementPath, 'utf8');
+const task014Sections = [];
+for (const task of ['015']) {
+  const heading = `## TASK-${task}`;
+  const start = task014Refinement.indexOf(heading);
+  if (start < 0) throw new Error(`ROADMAP_CHECK_FAIL: TASK-${task} TASK-014 refinement missing`);
+  const bodyStart = task014Refinement.indexOf('\n', start) + 1;
+  const next = task014Refinement.indexOf('\n## ', bodyStart);
+  let body = task014Refinement.slice(bodyStart, next < 0 ? task014Refinement.length : next).trim();
+  body = body.replace(/\n## Task-allocation decision[\s\S]*$/, '').trim();
+  task014Sections.push({ heading, body });
+}
+const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections, ...task014Sections];
 const missing = allSections.filter((s) => !consolidated.includes(s.body));
 if (missing.length) {
   console.error('ROADMAP_CHECK_MISSING_SECTIONS');

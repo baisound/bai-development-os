@@ -2,12 +2,12 @@
 
 ## Current authority
 
-- Architecture: `BAI Development OS Architecture Ver.2.24 CURRENT_CANONICAL`
+- Architecture: `BAI Development OS Architecture Ver.2.25 CURRENT_CANONICAL`
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜014: `COMPLETED`
 - TASK-015: `NEXT / NOT_STARTED / NOT_AUTHORIZED`
-- Roadmap authority: Architecture Ver.2.24 Part XV, `53 / 53 PASS`
+- Roadmap authority: Architecture Ver.2.25 Part XV, `54 / 54 PASS`
 
 ## Current subsystem map
 
@@ -35,10 +35,15 @@ Calibration recommendations have no authority effect by themselves. Permanent mo
 - Full OS: `1115 / 1115 PASS`
 - Consumer: `10 / 10 PASS`
 - Extension Conformance: `10 schemas / 8 domains / 12 shared contracts PASS`
-- Roadmap: `53 / 53 PASS`
+- Roadmap: `54 / 54 PASS`
 - Security / Release / Conformance / Maintenance / Product Boundary: PASS
 - Blocking Critic findings: `0`
 
 ## Loading guidance
 
-Use summaries first. Load a completed TASK canonical only when its exact behavior is implicated. For future TASK-015, load Architecture Ver.2.24 Part XV. Historical Architecture Parts VI〜XIV and post-TASK addenda are provenance and must not independently determine current scope or routing. For Calibration behavior, load `tasks/TASK-014/TASK-014.summary.md` first and then the TASK-014 canonical specification only when exact evidence/candidate/safety/evaluation contracts are needed.
+Use summaries first. Load a completed TASK canonical only when its exact behavior is implicated. For future TASK-015, load Architecture Ver.2.25 Part XV and the Post-TASK-014 refinement only when provenance is needed. Historical Architecture Parts VI〜XIV and post-TASK addenda are provenance and must not independently determine current scope or routing. For Calibration behavior, load `tasks/TASK-014/TASK-014.summary.md` first and then the TASK-014 canonical specification only when exact evidence/candidate/safety/evaluation contracts are needed.
+
+
+## TASK-015 inherited CalibrationOS additions
+
+TASK-015 must preserve TASK-014 Evidence class/provenance and dual-authorization semantics while adding distributed Evidence deduplication, cohort-aware baselines, remote Counterfactual/Shadow evaluation, Candidate version/epoch propagation, fenced staged rollout, post-activation regression observation/rollback, policy divergence detection and calibration quota/backpressure. Distribution is opt-in and cannot become an authority source. No TASK-016 is created by the TASK-014 refinement.

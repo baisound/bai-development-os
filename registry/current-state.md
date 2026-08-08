@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.24`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.25`
 - Current Lifecycle Canonical: `TASK-004 Lifecycle Foundation Ver.1.6`
 - Current Knowledge Canonical: `TASK-005 Knowledge Operating System Ver.1.2`
 - Current Automation Canonical: `TASK-006 Orchestration & Automation Foundation Ver.1.0`
@@ -41,13 +41,13 @@ TASK-014 is `COMPLETED`. `CalibrationOS` converts verified operational Evidence 
 - Release Conformance: `PASS`
 - Security Conformance: `PASS`
 - Product Boundary: `PASS`
-- Roadmap Consolidation: `53 / 53 PASS`
+- Roadmap Consolidation: `54 / 54 PASS`
 - Root `CalibrationOS` export: `PASS`
-- Document Registry: `445 documents / Missing 0 / Hash-Size mismatch 0`
-- Architecture Ver.2.24 DOCX: `142 / 142 pages visual QA PASS`
+- Document Registry: `450 documents / Missing 0 / Hash-Size mismatch 0`
+- Architecture Ver.2.25 DOCX: `145 / 145 pages visual QA PASS`
 - TASK-014 Detailed Design Ver.1.0 DOCX: `9 / 9 pages visual QA PASS`
 - Blocking Critic findings: `0`
 
 ## Accepted Residual
 
-TASK-015 owns optional distributed/remote coordination, worker identity/fencing, replicated Extension Registry coordination, distributed Calibration Evidence transport and late-result quarantine. Windows/macOS Conformance remains SIMULATED/CONDITIONAL until REAL evidence exists. Single-machine CalibrationOS and ExtensionOS remain first-class and do not require distributed topology.
+TASK-015 owns optional distributed/remote coordination, worker identity/fencing, replicated Extension Registry coordination, distributed Calibration Evidence transport/deduplication, cohort-aware aggregation, remote Counterfactual/Shadow evaluation, Candidate epoch propagation, fenced canary rollout, post-activation regression/rollback, policy-divergence detection and late-result quarantine. Windows/macOS Conformance remains SIMULATED/CONDITIONAL until REAL evidence exists. Single-machine CalibrationOS and ExtensionOS remain first-class and do not require distributed topology.
