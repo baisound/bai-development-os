@@ -96,4 +96,9 @@ No Role may:
 
 ## TASK-004 Phase 2–6 Completion
 
-Lifecycle Foundation is formalized through TASK-004 completion. Recovery/Resume, Context, Cost/Model, Closure/Archive, and System Sync are no longer reserved concepts. Current canonicals: Architecture Ver.2.4 and Lifecycle Foundation Ver.1.6.
+Lifecycle Foundation is formalized through TASK-004 completion. Recovery/Resume, Context, Cost/Model, Closure/Archive, and System Sync are no longer reserved concepts. Current canonicals include Architecture Ver.2.6, Lifecycle Foundation Ver.1.6, and Knowledge Operating System Ver.1.2.
+
+
+## TASK-005 Knowledge OS Completion
+
+Knowledge Asset state is now governed by TASK-005. Roles MUST distinguish Knowledge content authority from Workspace Registry indexing, and MUST pass Knowledge Pack through TASK-004 Context Manifest before execution. Mandatory Knowledge safety requirements cannot be weakened solely for token economy.

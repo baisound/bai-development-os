@@ -64,3 +64,8 @@ Historical artifacts remain immutable. Later corrections must be appended throug
 ## Verification failure
 
 When expected evidence is missing or unreadable, use `NOT_CONFIRMED` unless an observed failure supports `FAIL`.
+
+
+## Knowledge evidence — TASK-005
+
+Knowledge Assets require provenance and evidence references appropriate to their type. Failure Knowledge requires explicit evidence. Usage, deviation and verification are separate auditable events. Promotion to broader scope requires verified-use evidence; GLOBAL promotion requires cross-project diversity plus required authority. Invalidating Knowledge does not erase historical usage evidence.

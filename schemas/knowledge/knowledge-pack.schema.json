@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.local/schemas/knowledge/knowledge-pack.schema.json",
+  "title":"Version-pinned Knowledge Pack",
+  "type":"object","additionalProperties":false,
+  "required":["pack_id","task_id","role","phase","generated_at","valid_until","token_budget","estimated_tokens","assets","dropped","conflicts","checksum"],
+  "properties":{
+    "pack_id":{"type":"string"},"task_id":{"type":"string"},"role":{"type":"string"},"phase":{"type":"string"},
+    "generated_at":{"type":"string","format":"date-time"},"valid_until":{"type":"string","format":"date-time"},
+    "token_budget":{"type":"integer","minimum":1},"estimated_tokens":{"type":"integer","minimum":0},
+    "assets":{"type":"array","items":{"type":"object","required":["asset_id","revision","checksum","enforcement","sensitivity","source_trust","summary","required_actions","prohibited_actions","verification_steps"]}},
+    "dropped":{"type":"array"},"conflicts":{"type":"array"},"checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}
+  }
+}

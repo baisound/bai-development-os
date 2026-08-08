@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.local/schemas/knowledge/knowledge-governance-decision.schema.json",
+  "title":"Knowledge Governance Decision",
+  "type":"object","required":["authorized","asset_id","from_status","target_status","actor_role","approvals","reason","evidence_refs"],
+  "properties":{"authorized":{"const":true},"asset_id":{"type":"string"},"from_status":{"type":"string"},"target_status":{"type":"string"},"actor_role":{"type":"string"},"approvals":{"type":"array"},"reason":{"type":"string"},"evidence_refs":{"type":"array"}}
+}

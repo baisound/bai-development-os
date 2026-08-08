@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.local/schemas/knowledge/knowledge-usage-event.schema.json",
+  "title":"Knowledge Usage Event",
+  "type":"object","additionalProperties":false,
+  "required":["event_id","pack_id","asset_id","asset_revision","task_id","action","verification","evidence_refs","recorded_at"],
+  "properties":{
+    "event_id":{"type":"string"},"pack_id":{"type":"string"},"asset_id":{"type":"string"},"asset_revision":{"type":"integer","minimum":1},"task_id":{"type":"string"},
+    "action":{"enum":["APPLIED","DEVIATED","NOT_APPLICABLE"]},"verification":{"enum":["PASS","FAIL","NOT_RUN"]},
+    "deviation_reason":{"type":["string","null"]},"exception_approval":{"type":["object","null"]},"outcome":{},
+    "evidence_refs":{"type":"array","items":{"type":"string"}},"recorded_at":{"type":"string","format":"date-time"}
+  }
+}

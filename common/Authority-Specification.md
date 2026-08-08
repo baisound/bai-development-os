@@ -56,7 +56,7 @@ Policy UPDATE requires explicit user or Owner approval of:
 
 No Role may declare Closure or Archive readiness solely from recommendation.
 
-Closure and archive decisions require the authoritative records defined by the approved Lifecycle Specification. Until TASK-004 formalizes them, such decisions remain provisional and MUST be routed through Orchestrator and Project Policy review.
+Closure and archive decisions require the authoritative records defined by TASK-004 Lifecycle Foundation Ver.1.6. Recommendations alone never create Closure/Archive authority.
 
 ## Scope expansion
 
@@ -66,3 +66,13 @@ When required work exceeds approved scope:
 2. record the reason,
 3. preserve evidence,
 4. request a new authorization or new task.
+
+
+## Knowledge authority — TASK-005
+
+- Knowledge Authoring does not grant activation authority.
+- ACTIVE/INVALID transitions require an approved Knowledge Reviewer decision.
+- GLOBAL or MANDATORY high-impact activation/invalidation additionally requires Owner approval.
+- Raw repository persistence MUST NOT bypass Knowledge Governance.
+- TASK-005 may issue Impact Analysis but MUST NOT mutate Task Lifecycle Status.
+- Workspace Registry indexes Knowledge locations/metadata but is not Knowledge content authority.

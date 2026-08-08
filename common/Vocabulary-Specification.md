@@ -116,3 +116,24 @@ Accepted Risk and Resolved are never interchangeable.
 ## Lifecycle reservation
 
 TASK-004 may add, rename, or formally approve Task Lifecycle states. Until then, Role files may refer to conceptual stages but MUST NOT invent authoritative lifecycle transitions.
+
+
+## Knowledge OS Vocabulary — TASK-005
+
+### Knowledge Asset Status
+
+`CANDIDATE`, `DRAFT`, `UNDER_REVIEW`, `ACTIVE`, `STALE`, `DEPRECATED`, `INVALID`, `ARCHIVED`.
+
+### Knowledge Maturity
+
+`EXPERIENCE`, `OBSERVATION`, `IDEA`, `KNOWLEDGE_ASSET`, `FRAMEWORK`, `STANDARD`, `ORGANIZATION_STANDARD`.
+
+### Knowledge Enforcement
+
+`MANDATORY`, `CONDITIONAL_MANDATORY`, `ADVISORY`, `REFERENCE`.
+
+### Knowledge Scope
+
+`GLOBAL`, `DOMAIN`, `TECHNOLOGY`, `SPECIALIZATION`, `TOOL`, `PROJECT`, `TASK`.
+
+Knowledge Asset Status, Maturity and Enforcement are orthogonal and MUST NOT be collapsed into one field.

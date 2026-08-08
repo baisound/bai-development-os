@@ -155,3 +155,7 @@ Roleは以下を行ってはいけません。
 - Project Policy
 
 Workflowは本仕様に従ってCanonical Documentを読み込むものとします。
+
+## Knowledge artifacts — TASK-005
+
+Knowledge Asset revisions are immutable canonical artifacts. Current pointers are indexes to a revision/checksum and are not substitutes for revision content. Knowledge Packs are immutable, version-pinned execution artifacts. Usage/Event ledgers are append-only evidence. Knowledge candidate seeds are not ACTIVE Knowledge merely because they are stored.

@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T09:36:00+09:00'
+registry_generated_at: '2026-08-08T10:00:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 1a4aa8c05b4c81b767b63d33dae9a17554ac289bdbf949a045dccff6c7b800be
-  size_bytes: 2340
+  sha256: 739b0b2f716eb2819a59a7ed4cc6d07665de33475197d660e6282c3b1c099ee6
+  size_bytes: 2542
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: e06f14ba3427e85e7fbbf70fcafba1ded2af87ff7043bcc0915cf57719852352
-  size_bytes: 1667
+  sha256: 36e7e444e26eacea6d2bd2fca006047c007ef8d46cd74a808bd4eb09f653e152
+  size_bytes: 2028
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: e9d1977cded22b326013e2ccfd7895086586e260cc429843cdaed9918aa3a693
-  size_bytes: 3099
+  sha256: 1b93f54f4a259f0b04b19683b31aa4295bef175fc01cd4ac854c8a62d9a699c0
+  size_bytes: 3805
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -339,8 +339,8 @@ documents:
   category: common-specification
   authority: shared-specification
   importance_level: B
-  sha256: cb89e41a421fde650648c37768f8037213c9727e8a9450188b9d635659f1ee7a
-  size_bytes: 3951
+  sha256: 8c28753461e596d0e898724918bc6bf60fbf6e4cc2a7fe6802de70e492653add
+  size_bytes: 4345
   preferred_loading: summary-or-on-demand
 - document_id: 365E0882CB9D1D0C
   path: common/Authority-Specification.md
@@ -348,8 +348,8 @@ documents:
   category: common-specification
   authority: shared-specification
   importance_level: B
-  sha256: 38459f8a96a21e03bd55cdd219dfe21ae017c8edbf0027ebc12df66e14c0076d
-  size_bytes: 1885
+  sha256: 0af45b5a2fa78c5f4649c3f5aba93b495219a08366cbc159037672fa92f5cd80
+  size_bytes: 2332
   preferred_loading: summary-or-on-demand
 - document_id: 5B7A7DED873DF6B2
   path: common/Evidence-Specification.md
@@ -357,8 +357,8 @@ documents:
   category: common-specification
   authority: shared-specification
   importance_level: B
-  sha256: a81b65133bc45ca7e044e7484229f2b1731be85c25508b425852e23fed4759c6
-  size_bytes: 1509
+  sha256: 863f4fe9bbb626f46e4fcdce430f0efc23d77086bfc8c507eb68d18d007a3cad
+  size_bytes: 1944
   preferred_loading: summary-or-on-demand
 - document_id: 7650F11F4F02F04E
   path: common/README-Common.md
@@ -366,8 +366,8 @@ documents:
   category: common-specification
   authority: shared-specification
   importance_level: B
-  sha256: de3f2bf0f84082227f8671cb8dfaa9cd7073332c43b08610567522af70d8e773
-  size_bytes: 3068
+  sha256: 3953336b00684ff9729918758ed27078fe0167f248bd6ee2178231064b1df73b
+  size_bytes: 3453
   preferred_loading: summary-or-on-demand
 - document_id: 6E5DA3D48C70DEB6
   path: common/Vocabulary-Specification.md
@@ -375,8 +375,8 @@ documents:
   category: common-specification
   authority: shared-specification
   importance_level: B
-  sha256: 4351feb4e623c0a5ee8ed42d9a62da0e991ad8f214390e8c35edd6dd2e8a4800
-  size_bytes: 2039
+  sha256: cf2b320bf428aed63065a0a22fa1eb4d05abf506dcb18b88e4e2312dc85e1f39
+  size_bytes: 2634
   preferred_loading: summary-or-on-demand
 - document_id: C1F2A3B9266498FD
   path: common/Workflow-Specification.md
@@ -393,8 +393,8 @@ documents:
   category: common-specification
   authority: navigation-aid
   importance_level: B
-  sha256: f6e7d2bca08c747c8b6b73c6437a0bc8995fababfbb4dedb9ab3599a59f02374
-  size_bytes: 2358
+  sha256: 0e9cd719757d962e2efc2cc3708163c5b848eeaccfb1e309fdd59d07c5d5e7e7
+  size_bytes: 2194
   preferred_loading: summary-or-on-demand
 - document_id: 1C24D28B28058C31
   path: config/.gitkeep
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: 4dad12b4cb8bd3744e0ec68679521a4c1a1de262d09a27c0782b39c1d81fde82
-  size_bytes: 2050
+  sha256: b8d7717eff7746a4c81fec441009e7c7bf5f06bf82805d5076b2904f08e29e2a
+  size_bytes: 2162
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: c848232a5b1ed5e65890cf7d3317a1f7a7af5a035a2d1feb95c0f79683383d0d
-  size_bytes: 2797
+  sha256: 9f5a79ca2e5388df9e33f6661bddbcca7ab19b80e5b5934d86e5ac04440ba12d
+  size_bytes: 3092
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6ab49f552acf99ed2f4f1e36e4a2c05b93dec3edbef687c7a6e2e39fe028da20
-  size_bytes: 5221
+  sha256: 1996159b4eeda5f923c9839179c2fb12138db004a8b8609735565a90a2a7886c
+  size_bytes: 3391
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -1698,8 +1698,8 @@ documents:
   category: template
   authority: navigation-aid
   importance_level: B
-  sha256: af2aa3e1167f45f08c25e08d7e8db880dc9dde7f8e30e6ef1ae78a3225823dd5
-  size_bytes: 2012
+  sha256: 5ca6d54fdf9ced78d786f989773d469d7d1141ab6b2dbed2dafc290f15acc197
+  size_bytes: 3839
   preferred_loading: summary-or-on-demand
 - document_id: 45296949C18C87E9
   path: templates/test-report.template.md
@@ -1717,10 +1717,13 @@ documents:
   authority: machine-readable-canonical-copy
   importance_level: A
   preferred_loading: summary-first
-  status: CURRENT_CANONICAL
+  status: SUPERSEDED_CANONICAL_BASELINE
   effective_date: '2026-08-08'
   sha256: 2e3139930d853feea8c2244961cf0829f02233f2aaea3735cb1c5775318cb430
   size_bytes: 113568
+  freshness_status: HISTORICAL
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6
 - document_id: 2CE444D01AF24696
   path: architecture/BAI_Development_OS_Architecture_Ver2.5.docx
   title: BAI_Development_OS_Architecture_Ver2.5.docx
@@ -1728,10 +1731,13 @@ documents:
   authority: human-readable-copy
   importance_level: C
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL_COMPANION
+  status: SUPERSEDED_CANONICAL_BASELINE
   effective_date: '2026-08-08'
   sha256: 14e1e6bc347a36f7f23e63f9d3cdf257fbb7736e0e20d17d7fa86cb450eb5977
   size_bytes: 64767
+  freshness_status: HISTORICAL
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6
 - document_id: 55E00E312ADABE35
   path: architecture/BAI_Development_OS_Architecture_Ver2.5.summary.md
   title: BAI Development OS Architecture Ver.2.5 — Summary
@@ -1739,10 +1745,13 @@ documents:
   authority: navigation-aid
   importance_level: A
   preferred_loading: always
-  status: CURRENT_CANONICAL_SUMMARY
+  status: SUPERSEDED_CANONICAL_BASELINE
   effective_date: '2026-08-08'
   sha256: 5e911728941b7f9e915a378f42eca76fe1a6f5c540102e12df0c6657aa5b63cc
   size_bytes: 933
+  freshness_status: HISTORICAL
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6
 - document_id: 2FF7456C229C7E5A
   path: architecture/BAI_Development_OS_Post_TASK008_Roadmap_Expansion_Ver1.0.md
   title: BAI Development OS Post-TASK-008 Roadmap Expansion Ver.1.0
@@ -1754,18 +1763,356 @@ documents:
   effective_date: '2026-08-08'
   sha256: 1cda4d46877c7813f5aef286443b107a01e33e9e250b2413f13556ee07f643c0
   size_bytes: 2465
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6
+  path: architecture/BAI_Development_OS_Architecture_Ver2.6.md
+  title: BAI Development OS Architecture Ver.2.6 — TASK-005 Knowledge OS Integrated
+  category: architecture
+  authority: machine-readable-canonical-copy
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '2.5'
+  sha256: 58104e3eb06636f17a964c8168f2ddde4cf25055fb4aaacc14fee5ef5ef15eca
+  size_bytes: 119285
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6_HUMAN
+  path: architecture/BAI_Development_OS_Architecture_Ver2.6.docx
+  title: BAI_Development_OS_Architecture_Ver2.6.docx
+  category: architecture
+  authority: human-readable-copy
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  previous_version: '2.5'
+  sha256: 14e1e6bc347a36f7f23e63f9d3cdf257fbb7736e0e20d17d7fa86cb450eb5977
+  size_bytes: 64767
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6_SUMMARY
+  path: architecture/BAI_Development_OS_Architecture_Ver2.6.summary.md
+  title: BAI Development OS Architecture Ver.2.6 — Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: always
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+  sha256: e40af3687b40e1bac8109356d2b3ebbb0f073f1e18c2f1aabc3c1e754bbb0ecc
+  size_bytes: 1179
+- document_id: TASK_005_KNOWLEDGE_OS_VER1_2_MACHINE
+  path: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md
+  title: TASK-005 BAI Development OS Knowledge Operating System Detailed Design Ver.1.2
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  implementation_status: COMPLETED
+  verification_status: 75 / 75 PASS; OS 309 / 309 PASS
+  sha256: 2632ea6a85c8048804d4a9500de10ed8735c79a811a49e9f6fb5c9b1949a69ab
+  size_bytes: 21191
+- document_id: TASK_005_KNOWLEDGE_OS_VER1_2_HUMAN
+  path: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
+  title: TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+  visual_qa: 21 / 21 PAGES PASS
+  sha256: b1f955bd83b4b58bc389fed0e65b4b8782ff8b538b7517e09e10a395f537ceca
+  size_bytes: 48369
+- document_id: TASK_005_KNOWLEDGE_OS_VER1_2_SUMMARY
+  path: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
+  title: TASK-005 Knowledge Operating System Ver.1.2 — Summary
+  category: specification
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: always
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+  sha256: 414613a35fb14544a774eb24207ee16fd3b7ed09b297917e8054eee23a02feea
+  size_bytes: 927
+- document_id: EB5E1CACAB066068
+  path: tasks/TASK-005/task.md
+  title: TASK-005 — BAI Development OS Knowledge Operating System
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: A
+  preferred_loading: on-demand
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 6f4f3b46554d13177fe78603135204c1e0224484f79aa98d71516683dd8a901f
+  size_bytes: 2753
+- document_id: 00AD934FCCF95A7C
+  path: tasks/TASK-005/detailed-design.md
+  title: TASK-005 Detailed Design Record
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  preferred_loading: on-demand
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 071c550784365c49fb92aaacbe9c53ec95b3f5d0d6feb280a34886fa884670c7
+  size_bytes: 1075
+- document_id: 417330F93ABA21CE
+  path: tasks/TASK-005/implementation-report.md
+  title: TASK-005 Implementation Report
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  preferred_loading: on-demand
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 6d302b0b1cb14e0c48890a905391bfe8e455adcc797965ff7bd4f0851e8aeb13
+  size_bytes: 1661
+- document_id: C6A570D9986D4B1B
+  path: tasks/TASK-005/test-report.md
+  title: TASK-005 Test Report
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  preferred_loading: on-demand
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 3a295d0e63e43e4cb31d769a9ee71195d9feb8019fd81fdf905d9467b62b0239
+  size_bytes: 1229
+- document_id: 6C212215141BD332
+  path: tasks/TASK-005/critic-review.md
+  title: TASK-005 Independent Critic Review
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  preferred_loading: on-demand
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 1509476e346b8ef68ec4cf605757aa82e854dadba3f952c8cd6c52afb81db384
+  size_bytes: 1849
+- document_id: A60BDBE2062362E8
+  path: tasks/TASK-005/final-implementation-decision.md
+  title: TASK-005 Final Implementation Decision
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: A
+  preferred_loading: on-demand
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 4990f00027e8282b4c4c93719bf24b8f8b4f1a802afe76c89c8ef29fbc9bb89c
+  size_bytes: 526
+- document_id: 54A6996E8B19B40D
+  path: tasks/TASK-005/task005-final-completion-record.md
+  title: TASK-005 Final Completion Record
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: A
+  preferred_loading: read-first
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 8bb24a783f167e15c7912da7f0e62cb36ae4e49a9871a1a2df99bca42c673488
+  size_bytes: 1251
+- document_id: B11CFA1EAA20F374
+  path: tasks/TASK-005/TASK-005.summary.md
+  title: AI Task Summary — TASK-005
+  category: task-evidence
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 3f9ae847d5b2400852e35c38f67ca48f6fc9fbbed70a287dbc042f1e59439e9f
+  size_bytes: 1336
+- document_id: D2BF79425E253DF3
+  path: tasks/TASK-005/document-sync-and-visual-qa.md
+  title: TASK-005 Canonical Document Sync and Visual QA
+  category: task-evidence
+  authority: task-evidence-with-scope-defined-by-artifact
+  importance_level: C
+  preferred_loading: on-demand
+  status: COMPLETED_TASK_EVIDENCE
+  effective_date: '2026-08-08'
+  sha256: 9554cea385145edc563e262ea9f033b719aaf2cfd73a0d924fdefc01424d8991
+  size_bytes: 1331
+- document_id: B875EA51D0FD2466
+  path: schemas/knowledge/failure-knowledge.schema.json
+  title: failure-knowledge.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: dde5b2870e1c538a96214a768154f4559244dc800e2a0b2a4854c5fc128810e7
+  size_bytes: 786
+- document_id: EFA8066AC18859CC
+  path: schemas/knowledge/knowledge-asset.schema.json
+  title: knowledge-asset.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: 87e7e0fd90c09fe2696dd86be8e9ecf18ddec3524dace623a71e978155661a8b
+  size_bytes: 3556
+- document_id: 8B2A06E5CB59C777
+  path: schemas/knowledge/knowledge-governance-decision.schema.json
+  title: knowledge-governance-decision.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: f7ef9f94bddc2af49a431002d548e14cff48836d653153342dc81b9193cae415
+  size_bytes: 597
+- document_id: 97C8C5300A0700C0
+  path: schemas/knowledge/knowledge-pack.schema.json
+  title: knowledge-pack.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: dd14220ac3b6781acb0646fb4c81aa103abc611b23b77a01fd788de4e2455893
+  size_bytes: 1076
+- document_id: D5F2E7F2DB625992
+  path: schemas/knowledge/knowledge-resolution-request.schema.json
+  title: knowledge-resolution-request.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: e1751c32bda3275887f50fceb3be7e79ff1d7290786cda6b7afd089c5b0253ae
+  size_bytes: 1074
+- document_id: B708763A65AEF793
+  path: schemas/knowledge/knowledge-resolution-result.schema.json
+  title: knowledge-resolution-result.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: 00c079463d18439e59262773b5bdd6cbee5a52939a89a39fbda32647c273fcef
+  size_bytes: 856
+- document_id: 2A4FE5E15054381F
+  path: schemas/knowledge/knowledge-taxonomy.schema.json
+  title: knowledge-taxonomy.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: 380a39ab56576621f0252e176a9edb4be88bb76d3f1a277bda2aa39af5ea6e6d
+  size_bytes: 478
+- document_id: F65B5971CA4CAB48
+  path: schemas/knowledge/knowledge-usage-event.schema.json
+  title: knowledge-usage-event.schema.json
+  category: schema
+  authority: machine-readable-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_IMPLEMENTATION_CONTRACT
+  effective_date: '2026-08-08'
+  sha256: 295af749c811d2e1af302a5d5e5d94aae7585939e6fea0403b2bfa3be3434143
+  size_bytes: 891
+- document_id: C532FE38C55DCCA6
+  path: templates/knowledge-adr.template.md
+  title: Knowledge ADR
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+  sha256: 366dde4f8f088a9c09b758edfb4c42a149459e13b9d94ba0cbe53781ce553004
+  size_bytes: 198
+- document_id: 5D4F1B35CE7941AD
+  path: templates/knowledge-asset.template.md
+  title: Knowledge Asset
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+  sha256: 6ac7f0c5ce7213c10dd67ee2c9c079042d33750644f0e7703939c5b694af493f
+  size_bytes: 429
+- document_id: 3B2C99D390A7F524
+  path: templates/knowledge-candidate-handoff.template.md
+  title: Knowledge Candidate Handoff
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+  sha256: 16c3e226eeedf284df6a0c0b95e6af14dac224f0c31824c55095b53081e21859
+  size_bytes: 287
+- document_id: 3F0F7CD39B77421D
+  path: templates/knowledge-pattern.template.md
+  title: Knowledge Pattern / Anti-Pattern
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+  sha256: eeff0e14d78bf47d4dd97d3562e2a001f1898cd44b078e13e436b702f7d7c088
+  size_bytes: 205
+- document_id: B4A3A425F76BB552
+  path: templates/knowledge-resolution.template.md
+  title: Knowledge Resolution Record
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+  sha256: ae090189084778f75c65c39b2c358f10b6d689d5fc861a0ba04f0dedaf81d1d8
+  size_bytes: 301
+- document_id: 9D3B967CA049C8B5
+  path: templates/failure-knowledge.template.md
+  title: Failure Knowledge Candidate
+  category: template
+  authority: supporting-artifact
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_TEMPLATE
+  effective_date: '2026-08-08'
+  sha256: 9f67bbf4eab51c28a974f5eed0ca791812db21130f9f5524bf6df16129e9abaa
+  size_bytes: 265
+- document_id: 164077A2FFC0E8AA
+  path: knowledge/seeds/task004-failure-candidates.json
+  title: task004-failure-candidates.json
+  category: knowledge-seed
+  authority: candidate-knowledge-data
+  importance_level: B
+  preferred_loading: on-demand
+  status: CANDIDATE_DATASET
+  effective_date: '2026-08-08'
+  activation_status: NOT_AUTO_PROMOTED
+  sha256: e8b383248d3c3a45f59ebf5a8cbac7e9bb2f46c806c1f0219d24b50bba0de93c
+  size_bytes: 31467
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner
   consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Post_TASK008_Roadmap_Expansion_Ver1.0.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-005/document-sync-and-visual-qa.md
   architecture:
-    document_id: AI_DEVELOPMENT_OS_ARCHITECTURE
-    version: '2.5'
+    document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6
+    version: '2.6'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.5.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.5.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.5.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.6.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.6.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.6.summary.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
@@ -1776,8 +2123,18 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_TASK004_COMPLETION
+  registry_sync_status: CURRENT_AFTER_TASK005_COMPLETION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
   roadmap_expansion_status: TASK_009_TO_TASK_014_RESERVED_NOT_AUTHORIZED
+  task_005_knowledge:
+    document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
+    version: '1.2'
+    status: CURRENT_CANONICAL
+    human: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
+    machine: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md
+    summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
+  task_005_status: COMPLETED
+  task_006_status: NEXT_NOT_STARTED
+  next_canonical_route: TASK-006 — Workspace Registry / Resolver / Automation
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_POST_TASK008_ROADMAP_EXPANSION
+registry_status: CURRENT_AFTER_TASK005_COMPLETION

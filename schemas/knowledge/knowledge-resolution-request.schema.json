@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.local/schemas/knowledge/knowledge-resolution-request.schema.json",
+  "title":"Knowledge Resolution Request",
+  "type":"object","additionalProperties":true,
+  "required":["task_id","role","phase","scope","sensitivity","token_budget"],
+  "properties":{
+    "task_id":{"type":"string","minLength":1},"role":{"type":"string","minLength":1},"phase":{"type":"string","minLength":1},
+    "scope":{"type":"object"},"tool_versions":{"type":"object","additionalProperties":{"type":"string"}},
+    "environment_tags":{"type":"array","items":{"type":"string"}},"project_tags":{"type":"array","items":{"type":"string"}},
+    "sensitivity":{"enum":["PUBLIC","INTERNAL","CONFIDENTIAL","RESTRICTED"]},"token_budget":{"type":"integer","minimum":1},
+    "required_asset_ids":{"type":"array","items":{"type":"string"}},"required_tags":{"type":"array","items":{"type":"string"}},
+    "minimum_source_trust_rank":{"type":"integer","minimum":0,"maximum":6},"now":{"type":"string","format":"date-time"}
+  }
+}

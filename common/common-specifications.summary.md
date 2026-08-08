@@ -9,40 +9,42 @@ Load `README-Common.md` and this summary first. Load only the Common Specificati
 ### Artifact-Specification.md
 
 - Title: Artifact Specification
-- SHA-256: `cb89e41a421fde650648c37768f8037213c9727e8a9450188b9d635659f1ee7a`
-- Key headings: Artifact Specification, Purpose, Canonical artifact requirements, Authorship, Historical artifact immutability, File scope, Builder output exclusivity, Policy artifacts
+- SHA-256: `8c28753461e596d0e898724918bc6bf60fbf6e4cc2a7fe6802de70e492653add`
+- Key additions: Knowledge revision/current pointer separation, immutable Knowledge Pack artifacts, usage/event evidence, historical integrity.
 
 ### Authority-Specification.md
 
 - Title: Authority Specification
-- SHA-256: `38459f8a96a21e03bd55cdd219dfe21ae017c8edbf0027ebc12df66e14c0076d`
-- Key headings: Authority Specification, Purpose, General rule, Authority separation, Implementation authorization, Policy update authorization, Closure and archive authority, Scope expansion
+- SHA-256: `0af45b5a2fa78c5f4649c3f5aba93b495219a08366cbc159037672fa92f5cd80`
+- Key additions: Knowledge Reviewer authority, Owner safety floor for Global/Mandatory Knowledge, Lifecycle/Knowledge authority separation.
 
 ### Evidence-Specification.md
 
 - Title: Evidence Specification
-- SHA-256: `a81b65133bc45ca7e044e7484229f2b1731be85c25508b425852e23fed4759c6`
-- Key headings: Evidence Specification, Purpose, Evidence priority, Evidence rules, Finite commands, Persistent processes, User-provided evidence, Evidence preservation
+- SHA-256: `863f4fe9bbb626f46e4fcdce430f0efc23d77086bfc8c507eb68d18d007a3cad`
+- Key additions: Knowledge provenance, application/deviation/verification evidence, effectiveness and impact evidence.
 
 ### README-Common.md
 
 - Title: Common Role Specification
-- SHA-256: `51084f366de8699a76fb27ddb289b4e9542cf8fc2f00f5a839998bcbd39ff882`
-- Key headings: Common Role Specification, Status, Scope, Required dependencies, Core principles, Canonical precedence, Common input expectations, Common output expectations
+- SHA-256: `3953336b00684ff9729918758ed27078fe0167f248bd6ee2178231064b1df73b`
+- Current canonicals: Architecture Ver.2.6, TASK-004 Lifecycle Foundation Ver.1.6, TASK-005 Knowledge Operating System Ver.1.2.
 
 ### Vocabulary-Specification.md
 
 - Title: Vocabulary Specification
-- SHA-256: `4351feb4e623c0a5ee8ed42d9a62da0e991ad8f214390e8c35edd6dd2e8a4800`
-- Key headings: Vocabulary Specification, Purpose, Technical verification Result, Execution Status, Observation Status, Gate Readiness, Design Judgment, Final Plan Consistency Check
+- SHA-256: `cf2b320bf428aed63065a0a22fa1eb4d05abf506dcb18b88e4e2312dc85e1f39`
+- Key additions: Knowledge Status, Maturity, Enforcement and Scope vocabulary.
 
 ### Workflow-Specification.md
 
 - Title: Workflow Specification
-- SHA-256: `54a8da9dcaee9350a05b02af3936a362573daa0061987ab57e8797789438d829`
-- Key headings: Workflow Specification, Purpose, Current canonical operational flow, Important limitation, Routing, Rework loops, Closure and archive
+- SHA-256: `6a6cd787f1cf82de1d8a01865f674a9c0b93ded04e8f810c18c5d7fccd03ae22`
+- Key headings: current canonical operational flow, routing, rework loops, closure and archive.
 
 ## Mandatory Principle
 
 - Common Specifications are shared governance inputs. A Role must not silently override them.
+- Knowledge authority does not replace Lifecycle authority: TASK-005 never mutates Task Status.
+- Knowledge Pack execution must still pass TASK-004 Context Manifest / Context Guard.
 - When authority, evidence, artifact format, vocabulary, or workflow is uncertain, load the corresponding full specification.

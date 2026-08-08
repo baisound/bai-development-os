@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.local/schemas/knowledge/knowledge-taxonomy.schema.json",
+  "title":"Knowledge Taxonomy",
+  "type":"array",
+  "items":{"type":"object","required":["node_id","label"],"properties":{"node_id":{"type":"string"},"label":{"type":"string"},"scope_level":{"enum":["GLOBAL","DOMAIN","TECHNOLOGY","SPECIALIZATION","TOOL","PROJECT","TASK"]},"parent_ids":{"type":"array","items":{"type":"string"}}}}
+}

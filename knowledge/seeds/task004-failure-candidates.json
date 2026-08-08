@@ -1,0 +1,954 @@
+[
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-01",
+    "title": "Missing file misclassification",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Treating a missing or unresolved file as proof that the resource does not exist",
+      "guidance": [
+        "Resolve through the correct source/registry and report unresolved state rather than absence"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not infer non-existence from one failed path lookup"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "MISSING_FILE_MISCLASSIFICATION",
+      "failure_mode": "Treating a missing or unresolved file as proof that the resource does not exist",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Resolve through the correct source/registry and report unresolved state rather than absence",
+      "prohibited_inference": [
+        "Do not infer non-existence from one failed path lookup"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "MISSING_FILE_MISCLASSIFICATION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:d58bcdece1cb96099baea7b17896f68e68360850fc8b9bb0b0ff7e9ab7bfc22a"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-02",
+    "title": "Pre-probe environment inference",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Inferring runtime, shell, filesystem or toolchain before probing the actual execution environment",
+      "guidance": [
+        "Probe runtime/environment capabilities before emitting operational commands"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not infer runtime from UI labels, historical sessions or apparent path syntax"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "PRE_PROBE_ENVIRONMENT_INFERENCE",
+      "failure_mode": "Inferring runtime, shell, filesystem or toolchain before probing the actual execution environment",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Probe runtime/environment capabilities before emitting operational commands",
+      "prohibited_inference": [
+        "Do not infer runtime from UI labels, historical sessions or apparent path syntax"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "PRE_PROBE_ENVIRONMENT_INFERENCE"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:a102fafd64f7d08c418985fe7af5adddd001b1e554b1a7ec60fc8f298a92a1eb"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-03",
+    "title": "Foundation role-path omission",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "A foundation role or canonical path is omitted from the loaded context and silently bypassed",
+      "guidance": [
+        "Resolve all mandatory role/canonical inputs before activation"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not continue when a mandatory role or authority path is unresolved"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "FOUNDATION_ROLE_PATH_OMISSION",
+      "failure_mode": "A foundation role or canonical path is omitted from the loaded context and silently bypassed",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Resolve all mandatory role/canonical inputs before activation",
+      "prohibited_inference": [
+        "Do not continue when a mandatory role or authority path is unresolved"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "FOUNDATION_ROLE_PATH_OMISSION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:46d76d4932111b181bb764cc2ddb120421f57b1822979dc6a40e14d55145a23f"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-04",
+    "title": "Evidence path misresolution",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Evidence is evaluated using an incorrect or stale path",
+      "guidance": [
+        "Resolve canonical evidence location and verify checksum/identity before evaluation"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not classify evidence based on a guessed path"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "EVIDENCE_PATH_MISRESOLUTION",
+      "failure_mode": "Evidence is evaluated using an incorrect or stale path",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Resolve canonical evidence location and verify checksum/identity before evaluation",
+      "prohibited_inference": [
+        "Do not classify evidence based on a guessed path"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "EVIDENCE_PATH_MISRESOLUTION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:73888252b9b0521557e4282ad3650044db1163e666f911a97708e57fd56af9ce"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-05",
+    "title": "Untracked Evidence misclassification",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Untracked files are assumed to be invalid or irrelevant evidence without checking provenance",
+      "guidance": [
+        "Classify evidence by provenance and authority, not Git tracked state alone"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not equate untracked with untrusted"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "UNTRACKED_EVIDENCE_MISCLASSIFICATION",
+      "failure_mode": "Untracked files are assumed to be invalid or irrelevant evidence without checking provenance",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Classify evidence by provenance and authority, not Git tracked state alone",
+      "prohibited_inference": [
+        "Do not equate untracked with untrusted"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "UNTRACKED_EVIDENCE_MISCLASSIFICATION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:71f49ada6d6bf4cb238deafd2ea815dcfcf84a06ab2815f48a87d8187e569a78"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-06",
+    "title": "Shell dialect mismatch",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Commands are generated for a shell different from the active runtime transport",
+      "guidance": [
+        "Resolve shell provider and command dialect before execution"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not emit bash/PowerShell syntax based on workspace type alone"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "SHELL_DIALECT_MISMATCH",
+      "failure_mode": "Commands are generated for a shell different from the active runtime transport",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Resolve shell provider and command dialect before execution",
+      "prohibited_inference": [
+        "Do not emit bash/PowerShell syntax based on workspace type alone"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "SHELL_DIALECT_MISMATCH"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:9b019d32092c22f28037f4faf4aced73152893dd841816855da6faf6f0f41b51"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-07",
+    "title": "Agent Window / Inline Chat runtime confusion",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Different Chat surfaces are assumed to share the same runtime and path accessibility",
+      "guidance": [
+        "Probe the runtime interface independently for each activation surface"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not transfer runtime assumptions between Agent Window and Inline Chat"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "AGENT_WINDOW_INLINE_CHAT_RUNTIME_CONFUSION",
+      "failure_mode": "Different Chat surfaces are assumed to share the same runtime and path accessibility",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Probe the runtime interface independently for each activation surface",
+      "prohibited_inference": [
+        "Do not transfer runtime assumptions between Agent Window and Inline Chat"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "AGENT_WINDOW_INLINE_CHAT_RUNTIME_CONFUSION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:a5b487aeb83d46aeec5cd84728f17e61ea724ca264e45ac2274de26b3772c16e"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-08",
+    "title": "Historical output collision",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "New output overwrites or collides with immutable historical evidence or canonical baselines",
+      "guidance": [
+        "Use versioned output paths and collision checks before writing"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not silently replace historical evidence"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "HISTORICAL_OUTPUT_COLLISION",
+      "failure_mode": "New output overwrites or collides with immutable historical evidence or canonical baselines",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Use versioned output paths and collision checks before writing",
+      "prohibited_inference": [
+        "Do not silently replace historical evidence"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "HISTORICAL_OUTPUT_COLLISION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:376b39d5d221869733cc476a7d67845a46ec064ee8d119d06d05a645a17b6982"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-09",
+    "title": "Tester source modification",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Independent Tester changes implementation source while verifying it",
+      "guidance": [
+        "Tester must report failures and evidence without modifying protected implementation source unless explicitly authorized"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not mix independent verification with source repair"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "TESTER_SOURCE_MODIFICATION",
+      "failure_mode": "Independent Tester changes implementation source while verifying it",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Tester must report failures and evidence without modifying protected implementation source unless explicitly authorized",
+      "prohibited_inference": [
+        "Do not mix independent verification with source repair"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "TESTER_SOURCE_MODIFICATION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:b5bdc0ddb07aa3f86093abfd105bc3e5e094e889b3e8ec92c539f977f167b704"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-10",
+    "title": "Durability error suppression",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Filesystem durability or persistence errors are swallowed and success is reported",
+      "guidance": [
+        "Propagate durability failures and fail closed when required persistence cannot be proven"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not convert fsync/rename/persistence errors into success"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "DURABILITY_ERROR_SUPPRESSION",
+      "failure_mode": "Filesystem durability or persistence errors are swallowed and success is reported",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Propagate durability failures and fail closed when required persistence cannot be proven",
+      "prohibited_inference": [
+        "Do not convert fsync/rename/persistence errors into success"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "DURABILITY_ERROR_SUPPRESSION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:22616bec4b2a19288e9f2ca5788ee2c48f26509a5c652331873d0635f48ab32e"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-11",
+    "title": "Premature Event-based commit",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "A lifecycle event is treated as sufficient evidence to commit or close before all acceptance evidence is satisfied",
+      "guidance": [
+        "Evaluate completion and commit against canonical gate and evidence requirements"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not infer completion solely from one event emission"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "PREMATURE_EVENT_BASED_COMMIT",
+      "failure_mode": "A lifecycle event is treated as sufficient evidence to commit or close before all acceptance evidence is satisfied",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Evaluate completion and commit against canonical gate and evidence requirements",
+      "prohibited_inference": [
+        "Do not infer completion solely from one event emission"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "PREMATURE_EVENT_BASED_COMMIT"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:12cf75270ccbf827320366946d1200ef8037ab54fea0839c18a9c0bf75d22888"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-12",
+    "title": "String-to-Boolean coercion",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Configuration strings such as false or 0 are coerced as truthy booleans",
+      "guidance": [
+        "Validate typed configuration values explicitly at schema boundaries"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not rely on generic truthiness for policy booleans"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "STRING_TO_BOOLEAN_COERCION",
+      "failure_mode": "Configuration strings such as false or 0 are coerced as truthy booleans",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Validate typed configuration values explicitly at schema boundaries",
+      "prohibited_inference": [
+        "Do not rely on generic truthiness for policy booleans"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "STRING_TO_BOOLEAN_COERCION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:28c0470d73a70099fe5466e6e7d8c06884115619a9de0affd83404a0bbc0d25f"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-13",
+    "title": "Unannounced filename change",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Canonical or expected filenames are renamed without migration and registry synchronization",
+      "guidance": [
+        "Use explicit version and migration records and update all canonical references"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not silently rename canonical documents"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "UNANNOUNCED_FILENAME_CHANGE",
+      "failure_mode": "Canonical or expected filenames are renamed without migration and registry synchronization",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Use explicit version and migration records and update all canonical references",
+      "prohibited_inference": [
+        "Do not silently rename canonical documents"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "UNANNOUNCED_FILENAME_CHANGE"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:cabc2b4046d2316d57e86b1d446a8569338f4e75b9bec2eb9e64c33b80290e51"
+  },
+  {
+    "status": "CANDIDATE",
+    "maturity": "EXPERIENCE",
+    "enforcement": "REFERENCE",
+    "source_trust": "VERIFIED_INTERNAL",
+    "sensitivity": "INTERNAL",
+    "confidence": 0.7,
+    "tags": [
+      "task-004",
+      "failure-candidate",
+      "foundation"
+    ],
+    "taxonomy_node_ids": [],
+    "relations": [],
+    "applicability": {},
+    "asset_id": "KA-FAIL-TASK004-14",
+    "title": "Human/Machine authority misresolution",
+    "knowledge_type": "FAILURE_CASE",
+    "scope": {
+      "level": "DOMAIN",
+      "domain": "bai-development-os"
+    },
+    "provenance": {
+      "source_ids": [
+        "TASK-004"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "created_by": "TASK-005 migration"
+    },
+    "content": {
+      "summary": "Human-readable companion and machine canonical authority are confused",
+      "guidance": [
+        "Resolve authority from document metadata and registry and preserve the designated machine canonical source"
+      ],
+      "required_actions": [],
+      "prohibited_actions": [
+        "Do not infer authority from file format or readability"
+      ],
+      "verification_steps": [
+        "Confirm the failure condition is absent or safely handled before promotion."
+      ]
+    },
+    "freshness": {
+      "review_after": "2026-11-08T00:00:00.000Z",
+      "expires_at": "2027-08-08T00:00:00.000Z"
+    },
+    "failure": {
+      "fingerprint": "HUMAN_MACHINE_AUTHORITY_MISRESOLUTION",
+      "failure_mode": "Human-readable companion and machine canonical authority are confused",
+      "environment_scope": [
+        "BAI Development OS foundation"
+      ],
+      "safe_action": "Resolve authority from document metadata and registry and preserve the designated machine canonical source",
+      "prohibited_inference": [
+        "Do not infer authority from file format or readability"
+      ],
+      "evidence_refs": [
+        "tasks/TASK-004/foundation-improvement-integration-plan.md"
+      ],
+      "recurrence_key": "HUMAN_MACHINE_AUTHORITY_MISRESOLUTION"
+    },
+    "revision": 1,
+    "created_at": "2026-08-08T00:00:00.000Z",
+    "updated_at": "2026-08-08T00:00:00.000Z",
+    "checksum": "sha256:ba01e978c1825d5a47a1becdb5cf86ff36e4fc7682bf3f2484572cba1220f050"
+  }
+]

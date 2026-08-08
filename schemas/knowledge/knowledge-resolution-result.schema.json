@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.local/schemas/knowledge/knowledge-resolution-result.schema.json",
+  "title":"Knowledge Resolution Result",
+  "type":"object","required":["result","selected","excluded","conflicts","request"],"additionalProperties":true,
+  "properties":{
+    "result":{"enum":["KNOWLEDGE_RESOLUTION_READY","KNOWLEDGE_RESOLUTION_BLOCKED"]},
+    "reason":{"type":"string"},"total_estimated_tokens":{"type":"integer","minimum":0},
+    "selected":{"type":"array","items":{"type":"object","required":["asset_id","revision","checksum","score","estimated_tokens","enforcement"]}},
+    "excluded":{"type":"array","items":{"type":"object","required":["asset_id","reason"]}},
+    "conflicts":{"type":"array"},"missing":{"type":"array","items":{"type":"string"}},"request":{"type":"object"}
+  }
+}

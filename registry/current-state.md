@@ -5,80 +5,61 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.5`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.6`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
+- Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - TASK-004: `COMPLETED`
-- Closure: `PASS / CLOSURE_READY`
-- Archive capability: `TECHNICALLY_COMPLETED`
-- TASK-004 repository Archive: `READY / NOT_ARCHIVED`; local completion commit exists and Archive Manifest post-commit verification passes; push/tag remains a separate repository operation
-- Phase 1: technically completed and Judge-approved
-- Phase 1.5: Context Guard Core MVP `APPROVED_WITH_CONDITIONS` historical milestone
-- Phase 1.6: Foundation Guard `TECHNICALLY_COMPLETED_MVP`
-- Phase 1.7: Cost Guard `TECHNICALLY_COMPLETED_MVP`
-- Phase 1.8: Execution Budget Guard `TECHNICALLY_COMPLETED_MVP`
-- Phase 2: Recovery Control `TECHNICALLY_COMPLETED`
-- Phase 3: Context Control `TECHNICALLY_COMPLETED`
-- Phase 4: Cost / Model Control `TECHNICALLY_COMPLETED`
-- Phase 5: Closure / Archive / Migration `TECHNICALLY_COMPLETED`
-- Phase 6: System Synchronization `TECHNICALLY_COMPLETED`
-- Model-routing permanent vendor policy: unchanged
-- Next canonical development route: `TASK-005 — Knowledge OS` (`NOT_STARTED / NOT_AUTHORIZED`)
+- TASK-005: `COMPLETED`
+- Next canonical development route: `TASK-006 — Workspace Registry / Resolver / Automation` (`NOT_STARTED`)
+- Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-08`
 
 ## Product Boundary
 
-BAI Development OS is standalone. `javascript-roulette` is a Reference Consumer / Regression Project and is not an OS-core host. Historical Evidence may retain former `/home/baisound/projects/ai-team` and `javascript-roulette/docs/ai-team` paths; those paths are historical evidence rather than current operational roots.
+BAI Development OS is standalone. `javascript-roulette` is a Reference Consumer / Regression Project and is not an OS-core host. Historical Evidence may retain former roots; those are point-in-time evidence, not operational roots.
 
-## Adaptive Development Governance
+## Completed Foundation
 
-Development depth is selected from `DEV_0_QUICK` through `DEV_4_FOUNDATION_CRITICAL` using system scale, feature scale, criticality, failure impact, reversibility, novelty, scope, and high-risk boundaries. CORE has a DEV-3 safety floor; FOUNDATION/CRITICAL uses DEV-4. Token economy cannot weaken required critical testing/review. Permanent model selection remains a separate policy concern.
+TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archive/Migration and System Sync foundations. TASK-005 adds the governed Knowledge Operating System on top without taking ownership of Task Lifecycle state.
 
-## TASK-004 Delivered Foundation
+## TASK-005 Delivered Knowledge Contract
 
-- Foundation-wide activation Permit/registry/state binding, TOCTOU revalidation, audit and Gateway enforcement.
-- Atomic Task/Role/Session Cost reservation/actual/release ledger and execution-budget Hard Stops.
-- Integrity-bound Resume Checkpoints, distinct PAUSED/BLOCKED/STALLED semantics, Emergency Stop resume authority and rollback planning.
-- Context Manifest with Trust/Freshness/Sensitivity/conflict/invalidation/token controls.
-- Capability/context/tool/privacy/reliability/independence/cost/latency/availability/deprecation-aware Model Routing.
-- Closure Readiness, Completion Record, Archive Manifest/readiness, dependency cycle protection and historical migration mapping.
-- Authorized System File synchronization with path confinement, checksum/content verification and fail-closed behavior.
-
-## Critic Findings Resolved
-
-1. Persisted Permit canonical identity verification strengthened.
-2. Cost reservation/settlement concurrency made atomic.
-3. Archive file verification symlink escape closed with canonical realpath containment.
-4. System Sync symlink escape closed with canonical realpath containment.
+- Knowledge Asset Status, Maturity and Enforcement are separate axes.
+- Asset revisions are immutable/sequential and checksum-bound.
+- Asset Event and Usage histories are hash-chained.
+- Scope/applicability, Source Trust, Sensitivity, Confidence and freshness are explicit.
+- Resolver behavior is deterministic and Mandatory conflict/absence fails closed.
+- Knowledge Pack pins revision/checksum and cannot bypass TASK-004 Context Manifest.
+- Usage/deviation/verification/effectiveness are auditable.
+- Global/Mandatory high-impact Governance retains Owner safety floors.
+- Invalid Knowledge emits Impact Analysis but does not mutate Task Lifecycle Status.
+- Fourteen TASK-004 Failure Knowledge records are migrated as `CANDIDATE` only.
 
 ## Final Verification
 
-Binding evidence: `tasks/TASK-004/phase2-to-6-final-verification.md`.
-
-- BAI Development OS: `234 / 234 PASS`
+- TASK-005 Knowledge suite: `75 / 75 PASS`
+- Full BAI Development OS suite: `309 / 309 PASS`
 - Product Boundary: `PASS`
-- Required root exports: `14 / 14`
-- JavaScript Roulette reference consumer tests: `10 / 10 PASS`
-- Active/current-surface scoped `git diff --cached --check`: `PASS` before local completion commit; historical imported Evidence whitespace is preserved
-- Canonical DOCX visual QA: Architecture Ver.2.5 `66 pages`; Lifecycle Foundation Ver.1.6 `40 pages`; all pages inspected
-- Secret-pattern scan over active implementation/system surfaces: no match
+- Root Knowledge export: `PASS`
+- JavaScript Roulette Reference Consumer: `10 / 10 PASS`
+- Blocking Critic findings: `0`
+- Document Registry: `185 documents / Missing 0 / Hash-Size mismatch 0`
+- Canonical DOCX visual QA: `Architecture 70/70 pages PASS; Knowledge OS 21/21 pages PASS`
 
-Consumer Vite build was not re-executed in the isolated artifact because dependency installation could not retrieve the pinned Vite package from the available package registry. Consumer source was not changed by TASK-004 Phase 2–6; its executable core regression remains `10 / 10 PASS` and Product Boundary verification passes.
+## Accepted Residual
+
+Knowledge Asset revision/current/event persistence is fail-closed but not a single power-loss-atomic filesystem transaction. Verification detects partial state. Journal recovery/automatic repair is reserved for later hardening/self-maintenance Tasks.
 
 ## Roadmap
 
-1. TASK-005 — Knowledge OS
-2. TASK-006 — Registry / Resolver / Automation
-3. TASK-007 — Monitoring & Dashboard
-4. TASK-008 — External Integration
-5. TASK-009 — Security / Supply Chain / Integrity Hardening
-6. TASK-010 — Release / Distribution / Consumer Upgrade OS
-7. TASK-011 — Multi-Project Conformance & Compatibility Lab
-8. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
-9. TASK-013 — Domain Adapter / Plugin SDK
-10. TASK-014 — Adaptive Governance Calibration & Policy Learning
+1. TASK-006 — Registry / Resolver / Automation
+2. TASK-007 — Monitoring & Dashboard
+3. TASK-008 — External Integration
+4. TASK-009 — Security / Supply Chain / Integrity Hardening
+5. TASK-010 — Release / Distribution / Consumer Upgrade OS
+6. TASK-011 — Multi-Project Conformance & Compatibility Lab
+7. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
+8. TASK-013 — Domain Adapter / Plugin SDK
+9. TASK-014 — Adaptive Governance Calibration & Policy Learning
 
-TASK-009〜014 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-005 remains the next planned route.
-
-## Routing Rule
-
-TASK-004 is complete and MUST NOT be reopened for ordinary enhancements. A defect or enhancement found later is handled by a new follow-up Task. TASK-005 is the next planned canonical route but is not silently authorized by TASK-004 completion.
+TASK-009–014 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED` items. TASK-006 is next but is not automatically active merely because TASK-005 completed.

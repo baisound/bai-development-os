@@ -30,6 +30,11 @@ Adaptive Development Governance changes workflow depth, not permanent model-sele
 
 ## TASK-004 Completed Lifecycle Contract
 
-TASK-004 is the completed Lifecycle Foundation baseline. Use `architecture/BAI_Development_OS_Architecture_Ver2.4.md` and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` as current machine canonicals. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
+TASK-004 is the completed Lifecycle Foundation baseline. Use `architecture/BAI_Development_OS_Architecture_Ver2.6.md` and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` as current machine canonicals. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
 
 Adaptive Development Governance still changes workflow depth rather than permanent model-selection policy.
+
+
+## TASK-005 Completed Knowledge Contract
+
+TASK-005 is completed. Load `tasks/TASK-005/TASK-005.summary.md` and the Ver.1.2 Knowledge canonical only when Knowledge behavior is relevant. Knowledge Pack is a TASK-004 Context Source and never a Context Manifest authority. Do not use Workspace Registry as Knowledge content authority. The next route is TASK-006.

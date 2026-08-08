@@ -19,8 +19,9 @@ BAI Development OS is a standalone reusable development foundation rooted at:
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.5.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.6.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ `.docx`, `.summary.md`)
+- `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ `.docx`, `.summary.md`)
 
 Reference consumer:
 
@@ -31,8 +32,8 @@ Reference consumer:
 ## Current Priority
 
 - TASK-004 Lifecycle Foundation is `COMPLETED` and is a read-only completed baseline for ordinary future work.
-- No new OS Task is implicitly active merely because TASK-004 is complete.
-- The next planned route is TASK-005 Knowledge OS (`NOT_STARTED / NOT_AUTHORIZED`).
+- TASK-005 Knowledge OS is `COMPLETED`.
+- The next planned route is TASK-006 Workspace Registry / Resolver / Automation (`NOT_STARTED`).
 - Lifecycle defects discovered later are routed to a new follow-up Task rather than reopening TASK-004.
 
 ## Adaptive Routing Rule
@@ -41,14 +42,14 @@ Before choosing a Role sequence, classify the change into DEV-0 through DEV-4. S
 
 Adaptive profile selection does not modify permanent model-routing policy.
 
-## Completed TASK-004 Capabilities
+## Completed TASK-004 / TASK-005 Capabilities
 
-Recovery/Checkpoint, Context Control, atomic Cost Guard, Model Routing, Closure/Archive/Migration/Dependency control, and authorized System Sync are implemented runtime surfaces. Use the current canonical documents for exact contracts.
+TASK-004 provides Recovery/Checkpoint, Context Control, atomic Cost Guard, Model Routing, Closure/Archive/Migration/Dependency and authorized System Sync. TASK-005 adds governed Knowledge Assets, deterministic resolution, Knowledge Packs, persistent usage/verification evidence, promotion/demotion, freshness/invalidation/impact and Knowledge Governance. Use current canonical documents for exact contracts.
 
 ## Roadmap Identity
 
-- TASK-005 Knowledge OS
-- TASK-006 Registry / Resolver / Automation
+- TASK-005 Knowledge OS — COMPLETED
+- TASK-006 Registry / Resolver / Automation — NEXT
 - TASK-007 Monitoring & Dashboard
 - TASK-008 External Integration
 - TASK-009 Security / Supply Chain / Integrity Hardening

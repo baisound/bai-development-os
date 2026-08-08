@@ -24,15 +24,16 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.5.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.6.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
+- `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 
-TASK-004 includes the completed foundation through Phase 6: Foundation/Cost/Execution Guards, Recovery, Context Control, Cost/Model Control, Closure/Archive/Migration/Dependency control, and System Synchronization.
+TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 is also `COMPLETED` and provides the governed Knowledge Operating System: immutable Knowledge Assets, deterministic resolution, Knowledge Packs, usage/verification/effectiveness, promotion/demotion, freshness/invalidation/impact and Knowledge Governance.
 
 ## Roadmap
 
-- `TASK-005`: Knowledge OS — next planned route, `NOT_STARTED / NOT_AUTHORIZED`
-- `TASK-006`: Workspace Registry / Resolver / Automation foundation
+- `TASK-005`: Knowledge OS — `COMPLETED`
+- `TASK-006`: Workspace Registry / Resolver / Automation foundation — next route
 - `TASK-007`: Monitoring & Dashboard
 - `TASK-008`: External Integration
 - `TASK-009`: Security / Supply Chain / Integrity Hardening
@@ -55,4 +56,5 @@ Node.js >= 20.19.0
 ```bash
 npm test
 npm run check:boundaries
+npm run test:knowledge
 ```
