@@ -1,0 +1,3 @@
+import { MaintenanceError } from './errors.mjs';
+import { deepFreeze, nowIso } from './util.mjs';
+export function createRetentionPlan(items=[], {clock=()=>new Date()}={}){const now=Date.parse(nowIso(clock));const decisions=[];for(const item of items){if(!item.id)throw new MaintenanceError('MAINTENANCE_RETENTION_ITEM_INVALID');const expiry=item.expires_at?Date.parse(item.expires_at):Infinity;const protectedItem=Boolean(item.protected||item.canonical||item.authority||item.audit_required||item.rollback_required);decisions.push({id:item.id,action:!protectedItem&&Number.isFinite(expiry)&&expiry<=now?'DELETE_DERIVED':'RETAIN',reason:protectedItem?'PROTECTED':(expiry<=now?'EXPIRED_DERIVED':'NOT_EXPIRED')});}return deepFreeze({retention_plan_version:'1.0.0',decisions});}

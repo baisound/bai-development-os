@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"bai://schemas/maintenance/retention-plan.schema.json","title":"Maintenance Retention Plan","type":"object","required":["retention_plan_version","decisions"],"properties":{"retention_plan_version":{"const":"1.0.0"},"decisions":{"type":"array"}},"additionalProperties":true}

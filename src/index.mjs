@@ -24,3 +24,5 @@ export * as SecurityOS from './security/index.mjs';
 export * as ReleaseOS from './release/index.mjs';
 
 export * as ConformanceOS from './conformance/index.mjs';
+
+export * as MaintenanceOS from './maintenance/index.mjs';

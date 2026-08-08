@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","$id":"bai://schemas/maintenance/maintenance-checkpoint.schema.json","title":"Maintenance Checkpoint","type":"object","required":["maintenance_checkpoint_version","checkpoint_id","created_at","files"],"properties":{"maintenance_checkpoint_version":{"const":"1.0.0"},"files":{"type":"array"}},"additionalProperties":true}

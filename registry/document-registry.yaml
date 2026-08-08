@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T17:45:00+09:00'
+registry_generated_at: '2026-08-08T18:02:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: f2c534efac4ae1b6e4affcf63312b881fd786130fdedeeb1f09d9df32dcd2293
-  size_bytes: 9694
+  sha256: 0803a4d90f7c15f45c706803396ccf7c946046915576b185e5b3586c027c19ee
+  size_bytes: 4501
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 32cbbe90ff638e46c416f7c4dbfe6150adb927daa0a3fa44785dac350caa292b
-  size_bytes: 6782
+  sha256: 3f47b0407ab3ec14dff0ba3e10c2e45f8d738b4829b8e8413e86520cb28d8e61
+  size_bytes: 7455
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 50e4815b2a956ebc38da974845cecc2c7a4d93aaec18ba70babd846482911cf0
-  size_bytes: 9590
+  sha256: ef76bc69cab2fbe5fce8240fcd734e788f0b31b8bac36643c8299605f475dc7b
+  size_bytes: 10251
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -68,8 +68,7 @@ documents:
   preferred_loading: on-demand
 - document_id: 5390C8B409EC616A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.summary.md
-  title: AI Summary — AI-readable canonical copy generated from the adjacent
-    DOCX.
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
   category: architecture
   authority: navigation-aid
   importance_level: B
@@ -102,8 +101,7 @@ documents:
   preferred_loading: on-demand
 - document_id: 060C9E34E219D36E
   path: architecture/AI_Development_OS_Architecture_Ver2.0.summary.md
-  title: AI Summary — AI-readable canonical copy generated from the adjacent
-    DOCX.
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
   category: architecture
   authority: navigation-aid
   status: SUPERSEDED_HISTORICAL_BASELINE
@@ -129,8 +127,7 @@ documents:
   verified_by: Orchestrator
   previous_version: '2.0'
   supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
   baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
   writable: false
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_HUMAN
@@ -150,8 +147,7 @@ documents:
   verified_by: Orchestrator
   previous_version: '2.0'
   supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
   baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
   writable: false
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_MACHINE
@@ -171,8 +167,7 @@ documents:
   verified_by: Orchestrator
   previous_version: '2.0'
   supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_0
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
   baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
   writable: false
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_SUMMARY
@@ -192,10 +187,8 @@ documents:
   verified_by: Orchestrator
   previous_version: '2.1'
   supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_HUMAN
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
-  migration_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
   writable: false
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_HUMAN
 - document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_MACHINE
@@ -214,10 +207,8 @@ documents:
   verified_by: Orchestrator
   previous_version: '2.1'
   supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_MACHINE
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
-  migration_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
   writable: false
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_MACHINE
 - document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_2_SUMMARY
@@ -236,10 +227,8 @@ documents:
   verified_by: Orchestrator
   previous_version: '2.1'
   supersedes: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_1_SUMMARY
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
-  migration_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
   writable: false
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_SUMMARY
 - document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_HUMAN
@@ -256,8 +245,7 @@ documents:
   effective_date: '2026-08-08'
   last_verified_at: '2026-08-08'
   verified_by: Orchestrator
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
   sha256: 791f7a8e2cad0a02e0839d57dc2cb93b5cfdb11057a3ea332df30b04b67ca8d2
   size_bytes: 59847
 - document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_MACHINE
@@ -274,8 +262,7 @@ documents:
   effective_date: '2026-08-08'
   last_verified_at: '2026-08-08'
   verified_by: Orchestrator
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
   sha256: b073957827f64b9912104299268d5334f6fd102e514915be2bbe18b85b16f36f
   size_bytes: 97705
 - document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_3_SUMMARY
@@ -292,8 +279,7 @@ documents:
   effective_date: '2026-08-08'
   last_verified_at: '2026-08-08'
   verified_by: Orchestrator
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
   sha256: 51affd0f6f77a759c8e3a8a95a4eca5b76392dcf40c0b409a2ece1eea5d00103
   size_bytes: 1640
 - document_id: 90552F574B527198
@@ -309,8 +295,7 @@ documents:
   effective_date: '2026-08-08'
 - document_id: 44CB683B99E2502F
   path: architecture/BAI_Development_OS_Architecture_Ver2.4.md
-  title: BAI Development OS Architecture Ver.2.4 — TASK-004 Lifecycle Foundation
-    Complete
+  title: BAI Development OS Architecture Ver.2.4 — TASK-004 Lifecycle Foundation Complete
   category: architecture
   authority: machine-readable-canonical-copy
   importance_level: A
@@ -331,10 +316,8 @@ documents:
   status: SUPERSEDED_CANONICAL_SUMMARY
   effective_date: '2026-08-08'
 - document_id: B920A9AE26507732
-  path:
-    architecture/BAI_Development_OS_Product_Boundary_and_Adaptive_Governance_Addendum_Ver1.0.md
-  title: BAI Development OS Product Boundary and Adaptive Governance Addendum
-    Ver.1.0
+  path: architecture/BAI_Development_OS_Product_Boundary_and_Adaptive_Governance_Addendum_Ver1.0.md
+  title: BAI Development OS Product Boundary and Adaptive Governance Addendum Ver.1.0
   category: architecture
   authority: operational-addendum
   importance_level: A
@@ -491,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: ad89bc8b31be2ef5279e2d5e34199792ecc5062c98823f4ad2f826f8ac64c271
-  size_bytes: 3351
+  sha256: 5c9c949a143c65f73d1cc4673a637e8c45f7840f2b6a78b5a2b07a9dddf07aca
+  size_bytes: 3582
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -502,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 28efd59b138b785e06ff287ad5a312dbb4a0b8247be18d4db3e4c92423ff6451
-  size_bytes: 9339
+  sha256: 41735821074c48af387a46a6c65d8068dccc7c1a4b157310304e0870dea1be8d
+  size_bytes: 10030
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -511,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: fbb7ba6dead617c8c859d5d24c2cbc03226af62c680331681c011d605344256c
-  size_bytes: 4892
+  sha256: fdfd5381fb78ed201150df70ff97b347f7adf8cdab77a979d033fa843d0af398
+  size_bytes: 5513
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -520,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6ccf6a01577dd392f62634dff42f2f83dd739025aec3b229159535b058eb5a7d
-  size_bytes: 12968
+  sha256: 623cf54e16165f28a02ccc9b9172fe0087680e12638a6e074d4b7a49ff5ec0a8
+  size_bytes: 10265
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -529,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 3e6c08fd17ae298138e08f1f482af948b9ace4c63e9dd17a983c1ccbf9484e0a
-  size_bytes: 14108
+  sha256: 11ddd7a95a6dbd46b54012b04a315b944d552523ce7d746ecf1efe23fd0415ec
+  size_bytes: 14619
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -542,8 +525,7 @@ documents:
   size_bytes: 50
   preferred_loading: summary-or-on-demand
 - document_id: C37C551EE19C092B
-  path:
-    reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.docx
+  path: reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.docx
   title: TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.docx
   category: review
   authority: human-readable-copy
@@ -552,8 +534,7 @@ documents:
   size_bytes: 43718
   preferred_loading: on-demand
 - document_id: 485EEF7217A1DA4D
-  path:
-    reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.md
+  path: reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.md
   title: AI-readable canonical copy generated from the adjacent DOCX.
   category: review
   authority: supporting-artifact
@@ -562,10 +543,8 @@ documents:
   size_bytes: 15684
   preferred_loading: on-demand
 - document_id: 2F2372321F6974A5
-  path:
-    reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.summary.md
-  title: AI Summary — AI-readable canonical copy generated from the adjacent
-    DOCX.
+  path: reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.summary.md
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
   category: review
   authority: navigation-aid
   importance_level: B
@@ -764,8 +743,7 @@ documents:
   size_bytes: 6155
   preferred_loading: read-first
 - document_id: 2D8C9D6890787F77
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.md
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.md
   title: AI-readable canonical copy generated from the adjacent DOCX.
   category: specification
   authority: machine-readable-canonical-copy
@@ -776,10 +754,8 @@ documents:
   size_bytes: 23456
   preferred_loading: on-demand
 - document_id: 66FF7B023C1CEE3C
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.summary.md
-  title: AI Summary — AI-readable canonical copy generated from the adjacent
-    DOCX.
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.1_Attachment_Integrated.summary.md
+  title: AI Summary — AI-readable canonical copy generated from the adjacent DOCX.
   category: specification
   authority: navigation-aid
   status: HISTORICAL_SOURCE
@@ -789,8 +765,7 @@ documents:
   size_bytes: 4893
   preferred_loading: summary-or-on-demand
 - document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_HUMAN
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.docx
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.docx
   title: TASK-004 Lifecycle Foundation Ver.1.2
   category: historical-baseline
   authority: immutable_attachment_baseline
@@ -803,8 +778,7 @@ documents:
   effective_date: '2026-07-31'
   verified_by: Orchestrator
 - document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_MACHINE
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
   title: TASK-004 Lifecycle Foundation Ver.1.2
   category: historical-baseline
   authority: immutable_attachment_baseline
@@ -817,8 +791,7 @@ documents:
   effective_date: '2026-07-31'
   verified_by: Orchestrator
 - document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_2_HISTORICAL_SUMMARY
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.summary.md
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.summary.md
   title: TASK-004 Lifecycle Foundation Ver.1.2
   category: historical-baseline
   authority: immutable_attachment_baseline
@@ -831,8 +804,7 @@ documents:
   effective_date: '2026-07-31'
   verified_by: Orchestrator
 - document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_HUMAN
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.docx
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.docx
   title: TASK-004 AI Development OS Lifecycle Foundation Ver.1.3
   category: specification
   authority: human_canonical_companion
@@ -847,12 +819,9 @@ documents:
   verified_by: Orchestrator
   previous_version: '1.2'
   supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_2
-  baseline_source:
-    /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
-  coverage_evidence:
-    /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_source: /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  coverage_evidence: /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
   baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
   implementation_status: IMPLEMENTATION_APPROVED
   verification_status: 88 PASS / 0 FAIL; 23 / 23 PASS
@@ -861,8 +830,7 @@ documents:
   writable: false
   superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_HUMAN
 - document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_MACHINE
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.md
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.md
   title: TASK-004 AI Development OS Lifecycle Foundation Ver.1.3
   category: specification
   authority: machine_canonical_authority
@@ -877,12 +845,9 @@ documents:
   verified_by: Orchestrator
   previous_version: '1.2'
   supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_2
-  baseline_source:
-    /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
-  coverage_evidence:
-    /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_source: /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  coverage_evidence: /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
   baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
   implementation_status: IMPLEMENTATION_APPROVED
   verification_status: 88 PASS / 0 FAIL; 23 / 23 PASS
@@ -891,8 +856,7 @@ documents:
   writable: false
   superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_MACHINE
 - document_id: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_SUMMARY
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.summary.md
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.3_Current_State_Integrated.summary.md
   title: AI Summary — TASK-004 Lifecycle Foundation Ver.1.3
   category: specification
   authority: context_economy_summary
@@ -907,12 +871,9 @@ documents:
   verified_by: Orchestrator
   previous_version: '1.2'
   supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_2
-  baseline_source:
-    /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
-  coverage_evidence:
-    /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
+  baseline_source: /home/baisound/projects/ai-team/specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_Ver1.2_Attachment_Integrated.md
+  coverage_evidence: /home/baisound/projects/javascript-roulette/docs/ai-team/tasks/TASK-004/document-version-coverage-ver1.1-to-ver1.2-reassessment-01.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/cross-format-consistency-check.md
   baseline_commit: 3ce360ba5cef063cd046d88ce007d42c0b54a275
   implementation_status: IMPLEMENTATION_APPROVED
   verification_status: 88 PASS / 0 FAIL; 23 / 23 PASS
@@ -921,10 +882,8 @@ documents:
   writable: false
   superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_SUMMARY
 - document_id: FCD6748ADDC60940
-  path:
-    specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_詳細設計書_Ver1.1_レビュー反映版.docx
-  title:
-    TASK-004_AI_Development_OS_Lifecycle_Foundation_Φ⌐│τ┤░Φ¿¡Φ¿êµ¢╕_Ver1.1_πâ¼πâôπâÑπâ╝σÅìµÿáτëê.docx
+  path: specifications/TASK-004_AI_Development_OS_Lifecycle_Foundation_詳細設計書_Ver1.1_レビュー反映版.docx
+  title: TASK-004_AI_Development_OS_Lifecycle_Foundation_Φ⌐│τ┤░Φ¿¡Φ¿êµ¢╕_Ver1.1_πâ¼πâôπâÑπâ╝σÅìµÿáτëê.docx
   category: specification
   authority: human-readable-copy
   status: HISTORICAL_SOURCE
@@ -934,8 +893,7 @@ documents:
   size_bytes: 48753
   preferred_loading: on-demand
 - document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_HUMAN
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.docx
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.docx
   title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.4
   category: specification
   authority: human_canonical_companion
@@ -950,20 +908,16 @@ documents:
   verified_by: Orchestrator
   previous_version: '1.3'
   supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_HUMAN
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
-  migration_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
   implementation_status: IMPLEMENTATION_APPROVED_PLUS_P0_EXTRACTION
-  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference
-    consumer; BOUNDARY_CHECK_PASS
+  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
   critical: 0
   high: 0
   writable: false
   superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_HUMAN
 - document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_MACHINE
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.md
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.md
   title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.4
   category: specification
   authority: machine_canonical_authority
@@ -978,20 +932,16 @@ documents:
   verified_by: Orchestrator
   previous_version: '1.3'
   supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_MACHINE
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
-  migration_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
   implementation_status: IMPLEMENTATION_APPROVED_PLUS_P0_EXTRACTION
-  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference
-    consumer; BOUNDARY_CHECK_PASS
+  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
   critical: 0
   high: 0
   writable: false
   superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_MACHINE
 - document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_SUMMARY
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.summary.md
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.4.summary.md
   title: AI Summary — TASK-004 BAI Development OS Lifecycle Foundation Ver.1.4
   category: specification
   authority: context_economy_summary
@@ -1006,20 +956,16 @@ documents:
   verified_by: Orchestrator
   previous_version: '1.3'
   supersedes: TASK_004_LIFECYCLE_FOUNDATION_VER1_3_SUMMARY
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
-  migration_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/product-extraction-documentation-consistency-check.md
+  migration_evidence: /home/baisound/bai-development-os/tasks/TASK-004/p0.0-p0.1-extraction-verification.md
   implementation_status: IMPLEMENTATION_APPROVED_PLUS_P0_EXTRACTION
-  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference
-    consumer; BOUNDARY_CHECK_PASS
+  verification_status: 134 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
   critical: 0
   high: 0
   writable: false
   superseded_by: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_SUMMARY
 - document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_HUMAN
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.docx
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.docx
   title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.5
   category: specification
   authority: human_canonical_companion
@@ -1028,8 +974,7 @@ documents:
   previous_version: '1.4'
   supersedes: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_HUMAN
   implementation_status: PHASE_1_6_TO_1_8_TECHNICALLY_COMPLETED_MVP
-  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference
-    consumer; BOUNDARY_CHECK_PASS
+  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
   critical: 0
   high: 0
   status: CURRENT_CANONICAL
@@ -1037,13 +982,11 @@ documents:
   effective_date: '2026-08-08'
   last_verified_at: '2026-08-08'
   verified_by: Orchestrator
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
   sha256: af72a923079a9836f0e2c63696a01aa88303f2416cbc4d6a60f8a7cb454066d8
   size_bytes: 39138
 - document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_MACHINE
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.md
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.md
   title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.5
   category: specification
   authority: machine_canonical_authority
@@ -1052,8 +995,7 @@ documents:
   previous_version: '1.4'
   supersedes: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_MACHINE
   implementation_status: PHASE_1_6_TO_1_8_TECHNICALLY_COMPLETED_MVP
-  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference
-    consumer; BOUNDARY_CHECK_PASS
+  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
   critical: 0
   high: 0
   status: CURRENT_CANONICAL
@@ -1061,13 +1003,11 @@ documents:
   effective_date: '2026-08-08'
   last_verified_at: '2026-08-08'
   verified_by: Orchestrator
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
   sha256: 8b33bb0d13044486c6bc5c53a59a5189fc85a19314cf0edb1748f1984a16966c
   size_bytes: 68574
 - document_id: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_5_SUMMARY
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.summary.md
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.5.summary.md
   title: AI Summary — TASK-004 BAI Development OS Lifecycle Foundation Ver.1.5
   category: specification
   authority: context_economy_summary
@@ -1076,8 +1016,7 @@ documents:
   previous_version: '1.4'
   supersedes: TASK_004_BAI_LIFECYCLE_FOUNDATION_VER1_4_SUMMARY
   implementation_status: PHASE_1_6_TO_1_8_TECHNICALLY_COMPLETED_MVP
-  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference
-    consumer; BOUNDARY_CHECK_PASS
+  verification_status: 171 PASS / 0 FAIL OS; 10 PASS / 0 FAIL reference consumer; BOUNDARY_CHECK_PASS
   critical: 0
   high: 0
   status: CURRENT_CANONICAL
@@ -1085,13 +1024,11 @@ documents:
   effective_date: '2026-08-08'
   last_verified_at: '2026-08-08'
   verified_by: Orchestrator
-  consistency_evidence:
-    /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase1.6-to-1.8-final-verification.md
   sha256: 99ac8b27b3e1549b2768d13aaafa06cae35a160bcbfcb295d4dd29015c4ae05f
   size_bytes: 1338
 - document_id: 454C24AE07C2AAD7
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
   title: TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
   category: specification
   authority: human-readable-copy
@@ -1102,10 +1039,8 @@ documents:
   status: CURRENT_CANONICAL_COMPANION
   effective_date: '2026-08-08'
 - document_id: D91AFBEBD278C13F
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md
-  title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6 — Phase 2–6
-    and Task Completion Integrated
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md
+  title: TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6 — Phase 2–6 and Task Completion Integrated
   category: specification
   authority: machine-readable-canonical-copy
   importance_level: A
@@ -1115,8 +1050,7 @@ documents:
   status: CURRENT_CANONICAL
   effective_date: '2026-08-08'
 - document_id: DE85D5793C06773A
-  path:
-    specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.summary.md
+  path: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.summary.md
   title: TASK-004 Lifecycle Foundation Ver.1.6 — Summary
   category: specification
   authority: navigation-aid
@@ -1300,8 +1234,7 @@ documents:
   sha256: 872cd6c143066c898484bb687affc80075e32f70eae7c37896e8f82082fe5f17
   size_bytes: 1730
 - document_id: TASK004_P16_IMPLEMENTATION_VERIFY
-  path:
-    tasks/TASK-004/phase1.6-foundation-guard-implementation-and-verification.md
+  path: tasks/TASK-004/phase1.6-foundation-guard-implementation-and-verification.md
   title: Phase 1.6 Foundation Guard Implementation and Verification
   category: task-evidence
   authority: verification-evidence
@@ -1378,8 +1311,7 @@ documents:
   sha256: e8a2b3592ec00a0cd677b8b1af7d99ab5d35b1095777f3c0d99c09545824177c
   size_bytes: 1169
 - document_id: TASK004_P18_IMPLEMENTATION_VERIFY
-  path:
-    tasks/TASK-004/phase1.8-execution-budget-implementation-and-verification.md
+  path: tasks/TASK-004/phase1.8-execution-budget-implementation-and-verification.md
   title: Phase 1.8 Execution Budget Implementation and Verification
   category: task-evidence
   authority: verification-evidence
@@ -1445,8 +1377,7 @@ documents:
   status: FINAL_TASK004_EVIDENCE
   effective_date: '2026-08-08'
 - document_id: 2895C8D9B4A35DCC
-  path:
-    tasks/TASK-004/phase4-cost-model-control-implementation-and-verification.md
+  path: tasks/TASK-004/phase4-cost-model-control-implementation-and-verification.md
   title: TASK-004 Phase 4 — Cost / Model Control Implementation and Verification
   category: task-evidence
   authority: evidence
@@ -1457,10 +1388,8 @@ documents:
   status: FINAL_TASK004_EVIDENCE
   effective_date: '2026-08-08'
 - document_id: 9158E9CE57FDCC07
-  path:
-    tasks/TASK-004/phase5-closure-archive-migration-implementation-and-verification.md
-  title: TASK-004 Phase 5 — Closure / Archive / Historical Migration
-    Implementation and Verification
+  path: tasks/TASK-004/phase5-closure-archive-migration-implementation-and-verification.md
+  title: TASK-004 Phase 5 — Closure / Archive / Historical Migration Implementation and Verification
   category: task-evidence
   authority: evidence
   importance_level: B
@@ -1471,8 +1400,7 @@ documents:
   effective_date: '2026-08-08'
 - document_id: EE3D491FB718C900
   path: tasks/TASK-004/phase6-system-sync-implementation-and-verification.md
-  title: TASK-004 Phase 6 — System Synchronization Implementation and
-    Verification
+  title: TASK-004 Phase 6 — System Synchronization Implementation and Verification
   category: task-evidence
   authority: evidence
   importance_level: B
@@ -1784,8 +1712,7 @@ documents:
   preferred_loading: summary-or-on-demand
 - document_id: 13390595881BAAFF
   path: architecture/BAI_Development_OS_Architecture_Ver2.5.md
-  title: BAI Development OS Architecture Ver.2.5 — Post-TASK-008 Expansion
-    Roadmap Integrated
+  title: BAI Development OS Architecture Ver.2.5 — Post-TASK-008 Expansion Roadmap Integrated
   category: architecture
   authority: machine-readable-canonical-copy
   importance_level: A
@@ -1838,8 +1765,7 @@ documents:
   size_bytes: 2465
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_6
   path: architecture/BAI_Development_OS_Architecture_Ver2.6.md
-  title: BAI Development OS Architecture Ver.2.6 — TASK-005 Knowledge OS
-    Integrated
+  title: BAI Development OS Architecture Ver.2.6 — TASK-005 Knowledge OS Integrated
   category: architecture
   authority: machine-readable-canonical-copy
   importance_level: A
@@ -1884,10 +1810,8 @@ documents:
   writable: false
   superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_7
 - document_id: TASK_005_KNOWLEDGE_OS_VER1_2_MACHINE
-  path:
-    specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md
-  title: TASK-005 BAI Development OS Knowledge Operating System Detailed Design
-    Ver.1.2
+  path: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md
+  title: TASK-005 BAI Development OS Knowledge Operating System Detailed Design Ver.1.2
   category: specification
   authority: machine_canonical_authority
   importance_level: A
@@ -1899,8 +1823,7 @@ documents:
   sha256: 2632ea6a85c8048804d4a9500de10ed8735c79a811a49e9f6fb5c9b1949a69ab
   size_bytes: 21191
 - document_id: TASK_005_KNOWLEDGE_OS_VER1_2_HUMAN
-  path:
-    specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
+  path: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
   title: TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
   category: specification
   authority: human_canonical_companion
@@ -1912,8 +1835,7 @@ documents:
   sha256: b1f955bd83b4b58bc389fed0e65b4b8782ff8b538b7517e09e10a395f537ceca
   size_bytes: 48369
 - document_id: TASK_005_KNOWLEDGE_OS_VER1_2_SUMMARY
-  path:
-    specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
+  path: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   title: TASK-005 Knowledge Operating System Ver.1.2 — Summary
   category: specification
   authority: navigation-aid
@@ -2190,8 +2112,7 @@ documents:
   size_bytes: 31467
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_7
   path: architecture/BAI_Development_OS_Architecture_Ver2.7.md
-  title: BAI Development OS Architecture Ver.2.7 — Post-TASK-005 Roadmap
-    Refinement
+  title: BAI Development OS Architecture Ver.2.7 — Post-TASK-005 Roadmap Refinement
   category: architecture
   authority: machine-readable-canonical-copy
   importance_level: A
@@ -2233,8 +2154,7 @@ documents:
   writable: false
   superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8
 - document_id: POST_TASK005_ROADMAP_REFINEMENT_VER1_0
-  path:
-    architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md
+  path: architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS — Post-TASK-005 Roadmap Refinement Ver.1.0
   category: architecture-addendum
   authority: roadmap-decision
@@ -2257,8 +2177,7 @@ documents:
   size_bytes: 2003
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_8
   path: architecture/BAI_Development_OS_Architecture_Ver2.8.md
-  title: BAI Development OS Architecture Ver.2.8 — TASK-006 Orchestration &
-    Automation Completion
+  title: BAI Development OS Architecture Ver.2.8 — TASK-006 Orchestration & Automation Completion
   category: architecture
   authority: machine-readable-canonical-copy
   importance_level: C
@@ -2300,10 +2219,8 @@ documents:
   writable: false
   superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_9
 - document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
-  path:
-    specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md
-  title: TASK-006 BAI Development OS Orchestration & Automation Foundation
-    Detailed Design Ver.1.0
+  path: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md
+  title: TASK-006 BAI Development OS Orchestration & Automation Foundation Detailed Design Ver.1.0
   category: specification
   authority: machine-readable-canonical-copy
   importance_level: A
@@ -2314,10 +2231,8 @@ documents:
   sha256: ac4d6537ff4335f3ed9169960c98d06c1640b5e7c052c0960c531850237bf79c
   size_bytes: 20211
 - document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION_HUMAN
-  path:
-    specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
-  title:
-    TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
+  path: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
+  title: TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
   category: specification
   authority: human-readable-copy
   importance_level: C
@@ -2328,8 +2243,7 @@ documents:
   sha256: 94364c9fc22887c89a0592196493f77e5a8e94a3750603ed836f99d2ea366ee8
   size_bytes: 46577
 - document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION_SUMMARY
-  path:
-    specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.summary.md
+  path: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.summary.md
   title: TASK-006 Orchestration & Automation Foundation Ver.1.0 — AI Summary
   category: specification
   authority: navigation-aid
@@ -2539,8 +2453,7 @@ documents:
   size_bytes: 1270
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_9
   path: architecture/BAI_Development_OS_Architecture_Ver2.9.md
-  title: BAI Development OS Architecture Ver.2.9 — Post-TASK-006 Roadmap
-    Refinement
+  title: BAI Development OS Architecture Ver.2.9 — Post-TASK-006 Roadmap Refinement
   category: architecture
   authority: machine_canonical_authority
   importance_level: A
@@ -2575,8 +2488,7 @@ documents:
   writable: false
   superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10
 - document_id: POST_TASK006_ROADMAP_REFINEMENT_V1_0
-  path:
-    architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md
+  path: architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS — Post-TASK-006 Roadmap Refinement Ver.1.0
   category: architecture-addendum
   authority: roadmap-record
@@ -2587,8 +2499,7 @@ documents:
   status: HISTORICAL_EVOLUTION
   writable: true
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_9_QA
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.9.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.9.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.9 — Document Sync and Visual QA
   category: verification-evidence
   authority: verification-evidence
@@ -2600,8 +2511,7 @@ documents:
   effective_date: '2026-08-08'
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10
   path: architecture/BAI_Development_OS_Architecture_Ver2.10.md
-  title: BAI Development OS Architecture Ver.2.10 — TASK-007 Monitoring &
-    Dashboard Completion
+  title: BAI Development OS Architecture Ver.2.10 — TASK-007 Monitoring & Dashboard Completion
   category: architecture
   authority: machine_canonical_authority
   importance_level: A
@@ -2642,8 +2552,7 @@ documents:
   size_bytes: 973
   superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_11
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10_QA
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.10.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.10.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.10 — Document Sync and Visual QA
   category: verification-evidence
   authority: verification-evidence
@@ -2655,10 +2564,8 @@ documents:
   sha256: 49b3eacf6565054f304a6a40b9b3394ce7417d69ac389fdfeda359479712c285
   size_bytes: 2449
 - document_id: TASK_007_MONITORING_DASHBOARD
-  path:
-    specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md
-  title: TASK-007 BAI Development OS Monitoring & Dashboard Detailed Design
-    Ver.1.0
+  path: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md
+  title: TASK-007 BAI Development OS Monitoring & Dashboard Detailed Design Ver.1.0
   category: specification
   authority: machine-readable-canonical-copy
   importance_level: A
@@ -2669,8 +2576,7 @@ documents:
   sha256: 2f7a8a069e92dd221fab4efbf17c2864270c3730a0997821cfc5146cc2f66e4b
   size_bytes: 17038
 - document_id: TASK_007_MONITORING_DASHBOARD_HUMAN
-  path:
-    specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
+  path: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
   title: TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
   category: specification
   authority: human-readable-copy
@@ -2682,8 +2588,7 @@ documents:
   sha256: 16acea1ab05a0818b63dbc99588fbb85a1f56302ccbde26213a62a0574deffa8
   size_bytes: 44237
 - document_id: TASK_007_MONITORING_DASHBOARD_SUMMARY
-  path:
-    specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.summary.md
+  path: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.summary.md
   title: TASK-007 Monitoring & Dashboard Ver.1.0 — AI Summary
   category: specification
   authority: navigation-aid
@@ -2840,8 +2745,7 @@ documents:
   size_bytes: 820
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_11
   path: architecture/BAI_Development_OS_Architecture_Ver2.11.md
-  title: BAI Development OS Architecture Ver.2.11 — Post-TASK-007 Monitoring
-    Roadmap Refinement
+  title: BAI Development OS Architecture Ver.2.11 — Post-TASK-007 Monitoring Roadmap Refinement
   category: architecture
   authority: machine_canonical_authority
   importance_level: A
@@ -2882,8 +2786,7 @@ documents:
   size_bytes: 1322
   superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_12
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_11_QA
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.11.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.11.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.11 — Document Sync and Visual QA
   category: verification-evidence
   authority: verification-evidence
@@ -2895,8 +2798,7 @@ documents:
   sha256: fc6ff14366f931604059e70517fc148833260499a9250a2ab2f93d0ea1347ed4
   size_bytes: 1631
 - document_id: POST_TASK007_ROADMAP_REFINEMENT_V1_0
-  path:
-    architecture/BAI_Development_OS_Post_TASK007_Roadmap_Refinement_Ver1.0.md
+  path: architecture/BAI_Development_OS_Post_TASK007_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS — Post-TASK-007 Roadmap Refinement Ver.1.0
   category: architecture-addendum
   authority: roadmap-record
@@ -2910,8 +2812,7 @@ documents:
   size_bytes: 2606
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_12
   path: architecture/BAI_Development_OS_Architecture_Ver2.12.md
-  title: BAI Development OS Architecture Ver.2.12 — TASK-008 External
-    Integration Completion
+  title: BAI Development OS Architecture Ver.2.12 — TASK-008 External Integration Completion
   category: architecture
   authority: machine_canonical_authority
   importance_level: A
@@ -2950,8 +2851,7 @@ documents:
   sha256: f80b67d4512941c932200365d10ceb76e8f86f3472e80d9a2810ff95dd40ce47
   size_bytes: 812
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_12_QA
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.12.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.12.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.12 — Document Sync and Visual QA
   category: verification-evidence
   authority: verification-evidence
@@ -2963,8 +2863,7 @@ documents:
   sha256: 2166d79c8912b2f8585c9f3144f8397761e471036b2408bfe1b7922adb363288
   size_bytes: 1268
 - document_id: TASK_008_EXTERNAL_INTEGRATION
-  path:
-    specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.md
+  path: specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.md
   title: TASK-008 BAI Development OS External Integration Ver.1.0
   category: specification
   authority: machine-readable-canonical-copy
@@ -2977,8 +2876,7 @@ documents:
   sha256: 25867ad0afbccb12ffeb0df2327718331c81142cafb683f767359a7b40987fc3
   size_bytes: 13533
 - document_id: TASK_008_EXTERNAL_INTEGRATION_HUMAN
-  path:
-    specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.docx
+  path: specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.docx
   title: TASK-008 BAI Development OS External Integration Ver.1.0
   category: specification
   authority: human-readable-copy
@@ -2991,8 +2889,7 @@ documents:
   sha256: 0342e5c11107d16986f620595e012d7b44f9a4d2f3ae94dbdfe04676e48fd674
   size_bytes: 42332
 - document_id: TASK_008_EXTERNAL_INTEGRATION_SUMMARY
-  path:
-    specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.summary.md
+  path: specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.summary.md
   title: TASK-008 External Integration Ver.1.0 — AI Summary
   category: specification
   authority: navigation-aid
@@ -3174,8 +3071,7 @@ documents:
   size_bytes: 1366
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_13
   path: architecture/BAI_Development_OS_Architecture_Ver2.13.md
-  title: BAI Development OS Architecture Ver.2.13 — Post-TASK-008 External
-    Integration Roadmap Refinement
+  title: BAI Development OS Architecture Ver.2.13 — Post-TASK-008 External Integration Roadmap Refinement
   category: architecture
   authority: machine_canonical_authority
   importance_level: C
@@ -3216,8 +3112,7 @@ documents:
   size_bytes: 1202
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_17
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_13_QA
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.13.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.13.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.13 — Document Sync and Visual QA
   category: verification-evidence
   authority: verification-evidence
@@ -3230,8 +3125,7 @@ documents:
   sha256: 6c5523c208624ca943d2bb12f1898cfbfb3f9017bc24e6df7a3a8773b726d11e
   size_bytes: 973
 - document_id: POST_TASK008_ROADMAP_REFINEMENT_V1_1
-  path:
-    architecture/BAI_Development_OS_Post_TASK008_Roadmap_Refinement_Ver1.1.md
+  path: architecture/BAI_Development_OS_Post_TASK008_Roadmap_Refinement_Ver1.1.md
   title: BAI Development OS — Post-TASK-008 Roadmap Refinement Ver.1.1
   category: architecture-addendum
   authority: roadmap-record
@@ -3245,8 +3139,7 @@ documents:
   size_bytes: 1663
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_14
   path: architecture/BAI_Development_OS_Architecture_Ver2.14.md
-  title: BAI Development OS Architecture Ver.2.14 — Consolidated Current Roadmap
-    Authority
+  title: BAI Development OS Architecture Ver.2.14 — Consolidated Current Roadmap Authority
   category: architecture
   authority: machine_canonical_authority
   importance_level: C
@@ -3287,8 +3180,7 @@ documents:
   size_bytes: 1723
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_17
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_14_QA
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.14.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.14.document-sync-and-visual-qa.md
   title: BAI Development OS Architecture Ver.2.14 — Document Sync and Visual QA
   category: verification-evidence
   authority: verification-evidence
@@ -3328,8 +3220,7 @@ documents:
   size_bytes: 1115
 - document_id: A1A8B76E61472BCA
   path: architecture/BAI_Development_OS_Architecture_Ver2.15.md
-  title: BAI Development OS Architecture Ver.2.15 — TASK-009 Security / Supply
-    Chain / Integrity Completion
+  title: BAI Development OS Architecture Ver.2.15 — TASK-009 Security / Supply Chain / Integrity Completion
   category: architecture
   authority: machine_canonical_authority
   importance_level: C
@@ -3364,8 +3255,7 @@ documents:
   writable: false
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_17
 - document_id: 3B2E648E9D8322CA
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.15.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.15.document-sync-and-visual-qa.md
   title: Architecture Ver.2.15 Document Sync & Visual QA
   category: verification-evidence
   authority: verification-evidence
@@ -3377,8 +3267,7 @@ documents:
   writable: false
 - document_id: 3E9ECD69BCE46F49
   path: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md
-  title: TASK-009 BAI Development OS Security, Supply Chain & Integrity
-    Hardening Detailed Design Ver.1.0
+  title: TASK-009 BAI Development OS Security, Supply Chain & Integrity Hardening Detailed Design Ver.1.0
   category: specification
   authority: machine_canonical_authority
   importance_level: A
@@ -3386,8 +3275,7 @@ documents:
   size_bytes: 12432
   preferred_loading: read-first
 - document_id: B1532AB137E794F4
-  path:
-    specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.docx
+  path: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.docx
   title: TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.docx
   category: specification
   authority: human_canonical_companion
@@ -3396,8 +3284,7 @@ documents:
   size_bytes: 41241
   preferred_loading: on-demand
 - document_id: AE235A0FF387627B
-  path:
-    specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.summary.md
+  path: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.summary.md
   title: TASK-009 Security / Supply Chain / Integrity — AI Summary
   category: specification
   authority: navigation-aid
@@ -3560,8 +3447,7 @@ documents:
   preferred_loading: on-demand
 - document_id: 57112A3AFC5460EE
   path: architecture/BAI_Development_OS_Architecture_Ver2.16.md
-  title: BAI Development OS Architecture Ver.2.16 — Post-TASK-009 Security
-    Roadmap Refinement
+  title: BAI Development OS Architecture Ver.2.16 — Post-TASK-009 Security Roadmap Refinement
   category: architecture
   authority: machine_canonical_authority
   importance_level: C
@@ -3602,8 +3488,7 @@ documents:
   size_bytes: 1347
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_17
 - document_id: C4429450ABE49192
-  path:
-    architecture/BAI_Development_OS_Post_TASK009_Roadmap_Refinement_Ver1.0.md
+  path: architecture/BAI_Development_OS_Post_TASK009_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS — Post-TASK-009 Roadmap Refinement Ver.1.0
   category: architecture-addendum
   authority: roadmap-record
@@ -3616,8 +3501,7 @@ documents:
   sha256: 3bd35e13df001b5a7b20e204345673efb550bd38879781ab3fd1020557a1762d
   size_bytes: 8567
 - document_id: 7A4950437541BD83
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.16.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.16.document-sync-and-visual-qa.md
   title: Architecture Ver.2.16 Document Sync and Visual QA Evidence
   category: verification-evidence
   authority: verification-evidence
@@ -3631,8 +3515,7 @@ documents:
   size_bytes: 1062
 - document_id: 0CFD4A9B432F811A
   path: architecture/BAI_Development_OS_Architecture_Ver2.17.md
-  title: BAI Development OS Architecture Ver.2.17 — TASK-010 Release /
-    Distribution / Consumer Upgrade Completion
+  title: BAI Development OS Architecture Ver.2.17 — TASK-010 Release / Distribution / Consumer Upgrade Completion
   category: architecture
   authority: machine_canonical_authority
   importance_level: A
@@ -3673,8 +3556,7 @@ documents:
   sha256: 36b2b0f03ba0bd884d213c7ea45675373a5439532880f477ca2754a1b1472486
   size_bytes: 591
 - document_id: 08C6D58511BBBAC6
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.17.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.17.document-sync-and-visual-qa.md
   title: Architecture Ver.2.17 Document Sync and Visual QA Evidence
   category: verification-evidence
   authority: verification-evidence
@@ -3688,10 +3570,8 @@ documents:
   sha256: 809282748327406d38307e07f1e4398bddd2fa8f5f787383d385ee4f8d958ba4
   size_bytes: 807
 - document_id: 3A6678C0A25CFEAD
-  path:
-    specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md
-  title: TASK-010 BAI Development OS — Release, Distribution & Consumer Upgrade
-    OS Detailed Design Ver.1.0
+  path: specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md
+  title: TASK-010 BAI Development OS — Release, Distribution & Consumer Upgrade OS Detailed Design Ver.1.0
   category: specification
   authority: machine_canonical_authority
   importance_level: A
@@ -3703,8 +3583,7 @@ documents:
   sha256: b2bac06b0a15d80bcf51759f9ea34ee4856dff46028e92505ba1fc1053469ce8
   size_bytes: 7622
 - document_id: 3BF454A3C337A4B2
-  path:
-    specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.docx
+  path: specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.docx
   title: TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.docx
   category: specification
   authority: human_canonical_companion
@@ -3717,10 +3596,8 @@ documents:
   sha256: 1b41d176a67fef21004c6d182bce1f39b5aa9810199338444940d2aa71ac3c69
   size_bytes: 39146
 - document_id: B96BC3AF0E5D32FF
-  path:
-    specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.summary.md
-  title: TASK-010 Release / Distribution / Consumer Upgrade OS Ver.1.0 — AI
-    Summary
+  path: specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.summary.md
+  title: TASK-010 Release / Distribution / Consumer Upgrade OS Ver.1.0 — AI Summary
   category: specification
   authority: navigation-aid
   importance_level: A
@@ -3732,10 +3609,8 @@ documents:
   sha256: 60a662f01c9bcaddf3ef29c6831bca29268fab381c330716f9b2279f879142c3
   size_bytes: 695
 - document_id: 8617BA6B99F12626
-  path:
-    specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.document-sync-and-visual-qa.md
-  title: TASK-010 Release / Distribution / Consumer Upgrade Ver.1.0 Document
-    Sync and Visual QA Evidence
+  path: specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.document-sync-and-visual-qa.md
+  title: TASK-010 Release / Distribution / Consumer Upgrade Ver.1.0 Document Sync and Visual QA Evidence
   category: verification-evidence
   authority: verification-evidence
   importance_level: B
@@ -3956,8 +3831,7 @@ documents:
   size_bytes: 719
 - document_id: 03A3AF321DED85E5
   path: architecture/BAI_Development_OS_Architecture_Ver2.18.md
-  title: BAI Development OS Architecture Ver.2.18 — Post-TASK-010 Roadmap
-    Refinement
+  title: BAI Development OS Architecture Ver.2.18 — Post-TASK-010 Roadmap Refinement
   category: architecture
   authority: machine_canonical_authority
   importance_level: C
@@ -3998,8 +3872,7 @@ documents:
   size_bytes: 1187
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_19
 - document_id: 31EA5368519915E0
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.18.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.18.document-sync-and-visual-qa.md
   title: Architecture Ver.2.18 Document Sync and Visual QA Evidence
   category: verification-evidence
   authority: verification-evidence
@@ -4012,8 +3885,7 @@ documents:
   sha256: 4962fb62dfdcb81e26fe7bf875bcc8d8d5dd7d364a93c24d8dca9c5b3316e6a9
   size_bytes: 1027
 - document_id: FF71A1F96A97CB43
-  path:
-    architecture/BAI_Development_OS_Post_TASK010_Roadmap_Refinement_Ver1.0.md
+  path: architecture/BAI_Development_OS_Post_TASK010_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS — Post-TASK-010 Roadmap Refinement Ver.1.0
   category: architecture-addendum
   authority: roadmap-record
@@ -4027,8 +3899,7 @@ documents:
   size_bytes: 9040
 - document_id: CB31A83019EA98AF
   path: architecture/BAI_Development_OS_Architecture_Ver2.19.md
-  title: BAI Development OS Architecture Ver.2.19 — TASK-011 Multi-Project
-    Conformance & Compatibility Lab Completion
+  title: BAI Development OS Architecture Ver.2.19 — TASK-011 Multi-Project Conformance & Compatibility Lab Completion
   category: architecture
   authority: machine_canonical_authority
   importance_level: A
@@ -4069,8 +3940,7 @@ documents:
   size_bytes: 813
   superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_20
 - document_id: 5010F7F50A8B8460
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.19.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.19.document-sync-and-visual-qa.md
   title: Architecture Ver.2.19 Document Sync and Visual QA Evidence
   category: verification-evidence
   authority: verification-evidence
@@ -4083,10 +3953,8 @@ documents:
   sha256: 24799c2cfa8c3e29d3d2511b676b00945ea31b126d42823391d03a25cb37512c
   size_bytes: 666
 - document_id: AB2989898C519F58
-  path:
-    specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.md
-  title: TASK-011 BAI Development OS — Multi-Project Conformance & Compatibility
-    Lab Detailed Design Ver.1.0
+  path: specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.md
+  title: TASK-011 BAI Development OS — Multi-Project Conformance & Compatibility Lab Detailed Design Ver.1.0
   category: specification
   authority: machine_canonical_authority
   importance_level: A
@@ -4098,8 +3966,7 @@ documents:
   sha256: 1f3ac5670106df1fa1a9fd34c22f4f88e1bca5cc4d799368042d5bce819c1445
   size_bytes: 8717
 - document_id: 3B5A2EC20A4CCD3C
-  path:
-    specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.docx
+  path: specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.docx
   title: TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.docx
   category: specification
   authority: human_canonical_companion
@@ -4112,10 +3979,8 @@ documents:
   sha256: f45e9d19672a8f4b9227cb13a372f45e424e98c69f21d6243cf039086345ac19
   size_bytes: 39292
 - document_id: EEEEB89DFECC4C1C
-  path:
-    specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.summary.md
-  title: TASK-011 Multi-Project Conformance & Compatibility Lab Ver.1.0 — AI
-    Summary
+  path: specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.summary.md
+  title: TASK-011 Multi-Project Conformance & Compatibility Lab Ver.1.0 — AI Summary
   category: specification
   authority: navigation-aid
   importance_level: A
@@ -4127,8 +3992,7 @@ documents:
   sha256: 0491dbebefa8b36174e9bc243572b481ea253c752ad9cac6907f2b8fa9804b4e
   size_bytes: 883
 - document_id: BD85D5F550C69052
-  path:
-    specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.document-sync-and-visual-qa.md
+  path: specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.document-sync-and-visual-qa.md
   title: TASK-011 Ver.1.0 Document Sync and Visual QA Evidence
   category: verification-evidence
   authority: verification-evidence
@@ -4389,18 +4253,18 @@ documents:
   size_bytes: 608
 - document_id: 4A75875B6D82A320
   path: architecture/BAI_Development_OS_Architecture_Ver2.20.md
-  title: BAI Development OS Architecture Ver.2.20 — Post-TASK-011 Conformance
-    Roadmap Refinement
+  title: BAI Development OS Architecture Ver.2.20 — Post-TASK-011 Conformance Roadmap Refinement
   category: architecture
   authority: machine_canonical_authority
-  importance_level: A
-  preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  importance_level: C
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: 381cb95b0b8115385955cc8b634ff3d33c2dff2856f330abfd1f5af94b0569b1
   size_bytes: 283335
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_21
 - document_id: DAE3E933EB08893E
   path: architecture/BAI_Development_OS_Architecture_Ver2.20.docx
   title: BAI Development OS Architecture Ver.2.20
@@ -4408,42 +4272,42 @@ documents:
   authority: human_canonical_companion
   importance_level: C
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: 22d5773a57ffb3779da8ed3d6f60c75aafa433faa8e081817363ee21a9a1915a
   size_bytes: 112109
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_21
 - document_id: 535A0D42D2D548B5
   path: architecture/BAI_Development_OS_Architecture_Ver2.20.summary.md
   title: BAI Development OS Architecture Ver.2.20 — AI Summary
   category: architecture
   authority: navigation-aid
-  importance_level: A
-  preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  importance_level: C
+  preferred_loading: on-demand
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: af11250dc72bc2e295f7c68be7ca4c89d9affadb43250b35eeea24af8f3078a7
   size_bytes: 843
+  superseded_by: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_21
 - document_id: 0414B897352D01DD
-  path:
-    architecture/BAI_Development_OS_Architecture_Ver2.20.document-sync-and-visual-qa.md
+  path: architecture/BAI_Development_OS_Architecture_Ver2.20.document-sync-and-visual-qa.md
   title: Architecture Ver.2.20 Document Sync and Visual QA Evidence
   category: verification-evidence
   authority: verification-evidence
   importance_level: B
-  preferred_loading: summary-or-on-demand
-  status: PASS
+  preferred_loading: on-demand
+  status: HISTORICAL_QA_PASS
   writable: false
   effective_date: '2026-08-08'
   verified_by: Orchestrator
   sha256: 4d668885d34df026484c55d1c8fa1500c42fc492c49ba5bfcbed5f8a889d9d5f
   size_bytes: 896
 - document_id: 00A0C6F019B0E80E
-  path:
-    architecture/BAI_Development_OS_Post_TASK011_Roadmap_Refinement_Ver1.0.md
+  path: architecture/BAI_Development_OS_Post_TASK011_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Post-TASK-011 Roadmap Refinement Ver.1.0
   category: architecture-addendum
   authority: roadmap-record
@@ -4455,113 +4319,407 @@ documents:
   verified_by: Orchestrator
   sha256: 8eab5af8e0121c6e3c0155cb9f33d62291113c1aa654f559fd4ee77cd3d4fe51
   size_bytes: 7602
+- document_id: F789784A2571457F
+  path: architecture/BAI_Development_OS_Architecture_Ver2.21.md
+  title: BAI Development OS Architecture Ver.2.21 — TASK-012 Self-Maintenance Completion
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 65cdac8e07ef9d49ed7ca42aa826a32e8099da1c06dd62e8498173c2c218dc2f
+  size_bytes: 291460
+- document_id: 4C26FEC808D16032
+  path: architecture/BAI_Development_OS_Architecture_Ver2.21.docx
+  title: BAI Development OS Architecture Ver.2.21
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: e8486b23f0dc80657d0811b3e3cd7a14e13c0223e78c12ba7c01935691fefebb
+  size_bytes: 114094
+- document_id: 1FFFE3E7C47AD43C
+  path: architecture/BAI_Development_OS_Architecture_Ver2.21.summary.md
+  title: BAI Development OS Architecture Ver.2.21 — AI Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 26ea346d7b52a37cc65069caa14d774ab66890945ebcf1c1daca2ce172dcfd34
+  size_bytes: 1008
+- document_id: 7B047BF55BAEAAD2
+  path: architecture/BAI_Development_OS_Architecture_Ver2.21.document-sync-and-visual-qa.md
+  title: Architecture Ver.2.21 Document Sync and Visual QA Evidence
+  category: verification-evidence
+  authority: verification-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 87e14e21d0e57d60ef2beee408658d8f3a7f2d6e41e6f735bf607d85ef5e8b8a
+  size_bytes: 695
+- document_id: 94D2B146BF49C31E
+  path: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
+  title: TASK-012 — BAI Development OS Self-Maintenance, Drift Detection & Safe Auto-Repair Detailed Design Ver.1.0
+  category: specification
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: fda9eeedc9988cc8d72414f8b1b02b92592f94e7e77ee46061c81784ae8862e7
+  size_bytes: 9831
+- document_id: E90D788CAC845D8D
+  path: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.docx
+  title: TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.docx
+  category: specification
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 10671a4799fe00c9dfd1a1207b54e439cf05d2deaad0106b20e887265b4d53de
+  size_bytes: 39583
+- document_id: 23F5251E0EEAE8F9
+  path: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
+  title: TASK-012 Self-Maintenance Ver.1.0 — AI Summary
+  category: specification
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 3393f3dd097dd52b1c8780527e56bd9e27f8ef500d2556b2550a1916722af461
+  size_bytes: 1071
+- document_id: B42171E5BF566147
+  path: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.document-sync-and-visual-qa.md
+  title: TASK-012 Self-Maintenance Ver.1.0 Document Sync and Visual QA
+  category: verification-evidence
+  authority: verification-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PASS
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: ad3d79630bc3e86480550a69e9cb16c92762643534383c7073c0d6ca707f44d2
+  size_bytes: 564
+- document_id: CDC98B0C741F3F3B
+  path: tasks/TASK-012/task.md
+  title: TASK-012 — Self-Maintenance, Drift Detection & Safe Auto-Repair
+  category: task-definition
+  authority: task-definition
+  importance_level: A
+  preferred_loading: read-first
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 0d4c1d53a14b1982e01fb28fd1911b8e469540151f723184b3218da9f55f904e
+  size_bytes: 447
+- document_id: F3FB194985F9C9CD
+  path: tasks/TASK-012/detailed-design.md
+  title: TASK-012 Detailed Design Evidence
+  category: task-evidence
+  authority: design-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 40cd37b3677413af3cd0b2df68452499cd3a5453f533de0ee1c4afa780852760
+  size_bytes: 375
+- document_id: 74FA9B2AD47EC568
+  path: tasks/TASK-012/implementation-report.md
+  title: TASK-012 Implementation Report
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 2fab291da5c5e40ead6dcaeefb1dad79a82d8e569aec412e17d43465ae0da7cc
+  size_bytes: 477
+- document_id: D7791B14EBA73C64
+  path: tasks/TASK-012/critic-review.md
+  title: TASK-012 Independent Critic Review
+  category: task-evidence
+  authority: critic-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: bca6b37c924494a85f271ff4c3aed3b124097d0a3eb64d462adb47d1d091b819
+  size_bytes: 686
+- document_id: 2F77804AA41EF8E4
+  path: tasks/TASK-012/test-report.md
+  title: TASK-012 Test Report
+  category: task-evidence
+  authority: test-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 886b812b4b6e7396120f8236dc6c5a33ee0f2a072d81df567cfbfdeede57fe2c
+  size_bytes: 429
+- document_id: 07180FB8885CB3C1
+  path: tasks/TASK-012/final-implementation-decision.md
+  title: TASK-012 Final Implementation Decision
+  category: task-evidence
+  authority: decision-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 656cb1a44b5a8a6e6405ed5faf72431e3d134b854ef0f0a4a4e6bbb4b378ac97
+  size_bytes: 357
+- document_id: 69FD6636755DD499
+  path: tasks/TASK-012/task012-final-completion-record.md
+  title: TASK-012 Final Completion Record
+  category: task-evidence
+  authority: completion-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: c03d5c245c7e177d7900ac7ca992b376eba5c4e34009ae1a9af9160999de8a56
+  size_bytes: 389
+- document_id: D7501E8A343C6E8A
+  path: tasks/TASK-012/TASK-012.summary.md
+  title: TASK-012 Summary
+  category: task-evidence
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: f0de53fa6af0e811e2c6835764eee8719433eb236fbbacfb872df7be6dfba801
+  size_bytes: 394
+- document_id: A885603C82A3FB4E
+  path: tasks/TASK-012/maintenance-baseline.json
+  title: maintenance-baseline.json
+  category: task-evidence
+  authority: maintenance-evidence
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: COMPLETED_RECORD
+  writable: false
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: a78914fd3bb96194b67364f8a7174375d8d2c8b4e6f1866562d3d09fcbbb0c3c
+  size_bytes: 469
+- document_id: DA05313523893E84
+  path: schemas/maintenance/maintenance-checkpoint.schema.json
+  title: maintenance-checkpoint.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: ACTIVE_CONTRACT
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 26dbfb1aaee1c745bee19dc9616dd69d6e9f4f214e50b7fa16454163309b2c51
+  size_bytes: 379
+- document_id: FCD0133353B1548D
+  path: schemas/maintenance/maintenance-finding.schema.json
+  title: maintenance-finding.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: ACTIVE_CONTRACT
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 4c8abfd9a56a386e7daca0643f9f6e1d176f811f804dceeb22df1d09e0fec529
+  size_bytes: 941
+- document_id: 8117E1FCEA5E1C70
+  path: schemas/maintenance/maintenance-fsck-report.schema.json
+  title: maintenance-fsck-report.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: ACTIVE_CONTRACT
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 5ff8bcb56a3aecd59c71d409b3a3d47abc71defcc9d152f121c04c642be49083
+  size_bytes: 515
+- document_id: 7536DBFCF6CD5182
+  path: schemas/maintenance/quarantine-record.schema.json
+  title: quarantine-record.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: ACTIVE_CONTRACT
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 5950f64664289321e905432d7d05a71d315bb125bdcb5e556b1aa8d3f6469b41
+  size_bytes: 433
+- document_id: DF9B89EC50965F2E
+  path: schemas/maintenance/repair-execution.schema.json
+  title: repair-execution.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: ACTIVE_CONTRACT
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 5f8b7f99d270e9be6baf06d3d14afb86c1000c343f8e20e24dfa0f27dc98fbc2
+  size_bytes: 480
+- document_id: F76DBA1D48E77221
+  path: schemas/maintenance/repair-plan.schema.json
+  title: repair-plan.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: ACTIVE_CONTRACT
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: c1298ded7155f5e90743f353bc41d3a1b8f477dd7c6145f0e0744ef75c0a0269
+  size_bytes: 487
+- document_id: 1036A66AF2C01644
+  path: schemas/maintenance/retention-plan.schema.json
+  title: retention-plan.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: ACTIVE_CONTRACT
+  writable: true
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: e433ea7dce2d66e9307de705716cf0148887676c42b46e775861895631b95dc1
+  size_bytes: 338
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner
   consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence:
-    /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.20.document-sync-and-visual-qa.md
+  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.21.document-sync-and-visual-qa.md
   architecture:
-    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_20
-    version: '2.20'
+    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_21
+    version: '2.21'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.20.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.20.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.20.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.21.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.21.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.21.summary.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
-    machine:
-      specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md
-    summary:
-      specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.summary.md
+    human: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.docx
+    machine: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md
+    summary: specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.summary.md
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_TASK011_ROADMAP_REFINEMENT
+  registry_sync_status: CURRENT_AFTER_TASK012_COMPLETION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK_012_TO_TASK_015_RESERVED_NOT_AUTHORIZED
+  roadmap_expansion_status: TASK_013_TO_TASK_015_RESERVED_NOT_AUTHORIZED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
-    machine:
-      specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md
-    summary:
-      specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
+    human: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.docx
+    machine: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md
+    summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK-012 — Self-Maintenance, Drift Detection & Safe
-    Auto-Repair
+  next_canonical_route: TASK-013 — Domain Adapter / Plugin SDK
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
-    machine:
-      specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md
-    summary:
-      specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.summary.md
+    human: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
+    machine: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md
+    summary: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.summary.md
   task_007_status: COMPLETED
   task_007_monitoring_dashboard:
     document_id: TASK_007_MONITORING_DASHBOARD
     version: '1.0'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
-    machine:
-      specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md
-    summary:
-      specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.summary.md
+    human: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
+    machine: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md
+    summary: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.summary.md
   task_008_status: COMPLETED
   task_008_external_integration:
     document_id: TASK_008_EXTERNAL_INTEGRATION
     version: '1.0'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.docx
-    machine:
-      specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.md
-    summary:
-      specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.summary.md
+    human: specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.docx
+    machine: specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.md
+    summary: specifications/TASK-008_BAI_Development_OS_External_Integration_Ver1.0.summary.md
   task_009_status: COMPLETED
   task_009_security_integrity:
     document_id: TASK_009_SECURITY_INTEGRITY
     version: '1.0'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.docx
-    machine:
-      specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md
-    summary:
-      specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.summary.md
+    human: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.docx
+    machine: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md
+    summary: specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.summary.md
   task_010_status: COMPLETED
   task_010_release_distribution_upgrade:
     document_id: TASK_010_RELEASE_DISTRIBUTION_UPGRADE
     version: '1.0'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.docx
-    machine:
-      specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md
-    summary:
-      specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.summary.md
+    human: specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.docx
+    machine: specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md
+    summary: specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.summary.md
   task_011_status: COMPLETED
   task_011_multi_project_conformance:
     document_id: TASK_011_MULTI_PROJECT_CONFORMANCE
     version: '1.0'
     status: CURRENT_CANONICAL
-    human:
-      specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.docx
-    machine:
-      specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.md
-    summary:
-      specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.summary.md
+    human: specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.docx
+    machine: specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.md
+    summary: specifications/TASK-011_BAI_Development_OS_Multi_Project_Conformance_Ver1.0.summary.md
+  task_012_status: COMPLETED
+  task_012_self_maintenance:
+    document_id: TASK_012_SELF_MAINTENANCE
+    version: '1.0'
+    status: CURRENT_CANONICAL
+    human: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.docx
+    machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
+    summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK011_ROADMAP_REFINEMENT
+registry_status: CURRENT_AFTER_TASK012_COMPLETION

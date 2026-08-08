@@ -1,0 +1,5 @@
+import { mkdir, rename, readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { resolveExistingInside, resolveWritableInside, secureAtomicWrite } from '../security/path.mjs';
+import { deepFreeze, newId, nowIso, sha256 } from './util.mjs';
+export async function quarantineArtifact(root,rel,{reason='INTEGRITY_UNKNOWN',quarantine_id=newId('quarantine'),clock=()=>new Date()}={}){const source=await resolveExistingInside(root,rel);const bytes=await readFile(source);const name=path.basename(rel);const targetRel=`.bai-os/maintenance/quarantine/${quarantine_id}/${name}`;const target=await resolveWritableInside(root,targetRel);await mkdir(path.dirname(target),{recursive:true});await rename(source,target);const record={quarantine_version:'1.0.0',quarantine_id,quarantined_at:nowIso(clock),original_path:rel,quarantined_path:targetRel,reason,checksum:sha256(bytes)};await secureAtomicWrite(root,`.bai-os/maintenance/quarantine/${quarantine_id}/record.json`,Buffer.from(`${JSON.stringify(record,null,2)}\n`));return deepFreeze(record);}
