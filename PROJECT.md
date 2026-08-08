@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.6.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.7.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 
@@ -58,3 +58,7 @@ npm test
 npm run check:boundaries
 npm run test:knowledge
 ```
+
+## Post-TASK-005 Roadmap Refinement
+
+TASK-005-derived improvements have been allocated into existing TASK-009〜014: crash-consistent Knowledge persistence, Knowledge distribution compatibility, cross-project Knowledge isolation/conformance, repository fsck/recovery/compaction, Domain Knowledge extension points, and evidence-based resolver/confidence/freshness calibration. No TASK-015 is created. These additions remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.

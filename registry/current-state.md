@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.6`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.7`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - TASK-004: `COMPLETED`
@@ -43,8 +43,8 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 - Root Knowledge export: `PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `185 documents / Missing 0 / Hash-Size mismatch 0`
-- Canonical DOCX visual QA: `Architecture 70/70 pages PASS; Knowledge OS 21/21 pages PASS`
+- Document Registry: `190 documents / Missing 0 / Hash-Size mismatch 0`
+- Canonical DOCX visual QA: `Architecture Ver.2.7 74/74 pages PASS; Knowledge OS 21/21 pages PASS`
 
 ## Accepted Residual
 
@@ -63,3 +63,7 @@ Knowledge Asset revision/current/event persistence is fail-closed but not a sing
 9. TASK-014 — Adaptive Governance Calibration & Policy Learning
 
 TASK-009–014 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED` items. TASK-006 is next but is not automatically active merely because TASK-005 completed.
+
+## Post-TASK-005 Roadmap Refinement
+
+TASK-005-derived future work was allocated into existing TASK-009〜014 rather than creating TASK-015. The additions cover crash-consistent Knowledge persistence, Pack release compatibility, cross-project isolation, repository fsck/recovery/compaction, Domain Knowledge extensions, and resolver/confidence/freshness calibration. All remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-006 remains next.

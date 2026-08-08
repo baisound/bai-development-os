@@ -54,3 +54,17 @@ Development assurance depth is proportional to system scale, feature scale, crit
 | OP-021 | Adaptive Governance Calibration from operational Evidence | Roadmap reserved | TASK-014 |
 
 These entries expand the product after TASK-008 and do not reopen TASK-004. All are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
+
+
+## Post-TASK-005 Knowledge Expansion Addendum — 2026-08-08
+
+| ID | Improvement | Decision / Status | Planned integration |
+|---|---|---|---|
+| OP-022 | Crash-consistent Knowledge mutation / journal fencing | Roadmap reserved | TASK-009 |
+| OP-023 | Knowledge Pack release portability and schema/taxonomy migration | Roadmap reserved | TASK-010 |
+| OP-024 | Cross-project Knowledge portability / isolation conformance | Roadmap reserved | TASK-011 |
+| OP-025 | Knowledge repository fsck / recovery / compaction | Roadmap reserved | TASK-012 |
+| OP-026 | Domain Knowledge extension points | Roadmap reserved | TASK-013 |
+| OP-027 | Resolver / confidence / freshness evidence calibration | Roadmap reserved | TASK-014 |
+
+No TASK-015 is created; these improvements extend existing reserved responsibility boundaries.

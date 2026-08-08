@@ -19,7 +19,7 @@ BAI Development OS is a standalone reusable development foundation rooted at:
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.6.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.7.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ `.docx`, `.summary.md`)
 
@@ -69,3 +69,7 @@ TASK-009〜014 are reserved roadmap items only and are not implicitly authorized
 - Context is loaded summary-first and impact-first.
 - Safety-critical testing is not reduced for token economy.
 - A completed Task is not reopened for ordinary enhancement.
+
+## Post-TASK-005 Roadmap Refinement
+
+TASK-009〜014 now also reserve Knowledge crash consistency, Pack distribution compatibility, cross-project isolation/conformance, repository fsck/recovery/compaction, Domain Knowledge extension points, and evidence-based resolver/confidence/freshness calibration. No TASK-015 is reserved by this refinement.

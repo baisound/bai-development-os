@@ -44,7 +44,7 @@ See `MIGRATION.md` for the repository rename and product-extraction procedure.
 
 ## TASK-004 Lifecycle Foundation Completion
 
-As of 2026-08-08, TASK-004 implements the full Lifecycle Foundation through Phase 6: recovery/checkpoint control, Context Manifest and trust/freshness control, Cost and capability-based Model routing, Closure/Archive/dependency/migration control, and authorized System File synchronization. The current machine canonical references are `architecture/BAI_Development_OS_Architecture_Ver2.6.md`, `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`, and `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`. TASK-004 is completed after final verification; archive remains an independent readiness/commit boundary. Permanent model-selection policy remains separate from Adaptive Development Governance.
+As of 2026-08-08, TASK-004 implements the full Lifecycle Foundation through Phase 6: recovery/checkpoint control, Context Manifest and trust/freshness control, Cost and capability-based Model routing, Closure/Archive/dependency/migration control, and authorized System File synchronization. The current machine canonical references are `architecture/BAI_Development_OS_Architecture_Ver2.7.md`, `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`, and `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`. TASK-004 is completed after final verification; archive remains an independent readiness/commit boundary. Permanent model-selection policy remains separate from Adaptive Development Governance.
 
 Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-control`, `./closure`, `./archive`, `./dependency`, `./system-sync`, and `./knowledge`.
 
@@ -57,3 +57,7 @@ The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply
 ## TASK-005 Knowledge Operating System Completion
 
 As of 2026-08-08, TASK-005 is completed. Knowledge is no longer an informal note layer: it has governed immutable revisions, deterministic resolution, version-pinned Knowledge Packs, usage/verification evidence, impact analysis, promotion/demotion/freshness Governance and persistent integrity checks. Run `npm run test:knowledge` for the subsystem suite.
+
+## Post-TASK-005 Roadmap Refinement
+
+TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added; TASK-006 remains next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.
