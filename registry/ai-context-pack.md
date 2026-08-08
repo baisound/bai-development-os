@@ -19,7 +19,7 @@ BAI Development OS is a standalone reusable development foundation rooted at:
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.4.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.5.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ `.docx`, `.summary.md`)
 
 Reference consumer:
@@ -51,7 +51,14 @@ Recovery/Checkpoint, Context Control, atomic Cost Guard, Model Routing, Closure/
 - TASK-006 Registry / Resolver / Automation
 - TASK-007 Monitoring & Dashboard
 - TASK-008 External Integration
-- TASK-009 is not currently defined
+- TASK-009 Security / Supply Chain / Integrity Hardening
+- TASK-010 Release / Distribution / Consumer Upgrade OS
+- TASK-011 Multi-Project Conformance & Compatibility Lab
+- TASK-012 Self-Maintenance / Drift Detection / Safe Auto-Repair
+- TASK-013 Domain Adapter / Plugin SDK
+- TASK-014 Adaptive Governance Calibration & Policy Learning
+
+TASK-009〜014 are reserved roadmap items only and are not implicitly authorized.
 
 ## Non-negotiable Rules
 

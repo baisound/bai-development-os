@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.4.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.5.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 
 TASK-004 includes the completed foundation through Phase 6: Foundation/Cost/Execution Guards, Recovery, Context Control, Cost/Model Control, Closure/Archive/Migration/Dependency control, and System Synchronization.
@@ -35,8 +35,14 @@ TASK-004 includes the completed foundation through Phase 6: Foundation/Cost/Exec
 - `TASK-006`: Workspace Registry / Resolver / Automation foundation
 - `TASK-007`: Monitoring & Dashboard
 - `TASK-008`: External Integration
+- `TASK-009`: Security / Supply Chain / Integrity Hardening
+- `TASK-010`: Release / Distribution / Consumer Upgrade OS
+- `TASK-011`: Multi-Project Conformance & Compatibility Lab
+- `TASK-012`: Self-Maintenance / Drift Detection / Safe Auto-Repair
+- `TASK-013`: Domain Adapter / Plugin SDK
+- `TASK-014`: Adaptive Governance Calibration & Policy Learning
 
-`TASK-009` is not currently defined in the canonical OS roadmap.
+TASK-009〜014 are roadmap reservations only: `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
 
 ## Governance
 

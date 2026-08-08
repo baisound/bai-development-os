@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.4`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.5`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - TASK-004: `COMPLETED`
 - Closure: `PASS / CLOSURE_READY`
@@ -59,7 +59,7 @@ Binding evidence: `tasks/TASK-004/phase2-to-6-final-verification.md`.
 - Required root exports: `14 / 14`
 - JavaScript Roulette reference consumer tests: `10 / 10 PASS`
 - Active/current-surface scoped `git diff --cached --check`: `PASS` before local completion commit; historical imported Evidence whitespace is preserved
-- Canonical DOCX visual QA: Architecture Ver.2.4 `63 pages`; Lifecycle Foundation Ver.1.6 `40 pages`; all pages inspected
+- Canonical DOCX visual QA: Architecture Ver.2.5 `66 pages`; Lifecycle Foundation Ver.1.6 `40 pages`; all pages inspected
 - Secret-pattern scan over active implementation/system surfaces: no match
 
 Consumer Vite build was not re-executed in the isolated artifact because dependency installation could not retrieve the pinned Vite package from the available package registry. Consumer source was not changed by TASK-004 Phase 2–6; its executable core regression remains `10 / 10 PASS` and Product Boundary verification passes.
@@ -70,8 +70,14 @@ Consumer Vite build was not re-executed in the isolated artifact because depende
 2. TASK-006 — Registry / Resolver / Automation
 3. TASK-007 — Monitoring & Dashboard
 4. TASK-008 — External Integration
+5. TASK-009 — Security / Supply Chain / Integrity Hardening
+6. TASK-010 — Release / Distribution / Consumer Upgrade OS
+7. TASK-011 — Multi-Project Conformance & Compatibility Lab
+8. TASK-012 — Self-Maintenance / Drift Detection / Safe Auto-Repair
+9. TASK-013 — Domain Adapter / Plugin SDK
+10. TASK-014 — Adaptive Governance Calibration & Policy Learning
 
-TASK-009 is not defined in the current canonical OS roadmap.
+TASK-009〜014 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-005 remains the next planned route.
 
 ## Routing Rule
 

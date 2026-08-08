@@ -40,3 +40,17 @@ This registry records improvements discovered through real operation. These item
 ### Adaptive Governance Principle
 
 Development assurance depth is proportional to system scale, feature scale, criticality, failure impact, reversibility, novelty, and high-risk boundaries. Cost reduction is achieved by removing unnecessary governance work, not by weakening tests for critical functions. The selector does not modify permanent model-routing policy.
+
+
+## Post-TASK-004 Product Expansion Addendum — 2026-08-08
+
+| ID | Improvement | Decision / Status | Planned integration |
+|---|---|---|---|
+| OP-016 | Shared Security / Path / Supply-chain Hardening | Roadmap reserved | TASK-009 |
+| OP-017 | Reproducible Release / Distribution / Consumer Upgrade | Roadmap reserved | TASK-010 |
+| OP-018 | Multi-project Consumer Conformance Lab | Roadmap reserved | TASK-011 |
+| OP-019 | Canonical Drift Detection / Safe Auto-Repair | Roadmap reserved | TASK-012 |
+| OP-020 | Domain Adapter / Plugin SDK | Roadmap reserved | TASK-013 |
+| OP-021 | Adaptive Governance Calibration from operational Evidence | Roadmap reserved | TASK-014 |
+
+These entries expand the product after TASK-008 and do not reopen TASK-004. All are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.

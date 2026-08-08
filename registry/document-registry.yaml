@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T03:15:00+09:00'
+registry_generated_at: '2026-08-08T09:36:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 6eb510a2d4404d847b6777f1174c71e2244c7c7b70d8a91356a841275b0f4a44
-  size_bytes: 1963
+  sha256: 1a4aa8c05b4c81b767b63d33dae9a17554ac289bdbf949a045dccff6c7b800be
+  size_bytes: 2340
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 54b88033b00c0b70391106dae96c15215e5772825a4fcfbc06ed92afa682aef9
-  size_bytes: 2748
+  sha256: e9d1977cded22b326013e2ccfd7895086586e260cc429843cdaed9918aa3a693
+  size_bytes: 3099
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -291,7 +291,7 @@ documents:
   sha256: 1644ee28513f61f643bf0fb65ae8811563c86b0e41e0e40b0952b80ce9fc9686
   size_bytes: 62717
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL_COMPANION
+  status: SUPERSEDED_CANONICAL_COMPANION
   effective_date: '2026-08-08'
 - document_id: 44CB683B99E2502F
   path: architecture/BAI_Development_OS_Architecture_Ver2.4.md
@@ -302,7 +302,7 @@ documents:
   sha256: 3647a7f691e2d8539399958bc7bc4f86f07af79eca35a79060460cb359b3243a
   size_bytes: 104713
   preferred_loading: summary-first
-  status: CURRENT_CANONICAL
+  status: SUPERSEDED_CANONICAL
   effective_date: '2026-08-08'
 - document_id: 8716533E1FB06B14
   path: architecture/BAI_Development_OS_Architecture_Ver2.4.summary.md
@@ -313,7 +313,7 @@ documents:
   sha256: fa650d6f7f992cbc737b45ee7ec7311ef02e9cdacfba19fe885a6fa2b61bec41
   size_bytes: 934
   preferred_loading: always
-  status: CURRENT_CANONICAL_SUMMARY
+  status: SUPERSEDED_CANONICAL_SUMMARY
   effective_date: '2026-08-08'
 - document_id: B920A9AE26507732
   path: architecture/BAI_Development_OS_Product_Boundary_and_Adaptive_Governance_Addendum_Ver1.0.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6832a2d6e089f62460f70e2dfb00056ca969387625c1383d09a3c58112af11bc
-  size_bytes: 2415
+  sha256: c848232a5b1ed5e65890cf7d3317a1f7a7af5a035a2d1feb95c0f79683383d0d
+  size_bytes: 2797
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: ba459642ba5ef86aff55b3f55884850fd141e5e51a99092b192b6e2be275cebe
-  size_bytes: 4813
+  sha256: 6ab49f552acf99ed2f4f1e36e4a2c05b93dec3edbef687c7a6e2e39fe028da20
+  size_bytes: 5221
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 8128027727de173a04ba5ac6ef7a7ac1cd7aa58eabff4ce300f0cccd8355b420
-  size_bytes: 2825
+  sha256: b810b9a3a697eb33480a803bcc99aef0a06329c28e71d33f11664d1c634b8d5a
+  size_bytes: 3627
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -1710,18 +1710,62 @@ documents:
   sha256: 5d136008d593705825d61f126e4fe79ba62ae5b532c9a7208e0efac3f7cf2dc1
   size_bytes: 824
   preferred_loading: summary-or-on-demand
+- document_id: 13390595881BAAFF
+  path: architecture/BAI_Development_OS_Architecture_Ver2.5.md
+  title: BAI Development OS Architecture Ver.2.5 — Post-TASK-008 Expansion Roadmap Integrated
+  category: architecture
+  authority: machine-readable-canonical-copy
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  sha256: 2e3139930d853feea8c2244961cf0829f02233f2aaea3735cb1c5775318cb430
+  size_bytes: 113568
+- document_id: 2CE444D01AF24696
+  path: architecture/BAI_Development_OS_Architecture_Ver2.5.docx
+  title: BAI_Development_OS_Architecture_Ver2.5.docx
+  category: architecture
+  authority: human-readable-copy
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+  sha256: 14e1e6bc347a36f7f23e63f9d3cdf257fbb7736e0e20d17d7fa86cb450eb5977
+  size_bytes: 64767
+- document_id: 55E00E312ADABE35
+  path: architecture/BAI_Development_OS_Architecture_Ver2.5.summary.md
+  title: BAI Development OS Architecture Ver.2.5 — Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: always
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+  sha256: 5e911728941b7f9e915a378f42eca76fe1a6f5c540102e12df0c6657aa5b63cc
+  size_bytes: 933
+- document_id: 2FF7456C229C7E5A
+  path: architecture/BAI_Development_OS_Post_TASK008_Roadmap_Expansion_Ver1.0.md
+  title: BAI Development OS Post-TASK-008 Roadmap Expansion Ver.1.0
+  category: architecture
+  authority: owner-directed-roadmap-decision
+  importance_level: A
+  preferred_loading: read-first
+  status: ROADMAP_DECISION
+  effective_date: '2026-08-08'
+  sha256: 1cda4d46877c7813f5aef286443b107a01e33e9e250b2413f13556ee07f643c0
+  size_bytes: 2465
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner
   consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence: /home/baisound/bai-development-os/tasks/TASK-004/phase2-to-6-final-verification.md
+  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Post_TASK008_Roadmap_Expansion_Ver1.0.md
   architecture:
     document_id: AI_DEVELOPMENT_OS_ARCHITECTURE
-    version: '2.4'
+    version: '2.5'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.4.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.4.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.4.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.5.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.5.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.5.summary.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
@@ -1734,5 +1778,6 @@ current_canonical_document_sets:
   archive_status: READY_NOT_ARCHIVED
   registry_sync_status: CURRENT_AFTER_TASK004_COMPLETION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
+  roadmap_expansion_status: TASK_009_TO_TASK_014_RESERVED_NOT_AUTHORIZED
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK004_COMPLETION
+registry_status: CURRENT_AFTER_POST_TASK008_ROADMAP_EXPANSION
