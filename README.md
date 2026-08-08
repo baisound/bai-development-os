@@ -45,7 +45,7 @@ See `MIGRATION.md` for the repository rename and product-extraction procedure.
 
 ## TASK-004 Lifecycle Foundation Completion
 
-As of 2026-08-08, TASK-004 implements the full Lifecycle Foundation through Phase 6: recovery/checkpoint control, Context Manifest and trust/freshness control, Cost and capability-based Model routing, Closure/Archive/dependency/migration control, and authorized System File synchronization. The current machine canonical references are `architecture/BAI_Development_OS_Architecture_Ver2.7.md`, `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`, and `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`. TASK-004 is completed after final verification; archive remains an independent readiness/commit boundary. Permanent model-selection policy remains separate from Adaptive Development Governance.
+As of 2026-08-08, TASK-004 implements the full Lifecycle Foundation through Phase 6: recovery/checkpoint control, Context Manifest and trust/freshness control, Cost and capability-based Model routing, Closure/Archive/dependency/migration control, and authorized System File synchronization. The current machine canonical references are `architecture/BAI_Development_OS_Architecture_Ver2.11.md`, `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`, and `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`. TASK-004 is completed after final verification; archive remains an independent readiness/commit boundary. Permanent model-selection policy remains separate from Adaptive Development Governance.
 
 Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-control`, `./closure`, `./archive`, `./dependency`, `./system-sync`, and `./knowledge`.
 
@@ -70,3 +70,8 @@ TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity
 ## TASK-007 Monitoring & Dashboard Completion
 
 As of 2026-08-08, TASK-007 is completed. Monitoring remains read-only derived observability: verified source provenance, Lifecycle/Quality/Automation/Context/Cost/Model/Knowledge/Registry/Integration/Governance/System metrics, deterministic alerts, health, audit correlation, trends, multi-project dashboard and standalone escaped HTML. Run `npm run test:monitoring`. TASK-008 External Integration is the next route and is not automatically authorized.
+
+
+## Post-TASK-007 Roadmap Refinement
+
+TASK-007 remains completed. Monitoring productization is reserved in TASK-009〜015 for integrity/privacy, schema compatibility, multi-project conformance, retention/repair, plugin extension, adaptive threshold/SLO calibration and distributed telemetry. External alert delivery remains TASK-008. See `architecture/BAI_Development_OS_Post_TASK007_Roadmap_Refinement_Ver1.0.md`.

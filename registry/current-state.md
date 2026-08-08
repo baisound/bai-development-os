@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.10`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.11`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
@@ -69,8 +69,13 @@ TASK-009–015 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-0
 
 ## Registry Integrity
 
-- Document Registry: `238 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `243 documents / Missing 0 / Hash-Size mismatch 0`
 
 ## Post-TASK-006 Roadmap Refinement
 
 TASK-006-derived future work is allocated to TASK-009〜014 for integrity, release compatibility, multi-consumer conformance, self-repair, plugin extension and adaptive calibration. TASK-015 is newly reserved for optional distributed event/orchestration semantics because the current Completion Outbox acknowledgement is local and not a distributed coordinator. TASK-009〜015 remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-008 is next.
+
+
+## Post-TASK-007 Roadmap Refinement
+
+TASK-007 remains `COMPLETED`. Monitoring hardening/productization is allocated to TASK-009〜015: integrity/privacy, schema/release compatibility, multi-project isolation/noisy-neighbor conformance, retention/repair/rebuild, plugin extension, adaptive thresholds/anomaly/SLO calibration, and distributed telemetry/trace/HA. External notification delivery remains TASK-008. No future Task is authorized by this refinement.

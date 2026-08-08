@@ -15,7 +15,7 @@ Canonical root: `/home/baisound/bai-development-os`.
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.10.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.11.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ companion set)
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ companion set)
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md` (+ companion set)
@@ -69,3 +69,8 @@ TASK-009〜015 are reserved roadmap items only and are not implicitly authorized
 ## Post-TASK-006 refinement
 
 TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement. TASK-008 remains the next route after TASK-007 completion.
+
+
+## Post-TASK-007 refinement
+
+TASK-007 is not reopened. Monitoring productization is reserved in TASK-009〜015: integrity/privacy, schema/release compatibility, multi-project isolation, retention/repair/rebuild, collector/renderer/exporter plugins, adaptive threshold/anomaly/SLO calibration, and distributed telemetry/trace/HA. External alert delivery remains TASK-008. All later tasks remain unstarted and unauthorized.

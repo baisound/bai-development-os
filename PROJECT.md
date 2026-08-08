@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.10.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.11.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -70,3 +70,8 @@ TASK-005-derived improvements have been allocated into existing TASK-009〜014: 
 ## Post-TASK-006 Roadmap Refinement
 
 TASK-006-derived improvements strengthen TASK-009〜014 with orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and evidence-based automation calibration. TASK-015 is newly reserved for optional Distributed Orchestration & Event Fabric: durable event delivery, replay/DLQ, worker leases, ordering/idempotency and cross-project Saga compensation. All remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-008 is now the next route.
+
+
+## Post-TASK-007 Roadmap Refinement
+
+TASK-007-derived productization work is allocated to TASK-009〜015: monitoring integrity/privacy, schema/release compatibility, multi-project isolation/noisy-neighbor conformance, retention/repair/rebuild, collector/renderer/exporter plugins, adaptive thresholds/anomaly/SLO calibration, and distributed telemetry/trace/HA. External alert delivery itself remains TASK-008. All additions are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.

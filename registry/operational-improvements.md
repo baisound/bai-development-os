@@ -96,3 +96,18 @@ TASK-015 is intentionally optional; simple single-machine projects continue usin
 | OP-039 | Distributed telemetry/event observation | Roadmap reserved | TASK-015 |
 
 TASK-007 remains read-only and completed; future notification/repair/calibration/distributed work does not reopen it.
+
+
+## Post-TASK-007 Monitoring Roadmap Refinement — 2026-08-08
+
+| ID | Improvement | Decision / Status | Planned integration |
+|---|---|---|---|
+| OP-040 | Monitoring ledger WAL/journal, signing, privacy/redaction and replay/tamper hardening | Roadmap reserved | TASK-009 |
+| OP-041 | Monitoring schema migration, historical compatibility and offline diagnostic bundle lifecycle | Roadmap reserved | TASK-010 |
+| OP-042 | Multi-project monitoring isolation, cardinality and noisy-neighbor conformance | Roadmap reserved | TASK-011 |
+| OP-043 | Monitoring retention, compaction, rollup, repair, rebuild, backup/restore and fsck | Roadmap reserved | TASK-012 |
+| OP-044 | Collector / metric / alert / renderer / exporter Monitoring Plugin SDK | Roadmap reserved | TASK-013 |
+| OP-045 | Adaptive thresholds, anomaly/baseline, SLI/SLO and alert-fatigue calibration | Roadmap reserved | TASK-014 |
+| OP-046 | Distributed telemetry, trace propagation, clock-skew/order, backpressure and HA collectors | Roadmap reserved | TASK-015 |
+
+External alert delivery itself remains TASK-008. TASK-007 stays read-only and `COMPLETED`; OP-040〜046 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED` future responsibilities.
