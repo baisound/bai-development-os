@@ -1,6 +1,6 @@
 {
   "name": "bai-development-os",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "BAI Development OS core governance, lifecycle, context guard, and reusable project-development foundation",
   "type": "module",
@@ -21,7 +21,8 @@
     "./dependency": "./src/dependency/index.mjs",
     "./system-sync": "./src/system-sync/index.mjs",
     "./knowledge": "./src/knowledge/index.mjs",
-    "./automation": "./src/automation/index.mjs"
+    "./automation": "./src/automation/index.mjs",
+    "./monitoring": "./src/monitoring/index.mjs"
   },
   "scripts": {
     "test": "node --test",
@@ -37,7 +38,8 @@
     "test:closure": "node --test tests/closure/*.test.mjs tests/archive/*.test.mjs tests/dependency/*.test.mjs",
     "test:system-sync": "node --test tests/system-sync/*.test.mjs",
     "test:knowledge": "node --test tests/knowledge/*.test.mjs",
-    "test:automation": "node --test tests/automation/*.test.mjs tests/integration/task006*.test.mjs"
+    "test:automation": "node --test tests/automation/*.test.mjs tests/integration/task006*.test.mjs",
+    "test:monitoring": "node --test tests/monitoring/*.test.mjs tests/integration/task007*.test.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

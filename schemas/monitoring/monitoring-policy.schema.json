@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.dev/schemas/monitoring/monitoring-policy.schema.json",
+  "type":"object",
+  "properties":{
+    "phase_age_warning_ms":{"type":"number","minimum":0},"phase_age_high_ms":{"type":"number","minimum":0},
+    "test_pass_rate_warning_below":{"type":"number","minimum":0,"maximum":1},"test_pass_rate_high_below":{"type":"number","minimum":0,"maximum":1},
+    "cost_utilization_warning_at":{"type":"number","minimum":0},"cost_utilization_high_at":{"type":"number","minimum":0},
+    "repeated_stall_high_at":{"type":"integer","minimum":1},"model_failure_warning_at":{"type":"number","minimum":0,"maximum":1},"model_failure_high_at":{"type":"number","minimum":0,"maximum":1},
+    "integration_failure_warning_at":{"type":"number","minimum":0,"maximum":1},"integration_failure_high_at":{"type":"number","minimum":0,"maximum":1},
+    "knowledge_debt_warning_at":{"type":"number","minimum":0},"knowledge_debt_high_at":{"type":"number","minimum":0},
+    "registry_verify_failure_high_at":{"type":"integer","minimum":1},"mandatory_knowledge_missing_high_at":{"type":"integer","minimum":1},"governance_verify_failure_high_at":{"type":"integer","minimum":1},
+    "alert_dedup_window_ms":{"type":"number","minimum":0},"source_stale_warning_ms":{"type":"number","minimum":0}
+  },"additionalProperties":false
+}

@@ -15,10 +15,11 @@ Canonical root: `/home/baisound/bai-development-os`.
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.9.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.10.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ companion set)
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ companion set)
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md` (+ companion set)
+- `specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md` (+ companion set)
 
 Reference consumer: `/home/baisound/projects/javascript-roulette`.
 
@@ -27,7 +28,8 @@ Reference consumer: `/home/baisound/projects/javascript-roulette`.
 - TASK-004 Lifecycle Foundation: `COMPLETED`.
 - TASK-005 Knowledge OS: `COMPLETED`.
 - TASK-006 Orchestration & Automation Foundation: `COMPLETED`.
-- Next planned route: TASK-007 Monitoring & Dashboard (`NOT_STARTED / NOT_AUTHORIZED`).
+- TASK-007 Monitoring & Dashboard: `COMPLETED`.
+- Next planned route: TASK-008 External Integration (`NOT_STARTED / NOT_AUTHORIZED`).
 
 ## Adaptive Routing Rule
 
@@ -41,8 +43,8 @@ Registry is not content authority; Automation cannot self-authorize or own Lifec
 
 ## Roadmap Identity
 
-- TASK-007 Monitoring & Dashboard — NEXT
-- TASK-008 External Integration
+- TASK-007 Monitoring & Dashboard — COMPLETED
+- TASK-008 External Integration — NEXT
 - TASK-009 Security / Supply Chain / Integrity Hardening
 - TASK-010 Release / Distribution / Consumer Upgrade OS
 - TASK-011 Multi-Project Conformance & Compatibility Lab
@@ -66,4 +68,4 @@ TASK-009〜015 are reserved roadmap items only and are not implicitly authorized
 
 ## Post-TASK-006 refinement
 
-TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement.
+TASK-009〜014 now also own orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and automation calibration. TASK-015 reserves optional distributed event/orchestration semantics. No item is authorized by this refinement. TASK-008 remains the next route after TASK-007 completion.

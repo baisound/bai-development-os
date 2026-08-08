@@ -83,3 +83,16 @@ No TASK-015 is created; these improvements extend existing reserved responsibili
 | OP-034 | Distributed Orchestration & Event Fabric | New roadmap reservation | TASK-015 |
 
 TASK-015 is intentionally optional; simple single-machine projects continue using TASK-006 local orchestration. All items remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`.
+
+
+## Post-TASK-007 Monitoring Completion Addendum — 2026-08-08
+
+| ID | Improvement | Decision / Status | Planned integration |
+|---|---|---|---|
+| OP-035 | Verified source freshness/provenance must be visible in dashboards | Implemented | TASK-007 |
+| OP-036 | Monitoring Event crash-journal / tail repair | Roadmap reserved | TASK-009 / TASK-012 |
+| OP-037 | External alert delivery adapters | Roadmap reserved | TASK-008 |
+| OP-038 | Monitoring threshold evidence calibration | Roadmap reserved | TASK-014 |
+| OP-039 | Distributed telemetry/event observation | Roadmap reserved | TASK-015 |
+
+TASK-007 remains read-only and completed; future notification/repair/calibration/distributed work does not reopen it.

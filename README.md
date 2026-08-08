@@ -10,6 +10,7 @@ It is intentionally separated from any one consumer project. The historical `jav
 - `src/lifecycle/` — Canonical Task lifecycle state and durable transitions
 - `src/governance/` — Adaptive development profile selection
 - `src/knowledge/` — governed Knowledge Assets, resolver, packs, usage/effectiveness and impact
+- `src/monitoring/` — read-only KPI, source provenance, alerts, audit correlation, trends and Dashboard rendering
 - `common/` — shared authority, evidence, artifact, vocabulary, and workflow rules
 - `roles/` — Builder, Critic, Tester, Judge, Orchestrator, Project Policy specifications
 - `registry/` — current state and document/context indexes
@@ -51,7 +52,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005 and TASK-006 are completed; TASK-007 Monitoring & Dashboard is now the next development route.
+The canonical roadmap now reserves TASK-009 through TASK-014 for Security/Supply-chain Hardening, Release/Distribution/Upgrade, Multi-project Conformance, Self-Maintenance/Drift Repair, Domain Adapter SDK, and Adaptive Governance Calibration. These are planned extensions only. TASK-005, TASK-006 and TASK-007 are completed; TASK-008 External Integration is now the next development route.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -60,8 +61,12 @@ As of 2026-08-08, TASK-005 is completed. Knowledge is no longer an informal note
 
 ## Post-TASK-005 Roadmap Refinement
 
-TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added. TASK-006 is completed; TASK-007 is now next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.
+TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and productization work. No new Task number was added. TASK-006 and TASK-007 are completed; TASK-008 is now next. See `architecture/BAI_Development_OS_Post_TASK005_Roadmap_Refinement_Ver1.0.md`.
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 remains next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
+TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 is completed; TASK-008 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
+
+## TASK-007 Monitoring & Dashboard Completion
+
+As of 2026-08-08, TASK-007 is completed. Monitoring remains read-only derived observability: verified source provenance, Lifecycle/Quality/Automation/Context/Cost/Model/Knowledge/Registry/Integration/Governance/System metrics, deterministic alerts, health, audit correlation, trends, multi-project dashboard and standalone escaped HTML. Run `npm run test:monitoring`. TASK-008 External Integration is the next route and is not automatically authorized.

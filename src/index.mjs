@@ -14,3 +14,5 @@ export * as DependencyControl from './dependency/index.mjs';
 export * as SystemSync from './system-sync/index.mjs';
 export * as KnowledgeOS from './knowledge/index.mjs';
 export * as AutomationOS from './automation/index.mjs';
+
+export * as MonitoringOS from './monitoring/index.mjs';

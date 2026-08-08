@@ -1,0 +1,10 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.dev/schemas/monitoring/dashboard-model.schema.json",
+  "type":"object",
+  "required":["dashboard_version","project_id","generated_at","health","cards","alerts","canonical_authority","derived_rebuildable","content_checksum"],
+  "properties":{
+    "dashboard_version":{"const":"1.0.0"},"project_id":{"type":"string","minLength":1},"task_id":{"type":["string","null"]},"generated_at":{"type":"string","format":"date-time"},
+    "health":{"enum":["HEALTHY","DEGRADED","AT_RISK","CRITICAL"]},"cards":{"type":"array","minItems":1},"alerts":{"type":"array"},"canonical_authority":{"const":false},"derived_rebuildable":{"const":true},"content_checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}
+  },"additionalProperties":false
+}

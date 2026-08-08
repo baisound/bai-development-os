@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-08T11:37:00+09:00'
+registry_generated_at: '2026-08-08T12:05:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 6aabff9b8ba6963d7ac6145416e0299b81ddff500a954c3b93af40b37b829ba0
-  size_bytes: 3941
+  sha256: 8aebf19b916226b49c84c08fabdbbe9541f8fc1871260761757316f91ab28c31
+  size_bytes: 4014
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: c75c709715fa097143f9e39d40fd7e80eed61b890a421a50b071da5341a03169
-  size_bytes: 4459
+  sha256: 9e1a25ea8d62f69a9254964bb3d7e8ccced965e512fb101f2f611f94f8585445
+  size_bytes: 5116
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: a05cfac189b1d2140f22d3b98bac1de3bc59cd799e8fb8f28aa41774e0b3bdd4
-  size_bytes: 2314
+  sha256: bbe4fdafc2c73a7c4f63946c8e907769a35c5398294bac8ce6a05fe5ed25aed6
+  size_bytes: 2466
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 80033a8c604d1677c96878a59c46e88927f99e81c921d9fa195c4d1e30ce1fe6
-  size_bytes: 3402
+  sha256: 6bce6cf3e466ff374d57f6646a3e7b965f2bd7b4e52e3780fb65044dd43b7b69
+  size_bytes: 3618
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: eb743ac5abf6d7f2039f807941504e4a9c4f3923750a1daaecdc578dbaf47714
-  size_bytes: 4620
+  sha256: 0a8045d642dacc4c28a84f512b2b8786fe2f0db95afb3bb19792050b14fde78b
+  size_bytes: 4876
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 933307b4dd5483dfb64359ebaaa38551e5518dd4a8753bd10634084ac74bce8c
-  size_bytes: 5573
+  sha256: 5e835981c2c5dbaaab369ad3effce3a4a76899cb394de2b865ddc5e2f64d9fc7
+  size_bytes: 6287
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -2460,8 +2460,9 @@ documents:
   sha256: 951ef85c91db15322a28ba3c56902aca054f3852ec5f72089e056e9f87af025b
   size_bytes: 148823
   preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_9_HUMAN
   path: architecture/BAI_Development_OS_Architecture_Ver2.9.docx
   title: BAI Development OS Architecture Ver.2.9
@@ -2471,8 +2472,9 @@ documents:
   sha256: 93d8d36e48508dde499fd33e7f703702c916fd39865929e1ced169bf93939f74
   size_bytes: 73131
   preferred_loading: on-demand
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10
 - document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_9_SUMMARY
   path: architecture/BAI_Development_OS_Architecture_Ver2.9.summary.md
   title: BAI Development OS Architecture Ver.2.9 — AI Summary
@@ -2482,8 +2484,9 @@ documents:
   sha256: a5d2fcfa429fa668cca27c608e28f3ba52002502b734388c2e3cc68b90a8c407
   size_bytes: 1784
   preferred_loading: read-first
-  status: CURRENT_CANONICAL
-  writable: true
+  status: SUPERSEDED_HISTORICAL_BASELINE
+  writable: false
+  superseded_by: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10
 - document_id: POST_TASK006_ROADMAP_REFINEMENT_V1_0
   path: architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS — Post-TASK-006 Roadmap Refinement Ver.1.0
@@ -2506,18 +2509,249 @@ documents:
   preferred_loading: on-demand
   status: PASS
   effective_date: '2026-08-08'
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10
+  path: architecture/BAI_Development_OS_Architecture_Ver2.10.md
+  title: BAI Development OS Architecture Ver.2.10 — TASK-007 Monitoring & Dashboard Completion
+  category: architecture
+  authority: machine_canonical_authority
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: true
+  sha256: 61ae3311b3d005d4d5acfc1d38603632b40361b474eb0c3bc82c366af2c2e3f9
+  size_bytes: 156265
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10_HUMAN
+  path: architecture/BAI_Development_OS_Architecture_Ver2.10.docx
+  title: BAI Development OS Architecture Ver.2.10
+  category: architecture
+  authority: human_canonical_companion
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: true
+  sha256: f5299abd7e8bd85477d8c60a3979fb81bf8ed38465d4c141bc5b2a89ca237ba0
+  size_bytes: 76272
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10_SUMMARY
+  path: architecture/BAI_Development_OS_Architecture_Ver2.10.summary.md
+  title: BAI Development OS Architecture Ver.2.10 — AI Summary
+  category: architecture
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  writable: true
+  sha256: c5d721a62b8d88111dec5c89097359314823d2ba62fbe30b5c51fca192183480
+  size_bytes: 973
+- document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10_QA
+  path: architecture/BAI_Development_OS_Architecture_Ver2.10.document-sync-and-visual-qa.md
+  title: BAI Development OS Architecture Ver.2.10 — Document Sync and Visual QA
+  category: verification-evidence
+  authority: verification-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: PASS
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 49b3eacf6565054f304a6a40b9b3394ce7417d69ac389fdfeda359479712c285
+  size_bytes: 2449
+- document_id: TASK_007_MONITORING_DASHBOARD
+  path: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md
+  title: TASK-007 BAI Development OS Monitoring & Dashboard Detailed Design Ver.1.0
+  category: specification
+  authority: machine-readable-canonical-copy
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 2f7a8a069e92dd221fab4efbf17c2864270c3730a0997821cfc5146cc2f66e4b
+  size_bytes: 17038
+- document_id: TASK_007_MONITORING_DASHBOARD_HUMAN
+  path: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
+  title: TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
+  category: specification
+  authority: human-readable-copy
+  importance_level: C
+  preferred_loading: on-demand
+  status: CURRENT_CANONICAL_COMPANION
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 16acea1ab05a0818b63dbc99588fbb85a1f56302ccbde26213a62a0574deffa8
+  size_bytes: 44237
+- document_id: TASK_007_MONITORING_DASHBOARD_SUMMARY
+  path: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.summary.md
+  title: TASK-007 Monitoring & Dashboard Ver.1.0 — AI Summary
+  category: specification
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: summary-first
+  status: CURRENT_CANONICAL_SUMMARY
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 2f8425b8e2c44aa694d08acb7382ee1ff7595453af67fd9457ffda27bae55aea
+  size_bytes: 989
+- document_id: B2D03BC94F35B2BB
+  path: tasks/TASK-007/task.md
+  title: TASK-007 — BAI Development OS Monitoring & Dashboard
+  category: task-evidence
+  authority: task-definition
+  importance_level: A
+  preferred_loading: summary-first
+  status: COMPLETED
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 84acc9b66fc9e66b89e1071c3df88307505e50db42db9cf0d87d62d6377999d5
+  size_bytes: 725
+- document_id: BBA7EE404E2C0B70
+  path: tasks/TASK-007/TASK-007.summary.md
+  title: TASK-007 Summary
+  category: task-evidence
+  authority: navigation-aid
+  importance_level: A
+  preferred_loading: summary-first
+  status: COMPLETED_SUMMARY
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 438889fa7f4715e4cfaca2d615a3d66b31003c6128adeefd058e38d91cc51d94
+  size_bytes: 407
+- document_id: 90FF7A2D88D454FA
+  path: tasks/TASK-007/detailed-design.md
+  title: TASK-007 Detailed Design Record
+  category: task-evidence
+  authority: design-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: COMPLETED_EVIDENCE
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: c53885a3756e86db8bc0c56fb9c2541617a461de289e440dba67096b4bcd5e48
+  size_bytes: 734
+- document_id: C9CCDAD3D2039938
+  path: tasks/TASK-007/implementation-report.md
+  title: TASK-007 Implementation Report
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: COMPLETED_EVIDENCE
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 9dd883e661857d51966e7af3045e2e058e608f092873e10ca8846686eff3922e
+  size_bytes: 900
+- document_id: 260AB02155A40EAA
+  path: tasks/TASK-007/test-report.md
+  title: TASK-007 Test Report
+  category: task-evidence
+  authority: test-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: COMPLETED_EVIDENCE
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 4e8b7ddebd388f121a9220e00fa01ef5338ac220786c6be9687126371c55b416
+  size_bytes: 796
+- document_id: 20B64D049114B3E8
+  path: tasks/TASK-007/critic-review.md
+  title: TASK-007 Independent Critic Review
+  category: task-evidence
+  authority: critic-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: PASS
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 55f92689d9ed0efd2f2b69f469debb9c6338a212cfbe60b5cb1439e143dfdb06
+  size_bytes: 998
+- document_id: 9FF68CC0E74C6FDA
+  path: tasks/TASK-007/final-implementation-decision.md
+  title: TASK-007 Final Implementation Decision
+  category: task-evidence
+  authority: decision-evidence
+  importance_level: A
+  preferred_loading: summary-first
+  status: APPROVED_COMPLETE
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 516d3c3036002c2e03890247376bdcab3d8a694d8d7bad981ad713c1d28ce239
+  size_bytes: 311
+- document_id: A320705F4B54F458
+  path: tasks/TASK-007/task007-final-completion-record.md
+  title: TASK-007 Final Completion Record
+  category: task-evidence
+  authority: completion-evidence
+  importance_level: A
+  preferred_loading: summary-first
+  status: COMPLETED
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 4cc41fa3935c80e901d49e91a687f81217b98910ff7cab2ad9c1cc6432dd19ec
+  size_bytes: 984
+- document_id: CE93198CD06B679B
+  path: schemas/monitoring/monitoring-event.schema.json
+  title: monitoring-event.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: a7029b19252cf742d3fc2d727df3a0d0105c9934dd769a6ef10e0a94adf64319
+  size_bytes: 1182
+- document_id: 2F6E8570D4E47E42
+  path: schemas/monitoring/monitoring-policy.schema.json
+  title: monitoring-policy.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: 496526f6382a0f39228d094a86cc6a50fb8436792f0795f40c2fb632247a2b51
+  size_bytes: 1378
+- document_id: 110E08A1135B55B5
+  path: schemas/monitoring/monitoring-snapshot.schema.json
+  title: monitoring-snapshot.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: d7cfe23360e57471b732cfe2035101dab9d2ffa26d8f5c72c0efb02095d02e89
+  size_bytes: 1009
+- document_id: B5C94C895F3C7711
+  path: schemas/monitoring/dashboard-model.schema.json
+  title: dashboard-model.schema.json
+  category: schema
+  authority: machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: CURRENT_SCHEMA
+  effective_date: '2026-08-08'
+  verified_by: Orchestrator
+  sha256: ac56826ca885d361e0ce1caac6f06313acf124d14f3b73e3e124b6966fb6cb29
+  size_bytes: 820
 current_canonical_document_sets:
   effective_date: '2026-08-08'
   promotion_authority: Owner
   consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.9.document-sync-and-visual-qa.md
+  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.10.document-sync-and-visual-qa.md
   architecture:
-    document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_9
-    version: '2.9'
+    document_id: AI_DEVELOPMENT_OS_ARCHITECTURE_VER2_10
+    version: '2.10'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.9.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.9.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.9.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.10.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.10.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.10.summary.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
@@ -2528,9 +2762,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_POST_TASK006_ROADMAP_REFINEMENT
+  registry_sync_status: CURRENT_AFTER_TASK007_COMPLETION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK_009_TO_TASK_015_REFINED_AFTER_TASK006_NOT_AUTHORIZED
+  roadmap_expansion_status: TASK_009_TO_TASK_015_RESERVED_NOT_AUTHORIZED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -2540,7 +2774,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK-007 — Monitoring & Dashboard
+  next_canonical_route: TASK-008 — External Integration
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -2548,6 +2782,14 @@ current_canonical_document_sets:
     human: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.docx
     machine: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md
     summary: specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.summary.md
-  task_007_status: NEXT_NOT_STARTED_NOT_AUTHORIZED
+  task_007_status: COMPLETED
+  task_007_monitoring_dashboard:
+    document_id: TASK_007_MONITORING_DASHBOARD
+    version: '1.0'
+    status: CURRENT_CANONICAL
+    human: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.docx
+    machine: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md
+    summary: specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.summary.md
+  task_008_status: NEXT_NOT_STARTED_NOT_AUTHORIZED
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_POST_TASK006_ROADMAP_REFINEMENT
+registry_status: CURRENT_AFTER_TASK007_COMPLETION

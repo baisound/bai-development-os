@@ -1,0 +1,24 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://baisound.dev/schemas/monitoring/monitoring-event.schema.json",
+  "type":"object",
+  "required":["monitoring_event_version","event_id","observed_at","project_id","component","metric","value","severity_hint","evidence","attributes","content_checksum"],
+  "properties":{
+    "monitoring_event_version":{"const":"1.0.0"},
+    "event_id":{"type":"string","minLength":1},
+    "observed_at":{"type":"string","format":"date-time"},
+    "project_id":{"type":"string","minLength":1},
+    "task_id":{"type":["string","null"]},
+    "run_id":{"type":["string","null"]},
+    "correlation_id":{"type":["string","null"]},
+    "component":{"enum":["LIFECYCLE","QUALITY","AUTOMATION","CONTEXT","COST","MODEL","KNOWLEDGE","REGISTRY","INTEGRATION","GOVERNANCE","SYSTEM"]},
+    "metric":{"type":"string","minLength":1},
+    "value":{},
+    "unit":{"type":["string","null"]},
+    "severity_hint":{"enum":["INFO","WARNING","HIGH","CRITICAL"]},
+    "evidence":{"type":"array"},
+    "attributes":{"type":"object"},
+    "content_checksum":{"type":"string","pattern":"^sha256:[a-f0-9]{64}$"}
+  },
+  "additionalProperties":false
+}

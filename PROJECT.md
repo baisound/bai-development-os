@@ -24,19 +24,20 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.9.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.10.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
+- `specifications/TASK-007_BAI_Development_OS_Monitoring_Dashboard_Ver1.0.md`
 
-TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 is `COMPLETED` and provides the governed Knowledge Operating System. TASK-006 is also `COMPLETED` and provides the Orchestration & Automation Foundation: Workspace Registry/Multi-Project Index, runtime/project/risk/Knowledge resolution, Role Startup, instruction compilation, Owner Decision Support, reliability/document synchronization, sandbox probes, Advanced Guard, conditional automation and verified Completion Outbox consumption.
+TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 is `COMPLETED` and provides the governed Knowledge Operating System. TASK-006 is `COMPLETED` and provides the Orchestration & Automation Foundation. TASK-007 is `COMPLETED` and provides read-only Monitoring & Dashboard: verified source provenance, KPI/health/alert evaluation, correlation audit, trends, multi-project summaries and standalone HTML visualization without creating a second canonical source.
 
 ## Roadmap
 
 - `TASK-005`: Knowledge OS — `COMPLETED`
 - `TASK-006`: Workspace Registry / Resolver / Automation foundation — `COMPLETED`
-- `TASK-007`: Monitoring & Dashboard — next route
-- `TASK-008`: External Integration
+- `TASK-007`: Monitoring & Dashboard — `COMPLETED`
+- `TASK-008`: External Integration — next route
 - `TASK-009`: Security / Supply Chain / Integrity Hardening
 - `TASK-010`: Release / Distribution / Consumer Upgrade OS
 - `TASK-011`: Multi-Project Conformance & Compatibility Lab
@@ -68,4 +69,4 @@ TASK-005-derived improvements have been allocated into existing TASK-009〜014: 
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006-derived improvements strengthen TASK-009〜014 with orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and evidence-based automation calibration. TASK-015 is newly reserved for optional Distributed Orchestration & Event Fabric: durable event delivery, replay/DLQ, worker leases, ordering/idempotency and cross-project Saga compensation. All remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-007 remains next.
+TASK-006-derived improvements strengthen TASK-009〜014 with orchestration integrity, automation release compatibility, multi-consumer conformance, Registry/Outbox/runtime self-repair, orchestration plugin points and evidence-based automation calibration. TASK-015 is newly reserved for optional Distributed Orchestration & Event Fabric: durable event delivery, replay/DLQ, worker leases, ordering/idempotency and cross-project Saga compensation. All remain `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`; TASK-008 is now the next route.
