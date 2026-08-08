@@ -162,3 +162,16 @@ TASK-009 implementation exposed production-layer follow-ons that are now reserve
 - TASK-014: calibrate canary, rollback, compatibility and acquisition policies from evidence while preserving fixed safety floors.
 - TASK-015: coordinate release locks, trust/key state, cost and rollout across multiple workers/machines when distributed topology requires it.
 - Actual GitHub publication remains an explicit authorized TASK-008 external side effect.
+
+
+## Post-TASK-010 Release Productization Allocation
+
+| ID | Improvement | State | Owner Task |
+|---|---|---|---|
+| OP-060 | Cross-platform/filesystem/package-source ReleaseOS conformance and multi-version upgrade-chain certification | Roadmap reserved | TASK-011 |
+| OP-061 | Stale release-lock reclaim, interrupted release reconciliation, release fsck, attestation/trust/cache/checkpoint maintenance | Roadmap reserved | TASK-012 |
+| OP-062 | Platform Installer / Package Manager / Artifact Repository / Distribution Source / Migration Provider SDK | Roadmap reserved | TASK-013 |
+| OP-063 | Evidence-based canary cohort, soak, health-gate, rollback-trigger and acquisition-source calibration | Roadmap reserved | TASK-014 |
+| OP-064 | Optional distributed release lease, staged cohort rollout, trust/key propagation, partial rollout recovery and global rollback coordination | Roadmap reserved | TASK-015 |
+
+TASK-010 remains `COMPLETED`. OP-060〜064 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. Actual external publication remains a TASK-008 authorized side effect. No TASK-016 is created.

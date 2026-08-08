@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.17`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.18`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
@@ -53,7 +53,7 @@ TASK-004 provides Lifecycle, Guard, Recovery, Context, Cost/Model, Closure/Archi
 - Root `ReleaseOS` export: `PASS`
 - Release schemas: `8 / 8 PASS`
 - Security Conformance: `9 schemas PASS`
-- Roadmap Consolidation: `39 / 39 PASS`
+- Roadmap Consolidation: `44 / 44 PASS`
 - JavaScript Roulette Reference Consumer: `10 / 10 PASS`
 - Blocking Critic findings: `0`
 - Canonical DOCX visual QA: `Architecture Ver.2.17 118 / 118 PASS; TASK-010 design 3 / 3 PASS`
@@ -74,7 +74,7 @@ TASK-009 and TASK-010 are `COMPLETED`. TASK-011–015 retain their consolidated 
 
 ## Registry Integrity
 
-- Document Registry: `328 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `333 documents / Missing 0 / Hash-Size mismatch 0`
 
 ## Post-TASK-006 Roadmap Refinement
 
@@ -96,15 +96,15 @@ Historical TASK-008 refinement note: Architecture Ver.2.14 was canonical at that
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.17 Part XV remains the sole current consolidated roadmap scope for TASK-011〜015; TASK-009 and TASK-010 are completed. Part XVIII records TASK-010 completion. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.18 Part XV remains the sole current consolidated roadmap scope for TASK-011〜015; TASK-009 and TASK-010 are completed. Part XVIII records TASK-010 completion. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 44 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## Roadmap Consolidation Verification
 
-- Current Roadmap Authority: `Architecture Ver.2.17 Part XV`; TASK-009/TASK-010 completed, TASK-011〜015 future consolidated scope
-- Accumulated roadmap source sections preserved: `39 / 39 PASS`
+- Current Roadmap Authority: `Architecture Ver.2.18 Part XV`; TASK-009/TASK-010 completed, TASK-011〜015 future consolidated scope
+- Accumulated roadmap source sections preserved: `44 / 44 PASS`
 - Silent requirement deletions: `0`
 - TASK-013 original Domain Adapter / Plugin SDK identity: `PRESERVED`
-- Historical Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`; Current Ver.2.17 QA: `118 / 118 PASS`
+- Historical Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`; Historical Ver.2.17 QA: `118 / 118 PASS`; Current Ver.2.18 QA: `123 / 123 PASS`
 - Historical addenda: `HISTORICAL_EVOLUTION`
 - Roadmap machine check: `ROADMAP_CONSOLIDATION_PASS`
 
@@ -120,4 +120,9 @@ Historical post-TASK-009 refinement note: Architecture Ver.2.16 allocated TASK-0
 
 ## TASK-010 Release / Distribution / Consumer Upgrade Completion
 
-TASK-010 is `COMPLETED`. `ReleaseOS` provides strict SemVer, signed/checksummed Release Manifests, trust-anchor bootstrap/rotation, signed offline bundles, compatibility/security-profile evaluation, migration and upgrade preview, filesystem-serialized crash-consistent install/update, Owner-gated downgrade/rollback, portable subsystem bundles, cache/mirror/registry acquisition policy, canary promotion, diagnostics and installation attestation. Existing stronger Consumer Security Profiles cannot be weakened by caller input, undeclared bundle files are rejected, retired signing keys cannot sign newly created releases after retirement, and local release mutation is serialized. Architecture Ver.2.17 and TASK-010 Ver.1.0 are current canonical. TASK-011 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+TASK-010 is `COMPLETED`. `ReleaseOS` provides strict SemVer, signed/checksummed Release Manifests, trust-anchor bootstrap/rotation, signed offline bundles, compatibility/security-profile evaluation, migration and upgrade preview, filesystem-serialized crash-consistent install/update, Owner-gated downgrade/rollback, portable subsystem bundles, cache/mirror/registry acquisition policy, canary promotion, diagnostics and installation attestation. Existing stronger Consumer Security Profiles cannot be weakened by caller input, undeclared bundle files are rejected, retired signing keys cannot sign newly created releases after retirement, and local release mutation is serialized. Architecture Ver.2.18 and TASK-010 Ver.1.0 are current canonical. TASK-011 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+
+
+## Post-TASK-010 Roadmap Refinement
+
+TASK-010 remains `COMPLETED`. Architecture Ver.2.18 Part XV integrates five TASK-010-derived future sections directly into TASK-011〜015: release portability/conformance, release fsck/stale-lock recovery, release-provider SDKs, evidence-based release policy calibration, and optional distributed rollout coordination. The roadmap lossless baseline is now `44 / 44`. TASK-011 remains the next unstarted/unauthorized route. Actual GitHub/registry publication remains a TASK-008 authorized external side effect.

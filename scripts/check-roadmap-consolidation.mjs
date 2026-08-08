@@ -5,6 +5,7 @@ const root = process.cwd();
 const statePath = path.join(root, 'registry/current-state.md');
 const sourcePath = path.join(root, 'architecture/BAI_Development_OS_Architecture_Ver2.13.md');
 const task009RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK009_Roadmap_Refinement_Ver1.0.md');
+const task010RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK010_Roadmap_Refinement_Ver1.0.md');
 
 const state = fs.readFileSync(statePath, 'utf8');
 const versionMatch = state.match(/Current Architecture Canonical: `BAI Development OS Architecture Ver\.([0-9.]+)`/);
@@ -50,7 +51,19 @@ for (const task of ['010','011','012','013','014','015']) {
   const body = task009Refinement.slice(bodyStart, next < 0 ? task009Refinement.length : next).trim();
   task009Sections.push({ heading, body });
 }
-const allSections = [...sections, ...task009Sections];
+const task010Refinement = fs.readFileSync(task010RefinementPath, 'utf8');
+const task010Sections = [];
+for (const task of ['011','012','013','014','015']) {
+  const heading = `## TASK-${task}`;
+  const start = task010Refinement.indexOf(heading);
+  if (start < 0) throw new Error(`ROADMAP_CHECK_FAIL: TASK-${task} TASK-010 refinement missing`);
+  const bodyStart = task010Refinement.indexOf('\n', start) + 1;
+  const next = task010Refinement.indexOf('\n## ', bodyStart);
+  let body = task010Refinement.slice(bodyStart, next < 0 ? task010Refinement.length : next).trim();
+  body = body.replace(/^### [^\n]+\n+/, '').trim();
+  task010Sections.push({ heading, body });
+}
+const allSections = [...sections, ...task009Sections, ...task010Sections];
 const missing = allSections.filter((s) => !consolidated.includes(s.body));
 if (missing.length) {
   console.error('ROADMAP_CHECK_MISSING_SECTIONS');

@@ -56,7 +56,7 @@ TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External In
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.17 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 39 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.18 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 44 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 loading rule
 
@@ -65,9 +65,14 @@ TASK-009 is completed. Load `tasks/TASK-009/TASK-009.summary.md` and `specificat
 
 ## Post-TASK-009 routing note
 
-Use Architecture Ver.2.17 Part XV for future TASK-011〜015 scope. The roadmap lossless baseline is 39 source sections. TASK-009/TASK-010 are completed; historical refinements must not be re-added as duplicate tasks.
+Use Architecture Ver.2.18 Part XV for future TASK-011〜015 scope. The roadmap lossless baseline is 44 source sections. TASK-009/TASK-010 are completed; historical refinements must not be re-added as duplicate tasks.
 
 
 ## TASK-010 Current Context
 
 TASK-010 is completed. Load `tasks/TASK-010/TASK-010.summary.md`, then `specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md` when release/distribution/upgrade behavior is relevant. `ReleaseOS` owns release metadata, compatibility/migration planning and local governed release mutation, but does not grant Owner authorization or publish external releases by itself. Current Architecture is Ver.2.17. TASK-011 is next and remains unstarted/unauthorized.
+
+
+## Post-TASK-010 Roadmap Refinement
+
+TASK-010 remains completed. Architecture Ver.2.18 Part XV directly consolidates TASK-010-derived scope into TASK-011〜015: cross-platform/provider release conformance, release fsck/stale-lock recovery, release provider SDKs, adaptive canary/rollback/acquisition calibration, and optional distributed rollout coordination. Current roadmap lossless baseline: `44 / 44`. TASK-011 remains next and unauthorized.

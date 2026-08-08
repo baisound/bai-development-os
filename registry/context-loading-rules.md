@@ -62,10 +62,13 @@ When a summary or registry entry records a source SHA-256 and the hash still mat
 - Using cost reduction to weaken required foundation-critical tests.
 ## Roadmap Retrieval Rule
 
-For completed `TASK-009`, load TASK-009 Ver.1.0 plus Architecture Part XVI when needed. For completed `TASK-010`, load TASK-010 Ver.1.0 plus Architecture Ver.2.17 Part XVIII when needed. For future `TASK-011` through `TASK-015`, load Architecture Ver.2.17 Part XV (or its summary for navigation) as the current complete consolidated scope. Parts VI/VIII/X/XII/XIV and post-TASK addenda are Historical Evolution and MUST NOT be used alone as current task scope. Load them only for provenance/evolution analysis.
+For completed `TASK-009`, load TASK-009 Ver.1.0 plus Architecture Part XVI when needed. For completed `TASK-010`, load TASK-010 Ver.1.0 plus Architecture Ver.2.17 Part XVIII when needed. For future `TASK-011` through `TASK-015`, load Architecture Ver.2.18 Part XV (or its summary for navigation) as the current complete consolidated scope. Parts VI/VIII/X/XII/XIV and post-TASK addenda are Historical Evolution and MUST NOT be used alone as current task scope. Load them only for provenance/evolution analysis.
 
 If a retrieved historical fragment says a future Task is undefined or shows only one refinement slice, resolve it against Part XV before making a routing or scope decision.
 
 ## TASK-009 security context rule
 
 Do not load the entire SecurityOS implementation by default. Start from `tasks/TASK-009/TASK-009.summary.md`; load the Detailed Design Ver.1.0 and only the relevant security module/schema/test when a task actually touches path safety, secrets, signing, journaling, replay, egress/DLP, supply-chain or sandbox behavior.
+
+
+For TASK-011〜015 roadmap work after TASK-010 completion, Architecture Ver.2.18 Part XV is the single current scope. `BAI_Development_OS_Post_TASK010_Roadmap_Refinement_Ver1.0.md` is provenance only; do not load it as a substitute for Part XV.
