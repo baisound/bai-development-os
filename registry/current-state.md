@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.13`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.14`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
@@ -70,7 +70,7 @@ TASK-009–015 remain reserved `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. TASK-0
 
 ## Registry Integrity
 
-- Document Registry: `264 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `275 documents / Missing 0 / Hash-Size mismatch 0`
 
 ## Post-TASK-006 Roadmap Refinement
 
@@ -88,4 +88,18 @@ TASK-008 remains an execution boundary, not a new source of authority. Connector
 
 ## Post-TASK-008 Roadmap Refinement
 
-Architecture Ver.2.13 is the current canonical architecture. TASK-008 remains `COMPLETED`. Its deferred productization scope is now concretely allocated across TASK-009〜015: credential/vault and connector security; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport SDK; adaptive integration policy calibration; and optional distributed integration/event coordination. No TASK-016 is created. TASK-009 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+Architecture Ver.2.14 is the current canonical architecture. TASK-008 remains `COMPLETED`. Its deferred productization scope is now concretely allocated across TASK-009〜015: credential/vault and connector security; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport SDK; adaptive integration policy calibration; and optional distributed integration/event coordination. No TASK-016 is created. TASK-009 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+
+## Consolidated Roadmap Authority
+
+Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+
+## Roadmap Consolidation Verification
+
+- Current Roadmap Authority for TASK-009〜015: `Architecture Ver.2.14 Part XV`
+- Accumulated roadmap source sections preserved: `33 / 33 PASS`
+- Silent requirement deletions: `0`
+- TASK-013 original Domain Adapter / Plugin SDK identity: `PRESERVED`
+- Architecture Ver.2.14 DOCX visual QA: `110 / 110 PASS`
+- Historical addenda: `HISTORICAL_EVOLUTION`
+- Roadmap machine check: `ROADMAP_CONSOLIDATION_PASS`

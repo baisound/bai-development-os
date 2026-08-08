@@ -1,0 +1,67 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root = process.cwd();
+const statePath = path.join(root, 'registry/current-state.md');
+const sourcePath = path.join(root, 'architecture/BAI_Development_OS_Architecture_Ver2.13.md');
+
+const state = fs.readFileSync(statePath, 'utf8');
+const versionMatch = state.match(/Current Architecture Canonical: `BAI Development OS Architecture Ver\.([0-9.]+)`/);
+if (!versionMatch) throw new Error('ROADMAP_CHECK_FAIL: current architecture version not found');
+const currentVersion = versionMatch[1];
+const currentPath = path.join(root, `architecture/BAI_Development_OS_Architecture_Ver${currentVersion}.md`);
+if (!fs.existsSync(currentPath)) throw new Error(`ROADMAP_CHECK_FAIL: current architecture missing: ${currentPath}`);
+
+const source = fs.readFileSync(sourcePath, 'utf8');
+const current = fs.readFileSync(currentPath, 'utf8');
+const marker = '# Part XV — Current Consolidated Roadmap Authority';
+const markerIndex = current.indexOf(marker);
+if (markerIndex < 0) throw new Error('ROADMAP_CHECK_FAIL: Part XV current consolidated roadmap missing');
+const consolidated = current.slice(markerIndex);
+
+const lines = source.split(/\r?\n/);
+const acceptedRanges = [[64,69],[76,81],[93,99],[112,118],[129,135]];
+const inRange = (n) => acceptedRanges.some(([a,b]) => n >= a && n <= b);
+const sections = [];
+for (let i = 0; i < lines.length; i++) {
+  const m = lines[i].match(/^##\s+(\d+)\.\s+(TASK-0(?:09|10|11|12|13|14|15)\b.*)$/);
+  if (!m) continue;
+  const n = Number(m[1]);
+  if (!inRange(n)) continue;
+  let j = i + 1;
+  while (j < lines.length && !lines[j].startsWith('## ')) j++;
+  const body = lines.slice(i + 1, j).join('\n').trim();
+  sections.push({ heading: lines[i], body });
+}
+
+if (sections.length !== 33) {
+  throw new Error(`ROADMAP_CHECK_FAIL: expected 33 historical source sections, got ${sections.length}`);
+}
+
+const missing = sections.filter((s) => !consolidated.includes(s.body));
+if (missing.length) {
+  console.error('ROADMAP_CHECK_MISSING_SECTIONS');
+  for (const s of missing) console.error(`- ${s.heading}`);
+  process.exit(1);
+}
+
+const task13Required = [
+  'TASK-013 — Domain Adapter / Plugin SDK',
+  'Domain-specific Project Policy Pack / Test Pack / Evidence Pack',
+  '動画・音声・BGM・SE・配信・Unity・Web・Desktop・Automation',
+];
+for (const required of task13Required) {
+  if (!consolidated.includes(required)) throw new Error(`ROADMAP_CHECK_FAIL: TASK-013 identity fragment missing: ${required}`);
+}
+
+const historicalWarnings = [
+  'TASK-009 is not defined in the current canonical OS roadmap.',
+  'TASK-009 remains undefined unless separately designed and authorized.',
+];
+for (const warning of historicalWarnings) {
+  if (current.includes(warning) && !consolidated.includes('explicitly superseded for current routing')) {
+    throw new Error(`ROADMAP_CHECK_FAIL: historical/current ambiguity not superseded: ${warning}`);
+  }
+}
+
+console.log(`ROADMAP_CONSOLIDATION_PASS current=Ver.${currentVersion} source_sections=${sections.length} missing=0`);

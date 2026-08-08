@@ -30,7 +30,7 @@ Adaptive Development Governance changes workflow depth, not permanent model-sele
 
 ## TASK-004 Completed Lifecycle Contract
 
-TASK-004 is the completed Lifecycle Foundation baseline. Use current Architecture `architecture/BAI_Development_OS_Architecture_Ver2.13.md` for product-level routing and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` for the TASK-004 Lifecycle contract. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
+TASK-004 is the completed Lifecycle Foundation baseline. Use current Architecture `architecture/BAI_Development_OS_Architecture_Ver2.14.md` for product-level routing and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` for the TASK-004 Lifecycle contract. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
 
 Adaptive Development Governance still changes workflow depth rather than permanent model-selection policy.
 
@@ -47,9 +47,13 @@ Load `tasks/TASK-006/TASK-006.summary.md` and the Ver.1.0 automation canonical w
 
 ## TASK-007 Monitoring Baseline
 
-TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.13.
+TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.14.
 
 
 ## TASK-008 External Integration Baseline
 
 TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only for connector/external-side-effect work. `IntegrationOS` resolves connector capabilities, authorization, credential references, idempotency, retry/timeout/rate controls, Cost Guard reservations, license context, trust normalization, inbound webhook verification, audit and Monitoring. A successful connector response is never canonical merely because execution succeeded. Runtime export: `IntegrationOS`. TASK-009 is next and remains unauthorized until separately activated.
+
+## Consolidated Roadmap Authority
+
+Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.

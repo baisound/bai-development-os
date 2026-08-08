@@ -60,3 +60,8 @@ When a summary or registry entry records a source SHA-256 and the hash still mat
 - Loading all historical review/retest cycles when only the current unresolved defect matters.
 - Restarting all Role sessions after a localized fix when the selected profile only requires impacted revalidation.
 - Using cost reduction to weaken required foundation-critical tests.
+## Roadmap Retrieval Rule
+
+For `TASK-009` through `TASK-015`, load Architecture Ver.2.14 Part XV (or its summary for navigation) as the current complete scope. Parts VI/VIII/X/XII/XIV and post-TASK addenda are Historical Evolution and MUST NOT be used alone as current task scope. Load them only for provenance/evolution analysis.
+
+If a retrieved historical fragment says a future Task is undefined or shows only one refinement slice, resolve it against Part XV before making a routing or scope decision.

@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.13.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.14.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -88,4 +88,8 @@ Final verification: dedicated Integration `77/77 PASS`, full OS `561/561 PASS`, 
 
 ## Post-TASK-008 Roadmap Refinement
 
-TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.13 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
+TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.14 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
+
+## Consolidated Roadmap Authority
+
+Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.

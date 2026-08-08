@@ -15,7 +15,7 @@ Canonical root: `/home/baisound/bai-development-os`.
 
 Current canonical design set:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.11.md` (+ `.docx`, `.summary.md`)
+- `architecture/BAI_Development_OS_Architecture_Ver2.14.md` (+ `.docx`, `.summary.md`)
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` (+ companion set)
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md` (+ companion set)
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md` (+ companion set)
@@ -84,4 +84,12 @@ As of 2026-08-08, TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.m
 
 ## Post-TASK-008 refinement
 
-Load Architecture Ver.2.13 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
+Load Architecture Ver.2.14 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.
+
+## Consolidated Roadmap Authority
+
+Architecture Ver.2.14 Part XV is the sole current complete scope for TASK-009〜015. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 33 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+
+## Consolidated Roadmap Loading Rule
+
+For TASK-009〜015, Part XV of Architecture Ver.2.14 is the sole complete current scope. Older roadmap parts/addenda are provenance only. TASK-013 remains the general cross-domain Domain Adapter / Plugin SDK; later Knowledge/Automation/Monitoring/Connector plugin scopes are cumulative subdomains, not replacements.

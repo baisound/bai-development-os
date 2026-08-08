@@ -41,7 +41,8 @@
     "test:knowledge": "node --test tests/knowledge/*.test.mjs",
     "test:automation": "node --test tests/automation/*.test.mjs tests/integration/task006*.test.mjs",
     "test:monitoring": "node --test tests/monitoring/*.test.mjs tests/integration/task007*.test.mjs",
-    "test:integration": "node --test tests/external-integration/*.test.mjs tests/integration/task008*.test.mjs"
+    "test:integration": "node --test tests/external-integration/*.test.mjs tests/integration/task008*.test.mjs",
+    "check:roadmap": "node scripts/check-roadmap-consolidation.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

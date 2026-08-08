@@ -139,3 +139,7 @@ Crash-consistent audit persistence, security/privacy hardening, multi-project co
 | OP-059 | Distributed idempotency/rate/webhook/job/cancellation/Cost coordination | Roadmap reserved | TASK-015 |
 
 TASK-008 remains `COMPLETED`. OP-053〜059 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED` future responsibilities. No TASK-016 is created.
+
+## Roadmap scope consolidation — 2026-08-08
+
+Problem: future TASK scope accumulated across multiple appendices, making partial retrieval semantically lossy even though source text was retained. Resolution: Architecture Ver.2.14 Part XV becomes the single current consolidated scope for TASK-009〜015, backed by a 33-section lossless merge audit. Future roadmap refinements must update consolidated scope and provenance together.
