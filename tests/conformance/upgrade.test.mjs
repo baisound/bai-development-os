@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { evaluateUpgradeChain } from '../../src/conformance/index.mjs';
+test('sequential upgrade passes',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','1.1.0','2.0.0']}).status,'PASS'));
+test('downgrade direction detected',()=>assert.equal(evaluateUpgradeChain({versions:['2.0.0','1.0.0']}).steps[0].direction,'DOWNGRADE'));
+test('same version detected',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','1.0.0']}).steps[0].direction,'SAME'));
+test('disallowed direct transition fails',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','3.0.0'],allowed_direct:['1.0.0->2.0.0']}).status,'FAIL'));
+test('allowed direct transition passes',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','3.0.0'],allowed_direct:['1.0.0->3.0.0']}).status,'PASS'));
+test('security weakening fails',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','2.0.0'],security_profiles:{'1.0.0':{signing:true},'2.0.0':{signing:false}}}).status,'FAIL'));
+test('security tightening passes',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','2.0.0'],security_profiles:{'1.0.0':{signing:false},'2.0.0':{signing:true}}}).status,'PASS'));
+test('missing required migration fails',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','2.0.0'],migrations:[{from:'1.0.0',to:'2.0.0',required:true,available:false}]}).status,'FAIL'));
+test('available required migration passes',()=>assert.equal(evaluateUpgradeChain({versions:['1.0.0','2.0.0'],migrations:[{from:'1.0.0',to:'2.0.0',required:true,available:true}]}).status,'PASS'));
+test('invalid chain rejected',()=>assert.throws(()=>evaluateUpgradeChain({versions:['1.0.0']})));

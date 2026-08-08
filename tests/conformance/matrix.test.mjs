@@ -1,0 +1,12 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { createConformanceFixture,buildCompatibilityMatrix,pairwiseFixtureCases } from '../../src/conformance/index.mjs';
+const f=(id,o={})=>createConformanceFixture({fixture_id:id,project_id:id,name:id,scale:o.scale??'SMALL',risk_tier:o.risk??'STANDARD',domains:o.domains??['software'],languages:o.languages??['javascript'],platform:{os:o.os??'linux',arch:o.arch??'x64',filesystem:o.fs??'ext4',evidence_level:o.ev??'REAL'},runtime:{name:'node',shell:'sh'},evidence_level:o.ev??'REAL'});
+test('matrix captures project axis',()=>assert.deepEqual(buildCompatibilityMatrix({fixtures:[f('a'),f('b')]}).axes.projects,['a','b']));
+test('matrix captures scale and risk',()=>{const m=buildCompatibilityMatrix({fixtures:[f('a',{scale:'LARGE',risk:'CORE_CRITICAL'})]});assert.deepEqual(m.axes.scales,['LARGE']);assert.deepEqual(m.axes.risk_tiers,['CORE_CRITICAL']);});
+test('matrix captures domain union',()=>assert.deepEqual(buildCompatibilityMatrix({fixtures:[f('a',{domains:['web']}),f('b',{domains:['audio']})]}).axes.domains,['audio','web']));
+test('required missing scale fails',()=>assert.equal(buildCompatibilityMatrix({fixtures:[f('a')],required:{scales:['LARGE']}}).status,'FAIL'));
+test('required present scale passes real evidence',()=>assert.equal(buildCompatibilityMatrix({fixtures:[f('a',{scale:'LARGE'})],required:{scales:['LARGE']}}).status,'PASS'));
+test('declared only coverage is conditional',()=>assert.equal(buildCompatibilityMatrix({fixtures:[f('a',{ev:'DECLARED'})]}).status,'CONDITIONAL'));
+test('pair count is combinations',()=>assert.equal(buildCompatibilityMatrix({fixtures:[f('a'),f('b'),f('c')]}).pair_count,3));
+test('pairwise cases generate all pairs',()=>assert.equal(pairwiseFixtureCases([f('a'),f('b'),f('c'),f('d')]).length,6));
+test('matrix requires fixtures',()=>assert.throws(()=>buildCompatibilityMatrix({fixtures:[]})));
+test('required platform checks os prefix',()=>assert.equal(buildCompatibilityMatrix({fixtures:[f('a',{os:'linux'})],required:{platforms:['windows']}}).status,'FAIL'));

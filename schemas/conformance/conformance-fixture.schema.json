@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/conformance-fixture.schema.json",
+  "title": "BAI Development OS Conformance Fixture",
+  "type": "object",
+  "required": [
+    "fixture_schema_version",
+    "fixture_id",
+    "project_id",
+    "name",
+    "scale",
+    "risk_tier",
+    "domains",
+    "languages",
+    "runtime",
+    "platform",
+    "security",
+    "evidence_level"
+  ],
+  "properties": {
+    "fixture_schema_version": {
+      "const": "1.0.0"
+    },
+    "fixture_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string"
+    },
+    "scale": {
+      "enum": [
+        "SMALL",
+        "MEDIUM",
+        "LARGE"
+      ]
+    },
+    "risk_tier": {
+      "enum": [
+        "LOW",
+        "STANDARD",
+        "CORE_CRITICAL",
+        "FOUNDATION_CRITICAL"
+      ]
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "languages": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "runtime": {
+      "type": "object"
+    },
+    "platform": {
+      "type": "object",
+      "required": [
+        "os",
+        "arch",
+        "filesystem",
+        "evidence_level"
+      ]
+    },
+    "security": {
+      "type": "object"
+    },
+    "evidence_level": {
+      "enum": [
+        "REAL",
+        "SANDBOX",
+        "SIMULATED",
+        "DECLARED"
+      ]
+    }
+  }
+}

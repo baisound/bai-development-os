@@ -1,0 +1,17 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { createConformanceFixture,referenceFixtures,fixtureEvidenceStatus } from '../../src/conformance/index.mjs';
+const base=()=>({fixture_id:'p1',project_id:'p1',name:'P1',scale:'SMALL',risk_tier:'STANDARD',domains:['software'],languages:['javascript'],platform:{os:'linux',arch:'x64',filesystem:'ext4',evidence_level:'REAL'},runtime:{name:'node',version:'22.0.0',shell:'sh'},evidence_level:'REAL'});
+test('creates immutable fixture',()=>{const f=createConformanceFixture(base());assert.equal(f.fixture_schema_version,'1.0.0');assert.ok(Object.isFrozen(f));});
+test('defaults namespaces per project',()=>{const f=createConformanceFixture(base());assert.equal(f.security.vault_namespace,'p1:vault');assert.equal(f.security.signer_namespace,'p1:signer');});
+test('normalizes domains',()=>{const f=createConformanceFixture({...base(),domains:['z','a','z']});assert.deepEqual(f.domains,['a','z']);});
+test('normalizes languages',()=>{const f=createConformanceFixture({...base(),languages:['ts','js','ts']});assert.deepEqual(f.languages,['js','ts']);});
+test('normalizes providers',()=>{const f=createConformanceFixture({...base(),providers:[{capability:'write',provider_id:'b'},{capability:'read',provider_id:'a'}]});assert.deepEqual(f.providers.map(x=>x.provider_id),['a','b']);});
+test('rejects invalid fixture id',()=>assert.throws(()=>createConformanceFixture({...base(),fixture_id:'../x'}),/invalid/));
+test('rejects empty domain list',()=>assert.throws(()=>createConformanceFixture({...base(),domains:[]}),/non-empty/));
+test('rejects invalid scale',()=>assert.throws(()=>createConformanceFixture({...base(),scale:'HUGE'})));
+test('rejects invalid risk tier',()=>assert.throws(()=>createConformanceFixture({...base(),risk_tier:'UNKNOWN'})));
+test('rejects invalid evidence',()=>assert.throws(()=>createConformanceFixture({...base(),evidence_level:'MAGIC'})));
+test('real fixture evidence is PASS',()=>assert.equal(fixtureEvidenceStatus(createConformanceFixture(base())),'PASS'));
+test('declared fixture evidence is CONDITIONAL',()=>assert.equal(fixtureEvidenceStatus(createConformanceFixture({...base(),evidence_level:'DECLARED'})),'CONDITIONAL'));
+test('reference fixtures include javascript roulette',()=>assert.ok(referenceFixtures().some(f=>f.fixture_id==='javascript-roulette')));
+test('reference makeTikTok fixture is declared not fake pass',()=>{const f=referenceFixtures().find(x=>x.project_id==='makeTikTokGiftMaster');assert.equal(f.evidence_level,'DECLARED');});
+test('release supported versions are sorted',()=>{const f=createConformanceFixture({...base(),release:{current_version:'2.0.0',supported_versions:['2.0.0','1.0.0']}});assert.deepEqual(f.release.supported_versions,['1.0.0','2.0.0']);});

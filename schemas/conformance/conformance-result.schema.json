@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/conformance-result.schema.json",
+  "title": "BAI Development OS Conformance Result",
+  "type": "object",
+  "required": [
+    "result_id",
+    "category",
+    "name",
+    "status"
+  ],
+  "properties": {
+    "result_id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "CONDITIONAL",
+        "FAIL",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "evidence": {},
+    "limitation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

@@ -25,7 +25,8 @@
     "./monitoring": "./src/monitoring/index.mjs",
     "./integration": "./src/integration/index.mjs",
     "./security": "./src/security/index.mjs",
-    "./release": "./src/release/index.mjs"
+    "./release": "./src/release/index.mjs",
+    "./conformance": "./src/conformance/index.mjs"
   },
   "scripts": {
     "test": "node --test",
@@ -48,7 +49,9 @@
     "test:security": "node --test tests/security/*.test.mjs tests/integration/task009*.test.mjs",
     "check:security": "node scripts/check-security-conformance.mjs",
     "test:release": "node --test tests/release/*.test.mjs tests/integration/task010*.test.mjs",
-    "check:release": "node scripts/check-release-conformance.mjs"
+    "check:release": "node scripts/check-release-conformance.mjs",
+    "test:conformance": "node --test tests/conformance/*.test.mjs tests/integration/task011*.test.mjs",
+    "check:conformance": "node scripts/check-conformance-conformance.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

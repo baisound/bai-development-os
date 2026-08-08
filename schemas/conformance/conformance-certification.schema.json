@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/conformance-certification.schema.json",
+  "title": "BAI Development OS Conformance Certification",
+  "type": "object",
+  "required": [
+    "certification_version",
+    "certification_id",
+    "subject",
+    "generated_at",
+    "status",
+    "compatibility_level",
+    "required_level",
+    "result_summary",
+    "certification_checksum"
+  ],
+  "properties": {
+    "certification_version": {
+      "const": "1.0.0"
+    },
+    "certification_id": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "CONDITIONAL",
+        "FAIL",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "compatibility_level": {
+      "enum": [
+        "C0_UNVERIFIED",
+        "C1_CONTRACT",
+        "C2_SINGLE_PROJECT",
+        "C3_MULTI_PROJECT",
+        "C4_PORTABLE",
+        "C5_ADVERSARIAL"
+      ]
+    },
+    "required_level": {
+      "type": "string"
+    },
+    "result_summary": {
+      "type": "object"
+    },
+    "certification_checksum": {
+      "type": "string",
+      "pattern": "^sha256:"
+    }
+  }
+}

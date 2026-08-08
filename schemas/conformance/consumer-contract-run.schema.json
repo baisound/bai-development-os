@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/consumer-contract-run.schema.json",
+  "title": "BAI Development OS Consumer Contract Run",
+  "type": "object",
+  "required": [
+    "consumer_contract_run_version",
+    "fixture_id",
+    "project_id",
+    "generated_at",
+    "evidence_level",
+    "status",
+    "contract_mode",
+    "contract_trust",
+    "exit_code",
+    "timed_out"
+  ],
+  "properties": {
+    "consumer_contract_run_version": {
+      "const": "1.0.0"
+    },
+    "fixture_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "evidence_level": {
+      "enum": [
+        "REAL",
+        "SANDBOX",
+        "SIMULATED",
+        "DECLARED"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "contract_mode": {
+      "enum": [
+        "NODE_TEST",
+        "NODE_SCRIPT",
+        "NPM_SCRIPT"
+      ]
+    },
+    "contract_trust": {
+      "enum": [
+        "TRUSTED_LOCAL",
+        "SANDBOXED"
+      ]
+    },
+    "exit_code": {
+      "type": [
+        "integer",
+        "null"
+      ]
+    },
+    "timed_out": {
+      "type": "boolean"
+    }
+  }
+}

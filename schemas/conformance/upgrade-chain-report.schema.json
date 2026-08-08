@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/upgrade-chain-report.schema.json",
+  "title": "BAI Development OS Upgrade Chain Report",
+  "type": "object",
+  "required": [
+    "status",
+    "versions",
+    "steps",
+    "blockers"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "versions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "steps": {
+      "type": "array"
+    },
+    "blockers": {
+      "type": "array"
+    }
+  }
+}

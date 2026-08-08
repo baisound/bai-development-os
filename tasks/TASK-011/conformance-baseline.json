@@ -1,0 +1,371 @@
+{
+  "baseline_version": "1.0.0",
+  "local_multi_project_lab": {
+    "lab_run_version": "1.0.0",
+    "run_id": "lab-26879cd1-1a56-4a4c-825f-2f805fd23dd2",
+    "generated_at": "2026-08-08T08:13:19.664Z",
+    "matrix": {
+      "matrix_version": "1.0.0",
+      "matrix_id": "matrix-278d1c83-97d2-4b6e-acf7-66a5a38cdc61",
+      "status": "PASS",
+      "axes": {
+        "projects": [
+          "core-node",
+          "javascript-roulette"
+        ],
+        "scales": [
+          "MEDIUM",
+          "SMALL"
+        ],
+        "risk_tiers": [
+          "CORE_CRITICAL",
+          "STANDARD"
+        ],
+        "domains": [
+          "automation",
+          "software"
+        ],
+        "languages": [
+          "javascript"
+        ],
+        "platforms": [
+          "linux/x64/local"
+        ],
+        "providers": []
+      },
+      "evidence": {
+        "REAL": 2,
+        "SANDBOX": 0,
+        "SIMULATED": 0,
+        "DECLARED": 0
+      },
+      "missing_required_coverage": [],
+      "fixture_count": 2,
+      "pair_count": 1,
+      "required": {
+        "scales": [
+          "SMALL",
+          "MEDIUM"
+        ],
+        "risk_tiers": [
+          "STANDARD",
+          "CORE_CRITICAL"
+        ],
+        "domains": [
+          "software"
+        ]
+      }
+    },
+    "results": [
+      {
+        "result_id": "result-f74a5394-daec-4bda-bb2f-c0943a7a3c34",
+        "category": "CONTRACT",
+        "name": "compatibility-matrix",
+        "status": "PASS",
+        "evidence": {
+          "matrix_id": "matrix-278d1c83-97d2-4b6e-acf7-66a5a38cdc61",
+          "missing": []
+        }
+      },
+      {
+        "result_id": "result-accbf5b2-8c2a-4f59-8b3a-599655741cc5",
+        "category": "ISOLATION",
+        "name": "namespace-isolation",
+        "status": "PASS",
+        "evidence": {
+          "checked": 13,
+          "violations": []
+        }
+      },
+      {
+        "result_id": "result-608c2397-5e5b-41f0-9959-2308f7b7b217",
+        "category": "EXECUTION",
+        "name": "consumer-contract:javascript-roulette",
+        "status": "PASS",
+        "project_id": "javascript-roulette",
+        "evidence_level": "REAL",
+        "evidence": {
+          "fixture_id": "javascript-roulette",
+          "contract_mode": "NODE_TEST",
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 84
+        }
+      },
+      {
+        "result_id": "result-275becce-72f0-4a28-8b13-b590025f21bd",
+        "category": "EXECUTION",
+        "name": "consumer-contract:core-node",
+        "status": "PASS",
+        "project_id": "core-node",
+        "evidence_level": "REAL",
+        "evidence": {
+          "fixture_id": "core-node",
+          "contract_mode": "NODE_TEST",
+          "exit_code": 0,
+          "timed_out": false,
+          "duration_ms": 147
+        }
+      },
+      {
+        "result_id": "result-083cb6c2-c385-470d-9c41-b643f62b175c",
+        "category": "ISOLATION",
+        "name": "ownership-isolation",
+        "status": "PASS",
+        "evidence": {
+          "checked": 2,
+          "violations": []
+        }
+      },
+      {
+        "result_id": "result-b7fff456-1286-4ce3-9a7d-941ebfc24909",
+        "category": "FAIRNESS",
+        "name": "shared-resource-fairness",
+        "status": "PASS",
+        "evidence": {
+          "status": "PASS",
+          "capacity": 20,
+          "allocated": 20,
+          "remaining": 0,
+          "projects": [
+            {
+              "project_id": "javascript-roulette",
+              "demand": 1000,
+              "weight": 1,
+              "allocated": 10
+            },
+            {
+              "project_id": "core-node",
+              "demand": 10,
+              "weight": 1,
+              "allocated": 10
+            }
+          ],
+          "starved": []
+        }
+      }
+    ],
+    "certification": {
+      "certification_version": "1.0.0",
+      "certification_id": "cert-3a3e52e8-b7e3-4c59-aae1-4ae2f1aff779",
+      "subject": "BAI Development OS Consumer Conformance",
+      "generated_at": "2026-08-08T08:13:19.663Z",
+      "status": "PASS",
+      "compatibility_level": "C3_MULTI_PROJECT",
+      "required_level": "C3_MULTI_PROJECT",
+      "matrix_id": "matrix-278d1c83-97d2-4b6e-acf7-66a5a38cdc61",
+      "scope": {
+        "fixtures": [
+          {
+            "fixture_id": "javascript-roulette",
+            "project_id": "javascript-roulette",
+            "evidence_level": "REAL"
+          },
+          {
+            "fixture_id": "core-node",
+            "project_id": "core-node",
+            "evidence_level": "REAL"
+          }
+        ]
+      },
+      "execution_summary": {
+        "verified_projects": [
+          "core-node",
+          "javascript-roulette"
+        ],
+        "verified_count": 2
+      },
+      "result_summary": {
+        "total": 6,
+        "pass": 6,
+        "conditional": 0,
+        "fail": 0,
+        "not_applicable": 0
+      },
+      "limitations": [],
+      "results": [
+        {
+          "result_id": "result-f74a5394-daec-4bda-bb2f-c0943a7a3c34",
+          "category": "CONTRACT",
+          "name": "compatibility-matrix",
+          "status": "PASS",
+          "evidence": {
+            "matrix_id": "matrix-278d1c83-97d2-4b6e-acf7-66a5a38cdc61",
+            "missing": []
+          }
+        },
+        {
+          "result_id": "result-accbf5b2-8c2a-4f59-8b3a-599655741cc5",
+          "category": "ISOLATION",
+          "name": "namespace-isolation",
+          "status": "PASS",
+          "evidence": {
+            "checked": 13,
+            "violations": []
+          }
+        },
+        {
+          "result_id": "result-608c2397-5e5b-41f0-9959-2308f7b7b217",
+          "category": "EXECUTION",
+          "name": "consumer-contract:javascript-roulette",
+          "status": "PASS",
+          "project_id": "javascript-roulette",
+          "evidence_level": "REAL",
+          "evidence": {
+            "fixture_id": "javascript-roulette",
+            "contract_mode": "NODE_TEST",
+            "exit_code": 0,
+            "timed_out": false,
+            "duration_ms": 84
+          }
+        },
+        {
+          "result_id": "result-275becce-72f0-4a28-8b13-b590025f21bd",
+          "category": "EXECUTION",
+          "name": "consumer-contract:core-node",
+          "status": "PASS",
+          "project_id": "core-node",
+          "evidence_level": "REAL",
+          "evidence": {
+            "fixture_id": "core-node",
+            "contract_mode": "NODE_TEST",
+            "exit_code": 0,
+            "timed_out": false,
+            "duration_ms": 147
+          }
+        },
+        {
+          "result_id": "result-083cb6c2-c385-470d-9c41-b643f62b175c",
+          "category": "ISOLATION",
+          "name": "ownership-isolation",
+          "status": "PASS",
+          "evidence": {
+            "checked": 2,
+            "violations": []
+          }
+        },
+        {
+          "result_id": "result-b7fff456-1286-4ce3-9a7d-941ebfc24909",
+          "category": "FAIRNESS",
+          "name": "shared-resource-fairness",
+          "status": "PASS",
+          "evidence": {
+            "status": "PASS",
+            "capacity": 20,
+            "allocated": 20,
+            "remaining": 0,
+            "projects": [
+              {
+                "project_id": "javascript-roulette",
+                "demand": 1000,
+                "weight": 1,
+                "allocated": 10
+              },
+              {
+                "project_id": "core-node",
+                "demand": 10,
+                "weight": 1,
+                "allocated": 10
+              }
+            ],
+            "starved": []
+          }
+        }
+      ],
+      "certification_checksum": "sha256:2c537962f8ccc8e6d9d6aad59bb9461b96d9ac00bc3218491f38227adb50c9fd"
+    }
+  },
+  "cross_platform_portability": {
+    "status": "CONDITIONAL",
+    "targets": [
+      {
+        "target": {
+          "os": "linux"
+        },
+        "status": "PASS",
+        "evidence_levels": [
+          "REAL"
+        ],
+        "fixture_ids": [
+          "javascript-roulette"
+        ]
+      },
+      {
+        "target": {
+          "os": "win32",
+          "arch": "x64"
+        },
+        "status": "CONDITIONAL",
+        "evidence_levels": [
+          "SIMULATED"
+        ],
+        "fixture_ids": [
+          "windows-x64-sim"
+        ]
+      },
+      {
+        "target": {
+          "os": "darwin",
+          "arch": "arm64"
+        },
+        "status": "CONDITIONAL",
+        "evidence_levels": [
+          "SIMULATED"
+        ],
+        "fixture_ids": [
+          "macos-arm64-sim"
+        ]
+      }
+    ],
+    "limitation": "SOME_PORTABILITY_TARGETS_HAVE_ONLY_SIMULATED_OR_DECLARED_EVIDENCE"
+  },
+  "declared_reference": {
+    "fixture_schema_version": "1.0.0",
+    "fixture_id": "make-tiktok-gift-master-declared",
+    "project_id": "makeTikTokGiftMaster",
+    "name": "makeTikTokGiftMaster Declared Reference",
+    "scale": "MEDIUM",
+    "risk_tier": "CORE_CRITICAL",
+    "domains": [
+      "automation",
+      "software",
+      "streaming"
+    ],
+    "languages": [
+      "java",
+      "javascript"
+    ],
+    "runtime": {
+      "name": "heterogeneous",
+      "version": null,
+      "shell": "mixed"
+    },
+    "platform": {
+      "os": "multi",
+      "arch": "multi",
+      "filesystem": "mixed",
+      "evidence_level": "DECLARED"
+    },
+    "providers": [],
+    "consumer_contract": {
+      "mode": "NONE",
+      "trust": "DECLARED_ONLY"
+    },
+    "security": {
+      "vault_namespace": "makeTikTokGiftMaster:vault",
+      "signer_namespace": "makeTikTokGiftMaster:signer",
+      "trust_namespace": "makeTikTokGiftMaster:trust",
+      "policy_namespace": "makeTikTokGiftMaster:policy"
+    },
+    "release": {
+      "current_version": null,
+      "supported_versions": []
+    },
+    "capabilities": [
+      "creator-tech",
+      "external-integration"
+    ],
+    "tags": [],
+    "evidence_level": "DECLARED"
+  }
+}

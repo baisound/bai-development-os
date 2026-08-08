@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/fairness-report.schema.json",
+  "title": "BAI Development OS Fairness Report",
+  "type": "object",
+  "required": [
+    "status",
+    "capacity",
+    "projects",
+    "starved"
+  ],
+  "properties": {
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "capacity": {
+      "type": "number",
+      "minimum": 0
+    },
+    "projects": {
+      "type": "array"
+    },
+    "starved": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { createConformanceFixture,createCertification,deriveCompatibilityLevel } from '../../src/conformance/index.mjs';
+const fx=(id,ev='REAL')=>createConformanceFixture({fixture_id:id,project_id:id,name:id,scale:'SMALL',risk_tier:'STANDARD',domains:['software'],languages:['javascript'],platform:{os:'linux',arch:'x64',filesystem:'ext4',evidence_level:ev},runtime:{name:'node',shell:'sh'},evidence_level:ev});
+const pass=(category)=>({result_id:`r-${category}`,category,name:category,status:'PASS'});
+test('no evidence is C0',()=>assert.equal(deriveCompatibilityLevel({}),'C0_UNVERIFIED'));
+test('contract only is C1',()=>assert.equal(deriveCompatibilityLevel({contract:true}),'C1_CONTRACT'));
+test('real single project is C2',()=>assert.equal(deriveCompatibilityLevel({contract:true,verified_execution_count:1}),'C2_SINGLE_PROJECT'));
+test('multi isolation is C3',()=>assert.equal(deriveCompatibilityLevel({verified_execution_count:2,isolation:true}),'C3_MULTI_PROJECT'));
+test('portable multi is C4',()=>assert.equal(deriveCompatibilityLevel({verified_execution_count:2,isolation:true,portability:true}),'C4_PORTABLE'));
+test('adversarial portable is C5',()=>assert.equal(deriveCompatibilityLevel({verified_execution_count:2,isolation:true,portability:true,adversarial:true}),'C5_ADVERSARIAL'));
+test('certification checksum exists',()=>assert.match(createCertification({subject:'x',results:[pass('CONTRACT')],scope:{fixtures:[fx('a')]},required_level:'C1_CONTRACT'}).certification_checksum,/^sha256:/));
+test('failed result fails certification',()=>assert.equal(createCertification({subject:'x',results:[pass('CONTRACT'),{result_id:'f',category:'X',name:'x',status:'FAIL'}],scope:{fixtures:[fx('a')]},required_level:'C1_CONTRACT'}).status,'FAIL'));
+test('declared evidence cannot be unconditional pass',()=>assert.equal(createCertification({subject:'x',results:[pass('CONTRACT')],scope:{fixtures:[fx('a','DECLARED')]},required_level:'C1_CONTRACT'}).status,'CONDITIONAL'));
+test('required level above achieved fails',()=>assert.equal(createCertification({subject:'x',results:[pass('CONTRACT')],scope:{fixtures:[fx('a')]},required_level:'C4_PORTABLE'}).status,'FAIL'));

@@ -1,0 +1,14 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { createConformanceFixture,evaluateNamespaceIsolation,evaluateOwnershipRecords,assertIsolation } from '../../src/conformance/index.mjs';
+const f=(id,sec={})=>createConformanceFixture({fixture_id:id,project_id:id,name:id,scale:'SMALL',risk_tier:'STANDARD',domains:['software'],languages:['javascript'],platform:{os:'linux',arch:'x64',filesystem:'ext4',evidence_level:'REAL'},runtime:{name:'node',shell:'sh'},security:sec,evidence_level:'REAL'});
+test('default project namespaces isolate',()=>assert.equal(evaluateNamespaceIsolation([f('a'),f('b')]).status,'PASS'));
+test('vault collision fails',()=>assert.equal(evaluateNamespaceIsolation([f('a',{vault_namespace:'shared:v'}),f('b',{vault_namespace:'shared:v'})]).status,'FAIL'));
+test('signer collision fails',()=>assert.ok(evaluateNamespaceIsolation([f('a',{signer_namespace:'shared:s'}),f('b',{signer_namespace:'shared:s'})]).violations.some(v=>v.resource==='SIGNER')));
+test('trust collision fails',()=>assert.ok(evaluateNamespaceIsolation([f('a',{trust_namespace:'shared:t'}),f('b',{trust_namespace:'shared:t'})]).violations.some(v=>v.resource==='TRUST_ANCHOR')));
+test('policy collision fails',()=>assert.ok(evaluateNamespaceIsolation([f('a',{policy_namespace:'shared:p'}),f('b',{policy_namespace:'shared:p'})]).violations.some(v=>v.resource==='SECURITY_POLICY')));
+test('explicit shared namespace can be allowed',()=>{const a=f('a',{vault_namespace:'shared:v'}),b=f('b',{vault_namespace:'shared:v'});const r=evaluateNamespaceIsolation([a,b],{resources:['VAULT'],allowed_shared:[{resource:'VAULT',projects:['a','b'],namespace:'shared:v'}]});assert.equal(r.status,'PASS');});
+test('ownership record matching passes',()=>assert.equal(evaluateOwnershipRecords([{project_id:'a',owner_project_id:'a',resource_type:'KNOWLEDGE'}]).status,'PASS'));
+test('ownership cross project fails',()=>assert.equal(evaluateOwnershipRecords([{project_id:'a',owner_project_id:'b',resource_type:'KNOWLEDGE'}]).status,'FAIL'));
+test('ownership report preserves reference',()=>assert.equal(evaluateOwnershipRecords([{project_id:'a',owner_project_id:'b',reference:'x'}]).violations[0].reference,'x'));
+test('invalid ownership record rejected',()=>assert.throws(()=>evaluateOwnershipRecords([{project_id:'a'}])));
+test('assert isolation throws on fail',()=>assert.throws(()=>assertIsolation(evaluateNamespaceIsolation([f('a',{vault_namespace:'same'}),f('b',{vault_namespace:'same'})],{resources:['VAULT']}))));
+test('assert isolation returns pass result',()=>assert.equal(assertIsolation(evaluateNamespaceIsolation([f('a'),f('b')])).status,'PASS'));

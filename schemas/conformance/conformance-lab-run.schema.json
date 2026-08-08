@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/conformance-lab-run.schema.json",
+  "title": "BAI Development OS Conformance Lab Run",
+  "type": "object",
+  "required": [
+    "lab_run_version",
+    "run_id",
+    "generated_at",
+    "matrix",
+    "results",
+    "certification"
+  ],
+  "properties": {
+    "lab_run_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "matrix": {
+      "type": "object"
+    },
+    "results": {
+      "type": "array"
+    },
+    "certification": {
+      "type": "object"
+    }
+  }
+}

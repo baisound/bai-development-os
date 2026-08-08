@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { readdir,readFile } from 'node:fs/promises';import path from 'node:path';
+test('TASK-011 conformance schemas are Draft 2020-12 contracts',async()=>{const root=path.resolve('schemas/conformance');const files=(await readdir(root)).filter(f=>f.endsWith('.json')).sort();assert.equal(files.length,10);for(const f of files){const s=JSON.parse(await readFile(path.join(root,f),'utf8'));assert.equal(s.$schema,'https://json-schema.org/draft/2020-12/schema');assert.ok(s.$id);assert.ok(s.title);}});

@@ -88,27 +88,32 @@ Final verification: dedicated Integration `77/77 PASS`, full OS `561/561 PASS`, 
 
 ## Post-TASK-008 Roadmap Refinement
 
-TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.18 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
+TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Historical refinement baseline was Architecture Ver.2.18; current authority is Architecture Ver.2.19. No TASK-016 is created and no future Task is implicitly authorized.
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.18 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed and Part XVIII records TASK-010 completion. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 44 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.19 Part XV is the sole current consolidated roadmap scope for TASK-011〜015; TASK-009/TASK-010 are completed and Part XVIII records TASK-010 completion. Historical post-TASK-004/005/006/007/008 roadmap sections remain for provenance but MUST NOT be interpreted independently as current complete scope. The lossless audit preserves all 44 accumulated source sections; TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
 
 ## TASK-009 Completion
 
-TASK-009 Security / Supply Chain / Integrity Hardening is completed under `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md`. SecurityOS is a reusable primitive layer and does not replace subsystem authority. Historical TASK-009 technical baseline: Security 64/64, full OS 625/625, Consumer 10/10, Product Boundary PASS, Roadmap 39/39, Security Conformance 9 schemas PASS. TASK-010 is now completed and TASK-011 is next.
+TASK-009 Security / Supply Chain / Integrity Hardening is completed under `specifications/TASK-009_BAI_Development_OS_Security_Integrity_Ver1.0.md`. SecurityOS is a reusable primitive layer and does not replace subsystem authority. Historical TASK-009 technical baseline: Security 64/64, full OS 625/625, Consumer 10/10, Product Boundary PASS, Roadmap 39/39, Security Conformance 9 schemas PASS. TASK-010 is now completed and TASK-011 is completed; TASK-012 is next.
 
 
 ## Post-TASK-009 Roadmap Refinement
 
-Historical TASK-009 refinement remains preserved. Architecture Ver.2.18 is current; TASK-010 is completed. `npm run check:roadmap` verifies the 39 accumulated roadmap source sections. TASK-011 is next and remains not started/not authorized.
+Historical TASK-009 refinement remains preserved. Current authority is Architecture Ver.2.19; TASK-009 through TASK-011 are completed. The older 39-section baseline is historical; current `npm run check:roadmap` baseline is 44 / 44. TASK-012 is next and remains not started/not authorized.
 
 
 ## TASK-010 Completion
 
-TASK-010 Release / Distribution / Consumer Upgrade OS is `COMPLETED` under `specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md`. `ReleaseOS` standardizes signed/versioned releases, trust-anchor lifecycle, compatibility/migration preview, offline distribution, local transactional install/update, Owner-gated downgrade/rollback, portable subsystem bundles, repository release planning, canary gates, diagnostics and attestation. Technical baseline: TASK-010 91/91, full OS 716/716, Consumer 10/10, Product Boundary PASS, Roadmap 39/39, Security Conformance PASS, Release schemas 8/8 PASS. Architecture Ver.2.17 is current. TASK-011 is next.
+TASK-010 Release / Distribution / Consumer Upgrade OS is `COMPLETED` under `specifications/TASK-010_BAI_Development_OS_Release_Distribution_Upgrade_Ver1.0.md`. `ReleaseOS` standardizes signed/versioned releases, trust-anchor lifecycle, compatibility/migration preview, offline distribution, local transactional install/update, Owner-gated downgrade/rollback, portable subsystem bundles, repository release planning, canary gates, diagnostics and attestation. Technical baseline: TASK-010 91/91, full OS 716/716, Consumer 10/10, Product Boundary PASS, Roadmap 39/39, Security Conformance PASS, Release schemas 8/8 PASS. Architecture Ver.2.17 is current. TASK-011 is completed; TASK-012 is next.
 
 
 ## Post-TASK-010 Roadmap Refinement
 
-TASK-010 remains `COMPLETED`. Architecture Ver.2.18 Part XV is the single current roadmap authority and adds five TASK-010-derived sections to TASK-011〜015 without replacing earlier scope. `npm run check:roadmap` must preserve `44 / 44` accumulated source sections. TASK-011 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-010 remains `COMPLETED`. Architecture Ver.2.19 Part XV is the single current roadmap authority and adds five TASK-010-derived sections to TASK-011〜015 without replacing earlier scope. `npm run check:roadmap` must preserve `44 / 44` accumulated source sections. TASK-011 is `COMPLETED`; TASK-012 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+
+
+## TASK-011 Multi-Project Conformance Completion
+
+TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fixtures, compatibility/isolation/fairness/provider/upgrade/portability probes and C0–C5 certification. The verified local baseline is `C3_MULTI_PROJECT PASS` with two REAL executed Consumers. Windows x64 and macOS arm64 remain SIMULATED/CONDITIONAL and are not claimed as real-tested. Architecture Ver.2.19 is current canonical; TASK-012 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.

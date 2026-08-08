@@ -175,3 +175,12 @@ TASK-009 implementation exposed production-layer follow-ons that are now reserve
 | OP-064 | Optional distributed release lease, staged cohort rollout, trust/key propagation, partial rollout recovery and global rollback coordination | Roadmap reserved | TASK-015 |
 
 TASK-010 remains `COMPLETED`. OP-060〜064 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED`. Actual external publication remains a TASK-008 authorized side effect. No TASK-016 is created.
+
+
+## TASK-011 ConformanceOS Completion Allocation
+
+- OP-018, OP-024, OP-030, OP-042, OP-055 and OP-060 Conformance responsibilities are realized in the TASK-011 ConformanceOS baseline to the extent represented by current executable/local evidence.
+- Real Windows/macOS/provider executions remain future certification evidence and are not mislabeled as completed executions.
+- Self-repair of Conformance artifacts belongs TASK-012; plugin/provider extension belongs TASK-013; adaptive coverage/certification calibration belongs TASK-014; distributed remote-worker Conformance belongs TASK-015.
+
+TASK-011 is `COMPLETED`. TASK-012 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.

@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/conformance/compatibility-matrix.schema.json",
+  "title": "BAI Development OS Compatibility Matrix",
+  "type": "object",
+  "required": [
+    "matrix_version",
+    "matrix_id",
+    "status",
+    "axes",
+    "fixture_count",
+    "pair_count"
+  ],
+  "properties": {
+    "matrix_version": {
+      "const": "1.0.0"
+    },
+    "matrix_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "CONDITIONAL",
+        "FAIL",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "axes": {
+      "type": "object"
+    },
+    "fixture_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "pair_count": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

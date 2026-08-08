@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import { evaluateProviderEquivalence,runProviderFailureMatrix } from '../../src/conformance/index.mjs';
+const ps=[{provider_id:'a',capability:'read'},{provider_id:'a',capability:'write'},{provider_id:'b',capability:'read'},{provider_id:'b',capability:'write'}];
+test('equivalent providers pass',()=>assert.equal(evaluateProviderEquivalence(ps,['read','write']).status,'PASS'));
+test('missing capability fails',()=>assert.equal(evaluateProviderEquivalence(ps.filter(x=>!(x.provider_id==='b'&&x.capability==='write')),['read','write']).status,'FAIL'));
+test('provider report lists missing capability',()=>assert.deepEqual(evaluateProviderEquivalence([{provider_id:'a',capability:'read'}],['read','write']).providers[0].missing_capabilities,['write']));
+test('failure matrix expected errors pass',async()=>{const r=await runProviderFailureMatrix({providers:[{provider_id:'a'}],scenarios:[{name:'throttle',expected_codes:['RATE_LIMIT']}],invoke:async()=>{const e=new Error();e.code='RATE_LIMIT';throw e;}});assert.equal(r.status,'PASS');});
+test('failure matrix unexpected errors fail',async()=>{const r=await runProviderFailureMatrix({providers:[{provider_id:'a'}],scenarios:[{name:'x',expected_codes:['RATE_LIMIT']}],invoke:async()=>{const e=new Error();e.code='AUTH';throw e;}});assert.equal(r.status,'FAIL');});
+test('failure matrix accepted false fails',async()=>{const r=await runProviderFailureMatrix({providers:[{provider_id:'a'}],scenarios:[{name:'x'}],invoke:async()=>({accepted:false,code:'BAD'})});assert.equal(r.status,'FAIL');});
+test('failure matrix normal success passes',async()=>assert.equal((await runProviderFailureMatrix({providers:[{provider_id:'a'}],scenarios:[{name:'ok'}],invoke:async()=>({accepted:true})})).status,'PASS'));
+test('provider capabilities are sorted',()=>assert.deepEqual(evaluateProviderEquivalence([{provider_id:'a',capability:'z'},{provider_id:'a',capability:'a'}],[]).providers[0].capabilities,['a','z']));
