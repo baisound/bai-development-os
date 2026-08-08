@@ -55,7 +55,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-015 are completed. TASK-015 closes the currently defined roadmap; no TASK-016 is created or authorized by completion.
+The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-015 are completed. A later explicit Post-TASK-015 Owner refinement creates TASK-016 as the next unstarted/unapproved roadmap task.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -117,7 +117,7 @@ TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fi
 
 ## Post-TASK-011 Roadmap Refinement
 
-Historical state at the post-TASK-011 refinement point: Architecture Ver.2.23 Part XV incorporated four TASK-011-derived future sections for TASK-012〜015 and preserved `51 / 51` sources. Those routes have since been completed through TASK-015; current authority is Architecture Ver.2.26 with `54 / 54 PASS`.
+Historical state at the post-TASK-011 refinement point: Architecture Ver.2.23 Part XV incorporated four TASK-011-derived future sections for TASK-012〜015 and preserved `51 / 51` sources. Those routes have since been completed through TASK-015; current authority is Architecture Ver.2.27 with `55 / 55 PASS`.
 
 
 ## TASK-012 Self-Maintenance Completion
@@ -132,9 +132,14 @@ TASK-013 is `COMPLETED`. `ExtensionOS` supplies the single cross-domain Adapter/
 
 ## Post-TASK-014 Roadmap Refinement
 
-Architecture Ver.2.26 preserves 54/54 roadmap source sections and extends TASK-015 with optional distributed CalibrationOS coordination: provenance-preserving Evidence transport/deduplication, cohort-aware baselines, remote Counterfactual/Shadow evaluation, exact Candidate version/epoch propagation, fenced canary rollout, regression-driven governed rollback, policy-divergence detection and calibration quota/backpressure. TASK-014 remains completed and no TASK-016 is created by this refinement.
+Architecture Ver.2.27 preserves 55/55 roadmap source sections and extends TASK-015 with optional distributed CalibrationOS coordination: provenance-preserving Evidence transport/deduplication, cohort-aware baselines, remote Counterfactual/Shadow evaluation, exact Candidate version/epoch propagation, fenced canary rollout, regression-driven governed rollback, policy-divergence detection and calibration quota/backpressure. TASK-014 remains completed. The later Post-TASK-015 refinement creates TASK-016; this historical Post-TASK-014 note did not.
 
 
 ## TASK-015 Distributed Orchestration & Event Fabric Completion
 
-TASK-015 is `COMPLETED`. `DistributedOS` is the optional distributed coordination layer. It does not make remote execution mandatory and does not create new authority. Package baseline: `1.0.0`; Distributed tests `73/73`; full OS `1188/1188`; Consumer `10/10`. No TASK-016 is created by completion.
+TASK-015 is `COMPLETED`. `DistributedOS` is the optional distributed coordination layer. It does not make remote execution mandatory and does not create new authority. Package baseline: `1.0.0`; Distributed tests `73/73`; full OS `1188/1188`; Consumer `10/10`. TASK-015 completion did not itself create TASK-016; the later explicit Post-TASK-015 Owner refinement does.
+
+
+## Post-TASK-015 Roadmap Refinement
+
+`TASK-016 — Resilience, Recovery & Scalability Certification OS` is now `NEXT / NOT_STARTED / NOT_AUTHORIZED`. It will provide deterministic distributed simulation, bounded fault injection, convergence/reconciliation proof, recovery-objective measurement, mixed-version compatibility certification, load/soak/capacity/cost envelopes, backup/restore drills, incident evidence bundles and resilience certification. Production cloud provisioning and vendor-specific distributed infrastructure remain outside Core. No TASK-017 is created.

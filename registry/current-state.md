@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.26`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.27`
 - Current Lifecycle Canonical: `TASK-004 Lifecycle Foundation Ver.1.6`
 - Current Knowledge Canonical: `TASK-005 Knowledge Operating System Ver.1.2`
 - Current Automation Canonical: `TASK-006 Orchestration & Automation Foundation Ver.1.0`
@@ -19,7 +19,8 @@
 - Current Calibration Canonical: `TASK-014 Adaptive Governance Calibration & Policy Learning Ver.1.0`
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
-- Next canonical development route: `NONE — no TASK-016 created or authorized`
+- TASK-016: `NEXT / NOT_STARTED / NOT_AUTHORIZED`
+- Next canonical development route: `TASK-016 — Resilience, Recovery & Scalability Certification OS`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-08`
 
@@ -39,13 +40,18 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
 - Product Boundary: `PASS`
-- Roadmap Consolidation: `54 / 54 PASS` after final synchronization
+- Roadmap Consolidation: `55 / 55 PASS` after Post-TASK-015 refinement synchronization
 - Root `DistributedOS` export: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `477 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `484 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
-- Architecture Ver.2.26 DOCX visual QA: `148 / 148 PASS`
+- Architecture Ver.2.27 DOCX visual QA: `150 / 150 PASS`
 
 ## Accepted Residual
 
-Production-specific remote broker implementations, real remote workers/labs, multi-region deployment, cloud provisioning and vendor-specific distributed adapters are Extension/Integration deployments behind the completed TASK-015 contracts. They are not Core authority and do not justify an implied TASK-016. Any new roadmap task requires an explicit future Owner decision.
+Production-specific remote broker implementations, real remote workers/labs, multi-region deployment, cloud provisioning and vendor-specific distributed adapters remain Extension/Integration deployments behind completed TASK-015 contracts. The explicit Owner decision now creates TASK-016 only for reusable resilience/recovery/scalability certification; provider deployment does not move into Core. TASK-016 implementation remains unauthorized.
+
+
+## Current TASK-016 Proposed Baseline
+
+TASK-016 is planning-only: deterministic simulation, bounded fault injection, convergence/reconciliation, recovery-objective evidence, mixed-version compatibility, load/soak/capacity/cost certification, backup/restore/DR drills, incident evidence reconstruction and resilience certification. Simulation/SANDBOX evidence cannot be relabeled REAL, and production-destructive injection requires separate Owner authorization.

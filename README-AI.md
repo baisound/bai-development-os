@@ -20,7 +20,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 
 ## Current canonicals
 
-- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.26.md`
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.27.md`
 - TASK-004 Lifecycle: Ver.1.6
 - TASK-005 KnowledgeOS: Ver.1.2
 - TASK-006 AutomationOS: Ver.1.0
@@ -32,8 +32,10 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-012 MaintenanceOS: Ver.1.0
 - TASK-013 ExtensionOS / Domain Adapter / Plugin SDK: Ver.1.0
 - TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
+- TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
+- TASK-016 Resilience / Recovery / Scalability Certification OS: proposed next route, not yet canonical implementation
 
-TASK-004〜015 are `COMPLETED`. No TASK-016 is created or authorized by TASK-015 completion.
+TASK-004〜015 are `COMPLETED`. TASK-016 is `NEXT / NOT_STARTED / NOT_AUTHORIZED` by the explicit Post-TASK-015 roadmap refinement.
 
 ## CalibrationOS loading rule
 
@@ -41,7 +43,7 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 
 ## Roadmap authority
 
-Architecture Ver.2.26 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `54 / 54` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
+Architecture Ver.2.27 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `55 / 55` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
 
 ## Current verification baseline
 
@@ -50,7 +52,7 @@ Architecture Ver.2.26 Part XV is the sole current consolidated roadmap scope. Th
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
-- Roadmap: `54 / 54 PASS`
+- Roadmap: `55 / 55 PASS`
 - Product Boundary: PASS
 
 ## Safety reminders
@@ -64,8 +66,13 @@ Architecture Ver.2.26 Part XV is the sole current consolidated roadmap scope. Th
 - Do not automatically lower DEV, Security, Release, Conformance, Maintenance or Extension safety floors in response to cost/noise findings.
 
 
-Post-TASK-014 refinement: TASK-015 also owns distributed CalibrationOS evidence/evaluation/rollout coordination. Evidence class and authorization semantics remain invariant; distribution is opt-in; no TASK-016 was created.
+Post-TASK-014 refinement: TASK-015 owns distributed CalibrationOS evidence/evaluation/rollout coordination. TASK-015 is completed. A later explicit Post-TASK-015 Owner refinement creates TASK-016 for resilience/recovery/scalability certification; it does not reopen TASK-015.
 
 ## TASK-015 DistributedOS
 
 TASK-015 is completed. For distributed work load the TASK-015 summary/specification first. Distributed mode is opt-in and disabled by default; transport/worker state never replaces subsystem authority.
+
+
+## TASK-016 next-route loading rule
+
+TASK-016 is not started or authorized. For planning only, load `tasks/TASK-016/TASK-016.summary.md`, then `architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md`. Do not infer implementation authorization from NEXT status. Real destructive chaos/fault injection requires a separately bound Owner authorization even after TASK-016 implementation begins.

@@ -264,3 +264,23 @@ TASK-015 is `COMPLETED`. The optional common `DistributedOS` realizes the topolo
 | OP-080 | Boundary preserved: optional learned/vendor implementations remain Extension/Calibration providers behind existing Safety/Evaluation/Authorization contracts; no TASK-016 is implied. |
 
 Production-specific cloud brokers, remote worker fleets, multi-region deployment and vendor adapters remain deployment/provider implementations behind TASK-015 contracts. They are not unfinished Core authority and require no automatic new roadmap Task.
+
+
+## Post-TASK-015 Resilience Roadmap Refinement — 2026-08-08
+
+TASK-015 remains `COMPLETED`. The explicit Owner refinement creates one bounded next task, TASK-016, for reusable resilience/recovery/scalability certification. Provider/cloud deployments remain outside Core.
+
+| ID | Improvement | State | Owner Task |
+|---|---|---|---|
+| OP-081 | Deterministic virtual-clock distributed simulation and scenario replay | Roadmap reserved | TASK-016 |
+| OP-082 | Bounded crash/partition/drop/delay/reorder/clock-skew/storage/compensation fault injection | Roadmap reserved | TASK-016 |
+| OP-083 | Post-failure convergence, reconciliation, fencing and duplicate-effect certification | Roadmap reserved | TASK-016 |
+| OP-084 | RTO/RPO-style recovery objective measurement with explicit NOT_MEASURED state | Roadmap reserved | TASK-016 |
+| OP-085 | Mixed-version protocol/schema and rolling upgrade/downgrade certification | Roadmap reserved | TASK-016 |
+| OP-086 | Load/soak/capacity/backpressure/cost-envelope certification | Roadmap reserved | TASK-016 |
+| OP-087 | Backup/restore and disaster-recovery drills for durable coordination/evidence state | Roadmap reserved | TASK-016 |
+| OP-088 | Redacted incident timeline and evidence-bundle reconstruction | Roadmap reserved | TASK-016 |
+| OP-089 | Chaos authorization, blast-radius, Emergency Stop and cost-safety controls | Roadmap reserved | TASK-016 |
+| OP-090 | Resilience Certification levels separating SIMULATED/SANDBOX/attested REAL evidence | Roadmap reserved | TASK-016 |
+
+TASK-016 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`. No TASK-017 is created.

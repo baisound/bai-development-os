@@ -1,0 +1,3 @@
+# TASK-016 Summary
+
+Status: `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Proposed `Resilience, Recovery & Scalability Certification OS` adds deterministic distributed simulation, bounded chaos/fault injection, convergence/reconciliation proof, RTO/RPO-style measurement, rolling protocol/schema compatibility, load/soak/capacity certification, backup/restore drills, incident evidence bundles and resilience certification levels. It reuses TASK-004〜015 authority and runtime contracts; simulation/sandbox evidence must not be mislabeled REAL, and destructive production fault injection requires separately bound Owner authorization.

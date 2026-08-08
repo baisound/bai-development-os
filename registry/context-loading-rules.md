@@ -12,7 +12,7 @@ Do not load the whole Architecture or every prior Task by default.
 
 ## 2. Current architecture and roadmap
 
-Architecture Ver.2.26 is current. Part XV preserves the sole consolidated roadmap authority with `54 / 54` source sections. TASK-004〜015 are completed. No TASK-016 exists unless a later explicit Owner decision creates one.
+Architecture Ver.2.27 is current. Part XV preserves the sole consolidated roadmap authority with `55 / 55` source sections. TASK-004〜015 are completed. TASK-016 exists as `NEXT / NOT_STARTED / NOT_AUTHORIZED` by explicit Owner decision.
 
 ## 3. Completed subsystem loading
 
@@ -33,3 +33,8 @@ Use DEV-0〜DEV-4 to select review/test/context depth. Do not raise Context Guar
 Executable Extension code requires implementation-checksum binding and the Capability Broker. Calibration recommendations/Candidates are advisory until exact Counterfactual + Shadow + Owner + Policy gates pass.
 
 DistributedOS is disabled by default. Do not enable it for local/single-machine work merely because the package supports it. When enabled, preserve at-least-once semantics, semantic idempotency, exact run/rollout lease scopes, fencing, Worker attestation for REAL evidence, late-result quarantine, partition fail-closed rules and quota/backpressure. Distribution cannot upgrade Evidence class, create external authorization or replace an owning subsystem's canonical state.
+
+
+## 7. TASK-016 planning context
+
+For TASK-016 planning, load `tasks/TASK-016/TASK-016.summary.md` and `architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md` before the complete Architecture. Do not load all distributed history by default. TASK-016 NEXT status is not implementation authorization. Destructive real-environment fault injection must remain disabled unless a separately bound Owner authorization, blast-radius limit, cost limit and Emergency Stop are present.

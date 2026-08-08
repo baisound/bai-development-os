@@ -10,6 +10,7 @@ const task011RefinementPath = path.join(root, 'architecture/BAI_Development_OS_P
 const task012RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK012_Roadmap_Refinement_Ver1.0.md');
 const task013RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK013_Roadmap_Refinement_Ver1.0.md');
 const task014RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK014_Roadmap_Refinement_Ver1.0.md');
+const task015RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md');
 
 const state = fs.readFileSync(statePath, 'utf8');
 const versionMatch = state.match(/Current Architecture Canonical: `BAI Development OS Architecture Ver\.([0-9.]+)`/);
@@ -112,12 +113,32 @@ for (const task of ['015']) {
   body = body.replace(/\n## Task-allocation decision[\s\S]*$/, '').trim();
   task014Sections.push({ heading, body });
 }
-const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections, ...task014Sections];
+const task015Refinement = fs.readFileSync(task015RefinementPath, 'utf8');
+const task015Sections = [];
+for (const task of ['016']) {
+  const heading = `## TASK-${task}`;
+  const start = task015Refinement.indexOf(heading);
+  if (start < 0) throw new Error(`ROADMAP_CHECK_FAIL: TASK-${task} TASK-015 refinement missing`);
+  const bodyStart = task015Refinement.indexOf('\n', start) + 1;
+  const next = task015Refinement.indexOf('\n## ', bodyStart);
+  const body = task015Refinement.slice(bodyStart, next < 0 ? task015Refinement.length : next).trim();
+  task015Sections.push({ heading, body });
+}
+const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections, ...task014Sections, ...task015Sections];
 const missing = allSections.filter((s) => !consolidated.includes(s.body));
 if (missing.length) {
   console.error('ROADMAP_CHECK_MISSING_SECTIONS');
   for (const s of missing) console.error(`- ${s.heading}`);
   process.exit(1);
+}
+
+const task16Required = [
+  'TASK-016 — Resilience, Recovery & Scalability Certification OS',
+  'deterministic distributed simulation harness',
+  'Resilience Certification levels',
+];
+for (const required of task16Required) {
+  if (!consolidated.includes(required)) throw new Error(`ROADMAP_CHECK_FAIL: TASK-016 identity fragment missing: ${required}`);
 }
 
 const task13Required = [
