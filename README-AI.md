@@ -30,7 +30,7 @@ Adaptive Development Governance changes workflow depth, not permanent model-sele
 
 ## TASK-004 Completed Lifecycle Contract
 
-TASK-004 is the completed Lifecycle Foundation baseline. Use current Architecture `architecture/BAI_Development_OS_Architecture_Ver2.12.md` for product-level routing and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` for the TASK-004 Lifecycle contract. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
+TASK-004 is the completed Lifecycle Foundation baseline. Use current Architecture `architecture/BAI_Development_OS_Architecture_Ver2.13.md` for product-level routing and `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md` for the TASK-004 Lifecycle contract. Recovery, Context, Cost/Model, Closure/Archive, dependency/migration, and System Sync are formalized runtime capabilities. Do not reopen TASK-004 to add future features; route new work to TASK-005+ or a new follow-up Task.
 
 Adaptive Development Governance still changes workflow depth rather than permanent model-selection policy.
 
@@ -47,7 +47,7 @@ Load `tasks/TASK-006/TASK-006.summary.md` and the Ver.1.0 automation canonical w
 
 ## TASK-007 Monitoring Baseline
 
-TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.12.
+TASK-007 is completed. Load `tasks/TASK-007/TASK-007.summary.md` and Monitoring Ver.1.0 only when observability behavior is relevant. Dashboard/Alert/Snapshot/Trend are read-only derived state and never canonical authority. Post-TASK-007 productization belongs TASK-009〜015; TASK-008 now provides the external notification/connector execution baseline. Current Architecture canonical is Ver.2.13.
 
 
 ## TASK-008 External Integration Baseline

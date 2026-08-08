@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.12`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.13`
 - Current Lifecycle Foundation Canonical: `TASK-004 BAI Development OS Lifecycle Foundation Ver.1.6`
 - Current Knowledge OS Canonical: `TASK-005 BAI Development OS Knowledge Operating System Ver.1.2`
 - Current Orchestration/Automation Canonical: `TASK-006 BAI Development OS Orchestration & Automation Foundation Ver.1.0`
@@ -85,3 +85,7 @@ TASK-007 remains `COMPLETED`. Monitoring hardening/productization is allocated t
 ## TASK-008 External Integration Completion
 
 TASK-008 remains an execution boundary, not a new source of authority. Connector manifests are immutable/checksummed; capabilities are least-privilege; external or irreversible actions require bound authorization/idempotency; credentials stay reference-only; license-sensitive generation requires terms provenance; TASK-004 Cost Guard may reserve/record/release external cost; inbound webhooks remain `UNTRUSTED` references; connector responses remain `canonical:false` even when `VERIFIED`. TASK-009 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.
+
+## Post-TASK-008 Roadmap Refinement
+
+Architecture Ver.2.13 is the current canonical architecture. TASK-008 remains `COMPLETED`. Its deferred productization scope is now concretely allocated across TASK-009〜015: credential/vault and connector security; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport SDK; adaptive integration policy calibration; and optional distributed integration/event coordination. No TASK-016 is created. TASK-009 is next and remains `NOT_STARTED / NOT_AUTHORIZED`.

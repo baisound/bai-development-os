@@ -80,3 +80,6 @@ TASK-007 remains completed. Monitoring productization is reserved in TASK-009〜
 ## TASK-008 External Integration Completion
 
 As of 2026-08-08, TASK-008 is completed. `IntegrationOS` provides vendor-neutral Connector Manifest/Registry, capability policy, credential references, bound external authorization, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation controls, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring integration. Run `npm run test:integration`. TASK-009 is next and is not automatically authorized.
+
+### Post-TASK-008 roadmap refinement
+TASK-008 remains completed. Architecture Ver.2.13 assigns its deferred productization scope to TASK-009〜015; TASK-009 is next but remains not started/not authorized.

@@ -125,3 +125,17 @@ External alert delivery itself remains TASK-008. TASK-007 stays read-only and `C
 | OP-052 | External connector Cost Guard reservation/actual/release | Implemented | TASK-008 |
 
 Crash-consistent audit persistence, security/privacy hardening, multi-project connector conformance, self-repair, connector Plugin SDK, adaptive policy calibration and distributed connector/rate/event coordination remain post-TASK-008 responsibilities of TASK-009〜015.
+
+## TASK-008 Post-Completion Roadmap Refinement — 2026-08-08
+
+| ID | Improvement | State | Owner Task |
+|---|---|---|---|
+| OP-053 | Credential/Vault lifecycle, signing, webhook replay and connector sandbox/egress/DLP hardening | Roadmap reserved | TASK-009 |
+| OP-054 | Connector SemVer, compatibility matrix, contract tests, canary/rollback and provider/API migration | Roadmap reserved | TASK-010 |
+| OP-055 | Multi-project/tenant connector isolation, quota fairness, real-provider conformance and webhook ownership | Roadmap reserved | TASK-011 |
+| OP-056 | Integration fsck, audit/idempotency/Cost reconciliation, dead-letter/replay and deterministic rebuild | Roadmap reserved | TASK-012 |
+| OP-057 | Connector/Auth/Transport/Webhook Plugin SDK and capability-negotiation/conformance kit | Roadmap reserved | TASK-013 |
+| OP-058 | Retry/rate/timeout/circuit-breaker/provider-health and authorization-friction calibration | Roadmap reserved | TASK-014 |
+| OP-059 | Distributed idempotency/rate/webhook/job/cancellation/Cost coordination | Roadmap reserved | TASK-015 |
+
+TASK-008 remains `COMPLETED`. OP-053〜059 are `PROPOSED / NOT_STARTED / NOT_AUTHORIZED` future responsibilities. No TASK-016 is created.

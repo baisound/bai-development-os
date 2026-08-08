@@ -81,3 +81,7 @@ TASK-007 is not reopened. Monitoring productization is reserved in TASK-009〜01
 ## TASK-008 External Integration Completion
 
 As of 2026-08-08, TASK-008 is completed. Load `tasks/TASK-008/TASK-008.summary.md` and External Integration Ver.1.0 only when external connector behavior is relevant. `IntegrationOS` is a vendor-neutral capability/authorization gateway; it does not own TASK-004 Lifecycle/Cost authority, TASK-005 Knowledge authority, or canonicalization. External responses remain noncanonical references. Run `npm run test:integration`. TASK-009 is next but remains `NOT_STARTED / NOT_AUTHORIZED`.
+
+## Post-TASK-008 refinement
+
+Load Architecture Ver.2.13 as current canonical. TASK-008 stays completed. TASK-009〜015 now include concrete External Integration productization responsibilities: credential/vault and connector security, release compatibility/migration, multi-project integration conformance, integration-state fsck/reconciliation, Connector/Auth/Transport SDK, adaptive integration policy calibration, and optional distributed integration/event coordination. No future Task is authorized by this refinement.

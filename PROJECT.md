@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.11.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.13.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -85,3 +85,7 @@ TASK-007-derived productization work is allocated to TASK-009〜015: monitoring 
 TASK-008 is `COMPLETED`. `IntegrationOS` provides a vendor-neutral external execution boundary with checksummed Connector Manifest/Registry, least-privilege capability resolution, credential references, bound Owner authorization, data/payload constraints, semantic idempotency, bounded retry/AbortSignal timeout/process-local rate control, TASK-004 Cost Guard integration, license-sensitive generation context, normalized noncanonical trust responses, HMAC webhook verification, hash-chained audit and TASK-007 Monitoring emission. External connector success never makes returned data canonical by itself.
 
 Final verification: dedicated Integration `77/77 PASS`, full OS `561/561 PASS`, consumer `10/10 PASS`, Product Boundary PASS, Integration schemas `6/6 PASS`, Architecture Ver.2.12 DOCX `88/88 PASS`, TASK-008 design DOCX `6/6 PASS`. Next route: TASK-009 (`NOT_STARTED / NOT_AUTHORIZED`).
+
+## Post-TASK-008 Roadmap Refinement
+
+TASK-008 remains `COMPLETED`. External Integration productization is allocated to TASK-009〜015: Credential/Vault/security/integrity; connector release/migration compatibility; multi-project/tenant conformance; Integration fsck/reconciliation; Connector/Auth/Transport/Webhook SDK; adaptive retry/rate/timeout/circuit-breaker calibration; and optional distributed idempotency/rate/webhook/job/cost coordination. Architecture Ver.2.13 is `CURRENT_CANONICAL`. No TASK-016 is created and no future Task is implicitly authorized.
