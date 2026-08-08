@@ -20,7 +20,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 
 ## Current canonicals
 
-- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.25.md`
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.26.md`
 - TASK-004 Lifecycle: Ver.1.6
 - TASK-005 KnowledgeOS: Ver.1.2
 - TASK-006 AutomationOS: Ver.1.0
@@ -33,7 +33,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-013 ExtensionOS / Domain Adapter / Plugin SDK: Ver.1.0
 - TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
 
-TASK-004〜014 are `COMPLETED`. TASK-015 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+TASK-004〜015 are `COMPLETED`. No TASK-016 is created or authorized by TASK-015 completion.
 
 ## CalibrationOS loading rule
 
@@ -41,17 +41,17 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 
 ## Roadmap authority
 
-Architecture Ver.2.25 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `54 / 54` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
+Architecture Ver.2.26 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `54 / 54` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
 
 ## Current verification baseline
 
-- CalibrationOS: `56 / 56 PASS`
-- Full OS: `1115 / 1115 PASS`
+- DistributedOS: `73 / 73 PASS`
+- Full OS: `1188 / 1188 PASS`
 - JavaScript Roulette Consumer: `10 / 10 PASS`
-- Calibration Conformance: `6 schemas / 10 subsystems / 20 catalog parameters PASS`
-- Extension Conformance: `10 schemas / 8 reference domains / 12 shared contracts PASS`
-- Roadmap: `53 / 53 PASS`
-- Security / Release / Conformance / Maintenance / Boundary: PASS
+- Distributed Conformance: `10 schemas / 13 shared contracts PASS`
+- Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
+- Roadmap: `54 / 54 PASS`
+- Product Boundary: PASS
 
 ## Safety reminders
 
@@ -65,3 +65,7 @@ Architecture Ver.2.25 Part XV is the sole current consolidated roadmap scope. Th
 
 
 Post-TASK-014 refinement: TASK-015 also owns distributed CalibrationOS evidence/evaluation/rollout coordination. Evidence class and authorization semantics remain invariant; distribution is opt-in; no TASK-016 was created.
+
+## TASK-015 DistributedOS
+
+TASK-015 is completed. For distributed work load the TASK-015 summary/specification first. Distributed mode is opt-in and disabled by default; transport/worker state never replaces subsystem authority.

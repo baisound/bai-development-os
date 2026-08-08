@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-run-request.schema.json",
+  "title": "Distributed Remote Run Request",
+  "type": "object",
+  "required": [
+    "distributed_run_request_version",
+    "run_id",
+    "kind",
+    "project_id",
+    "binding_checksum",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_run_request_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "binding_checksum": {
+      "type": "string"
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

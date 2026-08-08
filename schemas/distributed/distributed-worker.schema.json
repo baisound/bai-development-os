@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-worker.schema.json",
+  "title": "Distributed Worker Advertisement",
+  "type": "object",
+  "required": [
+    "distributed_worker_version",
+    "worker_id",
+    "node_id",
+    "trust_state",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_worker_version": {
+      "const": "1.0.0"
+    },
+    "worker_id": {
+      "type": "string"
+    },
+    "node_id": {
+      "type": "string"
+    },
+    "trust_state": {
+      "enum": [
+        "ATTESTED",
+        "UNATTESTED",
+        "REVOKED"
+      ]
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

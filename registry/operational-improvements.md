@@ -240,3 +240,27 @@ TASK-014 remains `COMPLETED`. Post-completion review assigns the remaining topol
 | OP-080 | Optional learned-model/provider implementations stay behind existing Candidate/Safety/Evaluation/Authorization contract | Extension boundary, no new task | TASK-013/TASK-014 |
 
 TASK-015 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Distributed calibration remains opt-in; single-machine CalibrationOS does not inherit distributed coordination cost.
+
+## TASK-015 Completion Allocation
+
+TASK-015 is `COMPLETED`. The optional common `DistributedOS` realizes the topology-dependent coordination responsibilities previously reserved across Monitoring, Integration, Security, Release, Conformance, Maintenance, Extension and Calibration without duplicating distributed primitives inside each subsystem. Historical reservation rows above are retained as provenance; this section is the current disposition.
+
+| Improvement | TASK-015 disposition |
+| --- | --- |
+| OP-034 | Implemented by common Event Envelope, durable delivery, Worker/Lease/Fencing, retry/DLQ/replay and Saga foundations. |
+| OP-039 / OP-046 | Implemented by correlation/causation-aware distributed telemetry, deduplication, missing-coverage, clock-skew and SLI/SLO aggregation. |
+| OP-059 | Implemented by semantic idempotency, quota/backpressure/resource budget and shared remote-run/transport coordination boundaries. |
+| OP-064 | Implemented by exact rollout lease/epoch/fencing, canary/soak, promotion criteria, divergence detection and known-good rollback. |
+| OP-070 | Implemented by distributed Calibration Evidence transport, worker attestation/fencing, late-result quarantine and common remote coordination. |
+| OP-071 | Implemented by versioned Distributed Calibration Evidence envelope with provenance, time-source, attestation and idempotent deduplication. |
+| OP-072 | Implemented by cohort/source coverage, explicit missing observations, clock-skew metadata and uncertainty-preserving aggregation. |
+| OP-073 | Implemented by exact-checksum remote run request/result binding for Counterfactual and Shadow evaluation plus worker/environment fingerprints. |
+| OP-074 | Implemented by activation epoch, exact run/rollout lease scopes, fencing and stale-result quarantine. |
+| OP-075 | Implemented by canary rollout, mandatory soak, promotion criteria, post-result regression handling and governed rollback. |
+| OP-076 | Implemented by policy-version divergence detection and canonical-version reconciliation input. |
+| OP-077 | Implemented by tamper-evident checkpoint receipts explicitly scoped as local/distributed receipts, not a false global atomic ledger. |
+| OP-078 | Implemented by queue/in-flight/replay/cost quota and backpressure controls. |
+| OP-079 | Implemented as distributed Candidate lineage plus decomposed evidence sufficiency/freshness/coverage/evaluation confidence inputs. |
+| OP-080 | Boundary preserved: optional learned/vendor implementations remain Extension/Calibration providers behind existing Safety/Evaluation/Authorization contracts; no TASK-016 is implied. |
+
+Production-specific cloud brokers, remote worker fleets, multi-region deployment and vendor adapters remain deployment/provider implementations behind TASK-015 contracts. They are not unfinished Core authority and require no automatic new roadmap Task.

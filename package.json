@@ -1,6 +1,6 @@
 {
   "name": "bai-development-os",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "private": true,
   "description": "BAI Development OS core governance, lifecycle, context guard, and reusable project-development foundation",
   "type": "module",
@@ -29,7 +29,8 @@
     "./conformance": "./src/conformance/index.mjs",
     "./maintenance": "./src/maintenance/index.mjs",
     "./extension": "./src/extension/index.mjs",
-    "./calibration": "./src/calibration/index.mjs"
+    "./calibration": "./src/calibration/index.mjs",
+    "./distributed": "./src/distributed/index.mjs"
   },
   "scripts": {
     "test": "node --test",
@@ -60,7 +61,9 @@
     "test:extension": "node --test tests/extension/*.test.mjs tests/integration/task013*.test.mjs",
     "check:extension": "node scripts/check-extension-conformance.mjs",
     "test:calibration": "node --test tests/calibration/*.test.mjs tests/integration/task014*.test.mjs",
-    "check:calibration": "node scripts/check-calibration-conformance.mjs"
+    "check:calibration": "node scripts/check-calibration-conformance.mjs",
+    "test:distributed": "node --test tests/distributed/*.test.mjs tests/integration/task015*.test.mjs",
+    "check:distributed": "node scripts/check-distributed-conformance.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-event.schema.json",
+  "title": "Distributed Event Envelope",
+  "type": "object",
+  "required": [
+    "distributed_event_version",
+    "event_id",
+    "event_type",
+    "project_id",
+    "idempotency_key",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_event_version": {
+      "const": "1.0.0"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "idempotency_key": {
+      "type": "string"
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

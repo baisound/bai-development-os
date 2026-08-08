@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-lease.schema.json",
+  "title": "Distributed Lease",
+  "type": "object",
+  "required": [
+    "distributed_lease_version",
+    "lease_id",
+    "scope",
+    "owner_id",
+    "epoch",
+    "fencing_token",
+    "expires_at",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_lease_version": {
+      "const": "1.0.0"
+    },
+    "lease_id": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "owner_id": {
+      "type": "string"
+    },
+    "epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "fencing_token": {
+      "type": "string"
+    },
+    "expires_at": {
+      "type": "string"
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

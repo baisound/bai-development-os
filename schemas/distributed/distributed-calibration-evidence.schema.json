@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-calibration-evidence.schema.json",
+  "title": "Distributed Calibration Evidence Envelope",
+  "type": "object",
+  "required": [
+    "distributed_calibration_evidence_version",
+    "distributed_evidence_id",
+    "evidence_id",
+    "evidence_checksum",
+    "evidence_class",
+    "cohort_id",
+    "evidence",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_calibration_evidence_version": {
+      "const": "1.0.0"
+    },
+    "distributed_evidence_id": {
+      "type": "string"
+    },
+    "evidence_id": {
+      "type": "string"
+    },
+    "evidence_checksum": {
+      "type": "string"
+    },
+    "evidence_class": {
+      "enum": [
+        "REAL",
+        "SANDBOX",
+        "SIMULATED",
+        "DECLARED"
+      ]
+    },
+    "cohort_id": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-checkpoint-receipt.schema.json",
+  "title": "Distributed Checkpoint Receipt",
+  "type": "object",
+  "required": [
+    "distributed_checkpoint_receipt_version",
+    "receipt_id",
+    "scope",
+    "node_id",
+    "local_revision",
+    "local_checksum",
+    "statement",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_checkpoint_receipt_version": {
+      "const": "1.0.0"
+    },
+    "receipt_id": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "node_id": {
+      "type": "string"
+    },
+    "local_revision": {
+      "type": "string"
+    },
+    "local_checksum": {
+      "type": "string"
+    },
+    "statement": {
+      "const": "TAMPER_EVIDENT_LOCAL_RECEIPT_NOT_GLOBAL_ATOMIC_LEDGER"
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

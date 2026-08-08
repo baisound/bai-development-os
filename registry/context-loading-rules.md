@@ -5,32 +5,31 @@
 1. `registry/current-state.md`
 2. `registry/ai-context-pack.md`
 3. `PROJECT.md`
-4. Active/completed Task summary relevant to the assignment
-5. Exact canonical sections/modules needed for the decision
+4. Relevant completed Task summary
+5. Exact canonical specification/source modules/tests needed for the decision
 
 Do not load the whole Architecture or every prior Task by default.
 
 ## 2. Current architecture and roadmap
 
-Architecture Ver.2.25 is current. Part XV is the sole consolidated roadmap authority and preserves `54 / 54` accepted source sections. For TASK-015 scope, load Part XV first. Historical roadmap/addendum sections are provenance only.
+Architecture Ver.2.26 is current. Part XV preserves the sole consolidated roadmap authority with `54 / 54` source sections. TASK-004〜015 are completed. No TASK-016 exists unless a later explicit Owner decision creates one.
 
 ## 3. Completed subsystem loading
 
-For TASK-004〜014, load `tasks/TASK-XXX/<summary>` first where available, then the corresponding specification only if exact runtime contracts are needed. Never use a historical completion note to override a later current canonical.
+For TASK-004〜015, load `tasks/TASK-XXX/<summary>` first, then the corresponding specification only when exact runtime contracts are required. Never use historical completion/refinement notes to override a later current canonical.
 
-For Calibration behavior, start with `tasks/TASK-014/TASK-014.summary.md`; then load `specifications/TASK-014_BAI_Development_OS_Adaptive_Governance_Calibration_Policy_Learning_Ver1.0.md` and only the relevant `src/calibration/` modules/tests. For Extension behavior, continue to use the TASK-013 summary/specification and only relevant `src/extension/` modules/tests.
+For DistributedOS behavior, start with `tasks/TASK-015/TASK-015.summary.md`, then `specifications/TASK-015_BAI_Development_OS_Distributed_Orchestration_Event_Fabric_Ver1.0.md` and only relevant `src/distributed/` modules/tests.
 
 ## 4. Evidence and authority
 
-A successful test, Plugin trust label, Connector result, Conformance report, Preview, Repair Plan, Registry entry or Dashboard value is evidence/derived state, not authorization or Canonical truth. Preserve Lifecycle/Owner/Knowledge/Security/Release authority boundaries.
+A successful test, Plugin trust label, Connector result, Conformance report, Preview, Repair Plan, Registry entry, Dashboard value, distributed Event, Worker advertisement, Lease or remote result is evidence/derived/coordination state, not authorization or Canonical truth. Preserve Lifecycle/Owner/Knowledge/Security/Release/Maintenance/Calibration authority boundaries.
 
 ## 5. Context Economy
 
-Use DEV-0〜DEV-4 to select review/test/context depth. Do not raise Context Guard limits to accommodate duplicated history. Prefer current summaries and exact source sections. Historical evolution is loaded only when investigating provenance, regressions or supersession.
+Use DEV-0〜DEV-4 to select review/test/context depth. Do not raise Context Guard limits to accommodate duplicated history. Prefer current summaries and exact source sections. Historical evolution is loaded only for provenance, regression or supersession investigations.
 
-## 6. Extension and Calibration execution context
+## 6. Extension, Calibration and Distributed execution context
 
-Do not load or execute provider implementation merely to discover a Manifest. Executable Extension code requires implementation-checksum binding. `IN_PROCESS_TRUSTED` requires independent trust evidence; `SANDBOXED` must execute through a Sandbox Runner. Sandbox-required capability cannot be converted to in-process execution for convenience. External side effects remain governed by IntegrationOS/Owner authorization. Calibration recommendations and Candidate state are advisory only. Do not load a recommendation as active policy unless it has PASS Counterfactual + Shadow evidence, matching Candidate checksums and explicit Owner/Policy authorization records.
+Executable Extension code requires implementation-checksum binding and the Capability Broker. Calibration recommendations/Candidates are advisory until exact Counterfactual + Shadow + Owner + Policy gates pass.
 
-
-For TASK-015 distributed CalibrationOS scope, load Architecture Ver.2.25 Part XV subsection 145.11 first. Load `architecture/BAI_Development_OS_Post_TASK014_Roadmap_Refinement_Ver1.0.md` only for provenance/audit. Do not create TASK-016 from TASK-014 residuals unless a later Owner decision identifies a genuinely independent product boundary.
+DistributedOS is disabled by default. Do not enable it for local/single-machine work merely because the package supports it. When enabled, preserve at-least-once semantics, semantic idempotency, exact run/rollout lease scopes, fencing, Worker attestation for REAL evidence, late-result quarantine, partition fail-closed rules and quota/backpressure. Distribution cannot upgrade Evidence class, create external authorization or replace an owning subsystem's canonical state.

@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK-015",
+  "status": "COMPLETED",
+  "package_version": "1.0.0",
+  "distributed_test_count": 73,
+  "full_os_test_count": 1188,
+  "consumer_test_count": 10,
+  "schema_count": 10,
+  "shared_contract_count": 13,
+  "blocking_critic_findings": 0,
+  "local_first_default": true,
+  "delivery_semantics": "AT_LEAST_ONCE",
+  "exactly_once_claim": "EFFECT_BY_IDEMPOTENT_CONSUMER_ONLY",
+  "next_task": null
+}

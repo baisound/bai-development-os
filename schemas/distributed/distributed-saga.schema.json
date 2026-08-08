@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-saga.schema.json",
+  "title": "Distributed Saga",
+  "type": "object",
+  "required": [
+    "distributed_saga_version",
+    "saga_id",
+    "steps",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_saga_version": {
+      "const": "1.0.0"
+    },
+    "saga_id": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

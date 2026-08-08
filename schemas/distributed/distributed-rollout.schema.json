@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.local/schemas/distributed/distributed-rollout.schema.json",
+  "title": "Distributed Rollout Plan",
+  "type": "object",
+  "required": [
+    "distributed_rollout_version",
+    "rollout_id",
+    "subject",
+    "target_checksum",
+    "activation_epoch",
+    "owner_authorization_ref",
+    "policy_authorization_ref",
+    "cohorts",
+    "content_checksum"
+  ],
+  "properties": {
+    "distributed_rollout_version": {
+      "const": "1.0.0"
+    },
+    "rollout_id": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "target_checksum": {
+      "type": "string"
+    },
+    "activation_epoch": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "owner_authorization_ref": {
+      "type": "string"
+    },
+    "policy_authorization_ref": {
+      "type": "string"
+    },
+    "cohorts": {
+      "type": "array",
+      "minItems": 1
+    },
+    "content_checksum": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

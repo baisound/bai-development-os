@@ -30,3 +30,4 @@ export * as MaintenanceOS from './maintenance/index.mjs';
 export * as ExtensionOS from './extension/index.mjs';
 
 export * as CalibrationOS from './calibration/index.mjs';
+export * as DistributedOS from './distributed/index.mjs';

@@ -11,6 +11,7 @@ It is intentionally separated from any one consumer project. The historical `jav
 - `src/governance/` — Adaptive development profile selection
 - `src/knowledge/` — governed Knowledge Assets, resolver, packs, usage/effectiveness and impact
 - `src/monitoring/` — read-only KPI, source provenance, alerts, audit correlation, trends and Dashboard rendering
+- `src/distributed/` — optional event fabric, durable delivery, worker/lease/fencing, remote execution, Saga, rollout and distributed evidence/telemetry
 - `common/` — shared authority, evidence, artifact, vocabulary, and workflow rules
 - `roles/` — Builder, Critic, Tester, Judge, Orchestrator, Project Policy specifications
 - `registry/` — current state and document/context indexes
@@ -37,6 +38,8 @@ A consumer project keeps its own source and Task evidence. Shared OS implementat
 
 ```bash
 npm test
+npm run test:distributed
+npm run check:distributed
 npm run check:boundaries
 ```
 
@@ -52,7 +55,7 @@ Runtime exports include `./lifecycle/recovery`, `./context-control`, `./model-co
 
 ## Post-TASK-008 roadmap
 
-The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-014 are completed. TASK-015 is the next development route and remains unauthorized.
+The canonical roadmap preserves TASK-009 through TASK-015 as the staged product roadmap. TASK-009 through TASK-015 are completed. TASK-015 closes the currently defined roadmap; no TASK-016 is created or authorized by completion.
 
 
 ## TASK-005 Knowledge Operating System Completion
@@ -65,7 +68,7 @@ TASK-005 completion refined TASK-009〜014 with Knowledge-specific hardening and
 
 ## Post-TASK-006 Roadmap Refinement
 
-TASK-006 completion refined TASK-009〜014 with orchestration-specific integrity/productization scope and reserves TASK-015 for optional Distributed Orchestration & Event Fabric. TASK-007 through TASK-014 are completed; TASK-015 is next. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
+Historical note: TASK-006 completion refined TASK-009〜014 and reserved TASK-015 for optional Distributed Orchestration & Event Fabric. That reservation is now fulfilled: TASK-007 through TASK-015 are completed. See `architecture/BAI_Development_OS_Post_TASK006_Roadmap_Refinement_Ver1.0.md`.
 
 ## TASK-007 Monitoring & Dashboard Completion
 
@@ -86,7 +89,7 @@ TASK-008 remains completed. Architecture Ver.2.14 assigns its deferred productiz
 
 ## Consolidated Roadmap Authority
 
-Architecture Ver.2.23 Part XV is the single lossless consolidated roadmap authority. Completed TASK-009〜012 behavior is governed by each subsystem canonical/completion Part; historical roadmap sections remain provenance only. The lossless checker preserves all 51 accumulated source sections, and TASK-013 remains fundamentally the cross-domain Domain Adapter / Plugin SDK.
+Architecture Ver.2.26 Part XV is the single lossless consolidated roadmap authority. Completed TASK-009〜015 behavior is governed by each subsystem canonical/completion Part; historical roadmap sections remain provenance only. The lossless checker preserves all 54 accumulated source sections.
 
 ## TASK-009 Security / Integrity
 
@@ -114,7 +117,7 @@ TASK-011 is `COMPLETED`. `ConformanceOS` provides machine-verifiable Consumer fi
 
 ## Post-TASK-011 Roadmap Refinement
 
-TASK-011 remains `COMPLETED`. Architecture Ver.2.23 Part XV directly incorporates four TASK-011-derived future sections: Conformance evidence/certification self-maintenance in TASK-012; Runner/Probe/Sandbox/Fixture/Provider SDKs in TASK-013; evidence/coverage/certification calibration in TASK-014; and optional remote/distributed Conformance execution in TASK-015. Roadmap preservation is `51 / 51 PASS`. TASK-012 through TASK-014 are `COMPLETED`; TASK-015 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
+Historical state at the post-TASK-011 refinement point: Architecture Ver.2.23 Part XV incorporated four TASK-011-derived future sections for TASK-012〜015 and preserved `51 / 51` sources. Those routes have since been completed through TASK-015; current authority is Architecture Ver.2.26 with `54 / 54 PASS`.
 
 
 ## TASK-012 Self-Maintenance Completion
@@ -129,4 +132,9 @@ TASK-013 is `COMPLETED`. `ExtensionOS` supplies the single cross-domain Adapter/
 
 ## Post-TASK-014 Roadmap Refinement
 
-Architecture Ver.2.25 preserves 54/54 roadmap source sections and extends TASK-015 with optional distributed CalibrationOS coordination: provenance-preserving Evidence transport/deduplication, cohort-aware baselines, remote Counterfactual/Shadow evaluation, exact Candidate version/epoch propagation, fenced canary rollout, regression-driven governed rollback, policy-divergence detection and calibration quota/backpressure. TASK-014 remains completed and no TASK-016 is created by this refinement.
+Architecture Ver.2.26 preserves 54/54 roadmap source sections and extends TASK-015 with optional distributed CalibrationOS coordination: provenance-preserving Evidence transport/deduplication, cohort-aware baselines, remote Counterfactual/Shadow evaluation, exact Candidate version/epoch propagation, fenced canary rollout, regression-driven governed rollback, policy-divergence detection and calibration quota/backpressure. TASK-014 remains completed and no TASK-016 is created by this refinement.
+
+
+## TASK-015 Distributed Orchestration & Event Fabric Completion
+
+TASK-015 is `COMPLETED`. `DistributedOS` is the optional distributed coordination layer. It does not make remote execution mandatory and does not create new authority. Package baseline: `1.0.0`; Distributed tests `73/73`; full OS `1188/1188`; Consumer `10/10`. No TASK-016 is created by completion.
