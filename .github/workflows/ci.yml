@@ -1,0 +1,114 @@
+name: BAI Development OS CI
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+  push:
+    branches:
+      - main
+  merge_group:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bai-development-os-ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  regression:
+    name: regression-node-${{ matrix.node-version }}
+    if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version:
+          - "20.19.0"
+          - "22.x"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Show runtime versions
+        run: |
+          node --version
+          npm --version
+
+      - name: Reject whitespace errors
+        run: git diff --check
+
+      - name: Run complete OS regression
+        run: npm test
+
+  conformance:
+    name: conformance
+    if: github.event_name != 'pull_request' || github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Roadmap consolidation
+        run: npm run check:roadmap
+
+      - name: Security conformance
+        run: npm run check:security
+
+      - name: Release conformance
+        run: npm run check:release
+
+      - name: Multi-project conformance
+        run: npm run check:conformance
+
+      - name: Maintenance conformance
+        run: npm run check:maintenance
+
+      - name: Extension conformance
+        run: npm run check:extension
+
+      - name: Calibration conformance
+        run: npm run check:calibration
+
+      - name: Distributed conformance
+        run: npm run check:distributed
+
+  quality-gate:
+    name: quality-gate
+    if: always()
+    needs:
+      - regression
+      - conformance
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require all PR gate jobs to pass
+        env:
+          REGRESSION_RESULT: ${{ needs.regression.result }}
+          CONFORMANCE_RESULT: ${{ needs.conformance.result }}
+        run: |
+          echo "regression=${REGRESSION_RESULT}"
+          echo "conformance=${CONFORMANCE_RESULT}"
+          test "${REGRESSION_RESULT}" = "success"
+          test "${CONFORMANCE_RESULT}" = "success"
