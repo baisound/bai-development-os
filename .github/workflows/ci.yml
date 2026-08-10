@@ -53,6 +53,11 @@ jobs:
       - name: Reject whitespace errors
         run: git diff --check
 
+      - name: Prepare test filesystem
+        run: |
+          sudo mkdir -p /mnt/data
+          sudo chmod 1777 /mnt/data
+
       - name: Run complete OS regression
         run: npm test
 
