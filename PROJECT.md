@@ -54,8 +54,9 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-014`: Adaptive Governance Calibration & Policy Learning — `COMPLETED`
 - `TASK-015`: Distributed Orchestration & Event Fabric — `COMPLETED`
 - `TASK-016`: Resilience, Recovery & Scalability Certification OS — `NEXT / NOT_STARTED / NOT_AUTHORIZED`
+- `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `NOT_STARTED / NOT_AUTHORIZED` after TASK-016
 
-TASK-009 through TASK-015 are `COMPLETED`. TASK-016 is now the explicit next roadmap task but remains `NOT_STARTED / NOT_AUTHORIZED`.
+TASK-009 through TASK-015 are `COMPLETED`. TASK-016 remains the explicit next roadmap task; TASK-017 is queued after it. Neither future task is implementation-authorized.
 
 ## Governance
 
@@ -80,15 +81,15 @@ npm run check:calibration
 
 ## Historical Roadmap / Completion Navigation
 
-TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.27 Part XV is the sole current consolidated roadmap authority (`55 / 55 PASS` target after refinement); completed subsystem behavior is governed by each TASK-004〜015 canonical design. External publication remains TASK-008 authorized side-effect territory.
+TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.28 Part XV is the sole current consolidated roadmap authority (`56 / 56 PASS` target after refinement); completed subsystem behavior is governed by each TASK-004〜015 canonical design. External publication remains TASK-008 authorized side-effect territory.
 
 ## TASK-013 Domain Adapter / Plugin SDK Completion
 
-TASK-013 is `COMPLETED`: ExtensionOS provides the common cross-domain Manifest/Lifecycle/Capability/Pack/Hook/Artifact/Provider/Conformance boundary. Baseline: 161/161 Extension, 1059/1059 OS, 10/10 Consumer. Architecture Ver.2.27 is current; TASK-014 and TASK-015 are completed.
+TASK-013 is `COMPLETED`: ExtensionOS provides the common cross-domain Manifest/Lifecycle/Capability/Pack/Hook/Artifact/Provider/Conformance boundary. Baseline: 161/161 Extension, 1059/1059 OS, 10/10 Consumer. Architecture Ver.2.28 is current; TASK-014 and TASK-015 are completed.
 
 ## TASK-014 Adaptive Governance Calibration & Policy Learning Completion
 
-TASK-014 is `COMPLETED`. `CalibrationOS` provides evidence sufficiency, weighted analytics, adaptive-governance diagnostics, bounded cross-subsystem recommendations, immutable safety-floor review, Candidate checksum binding, Counterfactual and Shadow evaluation, dual-authorized activation and a tamper-evident durable calibration ledger. Baseline: 56/56 Calibration, 1115/1115 full OS, 10/10 Consumer. Architecture Ver.2.27 is current; TASK-015 is completed.
+TASK-014 is `COMPLETED`. `CalibrationOS` provides evidence sufficiency, weighted analytics, adaptive-governance diagnostics, bounded cross-subsystem recommendations, immutable safety-floor review, Candidate checksum binding, Counterfactual and Shadow evaluation, dual-authorized activation and a tamper-evident durable calibration ledger. Baseline: 56/56 Calibration, 1115/1115 full OS, 10/10 Consumer. Architecture Ver.2.28 is current; TASK-015 is completed.
 
 
 ## Post-TASK-014 roadmap refinement
@@ -103,4 +104,4 @@ TASK-015 is `COMPLETED`. `DistributedOS` provides the optional event/execution f
 
 ## Post-TASK-015 Roadmap Refinement
 
-Architecture Ver.2.27 creates `TASK-016 — Resilience, Recovery & Scalability Certification OS` as `NEXT / NOT_STARTED / NOT_AUTHORIZED`. TASK-016 will prove recovery/convergence, mixed-version compatibility, load/capacity and disaster-recovery behavior through deterministic simulation and bounded certification. Production cloud provisioning, vendor-specific brokers and real worker-fleet deployment remain Integration/Extension/deployment responsibilities. No TASK-017 is created.
+Architecture Ver.2.27 created `TASK-016 — Resilience, Recovery & Scalability Certification OS` as `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Architecture Ver.2.28 preserves TASK-016 as NEXT and adds `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS` as `NOT_STARTED / NOT_AUTHORIZED` after TASK-016 based on BAI CREATIVE OS audit feedback. TASK-017 adds Rejected Pattern, multi-dimensional quality Evidence, cross-project reproducibility, hard reject gates, signed/versioned knowledge rollback and privacy-minimized federated Evidence; no TASK-018 is created.

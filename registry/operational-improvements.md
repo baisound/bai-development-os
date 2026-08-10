@@ -284,3 +284,23 @@ TASK-015 remains `COMPLETED`. The explicit Owner refinement creates one bounded 
 | OP-090 | Resilience Certification levels separating SIMULATED/SANDBOX/attested REAL evidence | Roadmap reserved | TASK-016 |
 
 TASK-016 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`. No TASK-017 is created.
+
+
+## Post-BAI-CREATIVE-OS Knowledge Audit Addendum — 2026-08-10
+
+The external audit was performed against a 2026-07-31 snapshot and is partially superseded by completed TASK-005〜015 implementation. The following rows contain only the remaining current gaps after adjudication.
+
+| ID | Improvement | Status | Target |
+|---|---|---|---|
+| OP-091 | Structured Knowledge Candidate / Rejected Pattern / Quality Evidence / Promotion Decision contracts | Roadmap reserved | TASK-017 |
+| OP-092 | Multi-dimensional conditions/counterexample/sample/effect/rework/time/human-acceptance confidence model | Roadmap reserved | TASK-017 |
+| OP-093 | Typed Critic/Builder/Owner/Undo/Tester/recurrence/deviation causal Evidence linkage | Roadmap reserved | TASK-017 |
+| OP-094 | Cross-Task/Project Reproduction Matrix and privacy-preserving federated Evidence aggregation | Roadmap reserved | TASK-017 |
+| OP-095 | Non-compensable Safety/Security/Rights/Privacy/Authority Hard Reject gates | Roadmap reserved | TASK-017 |
+| OP-096 | Review-gated promotion/demotion/invalidation/quarantine; score is never authority | Roadmap reserved | TASK-017 |
+| OP-097 | Signed/versioned Knowledge Distribution Pack and last-known-good rollback using SecurityOS/ReleaseOS | Roadmap reserved | TASK-017 |
+| OP-098 | Consumer/Project isolation, minimization, opt-in/redacted federated export and retention | Roadmap reserved | TASK-017 |
+| OP-099 | Knowledge regression/drift/quarantine and exact-revision Impact-driven rollback evidence | Roadmap reserved | TASK-017 |
+| OP-100 | CREATIVE/Video Production domain metric provider for QA/re-edit/rework/work-time Evidence | Roadmap reserved | TASK-017 |
+
+TASK-016 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`. TASK-017 is queued after TASK-016 and is also `NOT_STARTED / NOT_AUTHORIZED`. No TASK-018 is created.

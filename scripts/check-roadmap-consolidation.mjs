@@ -11,6 +11,7 @@ const task012RefinementPath = path.join(root, 'architecture/BAI_Development_OS_P
 const task013RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK013_Roadmap_Refinement_Ver1.0.md');
 const task014RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK014_Roadmap_Refinement_Ver1.0.md');
 const task015RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md');
+const creativeKnowledgeRefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_CREATIVE_OS_Knowledge_Audit_Roadmap_Refinement_Ver1.0.md');
 
 const state = fs.readFileSync(statePath, 'utf8');
 const versionMatch = state.match(/Current Architecture Canonical: `BAI Development OS Architecture Ver\.([0-9.]+)`/);
@@ -124,7 +125,19 @@ for (const task of ['016']) {
   const body = task015Refinement.slice(bodyStart, next < 0 ? task015Refinement.length : next).trim();
   task015Sections.push({ heading, body });
 }
-const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections, ...task014Sections, ...task015Sections];
+const creativeKnowledgeRefinement = fs.readFileSync(creativeKnowledgeRefinementPath, 'utf8');
+const creativeKnowledgeSections = [];
+for (const task of ['017']) {
+  const heading = `## TASK-${task}`;
+  const start = creativeKnowledgeRefinement.indexOf(heading);
+  if (start < 0) throw new Error(`ROADMAP_CHECK_FAIL: TASK-${task} CREATIVE knowledge refinement missing`);
+  const bodyStart = creativeKnowledgeRefinement.indexOf('\n', start) + 1;
+  const next = creativeKnowledgeRefinement.indexOf('\n## ', bodyStart);
+  let body = creativeKnowledgeRefinement.slice(bodyStart, next < 0 ? creativeKnowledgeRefinement.length : next).trim();
+  body = body.replace(/\n## Operational improvement allocation[\s\S]*$/, '').trim();
+  creativeKnowledgeSections.push({ heading, body });
+}
+const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections, ...task014Sections, ...task015Sections, ...creativeKnowledgeSections];
 const missing = allSections.filter((s) => !consolidated.includes(s.body));
 if (missing.length) {
   console.error('ROADMAP_CHECK_MISSING_SECTIONS');
@@ -139,6 +152,15 @@ const task16Required = [
 ];
 for (const required of task16Required) {
   if (!consolidated.includes(required)) throw new Error(`ROADMAP_CHECK_FAIL: TASK-016 identity fragment missing: ${required}`);
+}
+
+const task17Required = [
+  'TASK-017 — Knowledge Evolution & Federated Evidence Governance OS',
+  'Rejected Pattern',
+  'privacy-minimized federated Evidence',
+];
+for (const required of task17Required) {
+  if (!consolidated.includes(required)) throw new Error(`ROADMAP_CHECK_FAIL: TASK-017 identity fragment missing: ${required}`);
 }
 
 const task13Required = [

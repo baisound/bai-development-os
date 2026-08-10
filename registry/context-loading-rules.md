@@ -12,7 +12,7 @@ Do not load the whole Architecture or every prior Task by default.
 
 ## 2. Current architecture and roadmap
 
-Architecture Ver.2.27 is current. Part XV preserves the sole consolidated roadmap authority with `55 / 55` source sections. TASK-004〜015 are completed. TASK-016 exists as `NEXT / NOT_STARTED / NOT_AUTHORIZED` by explicit Owner decision.
+Architecture Ver.2.28 is current. Part XV preserves the sole consolidated roadmap authority with `56 / 56` source sections. TASK-004〜015 are completed. TASK-016 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-017 is queued after TASK-016 as `NOT_STARTED / NOT_AUTHORIZED` from BAI CREATIVE OS Knowledge Audit feedback.
 
 ## 3. Completed subsystem loading
 
@@ -38,3 +38,8 @@ DistributedOS is disabled by default. Do not enable it for local/single-machine 
 ## 7. TASK-016 planning context
 
 For TASK-016 planning, load `tasks/TASK-016/TASK-016.summary.md` and `architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md` before the complete Architecture. Do not load all distributed history by default. TASK-016 NEXT status is not implementation authorization. Destructive real-environment fault injection must remain disabled unless a separately bound Owner authorization, blast-radius limit, cost limit and Emergency Stop are present.
+
+
+## 8. TASK-017 planning context
+
+TASK-017 is queued after TASK-016 and is not authorized. Load `tasks/TASK-017/TASK-017.summary.md` first, then the CREATIVE OS audit adjudication/refinement. Only load `reviews/BAI_CREATIVE_OS_Knowledge_Audit_2026-08-10.md` when provenance or exact wording matters because it describes an older 2026-07-31 snapshot. Current implementation facts come from TASK-005 and current canonical state.

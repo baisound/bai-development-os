@@ -34,8 +34,9 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
 - TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
 - TASK-016 Resilience / Recovery / Scalability Certification OS: proposed next route, not yet canonical implementation
+- TASK-017 Knowledge Evolution & Federated Evidence Governance OS: queued after TASK-016, not started or authorized
 
-TASK-004〜015 are `COMPLETED`. TASK-016 is `NEXT / NOT_STARTED / NOT_AUTHORIZED` by the explicit Post-TASK-015 roadmap refinement.
+TASK-004〜015 are `COMPLETED`. TASK-016 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-017 is `NOT_STARTED / NOT_AUTHORIZED` after TASK-016.
 
 ## CalibrationOS loading rule
 
@@ -43,7 +44,7 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 
 ## Roadmap authority
 
-Architecture Ver.2.27 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `55 / 55` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
+Architecture Ver.2.28 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `56 / 56` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
 
 ## Current verification baseline
 
@@ -52,7 +53,7 @@ Architecture Ver.2.27 Part XV is the sole current consolidated roadmap scope. Th
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
-- Roadmap: `55 / 55 PASS`
+- Roadmap: `56 / 56 PASS`
 - Product Boundary: PASS
 
 ## Safety reminders
@@ -76,3 +77,8 @@ TASK-015 is completed. For distributed work load the TASK-015 summary/specificat
 ## TASK-016 next-route loading rule
 
 TASK-016 is not started or authorized. For planning only, load `tasks/TASK-016/TASK-016.summary.md`, then `architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md`. Do not infer implementation authorization from NEXT status. Real destructive chaos/fault injection requires a separately bound Owner authorization even after TASK-016 implementation begins.
+
+
+## TASK-017 planning context
+
+TASK-017 is not started or authorized and does not replace TASK-016 as NEXT. For planning, load `tasks/TASK-017/TASK-017.summary.md`, then `architecture/BAI_Development_OS_Creative_OS_Knowledge_Audit_Adjudication_Ver1.0.md` and the Post-CREATIVE-OS refinement. Do not load the old audit snapshot as current truth. Promotion score/frequency is never authority, hard Safety/Security/Rights/Privacy gates are non-compensable, and Consumer creative/personal/confidential content remains local by default.
