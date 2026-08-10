@@ -1,7 +1,5 @@
-# BAI Consumer Evidence Python Reference Client
+# BAI Consumer Evidence Python Reference — RC2
 
-Generated/copied Product-owned reference code. It has **no BAI Development OS runtime dependency**.
+Development-time reference only. Generated/copied source becomes Consumer-owned and has no BAI Development OS runtime dependency.
 
-The Product must provide a `CredentialProvider` backed by its selected external credential store. BAI VIDEO PRODUCT uses Microsoft Password Manager by Owner decision; this reference kit intentionally does not guess or hard-code a Microsoft API.
-
-Primary Product behavior must not depend on Hub availability or credential availability.
+Canonical v1 flow: Product Event -> sanitizer/catalog -> LocalOutbox -> canonical Batch -> Hub or temporary Object Storage artifact. The same Event IDs survive retry/backfill. `artifact.py` only builds provider-neutral artifact metadata/body; it intentionally contains no S3/AWS SDK or credential storage.

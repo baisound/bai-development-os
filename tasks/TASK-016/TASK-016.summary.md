@@ -1,19 +1,15 @@
 # TASK-016 Summary
 
-Status: `ACTIVE / PHASE0_RC2_DESIGN_AUTHORIZED / IMPLEMENTATION_IN_PROGRESS`.
+Status: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`.
 
-**Authorized current slice:** `Phase 0 — Consumer Knowledge Capture & Contract Foundation` under `DEV_4_FOUNDATION_CRITICAL`. Owner authorization is recorded in `phase0-owner-authorization-2026-08-11.md`.
+**Completed slice:** `Phase 0 — Consumer Knowledge Capture & Canonical Evidence Contract Foundation` under `DEV_4_FOUNDATION_CRITICAL`. RC2 closure: `phase0-rc2-judge-review-2026-08-11.md`.
 
-Phase 0 now implements secure Pattern C Snapshot inspection/intake, source-neutral Evidence/Candidate/Snapshot contracts, Product Runtime Independence, Consumer Evidence Integration Kit foundations, external `CredentialProvider`, Public Ingestion OpenAPI/Privacy/Trust contracts, Product-owned Python reference/scaffold, Local Outbox semantics and deterministic Mock Hub contract testing. Product/Hub Evidence remains non-authoritative and P3 raw content is excluded.
+Phase 0 now provides secure Pattern C Snapshot intake, immutable Git repository snapshot provenance, source-neutral Knowledge Evidence/Candidate contracts, Product Runtime Independence, canonical Consumer Evidence Event/Batch/Receipt/Client Policy v1, closed Event Catalog, Privacy/Forbidden Fields, Object Storage Artifact Profile, Product-owned Python reference/scaffold, Local Outbox semantics and deterministic Mock Hub contract testing. Product/Hub Evidence remains non-authoritative and P3 raw content is excluded.
 
-A real BAI VIDEO PRODUCTION v0.16.4 handoff artifact has been processed as a **provisional PARTIAL** Pattern C intake. It yielded reviewed runtime-independence, ownership-boundary and full-regression-floor candidates without copying the raw source into Canonical Knowledge. This does **not** satisfy the final full-snapshot gate.
+BAI VIDEO PRODUCTION canonical Git provenance was validated at commit `a098f881b095e3290d2562efe3846d9e2384806a` / tree `59d7dd9a233570e3e3616face417a6925307492b` with explicit `KEY_FILES_ONLY` content-validation coverage. The raw Product repository is not copied into the OS. Derived intake is `knowledge/intake/bai-video-production-github-main-2026-08-11/`.
 
-Phase 0 closure requires one full BAI VIDEO PRODUCT/PRODUCTION + matching BAI Development OS snapshot intake with no unresolved security/privacy quarantine. Until that arrives, state remains `REAL_FULL_SNAPSHOT_VALIDATION_PENDING`.
+Final Phase 0 verification: focused Knowledge Evolution `50 / 50 PASS`; full BAI Development OS `1238 / 1238 PASS`; Roadmap, Security, Release, Conformance, Maintenance, Extension, Calibration and Distributed checks PASS; Product-owned Python reference compile PASS.
 
-After Phase 0 closes, the planned route is **TASK-017 Phase 0 Pilot Transport Slice**, then TASK-016 Phase 1+ resumes with deterministic simulation, fault injection, recovery/convergence, mixed-version, load/cost, backup/DR and incident certification. Neither route is automatically authorized by this summary.
+Next planned route: **TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice**. TASK-016 Phase 1+ resumes only after the Hub/client pilot and remains unauthorized by this closure.
 
-Read first: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`.
-
-## RC2 read-next
-
-Product feedback adjudication: `phase0-rc2-product-feedback-adjudication-2026-08-11.md`. Owner authorization: `phase0-rc2-owner-authorization-2026-08-11.md`. RC2 freezes one canonical Batch for Hub and temporary Object Storage; no storage-specific Evidence schema is allowed.
+Read first: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`, then RC2 Implementation/Critic/Judge records.

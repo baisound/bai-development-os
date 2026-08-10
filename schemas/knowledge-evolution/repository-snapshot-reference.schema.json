@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.example/schemas/knowledge-evolution/repository-snapshot-reference.schema.json",
+  "title": "BAI Repository Snapshot Reference Ver.1.0",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "snapshot_id",
+    "observed_at",
+    "vcs",
+    "repository_url",
+    "ref",
+    "commit_sha",
+    "tree_sha",
+    "development_os",
+    "consumer",
+    "validation"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "snapshot_id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "observed_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "vcs": {
+      "type": "string",
+      "const": "git"
+    },
+    "repository_url": {
+      "type": "string",
+      "pattern": "^https://[^\\s]+$",
+      "maxLength": 512
+    },
+    "ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "commit_sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}([a-f0-9]{24})?$"
+    },
+    "tree_sha": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}([a-f0-9]{24})?$"
+    },
+    "development_os": {
+      "type": "object",
+      "required": [
+        "version",
+        "architecture"
+      ],
+      "properties": {
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "architecture": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "consumer": {
+      "type": "object",
+      "required": [
+        "project_id"
+      ],
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "tree_identity_verified",
+        "content_scan_status",
+        "key_files"
+      ],
+      "properties": {
+        "tree_identity_verified": {
+          "type": "boolean"
+        },
+        "content_scan_status": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "KEY_FILES_ONLY",
+            "FULL_TRACKED_CONTENT"
+          ]
+        },
+        "key_files": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "required": [
+              "path"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "blob_id": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[a-f0-9]{40}([a-f0-9]{24})?$"
+              },
+              "size_bytes": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "description": "Immutable Git commit/tree provenance for Pattern C manual repository snapshot intake. This records source identity and validation coverage; it does not imply a full repository content scan."
+}

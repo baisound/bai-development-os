@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.example/schemas/knowledge-evolution/consumer-evidence-event.schema.json",
+  "title": "BAI Canonical Consumer Evidence Event Ver.1.0",
+  "type": "object",
+  "required": [
+    "event_id",
+    "occurred_at",
+    "type",
+    "privacy_level"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "feature_result",
+        "diagnostic",
+        "performance",
+        "capability",
+        "user_feedback",
+        "incident",
+        "correction",
+        "adoption"
+      ]
+    },
+    "feature": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "operation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "result": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "duration_ms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "retry_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "error_code": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+    },
+    "privacy_level": {
+      "type": "string",
+      "enum": [
+        "P0",
+        "P1",
+        "P2"
+      ]
+    },
+    "properties": {
+      "type": "object",
+      "maxProperties": 16,
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9_]{0,63}$"
+      },
+      "additionalProperties": {
+        "oneOf": [
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "number"
+          },
+          {
+            "type": "string",
+            "maxLength": 256
+          }
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "description": "Transport-neutral v1 Event. Event Catalog supplies feature/type/result/property allowlists. P3 is structurally excluded.",
+  "oneOf": [
+    {
+      "required": [
+        "feature"
+      ],
+      "not": {
+        "required": [
+          "operation"
+        ]
+      }
+    },
+    {
+      "required": [
+        "operation"
+      ],
+      "not": {
+        "required": [
+          "feature"
+        ]
+      }
+    }
+  ]
+}

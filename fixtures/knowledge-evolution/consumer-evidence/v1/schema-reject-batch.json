@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "batch-schema-reject",
+  "created_at": "2026-08-11T00:20:00Z",
+  "product": {
+    "product_id": "bai-video-production",
+    "product_version": "0.17.0"
+  },
+  "installation": {
+    "installation_id": "inst-demo-12345678"
+  },
+  "events": [
+    {
+      "event_id": "evt-subtitle-0001",
+      "occurred_at": "2026-08-11T00:00:00Z",
+      "type": "feature_result",
+      "feature": "subtitle_import",
+      "result": "success",
+      "duration_ms": 1834,
+      "retry_count": 0,
+      "privacy_level": "P0",
+      "properties": {
+        "cue_count": 42
+      },
+      "unexpected_field": "not-allowed"
+    }
+  ]
+}

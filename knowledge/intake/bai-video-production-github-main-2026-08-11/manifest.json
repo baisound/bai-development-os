@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "intake_id": "KI-3557481190e5c0dc82530c04",
+  "created_at": "2026-08-10T23:33:00.000Z",
+  "state": "PROVENANCE_RECOVERED",
+  "source": {
+    "kind": "git-repository-reference",
+    "repository_url": "https://github.com/baisound/bai_video_production",
+    "ref": "main",
+    "commit_sha": "a098f881b095e3290d2562efe3846d9e2384806a",
+    "tree_sha": "59d7dd9a233570e3e3616face417a6925307492b",
+    "raw_source_committed": false
+  },
+  "provenance_completeness": "PARTIAL",
+  "evidence_count": 4,
+  "candidate_count": 3,
+  "canonical_authority": false
+}

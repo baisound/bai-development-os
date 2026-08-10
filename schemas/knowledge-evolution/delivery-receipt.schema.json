@@ -1,23 +1,48 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://bai.example/schemas/knowledge-evolution/delivery-receipt.schema.json",
-  "title": "BAI Consumer Evidence Delivery Receipt Planning Contract",
+  "title": "BAI Consumer Evidence Delivery Receipt Ver.1.0",
   "type": "object",
   "required": [
+    "receipt_version",
     "receipt_id",
+    "batch_id",
     "accepted",
+    "already_seen",
     "rejected",
     "server_time"
   ],
   "properties": {
+    "receipt_version": {
+      "type": "string",
+      "const": "1.0"
+    },
     "receipt_id": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "maxLength": 128
+    },
+    "batch_id": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 128
     },
     "accepted": {
       "type": "array",
+      "uniqueItems": true,
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 128
+      }
+    },
+    "already_seen": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 8,
+        "maxLength": 128
       }
     },
     "rejected": {
@@ -26,14 +51,18 @@
         "type": "object",
         "required": [
           "event_id",
-          "reason"
+          "reason_code"
         ],
         "properties": {
           "event_id": {
-            "type": "string"
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 128
           },
-          "reason": {
-            "type": "string"
+          "reason_code": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128
           }
         },
         "additionalProperties": false
@@ -42,12 +71,6 @@
     "server_time": {
       "type": "string",
       "format": "date-time"
-    },
-    "already_seen": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
     }
   },
   "additionalProperties": false

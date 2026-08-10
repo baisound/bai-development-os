@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "batch-demo-20260811-0001",
+  "created_at": "2026-08-11T00:20:00Z",
+  "product": {
+    "product_id": "bai-video-production",
+    "product_version": "0.17.0"
+  },
+  "installation": {
+    "installation_id": "inst-demo-12345678"
+  },
+  "events": [
+    {
+      "event_id": "evt-subtitle-0001",
+      "occurred_at": "2026-08-11T00:00:00Z",
+      "type": "feature_result",
+      "feature": "subtitle_import",
+      "result": "failure",
+      "duration_ms": 1834,
+      "retry_count": 0,
+      "privacy_level": "P0",
+      "properties": {
+        "cue_count": 42
+      }
+    },
+    {
+      "event_id": "evt-longjob-0002",
+      "occurred_at": "2026-08-11T00:05:00Z",
+      "type": "performance",
+      "feature": "long_running_job_result",
+      "result": "success",
+      "duration_ms": 123456,
+      "retry_count": 1,
+      "privacy_level": "P0",
+      "properties": {
+        "chunk_count": 8,
+        "resume_used": true,
+        "resumed_chunk_count": 3
+      }
+    },
+    {
+      "event_id": "evt-review-0003",
+      "occurred_at": "2026-08-11T00:15:00Z",
+      "type": "correction",
+      "feature": "subtitle_review_summary",
+      "result": "completed",
+      "duration_ms": 420000,
+      "retry_count": 0,
+      "privacy_level": "P0",
+      "properties": {
+        "imported_cue_count": 42,
+        "edited_cue_count": 8,
+        "inserted_cue_count": 2,
+        "deleted_cue_count": 1,
+        "approved_cue_count": 41,
+        "export_success": true
+      }
+    }
+  ]
+}

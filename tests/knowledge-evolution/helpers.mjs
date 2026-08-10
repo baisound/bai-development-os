@@ -14,4 +14,5 @@ export async function writeStoredZip(file, entries){
   await writeFile(file,Buffer.concat([localBuf,centralBuf,eocd]));
 }
 export const fixedClock=(iso='2026-08-11T00:00:00.000Z')=>()=>new Date(iso);
-export function validEvent(overrides={}){return {schema_version:'1.0',event_id:'evt-12345678',occurred_at:'2026-08-11T00:00:00Z',product:{product_id:'bai-video-production',product_version:'0.17.0'},installation_id:'inst-12345678',event_type:'feature_result',privacy_level:'P0',payload:{feature:'subtitle_import',result:'success',duration_ms:120,retry_count:0},...overrides};}
+export function validEvent(overrides={}){return {event_id:'evt-subtitle-0001',occurred_at:'2026-08-11T00:00:00Z',type:'feature_result',feature:'subtitle_import',result:'success',duration_ms:120,retry_count:0,privacy_level:'P0',properties:{cue_count:42},...overrides};}
+export function validBatch(overrides={}){return {schema_version:'1.0',batch_id:'batch-demo-12345678',created_at:'2026-08-11T00:10:00Z',product:{product_id:'bai-video-production',product_version:'0.17.0'},installation:{installation_id:'inst-demo-12345678'},events:[validEvent()],...overrides};}

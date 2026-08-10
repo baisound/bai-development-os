@@ -1,82 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://bai.example/schemas/knowledge-evolution/consumer-evidence-envelope.schema.json",
-  "title": "BAI Consumer Evidence Envelope Planning Contract",
-  "type": "object",
-  "required": [
-    "schema_version",
-    "event_id",
-    "occurred_at",
-    "product",
-    "event_type",
-    "privacy_level",
-    "payload"
-  ],
-  "properties": {
-    "schema_version": {
-      "type": "string",
-      "const": "1.0"
-    },
-    "event_id": {
-      "type": "string",
-      "minLength": 8,
-      "maxLength": 128
-    },
-    "occurred_at": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "product": {
-      "type": "object",
-      "required": [
-        "product_id",
-        "product_version"
-      ],
-      "properties": {
-        "product_id": {
-          "type": "string",
-          "minLength": 1
-        },
-        "product_version": {
-          "type": "string",
-          "minLength": 1
-        }
-      },
-      "additionalProperties": false
-    },
-    "installation_id": {
-      "type": [
-        "string",
-        "null"
-      ],
-      "maxLength": 128
-    },
-    "event_type": {
-      "type": "string",
-      "enum": [
-        "feature_result",
-        "diagnostic",
-        "performance",
-        "capability",
-        "user_feedback",
-        "incident",
-        "correction",
-        "adoption"
-      ]
-    },
-    "privacy_level": {
-      "type": "string",
-      "enum": [
-        "P0",
-        "P1",
-        "P2"
-      ]
-    },
-    "payload": {
-      "type": "object",
-      "description": "Event-specific bounded payload; runtime validator rejects unknown/sensitive fields."
-    }
-  },
-  "additionalProperties": false,
-  "description": "Privacy-minimized runtime Evidence contract. P3/raw content is structurally excluded."
+  "title": "BAI Consumer Evidence Envelope Compatibility Alias",
+  "$ref": "consumer-evidence-event.schema.json",
+  "deprecated": true,
+  "description": "RC1 path retained as a compatibility alias. Canonical v1 Event source is consumer-evidence-event.schema.json."
 }

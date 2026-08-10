@@ -99,3 +99,7 @@ The development-time contract/reference baseline is now implemented at:
 - `scripts/scaffold-consumer-evidence-python.mjs` and `scripts/run-consumer-evidence-mock-hub.mjs` — developer tooling.
 
 This status does not authorize the production Knowledge Hub or Product-specific Microsoft credential implementation. BAI VIDEO PRODUCT remains responsible for its concrete Microsoft Password Manager provider behind the generic `CredentialProvider`.
+
+## RC2 Canonical Contract
+
+Canonical runtime formats are now owned by `Consumer_Evidence_Canonical_Contract_Ver1.0.md` and the canonical JSON Schemas. This planning document remains historical/design rationale and must not be treated as a second schema.

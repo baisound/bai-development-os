@@ -1,6 +1,6 @@
 # TASK-016 — Resilience, Recovery & Scalability Certification OS
 
-Status: `ACTIVE / PHASE0_RC2_DESIGN_AUTHORIZED / IMPLEMENTATION_IN_PROGRESS`
+Status: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 Development Profile: `DEV_4_FOUNDATION_CRITICAL` (Phase 0 confirmed)
 Parent Scope: Architecture Ver.2.28 Part XV, Post-TASK-015 Roadmap Refinement Ver.1.0, and Consumer Knowledge Evolution Roadmap Refinement Ver.1.2.
 
@@ -17,7 +17,7 @@ Read first: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-de
 Implementation authorization: `PHASE 0 ONLY — OWNER AUTHORIZED 2026-08-11`. TASK-016 Phase 1+ remains `NOT_AUTHORIZED`.
 
 
-## Current Phase 0 implementation state
+## Completed Phase 0 implementation state
 
 Implemented development surfaces:
 
@@ -28,8 +28,8 @@ Implemented development surfaces:
 - development Mock Hub and Public Ingestion OpenAPI contract,
 - provisional BAI VIDEO PRODUCTION Pattern C intake from a real v0.16.4 handoff artifact.
 
-Phase 0 closure remains blocked only by the required full BAI VIDEO PRODUCT/PRODUCTION + matching BAI Development OS snapshot validation. Production Hub deployment and TASK-017 Phase 0 are not authorized by this state.
+Phase 0 is closed by the RC2 Judge after canonical contracts, Object Storage transport profile, Git repository snapshot provenance, full regression and conformance passed. The canonical BAI VIDEO PRODUCTION Git commit/tree plus explicitly verified key files replaced the earlier duplicate-ZIP assumption; validation coverage is recorded as `KEY_FILES_ONLY`, never misrepresented as a full content scan. Production Hub deployment remains outside TASK-016 Phase 0.
 
 ## RC2 Product Feedback Route
 
-BAI VIDEO PRODUCTION accepted Product-owned Evidence Capture and requested a transport-neutral canonical Batch plus temporary Object Storage Artifact Profile. RC2 is authorized to implement the canonical Event/Batch/Receipt/Policy contracts, Event Catalog, Privacy/Forbidden Fields, Object Storage Artifact Profile, version/migration rules and executable fixtures. No production Hub deployment is authorized by this TASK-016 record.
+BAI VIDEO PRODUCTION accepted Product-owned Evidence Capture and requested a transport-neutral canonical Batch plus temporary Object Storage Artifact Profile. RC2 implemented the canonical Event/Batch/Receipt/Policy contracts, Event Catalog, Privacy/Forbidden Fields, Object Storage Artifact Profile, version/migration rules, executable fixtures and Git repository snapshot reference. No production Hub deployment or TASK-016 Phase 1+ is authorized by this TASK-016 closure record.

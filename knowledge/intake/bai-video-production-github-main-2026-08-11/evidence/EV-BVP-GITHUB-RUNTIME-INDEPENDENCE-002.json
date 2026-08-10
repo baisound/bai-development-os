@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "EV-BVP-GITHUB-RUNTIME-INDEPENDENCE-002",
+  "evidence_type": "architecture_decision",
+  "producer": {
+    "project_id": "bai-video-production",
+    "task_id": "TASK-006",
+    "product_version": "0.16.4"
+  },
+  "observation": "The GitHub canonical PROJECT.md states STANDALONE_APPLICATION_REQUIRED and forbids Product runtime dependence on the BAI Development OS repository, package, Registry, Roles, OS-owned Tasks, Evidence store, Context Pack or internal services.",
+  "resolution": "Preserve Development OS as development-time foundation and keep generated/adopted integration code Product-owned.",
+  "outcome": "accepted_product_invariant",
+  "candidate_scope": "product-family",
+  "provenance": {
+    "completeness": "PARTIAL",
+    "source_commit": "a098f881b095e3290d2562efe3846d9e2384806a",
+    "architecture_version": "2.28",
+    "snapshot_sha256": null,
+    "observed_at": "2026-08-10T23:33:00Z"
+  },
+  "sensitivity": "PUBLIC",
+  "payload_hash": null,
+  "processing_status": "CANDIDATE_CREATED"
+}

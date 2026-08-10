@@ -1,8 +1,8 @@
 # TASK-016 Phase 0 — Consumer Knowledge Capture & Canonical Evidence Contract Foundation Detailed Design Ver.1.3
 
-Status: `ACTIVE / RC1_IMPLEMENTED / PRODUCT_FEEDBACK_ACCEPTED / RC2_IMPLEMENTATION_AUTHORIZED`
+Status: `COMPLETED / RC2_IMPLEMENTED_AND_VERIFIED / NEXT_TASK017_PHASE0_ELIGIBLE`
 Parent Task: `TASK-016 — Resilience, Recovery & Scalability Certification OS`
-Current slice: `RC2 — Canonical Consumer Evidence + Object Storage Transport Profile`
+Completed slice: `RC2 — Canonical Consumer Evidence + Object Storage Transport Profile`
 First Consumer: `BAI VIDEO PRODUCTION`
 Canonical Architecture: `Ver.2.28 CURRENT_CANONICAL` (unchanged)
 
@@ -220,4 +220,4 @@ Phase 0 can close only when:
 
 ## 14. Next Route
 
-After Phase 0 closure, route to `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`. Production VPS activation remains a separate deployment action even when local Hub code is authorized.
+Phase 0 closure decision: `phase0-rc2-judge-review-2026-08-11.md` = `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`. Next route is `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`. Production VPS activation remains a separate deployment action even when local Hub code is authorized.

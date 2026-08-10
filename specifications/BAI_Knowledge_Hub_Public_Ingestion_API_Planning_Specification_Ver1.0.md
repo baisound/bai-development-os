@@ -91,3 +91,7 @@ Machine-readable API contract: `specifications/BAI_Knowledge_Hub_Public_Ingestio
 Development Mock Hub: `src/knowledge-evolution/mock-hub.mjs`. It implements deterministic success, partial rejection, 401, 403, 429, 5xx, timeout and duplicate/idempotency scenarios for contract testing. This is not a production service and has no production credential store or PostgreSQL persistence.
 
 Production HTTPS deployment, PostgreSQL persistence and operational authentication/authorization remain TASK-017 Phase 0 scope and require separate authorization.
+
+## RC2 Canonical Contract
+
+Canonical runtime formats are now owned by `Consumer_Evidence_Canonical_Contract_Ver1.0.md` and the canonical JSON Schemas. This planning document remains historical/design rationale and must not be treated as a second schema.

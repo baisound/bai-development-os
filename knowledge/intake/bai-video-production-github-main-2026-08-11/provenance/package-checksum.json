@@ -1,0 +1,6 @@
+{
+  "algorithm": "sha256",
+  "manifest": "sha256:10ec12be785c6c34762a6c69216ccc20e2261ebf1652e0beb409e1f2ec6f529b",
+  "evidence": "sha256:923a9bbb557e2dec9fd11772a29562d618adf6045d12f77b36cf8c7d6b8dfa01",
+  "candidates": "sha256:0c406175b42c0e4ac161c623d34206b542c4fee030840939c4ba5517f9267de7"
+}

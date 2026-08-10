@@ -6,8 +6,8 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Current Task: `TASK-016 / ACTIVE`; Phase 0 RC2 = `DESIGN AUTHORIZED / IMPLEMENTATION IN PROGRESS`; Phase 1+ = `NOT_AUTHORIZED`
-- Interleaved planned route: `TASK-017 Phase 0 Pilot Transport` after TASK-016 Phase 0; advanced TASK-017 after TASK-016 resilience evidence
+- Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
+- Next route: `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice / READY FOR OWNER-AUTHORIZED KICKOFF`; advanced TASK-017 remains after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
 ## Current subsystem map
@@ -32,13 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1218 / 1218 PASS` (prior pre-Phase-0 baseline 1188/1188)
+- Full OS: `1238 / 1238 PASS` (prior pre-Phase-0 baseline 1188/1188)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
-- TASK-016 Phase 0 Knowledge Evolution: `30 / 30 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- Blocking Critic findings: `0` for implementation; Phase 0 closure gate remains full Product+OS snapshot
+- TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; blocking Critic findings: `0`
 
 ## Loading guidance
 
@@ -47,21 +47,30 @@ Use summaries first. For distributed behavior, start with `tasks/TASK-015/TASK-0
 For local-only work, do not load or enable DistributedOS unless topology requires it. For exact subsystem authority, load the owning TASK-004〜014 canonical. A distributed envelope, worker advertisement, queue receipt, quorum-like agreement or high confidence score is coordination/evidence only and never replaces Owner/Policy/Security authority.
 
 
-## TASK-016 active Phase 0 context
+## TASK-016 completed Phase 0 context
 
-TASK-016 Phase 0 is Owner-authorized and implemented; full Product+OS snapshot validation is pending. Read `tasks/TASK-016/TASK-016.summary.md`, `tasks/TASK-016/phase0-owner-authorization-2026-08-11.md` and `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md` first. Implemented surfaces include secure Pattern C intake, standalone Consumer Product contracts, Product-owned Python Evidence reference/scaffold, external CredentialProvider, Public Ingestion OpenAPI/Privacy/Trust contracts and deterministic Mock Hub. It does not deploy the production Hub.
+TASK-016 Phase 0 is `COMPLETED`. Read `tasks/TASK-016/TASK-016.summary.md`, `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`, then the RC2 Implementation/Critic/Judge records. Phase 0 froze canonical Consumer Evidence Event/Batch/Receipt/Client Policy v1, the Event Catalog, Privacy/Forbidden Fields, Object Storage Artifact Profile, Product-owned Python reference/scaffold, secure Pattern C intake and immutable Git Repository Snapshot Reference.
 
-After Phase 0 closure, planning routes to TASK-017 Phase 0 Pilot Transport before returning to TASK-016 Phase 1+. TASK-016 then certifies the real Hub/client/outbox/credential path under deterministic failure, recovery, mixed-version, load/cost and DR scenarios without becoming Hub infrastructure authority.
+BAI VIDEO PRODUCTION is referenced by immutable Git commit/tree and explicit key-file validation coverage `KEY_FILES_ONLY`; no duplicate Product ZIP is required and no raw Product repository is committed. TASK-016 Phase 1+ remains unauthorized. The next route is TASK-017 Phase 0; later TASK-016 resilience work certifies the real Hub/client/outbox/credential path without becoming Hub infrastructure authority.
 
 
 ## TASK-017 planning context
 
-TASK-017 Phase 0 is now a bounded Owner-reprioritized Pilot Transport Slice after TASK-016 Phase 0. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
+TASK-017 Phase 0 is the bounded Owner-reprioritized Pilot Transport Slice now eligible after TASK-016 Phase 0 closure. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
 
 Hub v1 uses PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Client/source is assumed open/inspectable; no embedded shared secret is allowed. Consumer credentials are externalized through a generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager as its Product-specific provider. Generated Evidence Client code becomes Product-owned and requires no BAI Development OS runtime package. Hub/credential failure must never block primary Product function.
 
 Advanced TASK-017 work resumes after TASK-016 resilience evidence. Pattern B direct local ingestion remains late. Score/frequency/runtime telemetry/AI inference never becomes promotion authority.
 
-## RC2 context
+## RC2 frozen-contract context
 
-Read `tasks/TASK-016/phase0-rc2-product-feedback-adjudication-2026-08-11.md` after the Phase 0 design. RC2 must not create an Object-Storage-only Evidence schema: Local Outbox, temporary Object Storage and final Hub share one canonical Batch/Event identity.
+Read `tasks/TASK-016/phase0-rc2-product-feedback-adjudication-2026-08-11.md` after the Phase 0 design when provenance is needed. RC2 created no Object-Storage-only Evidence schema: Local Outbox, temporary Object Storage and final Hub share one canonical Batch/Event identity. The Product pilot catalog is limited to `subtitle_import`, `long_running_job_result`, and `subtitle_review_summary`; P3 raw content is rejected.
+
+## TASK-016 Phase 0 RC2 Closure Routing
+
+- TASK-016 Phase 0: `COMPLETED`.
+- Final focused suite: `50 / 50 PASS`; full OS: `1238 / 1238 PASS`.
+- BAI VIDEO PRODUCTION canonical Git source: commit `a098f881b095e3290d2562efe3846d9e2384806a`, tree `59d7dd9a233570e3e3616face417a6925307492b`; validation coverage `KEY_FILES_ONLY`.
+- Raw Product repository is not copied into Canonical Knowledge.
+- Next route: TASK-017 Phase 0 Hub Pilot kickoff; production endpoint activation remains separately gated.
+- TASK-016 Phase 1+ remains unauthorized.
