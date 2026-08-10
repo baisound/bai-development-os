@@ -73,8 +73,10 @@
       ]
     },
     "payload": {
-      "type": "object"
+      "type": "object",
+      "description": "Event-specific bounded payload; runtime validator rejects unknown/sensitive fields."
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "description": "Privacy-minimized runtime Evidence contract. P3/raw content is structurally excluded."
 }

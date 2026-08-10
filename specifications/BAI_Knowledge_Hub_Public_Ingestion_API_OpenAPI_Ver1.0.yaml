@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: BAI Knowledge Hub Public Ingestion API
+  version: 1.0.0
+  description: >-
+    Planning/contract API for privacy-minimized Consumer Evidence. Distributed clients are assumed open source.
+    Credentials are external to product source/config/build artifacts and supplied at request time.
+servers:
+  - url: https://knowledge.example.invalid
+paths:
+  /v1/evidence/batch:
+    post:
+      operationId: submitEvidenceBatch
+      security:
+        - bearerApiCredential: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ../schemas/knowledge-evolution/consumer-evidence-batch.schema.json
+      responses:
+        '200':
+          description: Per-event acceptance receipt; duplicate resubmission is idempotent.
+          content:
+            application/json:
+              schema:
+                $ref: ../schemas/knowledge-evolution/delivery-receipt.schema.json
+        '400': { description: Schema/privacy validation failure }
+        '401': { description: Missing/invalid credential }
+        '403': { description: Credential not authorized for product/evidence scope }
+        '429': { description: Rate limited; respect Retry-After }
+        '500': { description: Transient server failure }
+  /v1/client-policy:
+    get:
+      operationId: getClientPolicy
+      security:
+        - bearerApiCredential: []
+      parameters:
+        - in: query
+          name: product_id
+          required: true
+          schema: { type: string }
+        - in: query
+          name: product_version
+          required: true
+          schema: { type: string }
+      responses:
+        '200':
+          description: Server policy. Client must intersect with local privacy/consent cap.
+          content:
+            application/json:
+              schema:
+                $ref: ../schemas/knowledge-evolution/client-policy.schema.json
+        '401': { description: Missing/invalid credential }
+        '429': { description: Rate limited }
+components:
+  securitySchemes:
+    bearerApiCredential:
+      type: http
+      scheme: bearer
+      bearerFormat: opaque-api-credential

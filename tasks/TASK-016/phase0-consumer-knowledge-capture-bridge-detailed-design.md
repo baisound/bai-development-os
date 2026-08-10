@@ -1,206 +1,60 @@
-# TASK-016 Phase 0 — Consumer Knowledge Capture & Contract Foundation Detailed Design Ver.1.1
+# TASK-016 Phase 0 — Consumer Knowledge Capture & Contract Foundation Detailed Design Ver.1.2
 
-Status: `PLANNING_FAST_TRACK / OWNER_REPRIORITIZED_SEQUENCE / NOT_STARTED / NOT_AUTHORIZED`
+Status: `ACTIVE / OWNER_AUTHORIZED / IMPLEMENTED / REAL_FULL_SNAPSHOT_VALIDATION_PENDING`
 Parent Task: `TASK-016 — Resilience, Recovery & Scalability Certification OS`
-Priority: `FIRST SLICE WHEN TASK-016 IS AUTHORIZED`
+Development Profile: `DEV_4_FOUNDATION_CRITICAL`
+Owner authorization: user instruction on 2026-08-11 to proceed with the next detailed design and development.
 First Consumer validation: `BAI VIDEO PRODUCT / BAI VIDEO PRODUCTION`
-Next planned route after Phase 0: `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`
+Next route after Phase 0 exit: `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`
 
 ## 1. Objective
 
-Create the cloud-independent contracts and immediate Pattern C intake needed to stop current development-knowledge loss, while also defining the Consumer-facing runtime Evidence contract early enough for a standalone Product distribution pilot.
+Implement the cloud-independent Contract & Capture Foundation so active Consumer development knowledge can be safely ingested now and a standalone Product can begin integrating the future Hub transport without taking a BAI Development OS runtime dependency.
 
-Phase 0 deliberately stops before production Hub deployment. It creates the stable contracts that TASK-017 Phase 0 implements.
+## 2. Normative boundaries
 
-## 2. Non-Goals
+- BAI Development OS remains development-time foundation only for Consumer Products.
+- Product-owned generated reference code MUST run without this repository/package.
+- Hub/credential outage MUST NOT become a Product primary-function failure.
+- Runtime Evidence is source data; it never self-promotes into Canonical Knowledge.
+- P3 raw Product/user content is outside Hub v1 contract.
+- BAI VIDEO PRODUCT selects Microsoft Password Manager behind Product-owned `CredentialProvider`; Core does not guess the Microsoft API.
 
-Phase 0 does not:
+## 3. Implementation surfaces
 
-- deploy/operate the production Knowledge Hub,
-- implement a Product-specific final Microsoft credential API,
-- make BAI Development OS a Product runtime dependency,
-- implement Pattern B direct local automation,
-- promote runtime telemetry directly to Canonical Knowledge,
-- collect raw video/audio/subtitle/prompt/user content by default,
-- replace TASK-016 resilience certification work.
+### 16.0.1 Source-neutral contracts
 
-## 3. Work Breakdown
+Machine contracts live under `schemas/knowledge-evolution/`. Runtime events map to sanitized Knowledge Evidence by hash/provenance rather than introducing a second Knowledge authority.
 
-### 16.0.1 Evidence / Candidate / Snapshot Contract
+### 16.0.2 Pattern C Snapshot Inspector
 
-Maintain source-neutral machine contracts for:
+`src/knowledge-evolution/snapshot.mjs` accepts:
 
-- Knowledge Evidence,
-- Knowledge Candidate,
-- Snapshot Manifest.
+- directory snapshots,
+- ZIP snapshots,
+- a single evidence/handoff file for partial/provisional intake.
 
-Runtime Evidence envelopes SHALL be mappable to the same Knowledge Evidence lineage rather than creating a second knowledge engine.
+ZIP reader requirements:
 
-### 16.0.2 Pattern C ZIP Intake
+- central-directory parsing without extracting untrusted paths,
+- reject absolute/parent traversal paths,
+- reject encrypted, multi-disk and ZIP64 inputs in v1,
+- allow Store/Deflate only,
+- verify CRC for read entries,
+- reject symlink entries,
+- bound entry count, individual uncompressed size, total uncompressed size and suspicious compression ratio.
 
-Accepted input:
+### 16.0.3 Secret/privacy screening
 
-- preferred ZIP with `snapshot-manifest.json`,
-- fallback normal ZIP with provenance recovery.
+Before Evidence extraction, paths and bounded text content are scanned. Secret-bearing files/credential patterns produce `QUARANTINED`. Reports store rule/path/line only and MUST NOT echo secret values.
 
-Provenance completeness:
+### 16.0.4 Provenance recovery
 
-- `COMPLETE`
-- `PARTIAL`
-- `UNVERIFIED`
+Preferred `snapshot-manifest.json` produces `COMPLETE` provenance when the minimum v1 contract is present. Fallback recovery may use `.bai-os/project.json`, `PROJECT.md`, BAI Development OS `package.json` and Architecture filenames. Missing values remain null; no inference may invent a commit/version/task.
 
-Unknown values are never guessed.
+### 16.0.5 Knowledge Intake Package builder
 
-### 16.0.3 Product Runtime Independence Contract
-
-MUST prove:
-
-- Product build/runtime does not require BAI Development OS repository/package,
-- `.bai-os` is development metadata only,
-- Product's primary function works if Hub is offline,
-- Evidence delivery can be disabled/unconfigured,
-- generated Evidence Client is Product-owned code.
-
-### 16.0.4 Consumer Evidence Integration Kit Contract
-
-Required planning surfaces:
-
-```text
-consumer-evidence-kit/
-  specifications/
-    public-ingestion-api.md
-    consumer-runtime-independence.md
-    privacy-consent-trust.md
-  schemas/
-    consumer-evidence-envelope.schema.json
-    consumer-evidence-batch.schema.json
-    client-policy.schema.json
-    delivery-receipt.schema.json
-  reference/
-    python/
-      client.py
-      sanitizer.py
-      aggregator.py
-      outbox.py
-      credential_provider.py
-      policy.py
-  generator/
-    templates/
-  mock-hub/
-  contract-tests/
-```
-
-Reference code is technical provision; generated/copied output belongs to the Consumer and SHALL NOT import BAI Development OS at runtime.
-
-### 16.0.5 Public API / Privacy / Trust / Credential Contract
-
-MVP API semantics:
-
-- `POST /v1/evidence/batch`
-- `GET /v1/client-policy`
-
-Credential rules:
-
-- raw API key is external to app source/config/build artifact,
-- Product exposes a settings entry point,
-- common Core contract is `CredentialProvider`,
-- BAI VIDEO PRODUCT provider = Microsoft Password Manager selection by Owner,
-- exact Windows/Microsoft API remains Product implementation detail,
-- secret never enters logs, exceptions, Evidence or ordinary config.
-
-Privacy rules:
-
-- P0/P1 may be pilot eligible under Product/user policy,
-- P2 requires explicit contextual consent,
-- P3 raw user content is rejected/not accepted by Hub v1 by default,
-- effective send policy is intersection of local privacy cap and server policy.
-
-Trust rules:
-
-- server/review provenance assigns trust,
-- Client cannot self-elevate trust,
-- `REGISTERED_CLIENT` does not imply canonical truth.
-
-### 16.0.6 Mock Hub / Contract Test Specification
-
-Mock Hub SHALL simulate at minimum:
-
-- 200 accepted batch,
-- partial acceptance/rejection,
-- schema failure,
-- 401/403,
-- 429 with Retry-After,
-- 5xx,
-- timeout,
-- duplicate event/idempotency.
-
-Contract tests SHALL verify that Hub failure never blocks Product primary function.
-
-### 16.0.7 First BAI VIDEO PRODUCT Development Intake
-
-Pattern C extracts reusable and rejected knowledge from a current Product+OS snapshot. Initial domains include UI/UX, Windows behavior, long-running jobs, subtitle/media workflows, provider/runtime compatibility, failure/recovery and user-corrected assumptions.
-
-### 16.0.8 Pilot Readiness Handoff / Registry / Regression
-
-Phase 0 output SHALL include:
-
-- validated schema set,
-- Product Runtime Independence contract,
-- Consumer Evidence Integration Kit planning spec,
-- Public Ingestion API planning spec,
-- Mock Hub behavior contract,
-- first real Pattern C intake Evidence/Candidate package,
-- TASK-017 Phase 0 entry criteria,
-- Registry/context navigation updates,
-- regression/conformance evidence.
-
-## 4. Pattern C Processing State Machine
-
-```text
-RECEIVED
- -> INVENTORIED
- -> PROVENANCE_RECOVERED
- -> SANITIZED
- -> EVIDENCE_EXTRACTED
- -> CANDIDATES_GENERATED
- -> CONFLICT_CHECKED
- -> REVIEW_READY
- -> {REJECTED | SUPPORTED | PROMOTION_PROPOSED}
-```
-
-Security/privacy boundary failure -> `QUARANTINED`.
-
-## 5. Runtime Evidence Pre-Contract State Machine
-
-Phase 0 defines, but does not production-deploy:
-
-```text
-DOMAIN_EVENT
- -> LOCAL_POLICY_CHECK
- -> SANITIZE
- -> AGGREGATE_IF_ALLOWED
- -> ENVELOPE
- -> LOCAL_OUTBOX
- -> CREDENTIAL_RESOLVE
- -> BATCH_SEND
- -> {ACK | RETRY | QUARANTINE | DROP_BY_POLICY}
-```
-
-`CREDENTIAL_RESOLVE` failure degrades Evidence delivery only.
-
-## 6. Open-Source Security Floor
-
-Treat all Client code and API schemas as public knowledge. Prohibited:
-
-- embedded shared keys,
-- trust based on Product ID alone,
-- accepting a client-declared Trust Level,
-- relying only on client validation,
-- logging/serializing raw credentials.
-
-Server-side controls are part of TASK-017 Phase 0 implementation ownership.
-
-## 7. Knowledge Intake Package
+`createKnowledgeIntakePackage()` writes only sanitized derived artifacts:
 
 ```text
 knowledge-intake/
@@ -210,27 +64,71 @@ knowledge-intake/
   reviews/review-summary.md
   proposed-canonical/*.md
   provenance/source-map.json
+  provenance/package-checksum.json
 ```
 
-Raw Consumer ZIPs remain transient inputs and are not Canonical Knowledge.
+Raw snapshots are never copied into this package.
 
-## 8. Phase 0 Exit Criteria
+### 16.0.6 Consumer Evidence contract runtime
 
-All must be true:
+`src/knowledge-evolution/contracts.mjs` provides deterministic validation, privacy reduction, policy intersection and runtime-event -> Knowledge-Evidence mapping for development/testing. Client-supplied Trust is not part of the event schema.
 
-1. Manifest and manifestless Pattern C paths are specified.
-2. Evidence/Candidate/Snapshot schemas validate.
-3. Product Runtime Independence requirements are explicit and testable.
-4. Consumer Evidence Integration Kit contract is complete enough for Product-side implementation planning.
-5. API/Privacy/Trust/Credential contracts are explicit without embedding a Product secret.
-6. Mock Hub contract covers success/error/retry/idempotency cases.
-7. A real BAI VIDEO PRODUCT/PRODUCTION snapshot yields at least one reviewed reusable Candidate.
-8. Raw secrets/content are excluded from Canonical Knowledge.
-9. TASK-017 Phase 0 has explicit entry/exit criteria.
-10. Standard regression/conformance remains green.
+### 16.0.7 Product-owned Python Reference Kit
 
-## 9. Routing Rule
+`templates/consumer-evidence/python/` is copied/generated into a Consumer repository. It uses Python standard library only and does not import BAI Development OS. It contains a generic `CredentialProvider`, sanitizer, bounded file outbox, client policy and synchronous delivery client. Product scheduling/background execution remains Product-owned.
 
-After this Phase 0 completes, the planned next route is **TASK-017 Phase 0 Pilot Transport Slice**, not TASK-016 Phase 1. TASK-016 Phase 1+ resumes after the bounded Hub/client pilot produces a real certification target.
+### 16.0.8 Mock Hub
 
-This routing change is planning-only and does not itself authorize either Task.
+`createConsumerEvidenceMockHub()` implements development-only HTTP behavior for `/v1/evidence/batch` and `/v1/client-policy`, with deterministic success, partial reject, auth failure, forbidden, rate limit, server error, timeout and duplicate/idempotency scenarios.
+
+### 16.0.9 CLI surfaces
+
+- `node scripts/inspect-knowledge-snapshot.mjs <source>`
+- `node scripts/scaffold-consumer-evidence-python.mjs <target>`
+- `node scripts/run-consumer-evidence-mock-hub.mjs --scenario <scenario> --port <port>`
+
+## 4. Failure semantics
+
+| Condition | Result |
+|---|---|
+| Secret/private-key path or detected secret | QUARANTINED; intake package creation blocked |
+| ZIP path traversal/symlink/encryption/unsupported compression | reject snapshot |
+| Missing manifest but recoverable project facts | PARTIAL provenance |
+| No recoverable provenance | UNVERIFIED provenance |
+| P3/raw content request | reject event |
+| Credential missing | Evidence delivery disabled/degraded only |
+| Hub 401/403 | pause Evidence delivery; Product continues |
+| Hub 429 | retain outbox; respect Retry-After |
+| Hub 5xx/timeout/DNS | retain outbox; retry later |
+| Duplicate event ID after prior ACK | idempotent already-seen receipt; no duplicate downstream effect |
+
+## 5. Detailed test matrix
+
+Required focused tests:
+
+1. valid P0/P1/P2 event validation;
+2. P3 and secret-bearing payload rejection;
+3. unknown/sensitive payload field rejection;
+4. local/server policy intersection cannot raise privacy;
+5. runtime event maps to Knowledge Evidence without raw payload storage;
+6. valid ZIP inventory + CRC read;
+7. path traversal ZIP rejection;
+8. symlink/secret snapshot quarantine;
+9. manifestless fallback => PARTIAL;
+10. Intake Package excludes raw source;
+11. Candidate cannot reference missing Evidence;
+12. Mock Hub success/partial/auth/429/5xx/duplicate behavior;
+13. generated Python reference contains no BAI Development OS runtime import;
+14. generated Python compiles with standard library;
+15. root/subpath exports remain compatible;
+16. full OS regression + existing conformance checks stay green.
+
+## 6. First Product Evidence validation
+
+A currently available real BAI VIDEO PRODUCTION handoff artifact is used as a **provisional PARTIAL Pattern C validation**. This demonstrates intake against Product-owned source evidence, but it does not replace the final gate requiring the full Product + matching Development OS snapshot ZIP when the Owner supplies it.
+
+The Phase 0 implementation may therefore reach `IMPLEMENTED / REAL_FULL_SNAPSHOT_VALIDATION_PENDING` but MUST NOT claim full Phase 0 closure until the complete snapshot gate passes.
+
+## 7. Exit criteria
+
+Implementation is technically ready when all code/schema/mock/generator/intake focused tests pass and standard OS regression/conformance is green. Phase 0 closure additionally requires one full BAI VIDEO PRODUCT/PRODUCTION + matching OS snapshot intake with no unresolved security/privacy quarantine.

@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "KC-OWNERSHIP-BY-RESPONSIBILITY-001",
+  "source_evidence_ids": [
+    "EV-BVP-OWNERSHIP-BOUNDARY-001"
+  ],
+  "status": "CANDIDATE",
+  "scope": "organization",
+  "risk": "MEDIUM",
+  "title": "Determine Consumer/OS ownership by responsibility, not path naming",
+  "statement": "Consumer/OS ownership decisions should follow responsibility and canonical authority rather than directory-name similarity; Product-specific tasks, evidence, source and tests remain Product-owned even when their path names resemble OS documentation paths.",
+  "rationale": "Prevents accidental modification/copying of OS-owned assets and false classification of Product-local docs.",
+  "supersedes": null,
+  "required_review": "CRITIC"
+}

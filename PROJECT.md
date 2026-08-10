@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.27.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.28.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -53,10 +53,10 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-013`: Domain Adapter / Plugin SDK — `COMPLETED`
 - `TASK-014`: Adaptive Governance Calibration & Policy Learning — `COMPLETED`
 - `TASK-015`: Distributed Orchestration & Event Fabric — `COMPLETED`
-- `TASK-016`: Resilience, Recovery & Scalability Certification OS — `NEXT / NOT_STARTED / NOT_AUTHORIZED`
+- `TASK-016`: Resilience, Recovery & Scalability Certification OS — `ACTIVE / PHASE0_IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`
 - `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `NOT_STARTED / NOT_AUTHORIZED` after TASK-016
 
-TASK-009 through TASK-015 are `COMPLETED`. TASK-016 remains the explicit next roadmap task; TASK-017 is queued after it. Neither future task is implementation-authorized.
+TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is Owner-authorized and implemented, with full Product+OS snapshot validation still pending; TASK-016 Phase 1+ remains unauthorized. TASK-017 is planned in an interleaved sequence, but its implementation remains unauthorized.
 
 ## Governance
 
@@ -77,6 +77,7 @@ npm run test:extension
 npm run check:extension
 npm run test:calibration
 npm run check:calibration
+npm run test:knowledge-evolution
 ```
 
 ## Historical Roadmap / Completion Navigation
@@ -105,3 +106,8 @@ TASK-015 is `COMPLETED`. `DistributedOS` provides the optional event/execution f
 ## Post-TASK-015 Roadmap Refinement
 
 Architecture Ver.2.27 created `TASK-016 — Resilience, Recovery & Scalability Certification OS` as `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Architecture Ver.2.28 preserves TASK-016 as NEXT and adds `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS` as `NOT_STARTED / NOT_AUTHORIZED` after TASK-016 based on BAI CREATIVE OS audit feedback. TASK-017 adds Rejected Pattern, multi-dimensional quality Evidence, cross-project reproducibility, hard reject gates, signed/versioned knowledge rollback and privacy-minimized federated Evidence; no TASK-018 is created.
+
+
+## TASK-016 Phase 0 Consumer Knowledge Capture Foundation
+
+TASK-016 Phase 0 is `IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`. `KnowledgeEvolutionOS` now exposes secure Pattern C snapshot inspection/intake, Consumer Evidence contracts, Product-owned Python reference/scaffolding and a deterministic Mock Hub for contract testing. The implementation preserves Product Runtime Independence and does not deploy a production Hub. A provisional real BAI VIDEO PRODUCTION handoff intake is stored only as sanitized derived Evidence/Candidates; final Phase 0 closure waits for the full Product + matching OS snapshot.

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "EV-BVP-RELEASE-REGRESSION-001",
+  "evidence_type": "success_pattern",
+  "producer": {
+    "project_id": "bai-video-production",
+    "task_id": null,
+    "product_version": "0.16.4"
+  },
+  "observation": "BAI Video Production requires full regression before candidate ZIP/formal artifact handoff and separates focused tests from full regression, with real-machine gates for Windows/UI/external-app/media/GPU behavior not fully covered automatically.",
+  "resolution": "Treat release-artifact handoff as a stronger verification boundary than iterative focused development checks.",
+  "outcome": "accepted_release_practice",
+  "candidate_scope": "product-family",
+  "provenance": {
+    "completeness": "PARTIAL",
+    "source_commit": "11b165a3fb9dfc800e73f33287c4b9830edd430a",
+    "architecture_version": "2.28",
+    "snapshot_sha256": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+    "observed_at": null
+  },
+  "sensitivity": "INTERNAL",
+  "payload_hash": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+  "processing_status": "CANDIDATE_CREATED"
+}

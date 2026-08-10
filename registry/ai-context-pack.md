@@ -6,7 +6,7 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Next Task: `TASK-016 Resilience, Recovery & Scalability Certification OS / NEXT / NOT_STARTED / NOT_AUTHORIZED`; first planned slice = `Phase 0 Consumer Knowledge Capture & Contract Foundation`
+- Current Task: `TASK-016 / ACTIVE`; Phase 0 = `IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`; Phase 1+ = `NOT_AUTHORIZED`
 - Interleaved planned route: `TASK-017 Phase 0 Pilot Transport` after TASK-016 Phase 0; advanced TASK-017 after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
@@ -32,12 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1188 / 1188 PASS`
+- Full OS: `1218 / 1218 PASS` (prior pre-Phase-0 baseline 1188/1188)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
-- Blocking Critic findings: `0`
+- TASK-016 Phase 0 Knowledge Evolution: `30 / 30 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
+- Blocking Critic findings: `0` for implementation; Phase 0 closure gate remains full Product+OS snapshot
 
 ## Loading guidance
 
@@ -46,11 +47,11 @@ Use summaries first. For distributed behavior, start with `tasks/TASK-015/TASK-0
 For local-only work, do not load or enable DistributedOS unless topology requires it. For exact subsystem authority, load the owning TASK-004〜014 canonical. A distributed envelope, worker advertisement, queue receipt, quorum-like agreement or high confidence score is coordination/evidence only and never replaces Owner/Policy/Security authority.
 
 
-## TASK-016 planning context
+## TASK-016 active Phase 0 context
 
-TASK-016 is not authorized for implementation. Read `tasks/TASK-016/TASK-016.summary.md` and `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md` first. Phase 0 keeps Pattern C first and adds standalone Consumer Product contracts: Runtime Independence, Consumer Evidence Integration Kit, external CredentialProvider, Public Ingestion API/Privacy/Trust and Mock Hub/Contract Test specification. It does not deploy the production Hub.
+TASK-016 Phase 0 is Owner-authorized and implemented; full Product+OS snapshot validation is pending. Read `tasks/TASK-016/TASK-016.summary.md`, `tasks/TASK-016/phase0-owner-authorization-2026-08-11.md` and `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md` first. Implemented surfaces include secure Pattern C intake, standalone Consumer Product contracts, Product-owned Python Evidence reference/scaffold, external CredentialProvider, Public Ingestion OpenAPI/Privacy/Trust contracts and deterministic Mock Hub. It does not deploy the production Hub.
 
-After Phase 0, planning routes to TASK-017 Phase 0 Pilot Transport before returning to TASK-016 Phase 1+. TASK-016 then certifies the real Hub/client/outbox/credential path under deterministic failure, recovery, mixed-version, load/cost and DR scenarios without becoming Hub infrastructure authority.
+After Phase 0 closure, planning routes to TASK-017 Phase 0 Pilot Transport before returning to TASK-016 Phase 1+. TASK-016 then certifies the real Hub/client/outbox/credential path under deterministic failure, recovery, mixed-version, load/cost and DR scenarios without becoming Hub infrastructure authority.
 
 
 ## TASK-017 planning context

@@ -1,6 +1,6 @@
 # BAI Knowledge Hub Public Ingestion API Planning Specification Ver.1.0
 
-Status: `PLANNING_SPECIFICATION / NOT_IMPLEMENTED / NOT_AUTHORIZED`
+Status: `PHASE0_CONTRACT_AND_MOCK_IMPLEMENTED / PRODUCTION_HUB_NOT_AUTHORIZED`
 Database: PostgreSQL planned for Hub v1
 Infrastructure: single VPS / Docker Compose / <= 3,000 JPY/month
 
@@ -82,3 +82,12 @@ Initial logical tables:
 Use JSONB for variable payloads and normal columns for query/control fields.
 
 Raw events are retained only for a bounded period; long-lived aggregates/candidate provenance retain minimum necessary sanitized representation/hash.
+
+
+## 8. TASK-016 Phase 0 realized contract
+
+Machine-readable API contract: `specifications/BAI_Knowledge_Hub_Public_Ingestion_API_OpenAPI_Ver1.0.yaml`.
+
+Development Mock Hub: `src/knowledge-evolution/mock-hub.mjs`. It implements deterministic success, partial rejection, 401, 403, 429, 5xx, timeout and duplicate/idempotency scenarios for contract testing. This is not a production service and has no production credential store or PostgreSQL persistence.
+
+Production HTTPS deployment, PostgreSQL persistence and operational authentication/authorization remain TASK-017 Phase 0 scope and require separate authorization.

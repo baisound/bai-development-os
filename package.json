@@ -30,7 +30,8 @@
     "./maintenance": "./src/maintenance/index.mjs",
     "./extension": "./src/extension/index.mjs",
     "./calibration": "./src/calibration/index.mjs",
-    "./distributed": "./src/distributed/index.mjs"
+    "./distributed": "./src/distributed/index.mjs",
+    "./knowledge-evolution": "./src/knowledge-evolution/index.mjs"
   },
   "scripts": {
     "test": "node --test",
@@ -63,7 +64,11 @@
     "test:calibration": "node --test tests/calibration/*.test.mjs tests/integration/task014*.test.mjs",
     "check:calibration": "node scripts/check-calibration-conformance.mjs",
     "test:distributed": "node --test tests/distributed/*.test.mjs tests/integration/task015*.test.mjs",
-    "check:distributed": "node scripts/check-distributed-conformance.mjs"
+    "check:distributed": "node scripts/check-distributed-conformance.mjs",
+    "test:knowledge-evolution": "node --test tests/knowledge-evolution/*.test.mjs",
+    "knowledge:inspect-snapshot": "node scripts/inspect-knowledge-snapshot.mjs",
+    "consumer-evidence:scaffold-python": "node scripts/scaffold-consumer-evidence-python.mjs",
+    "consumer-evidence:mock-hub": "node scripts/run-consumer-evidence-mock-hub.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

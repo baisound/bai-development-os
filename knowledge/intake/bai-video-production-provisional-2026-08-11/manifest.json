@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "intake_id": "KI-5a14c5322e6714c82b524fb4",
+  "created_at": "2026-08-11T00:00:00.000Z",
+  "state": "PROVENANCE_RECOVERED",
+  "source": {
+    "kind": "file",
+    "snapshot_sha256": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+    "raw_source_committed": false
+  },
+  "provenance_completeness": "UNVERIFIED",
+  "evidence_count": 3,
+  "candidate_count": 3,
+  "canonical_authority": false
+}

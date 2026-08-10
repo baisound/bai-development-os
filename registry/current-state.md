@@ -19,9 +19,9 @@
 - Current Calibration Canonical: `TASK-014 Adaptive Governance Calibration & Policy Learning Ver.1.0`
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
-- TASK-016: `NEXT / NOT_STARTED / NOT_AUTHORIZED`
-- TASK-017: `NOT_STARTED / NOT_AUTHORIZED` — queued after TASK-016
-- Next canonical development route: `TASK-016 Phase 0 — Consumer Knowledge Capture & Contract Foundation`
+- TASK-016: `ACTIVE / PHASE0_IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`
+- TASK-017: `NOT_STARTED / NOT_AUTHORIZED` — Phase 0 planned after TASK-016 Phase 0 closure; advanced work after TASK-016 resilience evidence
+- Current development route: `TASK-016 Phase 0 — full BAI VIDEO PRODUCT/PRODUCTION + matching OS snapshot validation and closure`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-11`
 
@@ -36,30 +36,33 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1188 / 1188 PASS`
+- Full BAI Development OS: `1218 / 1218 PASS` (TASK-016 Phase 0 implementation; prior baseline 1188/1188 preserved)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
 - Product Boundary: `PASS`
 - Roadmap Consolidation: `56 / 56 PASS` after CREATIVE OS Knowledge Audit refinement synchronization
 - Root `DistributedOS` export: `PASS`
+- TASK-016 Phase 0 Knowledge Evolution focused suite: `30 / 30 PASS`
+- Root `KnowledgeEvolutionOS` export: `PASS`
+- Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `511 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `517 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
 ## Accepted Residual
 
-Production-specific remote broker implementations, real remote workers/labs, multi-region deployment, cloud provisioning and vendor-specific distributed adapters remain Extension/Integration deployments behind completed TASK-015 contracts. The explicit Owner decision now creates TASK-016 only for reusable resilience/recovery/scalability certification; provider deployment does not move into Core. TASK-016 implementation remains unauthorized.
+Production-specific remote broker implementations, real remote workers/labs, multi-region deployment, cloud provisioning and vendor-specific distributed adapters remain Extension/Integration deployments behind completed TASK-015 contracts. The explicit Owner decision now creates TASK-016 only for reusable resilience/recovery/scalability certification; provider deployment does not move into Core. TASK-016 Phase 0 is Owner-authorized; TASK-016 Phase 1+ remains unauthorized.
 
 
-## Current TASK-016 Proposed Baseline
+## Current TASK-016 Phase 0 Implementation Baseline
 
-TASK-016 remains planning-only and unauthorized. Its first planned slice is `Phase 0 — Consumer Knowledge Capture & Contract Foundation`. Pattern C remains first so current BAI VIDEO PRODUCT/PRODUCTION development knowledge can be captured immediately. Phase 0 now also freezes Product Runtime Independence, Consumer Evidence Integration Kit, Public Ingestion API/Privacy/Trust/Credential and Mock Hub/Contract Test contracts needed for a standalone distributed Product pilot. It does not deploy the production Hub.
+TASK-016 Phase 0 is Owner-authorized and implemented. Pattern C secure Snapshot inspection/intake, Product Runtime Independence, Consumer Evidence Integration Kit foundations, external CredentialProvider boundaries, Public Ingestion API/OpenAPI/Privacy/Trust contracts, Product-owned Python reference/scaffold and deterministic Mock Hub are implemented. It does not deploy the production Hub. A real BAI VIDEO PRODUCTION v0.16.4 handoff artifact has been ingested provisionally as sanitized derived Evidence/Candidates; full Product + matching OS snapshot validation is still required before Phase 0 closure.
 
-After Phase 0, the revised planning route moves temporarily to `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`. TASK-016 Phase 1+ then resumes and certifies resilience using the real Hub/client/outbox/credential path as one test subject.
+After Phase 0 closes, the revised planning route moves temporarily to `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`. TASK-016 Phase 1+ then resumes and certifies resilience using the real Hub/client/outbox/credential path as one test subject.
 
-Planning detail: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`.
+Implementation detail: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`; authorization: `tasks/TASK-016/phase0-owner-authorization-2026-08-11.md`.
 
 
 ## Current TASK-017 Planning Baseline

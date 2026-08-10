@@ -1,6 +1,6 @@
 # Consumer Evidence Integration Kit Planning Specification Ver.1.0
 
-Status: `PLANNING_SPECIFICATION / NOT_IMPLEMENTED / NOT_AUTHORIZED`
+Status: `PHASE0_CONTRACT_IMPLEMENTED / REFERENCE_IMPLEMENTED / TASK017_PRODUCTION_NOT_AUTHORIZED`
 Owners: TASK-016 Phase 0 contract foundation -> TASK-017 Phase 0 pilot implementation
 
 ## 1. Purpose
@@ -86,3 +86,16 @@ A Consumer integration passes when:
 - Hub unavailable => primary function continues,
 - credential missing => Evidence disabled/degraded only,
 - no source/config/build artifact contains a fixed Hub API key.
+
+
+## 10. TASK-016 Phase 0 realized surfaces
+
+The development-time contract/reference baseline is now implemented at:
+
+- `templates/consumer-evidence/python/` — Product-owned Python reference/scaffold; standard library only; no BAI Development OS runtime import.
+- `src/knowledge-evolution/generator.mjs` — guarded scaffold copy operation.
+- `src/knowledge-evolution/contracts.mjs` — event/batch validation, local/server privacy-policy intersection and sanitized Knowledge Evidence mapping.
+- `src/knowledge-evolution/mock-hub.mjs` — deterministic development-only transport scenarios.
+- `scripts/scaffold-consumer-evidence-python.mjs` and `scripts/run-consumer-evidence-mock-hub.mjs` — developer tooling.
+
+This status does not authorize the production Knowledge Hub or Product-specific Microsoft credential implementation. BAI VIDEO PRODUCT remains responsible for its concrete Microsoft Password Manager provider behind the generic `CredentialProvider`.

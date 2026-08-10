@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T06:54:00+09:00'
+registry_generated_at: '2026-08-11T07:27:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 2fee350271c687b53fc13d94e86a1d089914973d3b00e3c4f0f33166125a07c3
-  size_bytes: 7504
+  sha256: 68ad69fd6607c44b81d3db49d1de9579296f41d76cc76aa5b72a8b713fb4322e
+  size_bytes: 8294
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 9e85c75dc216209a9a4259275149e02ca515e91889721a3ec37c46d475da8d7b
-  size_bytes: 5322
+  sha256: 53a36d67d5a0644569683522ededb66ff2de7304db82a51f91ce7eaca6e0117e
+  size_bytes: 5531
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 63800aa2dc1cbe196f037bef6a7db1053ab46c9fce8ffba5e5172506023713db
-  size_bytes: 12098
+  sha256: 73ea98565e5f01330f765625dd08b97fd7b34de1972861195d06d923016537c5
+  size_bytes: 12617
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: b114e562842f5b989685d72b091d2875a167464b94ebce14ee8836b0d997f878
-  size_bytes: 4263
+  sha256: 46afd60a6e68e2731b7490daca3e27de0b7dcf47d2f961940d2ab62a126290c4
+  size_bytes: 4676
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: d07412f3d74a61de35a6c62e5e180701dca265df58845a1311da7d019917cc23
-  size_bytes: 5585
+  sha256: aa8307d230676c203845e31cd1ec5d20f4c02796ff1340cfa7704e0b7a500233
+  size_bytes: 5879
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: d2c0c9328e431f547ac25c003745e0170743dfab2a379f46b6c51882d016252a
-  size_bytes: 6062
+  sha256: 989773b25d6fea0648eb554f4223c2db9184e81039538e7eb4fd0b5212b24512
+  size_bytes: 6668
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5863,12 +5863,12 @@ documents:
   authority: task-definition
   importance_level: A
   preferred_loading: read-first
-  status: NEXT_NOT_STARTED_NOT_AUTHORIZED
+  status: ACTIVE_PHASE0_IMPLEMENTED_FULL_SNAPSHOT_PENDING
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 5ff8f352869d5a6c572e92e5ed68d76cde0eb6178b01301e9e0c3e3896b4801f
-  size_bytes: 1476
+  sha256: ae646996d728a5374d45098ca1ea0a68cb24bcc9a3943f0890db4fb8bb9b7c07
+  size_bytes: 2387
 - document_id: D8D14C8D8828EB6B
   path: tasks/TASK-016/TASK-016.summary.md
   title: TASK-016 Summary
@@ -5876,12 +5876,12 @@ documents:
   authority: navigation-aid
   importance_level: A
   preferred_loading: read-first
-  status: NEXT_NOT_STARTED_NOT_AUTHORIZED
+  status: ACTIVE_PHASE0_IMPLEMENTED_FULL_SNAPSHOT_PENDING
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 02264a2dc50d3280a14fc4327a05f868b0f56130641fedb9858b520dd882b154
-  size_bytes: 1012
+  sha256: 770be93565b665a4c64ac492e4e66fa48a31a2b01f58de54d425744f4ddc3e66
+  size_bytes: 1738
 - document_id: 10A28BD49AFC34D7
   path: architecture/BAI_Development_OS_Architecture_Ver2.28.docx
   title: BAI Development OS Architecture Ver.2.28
@@ -6017,15 +6017,15 @@ documents:
   path: tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md
   title: TASK-016 Phase 0 Consumer Knowledge Capture Bridge Detailed Design
   category: task-design
-  authority: planning-design
+  authority: owner-authorized-task-design
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: ACTIVE_IMPLEMENTED_FULL_SNAPSHOT_PENDING
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b9480ff7df35bd8e1cc15651f5d99f55f582f1a7bfbdf497dc02e40bb206a639
-  size_bytes: 7375
+  sha256: 21cbc686c3ec62cc60dc7a94a453d366d491b4bdc1762e922f924417c77b0dc0
+  size_bytes: 6874
 - document_id: 7F39A8432F021EBB
   path: tasks/TASK-017/knowledge-evolution-detailed-roadmap.md
   title: TASK-017 Knowledge Evolution Detailed Roadmap
@@ -6069,10 +6069,10 @@ documents:
   path: schemas/knowledge-evolution/knowledge-evidence.schema.json
   title: Knowledge Evidence Schema 1.0
   category: schema
-  authority: planning-contract
+  authority: phase0-implemented-contract
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_IMPLEMENTED_CONTRACT
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
@@ -6082,10 +6082,10 @@ documents:
   path: schemas/knowledge-evolution/knowledge-candidate.schema.json
   title: Knowledge Candidate Schema 1.0
   category: schema
-  authority: planning-contract
+  authority: phase0-implemented-contract
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_IMPLEMENTED_CONTRACT
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
@@ -6095,10 +6095,10 @@ documents:
   path: schemas/knowledge-evolution/snapshot-manifest.schema.json
   title: Consumer Knowledge Snapshot Manifest Schema 1.0
   category: schema
-  authority: planning-contract
+  authority: phase0-implemented-contract
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_IMPLEMENTED_CONTRACT
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
@@ -6134,28 +6134,28 @@ documents:
   path: specifications/Consumer_Evidence_Integration_Kit_Planning_Specification_Ver1.0.md
   title: Consumer Evidence Integration Kit Planning Specification Ver.1.0
   category: specification
-  authority: planning-specification
+  authority: phase0-implemented-specification
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_REFERENCE_IMPLEMENTED_TASK017_PRODUCTION_NOT_AUTHORIZED
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 644e02cdac694aeaab9a3dbf5a1e7736013b6801a3b428e570335d08ebc4f16d
-  size_bytes: 2983
+  sha256: 717afc4e286603ad8f68520bfd1ad4313eb0df5be6ba52ce2ca64102bd3bcfd8
+  size_bytes: 3978
 - document_id: EC9A2FEE5F8D5501
   path: specifications/BAI_Knowledge_Hub_Public_Ingestion_API_Planning_Specification_Ver1.0.md
   title: BAI Knowledge Hub Public Ingestion API Planning Specification Ver.1.0
   category: specification
-  authority: planning-specification
+  authority: phase0-implemented-specification
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_CONTRACT_MOCK_IMPLEMENTED_PRODUCTION_NOT_AUTHORIZED
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 5847847af4ef1348ed14fa65edee38e71793ae340a5f0622eb76c132df438796
-  size_bytes: 2740
+  sha256: a4a8ae2389b687f1b9fe104c3db6d0a316b4c812b85c1fdef0a45e203190210b
+  size_bytes: 3371
 - document_id: 1686E47ECF67B38A
   path: tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md
   title: TASK-017 Phase 0 Consumer Evidence Hub Pilot Transport Slice Detailed Design
@@ -6173,23 +6173,23 @@ documents:
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
   category: schema
-  authority: planning-contract
+  authority: phase0-implemented-contract
   importance_level: B
   preferred_loading: on-demand
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_IMPLEMENTED_CONTRACT
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d9ae364a3f3a8b9fef610151fb849aff2aa7c88a78af2fa473efe607956f4259
-  size_bytes: 1602
+  sha256: 8dc821446dbcc4d465d6adce6fe7efba2da8aa1b05151a04986f77e463b51dc4
+  size_bytes: 1816
 - document_id: ED3BB54A3409FA62
   path: schemas/knowledge-evolution/consumer-evidence-batch.schema.json
   title: Consumer Evidence Batch Planning Schema
   category: schema
-  authority: planning-contract
+  authority: phase0-implemented-contract
   importance_level: B
   preferred_loading: on-demand
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_IMPLEMENTED_CONTRACT
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
@@ -6199,10 +6199,10 @@ documents:
   path: schemas/knowledge-evolution/client-policy.schema.json
   title: Consumer Evidence Client Policy Planning Schema
   category: schema
-  authority: planning-contract
+  authority: phase0-implemented-contract
   importance_level: B
   preferred_loading: on-demand
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_IMPLEMENTED_CONTRACT
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
@@ -6212,15 +6212,15 @@ documents:
   path: schemas/knowledge-evolution/delivery-receipt.schema.json
   title: Consumer Evidence Delivery Receipt Planning Schema
   category: schema
-  authority: planning-contract
+  authority: phase0-implemented-contract
   importance_level: B
   preferred_loading: on-demand
-  status: PLANNING_NOT_AUTHORIZED
+  status: PHASE0_IMPLEMENTED_CONTRACT
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 77fc0316c1db3d90c2d238788ccf92619b52f20f696f2f6db307d351bb9e1a07
-  size_bytes: 1013
+  sha256: 0f1cc3f03ad684c175d22a906c60374f701305565700fea6d7003879be462962
+  size_bytes: 1115
 - document_id: 7D9DCB27A5AA8774
   path: reviews/BAI_Development_OS_Consumer_Evidence_Three_Role_Roadmap_Revalidation_2026-08-11.md
   title: Consumer Evidence Roadmap Three-Role Revalidation 2026-08-11
@@ -6234,6 +6234,84 @@ documents:
   verified_by: Orchestrator
   sha256: 39832fcb28f0d658c8422f891760406911bc46fa99ecc2ff79822fe7962a45bc
   size_bytes: 2216
+- document_id: B4A5AA1EF39B8F94
+  path: tasks/TASK-016/phase0-owner-authorization-2026-08-11.md
+  title: TASK-016 Phase 0 Owner Authorization 2026-08-11
+  category: task-evidence
+  authority: owner-authorization
+  importance_level: A
+  preferred_loading: read-first
+  status: AUTHORIZED_PHASE0_ONLY
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 6f0415f86a97d0c986393b6d4cc16585ab838f8bd04fc6dfeffff02d393471b3
+  size_bytes: 718
+- document_id: 1E192006E6D9353B
+  path: tasks/TASK-016/phase0-implementation-result-2026-08-11.md
+  title: TASK-016 Phase 0 Implementation Result 2026-08-11
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_FULL_SNAPSHOT_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: f5fda074e0ebd2478916839f4d305d17e7da2fa14e5c5fe87a82874687bda753
+  size_bytes: 6322
+- document_id: AF6240ECEE0EF85C
+  path: tasks/TASK-016/phase0-critic-review-2026-08-11.md
+  title: TASK-016 Phase 0 Critic Review 2026-08-11
+  category: review-record
+  authority: critic-review-record
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS_WITH_CLOSURE_GATE_RETAINED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 831346a7801ac84caa6ae233289f6f1b95b0293120a4dc73d30f0d39c10fa550
+  size_bytes: 2952
+- document_id: 334635530B594C2E
+  path: tasks/TASK-016/phase0-judge-review-2026-08-11.md
+  title: TASK-016 Phase 0 Judge Consistency Review 2026-08-11
+  category: review-record
+  authority: judge-review-record
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_PASS_CLOSURE_NOT_READY
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 1dc45ae3f9978148912f26d0bdfe8ba0ba9f4873922954fc01435f5bc90a2de9
+  size_bytes: 2345
+- document_id: 1D9325DB8E45B064
+  path: specifications/BAI_Knowledge_Hub_Public_Ingestion_API_OpenAPI_Ver1.0.yaml
+  title: BAI Knowledge Hub Public Ingestion API OpenAPI Ver.1.0
+  category: api-contract
+  authority: phase0-implemented-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: PHASE0_IMPLEMENTED_CONTRACT
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 047b03fd2c593c14c1ee9e535e93884cf7bffe4ddd2dd462f3827cf533b5c3c9
+  size_bytes: 2165
+- document_id: DA588D70B8243223
+  path: knowledge/intake/bai-video-production-provisional-2026-08-11/reviews/review-summary.md
+  title: Provisional BAI VIDEO PRODUCTION Pattern C Review
+  category: knowledge-evidence
+  authority: provisional-review-record
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: PARTIAL_FULL_SNAPSHOT_REQUIRED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 9d8b308f2706f0c5285af6c1f1c868a0b4789945bf0e552413f18c36dedf3165
+  size_bytes: 1464
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -6350,14 +6428,14 @@ current_canonical_document_sets:
     human: specifications/TASK-015_BAI_Development_OS_Distributed_Orchestration_Event_Fabric_Ver1.0.docx
     machine: specifications/TASK-015_BAI_Development_OS_Distributed_Orchestration_Event_Fabric_Ver1.0.md
     summary: specifications/TASK-015_BAI_Development_OS_Distributed_Orchestration_Event_Fabric_Ver1.0.summary.md
-  task_016_status: NEXT / NOT_STARTED / NOT_AUTHORIZED
+  task_016_status: ACTIVE / PHASE0 IMPLEMENTED / FULL SNAPSHOT VALIDATION PENDING / PHASE1+ NOT AUTHORIZED
   task_016_resilience_recovery_scalability_certification:
     document_id: TASK_016_RESILIENCE_RECOVERY_SCALABILITY_CERTIFICATION
     version: roadmap-1.0
-    status: PROPOSED_NEXT_NOT_AUTHORIZED
+    status: ACTIVE_PHASE0_IMPLEMENTED_FULL_SNAPSHOT_PENDING
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: NOT_STARTED / NOT_AUTHORIZED — PHASE0 AFTER TASK016 PHASE0; PHASE1+ AFTER TASK016 RESILIENCE
+  task_017_status: NOT_STARTED / NOT_AUTHORIZED — PHASE0 AFTER TASK016 PHASE0 CLOSURE; PHASE1+ AFTER TASK016 RESILIENCE
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
@@ -6365,11 +6443,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_CONSUMER_EVIDENCE_ROADMAP_REDESIGN_PLANNING
+registry_status: CURRENT_AFTER_TASK016_PHASE0_IMPLEMENTATION_PENDING_FULL_SNAPSHOT
 registry_status_details:
-  documents: 511
+  documents: 517
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-015 COMPLETED / TASK-016 NEXT NOT_STARTED NOT_AUTHORIZED (PHASE0 CONTRACT+CAPTURE FIRST) / TASK-017 PHASE0 INTERLEAVED PLANNED NOT_AUTHORIZED
-  next_task: TASK-016 Phase 0 — Consumer Knowledge Capture & Contract Foundation
+  current_task: TASK-016 ACTIVE / PHASE0 IMPLEMENTED FULL_SNAPSHOT_VALIDATION_PENDING / PHASE1+ NOT_AUTHORIZED
+  next_task: TASK-016 Phase 0 — full BAI VIDEO PRODUCT/PRODUCTION + matching OS snapshot validation and closure
