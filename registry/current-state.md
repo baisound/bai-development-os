@@ -19,9 +19,9 @@
 - Current Calibration Canonical: `TASK-014 Adaptive Governance Calibration & Policy Learning Ver.1.0`
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
-- TASK-016: `ACTIVE / PHASE0_IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`
-- TASK-017: `NOT_STARTED / NOT_AUTHORIZED` — Phase 0 planned after TASK-016 Phase 0 closure; advanced work after TASK-016 resilience evidence
-- Current development route: `TASK-016 Phase 0 — full BAI VIDEO PRODUCT/PRODUCTION + matching OS snapshot validation and closure`
+- TASK-016: `ACTIVE / PHASE0_RC2_DESIGN_AUTHORIZED / IMPLEMENTATION_IN_PROGRESS`
+- TASK-017: `NOT_STARTED / NOT_AUTHORIZED` — Phase 0 planned after TASK-016 Phase 0 RC2 closure; advanced work after TASK-016 resilience evidence
+- Current development route: `TASK-016 Phase 0 RC2 — canonical Consumer Evidence contract + Object Storage transport profile + Product GitHub snapshot validation`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-11`
 
@@ -74,3 +74,7 @@ Advanced TASK-017 Knowledge evolution remains after TASK-016 resilience evidence
 Product boundary is explicit: completed Consumer products build/run standalone; generated Evidence Client is Product-owned; credentials are externalized behind a generic CredentialProvider (BAI VIDEO PRODUCT selects Microsoft Password Manager); Hub failure never blocks primary Product function.
 
 Planning detail: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`; early slice: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
+
+## RC2 BAI VIDEO PRODUCTION Coordination
+
+BAI VIDEO PRODUCTION Product Owner requires Evidence Capture before limited demo and proposed Consumer-owned `TASK-036 — Consumer Evidence Capture & Knowledge Hub Bridge`. Development OS accepts one canonical Consumer Evidence Batch for Hub and temporary Object Storage transport. Object Storage is a temporary/fallback buffer only; production Hub Receipt/idempotency/backfill remains the final Product integration gate. Initial pilot catalog: `subtitle_import`, `long_running_job_result`, `subtitle_review_summary`; P3 remains rejected.

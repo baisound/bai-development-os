@@ -1,4 +1,4 @@
-# TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.0
+# TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.1
 
 Status: `EARLY_REPRIORITIZED_PLANNING_SLICE / NOT_STARTED / NOT_AUTHORIZED`
 Parent Task: `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS`
@@ -16,7 +16,7 @@ TASK-017 Phase 0 owns:
 - Common Ingestion Core MVP,
 - Hub v1 deployment/application,
 - PostgreSQL persistence,
-- Public Ingestion API,
+- Public Ingestion API / Delivery Receipt / backfill,
 - server auth/rate/idempotency/privacy/retention,
 - Consumer Evidence Integration Kit reference/generator,
 - limited BAI VIDEO PRODUCT pilot,
@@ -44,9 +44,9 @@ Single VPS
 
 Budget hard ceiling: 3,000 JPY/month.
 
-### 17.0.3 Public Evidence API
+### 17.0.3 Public Evidence API / Receipt / Backfill
 
-Mandatory: batch submit + client policy. Feedback may use event batch in pilot.
+Mandatory: batch submit + Event-level Delivery Receipt + client policy. Feedback may use event batch in pilot. The same canonical Batch stored by the temporary Object Storage profile SHALL be accepted for backfill without changing `event_id`. Accepted or duplicate Events are acknowledgements; rejected Events remain pending/quarantined individually.
 
 ### 17.0.4 Security / Delivery
 
@@ -58,7 +58,7 @@ Python first reference/generator. Generated source is Product-owned and standalo
 
 ### 17.0.6 BAI VIDEO PRODUCT Pilot
 
-Pilot with a small event set only. Product chooses Microsoft Password Manager credential provider through its own implementation boundary.
+Pilot with the initial catalog only: `subtitle_import`, `long_running_job_result`, `subtitle_review_summary`. Product chooses Microsoft Password Manager credential provider through its own implementation boundary. Before Hub production readiness, the Product may use Local Outbox + canonical Object Storage Artifact transport. Object Storage is not a completion condition and becomes fallback after Hub stabilization.
 
 ### 17.0.7 Aggregation / Candidate Review
 
@@ -91,3 +91,11 @@ Stop/disable ingestion if:
 ## 5. Next Route
 
 After Pilot exit, route to TASK-016 Phase 1+ for resilience/recovery/scalability certification using the real Hub/client path as one certification target. TASK-017 Phase 1+ resumes after the relevant TASK-016 evidence is available.
+
+## 6. Product Coordination Targets
+
+- 2026-08-25〜28: Mock/local Hub contract and backfill rehearsal target.
+- 2026-08-29〜31: production endpoint connection target if deployment/security/budget gates pass.
+- 2026-09-10: Product-requested final connection milestone (Hub + Receipt + backfill).
+
+If external deployment is not ready, temporary Object Storage may continue without declaring Product TASK-036 complete.

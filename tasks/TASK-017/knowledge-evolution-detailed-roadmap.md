@@ -1,4 +1,4 @@
-# TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.1
+# TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.2
 
 Status: `PLANNING_DETAIL / PARTIAL_OWNER_REPRIORITIZATION / NOT_STARTED / NOT_AUTHORIZED`
 Roadmap Position: `PHASE 0 AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`.
@@ -27,10 +27,10 @@ Read: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
 
 ### 17.0.1 Common Ingestion Core MVP
 ### 17.0.2 PostgreSQL / Single-VPS Hub MVP
-### 17.0.3 Public Evidence Batch / Client Policy API
-### 17.0.4 Authentication / Rate / Idempotency / Retention
+### 17.0.3 Public Evidence Batch / Receipt / Client Policy API + Backfill
+### 17.0.4 Authentication / Rate / Event Idempotency / Retention
 ### 17.0.5 Consumer Evidence Integration Kit Reference + Generator
-### 17.0.6 BAI VIDEO PRODUCT Limited Pilot
+### 17.0.6 BAI VIDEO PRODUCT Limited Pilot + temporary Object Storage backfill
 ### 17.0.7 Aggregate / Candidate Review
 ### 17.0.8 Pilot Exit Evidence
 
@@ -87,3 +87,9 @@ Hub stores Evidence/Candidates. Canonical Knowledge remains reviewed private-Git
 ## 9. Completion Direction
 
 TASK-017 completion requires explainable knowledge usefulness/harm/uncertainty/scope, rejected-pattern memory, reproducibility, governed promotion/demotion/rollback, privacy-minimized federation and successful integration without weakening standalone Consumer runtime boundaries.
+
+## 10. RC2 Product Coordination Addition
+
+BAI VIDEO PRODUCTION may begin its Consumer-owned TASK-036 A-C against the frozen TASK-016 RC2 contract before production Hub availability. Temporary Object Storage stores the canonical Batch unchanged and is replayed to Hub with stable `event_id`. TASK-017 Phase 0 MUST support Event-level Receipt/partial rejection and treat accepted/duplicate Event IDs as acknowledgement.
+
+Production Hub availability target requested by Product is 2026-08-29〜31 with Product final connection target by 2026-09-10. These are coordination targets; actual public infrastructure activation is gated by deployment readiness, security and budget evidence.

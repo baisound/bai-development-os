@@ -6,7 +6,7 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Current Task: `TASK-016 / ACTIVE`; Phase 0 = `IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`; Phase 1+ = `NOT_AUTHORIZED`
+- Current Task: `TASK-016 / ACTIVE`; Phase 0 RC2 = `DESIGN AUTHORIZED / IMPLEMENTATION IN PROGRESS`; Phase 1+ = `NOT_AUTHORIZED`
 - Interleaved planned route: `TASK-017 Phase 0 Pilot Transport` after TASK-016 Phase 0; advanced TASK-017 after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
@@ -61,3 +61,7 @@ TASK-017 Phase 0 is now a bounded Owner-reprioritized Pilot Transport Slice afte
 Hub v1 uses PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Client/source is assumed open/inspectable; no embedded shared secret is allowed. Consumer credentials are externalized through a generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager as its Product-specific provider. Generated Evidence Client code becomes Product-owned and requires no BAI Development OS runtime package. Hub/credential failure must never block primary Product function.
 
 Advanced TASK-017 work resumes after TASK-016 resilience evidence. Pattern B direct local ingestion remains late. Score/frequency/runtime telemetry/AI inference never becomes promotion authority.
+
+## RC2 context
+
+Read `tasks/TASK-016/phase0-rc2-product-feedback-adjudication-2026-08-11.md` after the Phase 0 design. RC2 must not create an Object-Storage-only Evidence schema: Local Outbox, temporary Object Storage and final Hub share one canonical Batch/Event identity.

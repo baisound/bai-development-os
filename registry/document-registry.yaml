@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T07:27:00+09:00'
+registry_generated_at: '2026-08-11T08:35:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: aa8307d230676c203845e31cd1ec5d20f4c02796ff1340cfa7704e0b7a500233
-  size_bytes: 5879
+  sha256: 813e33c2213f41dffadff84b857abf79d546686c50bc73d863a2cde211bc7119
+  size_bytes: 6158
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 989773b25d6fea0648eb554f4223c2db9184e81039538e7eb4fd0b5212b24512
-  size_bytes: 6668
+  sha256: a028ee237867440977494b170b4a5989e68edcb82af504b0c6491f3cfa9ba6ca
+  size_bytes: 7292
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5863,12 +5863,12 @@ documents:
   authority: task-definition
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_PHASE0_IMPLEMENTED_FULL_SNAPSHOT_PENDING
+  status: ACTIVE_PHASE0_RC2_IMPLEMENTATION_IN_PROGRESS
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: ae646996d728a5374d45098ca1ea0a68cb24bcc9a3943f0890db4fb8bb9b7c07
-  size_bytes: 2387
+  sha256: acd02d13377f98180ca8adf1c90569fc8976a78475b3d92744e87700b6db8234
+  size_bytes: 2856
 - document_id: D8D14C8D8828EB6B
   path: tasks/TASK-016/TASK-016.summary.md
   title: TASK-016 Summary
@@ -5876,12 +5876,12 @@ documents:
   authority: navigation-aid
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_PHASE0_IMPLEMENTED_FULL_SNAPSHOT_PENDING
+  status: ACTIVE_PHASE0_RC2_IMPLEMENTATION_IN_PROGRESS
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 770be93565b665a4c64ac492e4e66fa48a31a2b01f58de54d425744f4ddc3e66
-  size_bytes: 1738
+  sha256: 0bb59915e401a8a250a4e20afe12c296ae7454732ed213e14b858d4afb7bfc90
+  size_bytes: 2037
 - document_id: 10A28BD49AFC34D7
   path: architecture/BAI_Development_OS_Architecture_Ver2.28.docx
   title: BAI Development OS Architecture Ver.2.28
@@ -6020,12 +6020,12 @@ documents:
   authority: owner-authorized-task-design
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_IMPLEMENTED_FULL_SNAPSHOT_PENDING
+  status: ACTIVE_RC2_IMPLEMENTATION_AUTHORIZED
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 21cbc686c3ec62cc60dc7a94a453d366d491b4bdc1762e922f924417c77b0dc0
-  size_bytes: 6874
+  sha256: 83b36a58cd76cc93a86fcc650013ab91937dca8df633bcc1d2f9c323bce9d6f9
+  size_bytes: 8835
 - document_id: 7F39A8432F021EBB
   path: tasks/TASK-017/knowledge-evolution-detailed-roadmap.md
   title: TASK-017 Knowledge Evolution Detailed Roadmap
@@ -6033,12 +6033,12 @@ documents:
   authority: planning-design
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: PLANNING_RC2_ALIGNED_NOT_AUTHORIZED
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 2b4dd7aa0d0e5334da5aace16036375fe18bb4cfbe149230112b95dbaf4cfa17
-  size_bytes: 3931
+  sha256: db4d002ec9d2f9cff27c299faa32331297ee2307b02d7efde4f7a7627f0bac37
+  size_bytes: 4677
 - document_id: F98D4889B66968D3
   path: reviews/BAI_Development_OS_Consumer_Knowledge_Three_Role_Roadmap_Review_2026-08-11.md
   title: Consumer Knowledge Evolution Three-Role Roadmap Review
@@ -6111,7 +6111,8 @@ documents:
   authority: owner-directed-roadmap-record
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_PLANNING_SUPPLEMENT
+  status: SUPERSEDED_PLANNING_SUPPLEMENT
+  superseded_by: 14A0D9B014512220
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
@@ -6163,12 +6164,12 @@ documents:
   authority: planning-design
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_NOT_AUTHORIZED
+  status: PLANNING_RC2_ALIGNED_NOT_AUTHORIZED
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: bd5907aafa74b17a6f9c1a3ec1cb1d08155ef16712dcf773bc60d8a70c8684e3
-  size_bytes: 3243
+  sha256: d476f2ac2f2db0d3e4a4240b7cece2f8b1e403791479b7125b3dbb388cf9e89c
+  size_bytes: 4262
 - document_id: 62502207CCC33A68
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
@@ -6312,6 +6313,45 @@ documents:
   verified_by: Orchestrator
   sha256: 9d8b308f2706f0c5285af6c1f1c868a0b4789945bf0e552413f18c36dedf3165
   size_bytes: 1464
+- document_id: 14A0D9B014512220
+  path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.2.md
+  title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.2
+  category: roadmap-refinement
+  authority: owner-directed-roadmap-record
+  importance_level: A
+  preferred_loading: read-first
+  status: ACTIVE_PLANNING_SUPPLEMENT
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: efd41b58723cbbb50fcd347c015e6bab28bb1f867184f2f0e1fc1002e32e482a
+  size_bytes: 7060
+- document_id: 022CDE9769E35D91
+  path: tasks/TASK-016/phase0-rc2-product-feedback-adjudication-2026-08-11.md
+  title: TASK-016 Phase 0 RC2 BAI VIDEO PRODUCTION Product Feedback Adjudication
+  category: review-record
+  authority: owner-feedback-adjudication
+  importance_level: A
+  preferred_loading: read-first
+  status: ACCEPTED_WITH_SCOPE_BOUNDARIES
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 60c09fdb729745a4ad64c59179593f76590ba2607abb6570e648c88403b653c6
+  size_bytes: 1905
+- document_id: 6C5070A2CB3C9656
+  path: tasks/TASK-016/phase0-rc2-owner-authorization-2026-08-11.md
+  title: TASK-016 Phase 0 RC2 Owner Authorization
+  category: task-evidence
+  authority: owner-authorization
+  importance_level: A
+  preferred_loading: read-first
+  status: AUTHORIZED_RC2_ONLY
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: add8cca9023548551d1476696ff28eab99c808f35750d1b3af0289c17c44d47a
+  size_bytes: 975
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -6428,14 +6468,14 @@ current_canonical_document_sets:
     human: specifications/TASK-015_BAI_Development_OS_Distributed_Orchestration_Event_Fabric_Ver1.0.docx
     machine: specifications/TASK-015_BAI_Development_OS_Distributed_Orchestration_Event_Fabric_Ver1.0.md
     summary: specifications/TASK-015_BAI_Development_OS_Distributed_Orchestration_Event_Fabric_Ver1.0.summary.md
-  task_016_status: ACTIVE / PHASE0 IMPLEMENTED / FULL SNAPSHOT VALIDATION PENDING / PHASE1+ NOT AUTHORIZED
+  task_016_status: ACTIVE / PHASE0 RC2 IMPLEMENTATION IN PROGRESS / PHASE1+ NOT AUTHORIZED
   task_016_resilience_recovery_scalability_certification:
     document_id: TASK_016_RESILIENCE_RECOVERY_SCALABILITY_CERTIFICATION
     version: roadmap-1.0
-    status: ACTIVE_PHASE0_IMPLEMENTED_FULL_SNAPSHOT_PENDING
+    status: ACTIVE_PHASE0_RC2_IMPLEMENTATION_IN_PROGRESS
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: NOT_STARTED / NOT_AUTHORIZED — PHASE0 AFTER TASK016 PHASE0 CLOSURE; PHASE1+ AFTER TASK016 RESILIENCE
+  task_017_status: NOT_STARTED / NOT_AUTHORIZED — PHASE0 AFTER TASK016 PHASE0 RC2 CLOSURE; PHASE1+ AFTER TASK016 RESILIENCE
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
@@ -6443,11 +6483,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK016_PHASE0_IMPLEMENTATION_PENDING_FULL_SNAPSHOT
+registry_status: CURRENT_DURING_TASK016_PHASE0_RC2_IMPLEMENTATION
 registry_status_details:
-  documents: 517
+  documents: 520
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-016 ACTIVE / PHASE0 IMPLEMENTED FULL_SNAPSHOT_VALIDATION_PENDING / PHASE1+ NOT_AUTHORIZED
-  next_task: TASK-016 Phase 0 — full BAI VIDEO PRODUCT/PRODUCTION + matching OS snapshot validation and closure
+  current_task: TASK-016 ACTIVE / PHASE0 RC2 IMPLEMENTATION IN PROGRESS / PHASE1+ NOT AUTHORIZED
+  next_task: TASK-016 Phase 0 RC2 — canonical Consumer Evidence + Object Storage transport profile

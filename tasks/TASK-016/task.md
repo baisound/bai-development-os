@@ -1,8 +1,8 @@
 # TASK-016 — Resilience, Recovery & Scalability Certification OS
 
-Status: `ACTIVE / PHASE0_IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`
+Status: `ACTIVE / PHASE0_RC2_DESIGN_AUTHORIZED / IMPLEMENTATION_IN_PROGRESS`
 Development Profile: `DEV_4_FOUNDATION_CRITICAL` (Phase 0 confirmed)
-Parent Scope: Architecture Ver.2.28 Part XV, Post-TASK-015 Roadmap Refinement Ver.1.0, and Consumer Knowledge Evolution Roadmap Refinement Ver.1.1.
+Parent Scope: Architecture Ver.2.28 Part XV, Post-TASK-015 Roadmap Refinement Ver.1.0, and Consumer Knowledge Evolution Roadmap Refinement Ver.1.2.
 
 Objective: create a reproducible resilience-certification layer over TASK-004〜015 that proves failure recovery, convergence, mixed-version compatibility, capacity/backpressure and disaster-recovery behavior without creating a second authority system or requiring production distributed infrastructure.
 
@@ -29,3 +29,7 @@ Implemented development surfaces:
 - provisional BAI VIDEO PRODUCTION Pattern C intake from a real v0.16.4 handoff artifact.
 
 Phase 0 closure remains blocked only by the required full BAI VIDEO PRODUCT/PRODUCTION + matching BAI Development OS snapshot validation. Production Hub deployment and TASK-017 Phase 0 are not authorized by this state.
+
+## RC2 Product Feedback Route
+
+BAI VIDEO PRODUCTION accepted Product-owned Evidence Capture and requested a transport-neutral canonical Batch plus temporary Object Storage Artifact Profile. RC2 is authorized to implement the canonical Event/Batch/Receipt/Policy contracts, Event Catalog, Privacy/Forbidden Fields, Object Storage Artifact Profile, version/migration rules and executable fixtures. No production Hub deployment is authorized by this TASK-016 record.
