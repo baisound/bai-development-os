@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.example/schemas/knowledge-evolution/delivery-receipt.schema.json",
+  "title": "BAI Consumer Evidence Delivery Receipt Planning Contract",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "accepted",
+    "rejected",
+    "server_time"
+  ],
+  "properties": {
+    "receipt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "accepted": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rejected": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "reason"
+        ],
+        "properties": {
+          "event_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "server_time": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}

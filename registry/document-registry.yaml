@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-10T23:55:00+09:00'
+registry_generated_at: '2026-08-11T06:54:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 635eca03ee363ad6c32dbc626a42c40ade046cd55e2379b7cd47909f5766df65
-  size_bytes: 5118
+  sha256: d07412f3d74a61de35a6c62e5e180701dca265df58845a1311da7d019917cc23
+  size_bytes: 5585
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6f9a570364e027d199ed55a122fbb275b8205587caeb875fdd05f15e01341f3a
-  size_bytes: 5933
+  sha256: d2c0c9328e431f547ac25c003745e0170743dfab2a379f46b6c51882d016252a
+  size_bytes: 6062
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5867,8 +5867,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 407fb6686ab984c14e72b0fb807287d0bce5e77659bac95234067c428aa42cc3
-  size_bytes: 1528
+  sha256: 5ff8f352869d5a6c572e92e5ed68d76cde0eb6178b01301e9e0c3e3896b4801f
+  size_bytes: 1476
 - document_id: D8D14C8D8828EB6B
   path: tasks/TASK-016/TASK-016.summary.md
   title: TASK-016 Summary
@@ -5880,8 +5880,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 304248844b59d342acdc089ee664da4824905e70caa265c05ee072333642b77d
-  size_bytes: 1168
+  sha256: 02264a2dc50d3280a14fc4327a05f868b0f56130641fedb9858b520dd882b154
+  size_bytes: 1012
 - document_id: 10A28BD49AFC34D7
   path: architecture/BAI_Development_OS_Architecture_Ver2.28.docx
   title: BAI Development OS Architecture Ver.2.28
@@ -5984,8 +5984,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 9f9c9a70378bb4b0017fc1f2cc91d062bec8450c17a9d924014256325f0e7999
-  size_bytes: 1833
+  sha256: 7576dcc78be3dd223955bd9ffb8824fcb904df7f3f4e4c9d8db7b07824187c13
+  size_bytes: 1865
 - document_id: 6E0658004570CE0F
   path: tasks/TASK-017/TASK-017.summary.md
   title: TASK-017 Summary
@@ -5997,8 +5997,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: fd7616fd9948ef66f21da95d09eaab189f590408b152e7fe30c3bdfd7111a5c3
-  size_bytes: 1303
+  sha256: 0d5ae13ce5afbd7427bfdf09f53a4baee0583cb944bc7f390df41b19094fdd8a
+  size_bytes: 1538
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6006,7 +6006,8 @@ documents:
   authority: owner-directed-roadmap-record
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_PLANNING_SUPPLEMENT
+  status: SUPERSEDED_PLANNING_SUPPLEMENT
+  superseded_by: 885122326CD64797
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
@@ -6023,8 +6024,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 307b0bcd64112353071fc851359d4ab0abd261e6c7ea944ab90f25473752f4ca
-  size_bytes: 6049
+  sha256: b9480ff7df35bd8e1cc15651f5d99f55f582f1a7bfbdf497dc02e40bb206a639
+  size_bytes: 7375
 - document_id: 7F39A8432F021EBB
   path: tasks/TASK-017/knowledge-evolution-detailed-roadmap.md
   title: TASK-017 Knowledge Evolution Detailed Roadmap
@@ -6036,8 +6037,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 3280214b5b858d25cfc3576c060f7fa60e3aaa03289810ba0672eff789c62697
-  size_bytes: 3803
+  sha256: 2b4dd7aa0d0e5334da5aace16036375fe18bb4cfbe149230112b95dbaf4cfa17
+  size_bytes: 3931
 - document_id: F98D4889B66968D3
   path: reviews/BAI_Development_OS_Consumer_Knowledge_Three_Role_Roadmap_Review_2026-08-11.md
   title: Consumer Knowledge Evolution Three-Role Roadmap Review
@@ -6103,6 +6104,136 @@ documents:
   verified_by: Orchestrator
   sha256: ccf1868e288b01cebb028c0f2eb9b040af6e064853b45cefb994e846730f205f
   size_bytes: 1863
+- document_id: 885122326CD64797
+  path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.1.md
+  title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.1
+  category: roadmap-refinement
+  authority: owner-directed-roadmap-record
+  importance_level: A
+  preferred_loading: read-first
+  status: ACTIVE_PLANNING_SUPPLEMENT
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 2fbc7ece46933845f268f44bb7879ec21859bc79e7af4646da0783c38f43b967
+  size_bytes: 15450
+- document_id: 8A6579B825D5D74F
+  path: architecture/ADR_Consumer_Runtime_Independence_Consumer_Evidence_Integration_Kit_Ver1.0.md
+  title: ADR Consumer Runtime Independence Consumer Evidence Integration Kit Ver.1.0
+  category: architecture-decision
+  authority: planning-architecture-decision
+  importance_level: A
+  preferred_loading: read-first
+  status: ACCEPTED_PLANNING_DECISION
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 1a52293d7c0ae38bcdf82da285fb9f3f289eadceaf1906eacdcdb5eff13542e9
+  size_bytes: 2516
+- document_id: E4E980A816861FD1
+  path: specifications/Consumer_Evidence_Integration_Kit_Planning_Specification_Ver1.0.md
+  title: Consumer Evidence Integration Kit Planning Specification Ver.1.0
+  category: specification
+  authority: planning-specification
+  importance_level: A
+  preferred_loading: read-first
+  status: PLANNING_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 644e02cdac694aeaab9a3dbf5a1e7736013b6801a3b428e570335d08ebc4f16d
+  size_bytes: 2983
+- document_id: EC9A2FEE5F8D5501
+  path: specifications/BAI_Knowledge_Hub_Public_Ingestion_API_Planning_Specification_Ver1.0.md
+  title: BAI Knowledge Hub Public Ingestion API Planning Specification Ver.1.0
+  category: specification
+  authority: planning-specification
+  importance_level: A
+  preferred_loading: read-first
+  status: PLANNING_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 5847847af4ef1348ed14fa65edee38e71793ae340a5f0622eb76c132df438796
+  size_bytes: 2740
+- document_id: 1686E47ECF67B38A
+  path: tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md
+  title: TASK-017 Phase 0 Consumer Evidence Hub Pilot Transport Slice Detailed Design
+  category: task-design
+  authority: planning-design
+  importance_level: A
+  preferred_loading: read-first
+  status: PLANNING_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: bd5907aafa74b17a6f9c1a3ec1cb1d08155ef16712dcf773bc60d8a70c8684e3
+  size_bytes: 3243
+- document_id: 62502207CCC33A68
+  path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
+  title: Consumer Evidence Envelope Planning Schema
+  category: schema
+  authority: planning-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: PLANNING_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: d9ae364a3f3a8b9fef610151fb849aff2aa7c88a78af2fa473efe607956f4259
+  size_bytes: 1602
+- document_id: ED3BB54A3409FA62
+  path: schemas/knowledge-evolution/consumer-evidence-batch.schema.json
+  title: Consumer Evidence Batch Planning Schema
+  category: schema
+  authority: planning-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: PLANNING_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: fac5ca0bbbccdf59022f3dd60f044ae8d8bce948a5db4b1f29853d58dc8d0f12
+  size_bytes: 599
+- document_id: 328CB96C920D9878
+  path: schemas/knowledge-evolution/client-policy.schema.json
+  title: Consumer Evidence Client Policy Planning Schema
+  category: schema
+  authority: planning-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: PLANNING_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 0ca8d1d18099aed16192b36eb6d9daf81a980778a09555b424ef3189fd9ce6c4
+  size_bytes: 1154
+- document_id: 16197091C4E88FFF
+  path: schemas/knowledge-evolution/delivery-receipt.schema.json
+  title: Consumer Evidence Delivery Receipt Planning Schema
+  category: schema
+  authority: planning-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: PLANNING_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 77fc0316c1db3d90c2d238788ccf92619b52f20f696f2f6db307d351bb9e1a07
+  size_bytes: 1013
+- document_id: 7D9DCB27A5AA8774
+  path: reviews/BAI_Development_OS_Consumer_Evidence_Three_Role_Roadmap_Revalidation_2026-08-11.md
+  title: Consumer Evidence Roadmap Three-Role Revalidation 2026-08-11
+  category: review-record
+  authority: design-review-record
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: ROADMAP_REVIEW_RECORD
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 39832fcb28f0d658c8422f891760406911bc46fa99ecc2ff79822fe7962a45bc
+  size_bytes: 2216
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -6125,9 +6256,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_CONSUMER_KNOWLEDGE_EVOLUTION_PLANNING
+  registry_sync_status: CURRENT_AFTER_CONSUMER_EVIDENCE_ROADMAP_REDESIGN_PLANNING
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK_016_PHASE0_PATTERN_C_FAST_TRACK_PLANNED_NOT_AUTHORIZED
+  roadmap_expansion_status: TASK016_PHASE0_CONTRACT_CAPTURE_THEN_TASK017_PHASE0_PILOT_INTERLEAVE_NOT_AUTHORIZED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -6137,7 +6268,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK-016 Phase 0 — Consumer Knowledge Capture Bridge — NEXT TASK / PLANNING FAST TRACK / NOT AUTHORIZED
+  next_canonical_route: TASK-016 Phase 0 — Consumer Knowledge Capture & Contract Foundation — NEXT / NOT AUTHORIZED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -6194,7 +6325,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 56
-  roadmap_refinement_status: CONSUMER_KNOWLEDGE_EVOLUTION_C_FIRST_A_NEXT_B_LATE_NOT_AUTHORIZED
+  roadmap_refinement_status: C_FIRST_A_EARLY_PILOT_INTERLEAVED_B_LATE_NOT_AUTHORIZED
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -6226,19 +6357,19 @@ current_canonical_document_sets:
     status: PROPOSED_NEXT_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: NOT_STARTED / NOT_AUTHORIZED — AFTER TASK-016
+  task_017_status: NOT_STARTED / NOT_AUTHORIZED — PHASE0 AFTER TASK016 PHASE0; PHASE1+ AFTER TASK016 RESILIENCE
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: PLANNED_AFTER_TASK016_NOT_AUTHORIZED
+    status: PHASE0_REPRIORITIZED_AFTER_TASK016_PHASE0_NOT_AUTHORIZED
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_CONSUMER_KNOWLEDGE_EVOLUTION_PLANNING
+registry_status: CURRENT_AFTER_CONSUMER_EVIDENCE_ROADMAP_REDESIGN_PLANNING
 registry_status_details:
-  documents: 501
+  documents: 511
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-015 COMPLETED / TASK-016 NEXT NOT_STARTED NOT_AUTHORIZED (PHASE 0 PATTERN C FIRST) / TASK-017 QUEUED NOT_STARTED NOT_AUTHORIZED
-  next_task: TASK-016 Phase 0 — Consumer Knowledge Capture Bridge (Pattern C Fast Track)
+  current_task: TASK-015 COMPLETED / TASK-016 NEXT NOT_STARTED NOT_AUTHORIZED (PHASE0 CONTRACT+CAPTURE FIRST) / TASK-017 PHASE0 INTERLEAVED PLANNED NOT_AUTHORIZED
+  next_task: TASK-016 Phase 0 — Consumer Knowledge Capture & Contract Foundation

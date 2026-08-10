@@ -2,8 +2,10 @@
 
 Status: `NEXT / NOT_STARTED / NOT_AUTHORIZED`.
 
-**First planned slice:** `Phase 0 — Consumer Knowledge Capture Bridge`, implementing Pattern C manual ZIP knowledge intake first so already-running BAI VIDEO PRODUCTION knowledge can be captured before a cloud Hub exists. Phase 0 defines source-neutral Evidence/Candidate/Snapshot contracts, provenance recovery, secret/privacy exclusion, Knowledge Intake Package output and first Consumer validation. It does **not** authorize implementation or deploy the Hub.
+**First planned slice:** `Phase 0 — Consumer Knowledge Capture & Contract Foundation`.
 
-After Phase 0, TASK-016 continues its original `Resilience, Recovery & Scalability Certification OS` scope: deterministic distributed simulation, bounded chaos/fault injection, convergence/reconciliation proof, RTO/RPO-style measurement, rolling protocol/schema compatibility, load/soak/capacity certification, backup/restore drills, incident evidence bundles and resilience certification levels. Simulation/sandbox evidence must not be mislabeled REAL, and destructive production fault injection requires separately bound Owner authorization.
+Phase 0 captures current BAI VIDEO PRODUCT/PRODUCTION development knowledge through Pattern C and freezes the contracts needed for distributed standalone Product Evidence: source-neutral Evidence/Candidate/Snapshot schemas, Product Runtime Independence, Consumer Evidence Integration Kit, external CredentialProvider, privacy/trust/public API semantics, Mock Hub and contract tests.
+
+It does not deploy the production Hub. After Phase 0, the revised planning route is **TASK-017 Phase 0 Pilot Transport Slice**, then TASK-016 Phase 1+ resumes with deterministic simulation, fault injection, recovery/convergence, mixed-version, load/cost, backup/DR and incident certification. The Pilot gives TASK-016 a real Hub/client/outbox/credential failure path to certify.
 
 Read first: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`.

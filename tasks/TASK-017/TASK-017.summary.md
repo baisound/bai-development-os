@@ -2,13 +2,15 @@
 
 - Name: `Knowledge Evolution & Federated Evidence Governance OS`
 - Status: `NOT_STARTED / NOT_AUTHORIZED`
-- Position: after TASK-016 unless Owner explicitly reprioritizes
-- Source: BAI CREATIVE OS Knowledge Audit plus 2026-08-11 Consumer Knowledge Evolution refinement
-- Purpose: convert verified multi-Task/multi-Project experience into governed Knowledge Candidates and reusable Rejected Patterns without treating score/frequency/AI inference as authority
-- Source priority: Pattern C proven first in TASK-016 Phase 0 -> Pattern A Knowledge Hub -> Pattern B Direct Local Adapter late
-- Hub v1: PostgreSQL, one VPS/Docker Compose, hard infrastructure ceiling `3,000 JPY/month`
-- Canonical authority: private BAI Development OS Git; Hub/ZIP/Consumer repositories are Evidence/Candidate sources only
-- Core additions: multi-dimensional quality Evidence, typed causal lineage, Reproduction Matrix, hard reject gates, signed/versioned Knowledge distribution/rollback, privacy-minimized federated Evidence, domain metric extension points
-- Reuse: KnowledgeOS, SecurityOS, ReleaseOS, ConformanceOS, MaintenanceOS, ExtensionOS, CalibrationOS, TASK-016 resilience/Phase-0 outputs
+- Revised position: **Phase 0 Pilot Transport after TASK-016 Phase 0; advanced Phase 1+ after TASK-016 resilience evidence**
+- Source priority: Pattern C first -> Pattern A Hub/runtime Evidence second -> Pattern B late
+- Phase 0: Common Ingestion MVP, PostgreSQL single-VPS Hub, Public Evidence API, external credential/auth/rate/idempotency/retention, Consumer Evidence Integration Kit, BAI VIDEO PRODUCT limited pilot
+- Product boundary: generated Evidence Client is Product-owned; Product builds/runs without BAI Development OS; Hub unavailable does not block primary function
+- Credential: generic `CredentialProvider`; BAI VIDEO PRODUCT uses Microsoft Password Manager; no embedded shared key
+- OSS boundary: source/endpoint/schema assumed public; server assigns trust and enforces security
+- Advanced scope: quality Evidence, Reproduction Matrix, rejected patterns, conflict/supersession, promotion/demotion/quarantine, signed/versioned distribution/rollback, privacy-minimized federation, domain metric providers
+- Hub v1: PostgreSQL, one VPS/Docker Compose, hard ceiling `3,000 JPY/month`
+- Canonical authority: private BAI Development OS Git; Hub/Consumer data remains Evidence/Candidate source only
 - Read first: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`
+- Early slice detail: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`
 - Implementation authorization: `NONE`

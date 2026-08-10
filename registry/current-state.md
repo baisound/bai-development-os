@@ -21,7 +21,7 @@
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `NEXT / NOT_STARTED / NOT_AUTHORIZED`
 - TASK-017: `NOT_STARTED / NOT_AUTHORIZED` — queued after TASK-016
-- Next canonical development route: `TASK-016 Phase 0 — Consumer Knowledge Capture Bridge (Pattern C Fast Track)`
+- Next canonical development route: `TASK-016 Phase 0 — Consumer Knowledge Capture & Contract Foundation`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-11`
 
@@ -44,7 +44,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Roadmap Consolidation: `56 / 56 PASS` after CREATIVE OS Knowledge Audit refinement synchronization
 - Root `DistributedOS` export: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `493 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `511 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -55,17 +55,19 @@ Production-specific remote broker implementations, real remote workers/labs, mul
 
 ## Current TASK-016 Proposed Baseline
 
-TASK-016 remains planning-only and unauthorized. Its **first planned slice** is `Phase 0 — Consumer Knowledge Capture Bridge`, a bounded Pattern C manual ZIP Fast Track so already-running BAI VIDEO PRODUCTION knowledge can be captured before Knowledge Hub infrastructure exists. Phase 0 defines common Evidence/Candidate/Snapshot contracts, provenance/exclusion rules and first Consumer intake; it does not deploy the Hub and does not replace TASK-016's original resilience responsibility.
+TASK-016 remains planning-only and unauthorized. Its first planned slice is `Phase 0 — Consumer Knowledge Capture & Contract Foundation`. Pattern C remains first so current BAI VIDEO PRODUCT/PRODUCTION development knowledge can be captured immediately. Phase 0 now also freezes Product Runtime Independence, Consumer Evidence Integration Kit, Public Ingestion API/Privacy/Trust/Credential and Mock Hub/Contract Test contracts needed for a standalone distributed Product pilot. It does not deploy the production Hub.
 
-After Phase 0, TASK-016 continues deterministic simulation, bounded fault injection, convergence/reconciliation, recovery-objective evidence, mixed-version compatibility, load/soak/capacity/cost certification, backup/restore/DR drills, incident evidence reconstruction and resilience certification. Simulation/SANDBOX evidence cannot be relabeled REAL, and production-destructive injection requires separate Owner authorization.
+After Phase 0, the revised planning route moves temporarily to `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`. TASK-016 Phase 1+ then resumes and certifies resilience using the real Hub/client/outbox/credential path as one test subject.
 
 Planning detail: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`.
 
 
 ## Current TASK-017 Planning Baseline
 
-TASK-017 is planning-only and queued after TASK-016. It extends the completed KnowledgeOS with explicit Rejected Pattern memory, multi-dimensional Knowledge Quality Evidence, typed Critic/Owner/Undo/Tester/recurrence lineage, cross-Project reproducibility, hard Safety/Security/Rights/Privacy gates, signed/versioned Knowledge publication/rollback, and privacy-minimized federated Evidence. Score/frequency/AI inference never becomes promotion authority. Consumer creative/personal/confidential content is not collected by default.
+TASK-017 remains planning-only and unauthorized, but its bounded Phase 0 Pilot Transport Slice is Owner-reprioritized to run after TASK-016 Phase 0 and before TASK-016 Phase 1+. This early slice owns Common Ingestion MVP, PostgreSQL single-VPS Hub, Public Evidence API, server-side auth/rate/idempotency/privacy/retention, Consumer Evidence Integration Kit implementation/reference and a limited BAI VIDEO PRODUCT runtime Evidence pilot.
 
-Source sequencing is now explicit: Pattern C is proven first in TASK-016 Phase 0; Pattern A Knowledge Hub follows in TASK-017; Pattern B direct local automation is late. Hub v1 uses PostgreSQL on one VPS/Docker Compose with a hard infrastructure ceiling of 3,000 JPY/month. Canonical Knowledge remains private-Git authoritative.
+Advanced TASK-017 Knowledge evolution remains after TASK-016 resilience evidence: rejected patterns, multidimensional quality Evidence, reproducibility, hard Safety/Security/Rights/Privacy gates, promotion/demotion/quarantine, signed/versioned distribution/rollback and privacy-minimized federation. Pattern B remains late.
 
-Planning detail: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`.
+Product boundary is explicit: completed Consumer products build/run standalone; generated Evidence Client is Product-owned; credentials are externalized behind a generic CredentialProvider (BAI VIDEO PRODUCT selects Microsoft Password Manager); Hub failure never blocks primary Product function.
+
+Planning detail: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`; early slice: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.

@@ -1,109 +1,89 @@
-# TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.0
+# TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.1
 
-Status: `PLANNING_DETAIL / NOT_STARTED / NOT_AUTHORIZED`
-Roadmap Position: after TASK-016 unless explicitly reprioritized by Owner.
-Database decision for Pattern A Hub v1: `PostgreSQL`.
+Status: `PLANNING_DETAIL / PARTIAL_OWNER_REPRIORITIZATION / NOT_STARTED / NOT_AUTHORIZED`
+Roadmap Position: `PHASE 0 AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`.
+Database decision: `PostgreSQL`.
 Infrastructure ceiling: `3,000 JPY/month`.
 
 ## 1. Goal
 
-Transform verified Development OS and Consumer Project experience into governed, provenance-preserving, reusable knowledge without turning scores, AI inference or cross-project frequency into authority.
+Transform Development OS, Consumer development and distributed runtime Evidence into governed reusable Knowledge without turning frequency, telemetry, model scores or AI inference into authority.
 
-## 2. Source Priority
+## 2. Revised Source / Task Sequence
 
-1. Pattern C — already introduced as TASK-016 Phase 0 Fast Track.
-2. Pattern A — Cloud Knowledge Hub automation.
-3. Pattern B — Direct Local Adapter after core stabilization.
+```text
+TASK-016 Phase 0 Pattern C + contracts
+ -> TASK-017 Phase 0 Hub/client pilot
+ -> TASK-016 Phase 1+ resilience certification
+ -> TASK-017 Phase 1+ advanced Knowledge evolution
+ -> TASK-017 Late Pattern B
+```
 
-## 3. Work Packages
+This replaces the earlier fully linear `TASK-016 complete -> TASK-017` planning sequence. It preserves task ownership and does not authorize implementation.
 
-### 17.1 Common Ingestion Core
+## 3. Phase 0 — Early Pilot Transport Slice
 
-- source-neutral Evidence validation,
-- provenance normalization,
-- Candidate registration,
-- idempotency/dedup keys,
-- processing audit trail.
+Read: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
 
-### 17.2 Pattern A Knowledge Hub MVP
+### 17.0.1 Common Ingestion Core MVP
+### 17.0.2 PostgreSQL / Single-VPS Hub MVP
+### 17.0.3 Public Evidence Batch / Client Policy API
+### 17.0.4 Authentication / Rate / Idempotency / Retention
+### 17.0.5 Consumer Evidence Integration Kit Reference + Generator
+### 17.0.6 BAI VIDEO PRODUCT Limited Pilot
+### 17.0.7 Aggregate / Candidate Review
+### 17.0.8 Pilot Exit Evidence
 
-- HTTPS ingestion API,
-- one-VPS Docker Compose deployment,
-- PostgreSQL,
-- producer identity with evidence-submit-only permission,
-- idempotent Evidence submission,
-- Candidate registry,
-- minimal review/admin surface,
-- no Development OS Git write credential in Consumers.
+## 4. Phase 1+ — Advanced Knowledge Evolution
 
-### 17.3 Normalization and Generalization
+### 17.1 Normalization / Generalization
 
-Convert Product-specific observations into properly scoped reusable Candidates while retaining source Evidence and counterexamples.
+Convert Product-specific observations into scope-appropriate Candidates while preserving environment, counterexamples, distinct Product/Task counts and provenance.
 
-### 17.4 Duplicate / Conflict / Supersession
+### 17.2 Duplicate / Conflict / Supersession
 
-Detect:
+Detect semantic/structural duplicates, contradictions, rejected recurrence, stale guidance and supersession. pgvector remains optional until measured need.
 
-- duplicate Candidate meaning,
-- contradictory guidance,
-- Rejected Pattern recurrence,
-- superseded/obsolete guidance,
-- scope mismatch.
+### 17.3 Reproduction Matrix / Quality Evidence
 
-Semantic/vector similarity is optional. pgvector is introduced only after measured need.
+Preserve decomposable dimensions rather than binary good/bad scores.
 
-### 17.5 Promotion Governance
+### 17.4 Promotion Governance
 
-- decomposable quality Evidence,
-- Critic/Owner/Tester/Undo/recurrence lineage,
-- Safety/Security/Rights/Privacy/Authority hard rejects,
-- risk-adaptive Critic/Judge gates,
-- explicit promotion/demotion/quarantine/supersession record.
+Critic/Judge/Owner/reviewer authority according to risk; hard rejects for Safety/Security/Rights/Privacy/Authority. Runtime Client frequency is evidence only.
 
-### 17.6 Knowledge Distribution
+### 17.5 Knowledge Distribution / Rollback
 
-Generate filtered Context/Knowledge Packs based on Consumer profile rather than loading all knowledge into all projects.
+Filtered, signed/versioned packs using existing SecurityOS/ReleaseOS primitives where justified; last-known-good rollback.
 
-### 17.7 Federated Evidence Governance
+### 17.6 Federated Evidence Governance
 
-- default-local Consumer content,
-- minimization/redaction,
-- purpose-bound export,
-- isolation,
-- retention/deletion rules,
-- signed/versioned publication/rollback where warranted.
+Purpose-bound export, tenant/Project isolation, minimization, retention/deletion and privacy-preserving aggregation.
+
+### 17.7 Domain Metric Providers
+
+Extension points for video/creative/Product metrics without hard-coding domain logic in Core.
 
 ### 17.8 Pattern B Direct Local Adapter — LATE
 
-Implement only after Common Ingestion Core is proven by Pattern C and Pattern A. It SHALL be an adapter, not a second Knowledge engine.
+Reuse Common Ingestion Core. No second knowledge engine.
 
-## 4. PostgreSQL Decision
+## 5. Product Runtime Independence
 
-PostgreSQL is the selected Hub database because Evidence/Candidate/Provenance data needs flexible JSONB plus relational integrity and may later benefit from pgvector. Existing MySQL familiarity was considered; PostgreSQL was selected intentionally for this Knowledge workload. Managed PostgreSQL is not required in v1.
+Hub integration is an operational side channel. Consumer Product build/runtime SHALL NOT require BAI Development OS. Generated Evidence Client source belongs to the Consumer.
 
-## 5. Infrastructure Guardrail
+## 6. Credential Model
 
-Default v1 topology:
+Core specifies a generic external `CredentialProvider`; BAI VIDEO PRODUCT selects Microsoft Password Manager. No shared key is embedded in open source source/config/build artifacts.
 
-```text
-Single VPS
-  Docker Compose
-    reverse-proxy
-    knowledge-api
-    postgres
-    optional lightweight worker
-    backup-job
-```
+## 7. Hub Guardrail
 
-Target monthly cost: `1,500–2,500 JPY`.
-Hard ceiling: `3,000 JPY`.
+One VPS + Docker Compose + PostgreSQL. Target 1,500–2,500 JPY/month; hard ceiling 3,000 JPY/month. No Kafka/Kubernetes/managed DB/dedicated LB/separate vector DB/GPU host without evidence-based reauthorization.
 
-No scale-out/cloud-managed complexity without measured evidence.
+## 8. Canonical Authority
 
-## 6. Canonical Authority
+Hub stores Evidence/Candidates. Canonical Knowledge remains reviewed private-Git state. Client Evidence is never self-promoting.
 
-The Hub stores Evidence/Candidates. It does not become the source of truth for Canonical Knowledge. Canonical promotion remains a private BAI Development OS Git change reviewed and merged through the normal development flow.
+## 9. Completion Direction
 
-## 7. Completion Direction
-
-TASK-017 is complete only when it can explain why knowledge is useful/harmful/uncertain/stale/scope-limited; preserve rejected knowledge; safely distribute and rollback versioned knowledge; and exchange federated Evidence without default Consumer-content collection or weakened governance floors.
+TASK-017 completion requires explainable knowledge usefulness/harm/uncertainty/scope, rejected-pattern memory, reproducibility, governed promotion/demotion/rollback, privacy-minimized federation and successful integration without weakening standalone Consumer runtime boundaries.

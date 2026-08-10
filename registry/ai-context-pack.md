@@ -6,8 +6,8 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Next Task: `TASK-016 Resilience, Recovery & Scalability Certification OS / NEXT / NOT_STARTED / NOT_AUTHORIZED`; first planned slice = `Phase 0 Consumer Knowledge Capture Bridge (Pattern C)`
-- Planned after TASK-016: `TASK-017 Knowledge Evolution & Federated Evidence Governance OS / NOT_STARTED / NOT_AUTHORIZED`
+- Next Task: `TASK-016 Resilience, Recovery & Scalability Certification OS / NEXT / NOT_STARTED / NOT_AUTHORIZED`; first planned slice = `Phase 0 Consumer Knowledge Capture & Contract Foundation`
+- Interleaved planned route: `TASK-017 Phase 0 Pilot Transport` after TASK-016 Phase 0; advanced TASK-017 after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
 ## Current subsystem map
@@ -48,11 +48,15 @@ For local-only work, do not load or enable DistributedOS unless topology require
 
 ## TASK-016 planning context
 
-TASK-016 is not authorized for implementation. **Read `tasks/TASK-016/TASK-016.summary.md` and then `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md` first.** Phase 0 is the planned first slice: Pattern C manual ZIP intake for immediate BAI VIDEO PRODUCTION knowledge capture. It does not deploy the Hub.
+TASK-016 is not authorized for implementation. Read `tasks/TASK-016/TASK-016.summary.md` and `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md` first. Phase 0 keeps Pattern C first and adds standalone Consumer Product contracts: Runtime Independence, Consumer Evidence Integration Kit, external CredentialProvider, Public Ingestion API/Privacy/Trust and Mock Hub/Contract Test specification. It does not deploy the production Hub.
 
-After Phase 0, TASK-016's bounded purpose remains certification of the already-completed OS under reproducible failure, recovery, mixed-version and sustained-load scenarios. Prefer deterministic simulation first; real cluster/lab execution is optional evidence and requires existing Integration/Extension authorization. Production infrastructure is not TASK-016 authority.
+After Phase 0, planning routes to TASK-017 Phase 0 Pilot Transport before returning to TASK-016 Phase 1+. TASK-016 then certifies the real Hub/client/outbox/credential path under deterministic failure, recovery, mixed-version, load/cost and DR scenarios without becoming Hub infrastructure authority.
 
 
 ## TASK-017 planning context
 
-TASK-017 comes from BAI CREATIVE OS audit feedback plus the Consumer Knowledge Evolution refinement. Read `tasks/TASK-017/TASK-017.summary.md` and `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md` before broader history. Pattern A Knowledge Hub uses PostgreSQL and one-VPS/Docker Compose under a 3,000 JPY/month hard ceiling; Pattern B local direct ingestion is intentionally later. It must reuse Security/Release/Conformance/Maintenance/Extension/Calibration primitives, keep Consumer data local by default, and never convert score/frequency/AI inference into authorization.
+TASK-017 Phase 0 is now a bounded Owner-reprioritized Pilot Transport Slice after TASK-016 Phase 0. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
+
+Hub v1 uses PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Client/source is assumed open/inspectable; no embedded shared secret is allowed. Consumer credentials are externalized through a generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager as its Product-specific provider. Generated Evidence Client code becomes Product-owned and requires no BAI Development OS runtime package. Hub/credential failure must never block primary Product function.
+
+Advanced TASK-017 work resumes after TASK-016 resilience evidence. Pattern B direct local ingestion remains late. Score/frequency/runtime telemetry/AI inference never becomes promotion authority.
