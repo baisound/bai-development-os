@@ -304,3 +304,19 @@ The external audit was performed against a 2026-07-31 snapshot and is partially 
 | OP-100 | CREATIVE/Video Production domain metric provider for QA/re-edit/rework/work-time Evidence | Roadmap reserved | TASK-017 |
 
 TASK-016 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`. TASK-017 is queued after TASK-016 and is also `NOT_STARTED / NOT_AUTHORIZED`. No TASK-018 is created.
+
+
+## Consumer Knowledge Evolution Fast-Track Addendum — 2026-08-11
+
+This addendum preserves TASK-016/017 numbering while preventing knowledge loss from already-running BAI VIDEO PRODUCTION. Pattern C manual ZIP ingestion is a TASK-016 Phase 0 enabling bridge; Pattern A Hub is TASK-017 automation; Pattern B direct local ingestion is deferred.
+
+| ID | Improvement | Status | Target |
+|---|---|---|---|
+| OP-101 | Source-neutral Knowledge Evidence / Candidate / Snapshot contracts usable by A/B/C | Planning reserved | TASK-016 Phase 0 -> TASK-017 core |
+| OP-102 | Pattern C manual ZIP intake, provenance recovery, secret/privacy exclusion and Knowledge Intake Package | Fast-track planning reserved | TASK-016 Phase 0 |
+| OP-103 | First BAI VIDEO PRODUCTION knowledge extraction with reusable/rejected-pattern review | Fast-track planning reserved | TASK-016 Phase 0 |
+| OP-104 | PostgreSQL-backed one-VPS Knowledge Hub with evidence-submit-only producer identity and idempotent submission | Roadmap reserved | TASK-017 |
+| OP-105 | Common normalization/generalization/dedup/conflict/supersession and governed promotion | Roadmap reserved | TASK-017 |
+| OP-106 | Direct local adapter over the proven Common Ingestion Core | Deferred roadmap | TASK-017 late |
+
+Knowledge Hub v1 target infrastructure cost is 1,500–2,500 JPY/month with a hard ceiling of 3,000 JPY/month. Canonical Knowledge remains private-Git authoritative. No TASK-018 is created.

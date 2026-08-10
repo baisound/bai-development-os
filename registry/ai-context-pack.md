@@ -6,7 +6,7 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Next Task: `TASK-016 Resilience, Recovery & Scalability Certification OS / NEXT / NOT_STARTED / NOT_AUTHORIZED`
+- Next Task: `TASK-016 Resilience, Recovery & Scalability Certification OS / NEXT / NOT_STARTED / NOT_AUTHORIZED`; first planned slice = `Phase 0 Consumer Knowledge Capture Bridge (Pattern C)`
 - Planned after TASK-016: `TASK-017 Knowledge Evolution & Federated Evidence Governance OS / NOT_STARTED / NOT_AUTHORIZED`
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
@@ -48,9 +48,11 @@ For local-only work, do not load or enable DistributedOS unless topology require
 
 ## TASK-016 planning context
 
-TASK-016 is not authorized for implementation. Its bounded purpose is to certify the already-completed OS under reproducible failure, recovery, mixed-version and sustained-load scenarios. Prefer deterministic simulation first; real cluster/lab execution is optional evidence and requires existing Integration/Extension authorization. Production infrastructure is not TASK-016 authority.
+TASK-016 is not authorized for implementation. **Read `tasks/TASK-016/TASK-016.summary.md` and then `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md` first.** Phase 0 is the planned first slice: Pattern C manual ZIP intake for immediate BAI VIDEO PRODUCTION knowledge capture. It does not deploy the Hub.
+
+After Phase 0, TASK-016's bounded purpose remains certification of the already-completed OS under reproducible failure, recovery, mixed-version and sustained-load scenarios. Prefer deterministic simulation first; real cluster/lab execution is optional evidence and requires existing Integration/Extension authorization. Production infrastructure is not TASK-016 authority.
 
 
 ## TASK-017 planning context
 
-TASK-017 comes from BAI CREATIVE OS audit feedback adjudicated against the current KnowledgeOS. Read its summary and adjudication before the historical audit. It must reuse Security/Release/Conformance/Maintenance/Extension/Calibration primitives, keep Consumer data local by default, and never convert score/frequency/AI inference into authorization.
+TASK-017 comes from BAI CREATIVE OS audit feedback plus the Consumer Knowledge Evolution refinement. Read `tasks/TASK-017/TASK-017.summary.md` and `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md` before broader history. Pattern A Knowledge Hub uses PostgreSQL and one-VPS/Docker Compose under a 3,000 JPY/month hard ceiling; Pattern B local direct ingestion is intentionally later. It must reuse Security/Release/Conformance/Maintenance/Extension/Calibration primitives, keep Consumer data local by default, and never convert score/frequency/AI inference into authorization.

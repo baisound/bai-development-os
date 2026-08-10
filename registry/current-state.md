@@ -21,9 +21,9 @@
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `NEXT / NOT_STARTED / NOT_AUTHORIZED`
 - TASK-017: `NOT_STARTED / NOT_AUTHORIZED` — queued after TASK-016
-- Next canonical development route: `TASK-016 — Resilience, Recovery & Scalability Certification OS`
+- Next canonical development route: `TASK-016 Phase 0 — Consumer Knowledge Capture Bridge (Pattern C Fast Track)`
 - Permanent model-routing vendor policy: unchanged
-- Last Updated: `2026-08-10`
+- Last Updated: `2026-08-11`
 
 ## Current Product Boundary
 
@@ -55,9 +55,17 @@ Production-specific remote broker implementations, real remote workers/labs, mul
 
 ## Current TASK-016 Proposed Baseline
 
-TASK-016 is planning-only: deterministic simulation, bounded fault injection, convergence/reconciliation, recovery-objective evidence, mixed-version compatibility, load/soak/capacity/cost certification, backup/restore/DR drills, incident evidence reconstruction and resilience certification. Simulation/SANDBOX evidence cannot be relabeled REAL, and production-destructive injection requires separate Owner authorization.
+TASK-016 remains planning-only and unauthorized. Its **first planned slice** is `Phase 0 — Consumer Knowledge Capture Bridge`, a bounded Pattern C manual ZIP Fast Track so already-running BAI VIDEO PRODUCTION knowledge can be captured before Knowledge Hub infrastructure exists. Phase 0 defines common Evidence/Candidate/Snapshot contracts, provenance/exclusion rules and first Consumer intake; it does not deploy the Hub and does not replace TASK-016's original resilience responsibility.
+
+After Phase 0, TASK-016 continues deterministic simulation, bounded fault injection, convergence/reconciliation, recovery-objective evidence, mixed-version compatibility, load/soak/capacity/cost certification, backup/restore/DR drills, incident evidence reconstruction and resilience certification. Simulation/SANDBOX evidence cannot be relabeled REAL, and production-destructive injection requires separate Owner authorization.
+
+Planning detail: `tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md`.
 
 
 ## Current TASK-017 Planning Baseline
 
 TASK-017 is planning-only and queued after TASK-016. It extends the completed KnowledgeOS with explicit Rejected Pattern memory, multi-dimensional Knowledge Quality Evidence, typed Critic/Owner/Undo/Tester/recurrence lineage, cross-Project reproducibility, hard Safety/Security/Rights/Privacy gates, signed/versioned Knowledge publication/rollback, and privacy-minimized federated Evidence. Score/frequency/AI inference never becomes promotion authority. Consumer creative/personal/confidential content is not collected by default.
+
+Source sequencing is now explicit: Pattern C is proven first in TASK-016 Phase 0; Pattern A Knowledge Hub follows in TASK-017; Pattern B direct local automation is late. Hub v1 uses PostgreSQL on one VPS/Docker Compose with a hard infrastructure ceiling of 3,000 JPY/month. Canonical Knowledge remains private-Git authoritative.
+
+Planning detail: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`.

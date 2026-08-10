@@ -1,0 +1,168 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.local/schemas/knowledge/knowledge-evidence.schema.json",
+  "title": "BAI Knowledge Evidence",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "evidence_type",
+    "producer",
+    "observation",
+    "provenance",
+    "sensitivity",
+    "processing_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "evidence_id": {
+      "type": "string",
+      "minLength": 8
+    },
+    "evidence_type": {
+      "type": "string",
+      "enum": [
+        "success_pattern",
+        "rejected_pattern",
+        "regression",
+        "incident",
+        "recovery",
+        "user_feedback",
+        "ui_ux",
+        "performance",
+        "security",
+        "privacy",
+        "rights",
+        "cost",
+        "architecture_decision",
+        "implementation_decision",
+        "test_result",
+        "critic_finding",
+        "judge_decision"
+      ]
+    },
+    "producer": {
+      "type": "object",
+      "required": [
+        "project_id"
+      ],
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "task_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "product_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "observation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resolution": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "outcome": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "candidate_scope": {
+      "type": "string",
+      "enum": [
+        "project",
+        "domain",
+        "product-family",
+        "organization",
+        "universal"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "completeness"
+      ],
+      "properties": {
+        "completeness": {
+          "type": "string",
+          "enum": [
+            "COMPLETE",
+            "PARTIAL",
+            "UNVERIFIED"
+          ]
+        },
+        "source_commit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "architecture_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "snapshot_sha256": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "observed_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        }
+      },
+      "additionalProperties": false
+    },
+    "sensitivity": {
+      "type": "string",
+      "enum": [
+        "PUBLIC",
+        "INTERNAL",
+        "CONFIDENTIAL",
+        "RESTRICTED"
+      ]
+    },
+    "payload_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "processing_status": {
+      "type": "string",
+      "enum": [
+        "RECEIVED",
+        "VALIDATED",
+        "CANDIDATE_CREATED",
+        "REJECTED",
+        "ARCHIVED",
+        "QUARANTINED"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
