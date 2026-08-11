@@ -9,7 +9,7 @@ const read=rel=>fs.readFileSync(path.join(root,rel),'utf8');
 
 test('deployment compose is single-VPS shaped and does not expose database or API by default',()=>{
  const compose=read('deploy/knowledge-hub/compose.yaml');assert.match(compose,/postgres:16\.14-alpine/);assert.match(compose,/knowledge-api:/);assert.match(compose,/caddy:/);assert.doesNotMatch(compose,/5432:5432/);assert.doesNotMatch(compose,/8787:8787/);assert.match(compose,/profiles: \["public"\]/);
- const rehearsal=read('deploy/knowledge-hub/compose.rehearsal.yaml');assert.match(rehearsal,/127\.0\.0\.1:8787:8787/);
+ const rehearsal=read('deploy/knowledge-hub/compose.rehearsal.yaml');assert.doesNotMatch(rehearsal,/ports:/);assert.match(rehearsal,/expose:/);assert.match(rehearsal,/\"8787\"/);
 });
 
 test('deployment files contain safety controls and no embedded API credential',()=>{

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-for cmd in docker curl sha256sum; do command -v "$cmd" >/dev/null 2>&1 || { echo "$cmd is required" >&2; exit 2; }; done
+for cmd in docker sha256sum; do command -v "$cmd" >/dev/null 2>&1 || { echo "$cmd is required" >&2; exit 2; }; done
 docker compose version >/dev/null 2>&1 || { echo "docker compose plugin is required" >&2; exit 2; }
 
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -29,13 +29,19 @@ compose=(docker compose --project-name "$project" --env-file "$env_file" -f "$he
 cleanup(){ set +e; "${compose[@]}" down -v --remove-orphans >/dev/null 2>&1; rm -f "$env_file" "$backup_file" "$backup_file.sha256"; }
 trap cleanup EXIT INT TERM
 
+wait_for_ready() {
+  local attempts="$1"
+  for _ in $(seq 1 "$attempts"); do
+    if "${compose[@]}" exec -T knowledge-api node deploy/knowledge-hub/runtime/healthcheck.mjs >/dev/null 2>&1; then
+      return 0
+    fi
+    sleep 2
+  done
+  return 1
+}
+
 "${compose[@]}" up -d --build postgres knowledge-api
-ready=0
-for _ in $(seq 1 60); do
-  if curl -fsS --max-time 2 http://127.0.0.1:8787/readyz >/dev/null 2>&1; then ready=1; break; fi
-  sleep 2
-done
-[ "$ready" -eq 1 ] || { echo "Knowledge Hub did not become ready" >&2; "${compose[@]}" logs --no-color knowledge-api postgres >&2; exit 1; }
+wait_for_ready 60 || { echo "Knowledge Hub did not become ready" >&2; "${compose[@]}" logs --no-color knowledge-api postgres >&2; exit 1; }
 
 "${compose[@]}" exec -T knowledge-api node deploy/knowledge-hub/runtime/rehearsal-client.mjs
 
@@ -53,12 +59,7 @@ restored_count="$("${compose[@]}" exec -T postgres psql -U bai_hub -d "$restore_
 "${compose[@]}" exec -T postgres dropdb -U bai_hub "$restore_db"
 
 "${compose[@]}" restart knowledge-api >/dev/null
-ready=0
-for _ in $(seq 1 30); do
-  if curl -fsS --max-time 2 http://127.0.0.1:8787/readyz >/dev/null 2>&1; then ready=1; break; fi
-  sleep 2
-done
-[ "$ready" -eq 1 ] || { echo "Knowledge Hub failed readiness after restart" >&2; exit 1; }
+wait_for_ready 30 || { echo "Knowledge Hub failed readiness after restart" >&2; exit 1; }
 
 # A successful result also proves that the isolated Compose resources can be torn down.
 "${compose[@]}" down -v --remove-orphans >/dev/null

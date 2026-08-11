@@ -15,7 +15,8 @@ for(const rel of [
 ]) if(!fs.existsSync(path.join(root,rel))) failures.push(`${rel}: missing`);
 must('deploy/knowledge-hub/compose.yaml',/postgres:16\.14-alpine/,'PostgreSQL major image missing');
 must('deploy/knowledge-hub/compose.yaml',/profiles:\s*\["public"\]/,'public TLS activation must be explicit profile');
-must('deploy/knowledge-hub/compose.rehearsal.yaml',/127\.0\.0\.1:8787:8787/,'rehearsal API must bind loopback only');
+mustNot('deploy/knowledge-hub/compose.rehearsal.yaml',/ports:/,'rehearsal API must not publish a host port');
+must('deploy/knowledge-hub/compose.rehearsal.yaml',/expose:[\s\S]*8787/,'rehearsal API internal port declaration missing');
 must('deploy/knowledge-hub/compose.yaml',/PGHOST: postgres[\s\S]*PGPASSWORD:/,'split PostgreSQL secret fields missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_HOST_AUTH_METHOD: "scram-sha-256"/,'SCRAM host authentication missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_INITDB_ARGS: "--data-checksums"/,'data checksum init missing');
