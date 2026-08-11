@@ -1,5 +1,3 @@
-BEGIN;
-
 CREATE TABLE IF NOT EXISTS evidence_events (
   product_id text NOT NULL,
   installation_id text NOT NULL,
@@ -36,5 +34,3 @@ CREATE TABLE IF NOT EXISTS client_policies (
   policy_json jsonb NOT NULL,
   updated_at timestamptz NOT NULL DEFAULT now()
 );
-
-COMMIT;

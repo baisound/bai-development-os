@@ -20,8 +20,8 @@
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- TASK-017: `ACTIVE / PHASE0_LOCAL_FOUNDATION_ACCEPTED / PRODUCTION_PILOT_PENDING` — paid/public production activation remains separately gated
-- Current development route: `TASK-017 Phase 0 — production-deployment/pilot preparation after accepted Local Hub Foundation; public activation requires separate gate`
+- TASK-017: `ACTIVE / PHASE0_DEPLOYMENT_READINESS_ACCEPTED / LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING` — paid/public production activation remains separately gated
+- Current development route: `TASK-017 Phase 0 — live PostgreSQL/Docker rehearsal, then separately authorized production endpoint + BAI VIDEO PRODUCTION TASK-036 pilot`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-11`
 
@@ -36,7 +36,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1255 / 1255 PASS` (TASK-017 Phase 0 Local Hub Foundation; TASK-016 Phase 0 baseline 1238/1238)
+- Full BAI Development OS: `1267 / 1267 PASS` (TASK-017 Phase 0 Deployment Readiness; prior Local Hub baseline 1255/1255)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
@@ -44,11 +44,11 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Roadmap Consolidation: `56 / 56 PASS` after CREATIVE OS Knowledge Audit refinement synchronization
 - Root `DistributedOS` export: `PASS`
 - TASK-016 Phase 0 Knowledge Evolution focused suite: `50 / 50 PASS`
-- TASK-017 Phase 0 Knowledge Hub focused suite: `17 / 17 PASS`
+- TASK-017 Phase 0 Knowledge Hub focused suite: `29 / 29 PASS`
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `541 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `546 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -64,8 +64,8 @@ TASK-016 Phase 0 is `COMPLETED`. RC2 froze canonical Consumer Evidence Event/Bat
 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`. Production Hub infrastructure is not a Phase 0 blocker and moves to TASK-017 Phase 0/deployment scope. TASK-016 Phase 1+ remains unauthorized until the Hub/client pilot produces resilience targets/evidence.
 
 
-## TASK-017 Phase 0 Local Hub Foundation Baseline
+## TASK-017 Phase 0 Deployment Readiness Baseline
 
-TASK-017 Phase 0 is `ACTIVE`. The Owner-authorized local implementation gate is accepted by Judge as `LOCAL_FOUNDATION_ACCEPTED / PHASE0_REMAINS_ACTIVE`. Implemented surfaces include Common Ingestion, server-derived AuthContext/Product binding, stable Event idempotency, Event-level Receipt/partial reject, Client Policy, per-subject rate limiting, retention, an in-memory deterministic repository, PostgreSQL DDL + injected-query adapter, loopback HTTP reference and non-promoting Candidate handoff.
+TASK-017 Phase 0 is `ACTIVE`. Local Hub Foundation and the subsequent non-production Deployment Readiness slice are accepted. The current implementation adds one-VPS Docker Compose packaging, PostgreSQL runtime/migrations, server-side hashed API-key credential lifecycle, `/healthz`/`/readyz`, explicit-public-profile Caddy TLS template, backup and rehearsal-only restore controls while preserving Common Ingestion/idempotency/Receipt/Policy/backfill/Candidate boundaries.
 
-The public HTTP path does not trust Client-supplied provenance labels. Object Storage backfill classification is an internal trusted route. No live PostgreSQL server, paid VPS, public DNS/TLS, production token, Product TASK-036 code or real-user Evidence collection is claimed. Those remain separate deployment/security/budget and Product-pilot gates.
+Public HTTP Clients still cannot self-assign Trust or backfill provenance. No live Docker/PostgreSQL execution, paid VPS, public DNS/TLS, real production Product credential or real-user Evidence collection is claimed. Those remain separate environment/deployment/security/budget and Product-pilot gates.

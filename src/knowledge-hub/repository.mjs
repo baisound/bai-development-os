@@ -28,6 +28,7 @@ export class InMemoryEvidenceRepository {
     return [...this.#events.values()].filter(r => (!productId || r.product_id === productId) && (!installationId || r.installation_id === installationId));
   }
   async listReceipts() { return [...this.#receipts]; }
+  async checkReady() { return { ready: true, backend: 'memory' }; }
   async pruneExpired(nowIso) {
     let removed = 0;
     const now = Date.parse(nowIso);

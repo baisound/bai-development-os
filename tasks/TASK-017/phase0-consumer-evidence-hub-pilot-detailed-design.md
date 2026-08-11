@@ -1,6 +1,6 @@
-# TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.2
+# TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.3
 
-Status: `ACTIVE / LOCAL_HUB_FOUNDATION_ACCEPTED / PRODUCTION_PILOT_PENDING`
+Status: `ACTIVE / DEPLOYMENT_READINESS_IMPLEMENTED / LIVE_POSTGRES_AND_PRODUCT_PILOT_PENDING`
 Parent Task: `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS`
 Entry: TASK-016 Phase 0 contract/capture foundation complete and approved for next route.
 Exit: a bounded BAI VIDEO PRODUCT pilot has produced real operational Evidence suitable for Candidate review and TASK-016 resilience certification. Local Hub Foundation is an earlier internal gate and does not claim Pilot exit.
@@ -47,6 +47,23 @@ The 2026-08-11 Owner continuation authorizes implementation through a local, det
 - no automatic Knowledge promotion.
 
 Paid/public deployment, DNS/TLS, production token issuance and real Product user Evidence remain outside this gate.
+
+
+
+## 3.2 Deployment Readiness gate
+
+The Owner continuation on 2026-08-11 authorizes a non-production deployment-readiness slice after Local Hub Foundation acceptance. It SHALL provide:
+
+- single-VPS Docker Compose topology with PostgreSQL private to the Compose network,
+- explicit `public` reverse-proxy profile so public ports are not activated by ordinary rehearsal,
+- production-compatible runtime launcher with injected PostgreSQL driver and automatic immutable migrations,
+- server-side high-entropy API key issuance with only derived secret material stored,
+- `/healthz` process liveness and `/readyz` dependency readiness separation,
+- backup plus fail-safe restore rehearsal scripts,
+- no embedded Product/DB credential,
+- static/local contract verification when Docker/PostgreSQL are unavailable.
+
+This gate does not authorize VPS purchase, DNS changes, public TLS activation, production credential distribution or real-user Evidence collection. A live PostgreSQL integration rehearsal remains an environment-dependent evidence gate before production activation.
 
 ### 17.0.2 Hub MVP
 

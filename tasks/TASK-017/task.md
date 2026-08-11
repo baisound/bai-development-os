@@ -1,6 +1,6 @@
 # TASK-017 — Knowledge Evolution & Federated Evidence Governance OS
 
-Status: `ACTIVE / PHASE0_LOCAL_FOUNDATION_ACCEPTED / PRODUCTION_PILOT_PENDING`
+Status: `ACTIVE / PHASE0_DEPLOYMENT_READINESS_ACCEPTED / LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING`
 Roadmap Position: `PHASE 0 REPRIORITIZED AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`
 Development Profile: `DEV_4_FOUNDATION_CRITICAL` (expected; must be re-evaluated at design gate)
 Parent Scope: Architecture Ver.2.28 Part XV, Post-CREATIVE-OS Knowledge Audit Roadmap Refinement Ver.1.0, and Consumer Knowledge Evolution Roadmap Refinement Ver.1.2.
@@ -26,4 +26,4 @@ The remaining advanced TASK-017 scope stays after TASK-016 resilience evidence.
 
 Read first: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md` for the early slice.
 
-Implementation authorization: `TASK-017 PHASE 0 LOCAL IMPLEMENTATION ONLY — OWNER AUTHORIZED 2026-08-11`. Production VPS/DNS/TLS/credential activation remains `NOT_AUTHORIZED`.
+Implementation authorization: `TASK-017 PHASE 0 LOCAL + NON-PRODUCTION DEPLOYMENT READINESS — OWNER AUTHORIZED 2026-08-11`. Production VPS/DNS/TLS/real credential activation remains `NOT_AUTHORIZED`.

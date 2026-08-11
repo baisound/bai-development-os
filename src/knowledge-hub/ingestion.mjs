@@ -65,6 +65,15 @@ export function createCommonIngestionCore({ repository, rateLimiter = null, cloc
       const auth = requireScope(authContext, 'policy:read');
       return (await repo.getPolicy(auth.product_id)) ?? DEFAULT_CLIENT_POLICY;
     },
+    async checkReady() {
+      if (typeof repo.checkReady !== 'function') return { ready: false, backend: 'unknown', reason: 'repository-readiness-unsupported' };
+      try {
+        const result = await repo.checkReady();
+        return { ready: result?.ready === true, backend: result?.backend ?? 'unknown' };
+      } catch {
+        return { ready: false, backend: 'unknown', reason: 'repository-check-failed' };
+      }
+    },
     async pruneExpired() {
       if (typeof repo.pruneExpired !== 'function') throw new KnowledgeHubError('HUB_RETENTION_UNSUPPORTED', 'Repository does not support pruning', { status: 501 });
       return repo.pruneExpired(nowIso(clock));

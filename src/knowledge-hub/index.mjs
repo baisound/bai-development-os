@@ -6,3 +6,5 @@ export * from './postgres-repository.mjs';
 export * from './ingestion.mjs';
 export * from './aggregation.mjs';
 export * from './http-server.mjs';
+export * from './api-key-auth.mjs';
+export * from './postgres-migrations.mjs';

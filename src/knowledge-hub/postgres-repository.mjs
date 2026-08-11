@@ -33,6 +33,10 @@ VALUES ($1,$2,$3,$4,$5,$6::jsonb,$7::timestamptz)`, [record.receipt.receipt_id, 
       await run(`INSERT INTO client_policies(product_id, policy_json, updated_at)
 VALUES($1,$2::jsonb,now()) ON CONFLICT(product_id) DO UPDATE SET policy_json=EXCLUDED.policy_json, updated_at=now()`, [productId, JSON.stringify(policy)]);
     },
+    async checkReady() {
+      const result = await run('SELECT 1 AS ready');
+      return { ready: result?.rows?.[0]?.ready === 1, backend: 'postgres' };
+    },
     async pruneExpired(nowIso) {
       const result = await run('DELETE FROM evidence_events WHERE expires_at IS NOT NULL AND expires_at <= $1::timestamptz', [nowIso]);
       return result?.rowCount ?? 0;

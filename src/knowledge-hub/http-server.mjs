@@ -1,7 +1,7 @@
 import http from 'node:http';
 import { KnowledgeHubError } from './errors.mjs';
 
-function sendJson(res,status,value,headers={}){const body=JSON.stringify(value);res.writeHead(status,{'content-type':'application/json; charset=utf-8','content-length':Buffer.byteLength(body),...headers});res.end(body);}
+function sendJson(res,status,value,headers={}){const body=JSON.stringify(value);res.writeHead(status,{'content-type':'application/json; charset=utf-8','content-length':Buffer.byteLength(body),'cache-control':'no-store','x-content-type-options':'nosniff',...headers});res.end(body);}
 async function readJson(req,limit){const chunks=[];let size=0;for await(const chunk of req){size+=chunk.length;if(size>limit)throw new KnowledgeHubError('HUB_REQUEST_TOO_LARGE','Request body too large',{status:413});chunks.push(chunk);}try{return JSON.parse(Buffer.concat(chunks).toString('utf8'));}catch{throw new KnowledgeHubError('HUB_JSON_INVALID','Invalid JSON',{status:400});}}
 
 export function createKnowledgeHubHttpServer({core,authenticate,bodyLimitBytes=1024*1024}={}){
@@ -10,6 +10,7 @@ export function createKnowledgeHubHttpServer({core,authenticate,bodyLimitBytes=1
  const server=http.createServer(async(req,res)=>{try{
   const url=new URL(req.url,'http://localhost');
   if(req.method==='GET'&&url.pathname==='/healthz'){sendJson(res,200,{status:'ok',service:'bai-knowledge-hub'});return;}
+  if(req.method==='GET'&&url.pathname==='/readyz'){const ready=typeof core.checkReady==='function'?await core.checkReady():{ready:false,backend:'unknown'};sendJson(res,ready.ready?200:503,{status:ready.ready?'ready':'not-ready',service:'bai-knowledge-hub',backend:ready.backend??'unknown'});return;}
   const authContext=await authenticate(req);
   if(req.method==='GET'&&url.pathname==='/v1/client-policy'){sendJson(res,200,await core.getClientPolicy({authContext}));return;}
   if(req.method==='POST'&&url.pathname==='/v1/evidence/batch'){

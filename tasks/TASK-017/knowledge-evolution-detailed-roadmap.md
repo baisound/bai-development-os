@@ -39,7 +39,7 @@ Read: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
 
 Phase 0 implementation is intentionally split into two operational gates:
 
-1. **Local Hub Foundation** — Common Ingestion, server-derived auth context, Event idempotency, Receipt/Policy, retention, backfill, PostgreSQL schema/adapter contract and deterministic tests. This is authorized now.
+1. **Local Hub Foundation** — Common Ingestion, server-derived auth context, Event idempotency, Receipt/Policy, retention, backfill, PostgreSQL schema/adapter contract and deterministic tests. This local foundation is accepted. Non-production deployment readiness is also authorized and implemented; live PostgreSQL/public activation remains gated.
 2. **Production Activation** — paid VPS provisioning, DNS/TLS, production credential issuance, public endpoint and real user Evidence collection. This is not authorized by the local implementation record.
 
 The local foundation SHALL use an injected PostgreSQL query boundary so the reusable Core does not need to embed credentials or force a database client into Consumer runtime code. Production deployment may supply the concrete PostgreSQL driver at the application boundary.

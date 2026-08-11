@@ -1,21 +1,55 @@
-# BAI Knowledge Hub — Phase 0 Local Foundation Deployment Notes
+# BAI Knowledge Hub — TASK-017 Phase 0 Deployment Readiness
 
-Status: `LOCAL FOUNDATION ONLY / PRODUCTION ACTIVATION NOT AUTHORIZED`.
+Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 
-The reusable Core contains no production credential. PostgreSQL integration is exposed through an injected `query(sql, params)` boundary in `src/knowledge-hub/postgres-repository.mjs`; the production deployment layer chooses and configures the concrete PostgreSQL driver.
+## Included
 
-Initial DDL: `postgres/001_initial.sql`.
+- `compose.yaml` — one-VPS topology. PostgreSQL and API are private by default; Caddy requires explicit `public` profile.
+- `compose.rehearsal.yaml` — loopback-only API exposure for a local/VPS rehearsal.
+- `Dockerfile` + `runtime/` — PostgreSQL-backed Hub runtime; deployment-only `pg` dependency.
+- `postgres/001_initial.sql`, `002_auth_and_operations.sql` — immutable migrations.
+- `Caddyfile` — HTTPS reverse proxy template for a later public gate.
+- `scripts/backup-postgres.sh` — restrictive custom-format backup + SHA-256.
+- `scripts/restore-rehearsal.sh` — restore rehearsal only; safety suffix + acknowledgement required.
 
-Do not place passwords, bearer tokens or Product API keys in this directory. VPS purchase, public DNS/TLS, production token issuance and real Consumer Evidence collection require a later deployment/security/budget gate.
-
-## Local HTTP smoke
-
-The local in-memory HTTP foundation can be run only with an explicitly supplied development credential:
+## Rehearsal sequence when Docker is available
 
 ```bash
-BAI_KNOWLEDGE_HUB_DEV_TOKEN='<temporary-local-token>' \
-BAI_KNOWLEDGE_HUB_PRODUCT_ID='bai-video-production' \
-npm run knowledge-hub:local
+cd deploy/knowledge-hub
+cp .env.example .env
+# Replace placeholders locally; never commit .env.
+chmod 600 .env
+docker compose -f compose.yaml -f compose.rehearsal.yaml --env-file .env up -d --build
+curl -fsS http://127.0.0.1:8787/healthz
+curl -fsS http://127.0.0.1:8787/readyz
 ```
 
-This is loopback-only and intentionally not a production process manager, TLS terminator or durable persistence mode.
+The base Compose does not host-publish PostgreSQL or the API. `compose.rehearsal.yaml` publishes only API loopback.
+
+## Issue a Product API credential for a controlled environment
+
+Only after the relevant credential gate is authorized:
+
+```bash
+# Run inside the knowledge-api image/container with DATABASE_URL available.
+BAI_HUB_CREDENTIAL_PRODUCT_ID=bai-video-production \
+BAI_HUB_CREDENTIAL_SUBJECT_ID=<installation-or-pilot-subject> \
+node deploy/knowledge-hub/runtime/issue-api-key.mjs
+```
+
+The raw key is displayed once. Store it in the Product-selected password manager. The Hub stores only derived secret material.
+
+## Public profile — DO NOT ACTIVATE YET
+
+Public activation is intentionally separate:
+
+```bash
+# Requires Owner/security/budget gate + real DNS first.
+docker compose --profile public --env-file .env up -d
+```
+
+Do not run this merely to test locally.
+
+## Current environment limitation
+
+The ChatGPT execution environment used for this implementation did not expose Docker or a live PostgreSQL server. Therefore the repository contains a production-compatible deployment package and deterministic tests, but **does not claim a live PostgreSQL migration/backup/TLS rehearsal**. That evidence is the next environment-dependent gate.

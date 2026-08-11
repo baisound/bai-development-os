@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-017 Phase 0 / ACTIVE`; Local Hub Foundation = `ACCEPTED`; production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
+- Current route: `TASK-017 Phase 0 / ACTIVE`; Deployment Readiness = `ACCEPTED`; live PostgreSQL/Docker + production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
 ## Current subsystem map
@@ -32,13 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1255 / 1255 PASS` (TASK-016 Phase 0 baseline 1238/1238; prior pre-Phase-0 baseline 1188/1188)
+- Full OS: `1267 / 1267 PASS` (TASK-017 Deployment Readiness; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Local Hub focused: `17 / 17 PASS`; blocking Critic findings: `0` for current local gate
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `29 / 29 PASS`; Deployment Readiness Judge: `DEPLOYMENT_READINESS_ACCEPTED / PHASE0_REMAINS_ACTIVE`; blocking Critic findings: `0`
 
 ## Loading guidance
 
@@ -58,11 +58,11 @@ BAI VIDEO PRODUCTION is referenced by immutable Git commit/tree and explicit key
 
 TASK-017 Phase 0 is `ACTIVE`. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`, then the Local Hub Implementation/Critic/Judge records.
 
-The accepted Local Hub Foundation implements Common Ingestion, server-derived AuthContext/Product binding, stable Event idempotency, Event-level Receipt/partial reject, Client Policy, rate limiting, retention, PostgreSQL DDL + injected-query adapter, loopback HTTP and non-promoting Candidate handoff. Public Clients cannot self-assign Trust or backfill provenance. No production token/DB credential is embedded in Core.
+The accepted Deployment Readiness baseline builds on Local Hub Foundation with one-VPS Docker Compose packaging, private PostgreSQL/API default networking, production-compatible PostgreSQL runtime and immutable migration checksums, server-side hashed API-key credential lifecycle, liveness/readiness separation, explicit-public-profile Caddy TLS template, and safe backup/restore-rehearsal tooling. Public Clients cannot self-assign Trust or backfill provenance. No production key/DB secret is committed.
 
-Hub v1 remains PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling, but paid/public activation is not authorized by the local gate. Consumer credentials remain externalized through generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager in Product-owned code. Hub failure must never block primary Product function.
+Hub v1 remains PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Consumer credentials remain externalized through generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager in Product-owned code. Hub failure must never block primary Product function.
 
-Phase 0 remains open for live PostgreSQL/deployment rehearsal and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
+Phase 0 remains open for a live Docker/PostgreSQL rehearsal, separately authorized production activation and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
 
 ## RC2 frozen-contract context
 

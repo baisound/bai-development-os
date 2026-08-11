@@ -1,0 +1,68 @@
+name: bai-knowledge-hub
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?set POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+    volumes:
+      - knowledge_hub_postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [hub_internal]
+
+  knowledge-api:
+    build:
+      context: ../..
+      dockerfile: deploy/knowledge-hub/Dockerfile
+    restart: unless-stopped
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      BAI_KNOWLEDGE_HUB_HOST: 0.0.0.0
+      BAI_KNOWLEDGE_HUB_PORT: 8787
+      BAI_KNOWLEDGE_HUB_RETENTION_DAYS: ${BAI_KNOWLEDGE_HUB_RETENTION_DAYS:-30}
+      BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE: ${BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE:-120}
+      BAI_KNOWLEDGE_HUB_BODY_LIMIT_BYTES: ${BAI_KNOWLEDGE_HUB_BODY_LIMIT_BYTES:-262144}
+      BAI_KNOWLEDGE_HUB_DB_POOL_MAX: ${BAI_KNOWLEDGE_HUB_DB_POOL_MAX:-10}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "deploy/knowledge-hub/runtime/healthcheck.mjs"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+    networks: [hub_internal]
+
+  caddy:
+    image: caddy:2-alpine
+    profiles: ["public"]
+    restart: unless-stopped
+    environment:
+      HUB_DOMAIN: ${HUB_DOMAIN:?set HUB_DOMAIN before public profile activation}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      knowledge-api:
+        condition: service_healthy
+    networks: [hub_internal]
+
+networks:
+  hub_internal:
+    driver: bridge
+
+volumes:
+  knowledge_hub_postgres:
+  caddy_data:
+  caddy_config:
