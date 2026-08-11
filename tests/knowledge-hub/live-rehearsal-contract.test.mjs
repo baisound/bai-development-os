@@ -16,3 +16,13 @@ test('live rehearsal client verifies submit, retry, partial reject, persistence 
  const parsed=spawnSync(process.execPath,['--check','deploy/knowledge-hub/runtime/rehearsal-client.mjs'],{cwd:root,encoding:'utf8'});assert.equal(parsed.status,0,parsed.stderr);
  const shell=spawnSync('bash',['-n','deploy/knowledge-hub/scripts/run-live-rehearsal.sh'],{cwd:root,encoding:'utf8'});assert.equal(shell.status,0,shell.stderr);
 });
+
+test('live rehearsal can emit sanitized machine evidence only after cleanup',async()=>{
+ const script=read('deploy/knowledge-hub/scripts/run-live-rehearsal.sh');assert.match(script,/BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT/);assert.match(script,/cleanup_complete/);assert.match(script,/backup_sha256/);
+ const down=script.indexOf('down -v --remove-orphans >/dev/null',script.indexOf('# A successful result'));const write=script.indexOf('cat > "$tmp_evidence"');assert.ok(down>=0&&write>down,'Evidence must be written only after successful teardown');
+ const {validateLiveRehearsalEvidence}=await import('../../scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs');
+ const good={schema_version:'1.0',result:'LIVE_REHEARSAL_PASS',persisted_and_restored_events:4,backup_sha256:'a'.repeat(64),public_profile_activated:false,cleanup_complete:true,completed_at:'2026-08-11T00:00:00Z'};
+ assert.equal(validateLiveRehearsalEvidence(good).result,'LIVE_REHEARSAL_PASS');
+ assert.throws(()=>validateLiveRehearsalEvidence({...good,public_profile_activated:true}),/public profile/);
+ assert.throws(()=>validateLiveRehearsalEvidence({...good,cleanup_complete:false}),/cleanup/);
+});

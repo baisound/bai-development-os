@@ -23,3 +23,13 @@ test('deployment readiness checker and runtime scripts parse',()=>{
  const check=spawnSync(process.execPath,['scripts/check-knowledge-hub-deployment-readiness.mjs'],{cwd:root,encoding:'utf8'});assert.equal(check.status,0,check.stderr);assert.match(check.stdout,/"status": "PASS"/);
  for(const rel of ['deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/issue-api-key.mjs','deploy/knowledge-hub/runtime/prune-retention.mjs']){const parsed=spawnSync(process.execPath,['--check',rel],{cwd:root,encoding:'utf8'});assert.equal(parsed.status,0,`${rel}: ${parsed.stderr}`);}
 });
+
+test('deployment PostgreSQL configuration supports split secret fields and exact direct driver version',async()=>{
+ const compose=read('deploy/knowledge-hub/compose.yaml');assert.doesNotMatch(compose,/DATABASE_URL:/);assert.match(compose,/PGHOST: postgres/);assert.match(compose,/PGPASSWORD: "\$\{POSTGRES_PASSWORD\}"/);
+ const runtime=JSON.parse(read('deploy/knowledge-hub/runtime/package.json'));assert.equal(runtime.dependencies.pg,'8.13.1');
+ const {postgresPoolConfig}=await import('../../deploy/knowledge-hub/runtime/postgres-config.mjs');
+ const split=postgresPoolConfig({PGHOST:'postgres',PGPORT:'5432',PGDATABASE:'db',PGUSER:'user',PGPASSWORD:'p@ss:# with spaces'},{max:3,applicationName:'test'});
+ assert.equal(split.password,'p@ss:# with spaces');assert.equal(split.host,'postgres');assert.equal(split.port,5432);assert.equal(split.max,3);
+ const url=postgresPoolConfig({DATABASE_URL:'postgresql://example.invalid/db'},{max:1});assert.equal(url.connectionString,'postgresql://example.invalid/db');
+ assert.throws(()=>postgresPoolConfig({PGHOST:'postgres',PGDATABASE:'db',PGUSER:'user'}),/PGPASSWORD is required/);
+});

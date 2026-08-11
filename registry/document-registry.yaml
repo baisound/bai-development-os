@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T09:32:00+09:00'
+registry_generated_at: '2026-08-11T09:42:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 0877d9a8e53bd1a1f7a6f81ace0be3beec46f3f28febafd6f50366f62caef711
-  size_bytes: 8110
+  sha256: 4e663fac0bf1aa5303aa748c8fa7ca2c8a07d0a3997502f35b24f4a05031de5c
+  size_bytes: 8248
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: ef93d47ac067959c2d8d703c6ede0ed580c12c0c33678cf7bdbaa537b387baad
-  size_bytes: 4078
+  sha256: bfa2f972d0f521fbc576dd5dda7283ad5027d7f780688afe2ac735469f9a8bbe
+  size_bytes: 4112
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: a7fae38a5a1dedd235ef278711dd9d6cc7b4ba1990ffc715e5f763f6d7171a13
-  size_bytes: 6627
+  sha256: 8218d39d820ff21101dd6c33be5b2ad4d955cbd8efe28dfb44f52bf1c2d61e8a
+  size_bytes: 6958
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5984,8 +5984,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1025eb49ff6b4b4981fc83f61166b57bebd645438276795fb77ade8484684243
-  size_bytes: 2089
+  sha256: 56240fabca7393e5af77a68ebf67e122ef41578f67eecfb09e943fb22dbf4a36
+  size_bytes: 2088
 - document_id: 6E0658004570CE0F
   path: tasks/TASK-017/TASK-017.summary.md
   title: TASK-017 Summary
@@ -5997,8 +5997,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 8d94c49c6e59b6c9a65daef9867fa5a3ecaf85208e874aea1b185ece733e9f7f
-  size_bytes: 2122
+  sha256: f60473c5bffb5b1f929db05179d8ddec85810f51cd1bf9106b190d2b6720c794
+  size_bytes: 2141
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6037,8 +6037,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: bbbd4eb196546ff74b323460505386134480a92a8d7a5fccab073164cda2fa8d
-  size_bytes: 5826
+  sha256: c58daa83df4aa541a7e3dc976f67a2ce9963b0b6b8b545bf2fb753a32ba5e91e
+  size_bytes: 5844
 - document_id: F98D4889B66968D3
   path: reviews/BAI_Development_OS_Consumer_Knowledge_Three_Role_Roadmap_Review_2026-08-11.md
   title: Consumer Knowledge Evolution Three-Role Roadmap Review
@@ -6168,8 +6168,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 220f7031003d90e05b3bc4dc7291030bc03d0a524eac80486aa5a51964b33993
-  size_bytes: 7057
+  sha256: 5175a00f15e5b5e07a68eb9a4cf194da5458aec1234f753a870d386eacd2d3f5
+  size_bytes: 7492
 - document_id: 62502207CCC33A68
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
@@ -6610,8 +6610,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 29c85ef411aaea8c21134acbf3116b072973b23732c4d8a4646fec479b7d74db
-  size_bytes: 2828
+  sha256: 711bd1173bcbbfe4e272182992d747f58c3df192ae615d2e83df9ae4a922b9b4
+  size_bytes: 3697
 - document_id: CFE15B7F801ACAC9
   path: deploy/knowledge-hub/postgres/001_initial.sql
   title: BAI Knowledge Hub PostgreSQL Initial Schema
@@ -6636,8 +6636,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 24f07a942bf2a9f5e43b11e5b855f9e888ac59e4edd77a35bd083f3542931ca4
-  size_bytes: 4224
+  sha256: 563527711742b6144fc4750ec41913dcf81d12c6a27929649806edfec32a0224
+  size_bytes: 5181
 - document_id: 0E45033EFABA8C35
   path: tasks/TASK-017/phase0-deployment-readiness-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Owner Authorization
@@ -6768,6 +6768,45 @@ documents:
   verified_by: Orchestrator
   sha256: 3360564153689c1482ebe113f9651bcb05e428c280ef7217d2c4570acab44dcb
   size_bytes: 751
+- document_id: 989AB1064FE217C3
+  path: tasks/TASK-017/phase0-prelive-hardening-implementation-result-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Pre-Live Hardening Implementation Result'
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_STATIC_AND_CONTRACT_VERIFIED_LIVE_EXECUTION_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: fa46f9987bf2f1c4a675e67f367d75d9a4919810390a4745a8bd5c95266a71dc
+  size_bytes: 2213
+- document_id: F4752C4947536892
+  path: tasks/TASK-017/phase0-prelive-hardening-critic-review-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Pre-Live Hardening Critic Review'
+  category: review-record
+  authority: critic-review
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS_FOR_LIVE_REHEARSAL_ENVIRONMENT_HANDOFF
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: ba6fb1900e09aacf37cfe78ca605ce8b4e6206ee34182ff7aaa1f5b9e394641c
+  size_bytes: 1217
+- document_id: 0C3F46EB0F517CF0
+  path: tasks/TASK-017/phase0-prelive-hardening-judge-review-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Pre-Live Hardening Judge Review'
+  category: review-record
+  authority: judge-review
+  importance_level: A
+  preferred_loading: read-first
+  status: PRELIVE_HARDENING_ACCEPTED_LIVE_REHEARSAL_NEXT
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 512227b2cff4b749c5593c1a88d003d3aa9046bf361d05845bee258ab0cd8b19
+  size_bytes: 748
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -6859,7 +6898,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 56
-  roadmap_refinement_status: C_COMPLETE_A_INTEGRATION_KIT_RC_ACCEPTED_LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING_B_LATE
+  roadmap_refinement_status: C_COMPLETE_A_PRELIVE_HARDENING_ACCEPTED_LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING_B_LATE
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -6891,19 +6930,19 @@ current_canonical_document_sets:
     status: ACTIVE_PHASE0_COMPLETED_PHASE1_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: ACTIVE / PHASE0 INTEGRATION KIT RC ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
+  task_017_status: ACTIVE / PHASE0 PRELIVE HARDENING ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: ACTIVE_PHASE0_INTEGRATION_KIT_RC_ACCEPTED_LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING
+    status: ACTIVE_PHASE0_PRELIVE_HARDENING_ACCEPTED_LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_INTEGRATION_KIT_RC
+registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_PRELIVE_HARDENING
 registry_status_details:
-  documents: 552
+  documents: 555
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-017 ACTIVE / PHASE0 INTEGRATION KIT RC ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING
-  next_task: TASK-017 Phase 0 execute the accepted live PostgreSQL/Docker rehearsal while BAI VIDEO PRODUCTION may integrate the accepted Product-owned fallback kit; production endpoint remains separately authorized
+  current_task: TASK-017 ACTIVE / PHASE0 PRELIVE HARDENING ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING
+  next_task: TASK-017 Phase 0 execute live PostgreSQL/Docker rehearsal and validate machine Evidence; dependency lock + production endpoint remain separately gated

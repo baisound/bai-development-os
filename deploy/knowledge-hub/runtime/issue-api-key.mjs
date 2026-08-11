@@ -1,15 +1,18 @@
 #!/usr/bin/env node
 import pg from 'pg';
+import { postgresPoolConfig } from './postgres-config.mjs';
 import { createApiKeyCredential, createPostgresApiKeyStore } from '../../../src/knowledge-hub/index.mjs';
 const { Pool } = pg;
-const databaseUrl = process.env.DATABASE_URL;
 const productId = process.env.BAI_HUB_CREDENTIAL_PRODUCT_ID;
 const subjectId = process.env.BAI_HUB_CREDENTIAL_SUBJECT_ID;
-if (!databaseUrl || !productId || !subjectId) {
-  console.error('DATABASE_URL, BAI_HUB_CREDENTIAL_PRODUCT_ID and BAI_HUB_CREDENTIAL_SUBJECT_ID are required.'); process.exit(2);
+if (!productId || !subjectId) {
+  console.error('BAI_HUB_CREDENTIAL_PRODUCT_ID and BAI_HUB_CREDENTIAL_SUBJECT_ID are required.'); process.exit(2);
 }
 const scopes = (process.env.BAI_HUB_CREDENTIAL_SCOPES ?? 'evidence:write,policy:read').split(',').map(v => v.trim()).filter(Boolean);
-const pool = new Pool({ connectionString: databaseUrl, max: 1, application_name: 'bai-knowledge-hub-key-issuer' });
+let config;
+try { config = postgresPoolConfig(process.env, { max: 1, applicationName: 'bai-knowledge-hub-key-issuer' }); }
+catch (error) { console.error(`PostgreSQL configuration invalid: ${error.message}`); process.exit(2); }
+const pool = new Pool(config);
 try {
   const store = createPostgresApiKeyStore({ query: (sql, params) => pool.query(sql, params) });
   const issued = await createApiKeyCredential({ productId, subjectId, scopes, trustLevel: 'REGISTERED_CLIENT' });

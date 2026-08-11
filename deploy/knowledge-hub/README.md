@@ -31,7 +31,7 @@ The base Compose does not host-publish PostgreSQL or the API. `compose.rehearsal
 Only after the relevant credential gate is authorized:
 
 ```bash
-# Run inside the knowledge-api image/container with DATABASE_URL available.
+# Run inside the knowledge-api image/container. The supplied Compose injects PGHOST/PGPORT/PGDATABASE/PGUSER/PGPASSWORD.
 BAI_HUB_CREDENTIAL_PRODUCT_ID=bai-video-production \
 BAI_HUB_CREDENTIAL_SUBJECT_ID=<installation-or-pilot-subject> \
 node deploy/knowledge-hub/runtime/issue-api-key.mjs
@@ -62,3 +62,22 @@ bash deploy/knowledge-hub/scripts/run-live-rehearsal.sh
 ```
 
 The harness intentionally starts only PostgreSQL + Knowledge API, never the `public` Caddy profile. It generates disposable credentials/data, verifies submit/retry/partial reject/revocation, performs backup + isolated restore, restarts the API, verifies readiness, then removes the Compose volumes and temporary files.
+
+
+## Machine-readable rehearsal Evidence
+
+To preserve sanitized Evidence for Judge review:
+
+```bash
+mkdir -p /secure/local/evidence
+BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT=/secure/local/evidence/live-rehearsal.json \
+  bash deploy/knowledge-hub/scripts/run-live-rehearsal.sh
+node scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs \
+  /secure/local/evidence/live-rehearsal.json
+```
+
+The Evidence file contains no credential and is created only after successful rehearsal resource teardown. Keep it outside public artifacts until reviewed.
+
+## Dependency reproducibility gate
+
+The deployment-only direct `pg` dependency is exact (`8.13.1`). A complete `package-lock.json` is still required before public production activation. This repository does not fabricate a lockfile when npm registry metadata is unavailable.

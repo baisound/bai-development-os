@@ -1,6 +1,6 @@
 # TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.3
 
-Status: `ACTIVE / INTEGRATION_KIT_RC_ACCEPTED / LIVE_POSTGRES_AND_PRODUCT_PILOT_PENDING`
+Status: `ACTIVE / PRELIVE_HARDENING_ACCEPTED / LIVE_POSTGRES_AND_PRODUCT_PILOT_PENDING`
 Parent Task: `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS`
 Entry: TASK-016 Phase 0 contract/capture foundation complete and approved for next route.
 Exit: a bounded BAI VIDEO PRODUCT pilot has produced real operational Evidence suitable for Candidate review and TASK-016 resilience certification. Local Hub Foundation is an earlier internal gate and does not claim Pilot exit.
@@ -64,6 +64,10 @@ The Owner continuation on 2026-08-11 authorizes a non-production deployment-read
 - static/local contract verification when Docker/PostgreSQL are unavailable.
 
 This gate does not authorize VPS purchase, DNS changes, public TLS activation, production credential distribution or real-user Evidence collection. A live PostgreSQL integration rehearsal remains an environment-dependent evidence gate before production activation. The repository includes a one-command harness that performs migration, authenticated submit/retry/partial-reject, credential revocation, backup/restore and restart-readiness without activating the public profile.
+
+### 3.3 Pre-Live hardening gate
+
+Before live rehearsal, the supplied deployment contract uses split PostgreSQL secret fields rather than password-in-URL interpolation, emits optional sanitized machine Evidence only after teardown, and validates that Evidence independently. The direct `pg` version is pinned; full transitive dependency lock remains a production-activation prerequisite and is not fabricated without registry metadata.
 
 ### 17.0.2 Hub MVP
 

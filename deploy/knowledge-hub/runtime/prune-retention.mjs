@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 import pg from 'pg';
+import { postgresPoolConfig } from './postgres-config.mjs';
 import { createCommonIngestionCore, createPostgresEvidenceRepository } from '../../../src/knowledge-hub/index.mjs';
 const { Pool } = pg;
-if (!process.env.DATABASE_URL) { console.error('DATABASE_URL required'); process.exit(2); }
-const pool = new Pool({ connectionString: process.env.DATABASE_URL, max: 1, application_name: 'bai-knowledge-hub-retention' });
+let config;
+try { config = postgresPoolConfig(process.env, { max: 1, applicationName: 'bai-knowledge-hub-retention' }); }
+catch (error) { console.error(`PostgreSQL configuration invalid: ${error.message}`); process.exit(2); }
+const pool = new Pool(config);
 try {
   const repository = createPostgresEvidenceRepository({ query: (sql, params) => pool.query(sql, params) });
   const core = createCommonIngestionCore({ repository });

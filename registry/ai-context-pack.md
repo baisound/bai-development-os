@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-017 Phase 0 / ACTIVE`; Integration Kit RC + Deployment Readiness = `ACCEPTED`; live PostgreSQL/Docker + production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
+- Current route: `TASK-017 Phase 0 / ACTIVE`; Integration Kit RC + Deployment Readiness + Pre-Live Hardening = `ACCEPTED`; live PostgreSQL/Docker + production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
 ## Current subsystem map
@@ -32,13 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1271 / 1271 PASS` (TASK-017 Integration Kit RC; Live Rehearsal Harness baseline 1269/1269; Deployment Readiness baseline 1267/1267; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
+- Full OS: `1273 / 1273 PASS` (TASK-017 Pre-Live Hardening; Integration Kit RC baseline 1271/1271; Live Rehearsal Harness baseline 1269/1269; Deployment Readiness baseline 1267/1267; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `31 / 31 PASS`; Product Integration focused: `52 / 52 PASS`; Integration Kit RC Judge: `INTEGRATION_KIT_RC_ACCEPTED / PRODUCT_INTEGRATION_ELIGIBLE`; blocking Critic findings: `0`
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `33 / 33 PASS`; Product Integration focused: `52 / 52 PASS`; Integration Kit RC Judge: `INTEGRATION_KIT_RC_ACCEPTED / PRODUCT_INTEGRATION_ELIGIBLE`; Pre-Live Hardening Judge: `PRELIVE_HARDENING_ACCEPTED / LIVE_REHEARSAL_NEXT`; blocking Critic findings: `0`
 
 ## Loading guidance
 

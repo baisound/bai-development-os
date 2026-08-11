@@ -1,6 +1,6 @@
 # TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.3
 
-Status: `ACTIVE / PHASE0_INTEGRATION_KIT_RC_ACCEPTED / LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING`
+Status: `ACTIVE / PHASE0_PRELIVE_HARDENING_ACCEPTED / LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING`
 Roadmap Position: `PHASE 0 AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`.
 Database decision: `PostgreSQL`.
 Infrastructure ceiling: `3,000 JPY/month`.
@@ -39,7 +39,7 @@ Read: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
 
 Phase 0 implementation is intentionally split into two operational gates:
 
-1. **Local Hub Foundation + Integration Kit RC** — Common Ingestion, server-derived auth context, Event idempotency, Receipt/Policy, retention, backfill, PostgreSQL schema/adapter contract, deterministic tests and Product-owned presigned Object Storage fallback transport. These local foundations are accepted. Non-production deployment readiness is also implemented; live PostgreSQL/public activation remains gated.
+1. **Local Hub Foundation + Integration Kit RC** — Common Ingestion, server-derived auth context, Event idempotency, Receipt/Policy, retention, backfill, PostgreSQL schema/adapter contract, deterministic tests and Product-owned presigned Object Storage fallback transport. These local foundations are accepted. Non-production deployment readiness and Pre-Live Hardening are implemented; live PostgreSQL/public activation remains gated.
 2. **Production Activation** — paid VPS provisioning, DNS/TLS, production credential issuance, public endpoint and real user Evidence collection. This is not authorized by the local implementation record.
 
 The local foundation SHALL use an injected PostgreSQL query boundary so the reusable Core does not need to embed credentials or force a database client into Consumer runtime code. Production deployment may supply the concrete PostgreSQL driver at the application boundary.

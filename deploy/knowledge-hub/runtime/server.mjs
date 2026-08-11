@@ -2,6 +2,7 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import pg from 'pg';
+import { postgresPoolConfig } from './postgres-config.mjs';
 import {
   applyPostgresMigrations,
   createApiKeyAuthenticator,
@@ -19,13 +20,14 @@ function positiveInt(name, fallback, { min = 1, max = Number.MAX_SAFE_INTEGER } 
   if (!Number.isInteger(value) || value < min || value > max) throw new Error(`${name} invalid`);
   return value;
 }
-const databaseUrl = process.env.DATABASE_URL;
-if (!databaseUrl) { console.error('DATABASE_URL is required. It must be supplied by the deployment secret boundary.'); process.exit(2); }
 const host = process.env.BAI_KNOWLEDGE_HUB_HOST ?? '0.0.0.0';
 const port = positiveInt('BAI_KNOWLEDGE_HUB_PORT', 8787, { max: 65535 });
 const retentionDays = positiveInt('BAI_KNOWLEDGE_HUB_RETENTION_DAYS', 30, { max: 3650 });
 const rateLimit = positiveInt('BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE', 120, { max: 100000 });
-const pool = new Pool({ connectionString: databaseUrl, max: positiveInt('BAI_KNOWLEDGE_HUB_DB_POOL_MAX', 10, { max: 100 }), application_name: 'bai-knowledge-hub' });
+let poolConfig;
+try { poolConfig = postgresPoolConfig(process.env, { max: positiveInt('BAI_KNOWLEDGE_HUB_DB_POOL_MAX', 10, { max: 100 }), applicationName: 'bai-knowledge-hub' }); }
+catch (error) { console.error(`PostgreSQL configuration invalid: ${error.message}`); process.exit(2); }
+const pool = new Pool(poolConfig);
 const query = (sql, params) => pool.query(sql, params);
 await applyPostgresMigrations({
   query,

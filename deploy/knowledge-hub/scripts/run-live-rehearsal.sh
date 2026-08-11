@@ -8,6 +8,7 @@ here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 project="bai-knowledge-hub-rehearsal"
 env_file="$(mktemp "${TMPDIR:-/tmp}/bai-hub-rehearsal.XXXXXX.env")"
 backup_file="$(mktemp "${TMPDIR:-/tmp}/bai-hub-rehearsal.XXXXXX.dump")"
+evidence_out="${BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT:-}"
 chmod 600 "$env_file" "$backup_file"
 password="$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
 cat > "$env_file" <<EOF
@@ -39,6 +40,7 @@ done
 "${compose[@]}" exec -T postgres pg_dump -U bai_hub -d bai_knowledge_hub -Fc > "$backup_file"
 sha256sum "$backup_file" > "$backup_file.sha256"
 sha256sum -c "$backup_file.sha256" >/dev/null
+backup_hash="$(sha256sum "$backup_file" | awk '{print $1}')"
 
 restore_db="bai_knowledge_hub_restore_rehearsal"
 "${compose[@]}" exec -T postgres createdb -U bai_hub "$restore_db"
@@ -54,5 +56,30 @@ for _ in $(seq 1 30); do
   sleep 2
 done
 [ "$ready" -eq 1 ] || { echo "Knowledge Hub failed readiness after restart" >&2; exit 1; }
+
+# A successful result also proves that the isolated Compose resources can be torn down.
+"${compose[@]}" down -v --remove-orphans >/dev/null
+rm -f "$env_file" "$backup_file" "$backup_file.sha256"
+trap - EXIT INT TERM
+
+completed_at="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+if [ -n "$evidence_out" ]; then
+  evidence_dir="$(dirname "$evidence_out")"
+  [ -d "$evidence_dir" ] || { echo "Evidence output directory does not exist: $evidence_dir" >&2; exit 2; }
+  tmp_evidence="${evidence_out}.tmp.$$"
+  umask 077
+  cat > "$tmp_evidence" <<EOF
+{
+  "schema_version": "1.0",
+  "result": "LIVE_REHEARSAL_PASS",
+  "persisted_and_restored_events": $restored_count,
+  "backup_sha256": "$backup_hash",
+  "public_profile_activated": false,
+  "cleanup_complete": true,
+  "completed_at": "$completed_at"
+}
+EOF
+  mv "$tmp_evidence" "$evidence_out"
+fi
 
 printf 'LIVE_REHEARSAL_PASS persisted_and_restored_events=%s\n' "$restored_count"

@@ -61,3 +61,12 @@ The implementation and static deployment contract can be fully tested in the cur
 ## 10. Reproducible live rehearsal harness
 
 `deploy/knowledge-hub/scripts/run-live-rehearsal.sh` is the canonical next-gate harness. It SHALL NOT activate the public profile. A PASS requires live migration/readiness, canonical Event submission, idempotent retry, P3 partial rejection, persisted-row verification, credential revocation, database backup, isolated restore verification and API restart readiness. The harness always tears down its disposable volumes and temporary secret/backup files.
+
+
+## 11. Pre-Live hardening
+
+The supplied Compose contract injects PostgreSQL connection properties as separate `PGHOST` / `PGPORT` / `PGDATABASE` / `PGUSER` / `PGPASSWORD` fields rather than interpolating the database password into a URI. Runtime launchers share one PostgreSQL config parser and retain `DATABASE_URL` only as an optional external-deployment compatibility input.
+
+The live rehearsal harness may write a sanitized machine Evidence file through `BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT`. It is written only after the isolated Compose project is successfully torn down. Required Evidence fields are validated by `scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs`.
+
+The direct `pg` runtime dependency is pinned to `8.13.1`. A complete transitive dependency lock remains a production-activation prerequisite and MUST be generated/verified in a network-enabled controlled environment; no lockfile is invented from incomplete metadata.

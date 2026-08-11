@@ -5,9 +5,9 @@ services:
     image: postgres:16-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:?set POSTGRES_DB}
-      POSTGRES_USER: ${POSTGRES_USER:?set POSTGRES_USER}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}
+      POSTGRES_DB: "${POSTGRES_DB:?set POSTGRES_DB}"
+      POSTGRES_USER: "${POSTGRES_USER:?set POSTGRES_USER}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}"
     volumes:
       - knowledge_hub_postgres:/var/lib/postgresql/data
     healthcheck:
@@ -23,7 +23,11 @@ services:
       dockerfile: deploy/knowledge-hub/Dockerfile
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      PGHOST: postgres
+      PGPORT: 5432
+      PGDATABASE: "${POSTGRES_DB}"
+      PGUSER: "${POSTGRES_USER}"
+      PGPASSWORD: "${POSTGRES_PASSWORD}"
       BAI_KNOWLEDGE_HUB_HOST: 0.0.0.0
       BAI_KNOWLEDGE_HUB_PORT: 8787
       BAI_KNOWLEDGE_HUB_RETENTION_DAYS: ${BAI_KNOWLEDGE_HUB_RETENTION_DAYS:-30}
