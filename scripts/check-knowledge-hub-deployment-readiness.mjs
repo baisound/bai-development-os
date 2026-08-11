@@ -19,7 +19,7 @@ must('deploy/knowledge-hub/compose.rehearsal.yaml',/127\.0\.0\.1:8787:8787/,'reh
 must('deploy/knowledge-hub/compose.yaml',/PGHOST: postgres[\s\S]*PGPASSWORD:/,'split PostgreSQL secret fields missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_HOST_AUTH_METHOD: "scram-sha-256"/,'SCRAM host authentication missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_INITDB_ARGS: "--data-checksums"/,'data checksum init missing');
-must('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE[\s\S]*postgresql\.tuned-4gb\.conf/,'4 GiB startup PostgreSQL config mount missing');
+must('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE[\s\S]*postgresql\.tuned-8gb\.conf/,'8 GiB startup PostgreSQL config mount missing');
 mustNot('deploy/knowledge-hub/compose.yaml',/DATABASE_URL:/,'Compose must not interpolate DB password into a connection URL');
 must('deploy/knowledge-hub/Caddyfile',/reverse_proxy knowledge-api:8787/,'reverse proxy target missing');
 must('deploy/knowledge-hub/Caddyfile',/Strict-Transport-Security/,'HSTS missing');

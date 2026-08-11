@@ -8,8 +8,8 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 - `compose.rehearsal.yaml` — loopback-only API exposure for a local/VPS rehearsal.
 - `Dockerfile` + `runtime/` — PostgreSQL-backed Hub runtime; deployment-only `pg` dependency.
 - `postgres/001_initial.sql`, `002_auth_and_operations.sql` — immutable migrations.
-- `postgres/postgresql.tuned-4gb.conf` — **startup-production default** for the initial 4 GiB VPS.
-- `postgres/postgresql.tuned-8gb.conf` — scale-up profile for a future 8 GiB VPS; not applied by default.
+- `postgres/postgresql.tuned-8gb.conf` — **startup-production default** for the Owner-selected 8 GiB VPS.
+- `postgres/postgresql.tuned-4gb.conf` — 4 GiB fallback profile; not applied by default.
 - `postgres/postgresql.tuned-2gb.conf` — low-resource development/rehearsal profile.
 - `postgres/verify-tuning.sql` + `scripts/verify-postgres-tuning.sh` — active-setting verification.
 - `Caddyfile` — HTTPS reverse proxy template for a later public gate.
@@ -53,23 +53,21 @@ The base Compose does not host-publish PostgreSQL or the API. `compose.rehearsal
 
 ## PostgreSQL tuning profile
 
-The default profile targets the original low-cost one-VPS design where a ~2 GiB host is shared by PostgreSQL, Knowledge API, reverse proxy, backup jobs and the OS. It keeps durability (`fsync`, `synchronous_commit`, `full_page_writes`) enabled, initializes new clusters with data checksums and SCRAM host authentication, and avoids forcing storage-specific planner values before target-disk Evidence exists.
-
-The generated host-only `.env` now selects the 4 GiB startup-production profile by default:
-
-```text
-POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-4gb.conf
-POSTGRES_SHM_SIZE=512mb
-```
-
-If the VPS is later scaled to 8 GiB, change only the host-side profile selection after a maintenance-window verification:
+The generated host-only `.env` selects the Owner-selected 8 GiB startup-production profile by default. The host is shared by PostgreSQL, Knowledge API, reverse proxy, backup jobs and the OS, so per-query memory and connection limits remain bounded. Durability (`fsync`, `synchronous_commit`, `full_page_writes`) remains enabled, new clusters use data checksums and SCRAM host authentication, and storage-specific planner values stay Evidence-gated.
 
 ```text
 POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-8gb.conf
 POSTGRES_SHM_SIZE=1gb
 ```
 
-The 8 GiB profile is intentionally not auto-selected by any repository default.
+The 4 GiB profile is retained as an explicit fallback only:
+
+```text
+POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-4gb.conf
+POSTGRES_SHM_SIZE=512mb
+```
+
+The 2 GiB profile remains low-resource development/rehearsal only. No host-size profile is auto-switched at runtime; a host-size change requires an explicit environment update and active-setting verification.
 
 After startup:
 

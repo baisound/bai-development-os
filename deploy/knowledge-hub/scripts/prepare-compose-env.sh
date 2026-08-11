@@ -18,8 +18,8 @@ POSTGRES_IMAGE=postgres:16.14-alpine
 POSTGRES_DB=bai_knowledge_hub
 POSTGRES_USER=bai_hub
 POSTGRES_PASSWORD=$password
-POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-4gb.conf
-POSTGRES_SHM_SIZE=512mb
+POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-8gb.conf
+POSTGRES_SHM_SIZE=1gb
 HUB_DOMAIN=hub.example.invalid
 BAI_KNOWLEDGE_HUB_RETENTION_DAYS=30
 BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE=120
@@ -29,5 +29,5 @@ EOF
 unset password
 chmod 600 "$out"
 printf 'Knowledge Hub environment created: %s\n' "$out"
-printf 'PostgreSQL profile: 4 GiB startup-production baseline\n'
+printf 'PostgreSQL profile: 8 GiB startup-production baseline\n'
 printf 'Public profile remains NOT AUTHORIZED.\n'

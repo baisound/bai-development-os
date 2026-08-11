@@ -28,4 +28,4 @@ const compose=fs.readFileSync(path.join(root,'deploy/knowledge-hub/compose.yaml'
 for(const required of ['POSTGRES_HOST_AUTH_METHOD: "scram-sha-256"','POSTGRES_INITDB_ARGS: "--data-checksums"','config_file=/etc/postgresql/postgresql.conf','POSTGRES_CONFIG_FILE','POSTGRES_SHM_SIZE']) if(!compose.includes(required))failures.push(`compose: missing ${required}`);
 if(/5432:5432/.test(compose))failures.push('compose: PostgreSQL must not be host-published');
 if(failures.length){console.error(JSON.stringify({status:'FAIL',failures},null,2));process.exit(1);}
-console.log(JSON.stringify({status:'PASS',profiles:['2gb','4gb','8gb'],default_profile:'4gb',scale_up_profile:'8gb',durability:'PRESERVED',public_activation:'NOT_AUTHORIZED'},null,2));
+console.log(JSON.stringify({status:'PASS',profiles:['2gb','4gb','8gb'],default_profile:'8gb',fallback_profile:'4gb',durability:'PRESERVED',public_activation:'NOT_AUTHORIZED'},null,2));
