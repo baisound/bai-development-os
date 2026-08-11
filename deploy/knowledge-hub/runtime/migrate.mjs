@@ -26,7 +26,7 @@ catch (error) { console.error(`PostgreSQL migration configuration invalid: ${err
 const pool = new Pool(poolConfig);
 
 async function roleSql(client, template, value) {
-  const result = await client.query(`SELECT format($1, $2) AS sql`, [template, value]);
+  const result = await client.query(`SELECT format($1::text, $2::text) AS sql`, [template, value]);
   await client.query(result.rows[0].sql);
 }
 

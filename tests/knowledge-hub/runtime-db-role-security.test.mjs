@@ -25,6 +25,8 @@ test('runtime server performs no schema migration and migration runner enforces 
   const migrate=read('deploy/knowledge-hub/runtime/migrate.mjs');
   assert.match(migrate,/CREATE ROLE bai_hub_runtime LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOREPLICATION NOBYPASSRLS/);
   assert.match(migrate,/ALTER ROLE bai_hub_runtime LOGIN NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOREPLICATION NOBYPASSRLS/);
+  assert.match(migrate,/SELECT format\(\$1::text, \$2::text\) AS sql/);
+  assert.doesNotMatch(migrate,/SELECT format\(\$1, \$2\) AS sql/);
   assert.match(migrate,/REVOKE CREATE ON SCHEMA public FROM PUBLIC/);
   assert.match(migrate,/REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM bai_hub_runtime/);
   assert.match(migrate,/GRANT SELECT, INSERT, DELETE ON TABLE evidence_events TO bai_hub_runtime/);
