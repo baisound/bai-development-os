@@ -15,6 +15,9 @@ cat > "$env_file" <<EOF
 POSTGRES_DB=bai_knowledge_hub
 POSTGRES_USER=bai_hub
 POSTGRES_PASSWORD=$password
+# CI/rehearsal uses an explicit bounded 2 GiB profile; production profile selection is separate.
+POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-2gb.conf
+POSTGRES_SHM_SIZE=256mb
 HUB_DOMAIN=hub.example.invalid
 BAI_KNOWLEDGE_HUB_RETENTION_DAYS=30
 BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE=120

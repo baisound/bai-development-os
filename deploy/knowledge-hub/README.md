@@ -8,8 +8,9 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 - `compose.rehearsal.yaml` — loopback-only API exposure for a local/VPS rehearsal.
 - `Dockerfile` + `runtime/` — PostgreSQL-backed Hub runtime; deployment-only `pg` dependency.
 - `postgres/001_initial.sql`, `002_auth_and_operations.sql` — immutable migrations.
-- `postgres/postgresql.tuned-2gb.conf` — default shared-2-GiB-VPS profile.
-- `postgres/postgresql.tuned-4gb.conf` — optional shared-4-GiB-VPS profile.
+- `postgres/postgresql.tuned-2gb.conf` — explicit low-resource 2 GiB profile.
+- `postgres/postgresql.tuned-4gb.conf` — explicit 4 GiB profile.
+- `postgres/postgresql.tuned-8gb.conf` — explicit 8 GiB startup-production profile.
 - `postgres/verify-tuning.sql` + `scripts/verify-postgres-tuning.sh` — active-setting verification.
 - `Caddyfile` — HTTPS reverse proxy template for a later public gate.
 - `scripts/backup-postgres.sh` — restrictive custom-format backup + SHA-256.
@@ -17,11 +18,18 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 
 ## Local Docker Compose quick start
 
-The safest local path binds only the API to `127.0.0.1`; PostgreSQL remains internal. It creates a host-only `.env` with mode `0600` if none exists, starts PostgreSQL + API, waits for `/readyz`, and verifies the active PostgreSQL safety/tuning settings.
+The safest local path binds only the API to `127.0.0.1`; PostgreSQL remains internal. Host-memory profile selection is explicit: the tooling never guesses 2/4/8 GiB from the host and never silently falls back to a profile.
+
+Create a host-only environment first:
 
 ```bash
+bash deploy/knowledge-hub/scripts/prepare-compose-env.sh \
+  --profile 8gb \
+  --output deploy/knowledge-hub/.env
 bash deploy/knowledge-hub/scripts/start-local-compose.sh
 ```
+
+For an intentional one-command bootstrap when the env file does not exist, set `BAI_KNOWLEDGE_HUB_PROFILE=2gb|4gb|8gb`.
 
 Stop while preserving PostgreSQL data:
 
@@ -40,8 +48,8 @@ bash deploy/knowledge-hub/scripts/stop-local-compose.sh --destroy-data
 ```bash
 cd deploy/knowledge-hub
 # Recommended: create a 0600 host-only .env with a random DB password.
-bash scripts/prepare-compose-env.sh
-# Or copy .env.example manually and replace placeholders; never commit .env.
+bash scripts/prepare-compose-env.sh --profile 8gb --output .env
+# Or copy .env.example manually and replace every profile placeholder; never commit .env.
 docker compose -f compose.yaml -f compose.rehearsal.yaml --env-file .env up -d --build
 curl -fsS http://127.0.0.1:8787/healthz
 curl -fsS http://127.0.0.1:8787/readyz
@@ -52,9 +60,38 @@ The base Compose does not host-publish PostgreSQL or the API. `compose.rehearsal
 
 ## PostgreSQL tuning profile
 
-The default profile targets the original low-cost one-VPS design where a ~2 GiB host is shared by PostgreSQL, Knowledge API, reverse proxy, backup jobs and the OS. It keeps durability (`fsync`, `synchronous_commit`, `full_page_writes`) enabled, initializes new clusters with data checksums and SCRAM host authentication, and avoids forcing storage-specific planner values before target-disk Evidence exists.
+Profile selection is a required deployment decision, not an implicit default. Use exactly one of the supported host-memory profiles:
 
-To select the optional 4 GiB profile, set `POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-4gb.conf` and `POSTGRES_SHM_SIZE=512mb` in the host-only `.env`.
+| Profile | PostgreSQL config | Compose shared memory | API DB pool default |
+|---|---|---:|---:|
+| `2gb` | `postgresql.tuned-2gb.conf` | `256mb` | `5` |
+| `4gb` | `postgresql.tuned-4gb.conf` | `512mb` | `10` |
+| `8gb` | `postgresql.tuned-8gb.conf` | `1gb` | `10` |
+
+Generate the environment with the selected profile rather than editing profile fields by hand:
+
+```bash
+bash scripts/prepare-compose-env.sh --profile 8gb --output .env
+```
+
+The profile controls `POSTGRES_CONFIG_FILE`, `POSTGRES_SHM_SIZE`, and the safe default for `BAI_KNOWLEDGE_HUB_DB_POOL_MAX`. `POSTGRES_IMAGE`, `POSTGRES_DB`, and `POSTGRES_USER` remain canonical fixed values. `POSTGRES_PASSWORD` is generated randomly and never printed.
+
+Operational policy values remain independently overrideable within runtime-supported bounds:
+
+```bash
+bash scripts/prepare-compose-env.sh \
+  --profile 8gb \
+  --output .env \
+  --retention-days 30 \
+  --rate-limit-per-minute 120 \
+  --body-limit-bytes 262144 \
+  --db-pool-max 10 \
+  --hub-domain hub.example.invalid
+```
+
+The script prints a secret-free configuration summary after generation. It does **not** authorize the public Caddy profile. `HUB_DOMAIN=hub.example.invalid` remains valid for private rehearsal; a real public host/IP is supplied only by the separate Public Production gate.
+
+All three PostgreSQL profiles preserve durability (`fsync`, `synchronous_commit`, `full_page_writes`), initialize new clusters with data checksums and SCRAM host authentication, and keep storage-specific planner values Evidence-gated.
 
 After startup:
 
