@@ -1,0 +1,114 @@
+name: BAI Knowledge Hub Live Gate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - '.github/workflows/knowledge-hub-live-gate.yml'
+      - 'deploy/knowledge-hub/**'
+      - 'src/knowledge-hub/**'
+      - 'src/knowledge-evolution/**'
+      - 'schemas/knowledge-evolution/**'
+      - 'scripts/*knowledge-hub*'
+      - 'scripts/*live-rehearsal*'
+      - 'tests/knowledge-hub/**'
+      - 'specifications/BAI_Knowledge_Hub_**'
+      - 'tasks/TASK-017/**'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/knowledge-hub-live-gate.yml'
+      - 'deploy/knowledge-hub/**'
+      - 'src/knowledge-hub/**'
+      - 'src/knowledge-evolution/**'
+      - 'schemas/knowledge-evolution/**'
+      - 'scripts/*knowledge-hub*'
+      - 'scripts/*live-rehearsal*'
+      - 'tests/knowledge-hub/**'
+      - 'specifications/BAI_Knowledge_Hub_**'
+      - 'tasks/TASK-017/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: knowledge-hub-live-gate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    name: Contract and static gate
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.19.0'
+      - name: Verify Knowledge Hub contracts
+        run: |
+          npm run test:knowledge-hub
+          npm run check:knowledge-hub-deployment
+          npm run check:knowledge-hub-postgres-tuning
+          npm run check:knowledge-hub-ci-live-gate
+
+  live-rehearsal:
+    name: Real Docker and PostgreSQL rehearsal
+    needs: contract
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
+      (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.19.0'
+      - name: Verify runner container capability
+        run: |
+          docker version
+          docker compose version
+      - name: Generate deployment runtime lock candidate
+        working-directory: deploy/knowledge-hub/runtime
+        run: |
+          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
+          node -e "const p=require('./package-lock.json'); const v=p.packages?.['node_modules/pg']?.version; if(v!=='8.13.1'){throw new Error('pg lock version mismatch: '+v)}"
+          sha256sum package-lock.json
+      - name: Run real isolated rehearsal
+        env:
+          BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT: ${{ runner.temp }}/bai-knowledge-hub-live-gate/live-rehearsal.json
+        run: |
+          mkdir -p "${{ runner.temp }}/bai-knowledge-hub-live-gate"
+          bash deploy/knowledge-hub/scripts/run-live-rehearsal.sh
+          node scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs \
+            "${{ runner.temp }}/bai-knowledge-hub-live-gate/live-rehearsal.json"
+      - name: Build CI gate Evidence
+        run: |
+          node scripts/build-knowledge-hub-ci-live-gate-evidence.mjs \
+            --rehearsal "${{ runner.temp }}/bai-knowledge-hub-live-gate/live-rehearsal.json" \
+            --lock deploy/knowledge-hub/runtime/package-lock.json \
+            --out "${{ runner.temp }}/bai-knowledge-hub-live-gate/ci-live-gate.json" \
+            --repository "$GITHUB_REPOSITORY" \
+            --sha "$GITHUB_SHA" \
+            --run-id "$GITHUB_RUN_ID" \
+            --run-attempt "$GITHUB_RUN_ATTEMPT" \
+            --event "$GITHUB_EVENT_NAME"
+          node scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs \
+            "${{ runner.temp }}/bai-knowledge-hub-live-gate/ci-live-gate.json"
+      - name: Upload sanitized gate Evidence and dependency lock candidate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: knowledge-hub-live-gate-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/bai-knowledge-hub-live-gate/*.json
+            deploy/knowledge-hub/runtime/package-lock.json
+          if-no-files-found: warn
+          retention-days: 14

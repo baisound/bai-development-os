@@ -320,3 +320,13 @@ This addendum preserves TASK-016/017 numbering while preventing knowledge loss f
 | OP-106 | Direct local adapter over the proven Common Ingestion Core | Deferred roadmap | TASK-017 late |
 
 Knowledge Hub v1 target infrastructure cost is 1,500–2,500 JPY/month with a hard ceiling of 3,000 JPY/month. Canonical Knowledge remains private-Git authoritative. No TASK-018 is created.
+
+
+## TASK-017 GitHub Actions Live Gate Addendum — 2026-08-11
+
+| ID | Improvement | Status | Target |
+|---|---|---|---|
+| OP-114 | Trusted GitHub-hosted Docker/PostgreSQL live rehearsal when local Docker is unavailable | Implemented locally; remote Evidence pending | TASK-017 Phase 0 |
+| OP-115 | Fork-safe split between static PR contracts and trusted live container execution; prohibit `pull_request_target` | Implemented | TASK-017 Phase 0 |
+| OP-116 | CI-generated deployment runtime lock candidate consumed by Docker `npm ci` and retained as review artifact | Implemented locally; accepted lock commit pending | TASK-017 Phase 0 |
+| OP-117 | Commit/run-bound sanitized CI live-gate Evidence for Judge review | Implemented locally; remote Evidence pending | TASK-017 Phase 0 |

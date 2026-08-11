@@ -70,3 +70,10 @@ The supplied Compose contract injects PostgreSQL connection properties as separa
 The live rehearsal harness may write a sanitized machine Evidence file through `BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT`. It is written only after the isolated Compose project is successfully torn down. Required Evidence fields are validated by `scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs`.
 
 The direct `pg` runtime dependency is pinned to `8.13.1`. A complete transitive dependency lock remains a production-activation prerequisite and MUST be generated/verified in a network-enabled controlled environment; no lockfile is invented from incomplete metadata.
+
+
+## 12. GitHub Actions live environment gate
+
+`.github/workflows/knowledge-hub-live-gate.yml` removes the developer-workstation Docker dependency from the next evidence gate. Static contracts run for all matching pull requests; real Docker/PostgreSQL rehearsal is restricted to trusted same-repository PRs, pushes to `main`, or explicit manual dispatch. The workflow never uses `pull_request_target`, grants only read access to repository contents, never activates the public Compose profile, and uploads only sanitized Evidence plus a generated runtime dependency lock candidate.
+
+A passing remote live rehearsal is valid environment Evidence for the exact Git commit tested, but it is not Production VPS/DNS/TLS/Product-pilot authorization.

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/knowledge-evolution/knowledge-hub-ci-live-gate-evidence.schema.json",
+  "title": "BAI Knowledge Hub CI Live Gate Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "result", "source", "runtime_lock_sha256", "live_rehearsal", "completed_at"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "result": {"const": "GITHUB_ACTIONS_LIVE_GATE_PASS"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "commit_sha", "run_id", "run_attempt", "event"],
+      "properties": {
+        "repository": {"type": "string", "minLength": 3, "maxLength": 200},
+        "commit_sha": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "run_id": {"type": "string", "pattern": "^[0-9]+$"},
+        "run_attempt": {"type": "string", "pattern": "^[0-9]+$"},
+        "event": {"enum": ["workflow_dispatch", "pull_request", "push"]}
+      }
+    },
+    "runtime_lock_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "live_rehearsal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["result", "persisted_and_restored_events", "backup_sha256", "public_profile_activated", "cleanup_complete", "completed_at"],
+      "properties": {
+        "result": {"const": "LIVE_REHEARSAL_PASS"},
+        "persisted_and_restored_events": {"type": "integer", "minimum": 4},
+        "backup_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "public_profile_activated": {"const": false},
+        "cleanup_complete": {"const": true},
+        "completed_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "completed_at": {"type": "string", "format": "date-time"}
+  }
+}

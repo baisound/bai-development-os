@@ -74,3 +74,12 @@ Presigned Object Storage fallback is now implemented in the Product-owned Python
 
 
 Pre-Live hardening additionally uses split PostgreSQL fields instead of Compose-side password-in-URL interpolation, pins the direct deployment `pg` version, and can emit sanitized machine-readable live-rehearsal Evidence only after successful teardown. The next local slice now adds exact PostgreSQL 16.14 Compose selection, 2 GiB/4 GiB tuned profiles, SCRAM + data-checksum initialization, active tuning verification, and safe local start/stop/environment bootstrap. Full dependency lock and real live Docker/PostgreSQL execution remain pending.
+
+
+## TASK-017 GitHub Actions Live Gate — 2026-08-11
+
+- State: `IMPLEMENTED / REMOTE_EXECUTION_PENDING`.
+- Purpose: run the exact disposable Knowledge Hub Docker/PostgreSQL rehearsal on GitHub-hosted Ubuntu when local Docker is unavailable.
+- Security: `contents: read`, no `pull_request_target`, no public Compose profile; external fork PRs receive static checks only.
+- Evidence: sanitized `live-rehearsal.json`, commit-bound `ci-live-gate.json`, and generated runtime `package-lock.json` candidate.
+- Remaining: execute the remote gate, review/commit the accepted runtime lock, then proceed to separately authorized Production/Pilot gates.

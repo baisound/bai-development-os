@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T10:20:00+09:00'
+registry_generated_at: '2026-08-11T15:26:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: ccea88e640d5374f36ec6cdda1ba22d9b9c9819499b5e618fa472d189c1c7e1e
-  size_bytes: 5073
+  sha256: 1a4ab430eef6e58d8cf5786a89d98c12d1f06e7b0ba25fb20b0beeb95f899ddf
+  size_bytes: 5166
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: bb775b9f3d81b872228eeae5599fa4b55ff255a77306e06da55d82bf7209050e
-  size_bytes: 7259
+  sha256: 18ae715ffe4e24faedb6314567cbee6576551023e050250f994d2780e1b8d9c5
+  size_bytes: 7903
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 72deedfbc9fd6c0fd72de8d8afef945d2dfdb441dfef37c5c4c82c9a974e1a1d
-  size_bytes: 26975
+  sha256: fbaa6594fa9e776ad281d400b73ef299d3aa47f173cc0e64dd4b15f0e8a8c65c
+  size_bytes: 27758
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -5997,8 +5997,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 50933783790037d9104289808a9e86231b59f4f61c298d1cc34f8f16cb822e1d
-  size_bytes: 2321
+  sha256: e46695248d802f39090d67cc0dde6e5695bcaaea09f04022b2ddda5fd937697d
+  size_bytes: 2531
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6168,8 +6168,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1c368f9b242b0a1af22cf5a263188a79362b64e57ca6baa8790e032698dee176
-  size_bytes: 8295
+  sha256: 621aaf11104691389b7e461c45cf52806f14f6ba56d2a9251188b4dface2c494
+  size_bytes: 9031
 - document_id: 62502207CCC33A68
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
@@ -6610,8 +6610,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: da6c19b19c86349b0a5301344893dbf725495c67f99202337f283bb47c3e19fc
-  size_bytes: 5591
+  sha256: f5abdb8a068afe9d3a2a0b4aadaf6a09aba785d2f10d1323215cd6933fe3d5ab
+  size_bytes: 6368
 - document_id: CFE15B7F801ACAC9
   path: deploy/knowledge-hub/postgres/001_initial.sql
   title: BAI Knowledge Hub PostgreSQL Initial Schema
@@ -6636,8 +6636,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 563527711742b6144fc4750ec41913dcf81d12c6a27929649806edfec32a0224
-  size_bytes: 5181
+  sha256: cf3ed42d949db6173631f1d3994eba6066882a1052ba0ff05a41f5312b885716
+  size_bytes: 5925
 - document_id: 0E45033EFABA8C35
   path: tasks/TASK-017/phase0-deployment-readiness-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Owner Authorization
@@ -6924,6 +6924,84 @@ documents:
   verified_by: Orchestrator
   sha256: b04528efbc9101c68f684065747e4d7a34acc7b1f26ffd68697cb536d1a90f9a
   size_bytes: 591
+- document_id: 87635786BEC82931
+  path: .github/workflows/knowledge-hub-live-gate.yml
+  title: BAI Knowledge Hub Live Gate
+  category: automation-config
+  authority: task017-ci-live-gate
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_REMOTE_EXECUTION_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: d56f4fe73988220d03c30d33c114b8499a27f94db2a23f2eb053cd8647ff4b0a
+  size_bytes: 4310
+- document_id: 89DA656D04FF65DB
+  path: schemas/knowledge-evolution/knowledge-hub-ci-live-gate-evidence.schema.json
+  title: BAI Knowledge Hub CI Live Gate Evidence Schema
+  category: schema
+  authority: phase0-machine-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTED_REMOTE_EXECUTION_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: af13ba17c75580947d1d9512e95c9cde78d63af57685e37b250a379c22b63f9b
+  size_bytes: 1826
+- document_id: 6E2B8140BAE3F51C
+  path: specifications/BAI_Knowledge_Hub_GitHub_Actions_Live_Gate_Ver1.0.md
+  title: BAI Knowledge Hub GitHub Actions Live Gate Specification Ver.1.0
+  category: specification
+  authority: phase0-implementation-specification
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_REMOTE_EXECUTION_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 89c778805607ff3f0d4c1de98cbedb4a33a9d35ff4b0e5a42aa36aca46e98bb4
+  size_bytes: 3267
+- document_id: C90F140F085A75EA
+  path: tasks/TASK-017/phase0-github-actions-live-gate-implementation-result-2026-08-11.md
+  title: TASK-017 Phase 0 GitHub Actions Live Gate Implementation Result
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_LOCAL_CONTRACT_PASS_REMOTE_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: b32d422b5f8fecf2a6ad032b3d51e97bf1132b9aefa674c69520a15566a2b3fc
+  size_bytes: 1495
+- document_id: EB339FFBA957AAF3
+  path: tasks/TASK-017/phase0-github-actions-live-gate-critic-review-2026-08-11.md
+  title: TASK-017 Phase 0 GitHub Actions Live Gate Critic Review
+  category: review-record
+  authority: critic-review
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS_FOR_REMOTE_EXECUTION
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 3db72f4b15fe0322aa514d54df19ac5568bd9b063b1166df7311037e880bbc1e
+  size_bytes: 761
+- document_id: 5A3446C7A20407BF
+  path: tasks/TASK-017/phase0-github-actions-live-gate-judge-review-2026-08-11.md
+  title: TASK-017 Phase 0 GitHub Actions Live Gate Judge Review
+  category: review-record
+  authority: judge-review
+  importance_level: A
+  preferred_loading: read-first
+  status: LOCAL_IMPLEMENTATION_ACCEPTED_REMOTE_LIVE_EVIDENCE_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 3deeaa0a78d4d66e1d5666a3be09fa3fd3d545fcde38699ebbda04b38892e6a9
+  size_bytes: 622
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
