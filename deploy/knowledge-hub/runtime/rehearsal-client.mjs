@@ -4,7 +4,8 @@ import { createApiKeyCredential, createPostgresApiKeyStore } from '../../../src/
 import { postgresPoolConfig } from './postgres-config.mjs';
 
 const { Pool } = pg;
-const endpoint = process.env.BAI_KNOWLEDGE_HUB_REHEARSAL_ENDPOINT ?? 'http://127.0.0.1:8787';
+const endpoint = process.env.BAI_KNOWLEDGE_HUB_REHEARSAL_ENDPOINT;
+if (!endpoint) throw new Error('BAI_KNOWLEDGE_HUB_REHEARSAL_ENDPOINT required');
 const productId = 'bai-video-production';
 const subjectId = `rehearsal-${Date.now()}`;
 const pool = new Pool(postgresPoolConfig(process.env, { max: 1, applicationName: 'bai-knowledge-hub-rehearsal-client' }));

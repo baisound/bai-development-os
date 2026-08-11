@@ -2,3 +2,6 @@ services:
   knowledge-api:
     expose:
       - "8787"
+  knowledge-admin:
+    environment:
+      BAI_KNOWLEDGE_HUB_REHEARSAL_ENDPOINT: "http://knowledge-api:8787"

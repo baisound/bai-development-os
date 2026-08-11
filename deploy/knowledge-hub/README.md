@@ -5,8 +5,8 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 ## Included
 
 - `compose.yaml` — one-VPS topology. PostgreSQL and API are private by default; Caddy requires explicit `public` profile. PostgreSQL uses a mounted tuning profile and exact 16.14 Alpine tag by default.
-- `compose.rehearsal.yaml` — loopback-only API exposure for a local/VPS rehearsal.
-- `Dockerfile` + `runtime/` — PostgreSQL-backed Hub runtime; deployment-only `pg` dependency.
+- `compose.rehearsal.yaml` — internal-only API declaration for an isolated local/VPS rehearsal; it does not publish a host port.
+- `Dockerfile` + `runtime/` — PostgreSQL-backed Hub runtime; deployment-only `pg` dependency. Schema migration runs in a separate one-shot admin service before the API starts.
 - `postgres/001_initial.sql`, `002_auth_and_operations.sql` — immutable migrations.
 - `postgres/postgresql.tuned-2gb.conf` — explicit low-resource 2 GiB profile.
 - `postgres/postgresql.tuned-4gb.conf` — explicit 4 GiB profile.
@@ -15,10 +15,12 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 - `Caddyfile` — HTTPS reverse proxy template for a later public gate.
 - `scripts/backup-postgres.sh` — restrictive custom-format backup + SHA-256.
 - `scripts/restore-rehearsal.sh` — restore rehearsal only; safety suffix + acknowledgement required.
+- `scripts/ensure-runtime-db-credentials.sh` — atomically augments an existing host-only environment with a dedicated runtime DB credential without changing the bootstrap/admin password.
+- `scripts/verify-runtime-db-role.sh` — verifies the live API identity and least-privilege PostgreSQL role contract.
 
 ## Local Docker Compose quick start
 
-The safest local path binds only the API to `127.0.0.1`; PostgreSQL remains internal. Host-memory profile selection is explicit: the tooling never guesses 2/4/8 GiB from the host and never silently falls back to a profile.
+The base deployment may bind the private API to loopback through the deployment-specific override; PostgreSQL remains internal. The disposable Live Rehearsal itself publishes no host port. Host-memory profile selection is explicit: the tooling never guesses 2/4/8 GiB from the host and never silently falls back to a profile.
 
 Create a host-only environment first:
 
@@ -51,11 +53,11 @@ cd deploy/knowledge-hub
 bash scripts/prepare-compose-env.sh --profile 8gb --output .env
 # Or copy .env.example manually and replace every profile placeholder; never commit .env.
 docker compose -f compose.yaml -f compose.rehearsal.yaml --env-file .env up -d --build
-curl -fsS http://127.0.0.1:8787/healthz
-curl -fsS http://127.0.0.1:8787/readyz
+docker compose -f compose.yaml -f compose.rehearsal.yaml --env-file .env \
+  exec -T knowledge-api node deploy/knowledge-hub/runtime/healthcheck.mjs
 ```
 
-The base Compose does not host-publish PostgreSQL or the API. `compose.rehearsal.yaml` publishes only API loopback.
+The base Compose does not host-publish PostgreSQL or the API. `compose.rehearsal.yaml` keeps the API internal-only so the disposable rehearsal can run beside a private Hub already using host loopback port 8787.
 
 
 ## PostgreSQL tuning profile
@@ -74,7 +76,7 @@ Generate the environment with the selected profile rather than editing profile f
 bash scripts/prepare-compose-env.sh --profile 8gb --output .env
 ```
 
-The profile controls `POSTGRES_CONFIG_FILE`, `POSTGRES_SHM_SIZE`, and the safe default for `BAI_KNOWLEDGE_HUB_DB_POOL_MAX`. `POSTGRES_IMAGE`, `POSTGRES_DB`, and `POSTGRES_USER` remain canonical fixed values. `POSTGRES_PASSWORD` is generated randomly and never printed.
+The profile controls `POSTGRES_CONFIG_FILE`, `POSTGRES_SHM_SIZE`, and the safe default for `BAI_KNOWLEDGE_HUB_DB_POOL_MAX`. `POSTGRES_IMAGE`, `POSTGRES_DB`, and the bootstrap/admin `POSTGRES_USER=bai_hub` remain canonical fixed values. A separate `BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime` is used by the API. Both database passwords are generated independently and are never printed.
 
 Operational policy values remain independently overrideable within runtime-supported bounds:
 
@@ -101,15 +103,36 @@ bash scripts/verify-postgres-tuning.sh
 
 Changing the initdb authentication/checksum variables does not retrofit an existing PostgreSQL volume; recreate only through an explicitly authorized migration/restore procedure.
 
-## Issue a Product API credential for a controlled environment
+## Runtime database role security
 
-Only after the relevant credential gate is authorized:
+The long-lived `knowledge-api` never receives the bootstrap/admin PostgreSQL credential. Compose runs `knowledge-migrate` first with `bai_hub`; that one-shot service applies immutable migrations, creates or normalizes `bai_hub_runtime`, resets its table privileges, grants only the API-required DML, verifies the role attributes and privileges, then exits. The API starts only after `knowledge-migrate` completes successfully.
+
+For an existing host-only environment created before this split, add the runtime credential without changing the existing PostgreSQL password:
 
 ```bash
-# Run inside the knowledge-api image/container. The supplied Compose injects PGHOST/PGPORT/PGDATABASE/PGUSER/PGPASSWORD.
+sudo bash deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh \
+  /etc/bai-knowledge-hub/knowledge-hub.env
+```
+
+After Compose has converged, verify the live contract:
+
+```bash
+sudo env BAI_KNOWLEDGE_HUB_ENV_FILE=/etc/bai-knowledge-hub/knowledge-hub.env \
+  bash deploy/knowledge-hub/scripts/verify-runtime-db-role.sh
+```
+
+`bai_hub_runtime` is `NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOREPLICATION NOBYPASSRLS`, has no role memberships, cannot create objects in `public`, receives no access to `schema_migrations`, and can only perform the DML required by the HTTP runtime.
+
+## Issue a Product API credential for a controlled environment
+
+Credential issuance is an administrative operation and must not broaden the long-lived API database role. Only after the relevant credential gate is authorized, run the one-shot admin service:
+
+```bash
 BAI_HUB_CREDENTIAL_PRODUCT_ID=bai-video-production \
 BAI_HUB_CREDENTIAL_SUBJECT_ID=<installation-or-pilot-subject> \
-node deploy/knowledge-hub/runtime/issue-api-key.mjs
+docker compose --profile admin --env-file .env run --rm \
+  -e BAI_HUB_CREDENTIAL_PRODUCT_ID -e BAI_HUB_CREDENTIAL_SUBJECT_ID \
+  knowledge-admin node deploy/knowledge-hub/runtime/issue-api-key.mjs
 ```
 
 The raw key is displayed once. Store it in the Product-selected password manager. The Hub stores only derived secret material.

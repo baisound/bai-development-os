@@ -124,8 +124,13 @@ for (const expected of [
     assert.equal(value(text, 'POSTGRES_SHM_SIZE'), expected.shm);
     assert.equal(value(text, 'BAI_KNOWLEDGE_HUB_DB_POOL_MAX'), expected.pool);
     const password = text.match(/^POSTGRES_PASSWORD=([0-9a-f]+)$/m)?.[1];
+    const runtimePassword = text.match(/^BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD=([0-9a-f]+)$/m)?.[1];
     assert.ok(password && password.length === 64);
+    assert.equal(value(text, 'BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER'), 'bai_hub_runtime');
+    assert.ok(runtimePassword && runtimePassword.length === 64);
+    assert.notEqual(runtimePassword, password);
     assert.ok(!result.stdout.includes(password));
+    assert.ok(!result.stdout.includes(runtimePassword));
     assert.match(result.stdout, new RegExp(`Selected profile\\s+: ${expected.profile}`));
     assert.match(result.stdout, /Public profile\s+: NOT AUTHORIZED/);
     if (process.platform !== 'win32') assert.equal(fs.statSync(out).mode & 0o777, 0o600);

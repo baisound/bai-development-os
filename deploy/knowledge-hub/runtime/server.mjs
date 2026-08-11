@@ -1,10 +1,7 @@
 #!/usr/bin/env node
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import pg from 'pg';
 import { postgresPoolConfig } from './postgres-config.mjs';
 import {
-  applyPostgresMigrations,
   createApiKeyAuthenticator,
   createCommonIngestionCore,
   createFixedWindowRateLimiter,
@@ -14,7 +11,6 @@ import {
 } from '../../../src/knowledge-hub/index.mjs';
 
 const { Pool } = pg;
-const here = path.dirname(fileURLToPath(import.meta.url));
 function positiveInt(name, fallback, { min = 1, max = Number.MAX_SAFE_INTEGER } = {}) {
   const raw = process.env[name]; const value = raw === undefined ? fallback : Number(raw);
   if (!Number.isInteger(value) || value < min || value > max) throw new Error(`${name} invalid`);
@@ -29,31 +25,6 @@ try { poolConfig = postgresPoolConfig(process.env, { max: positiveInt('BAI_KNOWL
 catch (error) { console.error(`PostgreSQL configuration invalid: ${error.message}`); process.exit(2); }
 const pool = new Pool(poolConfig);
 const query = (sql, params) => pool.query(sql, params);
-await applyPostgresMigrations({
-  query,
-  directory: path.resolve(here, '../postgres'),
-  executeMigration: async ({ name, sql, checksum }) => {
-    const client = await pool.connect();
-    try {
-      await client.query('BEGIN');
-      await client.query('SELECT pg_advisory_xact_lock(170017)');
-      const existing = await client.query('SELECT checksum FROM schema_migrations WHERE migration_name=$1', [name]);
-      let applied = false;
-      if (existing.rows[0]) {
-        if (existing.rows[0].checksum !== checksum) throw new Error(`Migration checksum mismatch during locked apply: ${name}`);
-      } else {
-        await client.query(sql);
-        await client.query('INSERT INTO schema_migrations(migration_name, checksum) VALUES($1,$2)', [name, checksum]);
-        applied = true;
-      }
-      await client.query('COMMIT');
-      return { applied };
-    } catch (error) {
-      await client.query('ROLLBACK').catch(() => {});
-      throw error;
-    } finally { client.release(); }
-  }
-});
 const repository = createPostgresEvidenceRepository({ query });
 const credentialStore = createPostgresApiKeyStore({ query });
 const authenticate = createApiKeyAuthenticator({ credentialStore });
