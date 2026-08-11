@@ -1,0 +1,58 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+for cmd in docker curl sha256sum; do command -v "$cmd" >/dev/null 2>&1 || { echo "$cmd is required" >&2; exit 2; }; done
+docker compose version >/dev/null 2>&1 || { echo "docker compose plugin is required" >&2; exit 2; }
+
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+project="bai-knowledge-hub-rehearsal"
+env_file="$(mktemp "${TMPDIR:-/tmp}/bai-hub-rehearsal.XXXXXX.env")"
+backup_file="$(mktemp "${TMPDIR:-/tmp}/bai-hub-rehearsal.XXXXXX.dump")"
+chmod 600 "$env_file" "$backup_file"
+password="$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+cat > "$env_file" <<EOF
+POSTGRES_DB=bai_knowledge_hub
+POSTGRES_USER=bai_hub
+POSTGRES_PASSWORD=$password
+HUB_DOMAIN=hub.example.invalid
+BAI_KNOWLEDGE_HUB_RETENTION_DAYS=30
+BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE=120
+BAI_KNOWLEDGE_HUB_BODY_LIMIT_BYTES=262144
+BAI_KNOWLEDGE_HUB_DB_POOL_MAX=5
+EOF
+unset password
+compose=(docker compose --project-name "$project" --env-file "$env_file" -f "$here/compose.yaml" -f "$here/compose.rehearsal.yaml")
+cleanup(){ set +e; "${compose[@]}" down -v --remove-orphans >/dev/null 2>&1; rm -f "$env_file" "$backup_file" "$backup_file.sha256"; }
+trap cleanup EXIT INT TERM
+
+"${compose[@]}" up -d --build postgres knowledge-api
+ready=0
+for _ in $(seq 1 60); do
+  if curl -fsS --max-time 2 http://127.0.0.1:8787/readyz >/dev/null 2>&1; then ready=1; break; fi
+  sleep 2
+done
+[ "$ready" -eq 1 ] || { echo "Knowledge Hub did not become ready" >&2; "${compose[@]}" logs --no-color knowledge-api postgres >&2; exit 1; }
+
+"${compose[@]}" exec -T knowledge-api node deploy/knowledge-hub/runtime/rehearsal-client.mjs
+
+# Backup from the isolated rehearsal PostgreSQL container. Password is not placed on command line.
+"${compose[@]}" exec -T postgres pg_dump -U bai_hub -d bai_knowledge_hub -Fc > "$backup_file"
+sha256sum "$backup_file" > "$backup_file.sha256"
+sha256sum -c "$backup_file.sha256" >/dev/null
+
+restore_db="bai_knowledge_hub_restore_rehearsal"
+"${compose[@]}" exec -T postgres createdb -U bai_hub "$restore_db"
+cat "$backup_file" | "${compose[@]}" exec -T postgres pg_restore -U bai_hub -d "$restore_db" --no-owner --no-acl
+restored_count="$("${compose[@]}" exec -T postgres psql -U bai_hub -d "$restore_db" -Atc 'SELECT count(*) FROM evidence_events;')"
+[ "$restored_count" -ge 4 ] || { echo "restore Evidence verification failed: $restored_count" >&2; exit 1; }
+"${compose[@]}" exec -T postgres dropdb -U bai_hub "$restore_db"
+
+"${compose[@]}" restart knowledge-api >/dev/null
+ready=0
+for _ in $(seq 1 30); do
+  if curl -fsS --max-time 2 http://127.0.0.1:8787/readyz >/dev/null 2>&1; then ready=1; break; fi
+  sleep 2
+done
+[ "$ready" -eq 1 ] || { echo "Knowledge Hub failed readiness after restart" >&2; exit 1; }
+
+printf 'LIVE_REHEARSAL_PASS persisted_and_restored_events=%s\n' "$restored_count"

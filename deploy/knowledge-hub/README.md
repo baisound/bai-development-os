@@ -53,3 +53,12 @@ Do not run this merely to test locally.
 ## Current environment limitation
 
 The ChatGPT execution environment used for this implementation did not expose Docker or a live PostgreSQL server. Therefore the repository contains a production-compatible deployment package and deterministic tests, but **does not claim a live PostgreSQL migration/backup/TLS rehearsal**. That evidence is the next environment-dependent gate.
+
+
+## One-command live rehearsal when Docker is available
+
+```bash
+bash deploy/knowledge-hub/scripts/run-live-rehearsal.sh
+```
+
+The harness intentionally starts only PostgreSQL + Knowledge API, never the `public` Caddy profile. It generates disposable credentials/data, verifies submit/retry/partial reject/revocation, performs backup + isolated restore, restarts the API, verifies readiness, then removes the Compose volumes and temporary files.

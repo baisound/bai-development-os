@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 2315b49b70305c963d80b5dd4fa7f98489e79053bbaafb8728f4a5d983b8929e
-  size_bytes: 7572
+  sha256: 38f2dc31e2193033bbee7c78eea717bd48e513b63952a62ef0258e471bb40f36
+  size_bytes: 7715
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: d9dd788cfce61d33ca5e869768967c25cd0af64c88c5f479d336967782becff2
-  size_bytes: 6042
+  sha256: 28e0425b78bcb32ff8f447733311581cb43f051060c4a19f1cb0109935dcf2d3
+  size_bytes: 6189
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -6168,8 +6168,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: dba71e39ff1e27533df6b08cafad1e12503b76ec42a090dd28754895f45e5bbc
-  size_bytes: 6511
+  sha256: b8655e16ef7428a31506436f31bf5ce881e980304cae29f75d5a2be92c70a38e
+  size_bytes: 6724
 - document_id: 62502207CCC33A68
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
@@ -6610,8 +6610,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b60f5ea1231702dec0f6d4ba061c023af605b57a820aa1557446074735973609
-  size_bytes: 2382
+  sha256: 29c85ef411aaea8c21134acbf3116b072973b23732c4d8a4646fec479b7d74db
+  size_bytes: 2828
 - document_id: CFE15B7F801ACAC9
   path: deploy/knowledge-hub/postgres/001_initial.sql
   title: BAI Knowledge Hub PostgreSQL Initial Schema
@@ -6636,8 +6636,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 2b8ff875cad65faba23f664315a1df07ed35943a2ce1a3e343f8b4b9ecea75d2
-  size_bytes: 3724
+  sha256: 24f07a942bf2a9f5e43b11e5b855f9e888ac59e4edd77a35bd083f3542931ca4
+  size_bytes: 4224
 - document_id: 0E45033EFABA8C35
   path: tasks/TASK-017/phase0-deployment-readiness-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Owner Authorization
@@ -6690,6 +6690,45 @@ documents:
   verified_by: Orchestrator
   sha256: a84ac7ce65edef62ff5c00ab351afba18c932ef5e058ef9a4cf681248b38975d
   size_bytes: 1946
+- document_id: 9A9787A2FFF036C8
+  path: tasks/TASK-017/phase0-live-rehearsal-harness-implementation-result-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Live Rehearsal Harness Implementation Result'
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_STATICALLY_VERIFIED_EXECUTION_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 86309d87a85f8e8d5ccc63a688ce12bee4b10f8f4fd00925345ca938cb8df8f7
+  size_bytes: 2126
+- document_id: 394A59CEEE90FFB5
+  path: tasks/TASK-017/phase0-live-rehearsal-harness-critic-review-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Live Rehearsal Harness Critic Review'
+  category: review-record
+  authority: critic-review
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS_FOR_ENVIRONMENT_HANDOFF
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: acbc4928490aad0e6f9fe17371d57b02b676e1133977e32466c44fdb12ee8209
+  size_bytes: 1072
+- document_id: 8C468D388ECCF6F1
+  path: tasks/TASK-017/phase0-live-rehearsal-harness-judge-review-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Live Rehearsal Harness Judge Review'
+  category: review-record
+  authority: judge-review
+  importance_level: A
+  preferred_loading: read-first
+  status: REHEARSAL_HARNESS_ACCEPTED_EXECUTION_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 4b945a90585505dbed35bbf15591f2856a4b7e8e0023f6c801392aac3e59ae0d
+  size_bytes: 731
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -6781,7 +6820,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 56
-  roadmap_refinement_status: C_COMPLETE_A_DEPLOYMENT_READINESS_ACCEPTED_LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING_B_LATE
+  roadmap_refinement_status: C_COMPLETE_A_REHEARSAL_HARNESS_ACCEPTED_EXECUTION_AND_PRODUCTION_PILOT_PENDING_B_LATE
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -6813,19 +6852,19 @@ current_canonical_document_sets:
     status: ACTIVE_PHASE0_COMPLETED_PHASE1_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: ACTIVE / PHASE0 DEPLOYMENT READINESS ACCEPTED / LIVE POSTGRES + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
+  task_017_status: ACTIVE / PHASE0 REHEARSAL HARNESS ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: ACTIVE_PHASE0_DEPLOYMENT_READINESS_ACCEPTED_LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING
+    status: ACTIVE_PHASE0_REHEARSAL_HARNESS_ACCEPTED_EXECUTION_AND_PRODUCTION_PILOT_PENDING
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_DEPLOYMENT_READINESS
+registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_REHEARSAL_HARNESS
 registry_status_details:
-  documents: 546
+  documents: 549
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-017 ACTIVE / PHASE0 DEPLOYMENT READINESS ACCEPTED / LIVE POSTGRES + PRODUCTION PILOT PENDING
-  next_task: TASK-017 Phase 0 live PostgreSQL/Docker rehearsal, then separately authorized production endpoint + BAI VIDEO PRODUCTION TASK-036 pilot
+  current_task: TASK-017 ACTIVE / PHASE0 REHEARSAL HARNESS ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING
+  next_task: TASK-017 Phase 0 execute the accepted live PostgreSQL/Docker rehearsal, then separately authorized production endpoint + BAI VIDEO PRODUCTION TASK-036 pilot

@@ -63,7 +63,7 @@ The Owner continuation on 2026-08-11 authorizes a non-production deployment-read
 - no embedded Product/DB credential,
 - static/local contract verification when Docker/PostgreSQL are unavailable.
 
-This gate does not authorize VPS purchase, DNS changes, public TLS activation, production credential distribution or real-user Evidence collection. A live PostgreSQL integration rehearsal remains an environment-dependent evidence gate before production activation.
+This gate does not authorize VPS purchase, DNS changes, public TLS activation, production credential distribution or real-user Evidence collection. A live PostgreSQL integration rehearsal remains an environment-dependent evidence gate before production activation. The repository includes a one-command harness that performs migration, authenticated submit/retry/partial-reject, credential revocation, backup/restore and restart-readiness without activating the public profile.
 
 ### 17.0.2 Hub MVP
 

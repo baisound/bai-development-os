@@ -32,13 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1267 / 1267 PASS` (TASK-017 Deployment Readiness; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
+- Full OS: `1269 / 1269 PASS` (TASK-017 Live Rehearsal Harness; Deployment Readiness baseline 1267/1267; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `29 / 29 PASS`; Deployment Readiness Judge: `DEPLOYMENT_READINESS_ACCEPTED / PHASE0_REMAINS_ACTIVE`; blocking Critic findings: `0`
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `31 / 31 PASS`; Deployment Readiness Judge: `DEPLOYMENT_READINESS_ACCEPTED / PHASE0_REMAINS_ACTIVE`; blocking Critic findings: `0`
 
 ## Loading guidance
 
@@ -62,7 +62,7 @@ The accepted Deployment Readiness baseline builds on Local Hub Foundation with o
 
 Hub v1 remains PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Consumer credentials remain externalized through generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager in Product-owned code. Hub failure must never block primary Product function.
 
-Phase 0 remains open for a live Docker/PostgreSQL rehearsal, separately authorized production activation and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
+Phase 0 remains open for execution of the supplied self-cleaning live Docker/PostgreSQL rehearsal harness, separately authorized production activation and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. The harness never activates the public Caddy profile. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
 
 ## RC2 frozen-contract context
 

@@ -56,3 +56,8 @@ This deployment is BAI Knowledge Hub infrastructure, not Consumer Product runtim
 ## 9. Current verification boundary
 
 The implementation and static deployment contract can be fully tested in the current environment. A Docker daemon, live PostgreSQL process, public DNS/TLS and paid VPS are not available/authorized in this gate, so no claim of live persistence or public deployment is made.
+
+
+## 10. Reproducible live rehearsal harness
+
+`deploy/knowledge-hub/scripts/run-live-rehearsal.sh` is the canonical next-gate harness. It SHALL NOT activate the public profile. A PASS requires live migration/readiness, canonical Event submission, idempotent retry, P3 partial rejection, persisted-row verification, credential revocation, database backup, isolated restore verification and API restart readiness. The harness always tears down its disposable volumes and temporary secret/backup files.

@@ -36,7 +36,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1267 / 1267 PASS` (TASK-017 Phase 0 Deployment Readiness; prior Local Hub baseline 1255/1255)
+- Full BAI Development OS: `1269 / 1269 PASS` (TASK-017 Phase 0 Live Rehearsal Harness; Deployment Readiness baseline 1267/1267; prior Local Hub baseline 1255/1255)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
@@ -44,11 +44,11 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Roadmap Consolidation: `56 / 56 PASS` after CREATIVE OS Knowledge Audit refinement synchronization
 - Root `DistributedOS` export: `PASS`
 - TASK-016 Phase 0 Knowledge Evolution focused suite: `50 / 50 PASS`
-- TASK-017 Phase 0 Knowledge Hub focused suite: `29 / 29 PASS`
+- TASK-017 Phase 0 Knowledge Hub focused suite: `31 / 31 PASS`
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `546 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `549 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -68,4 +68,4 @@ Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`. Production Hub infrastr
 
 TASK-017 Phase 0 is `ACTIVE`. Local Hub Foundation and the subsequent non-production Deployment Readiness slice are accepted. The current implementation adds one-VPS Docker Compose packaging, PostgreSQL runtime/migrations, server-side hashed API-key credential lifecycle, `/healthz`/`/readyz`, explicit-public-profile Caddy TLS template, backup and rehearsal-only restore controls while preserving Common Ingestion/idempotency/Receipt/Policy/backfill/Candidate boundaries.
 
-Public HTTP Clients still cannot self-assign Trust or backfill provenance. No live Docker/PostgreSQL execution, paid VPS, public DNS/TLS, real production Product credential or real-user Evidence collection is claimed. Those remain separate environment/deployment/security/budget and Product-pilot gates.
+Public HTTP Clients still cannot self-assign Trust or backfill provenance. A self-cleaning one-command live rehearsal harness is implemented and accepted for environment handoff. No live Docker/PostgreSQL execution, paid VPS, public DNS/TLS, real production Product credential or real-user Evidence collection is claimed. Those remain separate environment/deployment/security/budget and Product-pilot gates.
