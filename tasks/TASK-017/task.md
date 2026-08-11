@@ -1,6 +1,6 @@
 # TASK-017 — Knowledge Evolution & Federated Evidence Governance OS
 
-Status: `ACTIVE / PHASE0_DEPLOYMENT_READINESS_ACCEPTED / LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING`
+Status: `ACTIVE / PHASE0_INTEGRATION_KIT_RC_ACCEPTED / LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING`
 Roadmap Position: `PHASE 0 REPRIORITIZED AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`
 Development Profile: `DEV_4_FOUNDATION_CRITICAL` (expected; must be re-evaluated at design gate)
 Parent Scope: Architecture Ver.2.28 Part XV, Post-CREATIVE-OS Knowledge Audit Roadmap Refinement Ver.1.0, and Consumer Knowledge Evolution Roadmap Refinement Ver.1.2.

@@ -3,6 +3,8 @@ import hashlib, json, urllib.error, urllib.parse, urllib.request, uuid
 from datetime import datetime, timezone
 from .policy import ClientPolicy, intersect_policy, privacy_allows
 from .sanitizer import sanitize_event
+from .artifact import build_artifact
+from .object_storage import upload_artifact_presigned
 
 def _iso_now(): return datetime.now(timezone.utc).isoformat().replace('+00:00','Z')
 def _batch_id(events:list[dict])->str:
@@ -48,6 +50,22 @@ class EvidenceClient:
                 server=ClientPolicy.from_dict(json.loads(r.read().decode()));self.effective_policy=intersect_policy(self.local_policy,server);return {'status':'ok','policy':self.effective_policy}
         except urllib.error.HTTPError as e:return {'status':f'http_{e.code}'}
         except Exception:return {'status':'network_or_policy_unavailable'}
+    def flush_to_object_storage(self,presigned_url_provider,max_events:int|None=None,*,allow_insecure_loopback:bool=False)->dict:
+        """Store one canonical Batch as fallback transport without acknowledging Outbox Events."""
+        try:
+            events=self.outbox.list_events(min(max_events or self.effective_policy.max_batch_events,self.effective_policy.max_batch_events))
+            if not events:return {'status':'empty','stored':False}
+            batch=self._batch(events);artifact=build_artifact(batch)
+            if len(artifact['body'].encode('utf-8'))>self.effective_policy.max_payload_bytes:return {'status':'payload_too_large','stored':False}
+            provision=presigned_url_provider({'key':artifact['key'],'content_type':artifact['content_type'],'content_sha256':artifact['content_sha256'],'bytes':len(artifact['body'].encode('utf-8'))})
+            if isinstance(provision,str):provision={'url':provision,'headers':{}}
+            if not isinstance(provision,dict) or not provision.get('url'):return {'status':'presign_unavailable','stored':False}
+            result=upload_artifact_presigned(provision['url'],artifact,headers=provision.get('headers') or {},timeout_seconds=self.timeout_seconds,allow_insecure_loopback=allow_insecure_loopback)
+            if result.get('stored'):
+                return {**result,'batch_id':batch['batch_id'],'event_ids':[e['event_id'] for e in events]}
+            return result
+        except Exception:return {'status':'delivery_unavailable','stored':False}
+
     def flush(self,max_events:int|None=None)->dict:
         try:
             events=self.outbox.list_events(min(max_events or self.effective_policy.max_batch_events,self.effective_policy.max_batch_events))

@@ -1,6 +1,6 @@
 # Consumer Evidence Integration Kit Planning Specification Ver.1.0
 
-Status: `PHASE0_CONTRACT_IMPLEMENTED / REFERENCE_IMPLEMENTED / TASK017_PRODUCTION_NOT_AUTHORIZED`
+Status: `PHASE0_CONTRACT_IMPLEMENTED / INTEGRATION_KIT_RC_ACCEPTED / TASK017_PRODUCTION_NOT_AUTHORIZED`
 Owners: TASK-016 Phase 0 contract foundation -> TASK-017 Phase 0 pilot implementation
 
 ## 1. Purpose
@@ -103,3 +103,18 @@ This status does not authorize the production Knowledge Hub or Product-specific 
 ## RC2 Canonical Contract
 
 Canonical runtime formats are now owned by `Consumer_Evidence_Canonical_Contract_Ver1.0.md` and the canonical JSON Schemas. This planning document remains historical/design rationale and must not be treated as a second schema.
+
+
+## 11. TASK-017 Phase 0 Integration Kit RC
+
+The Product-owned Python reference now includes `object_storage.py` and `EvidenceClient.flush_to_object_storage()`. This is a provider-neutral presigned-URL fallback transport, not an Object Storage SDK or a second Evidence schema.
+
+Rules:
+
+- production upload URL MUST be HTTPS; plaintext HTTP exists only behind an explicit loopback-test flag,
+- redirects are rejected,
+- generic upload headers cannot carry `Authorization`, Cookie or proxy credentials,
+- the callback that obtains a short-lived presigned URL is Product/deployment-owned,
+- successful Object Storage upload does not acknowledge/delete Local Outbox Events,
+- only a validated Hub Delivery Receipt may ACK accepted/already-seen Event IDs,
+- `event_id`, canonical Batch body, artifact key and `content_sha256` remain stable for later Hub backfill.

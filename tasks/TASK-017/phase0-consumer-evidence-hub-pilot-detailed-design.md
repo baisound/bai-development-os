@@ -1,6 +1,6 @@
 # TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.3
 
-Status: `ACTIVE / DEPLOYMENT_READINESS_IMPLEMENTED / LIVE_POSTGRES_AND_PRODUCT_PILOT_PENDING`
+Status: `ACTIVE / INTEGRATION_KIT_RC_ACCEPTED / LIVE_POSTGRES_AND_PRODUCT_PILOT_PENDING`
 Parent Task: `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS`
 Entry: TASK-016 Phase 0 contract/capture foundation complete and approved for next route.
 Exit: a bounded BAI VIDEO PRODUCT pilot has produced real operational Evidence suitable for Candidate review and TASK-016 resilience certification. Local Hub Foundation is an earlier internal gate and does not claim Pilot exit.
@@ -90,6 +90,8 @@ Server-side authentication/authorization, rate limits, payload limit, idempotenc
 ### 17.0.5 Integration Kit RC
 
 Python first reference/generator. Generated source is Product-owned and standalone.
+
+Local RC acceptance adds provider-neutral presigned Object Storage upload using the same canonical Batch artifact. The generic client stores no long-lived Object Storage credential, rejects redirect/plaintext-remote upload, and never treats Object Storage PUT success as Hub acknowledgement. Local Outbox deletion remains Receipt-bound.
 
 ### 17.0.6 BAI VIDEO PRODUCT Pilot
 

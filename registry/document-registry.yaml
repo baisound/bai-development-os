@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T09:09:00+09:00'
+registry_generated_at: '2026-08-11T09:32:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 38f2dc31e2193033bbee7c78eea717bd48e513b63952a62ef0258e471bb40f36
-  size_bytes: 7715
+  sha256: 0877d9a8e53bd1a1f7a6f81ace0be3beec46f3f28febafd6f50366f62caef711
+  size_bytes: 8110
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: ac90b6fc3782ba25626f23527b85818ef3ed649de4af41e5586cd64fe66cd149
-  size_bytes: 4155
+  sha256: ef93d47ac067959c2d8d703c6ede0ed580c12c0c33678cf7bdbaa537b387baad
+  size_bytes: 4078
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 28e0425b78bcb32ff8f447733311581cb43f051060c4a19f1cb0109935dcf2d3
-  size_bytes: 6189
+  sha256: a7fae38a5a1dedd235ef278711dd9d6cc7b4ba1990ffc715e5f763f6d7171a13
+  size_bytes: 6627
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5984,8 +5984,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 3410b3ef3f5782d29faac0c54dbe17eb152aa3dee80287efc7ac9ec16bc8d08f
-  size_bytes: 2091
+  sha256: 1025eb49ff6b4b4981fc83f61166b57bebd645438276795fb77ade8484684243
+  size_bytes: 2089
 - document_id: 6E0658004570CE0F
   path: tasks/TASK-017/TASK-017.summary.md
   title: TASK-017 Summary
@@ -5997,8 +5997,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: ef7cebab7b6644e1278b6276c59d6e606558377a4a9b9aaad59ecc6ddc73f711
-  size_bytes: 2125
+  sha256: 8d94c49c6e59b6c9a65daef9867fa5a3ecaf85208e874aea1b185ece733e9f7f
+  size_bytes: 2122
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6037,8 +6037,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b3322a6096af6b36329557c1bf708150ba92976fe0a2e1f20a0f674de341a9c9
-  size_bytes: 5755
+  sha256: bbbd4eb196546ff74b323460505386134480a92a8d7a5fccab073164cda2fa8d
+  size_bytes: 5826
 - document_id: F98D4889B66968D3
   path: reviews/BAI_Development_OS_Consumer_Knowledge_Three_Role_Roadmap_Review_2026-08-11.md
   title: Consumer Knowledge Evolution Three-Role Roadmap Review
@@ -6142,8 +6142,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: c4078ab82dffaa65a8a8cad292acf4fdda1ee40aeae1a08987fb2b7bbd56fa80
-  size_bytes: 4233
+  sha256: 79a54ee23f32d9ebb854269d0c46085bd7ad4b56c3aef91af935fce52c94350a
+  size_bytes: 5099
 - document_id: EC9A2FEE5F8D5501
   path: specifications/BAI_Knowledge_Hub_Public_Ingestion_API_Planning_Specification_Ver1.0.md
   title: BAI Knowledge Hub Public Ingestion API Planning Specification Ver.1.0
@@ -6168,8 +6168,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b8655e16ef7428a31506436f31bf5ce881e980304cae29f75d5a2be92c70a38e
-  size_bytes: 6724
+  sha256: 220f7031003d90e05b3bc4dc7291030bc03d0a524eac80486aa5a51964b33993
+  size_bytes: 7057
 - document_id: 62502207CCC33A68
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
@@ -6729,6 +6729,45 @@ documents:
   verified_by: Orchestrator
   sha256: 4b945a90585505dbed35bbf15591f2856a4b7e8e0023f6c801392aac3e59ae0d
   size_bytes: 731
+- document_id: 1CB888B3754D592C
+  path: tasks/TASK-017/phase0-integration-kit-rc-implementation-result-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Consumer Evidence Integration Kit RC Implementation Result'
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_LOCAL_CONTRACT_VERIFIED_PRODUCT_INTEGRATION_READY
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 77fd722c7bec3fd2d00173dc27b08a2581d1f36ae3bce59347c5aef283321371
+  size_bytes: 2110
+- document_id: 054218EA52BAA8A8
+  path: tasks/TASK-017/phase0-integration-kit-rc-critic-review-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Consumer Evidence Integration Kit RC Critic Review'
+  category: review-record
+  authority: critic-review
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS_PRODUCT_HANDOFF_READY
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 6efdf0230340c6992a97141ad81121865c596125262c8ae2017331fd4d045a30
+  size_bytes: 1236
+- document_id: 3695BB63C4469DD2
+  path: tasks/TASK-017/phase0-integration-kit-rc-judge-review-2026-08-11.md
+  title: 'TASK-017 Phase 0 — Consumer Evidence Integration Kit RC Judge Review'
+  category: review-record
+  authority: judge-review
+  importance_level: A
+  preferred_loading: read-first
+  status: INTEGRATION_KIT_RC_ACCEPTED_PRODUCT_INTEGRATION_ELIGIBLE
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 3360564153689c1482ebe113f9651bcb05e428c280ef7217d2c4570acab44dcb
+  size_bytes: 751
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -6820,7 +6859,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 56
-  roadmap_refinement_status: C_COMPLETE_A_REHEARSAL_HARNESS_ACCEPTED_EXECUTION_AND_PRODUCTION_PILOT_PENDING_B_LATE
+  roadmap_refinement_status: C_COMPLETE_A_INTEGRATION_KIT_RC_ACCEPTED_LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING_B_LATE
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -6852,19 +6891,19 @@ current_canonical_document_sets:
     status: ACTIVE_PHASE0_COMPLETED_PHASE1_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: ACTIVE / PHASE0 REHEARSAL HARNESS ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
+  task_017_status: ACTIVE / PHASE0 INTEGRATION KIT RC ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: ACTIVE_PHASE0_REHEARSAL_HARNESS_ACCEPTED_EXECUTION_AND_PRODUCTION_PILOT_PENDING
+    status: ACTIVE_PHASE0_INTEGRATION_KIT_RC_ACCEPTED_LIVE_REHEARSAL_AND_PRODUCTION_PILOT_PENDING
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_REHEARSAL_HARNESS
+registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_INTEGRATION_KIT_RC
 registry_status_details:
-  documents: 549
+  documents: 552
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-017 ACTIVE / PHASE0 REHEARSAL HARNESS ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING
-  next_task: TASK-017 Phase 0 execute the accepted live PostgreSQL/Docker rehearsal, then separately authorized production endpoint + BAI VIDEO PRODUCTION TASK-036 pilot
+  current_task: TASK-017 ACTIVE / PHASE0 INTEGRATION KIT RC ACCEPTED / LIVE POSTGRES EXECUTION + PRODUCTION PILOT PENDING
+  next_task: TASK-017 Phase 0 execute the accepted live PostgreSQL/Docker rehearsal while BAI VIDEO PRODUCTION may integrate the accepted Product-owned fallback kit; production endpoint remains separately authorized

@@ -1,7 +1,7 @@
 # TASK-017 Summary
 
 - Name: `Knowledge Evolution & Federated Evidence Governance OS`
-- Status: `ACTIVE / PHASE0_DEPLOYMENT_READINESS_ACCEPTED / LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING`
+- Status: `ACTIVE / PHASE0_INTEGRATION_KIT_RC_ACCEPTED / LIVE_POSTGRES_AND_PRODUCTION_PILOT_PENDING`
 - Revised position: **Phase 0 Pilot Transport after TASK-016 Phase 0; advanced Phase 1+ after TASK-016 resilience evidence**
 - Source priority: Pattern C first -> Pattern A Hub/runtime Evidence second -> Pattern B late
 - Phase 0: Common Ingestion MVP, PostgreSQL single-VPS Hub, Public Evidence API, external credential/auth/rate/idempotency/retention, Consumer Evidence Integration Kit, BAI VIDEO PRODUCT limited pilot
@@ -17,4 +17,4 @@
 
 ## Current Phase 0 implementation state
 
-Deployment Readiness Judge: `DEPLOYMENT_READINESS_ACCEPTED / PHASE0_REMAINS_ACTIVE`. Focused Hub `29 / 29 PASS`; full OS `1267 / 1267 PASS`; all conformance and deployment-readiness checks PASS. Live PostgreSQL/Docker rehearsal, Production VPS/DNS/TLS/real credential activation and BAI VIDEO PRODUCTION TASK-036 real pilot remain separately gated.
+Deployment Readiness and Integration Kit RC are accepted locally. The Product-owned Python client now supports short-lived presigned Object Storage fallback without acknowledging Outbox Events. Live PostgreSQL/Docker rehearsal, Production VPS/DNS/TLS/real credential activation and BAI VIDEO PRODUCTION TASK-036 real pilot remain separately gated.

@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-017 Phase 0 / ACTIVE`; Deployment Readiness = `ACCEPTED`; live PostgreSQL/Docker + production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
+- Current route: `TASK-017 Phase 0 / ACTIVE`; Integration Kit RC + Deployment Readiness = `ACCEPTED`; live PostgreSQL/Docker + production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
 ## Current subsystem map
@@ -32,13 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1269 / 1269 PASS` (TASK-017 Live Rehearsal Harness; Deployment Readiness baseline 1267/1267; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
+- Full OS: `1271 / 1271 PASS` (TASK-017 Integration Kit RC; Live Rehearsal Harness baseline 1269/1269; Deployment Readiness baseline 1267/1267; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `31 / 31 PASS`; Deployment Readiness Judge: `DEPLOYMENT_READINESS_ACCEPTED / PHASE0_REMAINS_ACTIVE`; blocking Critic findings: `0`
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `31 / 31 PASS`; Product Integration focused: `52 / 52 PASS`; Integration Kit RC Judge: `INTEGRATION_KIT_RC_ACCEPTED / PRODUCT_INTEGRATION_ELIGIBLE`; blocking Critic findings: `0`
 
 ## Loading guidance
 
@@ -56,13 +56,13 @@ BAI VIDEO PRODUCTION is referenced by immutable Git commit/tree and explicit key
 
 ## TASK-017 active Phase 0 context
 
-TASK-017 Phase 0 is `ACTIVE`. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`, then the Local Hub Implementation/Critic/Judge records.
+TASK-017 Phase 0 is `ACTIVE`. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`, then the Local Hub / Deployment Readiness / Integration Kit RC implementation, Critic and Judge records.
 
 The accepted Deployment Readiness baseline builds on Local Hub Foundation with one-VPS Docker Compose packaging, private PostgreSQL/API default networking, production-compatible PostgreSQL runtime and immutable migration checksums, server-side hashed API-key credential lifecycle, liveness/readiness separation, explicit-public-profile Caddy TLS template, and safe backup/restore-rehearsal tooling. Public Clients cannot self-assign Trust or backfill provenance. No production key/DB secret is committed.
 
 Hub v1 remains PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Consumer credentials remain externalized through generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager in Product-owned code. Hub failure must never block primary Product function.
 
-Phase 0 remains open for execution of the supplied self-cleaning live Docker/PostgreSQL rehearsal harness, separately authorized production activation and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. The harness never activates the public Caddy profile. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
+Presigned Object Storage fallback is accepted for Product integration: canonical Batch only, short-lived presign boundary, HTTPS outside loopback tests, redirects rejected, and Object Storage PUT success never ACKs/deletes Outbox Events. Phase 0 remains open for execution of the supplied self-cleaning live Docker/PostgreSQL rehearsal harness, separately authorized production activation and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. The harness never activates the public Caddy profile. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
 
 ## RC2 frozen-contract context
 

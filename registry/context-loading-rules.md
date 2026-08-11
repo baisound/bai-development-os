@@ -12,7 +12,7 @@ Do not load the whole Architecture or every prior Task by default.
 
 ## 2. Current architecture and roadmap
 
-Architecture Ver.2.28 is current. Part XV preserves the sole consolidated roadmap authority with `56 / 56` source sections. TASK-004〜015 are completed. TASK-016 remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`; its first planned slice is Phase 0 Consumer Knowledge Capture Bridge (Pattern C Fast Track). TASK-017 remains queued after TASK-016 and now carries the Pattern A Hub / late Pattern B sequencing from the 2026-08-11 Consumer Knowledge Evolution planning supplement.
+Architecture Ver.2.28 is current. Part XV preserves the sole consolidated roadmap authority with `56 / 56` source sections. TASK-004〜015 are completed. Owner-directed supplements now make TASK-016 `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED` and TASK-017 `ACTIVE / PHASE0`, with the bounded Hub/Product pilot slice interleaved before TASK-016 Phase 1+. Historical Architecture routing statements remain provenance, not current execution state.
 
 ## 3. Completed subsystem loading
 
@@ -42,4 +42,4 @@ For TASK-016 planning, load `tasks/TASK-016/TASK-016.summary.md`, then `tasks/TA
 
 ## 8. TASK-017 planning context
 
-TASK-017 is queued after TASK-016 and is not authorized. Load `tasks/TASK-017/TASK-017.summary.md`, then `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md`; load the CREATIVE OS audit adjudication/refinement only for prior-gap provenance. Only load `reviews/BAI_CREATIVE_OS_Knowledge_Audit_2026-08-10.md` when provenance or exact wording matters because it describes an older 2026-07-31 snapshot. Current implementation facts come from TASK-005 and current canonical state.
+TASK-017 Phase 0 is active under Owner-authorized local/non-production scope. Load `tasks/TASK-017/TASK-017.summary.md`, then `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`. For the current Product handoff also load the Integration Kit RC implementation/Critic/Judge records. Load the CREATIVE OS audit adjudication/refinement only for prior-gap provenance. Production VPS/DNS/TLS/real credential activation remains separately gated.
