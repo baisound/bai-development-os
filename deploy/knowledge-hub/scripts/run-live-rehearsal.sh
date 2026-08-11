@@ -11,10 +11,13 @@ backup_file="$(mktemp "${TMPDIR:-/tmp}/bai-hub-rehearsal.XXXXXX.dump")"
 evidence_out="${BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT:-}"
 chmod 600 "$env_file" "$backup_file"
 password="$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+runtime_password="$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
 cat > "$env_file" <<EOF
 POSTGRES_DB=bai_knowledge_hub
 POSTGRES_USER=bai_hub
 POSTGRES_PASSWORD=$password
+BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime
+BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD=$runtime_password
 # CI/rehearsal uses an explicit bounded 2 GiB profile; production profile selection is separate.
 POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-2gb.conf
 POSTGRES_SHM_SIZE=256mb
@@ -24,7 +27,7 @@ BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE=120
 BAI_KNOWLEDGE_HUB_BODY_LIMIT_BYTES=262144
 BAI_KNOWLEDGE_HUB_DB_POOL_MAX=5
 EOF
-unset password
+unset password runtime_password
 compose=(docker compose --project-name "$project" --env-file "$env_file" -f "$here/compose.yaml" -f "$here/compose.rehearsal.yaml")
 cleanup(){ set +e; "${compose[@]}" down -v --remove-orphans >/dev/null 2>&1; rm -f "$env_file" "$backup_file" "$backup_file.sha256"; }
 trap cleanup EXIT INT TERM
@@ -43,7 +46,7 @@ wait_for_ready() {
 "${compose[@]}" up -d --build postgres knowledge-api
 wait_for_ready 60 || { echo "Knowledge Hub did not become ready" >&2; "${compose[@]}" logs --no-color knowledge-api postgres >&2; exit 1; }
 
-"${compose[@]}" exec -T knowledge-api node deploy/knowledge-hub/runtime/rehearsal-client.mjs
+"${compose[@]}" run --rm --no-deps knowledge-admin node deploy/knowledge-hub/runtime/rehearsal-client.mjs
 
 # Backup from the isolated rehearsal PostgreSQL container. Password is not placed on command line.
 "${compose[@]}" exec -T postgres pg_dump -U bai_hub -d bai_knowledge_hub -Fc > "$backup_file"

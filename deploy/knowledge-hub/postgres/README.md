@@ -32,12 +32,13 @@ The profile selector does not make every environment value memory-dependent:
 
 - `POSTGRES_IMAGE=postgres:16.14-alpine` remains canonical.
 - `POSTGRES_DB=bai_knowledge_hub` remains canonical.
-- `POSTGRES_USER=bai_hub` remains canonical until the separate Runtime DB Role Security Gate changes the role model.
-- `POSTGRES_PASSWORD` is random per generated environment and is never printed.
+- `POSTGRES_USER=bai_hub` remains the canonical bootstrap/migration admin identity. It is not injected into the long-lived API.
+- `BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime` is the canonical long-lived API identity and is forced to least-privilege role attributes on every migration gate.
+- `POSTGRES_PASSWORD` and `BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD` are independently random per generated environment and are never printed.
 - retention, API rate limit, body limit, and DB pool override are operational policy inputs with bounded CLI overrides.
 - `HUB_DOMAIN` is a deployment/publication input; the private placeholder remains `hub.example.invalid` until the Public Production gate.
 
-Runtime DB role separation is intentionally **not** part of the memory-profile selector change.
+Runtime DB role separation is independent of the memory-profile tuple: profile selection never changes role identity or privilege policy.
 
 ## Integrity and authentication
 

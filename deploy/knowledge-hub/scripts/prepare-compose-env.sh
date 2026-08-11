@@ -36,7 +36,7 @@ Profile defaults:
   8gb -> postgresql.tuned-8gb.conf, 1gb shm, DB pool 10
 
 POSTGRES_IMAGE, POSTGRES_DB and POSTGRES_USER remain canonical fixed values.
-POSTGRES_PASSWORD is generated randomly and is never printed.
+POSTGRES_PASSWORD and the dedicated runtime DB password are generated independently and are never printed.
 Public activation is NOT authorized by this script.
 USAGE
 }
@@ -128,6 +128,7 @@ out_dir="$(dirname "$out")"
 
 umask 077
 password="$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+runtime_password="$(head -c 32 /dev/urandom | od -An -tx1 | tr -d ' \n')"
 cat > "$out" <<EOF_ENV
 # Generated host-only Knowledge Hub environment. DO NOT COMMIT.
 # Profile selection is explicit; regenerate this file to change host-memory profile.
@@ -135,6 +136,8 @@ POSTGRES_IMAGE=postgres:16.14-alpine
 POSTGRES_DB=bai_knowledge_hub
 POSTGRES_USER=bai_hub
 POSTGRES_PASSWORD=$password
+BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime
+BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD=$runtime_password
 POSTGRES_CONFIG_FILE=$postgres_config_file
 POSTGRES_SHM_SIZE=$postgres_shm_size
 HUB_DOMAIN=$hub_domain
@@ -143,7 +146,7 @@ BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE=$rate_limit_per_minute
 BAI_KNOWLEDGE_HUB_BODY_LIMIT_BYTES=$body_limit_bytes
 BAI_KNOWLEDGE_HUB_DB_POOL_MAX=$db_pool_max
 EOF_ENV
-unset password
+unset password runtime_password
 chmod 600 "$out"
 
 printf 'Knowledge Hub environment created: %s\n' "$out"

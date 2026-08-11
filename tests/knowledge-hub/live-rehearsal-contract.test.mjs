@@ -8,7 +8,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const read=rel=>fs.readFileSync(path.join(root,rel),'utf8');
 
 test('live rehearsal harness never activates public profile and always tears down volumes',()=>{
- const script=read('deploy/knowledge-hub/scripts/run-live-rehearsal.sh');assert.match(script,/compose\.rehearsal\.yaml/);assert.doesNotMatch(script,/--profile\s+public/);assert.match(script,/down -v --remove-orphans/);assert.match(script,/exec -T knowledge-api node deploy\/knowledge-hub\/runtime\/healthcheck\.mjs/);assert.doesNotMatch(script,/127\.0\.0\.1:8787\/readyz/);assert.match(script,/_restore_rehearsal/);
+ const script=read('deploy/knowledge-hub/scripts/run-live-rehearsal.sh');assert.match(script,/compose\.rehearsal\.yaml/);assert.doesNotMatch(script,/--profile\s+public/);assert.match(script,/down -v --remove-orphans/);assert.match(script,/exec -T knowledge-api node deploy\/knowledge-hub\/runtime\/healthcheck\.mjs/);assert.doesNotMatch(script,/127\.0\.0\.1:8787\/readyz/);assert.match(script,/_restore_rehearsal/);assert.match(script,/BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime/);assert.match(script,/BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD=\$runtime_password/);assert.match(script,/run --rm --no-deps knowledge-admin node deploy\/knowledge-hub\/runtime\/rehearsal-client\.mjs/);
 });
 
 test('live rehearsal client verifies submit, retry, partial reject, persistence and revocation without printing raw key',()=>{

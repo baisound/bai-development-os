@@ -11,13 +11,24 @@ for(const rel of [
  'deploy/knowledge-hub/compose.yaml','deploy/knowledge-hub/compose.rehearsal.yaml','deploy/knowledge-hub/Caddyfile',
  'deploy/knowledge-hub/Dockerfile','deploy/knowledge-hub/.env.example','deploy/knowledge-hub/postgres/001_initial.sql',
  'deploy/knowledge-hub/postgres/002_auth_and_operations.sql','deploy/knowledge-hub/postgres/postgresql.tuned-2gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-4gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-8gb.conf','deploy/knowledge-hub/postgres/verify-tuning.sql','deploy/knowledge-hub/scripts/prepare-compose-env.sh','deploy/knowledge-hub/scripts/verify-postgres-tuning.sh','deploy/knowledge-hub/scripts/start-local-compose.sh','deploy/knowledge-hub/scripts/stop-local-compose.sh','deploy/knowledge-hub/scripts/backup-postgres.sh',
- 'deploy/knowledge-hub/scripts/restore-rehearsal.sh','deploy/knowledge-hub/scripts/run-live-rehearsal.sh','deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/rehearsal-client.mjs','deploy/knowledge-hub/runtime/postgres-config.mjs','scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs','.github/workflows/knowledge-hub-live-gate.yml','scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs'
+ 'deploy/knowledge-hub/scripts/restore-rehearsal.sh','deploy/knowledge-hub/scripts/run-live-rehearsal.sh','deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh','deploy/knowledge-hub/scripts/verify-runtime-db-role.sh','deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/migrate.mjs','deploy/knowledge-hub/runtime/rehearsal-client.mjs','deploy/knowledge-hub/runtime/postgres-config.mjs','scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs','.github/workflows/knowledge-hub-live-gate.yml','scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs'
 ]) if(!fs.existsSync(path.join(root,rel))) failures.push(`${rel}: missing`);
 must('deploy/knowledge-hub/compose.yaml',/postgres:16\.14-alpine/,'PostgreSQL major image missing');
 must('deploy/knowledge-hub/compose.yaml',/profiles:\s*\["public"\]/,'public TLS activation must be explicit profile');
 mustNot('deploy/knowledge-hub/compose.rehearsal.yaml',/ports:/,'rehearsal API must not publish a host port');
 must('deploy/knowledge-hub/compose.rehearsal.yaml',/expose:[\s\S]*8787/,'rehearsal API internal port declaration missing');
 must('deploy/knowledge-hub/compose.yaml',/PGHOST: postgres[\s\S]*PGPASSWORD:/,'split PostgreSQL secret fields missing');
+must('deploy/knowledge-hub/compose.yaml',/knowledge-migrate:[\s\S]*PGUSER: "\$\{POSTGRES_USER\}"[\s\S]*BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER/,'migration service must use bootstrap DB identity and receive runtime role contract');
+must('deploy/knowledge-hub/compose.yaml',/knowledge-api:[\s\S]*PGUSER: "\$\{BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER:\?set runtime DB user\}"[\s\S]*PGPASSWORD: "\$\{BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD:\?set runtime DB password\}"/,'Knowledge API must use dedicated runtime DB credentials');
+must('deploy/knowledge-hub/compose.yaml',/knowledge-api:[\s\S]*depends_on:[\s\S]*knowledge-migrate:[\s\S]*service_completed_successfully/,'Knowledge API must wait for successful migration service completion');
+must('deploy/knowledge-hub/compose.yaml',/knowledge-admin:[\s\S]*profiles: \["admin"\]/,'admin DB identity must be isolated behind explicit admin profile');
+mustNot('deploy/knowledge-hub/runtime/server.mjs',/applyPostgresMigrations|schema_migrations/,'runtime API must not perform schema migration');
+must('deploy/knowledge-hub/runtime/migrate.mjs',/NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOREPLICATION NOBYPASSRLS/,'runtime DB role least-privilege attributes missing');
+must('deploy/knowledge-hub/runtime/migrate.mjs',/REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA public FROM bai_hub_runtime/,'runtime table privileges must be reset before grants');
+must('deploy/knowledge-hub/runtime/migrate.mjs',/GRANT SELECT ON TABLE api_credentials TO bai_hub_runtime/,'runtime API credential access must remain read-only');
+mustNot('deploy/knowledge-hub/runtime/migrate.mjs',/GRANT[^\n]*ALL PRIVILEGES[^\n]*bai_hub_runtime/i,'runtime DB role must never receive ALL PRIVILEGES');
+must('deploy/knowledge-hub/scripts/prepare-compose-env.sh',/BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime[\s\S]*BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD=\$runtime_password/,'new environments must contain separate runtime DB credentials');
+must('deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh',/without changing existing PostgreSQL credentials/,'existing environment credential migration contract missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_HOST_AUTH_METHOD: "scram-sha-256"/,'SCRAM host authentication missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_INITDB_ARGS: "--data-checksums"/,'data checksum init missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE:\?set POSTGRES_CONFIG_FILE/,'explicit PostgreSQL config profile contract missing');
