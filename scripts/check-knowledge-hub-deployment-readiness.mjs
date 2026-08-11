@@ -10,7 +10,7 @@ function mustNot(rel,pattern,label){const text=read(rel);if(pattern.test(text))f
 for(const rel of [
  'deploy/knowledge-hub/compose.yaml','deploy/knowledge-hub/compose.rehearsal.yaml','deploy/knowledge-hub/Caddyfile',
  'deploy/knowledge-hub/Dockerfile','deploy/knowledge-hub/.env.example','deploy/knowledge-hub/postgres/001_initial.sql',
- 'deploy/knowledge-hub/postgres/002_auth_and_operations.sql','deploy/knowledge-hub/postgres/postgresql.tuned-2gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-4gb.conf','deploy/knowledge-hub/postgres/verify-tuning.sql','deploy/knowledge-hub/scripts/prepare-compose-env.sh','deploy/knowledge-hub/scripts/verify-postgres-tuning.sh','deploy/knowledge-hub/scripts/start-local-compose.sh','deploy/knowledge-hub/scripts/stop-local-compose.sh','deploy/knowledge-hub/scripts/backup-postgres.sh',
+ 'deploy/knowledge-hub/postgres/002_auth_and_operations.sql','deploy/knowledge-hub/postgres/postgresql.tuned-2gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-4gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-8gb.conf','deploy/knowledge-hub/postgres/verify-tuning.sql','deploy/knowledge-hub/scripts/prepare-compose-env.sh','deploy/knowledge-hub/scripts/verify-postgres-tuning.sh','deploy/knowledge-hub/scripts/start-local-compose.sh','deploy/knowledge-hub/scripts/stop-local-compose.sh','deploy/knowledge-hub/scripts/backup-postgres.sh',
  'deploy/knowledge-hub/scripts/restore-rehearsal.sh','deploy/knowledge-hub/scripts/run-live-rehearsal.sh','deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/rehearsal-client.mjs','deploy/knowledge-hub/runtime/postgres-config.mjs','scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs','.github/workflows/knowledge-hub-live-gate.yml','scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs'
 ]) if(!fs.existsSync(path.join(root,rel))) failures.push(`${rel}: missing`);
 must('deploy/knowledge-hub/compose.yaml',/postgres:16\.14-alpine/,'PostgreSQL major image missing');
@@ -19,7 +19,9 @@ must('deploy/knowledge-hub/compose.rehearsal.yaml',/127\.0\.0\.1:8787:8787/,'reh
 must('deploy/knowledge-hub/compose.yaml',/PGHOST: postgres[\s\S]*PGPASSWORD:/,'split PostgreSQL secret fields missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_HOST_AUTH_METHOD: "scram-sha-256"/,'SCRAM host authentication missing');
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_INITDB_ARGS: "--data-checksums"/,'data checksum init missing');
-must('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE[\s\S]*postgresql\.tuned-2gb\.conf/,'tuned PostgreSQL config mount missing');
+must('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE:\?set POSTGRES_CONFIG_FILE/,'explicit PostgreSQL config profile contract missing');
+must('deploy/knowledge-hub/compose.yaml',/POSTGRES_SHM_SIZE:\?set POSTGRES_SHM_SIZE/,'explicit PostgreSQL shm profile contract missing');
+mustNot('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE:-|POSTGRES_SHM_SIZE:-/,'host-memory profile must not silently fall back');
 mustNot('deploy/knowledge-hub/compose.yaml',/DATABASE_URL:/,'Compose must not interpolate DB password into a connection URL');
 must('deploy/knowledge-hub/Caddyfile',/reverse_proxy knowledge-api:8787/,'reverse proxy target missing');
 must('deploy/knowledge-hub/Caddyfile',/Strict-Transport-Security/,'HSTS missing');

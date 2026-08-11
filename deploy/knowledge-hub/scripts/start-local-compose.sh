@@ -3,7 +3,14 @@ set -Eeuo pipefail
 here="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 env_file="${BAI_KNOWLEDGE_HUB_ENV_FILE:-$here/.env}"
 if [ ! -f "$env_file" ]; then
-  "$here/scripts/prepare-compose-env.sh" "$env_file"
+  profile="${BAI_KNOWLEDGE_HUB_PROFILE:-}"
+  if [ -z "$profile" ]; then
+    echo "Knowledge Hub environment file does not exist: $env_file" >&2
+    echo "Create it first with prepare-compose-env.sh --profile <2gb|4gb|8gb> --output '$env_file'," >&2
+    echo "or set BAI_KNOWLEDGE_HUB_PROFILE for explicit one-command bootstrap." >&2
+    exit 2
+  fi
+  "$here/scripts/prepare-compose-env.sh" --profile "$profile" --output "$env_file"
 fi
 for cmd in docker curl; do command -v "$cmd" >/dev/null 2>&1 || { echo "$cmd is required" >&2; exit 2; }; done
 docker compose version >/dev/null 2>&1 || { echo "docker compose plugin is required" >&2; exit 2; }
