@@ -20,10 +20,10 @@
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- TASK-017: `ACTIVE / PHASE0_GITHUB_LIVE_GATE_IMPLEMENTED / 4GB_STARTUP_PROFILE_SELECTED / 8GB_SCALE_PROFILE_PREPARED / REMOTE_LIVE_RUN_AND_PRODUCTION_PILOT_PENDING` — paid/public production activation remains separately gated
+- TASK-017: `ACTIVE / PHASE0_GITHUB_LIVE_GATE_IMPLEMENTED / ABLENET_L3_8GB_VPS_HOST_BUILD_IN_PROGRESS / REMOTE_LIVE_RUN_AND_PRODUCTION_PILOT_PENDING` — paid/public production activation remains separately gated
 - Current development route: `TASK-017 Phase 0 — live PostgreSQL/Docker rehearsal, then separately authorized production endpoint + BAI VIDEO PRODUCTION TASK-036 pilot`
 - Permanent model-routing vendor policy: unchanged
-- Last Updated: `2026-08-11`
+- Last Updated: `2026-08-12`
 
 ## Current Product Boundary
 
@@ -36,7 +36,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1280 / 1280 PASS` (TASK-017 Phase 0 Compose/PostgreSQL Tuning; prior Pre-Live Hardening 1273/1273; Integration Kit RC baseline 1271/1271; Live Rehearsal Harness baseline 1269/1269; Deployment Readiness baseline 1267/1267; prior Local Hub baseline 1255/1255)
+- Full BAI Development OS: `1287 / 1287 PASS` (latest ABLENET L3 / 8 GiB startup-profile baseline; GitHub Live Gate + PostgreSQL tuning contracts included)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
@@ -44,11 +44,11 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Roadmap Consolidation: `56 / 56 PASS` after CREATIVE OS Knowledge Audit refinement synchronization
 - Root `DistributedOS` export: `PASS`
 - TASK-016 Phase 0 Knowledge Evolution focused suite: `50 / 50 PASS`
-- TASK-017 Phase 0 Knowledge Hub focused suite: `40 / 40 PASS`; Knowledge Evolution / Product Integration focused suite: `52 / 52 PASS`
+- TASK-017 Phase 0 Knowledge Hub focused suite: `47 / 47 PASS`; Knowledge Evolution / Product Integration focused suite remains green
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `564 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `576 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -68,12 +68,12 @@ Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`. Production Hub infrastr
 
 TASK-017 Phase 0 is `ACTIVE`. Local Hub Foundation and the subsequent non-production Deployment Readiness slice are accepted. The current implementation adds one-VPS Docker Compose packaging, PostgreSQL runtime/migrations, server-side hashed API-key credential lifecycle, `/healthz`/`/readyz`, explicit-public-profile Caddy TLS template, backup and rehearsal-only restore controls while preserving Common Ingestion/idempotency/Receipt/Policy/backfill/Candidate boundaries.
 
-Public HTTP Clients still cannot self-assign Trust or backfill provenance. A self-cleaning one-command live rehearsal harness is implemented and accepted for environment handoff. No live Docker/PostgreSQL execution, paid VPS, public DNS/TLS, real production Product credential or real-user Evidence collection is claimed. Those remain separate environment/deployment/security/budget and Product-pilot gates.
+Public HTTP Clients still cannot self-assign Trust or backfill provenance. A self-cleaning one-command live rehearsal harness is implemented and accepted for environment handoff. ABLENET L3 / 8 GiB VPS is now provisioned and the Ubuntu 24.04 host baseline is being configured. Live Knowledge Hub Docker/PostgreSQL rehearsal, public TLS/API activation, real production Product credential and real-user Evidence collection are not yet claimed; those remain separate environment/deployment/security and Product-pilot gates.
 
 Presigned Object Storage fallback is now implemented in the Product-owned Python reference. It uses the canonical Batch artifact, requires HTTPS outside loopback tests, rejects redirects/credential-bearing upload headers, and keeps Local Outbox Events until a valid Hub Delivery Receipt acknowledges them.
 
 
-Pre-Live hardening additionally uses split PostgreSQL fields instead of Compose-side password-in-URL interpolation, pins the direct deployment `pg` version, and can emit sanitized machine-readable live-rehearsal Evidence only after successful teardown. The PostgreSQL deployment baseline now selects the Owner-chosen ABLENET L3 / 8 GiB profile as the startup-production default; the 4 GiB profile is retained as an explicit fallback and the 2 GiB profile remains low-resource only. Exact PostgreSQL 16.14 selection, SCRAM + data-checksum initialization, active tuning verification, and safe local start/stop/environment bootstrap remain in force. Full dependency lock and real live Docker/PostgreSQL execution remain pending.
+Pre-Live hardening additionally uses split PostgreSQL fields instead of Compose-side password-in-URL interpolation, pins the direct deployment `pg` version, and can emit sanitized machine-readable live-rehearsal Evidence only after successful teardown. The PostgreSQL deployment baseline now selects the Owner-chosen ABLENET L3 / 8 GiB profile as the startup-production default; the 4 GiB profile is retained as an explicit fallback and the 2 GiB profile remains low-resource only. Exact PostgreSQL 16.14 selection, SCRAM + data-checksum initialization, active tuning verification, and safe local start/stop/environment bootstrap remain in force. Full dependency lock, remote GitHub-hosted live-gate Evidence, and VPS live Docker/PostgreSQL rehearsal remain pending. The operator runbook is `deploy/knowledge-hub/ABLENET_VPS_BUILD_RUNBOOK_Ver4.1.md` and fixes the host timezone at `Asia/Tokyo` while retaining UTC RTC.
 
 
 ## TASK-017 GitHub Actions Live Gate — 2026-08-11

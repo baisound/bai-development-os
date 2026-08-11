@@ -1,6 +1,6 @@
 # TASK-017 — Knowledge Evolution & Federated Evidence Governance OS
 
-Status: `ACTIVE / PHASE0_COMPOSE_POSTGRES_TUNING_IMPLEMENTED / LIVE_DOCKER_POSTGRES_AND_PRODUCTION_PILOT_PENDING`
+Status: `ACTIVE / PHASE0_GITHUB_LIVE_GATE_IMPLEMENTED / ABLENET_VPS_HOST_BUILD_IN_PROGRESS / REMOTE_LIVE_AND_PRODUCTION_PILOT_PENDING`
 Roadmap Position: `PHASE 0 REPRIORITIZED AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`
 Development Profile: `DEV_4_FOUNDATION_CRITICAL` (expected; must be re-evaluated at design gate)
 Parent Scope: Architecture Ver.2.28 Part XV, Post-CREATIVE-OS Knowledge Audit Roadmap Refinement Ver.1.0, and Consumer Knowledge Evolution Roadmap Refinement Ver.1.2.
@@ -22,8 +22,9 @@ The remaining advanced TASK-017 scope stays after TASK-016 resilience evidence.
 - External Product credential via generic `CredentialProvider`; BAI VIDEO PRODUCT selects Microsoft Password Manager.
 - Product-owned generated client; zero BAI Development OS runtime dependency.
 - Hub failure never blocks Product primary function.
-- Canonical Knowledge remains private-Git authority.
+- Canonical Knowledge authority remains the BAI Development OS canonical Git repository/main; repository visibility does not change Knowledge authority.
 
 Read first: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md` for the early slice.
+VPS operator runbook: `deploy/knowledge-hub/ABLENET_VPS_BUILD_RUNBOOK_Ver4.1.md`.
 
 Implementation authorization: `TASK-017 PHASE 0 LOCAL + NON-PRODUCTION DEPLOYMENT READINESS — OWNER AUTHORIZED 2026-08-11`. Production VPS/DNS/TLS/real credential activation remains `NOT_AUTHORIZED`.
