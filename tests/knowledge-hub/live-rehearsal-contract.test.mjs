@@ -12,7 +12,7 @@ test('live rehearsal harness never activates public profile and always tears dow
 });
 
 test('live rehearsal client verifies submit, retry, partial reject, persistence and revocation without printing raw key',()=>{
- const client=read('deploy/knowledge-hub/runtime/rehearsal-client.mjs');assert.match(client,/already_seen/);assert.match(client,/partialReceipt\.rejected/);assert.match(client,/revokeCredential/);assert.match(client,/SELECT count\(\*\)::int AS count FROM evidence_events/);assert.doesNotMatch(client,/console\.log\(issued\.api_key\)/);
+ const client=read('deploy/knowledge-hub/runtime/rehearsal-client.mjs');assert.match(client,/already_seen/);assert.match(client,/partialReceipt\.rejected/);assert.match(client,/revokeCredential/);assert.match(client,/SELECT count\(\*\)::int AS count FROM evidence_events/);assert.match(client,/postgresPoolConfig\(process\.env/);assert.doesNotMatch(client,/DATABASE_URL required/);assert.doesNotMatch(client,/console\.log\(issued\.api_key\)/);
  const parsed=spawnSync(process.execPath,['--check','deploy/knowledge-hub/runtime/rehearsal-client.mjs'],{cwd:root,encoding:'utf8'});assert.equal(parsed.status,0,parsed.stderr);
  const shell=spawnSync('bash',['-n','deploy/knowledge-hub/scripts/run-live-rehearsal.sh'],{cwd:root,encoding:'utf8'});assert.equal(shell.status,0,shell.stderr);
 });

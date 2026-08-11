@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import pg from 'pg';
 import { createApiKeyCredential, createPostgresApiKeyStore } from '../../../src/knowledge-hub/index.mjs';
+import { postgresPoolConfig } from './postgres-config.mjs';
 
 const { Pool } = pg;
-if (!process.env.DATABASE_URL) { console.error('DATABASE_URL required'); process.exit(2); }
 const endpoint = process.env.BAI_KNOWLEDGE_HUB_REHEARSAL_ENDPOINT ?? 'http://127.0.0.1:8787';
 const productId = 'bai-video-production';
 const subjectId = `rehearsal-${Date.now()}`;
-const pool = new Pool({ connectionString: process.env.DATABASE_URL, max: 1, application_name: 'bai-knowledge-hub-rehearsal-client' });
+const pool = new Pool(postgresPoolConfig(process.env, { max: 1, applicationName: 'bai-knowledge-hub-rehearsal-client' }));
 
 function event(id, occurredAt, type, feature, result, properties, privacyLevel='P0') {
   return { event_id:id, occurred_at:occurredAt, type, feature, result, retry_count:0, privacy_level:privacyLevel, properties };
