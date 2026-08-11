@@ -1,6 +1,6 @@
 # TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.3
 
-Status: `ACTIVE / PRELIVE_HARDENING_ACCEPTED / LIVE_POSTGRES_AND_PRODUCT_PILOT_PENDING`
+Status: `ACTIVE / COMPOSE_POSTGRES_TUNING_IMPLEMENTED / LIVE_DOCKER_POSTGRES_AND_PRODUCT_PILOT_PENDING`
 Parent Task: `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS`
 Entry: TASK-016 Phase 0 contract/capture foundation complete and approved for next route.
 Exit: a bounded BAI VIDEO PRODUCT pilot has produced real operational Evidence suitable for Candidate review and TASK-016 resilience certification. Local Hub Foundation is an earlier internal gate and does not claim Pilot exit.
@@ -68,6 +68,12 @@ This gate does not authorize VPS purchase, DNS changes, public TLS activation, p
 ### 3.3 Pre-Live hardening gate
 
 Before live rehearsal, the supplied deployment contract uses split PostgreSQL secret fields rather than password-in-URL interpolation, emits optional sanitized machine Evidence only after teardown, and validates that Evidence independently. The direct `pg` version is pinned; full transitive dependency lock remains a production-activation prerequisite and is not fabricated without registry metadata.
+
+### 3.4 Docker Compose / PostgreSQL tuning gate
+
+The Owner-authorized next slice implements an executable one-VPS Compose profile and conservative PostgreSQL tuning templates before live rehearsal. The default profile targets a shared ~2 GiB host, with an optional 4 GiB profile. New empty clusters use page checksums and SCRAM host authentication; durability is not weakened. PostgreSQL remains private, the public reverse-proxy profile remains separately gated, and storage-specific planner tuning is deferred until target-VPS Evidence exists.
+
+The local implementation includes environment bootstrap, start/stop helpers, active-setting verification and machine static checks. Acceptance of this gate does not claim live Docker execution when the build environment cannot run Docker.
 
 ### 17.0.2 Hub MVP
 

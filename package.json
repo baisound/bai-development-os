@@ -72,7 +72,8 @@
     "consumer-evidence:mock-hub": "node scripts/run-consumer-evidence-mock-hub.mjs",
     "test:knowledge-hub": "node --test tests/knowledge-hub/*.test.mjs",
     "knowledge-hub:local": "node scripts/run-knowledge-hub-local.mjs",
-    "check:knowledge-hub-deployment": "node scripts/check-knowledge-hub-deployment-readiness.mjs"
+    "check:knowledge-hub-deployment": "node scripts/check-knowledge-hub-deployment-readiness.mjs",
+    "check:knowledge-hub-postgres-tuning": "node scripts/check-knowledge-hub-postgres-tuning.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

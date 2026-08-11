@@ -4,27 +4,65 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 
 ## Included
 
-- `compose.yaml` — one-VPS topology. PostgreSQL and API are private by default; Caddy requires explicit `public` profile.
+- `compose.yaml` — one-VPS topology. PostgreSQL and API are private by default; Caddy requires explicit `public` profile. PostgreSQL uses a mounted tuning profile and exact 16.14 Alpine tag by default.
 - `compose.rehearsal.yaml` — loopback-only API exposure for a local/VPS rehearsal.
 - `Dockerfile` + `runtime/` — PostgreSQL-backed Hub runtime; deployment-only `pg` dependency.
 - `postgres/001_initial.sql`, `002_auth_and_operations.sql` — immutable migrations.
+- `postgres/postgresql.tuned-2gb.conf` — default shared-2-GiB-VPS profile.
+- `postgres/postgresql.tuned-4gb.conf` — optional shared-4-GiB-VPS profile.
+- `postgres/verify-tuning.sql` + `scripts/verify-postgres-tuning.sh` — active-setting verification.
 - `Caddyfile` — HTTPS reverse proxy template for a later public gate.
 - `scripts/backup-postgres.sh` — restrictive custom-format backup + SHA-256.
 - `scripts/restore-rehearsal.sh` — restore rehearsal only; safety suffix + acknowledgement required.
+
+## Local Docker Compose quick start
+
+The safest local path binds only the API to `127.0.0.1`; PostgreSQL remains internal. It creates a host-only `.env` with mode `0600` if none exists, starts PostgreSQL + API, waits for `/readyz`, and verifies the active PostgreSQL safety/tuning settings.
+
+```bash
+bash deploy/knowledge-hub/scripts/start-local-compose.sh
+```
+
+Stop while preserving PostgreSQL data:
+
+```bash
+bash deploy/knowledge-hub/scripts/stop-local-compose.sh
+```
+
+Delete the local PostgreSQL volume only when intentional:
+
+```bash
+bash deploy/knowledge-hub/scripts/stop-local-compose.sh --destroy-data
+```
 
 ## Rehearsal sequence when Docker is available
 
 ```bash
 cd deploy/knowledge-hub
-cp .env.example .env
-# Replace placeholders locally; never commit .env.
-chmod 600 .env
+# Recommended: create a 0600 host-only .env with a random DB password.
+bash scripts/prepare-compose-env.sh
+# Or copy .env.example manually and replace placeholders; never commit .env.
 docker compose -f compose.yaml -f compose.rehearsal.yaml --env-file .env up -d --build
 curl -fsS http://127.0.0.1:8787/healthz
 curl -fsS http://127.0.0.1:8787/readyz
 ```
 
 The base Compose does not host-publish PostgreSQL or the API. `compose.rehearsal.yaml` publishes only API loopback.
+
+
+## PostgreSQL tuning profile
+
+The default profile targets the original low-cost one-VPS design where a ~2 GiB host is shared by PostgreSQL, Knowledge API, reverse proxy, backup jobs and the OS. It keeps durability (`fsync`, `synchronous_commit`, `full_page_writes`) enabled, initializes new clusters with data checksums and SCRAM host authentication, and avoids forcing storage-specific planner values before target-disk Evidence exists.
+
+To select the optional 4 GiB profile, set `POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-4gb.conf` and `POSTGRES_SHM_SIZE=512mb` in the host-only `.env`.
+
+After startup:
+
+```bash
+bash scripts/verify-postgres-tuning.sh
+```
+
+Changing the initdb authentication/checksum variables does not retrofit an existing PostgreSQL volume; recreate only through an explicitly authorized migration/restore procedure.
 
 ## Issue a Product API credential for a controlled environment
 
