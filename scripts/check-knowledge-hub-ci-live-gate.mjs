@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const failures=[];
 const read=p=>fs.readFileSync(p,'utf8');
 const workflow='.github/workflows/knowledge-hub-live-gate.yml';
-for (const p of [workflow,'scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs','schemas/knowledge-evolution/knowledge-hub-ci-live-gate-evidence.schema.json']) if(!fs.existsSync(p)) failures.push(`${p}: missing`);
+for (const p of [workflow,'scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs','schemas/knowledge-evolution/knowledge-hub-ci-live-gate-evidence.schema.json','scripts/check-knowledge-hub-runtime-lock-candidate.mjs']) if(!fs.existsSync(p)) failures.push(`${p}: missing`);
 if(fs.existsSync(workflow)){
   const w=read(workflow);
   const must=(re,label)=>{if(!re.test(w)) failures.push(`${workflow}: ${label}`);};
@@ -15,6 +15,7 @@ if(fs.existsSync(workflow)){
   must(/docker compose version/,'Docker Compose capability probe missing');
   must(/run-live-rehearsal\.sh/,'live rehearsal harness not invoked');
   must(/package-lock-only/,'runtime dependency lock candidate generation missing');
+  must(/check-knowledge-hub-runtime-lock-candidate\.mjs/,'runtime lock supply-chain policy missing');
   must(/github\.event\.pull_request\.head\.repo\.full_name == github\.repository/,'fork PR live-execution guard missing');
   must(/workflow_dispatch/,'manual trusted execution path missing');
   mustNot(/pull_request_target/,'pull_request_target is prohibited for this untrusted-code gate');

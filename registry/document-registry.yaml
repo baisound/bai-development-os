@@ -6935,8 +6935,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d56f4fe73988220d03c30d33c114b8499a27f94db2a23f2eb053cd8647ff4b0a
-  size_bytes: 4310
+  sha256: 64d16b645377c459bfb161c878b83896fd03a368faaf6b6a10693a3b65bac462
+  size_bytes: 4407
 - document_id: 89DA656D04FF65DB
   path: schemas/knowledge-evolution/knowledge-hub-ci-live-gate-evidence.schema.json
   title: BAI Knowledge Hub CI Live Gate Evidence Schema
@@ -6961,8 +6961,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 89c778805607ff3f0d4c1de98cbedb4a33a9d35ff4b0e5a42aa36aca46e98bb4
-  size_bytes: 3267
+  sha256: 691b5ef86136d77e8f3a0d02c281b36acc6c28053477d42f65fb8c248b25afb5
+  size_bytes: 3680
 - document_id: C90F140F085A75EA
   path: tasks/TASK-017/phase0-github-actions-live-gate-implementation-result-2026-08-11.md
   title: TASK-017 Phase 0 GitHub Actions Live Gate Implementation Result
@@ -7002,6 +7002,32 @@ documents:
   verified_by: Orchestrator
   sha256: 3deeaa0a78d4d66e1d5666a3be09fa3fd3d545fcde38699ebbda04b38892e6a9
   size_bytes: 622
+- document_id: 771852D1EECA90EA
+  path: specifications/BAI_Knowledge_Hub_Runtime_Lock_Candidate_Policy_Ver1.0.md
+  title: BAI Knowledge Hub Runtime Lock Candidate Policy Ver.1.0
+  category: specification
+  authority: phase0-supply-chain-policy
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_REMOTE_CANDIDATE_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: aa1fa18a6559c2d6d8a305944e4543878ca408f4dddb3e1445d12d90af841b0a
+  size_bytes: 1453
+- document_id: D5439499189021B6
+  path: tasks/TASK-017/phase0-runtime-lock-candidate-policy-implementation-result-2026-08-11.md
+  title: TASK-017 Phase 0 Runtime Lock Candidate Policy Implementation Result
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTED_REMOTE_CANDIDATE_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: b46c2fc5aec9c95e88520dc0b0ef73ee2b70c3cb1733ccbc681576cfdc275a30
+  size_bytes: 647
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner

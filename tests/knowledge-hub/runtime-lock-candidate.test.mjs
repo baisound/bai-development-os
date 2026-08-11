@@ -1,0 +1,23 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { checkRuntimeLockCandidate } from '../../scripts/check-knowledge-hub-runtime-lock-candidate.mjs';
+
+const good=()=>({
+  name:'bai-knowledge-hub-runtime',version:'1.0.0',lockfileVersion:3,requires:true,
+  packages:{
+    '':{name:'bai-knowledge-hub-runtime',version:'1.0.0',dependencies:{pg:'8.13.1'}},
+    'node_modules/pg':{version:'8.13.1',resolved:'https://registry.npmjs.org/pg/-/pg-8.13.1.tgz',integrity:'sha512-QUJDREVGR0g='},
+    'node_modules/example':{version:'1.0.0',resolved:'https://registry.npmjs.org/example/-/example-1.0.0.tgz',integrity:'sha512-QUJDREVGR0g='}
+  }
+});
+
+test('runtime lock candidate accepts exact registry+integrity graph',()=>assert.equal(checkRuntimeLockCandidate(good()).status,'PASS'));
+test('runtime lock candidate rejects git/file/http source',()=>{
+  for(const resolved of ['git+https://example.invalid/x.git','file:../x','http://registry.npmjs.org/x.tgz']){
+    const v=good();v.packages['node_modules/example'].resolved=resolved;assert.equal(checkRuntimeLockCandidate(v).status,'FAIL');
+  }
+});
+test('runtime lock candidate rejects missing integrity or pg drift',()=>{
+  const a=good();delete a.packages['node_modules/example'].integrity;assert.equal(checkRuntimeLockCandidate(a).status,'FAIL');
+  const b=good();b.packages['node_modules/pg'].version='8.13.2';assert.equal(checkRuntimeLockCandidate(b).status,'FAIL');
+});

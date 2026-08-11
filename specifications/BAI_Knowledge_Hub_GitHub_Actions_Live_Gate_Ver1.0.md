@@ -50,3 +50,7 @@ The workflow uploads:
 ## 7. Exit interpretation
 
 A successful GitHub Actions run can satisfy the previously environment-blocked **real Docker/PostgreSQL rehearsal gate** for the exact commit under test. It does not authorize or prove Production VPS, DNS, TLS, production credential issuance, or BAI VIDEO PRODUCTION real-user Pilot.
+
+## 8. Runtime lock candidate supply-chain check
+
+Before the generated lock is consumed by Docker, `scripts/check-knowledge-hub-runtime-lock-candidate.mjs` verifies the exact runtime identity/direct `pg` version, HTTPS npm-registry provenance and SHA-512 integrity for every installed package, and rejects git/file/link/plain-HTTP sources. This candidate still requires normal PR promotion before Production use.
