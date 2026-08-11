@@ -1,6 +1,6 @@
 # BAI Knowledge Hub PostgreSQL / Docker Compose Tuning Specification Ver.1.0
 
-Status: `IMPLEMENTATION_BASELINE / LIVE_DOCKER_VALIDATION_PENDING`
+Status: `IMPLEMENTATION_BASELINE / 4GB_STARTUP_SELECTED / 8GB_SCALE_PROFILE_PREPARED / LIVE_DOCKER_VALIDATION_PENDING`
 Date: `2026-08-11`
 Parent: `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`
 
@@ -8,11 +8,11 @@ Parent: `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice`
 
 Provide a repeatable one-VPS Docker Compose topology and conservative PostgreSQL configuration profiles before the first live PostgreSQL rehearsal. The design preserves the v1 infrastructure ceiling and keeps PostgreSQL/API private by default.
 
-## 2. Default environment
+## 2. Startup and scale-up environments
 
-The default deployment profile targets a shared VPS with approximately 2 GiB RAM. PostgreSQL, Knowledge API, reverse proxy, backup/rehearsal work and the host OS share that memory. PostgreSQL therefore starts with `shared_buffers=256MB`, `work_mem=4MB`, `effective_cache_size=1GB`, and `max_connections=40`; these are starting values, not benchmark guarantees.
+The Owner-selected startup deployment target is a shared VPS with approximately **4 GiB RAM**. PostgreSQL, Knowledge API, reverse proxy, backup/rehearsal work and the host OS share that memory. The Compose/environment bootstrap therefore defaults to `postgresql.tuned-4gb.conf` with `POSTGRES_SHM_SIZE=512mb`.
 
-An optional 4 GiB profile raises PostgreSQL memory/parallel limits while keeping durability settings unchanged.
+An **8 GiB scale-up profile** is prepared but remains inactive. It is selected only after the host is actually resized and the active configuration is verified. The 2 GiB profile remains available as a low-resource development/rehearsal option.
 
 ## 3. PostgreSQL image and persistence
 
@@ -20,7 +20,7 @@ An optional 4 GiB profile raises PostgreSQL memory/parallel limits while keeping
 - PostgreSQL data volume remains `/var/lib/postgresql/data` because the selected major is PostgreSQL 16.
 - PostgreSQL is never host-published by the base Compose.
 - The tuning profile is mounted read-only and selected using `POSTGRES_CONFIG_FILE`.
-- `shm_size` is configurable, default `256mb`.
+- `shm_size` is configurable; startup-production default is `512mb`. The 8 GiB scale-up recommendation is `1gb`.
 
 ## 4. Integrity and authentication
 
@@ -30,7 +30,7 @@ Changing initdb variables after a data volume already exists does not retrofit t
 
 ## 5. Memory principles
 
-`work_mem` is bounded because it may be consumed multiple times by one query and across concurrent sessions. The profile leaves host memory for the API and operating system instead of allocating a dedicated-database formula to a shared 2 GiB VPS.
+`work_mem` is bounded because it may be consumed multiple times by one query and across concurrent sessions. All profiles leave host memory for the API and operating system instead of applying a dedicated-database formula to a shared VPS. The 8 GiB profile intentionally keeps `work_mem=8MB` and `max_connections=64` bounded rather than scaling them linearly with RAM.
 
 ## 6. Storage-dependent tuning
 

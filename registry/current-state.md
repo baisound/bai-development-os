@@ -20,7 +20,7 @@
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- TASK-017: `ACTIVE / PHASE0_COMPOSE_POSTGRES_TUNING_IMPLEMENTED / LIVE_DOCKER_POSTGRES_AND_PRODUCTION_PILOT_PENDING` — paid/public production activation remains separately gated
+- TASK-017: `ACTIVE / PHASE0_GITHUB_LIVE_GATE_IMPLEMENTED / 4GB_STARTUP_PROFILE_SELECTED / 8GB_SCALE_PROFILE_PREPARED / REMOTE_LIVE_RUN_AND_PRODUCTION_PILOT_PENDING` — paid/public production activation remains separately gated
 - Current development route: `TASK-017 Phase 0 — live PostgreSQL/Docker rehearsal, then separately authorized production endpoint + BAI VIDEO PRODUCTION TASK-036 pilot`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-11`
@@ -73,7 +73,7 @@ Public HTTP Clients still cannot self-assign Trust or backfill provenance. A sel
 Presigned Object Storage fallback is now implemented in the Product-owned Python reference. It uses the canonical Batch artifact, requires HTTPS outside loopback tests, rejects redirects/credential-bearing upload headers, and keeps Local Outbox Events until a valid Hub Delivery Receipt acknowledges them.
 
 
-Pre-Live hardening additionally uses split PostgreSQL fields instead of Compose-side password-in-URL interpolation, pins the direct deployment `pg` version, and can emit sanitized machine-readable live-rehearsal Evidence only after successful teardown. The next local slice now adds exact PostgreSQL 16.14 Compose selection, 2 GiB/4 GiB tuned profiles, SCRAM + data-checksum initialization, active tuning verification, and safe local start/stop/environment bootstrap. Full dependency lock and real live Docker/PostgreSQL execution remain pending.
+Pre-Live hardening additionally uses split PostgreSQL fields instead of Compose-side password-in-URL interpolation, pins the direct deployment `pg` version, and can emit sanitized machine-readable live-rehearsal Evidence only after successful teardown. The PostgreSQL deployment baseline now selects the 4 GiB profile as the startup-production default and also carries an inactive 8 GiB scale-up profile; the 2 GiB profile remains low-resource only. Exact PostgreSQL 16.14 selection, SCRAM + data-checksum initialization, active tuning verification, and safe local start/stop/environment bootstrap remain in force. Full dependency lock and real live Docker/PostgreSQL execution remain pending.
 
 
 ## TASK-017 GitHub Actions Live Gate — 2026-08-11

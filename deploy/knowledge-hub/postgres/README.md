@@ -2,22 +2,28 @@
 
 These profiles are conservative **starting points** for the one-VPS Knowledge Hub v1 topology. They are not universal tuning claims.
 
-## Default profile: 2 GiB shared VPS
+## Startup production profile: 4 GiB shared VPS
 
-`postgresql.tuned-2gb.conf` is the default Compose profile. The host is assumed to run PostgreSQL, the Knowledge API, a small reverse proxy, backup/rehearsal jobs, and the OS itself.
+`postgresql.tuned-4gb.conf` is the startup-production Compose profile because the initial Knowledge Hub VPS is planned at 4 GiB RAM. The host is assumed to run PostgreSQL, the Knowledge API, a small reverse proxy, backup/rehearsal jobs, and the OS itself.
 
-The profile therefore does **not** assign 25% of the entire host to every PostgreSQL memory consumer. `shared_buffers=256MB` leaves headroom for the OS page cache and the API, while `work_mem=4MB` bounds per-sort/per-hash memory amplification. The API connection pool remains 10 by default and PostgreSQL `max_connections` is 40.
+The 4 GiB profile keeps `shared_buffers=768MB`, `effective_cache_size=2560MB`, `work_mem=8MB`, and `max_connections=60`. It leaves headroom for the OS page cache and application containers while preserving durability controls.
 
-## Optional profile: 4 GiB shared VPS
+## Scale-up profile: 8 GiB shared VPS
 
-Set in the host-only `.env`:
+`postgresql.tuned-8gb.conf` is prepared now so a later VPS scale-up does not require an emergency tuning redesign. It is **not** the startup default and must not be selected until the host has actually been resized and a maintenance-window verification is authorized.
+
+Host-only `.env` selection after an 8 GiB scale-up:
 
 ```text
-POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-4gb.conf
-POSTGRES_SHM_SIZE=512mb
+POSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-8gb.conf
+POSTGRES_SHM_SIZE=1gb
 ```
 
-The 4 GiB profile raises cache/memory and parallel-worker budgets, but preserves durability and authentication controls.
+The 8 GiB profile uses `shared_buffers=1536MB`, `effective_cache_size=5GB`, `work_mem=8MB`, and a bounded `max_connections=64`. `work_mem` deliberately does not double with RAM because it is a per-operation allocation and can multiply across concurrent queries.
+
+## Low-resource profile: 2 GiB shared VPS
+
+`postgresql.tuned-2gb.conf` remains available for local/rehearsal or explicitly constrained hosts. It is no longer the production startup default.
 
 ## Integrity and authentication
 

@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T15:26:00+09:00'
+registry_generated_at: '2026-08-11T17:39:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 18ae715ffe4e24faedb6314567cbee6576551023e050250f994d2780e1b8d9c5
-  size_bytes: 7903
+  sha256: 871d8b4679e12a64957a5589ffd39beec1dfe42774630306fac767c6f66fd618
+  size_bytes: 8098
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5997,8 +5997,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: e46695248d802f39090d67cc0dde6e5695bcaaea09f04022b2ddda5fd937697d
-  size_bytes: 2531
+  sha256: 3741df6e38f7d947ce2a8ef7c42f52260801040a3d466f590e670b61665ae87f
+  size_bytes: 2708
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6610,8 +6610,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f5abdb8a068afe9d3a2a0b4aadaf6a09aba785d2f10d1323215cd6933fe3d5ab
-  size_bytes: 6368
+  sha256: bcdf6a1075bc6d0bd6885163f2872f54f4f65b7fc5f474ff2c7e4a6a65a8a3ef
+  size_bytes: 6836
 - document_id: CFE15B7F801ACAC9
   path: deploy/knowledge-hub/postgres/001_initial.sql
   title: BAI Knowledge Hub PostgreSQL Initial Schema
@@ -6818,8 +6818,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d99e399f9f91cbf2fb9a817fc39f435dde221762f9bcf60107f87ff2e9c6615d
-  size_bytes: 2421
+  sha256: 7564505d425e263080d5034dd1bf18d2523259c0bb97e0857c8a0b2067e6d4df
+  size_bytes: 3024
 - document_id: 2ECFC600B4067F25
   path: deploy/knowledge-hub/postgres/postgresql.tuned-2gb.conf
   title: BAI Knowledge Hub PostgreSQL Tuned 2 GiB Profile
@@ -6846,6 +6846,19 @@ documents:
   verified_by: Orchestrator
   sha256: 59d5aa4043976324bc31fd6d777b28a603d691bcc5d382ed0bac789dcb7f2810
   size_bytes: 2161
+- document_id: B476D1C786883846
+  path: deploy/knowledge-hub/postgres/postgresql.tuned-8gb.conf
+  title: BAI Knowledge Hub PostgreSQL Tuned 8 GiB Scale-up Profile
+  category: deployment-config
+  authority: task017-postgres-tuning
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTED_INACTIVE_SCALE_UP_PROFILE_LIVE_VALIDATION_PENDING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 5b0fe4b2017fe0ce9626a56a60e4c3141c3256112f8f7bce2de7257486df5694
+  size_bytes: 2265
 - document_id: B32A5CB50FD019D1
   path: deploy/knowledge-hub/postgres/verify-tuning.sql
   title: BAI Knowledge Hub PostgreSQL Active Tuning Verification SQL
@@ -6870,8 +6883,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 82fd8a9d7864a11d1c7ab77163573e28acd8a5380f25c7df1351ee22cdf575e4
-  size_bytes: 3161
+  sha256: a3bbe7b50da2ed524bc3c9e286c4a89588aaaf5a07f18ea65652e3dbb2b49b61
+  size_bytes: 3497
 - document_id: B5EF4971698291C9
   path: tasks/TASK-017/phase0-compose-postgres-tuning-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Docker Compose PostgreSQL Tuning Owner Authorization
@@ -7119,7 +7132,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 56
-  roadmap_refinement_status: C_COMPLETE_A_COMPOSE_POSTGRES_TUNING_ACCEPTED_LIVE_DOCKER_AND_PRODUCTION_PILOT_PENDING_B_LATE
+  roadmap_refinement_status: C_COMPLETE_A_GITHUB_LIVE_GATE_IMPLEMENTED_4GB_STARTUP_8GB_SCALE_PROFILE_PREPARED_REMOTE_LIVE_AND_PRODUCTION_PILOT_PENDING_B_LATE
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -7151,19 +7164,19 @@ current_canonical_document_sets:
     status: ACTIVE_PHASE0_COMPLETED_PHASE1_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: ACTIVE / PHASE0 COMPOSE POSTGRES TUNING ACCEPTED / LIVE DOCKER + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
+  task_017_status: ACTIVE / PHASE0 GITHUB LIVE GATE IMPLEMENTED / 4GB STARTUP PROFILE SELECTED / 8GB SCALE PROFILE PREPARED / REMOTE LIVE + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: ACTIVE_PHASE0_COMPOSE_POSTGRES_TUNING_ACCEPTED_LIVE_DOCKER_AND_PRODUCTION_PILOT_PENDING
+    status: ACTIVE_PHASE0_GITHUB_LIVE_GATE_4GB_STARTUP_8GB_SCALE_PROFILE_REMOTE_LIVE_AND_PRODUCTION_PILOT_PENDING
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_COMPOSE_POSTGRES_TUNING
+registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_4GB_STARTUP_AND_8GB_SCALE_PROFILE
 registry_status_details:
-  documents: 564
+  documents: 573
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-017 ACTIVE / PHASE0 COMPOSE POSTGRES TUNING ACCEPTED / LIVE DOCKER + PRODUCTION PILOT PENDING
-  next_task: TASK-017 Phase 0 run tuned Docker/PostgreSQL live rehearsal and capture machine Evidence; production endpoint remains separately gated
+  current_task: TASK-017 ACTIVE / PHASE0 GITHUB LIVE GATE + 4GB STARTUP PROFILE + 8GB SCALE PROFILE / REMOTE LIVE + PRODUCTION PILOT PENDING
+  next_task: TASK-017 Phase 0 remote Docker/PostgreSQL live gate; production endpoint remains separately gated
