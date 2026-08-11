@@ -20,8 +20,8 @@
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- TASK-017: `NEXT_PHASE0 / NOT_STARTED` — eligible after TASK-016 Phase 0 closure; formal Phase 0 kickoff/authorization record is next
-- Current development route: `TASK-017 Phase 0 kickoff — Consumer Evidence Hub Pilot Transport Slice`
+- TASK-017: `ACTIVE / PHASE0_LOCAL_FOUNDATION_ACCEPTED / PRODUCTION_PILOT_PENDING` — paid/public production activation remains separately gated
+- Current development route: `TASK-017 Phase 0 — production-deployment/pilot preparation after accepted Local Hub Foundation; public activation requires separate gate`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-11`
 
@@ -36,7 +36,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1238 / 1238 PASS` (TASK-016 Phase 0 RC2 closure candidate; prior baselines preserved)
+- Full BAI Development OS: `1255 / 1255 PASS` (TASK-017 Phase 0 Local Hub Foundation; TASK-016 Phase 0 baseline 1238/1238)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
@@ -44,10 +44,11 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Roadmap Consolidation: `56 / 56 PASS` after CREATIVE OS Knowledge Audit refinement synchronization
 - Root `DistributedOS` export: `PASS`
 - TASK-016 Phase 0 Knowledge Evolution focused suite: `50 / 50 PASS`
+- TASK-017 Phase 0 Knowledge Hub focused suite: `17 / 17 PASS`
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `534 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `541 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -61,3 +62,10 @@ Production-specific remote broker implementations, real remote workers/labs, mul
 TASK-016 Phase 0 is `COMPLETED`. RC2 froze canonical Consumer Evidence Event/Batch/Receipt/Client Policy v1, closed Event Catalog, Privacy/Forbidden Fields, Object Storage Artifact Profile, Product-owned Python integration technology and immutable Git Repository Snapshot Reference. BAI VIDEO PRODUCTION GitHub commit/tree provenance was validated with `KEY_FILES_ONLY` content coverage and derived sanitized Evidence/Candidates; no raw Product repository or credential was committed.
 
 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`. Production Hub infrastructure is not a Phase 0 blocker and moves to TASK-017 Phase 0/deployment scope. TASK-016 Phase 1+ remains unauthorized until the Hub/client pilot produces resilience targets/evidence.
+
+
+## TASK-017 Phase 0 Local Hub Foundation Baseline
+
+TASK-017 Phase 0 is `ACTIVE`. The Owner-authorized local implementation gate is accepted by Judge as `LOCAL_FOUNDATION_ACCEPTED / PHASE0_REMAINS_ACTIVE`. Implemented surfaces include Common Ingestion, server-derived AuthContext/Product binding, stable Event idempotency, Event-level Receipt/partial reject, Client Policy, per-subject rate limiting, retention, an in-memory deterministic repository, PostgreSQL DDL + injected-query adapter, loopback HTTP reference and non-promoting Candidate handoff.
+
+The public HTTP path does not trust Client-supplied provenance labels. Object Storage backfill classification is an internal trusted route. No live PostgreSQL server, paid VPS, public DNS/TLS, production token, Product TASK-036 code or real-user Evidence collection is claimed. Those remain separate deployment/security/budget and Product-pilot gates.

@@ -1,7 +1,7 @@
 # TASK-017 Summary
 
 - Name: `Knowledge Evolution & Federated Evidence Governance OS`
-- Status: `NOT_STARTED / NOT_AUTHORIZED`
+- Status: `ACTIVE / PHASE0_LOCAL_FOUNDATION_ACCEPTED / PRODUCTION_PILOT_PENDING`
 - Revised position: **Phase 0 Pilot Transport after TASK-016 Phase 0; advanced Phase 1+ after TASK-016 resilience evidence**
 - Source priority: Pattern C first -> Pattern A Hub/runtime Evidence second -> Pattern B late
 - Phase 0: Common Ingestion MVP, PostgreSQL single-VPS Hub, Public Evidence API, external credential/auth/rate/idempotency/retention, Consumer Evidence Integration Kit, BAI VIDEO PRODUCT limited pilot
@@ -13,4 +13,8 @@
 - Canonical authority: private BAI Development OS Git; Hub/Consumer data remains Evidence/Candidate source only
 - Read first: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`
 - Early slice detail: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`
-- Implementation authorization: `NONE`
+- Implementation authorization: `PHASE 0 LOCAL IMPLEMENTATION ONLY — OWNER AUTHORIZED 2026-08-11`; paid/public production activation is separately gated
+
+## Current Phase 0 implementation state
+
+Local Hub Foundation Judge: `LOCAL_FOUNDATION_ACCEPTED / PHASE0_REMAINS_ACTIVE`. Focused Hub `17 / 17 PASS`; Knowledge Evolution `50 / 50 PASS`; full OS `1255 / 1255 PASS`. Production VPS/DNS/TLS/credential activation and the real BAI VIDEO PRODUCTION TASK-036 pilot remain separately gated.

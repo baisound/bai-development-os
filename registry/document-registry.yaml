@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T08:56:00+09:00'
+registry_generated_at: '2026-08-11T09:04:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: 46afd60a6e68e2731b7490daca3e27de0b7dcf47d2f961940d2ab62a126290c4
-  size_bytes: 4676
+  sha256: c9600faaab2e5cae14036b19a7d065548027dcfc8c4d50535f009d155d7488e4
+  size_bytes: 4875
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: dda4db4c80383e502c3ed55a4916dfbca1d8fa0805f7b17ec3ed9ceb9ba89a27
-  size_bytes: 6889
+  sha256: 87e819f430cb8b6b5a78d6e71243c2aa43bce4d87a2417dfb4c18e6a987dcf57
+  size_bytes: 7395
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 403336501f3cd6b85d71c22d015d8111ae85f9b5535ce036c61263de04f59ad2
-  size_bytes: 5042
+  sha256: 93ee8a7dfba5cbac6182f447bd941675a11b5abfbebf14c7887200139c39c9e2
+  size_bytes: 6096
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5980,12 +5980,12 @@ documents:
   authority: task-definition
   importance_level: A
   preferred_loading: read-first
-  status: NOT_STARTED_NOT_AUTHORIZED
+  status: ACTIVE_PHASE0_LOCAL_FOUNDATION_ACCEPTED_PRODUCTION_PILOT_PENDING
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 7576dcc78be3dd223955bd9ffb8824fcb904df7f3f4e4c9d8db7b07824187c13
-  size_bytes: 1865
+  sha256: 1880e1e16ef56d89d295431f6c853998f9a06aecf32906dcce8fac4f9e0040fa
+  size_bytes: 2046
 - document_id: 6E0658004570CE0F
   path: tasks/TASK-017/TASK-017.summary.md
   title: TASK-017 Summary
@@ -5993,12 +5993,12 @@ documents:
   authority: navigation-aid
   importance_level: A
   preferred_loading: read-first
-  status: NOT_STARTED_NOT_AUTHORIZED
+  status: ACTIVE_PHASE0_LOCAL_FOUNDATION_ACCEPTED_PRODUCTION_PILOT_PENDING
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 0d5ae13ce5afbd7427bfdf09f53a4baee0583cb944bc7f390df41b19094fdd8a
-  size_bytes: 1538
+  sha256: 60b7d6972ff313f97cf77ff091117d55f715c1d5936ff269ef91988a4d8cef7f
+  size_bytes: 2028
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6033,12 +6033,12 @@ documents:
   authority: planning-design
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_RC2_ALIGNED_NOT_AUTHORIZED
+  status: ACTIVE_PHASE0_LOCAL_FOUNDATION_ACCEPTED
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: db4d002ec9d2f9cff27c299faa32331297ee2307b02d7efde4f7a7627f0bac37
-  size_bytes: 4677
+  sha256: 4f1514923153bb986e259c54c3dedae33129316a7a97e3d6abd231f85a65f0da
+  size_bytes: 5623
 - document_id: F98D4889B66968D3
   path: reviews/BAI_Development_OS_Consumer_Knowledge_Three_Role_Roadmap_Review_2026-08-11.md
   title: Consumer Knowledge Evolution Three-Role Roadmap Review
@@ -6164,12 +6164,12 @@ documents:
   authority: planning-design
   importance_level: A
   preferred_loading: read-first
-  status: PLANNING_RC2_ALIGNED_NOT_AUTHORIZED
+  status: ACTIVE_LOCAL_HUB_FOUNDATION_ACCEPTED_PRODUCTION_PILOT_PENDING
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d476f2ac2f2db0d3e4a4240b7cece2f8b1e403791479b7125b3dbb388cf9e89c
-  size_bytes: 4262
+  sha256: 197f41ddb516c64856945a3f238b28fe84d49f72845fbb0718a3bc9874a05963
+  size_bytes: 5419
 - document_id: 62502207CCC33A68
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
@@ -6534,6 +6534,97 @@ documents:
   verified_by: Orchestrator
   sha256: c186cdc56fba546fa2c649457f2b9521bdbfa8d9a525c829542ab75eaca42935
   size_bytes: 1288
+- document_id: 73F9C0C70E618A27
+  path: tasks/TASK-017/phase0-owner-authorization-2026-08-11.md
+  title: TASK-017 Phase 0 Owner Authorization
+  category: task-evidence
+  authority: owner-authorization
+  importance_level: A
+  preferred_loading: read-first
+  status: AUTHORIZED_LOCAL_IMPLEMENTATION_ONLY
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: c0eedceeec13d0741871f0b0957bad0076512c86b9726dab25e8c6519aefce7c
+  size_bytes: 1316
+- document_id: 95A51FE2F5344725
+  path: specifications/BAI_Knowledge_Hub_Local_Foundation_Ver1.0.md
+  title: BAI Knowledge Hub Local Foundation Specification Ver.1.0
+  category: specification
+  authority: task017-local-foundation-specification
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTED_LOCAL_REFERENCE
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 4db11d6b73fab9964ee387c68a67d242581096bb80e5812b3be96f12974c9776
+  size_bytes: 4115
+- document_id: 87A3DA6761CE6AA4
+  path: tasks/TASK-017/phase0-local-hub-foundation-implementation-result-2026-08-11.md
+  title: TASK-017 Phase 0 Local Hub Foundation Implementation Result
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: VERIFIED_LOCAL_GATE
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 63cfb9803a3bd08e66fc66d5389c978098da36a58d3b3fb3871d087522940146
+  size_bytes: 2115
+- document_id: 2FD0F440DFE06983
+  path: tasks/TASK-017/phase0-local-hub-foundation-critic-review-2026-08-11.md
+  title: TASK-017 Phase 0 Local Hub Foundation Critic Review
+  category: review-record
+  authority: critic-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: PASS_WITH_PRODUCTION_GATES_REMAINING
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 1c91921176df052f83501460c5fbcf836fd97900d8d11d65be3c142d5f6a7770
+  size_bytes: 2262
+- document_id: B2AC2EC68F0F7220
+  path: tasks/TASK-017/phase0-local-hub-foundation-judge-review-2026-08-11.md
+  title: TASK-017 Phase 0 Local Hub Foundation Judge Review
+  category: review-record
+  authority: judge-evidence
+  importance_level: A
+  preferred_loading: read-first
+  status: LOCAL_FOUNDATION_ACCEPTED_PHASE0_ACTIVE
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: e2754fdbda4f5fff68fc7e02b3f49ab02eaa73067b8d2ea8538acaca7ee21a8f
+  size_bytes: 1466
+- document_id: 6C4533997293FE0D
+  path: deploy/knowledge-hub/README.md
+  title: BAI Knowledge Hub Phase 0 Local Foundation Deployment Notes
+  category: deployment-guide
+  authority: supporting-artifact
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: LOCAL_ONLY_PRODUCTION_NOT_AUTHORIZED
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: 0b2cd1cb60e08a5c894dcdf030f238ce47e914e9ffd3955d08ef20162bfc6725
+  size_bytes: 1071
+- document_id: CFE15B7F801ACAC9
+  path: deploy/knowledge-hub/postgres/001_initial.sql
+  title: BAI Knowledge Hub PostgreSQL Initial Schema
+  category: database-schema
+  authority: task017-persistence-contract
+  importance_level: B
+  preferred_loading: on-demand
+  status: LOCAL_FOUNDATION_CONTRACT
+  writable: false
+  effective_date: '2026-08-11'
+  verified_by: Orchestrator
+  sha256: d82b4b06aff75a5f26ca8704a8beb99067bded1f89e2efa970d8fca6e82bbc8c
+  size_bytes: 1303
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -6556,9 +6647,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_TASK016_PHASE0_RC2_CLOSURE
+  registry_sync_status: CURRENT_AFTER_TASK017_PHASE0_LOCAL_HUB_FOUNDATION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK016_PHASE0_COMPLETE_TASK017_PHASE0_NEXT_TASK016_PHASE1_UNAUTHORIZED
+  roadmap_expansion_status: TASK016_PHASE0_COMPLETE_TASK017_PHASE0_LOCAL_FOUNDATION_ACCEPTED_PRODUCTION_GATE_PENDING
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -6568,7 +6659,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice — NEXT / KICKOFF ELIGIBLE
+  next_canonical_route: TASK-017 Phase 0 — production deployment / live PostgreSQL rehearsal / BAI VIDEO PRODUCTION pilot — SEPARATE GATES REQUIRED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -6625,7 +6716,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 56
-  roadmap_refinement_status: C_FIRST_A_PILOT_NEXT_B_LATE_TASK016_PHASE0_COMPLETE
+  roadmap_refinement_status: C_COMPLETE_A_LOCAL_FOUNDATION_ACTIVE_PRODUCTION_PILOT_PENDING_B_LATE
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -6657,19 +6748,19 @@ current_canonical_document_sets:
     status: ACTIVE_PHASE0_COMPLETED_PHASE1_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: NEXT_PHASE0 / NOT_STARTED — KICKOFF ELIGIBLE AFTER TASK016 PHASE0 CLOSURE; PHASE1+ AFTER TASK016 RESILIENCE
+  task_017_status: ACTIVE / PHASE0 LOCAL FOUNDATION ACCEPTED / PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: PHASE0_NEXT_KICKOFF_ELIGIBLE
+    status: ACTIVE_PHASE0_LOCAL_FOUNDATION_ACCEPTED_PRODUCTION_PILOT_PENDING
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK016_PHASE0_RC2_CLOSURE
+registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_LOCAL_FOUNDATION
 registry_status_details:
-  documents: 534
+  documents: 541
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.28'
-  current_task: TASK-016 ACTIVE / PHASE0 COMPLETED / PHASE1+ NOT AUTHORIZED
-  next_task: TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice — KICKOFF ELIGIBLE
+  current_task: TASK-017 ACTIVE / PHASE0 LOCAL FOUNDATION ACCEPTED / PRODUCTION PILOT PENDING
+  next_task: TASK-017 Phase 0 production/deployment/pilot gate — separate authorization/environment required

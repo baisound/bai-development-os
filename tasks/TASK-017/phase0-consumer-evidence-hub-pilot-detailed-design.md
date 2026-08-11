@@ -1,9 +1,9 @@
-# TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.1
+# TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice Detailed Design Ver.1.2
 
-Status: `EARLY_REPRIORITIZED_PLANNING_SLICE / NOT_STARTED / NOT_AUTHORIZED`
+Status: `ACTIVE / LOCAL_HUB_FOUNDATION_ACCEPTED / PRODUCTION_PILOT_PENDING`
 Parent Task: `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS`
 Entry: TASK-016 Phase 0 contract/capture foundation complete and approved for next route.
-Exit: a bounded BAI VIDEO PRODUCT pilot has produced real operational Evidence suitable for Candidate review and TASK-016 resilience certification.
+Exit: a bounded BAI VIDEO PRODUCT pilot has produced real operational Evidence suitable for Candidate review and TASK-016 resilience certification. Local Hub Foundation is an earlier internal gate and does not claim Pilot exit.
 
 ## 1. Why This Slice Moves Early
 
@@ -29,6 +29,24 @@ It does not own TASK-016 certification or Product domain implementation.
 ### 17.0.1 Common Ingestion Core MVP
 
 Source-neutral validation and audit pipeline accepting Pattern A runtime Evidence and Pattern C packages through compatible contracts.
+
+
+## 3.1 Authorized Local Hub Foundation gate
+
+The 2026-08-11 Owner continuation authorizes implementation through a local, deterministic Hub foundation only. The local gate SHALL provide:
+
+- one Common Ingestion path for direct HTTPS-equivalent submission and Object Storage backfill,
+- server-derived `AuthContext` with `subject_id`, bound `product_id`, scopes and Trust Level; Client payload cannot elevate Trust,
+- Event-level idempotency on stable Product/Installation/Event identity with hash-conflict detection,
+- Event-level Delivery Receipt including accepted, already-seen and rejected outcomes,
+- Client Policy retrieval bound to authenticated Product context,
+- bounded per-subject rate limiting,
+- retention/pruning primitives,
+- PostgreSQL DDL plus an injected-query repository adapter so credentials/driver choice remain deployment concerns,
+- an in-memory reference repository for deterministic local tests,
+- no automatic Knowledge promotion.
+
+Paid/public deployment, DNS/TLS, production token issuance and real Product user Evidence remain outside this gate.
 
 ### 17.0.2 Hub MVP
 

@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Next route: `TASK-017 Phase 0 — Consumer Evidence Hub Pilot Transport Slice / READY FOR OWNER-AUTHORIZED KICKOFF`; advanced TASK-017 remains after TASK-016 resilience evidence
+- Current route: `TASK-017 Phase 0 / ACTIVE`; Local Hub Foundation = `ACCEPTED`; production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
 ## Current subsystem map
@@ -32,13 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1238 / 1238 PASS` (prior pre-Phase-0 baseline 1188/1188)
+- Full OS: `1255 / 1255 PASS` (TASK-016 Phase 0 baseline 1238/1238; prior pre-Phase-0 baseline 1188/1188)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; blocking Critic findings: `0`
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Local Hub focused: `17 / 17 PASS`; blocking Critic findings: `0` for current local gate
 
 ## Loading guidance
 
@@ -54,13 +54,15 @@ TASK-016 Phase 0 is `COMPLETED`. Read `tasks/TASK-016/TASK-016.summary.md`, `tas
 BAI VIDEO PRODUCTION is referenced by immutable Git commit/tree and explicit key-file validation coverage `KEY_FILES_ONLY`; no duplicate Product ZIP is required and no raw Product repository is committed. TASK-016 Phase 1+ remains unauthorized. The next route is TASK-017 Phase 0; later TASK-016 resilience work certifies the real Hub/client/outbox/credential path without becoming Hub infrastructure authority.
 
 
-## TASK-017 planning context
+## TASK-017 active Phase 0 context
 
-TASK-017 Phase 0 is the bounded Owner-reprioritized Pilot Transport Slice now eligible after TASK-016 Phase 0 closure. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
+TASK-017 Phase 0 is `ACTIVE`. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`, then the Local Hub Implementation/Critic/Judge records.
 
-Hub v1 uses PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Client/source is assumed open/inspectable; no embedded shared secret is allowed. Consumer credentials are externalized through a generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager as its Product-specific provider. Generated Evidence Client code becomes Product-owned and requires no BAI Development OS runtime package. Hub/credential failure must never block primary Product function.
+The accepted Local Hub Foundation implements Common Ingestion, server-derived AuthContext/Product binding, stable Event idempotency, Event-level Receipt/partial reject, Client Policy, rate limiting, retention, PostgreSQL DDL + injected-query adapter, loopback HTTP and non-promoting Candidate handoff. Public Clients cannot self-assign Trust or backfill provenance. No production token/DB credential is embedded in Core.
 
-Advanced TASK-017 work resumes after TASK-016 resilience evidence. Pattern B direct local ingestion remains late. Score/frequency/runtime telemetry/AI inference never becomes promotion authority.
+Hub v1 remains PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling, but paid/public activation is not authorized by the local gate. Consumer credentials remain externalized through generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager in Product-owned code. Hub failure must never block primary Product function.
+
+Phase 0 remains open for live PostgreSQL/deployment rehearsal and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
 
 ## RC2 frozen-contract context
 
@@ -69,8 +71,8 @@ Read `tasks/TASK-016/phase0-rc2-product-feedback-adjudication-2026-08-11.md` aft
 ## TASK-016 Phase 0 RC2 Closure Routing
 
 - TASK-016 Phase 0: `COMPLETED`.
-- Final focused suite: `50 / 50 PASS`; full OS: `1238 / 1238 PASS`.
+- TASK-016 closure baseline: focused `50 / 50 PASS`; full OS `1238 / 1238 PASS` (historical slice baseline).
 - BAI VIDEO PRODUCTION canonical Git source: commit `a098f881b095e3290d2562efe3846d9e2384806a`, tree `59d7dd9a233570e3e3616face417a6925307492b`; validation coverage `KEY_FILES_ONLY`.
 - Raw Product repository is not copied into Canonical Knowledge.
-- Next route: TASK-017 Phase 0 Hub Pilot kickoff; production endpoint activation remains separately gated.
+- Closure routed to TASK-017 Phase 0; that route is now active. Production endpoint activation remains separately gated.
 - TASK-016 Phase 1+ remains unauthorized.

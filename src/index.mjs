@@ -32,3 +32,4 @@ export * as ExtensionOS from './extension/index.mjs';
 export * as CalibrationOS from './calibration/index.mjs';
 export * as DistributedOS from './distributed/index.mjs';
 export * as KnowledgeEvolutionOS from './knowledge-evolution/index.mjs';
+export * as KnowledgeHubOS from './knowledge-hub/index.mjs';

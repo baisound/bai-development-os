@@ -31,7 +31,8 @@
     "./extension": "./src/extension/index.mjs",
     "./calibration": "./src/calibration/index.mjs",
     "./distributed": "./src/distributed/index.mjs",
-    "./knowledge-evolution": "./src/knowledge-evolution/index.mjs"
+    "./knowledge-evolution": "./src/knowledge-evolution/index.mjs",
+    "./knowledge-hub": "./src/knowledge-hub/index.mjs"
   },
   "scripts": {
     "test": "node --test",
@@ -68,7 +69,9 @@
     "test:knowledge-evolution": "node --test tests/knowledge-evolution/*.test.mjs",
     "knowledge:inspect-snapshot": "node scripts/inspect-knowledge-snapshot.mjs",
     "consumer-evidence:scaffold-python": "node scripts/scaffold-consumer-evidence-python.mjs",
-    "consumer-evidence:mock-hub": "node scripts/run-consumer-evidence-mock-hub.mjs"
+    "consumer-evidence:mock-hub": "node scripts/run-consumer-evidence-mock-hub.mjs",
+    "test:knowledge-hub": "node --test tests/knowledge-hub/*.test.mjs",
+    "knowledge-hub:local": "node scripts/run-knowledge-hub-local.mjs"
   },
   "engines": {
     "node": ">=20.19.0"

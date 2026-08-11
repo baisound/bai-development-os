@@ -61,17 +61,22 @@ function validateProduct(value){const p=requirePlainObject(value,'product');requ
 function validateInstallation(value){const p=requirePlainObject(value,'installation');requireNoUnknownKeys(p,INSTALL_KEYS,'installation');return {installation_id:safeRecordId(p.installation_id,'installation.installation_id')};}
 export function batchHashInput(value){const copy=structuredClone(value);delete copy.content_sha256;return copy;}
 export function computeConsumerEvidenceBatchSha256(value){return sha256(batchHashInput(value));}
-export function validateConsumerEvidenceBatch(value,{maxEvents=MAX_BATCH_EVENTS,maxBytes=MAX_BATCH_BYTES,requireHash=false,catalog=true}={}){
+export function validateConsumerEvidenceBatchEnvelope(value,{maxEvents=MAX_BATCH_EVENTS,maxBytes=MAX_BATCH_BYTES,requireHash=false}={}){
   requirePlainObject(value,'batch'); requireNoUnknownKeys(value,BATCH_KEYS,'batch');
   if(value.schema_version!==CONSUMER_EVIDENCE_SCHEMA_VERSION) throw new KnowledgeEvolutionError('CONSUMER_EVIDENCE_SCHEMA_VERSION_UNSUPPORTED');
   const batch={schema_version:CONSUMER_EVIDENCE_SCHEMA_VERSION,batch_id:safeRecordId(value.batch_id,'batch_id'),created_at:parseIso(value.created_at,'created_at'),product:validateProduct(value.product),installation:validateInstallation(value.installation)};
   if(!Array.isArray(value.events)||value.events.length<1||value.events.length>maxEvents) throw new KnowledgeEvolutionError('CONSUMER_EVIDENCE_BATCH_SIZE_INVALID');
-  batch.events=value.events.map(v=>validateCanonicalConsumerEvidenceEvent(v,{catalog}));
+  batch.events=value.events.map((raw,index)=>{requirePlainObject(raw,`events[${index}]`);const copy=structuredClone(raw);safeRecordId(copy.event_id,`events[${index}].event_id`);return copy;});
   const ids=new Set();for(const e of batch.events){if(ids.has(e.event_id))throw new KnowledgeEvolutionError('CONSUMER_EVIDENCE_BATCH_DUPLICATE_EVENT_ID');ids.add(e.event_id);}
   if(value.content_sha256!==undefined){if(!/^[a-f0-9]{64}$/.test(value.content_sha256))throw new KnowledgeEvolutionError('CONSUMER_EVIDENCE_BATCH_HASH_INVALID');batch.content_sha256=value.content_sha256;}
   if(requireHash&&!batch.content_sha256) throw new KnowledgeEvolutionError('CONSUMER_EVIDENCE_BATCH_HASH_REQUIRED');
   if(batch.content_sha256&&computeConsumerEvidenceBatchSha256(batch)!==batch.content_sha256) throw new KnowledgeEvolutionError('CONSUMER_EVIDENCE_BATCH_HASH_MISMATCH');
   if(Buffer.byteLength(canonicalJson(batch),'utf8')>maxBytes) throw new KnowledgeEvolutionError('CONSUMER_EVIDENCE_BATCH_PAYLOAD_TOO_LARGE');
+  return deepFreeze(batch);
+}
+export function validateConsumerEvidenceBatch(value,{maxEvents=MAX_BATCH_EVENTS,maxBytes=MAX_BATCH_BYTES,requireHash=false,catalog=true}={}){
+  const envelope=validateConsumerEvidenceBatchEnvelope(value,{maxEvents,maxBytes,requireHash});
+  const batch={...structuredClone(envelope),events:envelope.events.map(v=>validateCanonicalConsumerEvidenceEvent(v,{catalog}))};
   return deepFreeze(batch);
 }
 export function withConsumerEvidenceBatchSha256(value){const b=validateConsumerEvidenceBatch(value,{catalog:true});const out=structuredClone(b);delete out.content_sha256;out.content_sha256=computeConsumerEvidenceBatchSha256(out);return deepFreeze(out);}

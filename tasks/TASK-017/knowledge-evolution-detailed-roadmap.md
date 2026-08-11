@@ -1,6 +1,6 @@
-# TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.2
+# TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.3
 
-Status: `PLANNING_DETAIL / PARTIAL_OWNER_REPRIORITIZATION / NOT_STARTED / NOT_AUTHORIZED`
+Status: `ACTIVE / PHASE0_LOCAL_IMPLEMENTATION_AUTHORIZED / PRODUCTION_ACTIVATION_NOT_AUTHORIZED`
 Roadmap Position: `PHASE 0 AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`.
 Database decision: `PostgreSQL`.
 Infrastructure ceiling: `3,000 JPY/month`.
@@ -19,7 +19,7 @@ TASK-016 Phase 0 Pattern C + contracts
  -> TASK-017 Late Pattern B
 ```
 
-This replaces the earlier fully linear `TASK-016 complete -> TASK-017` planning sequence. It preserves task ownership and does not authorize implementation.
+This replaces the earlier fully linear `TASK-016 complete -> TASK-017` planning sequence. TASK-016 Phase 0 is now complete. Owner authorization dated 2026-08-11 permits the bounded local TASK-017 Phase 0 implementation; public production activation remains separately gated.
 
 ## 3. Phase 0 — Early Pilot Transport Slice
 
@@ -33,6 +33,16 @@ Read: `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`.
 ### 17.0.6 BAI VIDEO PRODUCT Limited Pilot + temporary Object Storage backfill
 ### 17.0.7 Aggregate / Candidate Review
 ### 17.0.8 Pilot Exit Evidence
+
+
+## 3.1 Local-first implementation boundary
+
+Phase 0 implementation is intentionally split into two operational gates:
+
+1. **Local Hub Foundation** — Common Ingestion, server-derived auth context, Event idempotency, Receipt/Policy, retention, backfill, PostgreSQL schema/adapter contract and deterministic tests. This is authorized now.
+2. **Production Activation** — paid VPS provisioning, DNS/TLS, production credential issuance, public endpoint and real user Evidence collection. This is not authorized by the local implementation record.
+
+The local foundation SHALL use an injected PostgreSQL query boundary so the reusable Core does not need to embed credentials or force a database client into Consumer runtime code. Production deployment may supply the concrete PostgreSQL driver at the application boundary.
 
 ## 4. Phase 1+ — Advanced Knowledge Evolution
 
