@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "EV-BVP-GITHUB-RELEASE-VERIFICATION-002",
+  "evidence_type": "test_result",
+  "producer": {
+    "project_id": "bai-video-production",
+    "task_id": "TASK-006",
+    "product_version": "0.16.4"
+  },
+  "observation": "The GitHub canonical current-state records the v0.16.4 formal release with 402/402 tests, compileall, git diff check, git fsck and native Windows Subtitle Workspace/Open/Save validation passing.",
+  "resolution": "Use Product-owned release verification as Consumer Evidence input while preserving Product/OS authority separation.",
+  "outcome": "release_verification_reported_by_product_canonical",
+  "candidate_scope": "project",
+  "provenance": {
+    "completeness": "PARTIAL",
+    "source_commit": "a098f881b095e3290d2562efe3846d9e2384806a",
+    "architecture_version": "2.28",
+    "snapshot_sha256": null,
+    "observed_at": "2026-08-10T23:33:00Z"
+  },
+  "sensitivity": "PUBLIC",
+  "payload_hash": null,
+  "processing_status": "CANDIDATE_CREATED"
+}

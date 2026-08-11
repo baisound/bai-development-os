@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "snapshot_id": "snap-bvp-github-main-20260811",
+  "observed_at": "2026-08-10T23:33:00.000Z",
+  "vcs": "git",
+  "repository_url": "https://github.com/baisound/bai_video_production",
+  "ref": "main",
+  "commit_sha": "a098f881b095e3290d2562efe3846d9e2384806a",
+  "tree_sha": "59d7dd9a233570e3e3616face417a6925307492b",
+  "development_os": {
+    "version": "1.0.0",
+    "architecture": "2.28",
+    "commit": null
+  },
+  "consumer": {
+    "project_id": "bai-video-production",
+    "task_id": "TASK-006",
+    "version": "0.16.4",
+    "commit": "a098f881b095e3290d2562efe3846d9e2384806a"
+  },
+  "validation": {
+    "tree_identity_verified": true,
+    "content_scan_status": "KEY_FILES_ONLY",
+    "key_files": [
+      {
+        "path": "PROJECT.md",
+        "blob_id": "d903745bd052f1f31168f4d1c47ea881bf823e60",
+        "size_bytes": 11066
+      },
+      {
+        "path": ".bai-os/project.json",
+        "blob_id": "3c7e972596c927476cd1d301818c18ad9cf5bed2",
+        "size_bytes": 1022
+      },
+      {
+        "path": "docs/ai-team/current-state.md",
+        "blob_id": "3b840baad773b685e6738beb2ddc2d9db29db436",
+        "size_bytes": 7942
+      }
+    ]
+  },
+  "notes": "GitHub is the Product canonical repository source. Immutable commit/tree identity was verified; key canonical files were fetched explicitly. The connector did not materialize a raw repository archive, so content-scan coverage is KEY_FILES_ONLY rather than FULL_TRACKED_CONTENT."
+}

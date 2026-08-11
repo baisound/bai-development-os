@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "KC-CONSUMER-RUNTIME-INDEPENDENCE-001",
+  "source_evidence_ids": [
+    "EV-BVP-RUNTIME-INDEPENDENCE-001"
+  ],
+  "status": "SUPPORTED",
+  "scope": "product-family",
+  "risk": "HIGH",
+  "title": "Consumer runtime independence from development foundation",
+  "statement": "A Consumer Product built under BAI Development OS must remain independently buildable, distributable and runnable without the Development OS runtime/repository/package after Product-owned integration code is generated or adopted.",
+  "rationale": "The active BAI Video Production product independently states and operates this boundary; it also matches the OS Product Boundary direction and therefore reinforces rather than replaces existing authority.",
+  "supersedes": null,
+  "required_review": "CRITIC_AND_JUDGE"
+}

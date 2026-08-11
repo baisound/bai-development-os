@@ -1,0 +1,73 @@
+{
+  "catalog_version": "1.0",
+  "schema_version": "1.0",
+  "entries": [
+    {
+      "type": "feature_result",
+      "feature": "subtitle_import",
+      "privacy_levels": [
+        "P0",
+        "P1"
+      ],
+      "results": [
+        "success",
+        "failure"
+      ],
+      "properties": {
+        "cue_count": "nonnegative_integer"
+      },
+      "optional_fields": [
+        "duration_ms",
+        "retry_count",
+        "error_code"
+      ]
+    },
+    {
+      "type": "performance",
+      "feature": "long_running_job_result",
+      "privacy_levels": [
+        "P0",
+        "P1"
+      ],
+      "results": [
+        "success",
+        "failure"
+      ],
+      "properties": {
+        "chunk_count": "nonnegative_integer",
+        "resume_used": "boolean",
+        "resumed_chunk_count": "nonnegative_integer"
+      },
+      "optional_fields": [
+        "duration_ms",
+        "retry_count",
+        "error_code"
+      ]
+    },
+    {
+      "type": "correction",
+      "feature": "subtitle_review_summary",
+      "privacy_levels": [
+        "P0",
+        "P1"
+      ],
+      "results": [
+        "completed",
+        "aborted"
+      ],
+      "properties": {
+        "imported_cue_count": "nonnegative_integer",
+        "edited_cue_count": "nonnegative_integer",
+        "inserted_cue_count": "nonnegative_integer",
+        "deleted_cue_count": "nonnegative_integer",
+        "approved_cue_count": "nonnegative_integer",
+        "export_success": "boolean"
+      },
+      "optional_fields": [
+        "duration_ms",
+        "retry_count",
+        "error_code"
+      ]
+    }
+  ]
+}

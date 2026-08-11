@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "KC-CONSUMER-RUNTIME-INDEPENDENCE-GITHUB-002",
+  "source_evidence_ids": [
+    "EV-BVP-GITHUB-RUNTIME-INDEPENDENCE-002",
+    "EV-BVP-GITHUB-GOVERNANCE-BASELINE-002"
+  ],
+  "status": "SUPPORTED",
+  "scope": "product-family",
+  "risk": "HIGH",
+  "title": "Consumer runtime independence from Development OS",
+  "statement": "A Consumer Product developed under BAI Development OS remains independently buildable, distributable and runnable without the Development OS runtime/repository/package; .bai-os and OS governance remain development-time concerns.",
+  "rationale": "GitHub canonical Product sources independently confirm the same boundary already established by Development OS architecture.",
+  "supersedes": null,
+  "required_review": "CRITIC_AND_JUDGE"
+}

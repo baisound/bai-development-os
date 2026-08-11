@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "KC-ARTIFACT-HANDOFF-REGRESSION-FLOOR-001",
+  "source_evidence_ids": [
+    "EV-BVP-RELEASE-REGRESSION-001"
+  ],
+  "status": "CANDIDATE",
+  "scope": "product-family",
+  "risk": "MEDIUM",
+  "title": "Artifact handoff requires stronger verification than focused development checks",
+  "statement": "Before candidate ZIP or formal release artifact handoff, run the applicable full regression and preserve separate real-machine gates for behavior that automation cannot faithfully certify.",
+  "rationale": "Observed as a stable release practice in BAI Video Production after Windows-native UI and media workflow corrections.",
+  "supersedes": null,
+  "required_review": "CRITIC"
+}

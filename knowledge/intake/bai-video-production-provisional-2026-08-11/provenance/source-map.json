@@ -1,0 +1,35 @@
+{
+  "state": "PROVENANCE_RECOVERED",
+  "source_kind": "file",
+  "inventory": {
+    "entries": 1,
+    "files": 1,
+    "total_bytes": 29109,
+    "scanned_text_bytes": 29109
+  },
+  "provenance": {
+    "completeness": "UNVERIFIED",
+    "source_kind": "file",
+    "snapshot_sha256": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+    "development_os": {
+      "version": null,
+      "architecture": null,
+      "commit": null
+    },
+    "consumer": {
+      "project_id": null,
+      "task_id": null,
+      "version": null,
+      "commit": null
+    },
+    "manifest_present": false,
+    "manifest_valid_minimum": false
+  },
+  "issues": [],
+  "files": [
+    {
+      "path": "BAI_VIDEO_PRODUCTION_開発テストPush引継ぎ完全手順書_v1.0.md",
+      "size_bytes": 29109
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "EV-BVP-GITHUB-GOVERNANCE-BASELINE-002",
+  "evidence_type": "implementation_decision",
+  "producer": {
+    "project_id": "bai-video-production",
+    "task_id": "TASK-006",
+    "product_version": "0.16.4"
+  },
+  "observation": "The GitHub canonical .bai-os/project.json binds BAI Development OS 1.0.0 as the development-governance baseline while explicitly keeping OS core external and Product-owned Evidence in the Consumer repository.",
+  "resolution": "Treat .bai-os as development metadata and never as Product runtime dependency.",
+  "outcome": "governance_only_boundary_confirmed",
+  "candidate_scope": "product-family",
+  "provenance": {
+    "completeness": "PARTIAL",
+    "source_commit": "a098f881b095e3290d2562efe3846d9e2384806a",
+    "architecture_version": "2.28",
+    "snapshot_sha256": null,
+    "observed_at": "2026-08-10T23:33:00Z"
+  },
+  "sensitivity": "PUBLIC",
+  "payload_hash": null,
+  "processing_status": "CANDIDATE_CREATED"
+}

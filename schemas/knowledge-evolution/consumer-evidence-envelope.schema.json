@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.example/schemas/knowledge-evolution/consumer-evidence-envelope.schema.json",
+  "title": "BAI Consumer Evidence Envelope Compatibility Alias",
+  "$ref": "consumer-evidence-event.schema.json",
+  "deprecated": true,
+  "description": "RC1 path retained as a compatibility alias. Canonical v1 Event source is consumer-evidence-event.schema.json."
+}

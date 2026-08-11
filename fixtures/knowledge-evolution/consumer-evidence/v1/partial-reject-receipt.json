@@ -1,0 +1,16 @@
+{
+  "receipt_version": "1.0",
+  "receipt_id": "rcpt-partial-1",
+  "batch_id": "batch-partial-20260811",
+  "accepted": [
+    "evt-subtitle-0001"
+  ],
+  "already_seen": [],
+  "rejected": [
+    {
+      "event_id": "evt-longjob-0002",
+      "reason_code": "MOCK_REJECTED"
+    }
+  ],
+  "server_time": "2026-08-11T00:30:00Z"
+}

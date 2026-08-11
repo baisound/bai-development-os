@@ -143,3 +143,8 @@ TASK-015 is `COMPLETED`. `DistributedOS` is the optional distributed coordinatio
 ## Post-TASK-015 Roadmap Refinement
 
 `TASK-016 — Resilience, Recovery & Scalability Certification OS` remains `NEXT / NOT_STARTED / NOT_AUTHORIZED`. BAI CREATIVE OS audit feedback is adjudicated in Architecture Ver.2.28 and creates `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS` after TASK-016, also `NOT_STARTED / NOT_AUTHORIZED`. TASK-017 focuses on Rejected Pattern memory, decomposable quality Evidence, reproducibility, hard reject gates, signed/versioned knowledge rollback and privacy-minimized federated Evidence. No TASK-018 is created.
+
+
+## TASK-016 Phase 0 — Consumer Knowledge Capture Foundation
+
+TASK-016 Phase 0 is Owner-authorized and implemented, with final full BAI VIDEO PRODUCT/PRODUCTION + matching OS snapshot validation pending. `KnowledgeEvolutionOS` provides secure Pattern C snapshot inspection/intake, source-neutral Consumer Evidence contracts, Product-owned Python Evidence scaffolding and a deterministic Mock Hub/OpenAPI contract. No production Hub is deployed and TASK-016 Phase 1+ / TASK-017 remain separately authorization-gated.

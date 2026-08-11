@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "KC-GIT-TRACKED-SNAPSHOT-PROVENANCE-002",
+  "source_evidence_ids": [
+    "EV-BVP-GITHUB-SNAPSHOT-SOURCE-002"
+  ],
+  "status": "CANDIDATE",
+  "scope": "organization",
+  "risk": "MEDIUM",
+  "title": "Immutable Git tracked snapshot as Pattern C provenance source",
+  "statement": "When a Consumer repository is declared canonical in Git, Pattern C may use an immutable repository commit/tree reference plus explicit validation coverage instead of requiring a duplicate raw ZIP archive; validation coverage must remain explicit and raw repository contents are not copied into Canonical Knowledge.",
+  "rationale": "This preserves stronger VCS identity, avoids redundant archive handling, and does not weaken privacy or canonical authority boundaries.",
+  "supersedes": null,
+  "required_review": "CRITIC"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "EV-BVP-RUNTIME-INDEPENDENCE-001",
+  "evidence_type": "architecture_decision",
+  "producer": {
+    "project_id": "bai-video-production",
+    "task_id": null,
+    "product_version": "0.16.4"
+  },
+  "observation": "BAI Video Production declares BAI Development OS to be a development foundation and requires the completed application to install, start, execute, update and operate without the OS repository/package/registry/roles/tasks/evidence store/services.",
+  "resolution": "Preserve Development OS as development-time foundation only; keep Product runtime standalone.",
+  "outcome": "accepted_product_invariant",
+  "candidate_scope": "product-family",
+  "provenance": {
+    "completeness": "PARTIAL",
+    "source_commit": "11b165a3fb9dfc800e73f33287c4b9830edd430a",
+    "architecture_version": "2.28",
+    "snapshot_sha256": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+    "observed_at": null
+  },
+  "sensitivity": "INTERNAL",
+  "payload_hash": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+  "processing_status": "CANDIDATE_CREATED"
+}

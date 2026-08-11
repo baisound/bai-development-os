@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "candidate_id": "KC-PRODUCT-OWNED-RELEASE-EVIDENCE-002",
+  "source_evidence_ids": [
+    "EV-BVP-GITHUB-RELEASE-VERIFICATION-002"
+  ],
+  "status": "SUPPORTED",
+  "scope": "project",
+  "risk": "MEDIUM",
+  "title": "Product-owned release verification as Consumer Evidence",
+  "statement": "Consumer release/test Evidence may be ingested as project-scoped Knowledge Evidence without transferring Product runtime or lifecycle authority into BAI Development OS.",
+  "rationale": "The Product canonical state provides bounded verification facts while authority remains separated.",
+  "supersedes": null,
+  "required_review": "CRITIC"
+}

@@ -20,7 +20,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 
 ## Current canonicals
 
-- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.27.md`
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.28.md`
 - TASK-004 Lifecycle: Ver.1.6
 - TASK-005 KnowledgeOS: Ver.1.2
 - TASK-006 AutomationOS: Ver.1.0
@@ -33,10 +33,10 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-013 ExtensionOS / Domain Adapter / Plugin SDK: Ver.1.0
 - TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
 - TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
-- TASK-016 Resilience / Recovery / Scalability Certification OS: proposed next route, not yet canonical implementation
+- TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 implemented, full snapshot validation pending; Phase 1+ unauthorized
 - TASK-017 Knowledge Evolution & Federated Evidence Governance OS: queued after TASK-016, not started or authorized
 
-TASK-004〜015 are `COMPLETED`. TASK-016 is `NEXT / NOT_STARTED / NOT_AUTHORIZED`; TASK-017 is `NOT_STARTED / NOT_AUTHORIZED` after TASK-016.
+TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is Owner-authorized and implemented with full snapshot validation pending; TASK-016 Phase 1+ remains unauthorized. TASK-017 remains not started/authorized.
 
 ## CalibrationOS loading rule
 
@@ -49,12 +49,13 @@ Architecture Ver.2.28 Part XV is the sole current consolidated roadmap scope. Th
 ## Current verification baseline
 
 - DistributedOS: `73 / 73 PASS`
-- Full OS: `1188 / 1188 PASS`
+- Full OS: `1218 / 1218 PASS` (prior baseline 1188/1188)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
 - Roadmap: `56 / 56 PASS`
 - Product Boundary: PASS
+- TASK-016 Phase 0 Knowledge Evolution: `30 / 30 PASS`; Python reference compile/Mock Hub smoke: PASS
 
 ## Safety reminders
 
@@ -74,9 +75,9 @@ Post-TASK-014 refinement: TASK-015 owns distributed CalibrationOS evidence/evalu
 TASK-015 is completed. For distributed work load the TASK-015 summary/specification first. Distributed mode is opt-in and disabled by default; transport/worker state never replaces subsystem authority.
 
 
-## TASK-016 next-route loading rule
+## TASK-016 active loading rule
 
-TASK-016 is not started or authorized. For planning only, load `tasks/TASK-016/TASK-016.summary.md`, then `architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md`. Do not infer implementation authorization from NEXT status. Real destructive chaos/fault injection requires a separately bound Owner authorization even after TASK-016 implementation begins.
+TASK-016 Phase 0 is active and implemented pending the full Product+OS snapshot closure gate. Load `tasks/TASK-016/TASK-016.summary.md`, then the Phase 0 owner authorization and detailed design. Phase 1+ is not authorized. Real destructive chaos/fault injection requires a separately bound Owner authorization even after later resilience implementation begins.
 
 
 ## TASK-017 planning context

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "EV-BVP-OWNERSHIP-BOUNDARY-001",
+  "evidence_type": "implementation_decision",
+  "producer": {
+    "project_id": "bai-video-production",
+    "task_id": null,
+    "product_version": "0.16.4"
+  },
+  "observation": "BAI Video Production records that ownership is determined by responsibility rather than path naming; Product-specific PROJECT/current-state/tasks/design/evidence/src/tests/tools remain Product-owned even when paths include docs/ai-team.",
+  "resolution": "Classify ownership by responsibility and canonical authority, not directory-name similarity.",
+  "outcome": "accepted_product_rule",
+  "candidate_scope": "organization",
+  "provenance": {
+    "completeness": "PARTIAL",
+    "source_commit": "11b165a3fb9dfc800e73f33287c4b9830edd430a",
+    "architecture_version": "2.28",
+    "snapshot_sha256": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+    "observed_at": null
+  },
+  "sensitivity": "INTERNAL",
+  "payload_hash": "sha256:1c73f32473b9ec4c27477d09431b8af10510e7cfa3633fb48b6e97ca85b5eab3",
+  "processing_status": "CANDIDATE_CREATED"
+}

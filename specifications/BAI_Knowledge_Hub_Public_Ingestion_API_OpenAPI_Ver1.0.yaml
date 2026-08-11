@@ -1,0 +1,41 @@
+openapi: 3.1.0
+info:
+  title: BAI Knowledge Hub Public Ingestion API
+  version: 1.0.0
+  description: Canonical TASK-016 Phase 0 RC2 contract. Production deployment remains TASK-017 scope.
+paths:
+  /v1/evidence/batch:
+    post:
+      summary: Submit one canonical Consumer Evidence Batch
+      security: [{ bearerAuth: [] }]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '../schemas/knowledge-evolution/consumer-evidence-batch.schema.json' }
+      responses:
+        '200':
+          description: Event-level receipt; partial rejection is allowed
+          content:
+            application/json:
+              schema: { $ref: '../schemas/knowledge-evolution/delivery-receipt.schema.json' }
+        '400': { description: Batch/schema/privacy validation failure }
+        '401': { description: Missing or invalid credential }
+        '403': { description: Credential subject not authorized }
+        '429': { description: Rate limited; Retry-After should be honored }
+  /v1/client-policy:
+    get:
+      summary: Get server-side evidence policy cap
+      security: [{ bearerAuth: [] }]
+      responses:
+        '200':
+          description: Policy cap. Product-local policy/consent may only narrow it.
+          content:
+            application/json:
+              schema: { $ref: '../schemas/knowledge-evolution/client-policy.schema.json' }
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      description: Credential is supplied by Product-specific external CredentialProvider; no shared client secret is embedded.

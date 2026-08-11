@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "EV-BVP-GITHUB-SNAPSHOT-SOURCE-002",
+  "evidence_type": "implementation_decision",
+  "producer": {
+    "project_id": "bai-video-production",
+    "task_id": "TASK-006",
+    "product_version": "0.16.4"
+  },
+  "observation": "For this Consumer, GitHub main is the authoritative repository source. An immutable commit SHA plus tree SHA and explicitly fetched key canonical files provides stronger source identity than requiring a duplicate ad-hoc ZIP for provenance.",
+  "resolution": "Allow Pattern C manual intake to bind an immutable Git repository snapshot reference without committing a duplicate raw archive.",
+  "outcome": "repository_snapshot_reference_supported",
+  "candidate_scope": "organization",
+  "provenance": {
+    "completeness": "PARTIAL",
+    "source_commit": "a098f881b095e3290d2562efe3846d9e2384806a",
+    "architecture_version": "2.28",
+    "snapshot_sha256": null,
+    "observed_at": "2026-08-10T23:33:00Z"
+  },
+  "sensitivity": "INTERNAL",
+  "payload_hash": null,
+  "processing_status": "CANDIDATE_CREATED"
+}
