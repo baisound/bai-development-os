@@ -5,6 +5,7 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 ## Included
 
 - `compose.yaml` — one-VPS topology. PostgreSQL and API are private by default; Caddy requires explicit `public` profile. PostgreSQL uses a mounted tuning profile and exact 16.14 Alpine tag by default.
+- `compose.private.yaml` — private local/VPS override that publishes the Knowledge API only on `127.0.0.1:8787`.
 - `compose.rehearsal.yaml` — internal-only API declaration for an isolated local/VPS rehearsal; it does not publish a host port.
 - `Dockerfile` + `runtime/` — PostgreSQL-backed Hub runtime; deployment-only `pg` dependency. Schema migration runs in a separate one-shot admin service before the API starts.
 - `postgres/001_initial.sql`, `002_auth_and_operations.sql` — immutable migrations.
@@ -20,7 +21,7 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 
 ## Local Docker Compose quick start
 
-The base deployment may bind the private API to loopback through the deployment-specific override; PostgreSQL remains internal. The disposable Live Rehearsal itself publishes no host port. Host-memory profile selection is explicit: the tooling never guesses 2/4/8 GiB from the host and never silently falls back to a profile.
+The base deployment does not publish the API or PostgreSQL. `start-local-compose.sh` combines `compose.yaml` with `compose.private.yaml`, which binds the private API only to `127.0.0.1:8787`; PostgreSQL remains internal. The disposable Live Rehearsal itself publishes no host port. Host-memory profile selection is explicit: the tooling never guesses 2/4/8 GiB from the host and never silently falls back to a profile.
 
 Create a host-only environment first:
 
@@ -44,6 +45,8 @@ Delete the local PostgreSQL volume only when intentional:
 ```bash
 bash deploy/knowledge-hub/scripts/stop-local-compose.sh --destroy-data
 ```
+
+The private helper scripts (`start-local-compose.sh`, `stop-local-compose.sh`, and `verify-runtime-db-role.sh`) use `compose.yaml + compose.private.yaml`. The live rehearsal remains isolated on `compose.yaml + compose.rehearsal.yaml`, so it never competes for the host loopback port.
 
 ## Rehearsal sequence when Docker is available
 
