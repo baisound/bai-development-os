@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { checkRuntimeLockCandidate } from './check-knowledge-hub-runtime-lock-candidate.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=rel=>fs.readFileSync(path.join(root,rel),'utf8');
 const failures=[];
@@ -9,9 +10,9 @@ function must(rel,pattern,label){const text=read(rel);if(!pattern.test(text))fai
 function mustNot(rel,pattern,label){const text=read(rel);if(pattern.test(text))failures.push(`${rel}: ${label}`);}
 for(const rel of [
  'deploy/knowledge-hub/compose.yaml','deploy/knowledge-hub/compose.private.yaml','deploy/knowledge-hub/compose.rehearsal.yaml','deploy/knowledge-hub/Caddyfile',
- 'deploy/knowledge-hub/Dockerfile','deploy/knowledge-hub/.env.example','deploy/knowledge-hub/postgres/001_initial.sql',
+ 'deploy/knowledge-hub/Dockerfile','deploy/knowledge-hub/runtime/package.json','deploy/knowledge-hub/runtime/package-lock.json','deploy/knowledge-hub/.env.example','deploy/knowledge-hub/postgres/001_initial.sql',
  'deploy/knowledge-hub/postgres/002_auth_and_operations.sql','deploy/knowledge-hub/postgres/postgresql.tuned-2gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-4gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-8gb.conf','deploy/knowledge-hub/postgres/verify-tuning.sql','deploy/knowledge-hub/scripts/prepare-compose-env.sh','deploy/knowledge-hub/scripts/verify-postgres-tuning.sh','deploy/knowledge-hub/scripts/start-local-compose.sh','deploy/knowledge-hub/scripts/stop-local-compose.sh','deploy/knowledge-hub/scripts/backup-postgres.sh',
- 'deploy/knowledge-hub/scripts/restore-rehearsal.sh','deploy/knowledge-hub/scripts/run-live-rehearsal.sh','deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh','deploy/knowledge-hub/scripts/verify-runtime-db-role.sh','deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/migrate.mjs','deploy/knowledge-hub/runtime/rehearsal-client.mjs','deploy/knowledge-hub/runtime/postgres-config.mjs','scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs','.github/workflows/knowledge-hub-live-gate.yml','scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs'
+ 'deploy/knowledge-hub/scripts/restore-rehearsal.sh','deploy/knowledge-hub/scripts/run-live-rehearsal.sh','deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh','deploy/knowledge-hub/scripts/verify-runtime-db-role.sh','deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/migrate.mjs','deploy/knowledge-hub/runtime/rehearsal-client.mjs','deploy/knowledge-hub/runtime/postgres-config.mjs','scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs','.github/workflows/knowledge-hub-live-gate.yml','scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs','scripts/check-knowledge-hub-runtime-lock-candidate.mjs'
 ]) if(!fs.existsSync(path.join(root,rel))) failures.push(`${rel}: missing`);
 must('deploy/knowledge-hub/compose.yaml',/postgres:16\.14-alpine/,'PostgreSQL major image missing');
 must('deploy/knowledge-hub/compose.yaml',/profiles:\s*\["public"\]/,'public TLS activation must be explicit profile');
@@ -55,7 +56,9 @@ must('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/BAI_KNOWLEDGE_HUB_REH
 must('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/cleanup_complete/,'rehearsal evidence must bind successful cleanup');
 mustNot('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/--profile\s+public/,'live rehearsal must never activate public profile');
 mustNot('deploy/knowledge-hub/.env.example',/(bkh1\.|sk-[A-Za-z0-9]|ghp_[A-Za-z0-9])/,'real-looking credential in example');
-must('deploy/knowledge-hub/Dockerfile',/runtime\/package\*\.json/,'optional runtime lock copy missing');
-must('deploy/knowledge-hub/Dockerfile',/npm ci --omit=dev --ignore-scripts/,'locked npm ci deployment path missing');
+must('deploy/knowledge-hub/Dockerfile',/COPY deploy\/knowledge-hub\/runtime\/package\.json deploy\/knowledge-hub\/runtime\/package-lock\.json/,'canonical runtime package-lock copy missing');
+must('deploy/knowledge-hub/Dockerfile',/npm ci --omit=dev --ignore-scripts --no-audit --no-fund/,'canonical npm ci deployment path missing');
+mustNot('deploy/knowledge-hub/Dockerfile',/npm install/,'npm install fallback is prohibited after runtime lock canonicalization');
 const runtimePackage=JSON.parse(read('deploy/knowledge-hub/runtime/package.json'));if(runtimePackage?.dependencies?.pg!=='8.13.1')failures.push('deploy/knowledge-hub/runtime/package.json: pg direct version must be exact 8.13.1 for this readiness baseline');
+if(fs.existsSync(path.join(root,'deploy/knowledge-hub/runtime/package-lock.json'))){try{const runtimeLock=JSON.parse(read('deploy/knowledge-hub/runtime/package-lock.json'));const result=checkRuntimeLockCandidate(runtimeLock);if(result.status!=='PASS')failures.push(`deploy/knowledge-hub/runtime/package-lock.json: ${result.failures.join('; ')}`);}catch(error){failures.push(`deploy/knowledge-hub/runtime/package-lock.json: ${error.message}`);}}
 if(failures.length){console.error(JSON.stringify({status:'FAIL',failures},null,2));process.exit(1);}console.log(JSON.stringify({status:'PASS',deployment_contract:'TASK-017 Phase 0 readiness',public_activation:'NOT_AUTHORIZED'},null,2));
