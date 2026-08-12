@@ -13,6 +13,21 @@ test('deployment compose is single-VPS shaped and does not expose database or AP
  const rehearsal=read('deploy/knowledge-hub/compose.rehearsal.yaml');assert.doesNotMatch(rehearsal,/ports:/);assert.match(rehearsal,/expose:/);assert.match(rehearsal,/\"8787\"/);
 });
 
+test('public TLS gateway is version-pinned, staging-first, TCP-only and short-lived-IP ready',()=>{
+ const compose=read('deploy/knowledge-hub/compose.yaml');
+ assert.match(compose,/image: caddy:2\.11\.4-alpine/);
+ assert.match(compose,/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY: \${BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY:-https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory}/);
+ assert.match(compose,/"80:80\/tcp"/);assert.match(compose,/"443:443\/tcp"/);
+ assert.doesNotMatch(compose,/443:443\/udp|2019:2019|"443:443"/);
+ const caddy=read('deploy/knowledge-hub/Caddyfile');
+ assert.match(caddy,/admin off/);assert.match(caddy,/default_sni \{\$HUB_DOMAIN\}/);
+ assert.match(caddy,/servers :443 \{[\s\S]*protocols h1 h2[\s\S]*\}/);assert.doesNotMatch(caddy,/protocols[^\n]*h3/);
+ assert.match(caddy,/issuer acme \{\$BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY\} \{[\s\S]*profile shortlived[\s\S]*\}/);
+ assert.match(caddy,/reverse_proxy knowledge-api:8787/);
+ assert.match(read('deploy/knowledge-hub/.env.example'),/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory/);
+ assert.match(read('deploy/knowledge-hub/scripts/prepare-compose-env.sh'),/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory/);
+});
+
 test('deployment files contain safety controls and no embedded API credential',()=>{
  const caddy=read('deploy/knowledge-hub/Caddyfile');assert.match(caddy,/Strict-Transport-Security/);assert.match(caddy,/max_size 1MB/);
  const migration=read('deploy/knowledge-hub/postgres/002_auth_and_operations.sql');assert.match(migration,/secret_hash/);assert.doesNotMatch(migration,/raw_secret|plaintext_secret/i);

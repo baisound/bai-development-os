@@ -48,6 +48,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.19.0'
+      - name: Validate public Caddy configuration without activation
+        env:
+          HUB_DOMAIN: 203.0.113.10
+          BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY: https://acme-staging-v02.api.letsencrypt.org/directory
+        run: |
+          docker run --rm \
+            -e HUB_DOMAIN \
+            -e BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY \
+            -v "$PWD/deploy/knowledge-hub/Caddyfile:/etc/caddy/Caddyfile:ro" \
+            caddy:2.11.4-alpine \
+            caddy validate --config /etc/caddy/Caddyfile --adapter caddyfile
       - name: Verify Knowledge Hub contracts
         run: |
           npm run test:knowledge-hub

@@ -88,14 +88,15 @@ services:
     networks: [hub_internal]
 
   caddy:
-    image: caddy:2-alpine
+    image: caddy:2.11.4-alpine
     profiles: ["public"]
     restart: unless-stopped
     environment:
       HUB_DOMAIN: ${HUB_DOMAIN:?set HUB_DOMAIN before public profile activation}
+      BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY: ${BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY:-https://acme-staging-v02.api.letsencrypt.org/directory}
     ports:
-      - "80:80"
-      - "443:443"
+      - "80:80/tcp"
+      - "443:443/tcp"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_data:/data

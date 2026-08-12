@@ -1,8 +1,18 @@
 {
   admin off
+  default_sni {$HUB_DOMAIN}
+  servers :443 {
+    protocols h1 h2
+  }
 }
 
 {$HUB_DOMAIN} {
+  tls {
+    issuer acme {$BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY} {
+      profile shortlived
+    }
+  }
+
   encode zstd gzip
   reverse_proxy knowledge-api:8787
   header {

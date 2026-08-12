@@ -14,6 +14,13 @@ if(fs.existsSync(workflow)){
   must(/actions\/setup-node@v4/,'setup-node@v4 missing');
   must(/actions\/upload-artifact@v4/,'upload-artifact@v4 missing');
   must(/docker compose version/,'Docker Compose capability probe missing');
+  must(/Validate public Caddy configuration without activation/,'real Caddy configuration validation step missing');
+  must(/HUB_DOMAIN: 203\.0\.113\.10/,'Caddy validation must use a non-production documentation IP');
+  must(/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY: https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory/,'Caddy validation must use Let\'s Encrypt staging');
+  must(/caddy:2\.11\.4-alpine[\s\\]*\n\s*caddy validate --config \/etc\/caddy\/Caddyfile --adapter caddyfile/,'pinned Caddy 2.11.4 validation command missing');
+  const caddyValidationStep=w.match(/- name: Validate public Caddy configuration without activation([\s\S]*?)(?=\n\s*- name:)/)?.[1] ?? '';
+  if(!caddyValidationStep) failures.push(`${workflow}: Caddy validation step body missing`);
+  else if(/--publish|(^|\s)-p(\s|$)/m.test(caddyValidationStep)) failures.push(`${workflow}: Caddy validation must not publish host ports`);
   must(/run-live-rehearsal\.sh/,'live rehearsal harness not invoked');
   must(/Validate canonical deployment runtime lock/,'canonical runtime lock validation step missing');
   mustNot(/package-lock-only/,'CI must not regenerate the canonical runtime lock');

@@ -16,6 +16,10 @@ for(const rel of [
 ]) if(!fs.existsSync(path.join(root,rel))) failures.push(`${rel}: missing`);
 must('deploy/knowledge-hub/compose.yaml',/postgres:16\.14-alpine/,'PostgreSQL major image missing');
 must('deploy/knowledge-hub/compose.yaml',/profiles:\s*\["public"\]/,'public TLS activation must be explicit profile');
+must('deploy/knowledge-hub/compose.yaml',/image: caddy:2\.11\.4-alpine/,'Caddy public gateway image must be pinned to the reviewed 2.11.4 Alpine release');
+must('deploy/knowledge-hub/compose.yaml',/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY: \${BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY:-https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory}/,'public gateway must default to Let\'s Encrypt staging until production is explicitly selected');
+must('deploy/knowledge-hub/compose.yaml',/ports:[\s\S]*"80:80\/tcp"[\s\S]*"443:443\/tcp"/,'public gateway must publish only explicit TCP HTTP/HTTPS ports');
+mustNot('deploy/knowledge-hub/compose.yaml',/443:443\/udp|2019:2019|"443:443"/,'public gateway must not publish QUIC/UDP, Caddy admin, or an ambiguous HTTPS transport');
 must('deploy/knowledge-hub/compose.private.yaml',/ports:[\s\S]*127\.0\.0\.1:8787:8787/,'private API must publish only the loopback 8787 binding');
 mustNot('deploy/knowledge-hub/compose.private.yaml',/0\.0\.0\.0:8787|\[::\]:8787/,'private API must never publish 8787 on a public wildcard');
 mustNot('deploy/knowledge-hub/compose.rehearsal.yaml',/ports:/,'rehearsal API must not publish a host port');
@@ -46,8 +50,15 @@ must('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE:\?set POSTGRES_CO
 must('deploy/knowledge-hub/compose.yaml',/POSTGRES_SHM_SIZE:\?set POSTGRES_SHM_SIZE/,'explicit PostgreSQL shm profile contract missing');
 mustNot('deploy/knowledge-hub/compose.yaml',/POSTGRES_CONFIG_FILE:-|POSTGRES_SHM_SIZE:-/,'host-memory profile must not silently fall back');
 mustNot('deploy/knowledge-hub/compose.yaml',/DATABASE_URL:/,'Compose must not interpolate DB password into a connection URL');
+must('deploy/knowledge-hub/Caddyfile',/admin off/,'Caddy admin API must remain disabled');
+must('deploy/knowledge-hub/Caddyfile',/default_sni \{\$HUB_DOMAIN\}/,'literal-IP TLS must define a default SNI certificate selector');
+must('deploy/knowledge-hub/Caddyfile',/servers :443 \{[\s\S]*protocols h1 h2[\s\S]*\}/,'public HTTPS must disable HTTP\/3 while UDP 443 is not adopted');
+mustNot('deploy/knowledge-hub/Caddyfile',/protocols[^\n]*h3/,'HTTP\/3 must remain disabled until UDP 443 is formally adopted');
+must('deploy/knowledge-hub/Caddyfile',/issuer acme \{\$BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY\} \{[\s\S]*profile shortlived[\s\S]*\}/,'explicit ACME shortlived issuer contract missing');
 must('deploy/knowledge-hub/Caddyfile',/reverse_proxy knowledge-api:8787/,'reverse proxy target missing');
 must('deploy/knowledge-hub/Caddyfile',/Strict-Transport-Security/,'HSTS missing');
+must('deploy/knowledge-hub/.env.example',/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory/,'example env must remain fail-safe on Let\'s Encrypt staging');
+must('deploy/knowledge-hub/scripts/prepare-compose-env.sh',/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory/,'generated env must remain fail-safe on Let\'s Encrypt staging');
 must('deploy/knowledge-hub/postgres/002_auth_and_operations.sql',/secret_hash/,'hashed credential storage missing');
 mustNot('deploy/knowledge-hub/postgres/002_auth_and_operations.sql',/api_key\s+text|raw_secret|plaintext_secret/i,'raw credential column prohibited');
 must('deploy/knowledge-hub/scripts/restore-rehearsal.sh',/_restore_rehearsal/,'restore target safety suffix missing');
