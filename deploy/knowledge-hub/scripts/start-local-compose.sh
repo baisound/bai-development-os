@@ -14,7 +14,7 @@ if [ ! -f "$env_file" ]; then
 fi
 for cmd in docker curl; do command -v "$cmd" >/dev/null 2>&1 || { echo "$cmd is required" >&2; exit 2; }; done
 docker compose version >/dev/null 2>&1 || { echo "docker compose plugin is required" >&2; exit 2; }
-compose=(docker compose --env-file "$env_file" -f "$here/compose.yaml" -f "$here/compose.rehearsal.yaml")
+compose=(docker compose --env-file "$env_file" -f "$here/compose.yaml" -f "$here/compose.private.yaml")
 "${compose[@]}" up -d --build postgres knowledge-api
 ready=0
 for _ in $(seq 1 60); do

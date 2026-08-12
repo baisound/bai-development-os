@@ -76,6 +76,12 @@ test('runtime credential bootstrap fails closed on partial or non-canonical exis
   fs.rmSync(dir,{recursive:true,force:true});
 });
 
+test('runtime DB role verifier targets the private loopback deployment contract',()=>{
+  const verifier=read('deploy/knowledge-hub/scripts/verify-runtime-db-role.sh');
+  assert.match(verifier,/compose\.private\.yaml/);
+  assert.doesNotMatch(verifier,/compose\.rehearsal\.yaml/);
+});
+
 test('runtime DB security scripts parse and machine readiness checker passes',()=>{
   for(const rel of ['deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh','deploy/knowledge-hub/scripts/verify-runtime-db-role.sh']){
     const r=spawnSync('bash',['-n',rel],{cwd:root,encoding:'utf8'});assert.equal(r.status,0,`${rel}: ${r.stderr}`);

@@ -183,6 +183,8 @@ test('local compose helper never guesses a missing profile and rehearsal declare
   assert.match(start, /BAI_KNOWLEDGE_HUB_PROFILE/);
   assert.match(start, /bash "\$here\/scripts\/prepare-compose-env\.sh" --profile/);
   assert.match(start, /BAI_KNOWLEDGE_HUB_ENV_FILE="\$env_file" bash "\$here\/scripts\/verify-postgres-tuning\.sh"/);
+  assert.match(start, /compose\.private\.yaml/);
+  assert.doesNotMatch(start, /compose\.rehearsal\.yaml/);
   assert.match(start, /127\.0\.0\.1:8787\/readyz/);
   assert.doesNotMatch(start, /--profile\s+public/);
   assert.match(start, /verify-postgres-tuning\.sh/);
@@ -194,6 +196,8 @@ test('local compose helper never guesses a missing profile and rehearsal declare
 
 test('local compose helper preserves data by default and requires explicit destructive flag', () => {
   const stop = read('deploy/knowledge-hub/scripts/stop-local-compose.sh');
+  assert.match(stop, /compose\.private\.yaml/);
+  assert.doesNotMatch(stop, /compose\.rehearsal\.yaml/);
   assert.match(stop, /--destroy-data/);
   assert.match(stop, /down -v --remove-orphans/);
   assert.match(stop, /down --remove-orphans/);

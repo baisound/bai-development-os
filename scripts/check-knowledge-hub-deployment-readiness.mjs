@@ -8,15 +8,25 @@ const failures=[];
 function must(rel,pattern,label){const text=read(rel);if(!pattern.test(text))failures.push(`${rel}: ${label}`);}
 function mustNot(rel,pattern,label){const text=read(rel);if(pattern.test(text))failures.push(`${rel}: ${label}`);}
 for(const rel of [
- 'deploy/knowledge-hub/compose.yaml','deploy/knowledge-hub/compose.rehearsal.yaml','deploy/knowledge-hub/Caddyfile',
+ 'deploy/knowledge-hub/compose.yaml','deploy/knowledge-hub/compose.private.yaml','deploy/knowledge-hub/compose.rehearsal.yaml','deploy/knowledge-hub/Caddyfile',
  'deploy/knowledge-hub/Dockerfile','deploy/knowledge-hub/.env.example','deploy/knowledge-hub/postgres/001_initial.sql',
  'deploy/knowledge-hub/postgres/002_auth_and_operations.sql','deploy/knowledge-hub/postgres/postgresql.tuned-2gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-4gb.conf','deploy/knowledge-hub/postgres/postgresql.tuned-8gb.conf','deploy/knowledge-hub/postgres/verify-tuning.sql','deploy/knowledge-hub/scripts/prepare-compose-env.sh','deploy/knowledge-hub/scripts/verify-postgres-tuning.sh','deploy/knowledge-hub/scripts/start-local-compose.sh','deploy/knowledge-hub/scripts/stop-local-compose.sh','deploy/knowledge-hub/scripts/backup-postgres.sh',
  'deploy/knowledge-hub/scripts/restore-rehearsal.sh','deploy/knowledge-hub/scripts/run-live-rehearsal.sh','deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh','deploy/knowledge-hub/scripts/verify-runtime-db-role.sh','deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/migrate.mjs','deploy/knowledge-hub/runtime/rehearsal-client.mjs','deploy/knowledge-hub/runtime/postgres-config.mjs','scripts/validate-knowledge-hub-live-rehearsal-evidence.mjs','.github/workflows/knowledge-hub-live-gate.yml','scripts/build-knowledge-hub-ci-live-gate-evidence.mjs','scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs'
 ]) if(!fs.existsSync(path.join(root,rel))) failures.push(`${rel}: missing`);
 must('deploy/knowledge-hub/compose.yaml',/postgres:16\.14-alpine/,'PostgreSQL major image missing');
 must('deploy/knowledge-hub/compose.yaml',/profiles:\s*\["public"\]/,'public TLS activation must be explicit profile');
+must('deploy/knowledge-hub/compose.private.yaml',/ports:[\s\S]*127\.0\.0\.1:8787:8787/,'private API must publish only the loopback 8787 binding');
+mustNot('deploy/knowledge-hub/compose.private.yaml',/0\.0\.0\.0:8787|\[::\]:8787/,'private API must never publish 8787 on a public wildcard');
 mustNot('deploy/knowledge-hub/compose.rehearsal.yaml',/ports:/,'rehearsal API must not publish a host port');
 must('deploy/knowledge-hub/compose.rehearsal.yaml',/expose:[\s\S]*8787/,'rehearsal API internal port declaration missing');
+must('deploy/knowledge-hub/scripts/start-local-compose.sh',/compose\.private\.yaml/,'private startup must use the private loopback override');
+mustNot('deploy/knowledge-hub/scripts/start-local-compose.sh',/compose\.rehearsal\.yaml/,'private startup must not use the rehearsal override');
+must('deploy/knowledge-hub/scripts/stop-local-compose.sh',/compose\.private\.yaml/,'private shutdown must use the private loopback override');
+mustNot('deploy/knowledge-hub/scripts/stop-local-compose.sh',/compose\.rehearsal\.yaml/,'private shutdown must not use the rehearsal override');
+must('deploy/knowledge-hub/scripts/verify-runtime-db-role.sh',/compose\.private\.yaml/,'runtime DB role verification must target the private deployment');
+mustNot('deploy/knowledge-hub/scripts/verify-runtime-db-role.sh',/compose\.rehearsal\.yaml/,'runtime DB role verification must not target the rehearsal override');
+must('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/compose\.rehearsal\.yaml/,'live rehearsal must keep the isolated rehearsal override');
+mustNot('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/compose\.private\.yaml/,'live rehearsal must not claim the private host loopback port');
 must('deploy/knowledge-hub/compose.yaml',/PGHOST: postgres[\s\S]*PGPASSWORD:/,'split PostgreSQL secret fields missing');
 must('deploy/knowledge-hub/compose.yaml',/knowledge-migrate:[\s\S]*PGUSER: "\$\{POSTGRES_USER\}"[\s\S]*BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER/,'migration service must use bootstrap DB identity and receive runtime role contract');
 must('deploy/knowledge-hub/compose.yaml',/knowledge-api:[\s\S]*PGUSER: "\$\{BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER:\?set runtime DB user\}"[\s\S]*PGPASSWORD: "\$\{BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD:\?set runtime DB password\}"/,'Knowledge API must use dedicated runtime DB credentials');

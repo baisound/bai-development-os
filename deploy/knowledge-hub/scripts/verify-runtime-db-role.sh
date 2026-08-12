@@ -6,7 +6,7 @@ env_file="${BAI_KNOWLEDGE_HUB_ENV_FILE:-$here/.env}"
 for cmd in docker grep; do command -v "$cmd" >/dev/null 2>&1 || { echo "$cmd is required" >&2; exit 2; }; done
 docker compose version >/dev/null 2>&1 || { echo "docker compose plugin is required" >&2; exit 2; }
 grep -qx 'BAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime' "$env_file" || { echo "canonical runtime DB user missing from environment" >&2; exit 2; }
-compose=(docker compose --env-file "$env_file" -f "$here/compose.yaml" -f "$here/compose.rehearsal.yaml")
+compose=(docker compose --env-file "$env_file" -f "$here/compose.yaml" -f "$here/compose.private.yaml")
 
 api_user="$("${compose[@]}" exec -T knowledge-api sh -lc 'printf %s "$PGUSER"')"
 [ "$api_user" = 'bai_hub_runtime' ] || { echo "Knowledge API is not using bai_hub_runtime" >&2; exit 1; }
