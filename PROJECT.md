@@ -53,10 +53,10 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-013`: Domain Adapter / Plugin SDK — `COMPLETED`
 - `TASK-014`: Adaptive Governance Calibration & Policy Learning — `COMPLETED`
 - `TASK-015`: Distributed Orchestration & Event Fabric — `COMPLETED`
-- `TASK-016`: Resilience, Recovery & Scalability Certification OS — `ACTIVE / PHASE0_IMPLEMENTED / FULL_SNAPSHOT_VALIDATION_PENDING`
-- `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `NOT_STARTED / NOT_AUTHORIZED` after TASK-016
+- `TASK-016`: Resilience, Recovery & Scalability Certification OS — `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
+- `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `ACTIVE / PHASE0_PUBLIC_TLS_STAGING_GATE_IMPLEMENTED / VPS_EXECUTION_PENDING`
 
-TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is Owner-authorized and implemented, with full Product+OS snapshot validation still pending; TASK-016 Phase 1+ remains unauthorized. TASK-017 is planned in an interleaved sequence, but its implementation remains unauthorized.
+TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. The bounded TASK-017 Phase 0 transport/deployment route is active. Production ACME, persistent public activation, real Product credentials and Product pilot remain separate explicit gates.
 
 ## Governance
 

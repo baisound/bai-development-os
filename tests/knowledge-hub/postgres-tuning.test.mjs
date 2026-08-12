@@ -9,6 +9,17 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const read = rel => fs.readFileSync(path.join(root, rel), 'utf8');
 const prepareScript = 'deploy/knowledge-hub/scripts/prepare-compose-env.sh';
+const bashKernel = process.platform === 'win32'
+  ? spawnSync('bash', ['-lc', 'uname -s'], { encoding: 'utf8' }).stdout.trim()
+  : '';
+const bashDriveRoot = /^(MINGW|MSYS|CYGWIN)/.test(bashKernel) ? '/' : '/mnt/';
+
+function toBashPath(input) {
+  if (process.platform !== 'win32') return input;
+  return input
+    .replace(/^([A-Za-z]):[\\/]/, (_, drive) => `${bashDriveRoot}${drive.toLowerCase()}/`)
+    .replaceAll('\\', '/');
+}
 
 function value(text, name) {
   const match = text.match(new RegExp(`^${name}\\s*=\\s*([^#\\n]+)`, 'm'));
@@ -16,7 +27,7 @@ function value(text, name) {
 }
 
 function prepare(args) {
-  return spawnSync('bash', [prepareScript, ...args], { cwd: root, encoding: 'utf8' });
+  return spawnSync('bash', [prepareScript, ...args.map(toBashPath)], { cwd: root, encoding: 'utf8' });
 }
 
 test('2 GiB low-resource PostgreSQL profile is bounded and preserves durability', () => {

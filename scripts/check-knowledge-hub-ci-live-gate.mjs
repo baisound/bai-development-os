@@ -22,6 +22,7 @@ if(fs.existsSync(workflow)){
   if(!caddyValidationStep) failures.push(`${workflow}: Caddy validation step body missing`);
   else if(/--publish|(^|\s)-p(\s|$)/m.test(caddyValidationStep)) failures.push(`${workflow}: Caddy validation must not publish host ports`);
   must(/run-live-rehearsal\.sh/,'live rehearsal harness not invoked');
+  must(/npm run check:knowledge-hub-public-tls-staging/,'public TLS staging static gate missing');
   must(/Validate canonical deployment runtime lock/,'canonical runtime lock validation step missing');
   mustNot(/package-lock-only/,'CI must not regenerate the canonical runtime lock');
   must(/check-knowledge-hub-runtime-lock-candidate\.mjs/,'runtime lock supply-chain policy missing');

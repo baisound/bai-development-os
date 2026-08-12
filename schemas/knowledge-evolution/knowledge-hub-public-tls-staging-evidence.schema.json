@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/knowledge-evolution/knowledge-hub-public-tls-staging-evidence.schema.json",
+  "title": "BAI Knowledge Hub Public TLS Staging Evidence",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "result", "target", "certificate", "routing",
+    "exposure", "activation", "completed_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "result": {"const": "PUBLIC_TLS_STAGING_REHEARSAL_PASS"},
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["host", "acme_ca_directory"],
+      "properties": {
+        "host": {"type": "string", "minLength": 3, "maxLength": 253},
+        "acme_ca_directory": {"const": "https://acme-staging-v02.api.letsencrypt.org/directory"}
+      }
+    },
+    "certificate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "san_verified", "issuer_staging_verified", "not_before", "not_after"],
+      "properties": {
+        "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "san_verified": {"const": true},
+        "issuer_staging_verified": {"const": true},
+        "not_before": {"type": "string", "format": "date-time"},
+        "not_after": {"type": "string", "format": "date-time"}
+      }
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["https_ready", "http_redirect_to_https"],
+      "properties": {
+        "https_ready": {"const": true},
+        "http_redirect_to_https": {"const": true}
+      }
+    },
+    "exposure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tcp_80", "tcp_443", "udp_443", "api_8787_public", "postgres_5432_public", "caddy_admin_2019_public"],
+      "properties": {
+        "tcp_80": {"const": true},
+        "tcp_443": {"const": true},
+        "udp_443": {"const": false},
+        "api_8787_public": {"const": false},
+        "postgres_5432_public": {"const": false},
+        "caddy_admin_2019_public": {"const": false}
+      }
+    },
+    "activation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["explicit_acknowledgement", "production_acme_used", "public_profile_deactivated_after_rehearsal"],
+      "properties": {
+        "explicit_acknowledgement": {"const": true},
+        "production_acme_used": {"const": false},
+        "public_profile_deactivated_after_rehearsal": {"const": true}
+      }
+    },
+    "completed_at": {"type": "string", "format": "date-time"}
+  }
+}
