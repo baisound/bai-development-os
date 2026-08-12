@@ -8,8 +8,12 @@ import { fileURLToPath } from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const read=rel=>fs.readFileSync(path.join(root,rel),'utf8');
+const bashKernel=process.platform==='win32'
+  ? spawnSync('bash',['-lc','uname -s'],{encoding:'utf8'}).stdout.trim()
+  : '';
+const bashDriveRoot=/^(MINGW|MSYS|CYGWIN)/.test(bashKernel)?'/':'/mnt/';
 const toBashPath=input=>process.platform==='win32'
-  ? input.replace(/^([A-Za-z]):[\\/]/,(_,drive)=>`/${drive.toLowerCase()}/`).replaceAll('\\','/')
+  ? input.replace(/^([A-Za-z]):[\\/]/,(_,drive)=>`${bashDriveRoot}${drive.toLowerCase()}/`).replaceAll('\\','/')
   : input;
 
 test('Knowledge API uses a dedicated runtime DB role after an admin migration gate',()=>{

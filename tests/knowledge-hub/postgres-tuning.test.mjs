@@ -9,11 +9,15 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const read = rel => fs.readFileSync(path.join(root, rel), 'utf8');
 const prepareScript = 'deploy/knowledge-hub/scripts/prepare-compose-env.sh';
+const bashKernel = process.platform === 'win32'
+  ? spawnSync('bash', ['-lc', 'uname -s'], { encoding: 'utf8' }).stdout.trim()
+  : '';
+const bashDriveRoot = /^(MINGW|MSYS|CYGWIN)/.test(bashKernel) ? '/' : '/mnt/';
 
 function toBashPath(input) {
   if (process.platform !== 'win32') return input;
   return input
-    .replace(/^([A-Za-z]):[\\/]/, (_, drive) => `/${drive.toLowerCase()}/`)
+    .replace(/^([A-Za-z]):[\\/]/, (_, drive) => `${bashDriveRoot}${drive.toLowerCase()}/`)
     .replaceAll('\\', '/');
 }
 
