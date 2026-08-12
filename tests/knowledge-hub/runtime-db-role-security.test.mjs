@@ -8,6 +8,9 @@ import { fileURLToPath } from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const read=rel=>fs.readFileSync(path.join(root,rel),'utf8');
+const toBashPath=input=>process.platform==='win32'
+  ? input.replace(/^([A-Za-z]):[\\/]/,(_,drive)=>`/${drive.toLowerCase()}/`).replaceAll('\\','/')
+  : input;
 
 test('Knowledge API uses a dedicated runtime DB role after an admin migration gate',()=>{
   const compose=read('deploy/knowledge-hub/compose.yaml');
@@ -45,7 +48,7 @@ test('runtime credential bootstrap augments an existing env atomically without c
   const original='POSTGRES_DB=bai_knowledge_hub\nPOSTGRES_USER=bai_hub\nPOSTGRES_PASSWORD=keep-this-admin-secret\nPOSTGRES_CONFIG_FILE=./postgres/postgresql.tuned-8gb.conf\nPOSTGRES_SHM_SIZE=1gb\n';
   fs.writeFileSync(envFile,original,{mode:0o600});
   const script=path.join(root,'deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh');
-  const first=spawnSync('bash',[script,envFile],{cwd:root,encoding:'utf8'});
+  const first=spawnSync('bash',[toBashPath(script),toBashPath(envFile)],{cwd:root,encoding:'utf8'});
   assert.equal(first.status,0,first.stderr);
   const after=fs.readFileSync(envFile,'utf8');
   assert.ok(after.startsWith(original));
@@ -55,7 +58,7 @@ test('runtime credential bootstrap augments an existing env atomically without c
   assert.ok(!first.stdout.includes(password));
   assert.match(first.stdout,/without changing existing PostgreSQL credentials/);
   if(process.platform!=='win32') assert.equal(fs.statSync(envFile).mode & 0o777,0o600);
-  const second=spawnSync('bash',[script,envFile],{cwd:root,encoding:'utf8'});
+  const second=spawnSync('bash',[toBashPath(script),toBashPath(envFile)],{cwd:root,encoding:'utf8'});
   assert.equal(second.status,0,second.stderr);
   assert.equal(fs.readFileSync(envFile,'utf8'),after);
   assert.match(second.stdout,/already present/);
@@ -67,11 +70,11 @@ test('runtime credential bootstrap fails closed on partial or non-canonical exis
   const script=path.join(root,'deploy/knowledge-hub/scripts/ensure-runtime-db-credentials.sh');
   const partial=path.join(dir,'partial.env');
   fs.writeFileSync(partial,'POSTGRES_PASSWORD=admin\nBAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=bai_hub_runtime\n',{mode:0o600});
-  const p=spawnSync('bash',[script,partial],{cwd:root,encoding:'utf8'});
+  const p=spawnSync('bash',[toBashPath(script),toBashPath(partial)],{cwd:root,encoding:'utf8'});
   assert.equal(p.status,2);assert.match(p.stderr,/password is missing/);
   const wrong=path.join(dir,'wrong.env');
   fs.writeFileSync(wrong,'POSTGRES_PASSWORD=admin\nBAI_KNOWLEDGE_HUB_RUNTIME_DB_USER=wrong\nBAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD=01234567890123456789012345678901\n',{mode:0o600});
-  const w=spawnSync('bash',[script,wrong],{cwd:root,encoding:'utf8'});
+  const w=spawnSync('bash',[toBashPath(script),toBashPath(wrong)],{cwd:root,encoding:'utf8'});
   assert.equal(w.status,2);assert.match(w.stderr,/non-canonical/);
   fs.rmSync(dir,{recursive:true,force:true});
 });
