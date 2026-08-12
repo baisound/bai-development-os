@@ -33,10 +33,10 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-013 ExtensionOS / Domain Adapter / Plugin SDK: Ver.1.0
 - TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
 - TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
-- TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 implemented, full snapshot validation pending; Phase 1+ unauthorized
-- TASK-017 Knowledge Evolution & Federated Evidence Governance OS: queued after TASK-016, not started or authorized
+- TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 completed; Phase 1+ unauthorized
+- TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `ACTIVE`; bounded Phase 0 Public TLS Staging Gate implemented, VPS execution pending
 
-TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is Owner-authorized and implemented with full snapshot validation pending; TASK-016 Phase 1+ remains unauthorized. TASK-017 remains not started/authorized.
+TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 Phase 0 is active under bounded deployment authority; Production ACME/public activation and Product pilot remain separately gated.
 
 ## CalibrationOS loading rule
 
@@ -49,13 +49,13 @@ Architecture Ver.2.28 Part XV is the sole current consolidated roadmap scope. Th
 ## Current verification baseline
 
 - DistributedOS: `73 / 73 PASS`
-- Full OS: `1218 / 1218 PASS` (prior baseline 1188/1188)
+- Full OS: `1308 / 1308 PASS`
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
 - Roadmap: `56 / 56 PASS`
 - Product Boundary: PASS
-- TASK-016 Phase 0 Knowledge Evolution: `30 / 30 PASS`; Python reference compile/Mock Hub smoke: PASS
+- TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; TASK-017 Knowledge Hub: `68 / 68 PASS`; Python reference compile/Mock Hub smoke: PASS
 
 ## Safety reminders
 
@@ -80,6 +80,6 @@ TASK-015 is completed. For distributed work load the TASK-015 summary/specificat
 TASK-016 Phase 0 is active and implemented pending the full Product+OS snapshot closure gate. Load `tasks/TASK-016/TASK-016.summary.md`, then the Phase 0 owner authorization and detailed design. Phase 1+ is not authorized. Real destructive chaos/fault injection requires a separately bound Owner authorization even after later resilience implementation begins.
 
 
-## TASK-017 planning context
+## TASK-017 active Phase 0 context
 
-TASK-017 is not started or authorized and does not replace TASK-016 as NEXT. For planning, load `tasks/TASK-017/TASK-017.summary.md`, then `architecture/BAI_Development_OS_Creative_OS_Knowledge_Audit_Adjudication_Ver1.0.md` and the Post-CREATIVE-OS refinement. Do not load the old audit snapshot as current truth. Promotion score/frequency is never authority, hard Safety/Security/Rights/Privacy gates are non-compensable, and Consumer creative/personal/confidential content remains local by default.
+TASK-017 bounded Phase 0 is active. Load `tasks/TASK-017/TASK-017.summary.md`, the pilot detailed design and the current gate design relevant to the assignment. Public TLS staging execution requires exact acknowledgement; Production ACME/public activation and Product pilot remain separately gated. Promotion score/frequency is never authority, hard Safety/Security/Rights/Privacy gates are non-compensable, and Consumer creative/personal/confidential content remains local by default.

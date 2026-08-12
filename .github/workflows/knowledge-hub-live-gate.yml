@@ -65,6 +65,7 @@ jobs:
           npm run check:knowledge-hub-deployment
           npm run check:knowledge-hub-postgres-tuning
           npm run check:knowledge-hub-ci-live-gate
+          npm run check:knowledge-hub-public-tls-staging
 
   live-rehearsal:
     name: Real Docker and PostgreSQL rehearsal

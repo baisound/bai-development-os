@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-017 Phase 0 / ACTIVE`; Integration Kit RC + Deployment Readiness + Pre-Live Hardening = `ACCEPTED`; live PostgreSQL/Docker + production deployment/Product pilot = `PENDING SEPARATE GATES`; advanced TASK-017 remains after TASK-016 resilience evidence
+- Current route: `TASK-017 Phase 0 / ACTIVE`; VPS private/runtime gates = `PASS`; Public TLS Staging Gate = `IMPLEMENTED / VPS EXECUTION_PENDING`; Production Certificate, Offsite Backup/Restore and Product pilot remain separate gates
 - Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
 
 ## Current subsystem map
@@ -32,13 +32,13 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1280 / 1280 PASS` (TASK-017 Compose/PostgreSQL Tuning; prior Pre-Live Hardening 1273/1273; Integration Kit RC baseline 1271/1271; Live Rehearsal Harness baseline 1269/1269; Deployment Readiness baseline 1267/1267; Local Hub baseline 1255/1255; TASK-016 Phase 0 baseline 1238/1238)
+- Full OS: `1308 / 1308 PASS` (TASK-017 Public TLS Staging Gate; prior Public IP TLS/Caddy baseline 1303/1303)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `40 / 40 PASS`; Product Integration focused: `52 / 52 PASS`; Integration Kit RC Judge: `INTEGRATION_KIT_RC_ACCEPTED / PRODUCT_INTEGRATION_ELIGIBLE`; Pre-Live Hardening Judge: `PRELIVE_HARDENING_ACCEPTED / LIVE_REHEARSAL_NEXT`; Compose/PostgreSQL tuning implementation: `STATIC_PASS / LIVE_DOCKER_EXECUTION_PENDING`; Compose/PostgreSQL Judge: `COMPOSE_POSTGRES_TUNING_ACCEPTED / LIVE_DOCKER_EXECUTION_PENDING`; blocking Critic findings: `0`
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `68 / 68 PASS`; Product Integration focused: `52 / 52 PASS`; VPS private/runtime gates: `PASS`; Public TLS Staging implementation: `STATIC_PASS / VPS_EXECUTION_PENDING`; blocking Critic findings: `0`
 
 ## Loading guidance
 
@@ -62,7 +62,7 @@ The accepted Deployment Readiness baseline builds on Local Hub Foundation with o
 
 Hub v1 remains PostgreSQL and one VPS/Docker Compose under a 3,000 JPY/month hard ceiling. Consumer credentials remain externalized through generic CredentialProvider; BAI VIDEO PRODUCT uses Microsoft Password Manager in Product-owned code. Hub failure must never block primary Product function.
 
-Presigned Object Storage fallback is accepted for Product integration: canonical Batch only, short-lived presign boundary, HTTPS outside loopback tests, redirects rejected, and Object Storage PUT success never ACKs/deletes Outbox Events. Phase 0 remains open for execution of the supplied self-cleaning live Docker/PostgreSQL rehearsal harness, separately authorized production activation and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. The harness never activates the public Caddy profile. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence. Pattern B remains late; telemetry/frequency never becomes promotion authority.
+Presigned Object Storage fallback is accepted for Product integration: canonical Batch only, short-lived presign boundary, HTTPS outside loopback tests, redirects rejected, and Object Storage PUT success never ACKs/deletes Outbox Events. The private VPS/runtime gates are complete. The current staging-only Public TLS harness requires exact acknowledgement, forbids Production ACME/firewall mutation/data deletion, verifies certificate/routing/port boundaries and stops Caddy before publishing Evidence. Phase 0 remains open for real staging execution, later Production Certificate/Offsite Backup gates and BAI VIDEO PRODUCTION TASK-036 pilot Evidence. Advanced TASK-017 resumes only after relevant TASK-016 resilience evidence.
 
 ## RC2 frozen-contract context
 

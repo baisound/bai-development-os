@@ -162,6 +162,27 @@ GitHub Actions performs a real `caddy validate` with the pinned image, a documen
 
 Repository tests and GitHub Actions can prove the Caddyfile parses with the reviewed Caddy release without exposing the service. They cannot prove ownership/reachability of the deployment IP or complete an ACME challenge for the VPS. The later VPS staging gate must separately prove certificate issuance, IP SAN, HTTPS proxying, HTTP-to-HTTPS redirect, TCP-only host exposure, and continued privacy of API `8787`, PostgreSQL `5432`, and Caddy admin `2019`. Production ACME selection remains blocked until that staging Evidence passes.
 
+The canonical staging harness is `scripts/run-public-tls-staging-rehearsal.sh`. It is intentionally non-firewall-mutating and fail-closed: it requires an existing root-only env file, exact Let's Encrypt staging selection, a new Evidence output path and the explicit acknowledgement `STAGING_PUBLIC_TLS_REHEARSAL`. It rejects occupied 80/443, UDP 443, Production ACME and public private-service listeners. After verifying the live certificate, HTTPS/redirect and port boundary, it stops Caddy before atomically publishing sanitized Evidence.
+
+Do not run it until the VPS staging execution and temporary TCP 80/443 reachability are explicitly approved. The operator supplies the existing host env without regenerating it:
+
+```bash
+sudo install -d -m 0700 /var/lib/bai-knowledge-hub/evidence
+sudo env \
+  BAI_PUBLIC_TLS_ACK=STAGING_PUBLIC_TLS_REHEARSAL \
+  BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=https://acme-staging-v02.api.letsencrypt.org/directory \
+  BAI_KNOWLEDGE_HUB_ENV_FILE=/etc/bai-knowledge-hub/knowledge-hub.env \
+  BAI_KNOWLEDGE_HUB_PUBLIC_TLS_EVIDENCE_OUT=/var/lib/bai-knowledge-hub/evidence/public-tls-staging-<UTC>.json \
+  bash deploy/knowledge-hub/scripts/run-public-tls-staging-rehearsal.sh
+```
+
+Validate the resulting file independently:
+
+```bash
+node scripts/validate-knowledge-hub-public-tls-staging-evidence.mjs \
+  /var/lib/bai-knowledge-hub/evidence/public-tls-staging-<UTC>.json
+```
+
 
 ## One-command live rehearsal when Docker is available
 
