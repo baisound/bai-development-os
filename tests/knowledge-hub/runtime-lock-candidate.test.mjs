@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { checkRuntimeLockCandidate } from '../../scripts/check-knowledge-hub-runtime-lock-candidate.mjs';
 
 const good=()=>({
@@ -20,4 +21,13 @@ test('runtime lock candidate rejects git/file/http source',()=>{
 test('runtime lock candidate rejects missing integrity or pg drift',()=>{
   const a=good();delete a.packages['node_modules/example'].integrity;assert.equal(checkRuntimeLockCandidate(a).status,'FAIL');
   const b=good();b.packages['node_modules/pg'].version='8.13.2';assert.equal(checkRuntimeLockCandidate(b).status,'FAIL');
+});
+
+
+test('canonical runtime lock passes the supply-chain policy',()=>{
+  const value=JSON.parse(fs.readFileSync(new URL('../../deploy/knowledge-hub/runtime/package-lock.json',import.meta.url),'utf8'));
+  const result=checkRuntimeLockCandidate(value);
+  assert.equal(result.status,'PASS');
+  assert.equal(result.pg_version,'8.13.1');
+  assert.equal(result.packages,13);
 });

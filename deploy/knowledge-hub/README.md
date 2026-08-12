@@ -181,11 +181,11 @@ The Evidence file contains no credential and is created only after successful re
 
 ## Dependency reproducibility gate
 
-The deployment-only direct `pg` dependency is exact (`8.13.1`). A complete `package-lock.json` is still required before public production activation. This repository does not fabricate a lockfile when npm registry metadata is unavailable.
+The deployment-only direct `pg` dependency is exact (`8.13.1`). `deploy/knowledge-hub/runtime/package-lock.json` is now canonical and is required for every Knowledge Hub image build. The Dockerfile uses `npm ci` only; an unlocked `npm install` fallback is prohibited. The canonical lock is supply-chain checked for lockfile version 3, exact `pg@8.13.1`, HTTPS `registry.npmjs.org` sources, and SHA-512 integrity metadata.
 
 
 ## GitHub Actions real Docker/PostgreSQL gate
 
 When local Docker is unavailable, `.github/workflows/knowledge-hub-live-gate.yml` provides the canonical remote rehearsal path. It runs static contracts on every matching PR and performs the real disposable Docker/PostgreSQL rehearsal only for same-repository PRs, pushes to `main`, or explicit manual dispatch. Fork PRs never execute untrusted code in the live container gate.
 
-The workflow also generates `deploy/knowledge-hub/runtime/package-lock.json` as a review candidate before Docker build. When that file exists, the Dockerfile uses `npm ci`; the lock candidate and sanitized live-gate Evidence are retained as workflow artifacts for 14 days. This does not authorize the public Caddy profile or Production credentials.
+The workflow validates the canonical `deploy/knowledge-hub/runtime/package-lock.json` before Docker build and never regenerates it. The Dockerfile requires the committed lock and uses `npm ci`; the canonical lock checksum is bound into sanitized live-gate Evidence, and both are retained as workflow artifacts for 14 days. This does not authorize the public Caddy profile or Production credentials.

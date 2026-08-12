@@ -75,10 +75,9 @@ jobs:
         run: |
           docker version
           docker compose version
-      - name: Generate deployment runtime lock candidate
+      - name: Validate canonical deployment runtime lock
         working-directory: deploy/knowledge-hub/runtime
         run: |
-          npm install --package-lock-only --ignore-scripts --no-audit --no-fund
           node -e "const p=require('./package-lock.json'); const v=p.packages?.['node_modules/pg']?.version; if(v!=='8.13.1'){throw new Error('pg lock version mismatch: '+v)}"
           node ../../../scripts/check-knowledge-hub-runtime-lock-candidate.mjs package-lock.json
           sha256sum package-lock.json
@@ -103,7 +102,7 @@ jobs:
             --event "$GITHUB_EVENT_NAME"
           node scripts/validate-knowledge-hub-ci-live-gate-evidence.mjs \
             "${{ runner.temp }}/bai-knowledge-hub-live-gate/ci-live-gate.json"
-      - name: Upload sanitized gate Evidence and dependency lock candidate
+      - name: Upload sanitized gate Evidence and canonical dependency lock
         if: always()
         uses: actions/upload-artifact@v4
         with:

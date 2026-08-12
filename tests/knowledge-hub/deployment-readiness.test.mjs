@@ -25,6 +25,18 @@ test('deployment readiness checker and runtime scripts parse',()=>{
  for(const rel of ['deploy/knowledge-hub/runtime/server.mjs','deploy/knowledge-hub/runtime/issue-api-key.mjs','deploy/knowledge-hub/runtime/prune-retention.mjs']){const parsed=spawnSync(process.execPath,['--check',rel],{cwd:root,encoding:'utf8'});assert.equal(parsed.status,0,`${rel}: ${parsed.stderr}`);}
 });
 
+
+
+test('deployment runtime dependency lock is canonical and Docker build is fail-closed',()=>{
+ const docker=read('deploy/knowledge-hub/Dockerfile');
+ assert.match(docker,/COPY deploy\/knowledge-hub\/runtime\/package\.json deploy\/knowledge-hub\/runtime\/package-lock\.json/);
+ assert.match(docker,/npm ci --omit=dev --ignore-scripts --no-audit --no-fund/);
+ assert.doesNotMatch(docker,/npm install/);
+ const lockPath=path.join(root,'deploy/knowledge-hub/runtime/package-lock.json');assert.equal(fs.existsSync(lockPath),true);
+ const checked=spawnSync(process.execPath,['scripts/check-knowledge-hub-runtime-lock-candidate.mjs','deploy/knowledge-hub/runtime/package-lock.json'],{cwd:root,encoding:'utf8'});
+ assert.equal(checked.status,0,checked.stderr);assert.match(checked.stdout,/"status": "PASS"/);assert.match(checked.stdout,/"pg_version": "8.13.1"/);
+});
+
 test('deployment PostgreSQL configuration supports split secret fields and exact direct driver version',async()=>{
  const compose=read('deploy/knowledge-hub/compose.yaml');assert.doesNotMatch(compose,/DATABASE_URL:/);assert.match(compose,/PGHOST: postgres/);assert.match(compose,/PGPASSWORD: "\$\{POSTGRES_PASSWORD\}"/);
  const runtime=JSON.parse(read('deploy/knowledge-hub/runtime/package.json'));assert.equal(runtime.dependencies.pg,'8.13.1');
