@@ -11,6 +11,18 @@ test('GitHub Actions live gate contract is fail-closed and public-profile safe',
   assert.match(out,/"status": "PASS"/);
 });
 
+test('GitHub Actions validates the pinned public Caddyfile without activating or publishing it',()=>{
+  const workflow=fs.readFileSync('.github/workflows/knowledge-hub-live-gate.yml','utf8');
+  assert.match(workflow,/Validate public Caddy configuration without activation/);
+  assert.match(workflow,/HUB_DOMAIN: 203\.0\.113\.10/);
+  assert.match(workflow,/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY: https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory/);
+  assert.match(workflow,/caddy:2\.11\.4-alpine/);
+  assert.match(workflow,/caddy validate --config \/etc\/caddy\/Caddyfile --adapter caddyfile/);
+  assert.doesNotMatch(workflow,/--profile\s+public/);
+  const step=workflow.match(/- name: Validate public Caddy configuration without activation([\s\S]*?)(?=\n\s*- name:)/)?.[1] ?? '';
+  assert.ok(step);assert.doesNotMatch(step,/--publish|(^|\s)-p(\s|$)/m);
+});
+
 test('CI live gate evidence validator accepts only sanitized pass evidence',()=>{
   const value={
     schema_version:'1.0',result:'GITHUB_ACTIONS_LIVE_GATE_PASS',

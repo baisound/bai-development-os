@@ -141,6 +141,7 @@ BAI_KNOWLEDGE_HUB_RUNTIME_DB_PASSWORD=$runtime_password
 POSTGRES_CONFIG_FILE=$postgres_config_file
 POSTGRES_SHM_SIZE=$postgres_shm_size
 HUB_DOMAIN=$hub_domain
+BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=https://acme-staging-v02.api.letsencrypt.org/directory
 BAI_KNOWLEDGE_HUB_RETENTION_DAYS=$retention_days
 BAI_KNOWLEDGE_HUB_RATE_LIMIT_PER_MINUTE=$rate_limit_per_minute
 BAI_KNOWLEDGE_HUB_BODY_LIMIT_BYTES=$body_limit_bytes
@@ -158,4 +159,5 @@ printf 'Retention        : %s days\n' "$retention_days"
 printf 'Rate limit       : %s/min\n' "$rate_limit_per_minute"
 printf 'Body limit       : %s bytes\n' "$body_limit_bytes"
 printf 'Hub domain       : %s\n' "$hub_domain"
+printf "ACME directory   : Let's Encrypt STAGING (public profile remains blocked)\n"
 printf 'Public profile   : NOT AUTHORIZED\n'

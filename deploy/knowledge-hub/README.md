@@ -13,7 +13,7 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 - `postgres/postgresql.tuned-4gb.conf` — explicit 4 GiB profile.
 - `postgres/postgresql.tuned-8gb.conf` — explicit 8 GiB startup-production profile.
 - `postgres/verify-tuning.sql` + `scripts/verify-postgres-tuning.sh` — active-setting verification.
-- `Caddyfile` — HTTPS reverse proxy template for a later public gate.
+- `Caddyfile` — fail-closed public HTTPS gateway contract: Caddy 2.11.4, explicit Let's Encrypt ACME issuer, `shortlived` profile for IP certificates, admin API disabled, and HTTP/3 disabled until UDP/443 is separately adopted.
 - `scripts/backup-postgres.sh` — restrictive custom-format backup + SHA-256.
 - `scripts/restore-rehearsal.sh` — restore rehearsal only; safety suffix + acknowledgement required.
 - `scripts/ensure-runtime-db-credentials.sh` — atomically augments an existing host-only environment with a dedicated runtime DB credential without changing the bootstrap/admin password.
@@ -142,18 +142,25 @@ The raw key is displayed once. Store it in the Product-selected password manager
 
 ## Public profile — DO NOT ACTIVATE YET
 
-Public activation is intentionally separate:
+Public activation remains an explicit STOP Gate. The `public` profile is not used by private startup, runtime-role verification, Live Rehearsal, or the normal GitHub Actions PostgreSQL rehearsal.
 
-```bash
-# Requires Owner/security/budget gate + real DNS first.
-docker compose --profile public --env-file .env up -d
-```
+The public gateway contract is intentionally staging-first:
 
-Do not run this merely to test locally.
+- Caddy image is version-pinned to `caddy:2.11.4-alpine`.
+- Only host TCP ports `80` and `443` are published by the public profile. UDP/443 is not published and Caddy HTTP/3 is disabled until separately adopted.
+- The Caddy admin API remains disabled (`admin off`); host port `2019` is never published.
+- The site identifier comes from `HUB_DOMAIN` and may be a reviewed public hostname or public IP address.
+- Certificate issuance uses one explicit ACME issuer and the `shortlived` profile. This is required for Let's Encrypt IP-address certificates.
+- `BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY` defaults to Let's Encrypt **staging**. Production issuance requires an explicit override to `https://acme-v02.api.letsencrypt.org/directory` after staging Evidence and Owner approval.
+- `caddy_data` and `caddy_config` stay persistent so the automatic certificate lifecycle is not tied to a container instance.
 
-## Current environment limitation
+The example/generated host env therefore carries the safe staging directory. Do **not** replace it with the production directory merely to test. Do **not** run `docker compose --profile public ... up` until the Public Security Gate authorizes the operation.
 
-The ChatGPT execution environment used for this implementation did not expose Docker or a live PostgreSQL server. Therefore the repository contains a production-compatible deployment package and deterministic tests, but **does not claim a live PostgreSQL migration/backup/TLS rehearsal**. That evidence is the next environment-dependent gate.
+GitHub Actions performs a real `caddy validate` with the pinned image, a documentation-only IP, and the Let's Encrypt staging directory. That validation does not publish any host port and does not activate the Compose public profile.
+
+## Environment-dependent public TLS evidence
+
+Repository tests and GitHub Actions can prove the Caddyfile parses with the reviewed Caddy release without exposing the service. They cannot prove ownership/reachability of the deployment IP or complete an ACME challenge for the VPS. The later VPS staging gate must separately prove certificate issuance, IP SAN, HTTPS proxying, HTTP-to-HTTPS redirect, TCP-only host exposure, and continued privacy of API `8787`, PostgreSQL `5432`, and Caddy admin `2019`. Production ACME selection remains blocked until that staging Evidence passes.
 
 
 ## One-command live rehearsal when Docker is available
