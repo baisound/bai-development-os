@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / P0 MAXIMUM`; Consumer-independent Phases through I0 and H2A passed; TASK-036 W2 and its bounded Context Cost checkpoint passed on Consumer PR #20; W0/W1 disposition, post-W2 restart, final Context Cost and I1 remain blocked
+- Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / P0 MAXIMUM`; Consumer-independent Phases through I0 and H2A passed; TASK-036 W2 passed and W0/W1 remainder is formally parked to H2 on Consumer PR #20; post-W2 restart bootstrap is ready; final Context Cost and I1 remain blocked
 - Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
 - Roadmap authority: Architecture Ver.2.29 Part XV + Part XXX, `56 / 56 PASS`
 
@@ -58,7 +58,7 @@ For local-only work, do not load or enable DistributedOS unless topology require
 7. `tasks/TASK-018/owner-implementation-authorization-2026-08-13.md`
 8. only the exact source modules/tests for the current bounded Phase
 
-Consumer-independent work through Phase I0 is complete. Phase G coordination is active. Load `tasks/TASK-018/phase-g-w2-context-cost-and-merge-gate-decision-2026-08-14.md`, its machine-readable Context Cost checkpoint, the earlier M3A checkpoint/restart Evidence, and only the exact Consumer Evidence needed. Consumer PR #20 HEAD `77a2cc9bd4ea1fa17d489d6523367f5a8171a35b` has TASK-036 `W2_PACKAGED_NATIVE_E2E_PASS` and all nine hosted checks green, but remains open. W0/W1 disposition, a post-W2 conversation-free restart, final Context Cost and exact release decision remain; do not merge merely because CI is green.
+Consumer-independent work through Phase I0 is complete. Phase G coordination is active. For the next run, load `tasks/TASK-018/phase-g-post-w2-conversation-free-restart-bootstrap-2026-08-14.md` after current state and this pack. Consumer PR #20 HEAD `b30da2298a47cad49d650133b6ab2ccf78f11c29` has TASK-036 `W2_PACKAGED_NATIVE_E2E_PASS`; its W0/W1 remainder is partial and formally parked to H2 without a PASS claim. A post-W2 conversation-free restart, final Context Cost and exact release decision remain; do not merge merely because CI is green.
 
 Balanced Execution: maximum two review/fix cycles per bounded Phase. When required gates pass and unresolved Critical/High findings are `0/0`, continue to the next authorized unit rather than repeating Critic on unchanged artifacts.
 

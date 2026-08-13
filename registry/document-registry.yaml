@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: f5b9215cd9dcd0f0414e683efef6230d4028fed25dfe5a63ca70610399c7da74
-  size_bytes: 9940
+  sha256: 3187fd738f48646d8afafc86bbea44c8ff0849b065dcfe08d0c6ad274cedbf37
+  size_bytes: 9874
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 27a907523b937af12d4a5734a7bcd7178640e8cbe0c9525e8d5e230e075e18ad
-  size_bytes: 12739
+  sha256: 06b89d06fa27417c767f54d61f13210f6c5ef37af9f0e72a0c71221a1be32626
+  size_bytes: 12884
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 964db6ef320f2cf6f2ccbf0f533d8a714ba875ee6096977bbc68b5b21b022b8f
-  size_bytes: 2153
+  sha256: 1d503296e5409a435e1ab233835390a1010b74e1a678de3ae8723dab5ba1f85a
+  size_bytes: 2200
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7991,8 +7991,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 91ab99a23e69ca61e0f4fc82c57fbdd2230d6f5bfdb7267f35f5d083a43261b6
-  size_bytes: 3406
+  sha256: 779761dfebc7c4008d2847d4c482d42ff12d3fea44ffa7d21228f275ecd2055d
+  size_bytes: 3659
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-14'
@@ -8004,6 +8004,17 @@ documents:
   importance_level: A
   sha256: 2e749afcf003710582aec6d2dc882a3834eae549cee9ba741b0bc27c1c222f7a
   size_bytes: 7476
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: F83A0E2B11E4C730
+  path: tasks/TASK-018/phase-g-post-w2-conversation-free-restart-bootstrap-2026-08-14.md
+  title: 'TASK-018 Phase G Post-W2 Conversation-free Restart Bootstrap'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: e019bd8b59b64291dc3ad4959c181073890dacfa9055875f44f493b9bb136ec5
+  size_bytes: 3355
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-14'
@@ -8182,11 +8193,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_PHASE_G_TASK036_W2_CONTEXT_CHECKPOINT
+registry_status: CURRENT_DURING_TASK018_PHASE_G_POST_W2_RESTART_READY
 registry_status_details:
-  documents: 665
+  documents: 666
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / TASK036_W2_PASS / W2_CONTEXT_CHECKPOINT_PASS / POST_W2_RESTART_PENDING / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
-  next_task: TASK-018 TASK-036 W0-W1 disposition, post-W2 conversation-free restart, final Context Cost, exact release decision
+  current_task: TASK-018 ACTIVE / TASK036_W2_PASS / W0_W1_REMAINDER_PARKED / W2_CONTEXT_CHECKPOINT_PASS / POST_W2_RESTART_READY / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
+  next_task: TASK-018 independent post-W2 conversation-free restart, final Context Cost, exact release decision
