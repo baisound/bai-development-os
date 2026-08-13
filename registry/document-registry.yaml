@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: b81635426b2e3b3369699953611940e8c33528d717cad9ebd0617c9723149386
-  size_bytes: 10007
+  sha256: d92e11acbd2e58a27ca89f9b79302a029cdf64a33133937ec794a4c2b97ad5a1
+  size_bytes: 9991
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: dd6a88b601e6b56637e93c643ad451dfdbad799d008fe4ccf54d7243a6b24625
-  size_bytes: 6014
+  sha256: ad37260256039d049ae0711feff1410b67c64b6d30cbb5895569c2867bdaf6e0
+  size_bytes: 6111
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: b84ecb231a78de7b8e6d45839c5a50741a1e5c19658d74af3b8e2eda01a6de1a
-  size_bytes: 13496
+  sha256: 2359e3309c283ea181a87fba8e62a65e83fa7e21ed5461c11affa22a951b84a2
+  size_bytes: 13485
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 3c4d2cba01675d3ef9c711c408ed50c748f437ccbb49b08f8cb32af7c9b5387e
-  size_bytes: 2408
+  sha256: 918e925daaed126294b4b153c5e0df7f03ca6cc2d3ca9aa0e5a2277fa46cc4cd
+  size_bytes: 2373
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7859,8 +7859,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 3114b34d061a9079949899d41aec0bc8e32a8dd5d9223b4cd073f362007903db
-  size_bytes: 1063
+  sha256: 3477ff2e6524f345e8b8508570fef1eb6aed1027772549fe51d611d20ef0b623
+  size_bytes: 1104
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7870,8 +7870,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 4263e8ec9b70759eb24f7287823f49c6995ba8bf74a498d3c8ff1c8896bf3013
-  size_bytes: 1893
+  sha256: f474d9de97dc9646ec895b5a2ab137ee6309f7c65f47689c6b207e6c586fce83
+  size_bytes: 2085
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -8046,8 +8046,19 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 8d3f92c7293471ab67fcdd31f901607ff163a18679d59eb5fdac6b24faf7ff2a
-  size_bytes: 3492
+  sha256: ccdcdc5abd561d9e4657cf0820498151cb0e9bfa55ca8968010a0bdf9bc1b0b7
+  size_bytes: 3974
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 1CCDB95C469B3A77
+  path: tasks/TASK-018/phase-g-consumer-release-closure-evidence-2026-08-14.md
+  title: 'TASK-018 Phase G Consumer Release Closure Evidence'
+  category: evidence
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: af85e69df6f595aa54a66faa509e775bdc584ebf360b56e3ab90f5ea54f162a9
+  size_bytes: 3160
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-14'
@@ -8226,11 +8237,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_PHASE_G_POST_W2_RESTART_FINAL_CONTEXT_AND_CONSUMER_RELEASE_DECISION_PASS
+registry_status: CURRENT_DURING_TASK018_PHASE_G_CONSUMER_V0_20_0_RELEASE_COMPLETE_H2_ACTIVE
 registry_status_details:
-  documents: 669
+  documents: 670
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / POST_W2_RESTART_PASS / FINAL_CONTEXT_COST_PASS / CONSUMER_0_20_0_DECIDED / RELEASE_INTEGRATION_PENDING / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
-  next_task: Consumer 0.20.0 metadata finalization, regression/CI and PR #20 integration; TASK-018 H2/I1 remain
+  current_task: TASK-018 ACTIVE / PHASE_G_CONSUMER_V0_20_0_RELEASE_COMPLETE / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
+  next_task: TASK-018 Phase H2 empirical hardening; overall TASK-036/M3B and TASK-018 I1 remain

@@ -49,7 +49,7 @@ TASK-017 Phase 0 is paused at `07af447` for TASK-018 P0. When TASK-017 resume is
 
 TASK-018 is the active P0 route. Load the Roadmap supplement, TASK-018 summary, Phase A Final Plan and the exact current bounded authorization. Phase B reads only ContextControl, relevant Context Guard estimation contracts, its schema and tests. Do not load all Automation/Integration/Security history by default.
 
-For Phase G continuation, load `tasks/TASK-018/phase-g-consumer-pilot-checkpoint-2026-08-13.md`, then the conversation-free restart and Pilot Context Cost records, then only the exact Consumer TASK-036 contract/Evidence needed. Treat Consumer main SHA `0861d8635480932a1e5703e5b0304fa56c87e04d` as the accepted M3A checkpoint. Do not reload raw Resolve/Cubase artifacts or superseded frontier documents unless a specific discrepancy requires them. TASK-036 partial Evidence cannot authorize M3B completion, Tag or Release.
+For Phase G provenance or Phase H2 continuation, load `tasks/TASK-018/phase-g-consumer-release-closure-evidence-2026-08-14.md` first, then the final Pilot Context Cost and only the exact parked TASK-036 W0/W1 contract/Evidence needed. Treat Consumer main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88` and stable Release `v0.20.0` as the accepted Phase G release checkpoint. Do not reload raw Resolve/Cubase artifacts or superseded frontier documents unless a specific discrepancy requires them. W2 PASS does not authorize overall TASK-036/M3B completion; TASK-018 OS Tag/Release remains a separate I1 closure decision.
 
 Use Balanced Execution: two review/fix cycles maximum per bounded Phase. Zero unresolved Critical/High plus required PASS permits advancement; unchanged artifacts do not justify repeated Critic execution.
 

@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / P0 MAXIMUM`; Consumer-independent Phases through I0 and H2A passed; post-W2 restart and final Context Cost passed; exact Consumer `0.20.0` release decision is established; Consumer release integration, H2 overall and I1 remain
+- Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / P0 MAXIMUM`; Consumer-independent Phases through I0 and H2A passed; Phase G Consumer `v0.20.0` release integration passed; H2 overall and I1 remain
 - Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
 - Roadmap authority: Architecture Ver.2.29 Part XV + Part XXX, `56 / 56 PASS`
 
@@ -58,7 +58,7 @@ For local-only work, do not load or enable DistributedOS unless topology require
 7. `tasks/TASK-018/owner-implementation-authorization-2026-08-13.md`
 8. only the exact source modules/tests for the current bounded Phase
 
-Consumer-independent work through Phase I0 is complete. Phase G coordination is active. The independent post-W2 restart at Consumer HEAD `b30da2298a47cad49d650133b6ab2ccf78f11c29` passed, and final Pilot Context Cost is `11,888` estimated input tokens (`50.91%` below the W2 checkpoint) with provider/cached/output/billed fields `null`. Exact Consumer release decision is `0.20.0 / v0.20.0 / stable`. W0/W1 remains partial and parked to H2; overall TASK-036/M3B completion is unclaimed. The next bounded unit is Consumer release metadata finalization followed by regression/CI and PR #20 integration; tag/Release occurs only after an all-green merge and exact main-SHA verification.
+Consumer-independent work through Phase I0 is complete. Phase G Consumer release integration is complete: metadata head `3e43b550ad3eb1db9c6b51843c0051d692c1732c` passed isolated WSL2 `805 / 805` and hosted checks `9 / 9`; PR #20 merged at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`; annotated tag and stable GitHub Release `v0.20.0` target that SHA. The independent post-W2 restart and final Pilot Context Cost `11,888` (`50.91%` below W2) remain accepted, with provider/cached/output/billed fields `null`. W0/W1 remains partial and parked to H2; overall TASK-036/M3B completion is unclaimed. The next bounded unit is Phase H2 empirical hardening; the separate TASK-018 OS closure/version/tag/Release decision remains an I1 gate.
 
 Balanced Execution: maximum two review/fix cycles per bounded Phase. When required gates pass and unresolved Critical/High findings are `0/0`, continue to the next authorized unit rather than repeating Critic on unchanged artifacts.
 

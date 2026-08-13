@@ -9,7 +9,11 @@
 - Annotated tag: `v0.20.0`
 - Release name: `BAI Video Production v0.20.0`
 - Channel: `stable`
-- Release target: exact future `main` merge SHA after release metadata finalization and all-green PR #20 integration
+- Release target: exact `main` merge SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`
+
+## Execution outcome — 2026-08-14
+
+`PHASE_G_CONSUMER_RELEASE_INTEGRATION_PASS`. Metadata head `3e43b550ad3eb1db9c6b51843c0051d692c1732c` passed isolated WSL2 `805 / 805` and the fresh hosted matrix `9 / 9`. PR #20 merged at the exact target SHA above. Annotated tag `v0.20.0` dereferences to that SHA, the formal Release workflow passed, and the stable non-draft/non-prerelease GitHub Release was published. The merged feature branch was then removed remotely and locally. The claim boundary below is unchanged.
 
 ## Decision
 

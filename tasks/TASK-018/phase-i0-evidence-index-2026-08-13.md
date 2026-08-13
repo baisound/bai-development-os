@@ -18,11 +18,12 @@
 - Pilot Context Cost checkpoint: recorded with estimated usage; provider-observed and billed usage unavailable and represented as `null`.
 - post-W2 conversation-free restart: `PASS` — task `019ffc2c-12dc-7891-af27-837a2eeffdce`, Consumer HEAD `b30da2298a47cad49d650133b6ab2ccf78f11c29`.
 - final Pilot Context Cost: `11,888` estimated input tokens, `50.91%` below the W2 checkpoint; provider/cached/output/billed fields remain `null`.
-- exact Consumer release decision: `0.20.0 / v0.20.0 / stable`, with metadata/CI/merge/tag/Release execution still pending.
+- exact Consumer release decision: `0.20.0 / v0.20.0 / stable`.
+- Consumer release integration: `PASS` — metadata head `3e43b550ad3eb1db9c6b51843c0051d692c1732c`; isolated WSL2 `805 / 805`; hosted checks `9 / 9`; PR #20 main merge `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`; annotated/stable `v0.20.0`; formal Release workflow PASS; branch cleanup verified.
 
 ## Required before I1
 
-- Phase G: `POST_W2_RESTART_AND_FINAL_CONTEXT_PASS / CONSUMER_RELEASE_INTEGRATION_PENDING`.
+- Phase G: `CONSUMER_RELEASE_INTEGRATION_PASS`.
 - Phase H2: `PARTIALLY_UNBLOCKED / EMPIRICAL_HARDENING_PENDING`.
 - TASK-036: `W0_PARTIAL_PARKED / W1_PARTIAL_PARKED / W2_PACKAGED_NATIVE_E2E_PASS`; overall completion remains unclaimed.
 - exact TASK-018 OS Closure version/tag/Release decision: `PENDING` and separate from the decided Consumer `0.20.0` release.
