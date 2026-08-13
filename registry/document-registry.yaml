@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 3e3f46421e69d30cbc32a21efa46fe714952111801d195102c37b0d617a04235
-  size_bytes: 5997
+  sha256: db72924b7259f62f82d5cfe37b749c30625eb24cb04cda277266e7131b9abbf1
+  size_bytes: 6004
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 7df72afc777d578a4a38d81903b55cc384978705b7ba26bad8ce81bf5e1f30b1
-  size_bytes: 9903
+  sha256: a7cc44aa1e6d77123900090785472ea64f7a00dccb8237044ce01026a63dd970
+  size_bytes: 9681
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 2ac987a4d57d1ed5b3a9baff40d2d5ec9e9a871b4f6453119c1358756d22fe5d
-  size_bytes: 5014
+  sha256: 521ff231f0a1afb073e28d477b3fb300ab1646b393771c359b878f4668674fcc
+  size_bytes: 5257
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: a043bc1f00f53e485066b48769429421430220806fdf3ff681d65e6f80361838
-  size_bytes: 10965
+  sha256: 26046a785b3afbc72ecce4ec161ac3db6c78f49c05dc74600e78458f01b774b5
+  size_bytes: 11150
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 0188bf7f7a1dbee8b57f605278582f9df921895e0658188f1bb294260a32b977
-  size_bytes: 2137
+  sha256: 91ad8e0abbac5aeb37225e2fe6fef5713d8c8f5e4cbfb4f4458329a35abd406b
+  size_bytes: 1904
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7666,6 +7666,127 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
+- document_id: A52F14FA14CB847D
+  path: registry/autonomy-failure-registry.json
+  title: 'autonomy-failure-registry.json'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 61a756eb8fb255681483223c73a23403a2916c1ab0aad35dcd4c4caf42364986
+  size_bytes: 4521
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 219C41D9F48E708D
+  path: schemas/automation/autonomy-failure-registry.schema.json
+  title: 'autonomy-failure-registry.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 90f8d6283e8ea12e3865f50e5686756f548e51dbc2e98855a13681e44aa1bc00
+  size_bytes: 1305
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: DB49C8C768DC6E56
+  path: specifications/BAI_Development_OS_Autonomy_Consumer_Integration_Guide_Ver1.0.md
+  title: 'BAI Development OS Autonomy Consumer Integration Guide Ver.1.0'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 536849af6dfc45ba04b9a1fe5977b1623d8959df6f11edd63a810457a546dcd6
+  size_bytes: 2414
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 5609D7A888439F31
+  path: specifications/BAI_Development_OS_Autonomy_Handoff_Pack_Specification_Ver1.0.md
+  title: 'BAI Development OS Autonomy Handoff Pack Specification Ver.1.0'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: c3c96f204bfe8b0773ca5121348f044d06fa574b5f020aa839f105a05320cf01
+  size_bytes: 2116
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: C7F84AEF01C2E223
+  path: specifications/BAI_Development_OS_Autonomy_Operator_Manual_Ver1.0.md
+  title: 'BAI Development OS Autonomy Operator Manual Ver.1.0'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: c906215298e6142e12220f13855dbffcedd153f8668e52d46e9b7a6140fdc848
+  size_bytes: 2872
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: FAC43102181B44CC
+  path: specifications/BAI_Development_OS_Codex_Automation_Adapter_Specification_Ver1.0.md
+  title: 'BAI Development OS Codex Automation Adapter Specification Ver.1.0'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: a7549877d7e5725871086553ac118b744863468de701988d6c540fb7a8523ea4
+  size_bytes: 2023
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: B2EC76825A00A1F9
+  path: specifications/BAI_Development_OS_Context_Cost_Specification_Ver1.0.md
+  title: 'BAI Development OS Context Cost Specification Ver.1.0'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: d96e43d1b750c6982c62771b3232ae480738845532a6a136457adc6838aa338e
+  size_bytes: 2205
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 6DF4151DA3C6E119
+  path: tasks/TASK-018/phase-h1-3-builder-implementation-evidence-2026-08-13.md
+  title: 'TASK-018 Phase H1.3 — Builder Implementation Evidence'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 13d80c432647d232220229e3baf9237c794b4aec61ab877a229fe33c3a056812
+  size_bytes: 957
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 43C3E8D2DF466330
+  path: tasks/TASK-018/phase-h1-3-critic-review-2026-08-13.md
+  title: 'TASK-018 Phase H1.3 — Critic Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: acda40b9a1a052f12f5acd210f374d6fcd3de9af81cc726922b925ffe5f131bc
+  size_bytes: 908
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: CC27599F51FCC1B2
+  path: tasks/TASK-018/phase-h1-3-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phase H1.3 — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 6e588a8ac89829db237d8a267b0ac771a68c9f2a6b37dd5c1d338289e3e4afdf
+  size_bytes: 658
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 5676023F71EFDF3D
+  path: tasks/TASK-018/phase-h1-3-operational-contracts-design-review-plan-and-authorization-2026-08-13.md
+  title: 'TASK-018 Phase H1.3 — Operational Contracts Design, Review Plan and Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 0f2de5557972a49dcebf8a5ddbd9bf707eafe5cd80fdfe02e9fb3e8af4efb382
+  size_bytes: 1289
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -7797,11 +7918,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_P0_PHASES_B_TO_F_H1_H1_2_PASS
+registry_status: CURRENT_DURING_TASK018_P0_PHASES_B_TO_F_H1_H1_2_H1_3_PASS
 registry_status_details:
-  documents: 630
+  documents: 641
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE
-  next_task: TASK-018 Consumer-independent documentation and closure readiness; Phase G remains parked and H2 waits Pilot Evidence
+  current_task: TASK-018 ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE
+  next_task: TASK-018 Phase G Consumer Pilot remains parked; H2 waits Pilot Evidence

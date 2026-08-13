@@ -1,0 +1,132 @@
+{
+  "registry_version": "1.0.0",
+  "effective_date": "2026-08-13",
+  "canonical_scope": "TASK-018_CONSUMER_INDEPENDENT_CORE",
+  "domains": [
+    {
+      "domain": "CONTEXT_COST",
+      "default_operator_action": "reject invalid measurement; preserve unknown usage as unavailable",
+      "signals": ["CONTEXT_OVERFETCH"],
+      "codes": [
+        "CONTEXT_COST_OBSERVED_USAGE_REQUIRED",
+        "CONTEXT_COST_RECORD_INVALID",
+        "CONTEXT_COST_RECORD_TAMPERED",
+        "CONTEXT_COST_SCHEMA_INVALID",
+        "CONTEXT_OVERFETCH_POLICY_INVALID"
+      ]
+    },
+    {
+      "domain": "HANDOFF_BOOTSTRAP",
+      "default_operator_action": "preserve checkout and local changes; resolve source truth before loading or mutation",
+      "signals": ["HANDOFF_STALE"],
+      "codes": [
+        "AUTHORITY_CONFLICT",
+        "AUTONOMY_BOOTSTRAP_MISSING",
+        "DIRTY_WORKTREE_OWNERSHIP_UNKNOWN",
+        "HANDOFF_BOOTSTRAP_RESULT_TAMPERED",
+        "HANDOFF_MANIFEST_INVALID",
+        "HANDOFF_PROJECT_MISMATCH",
+        "SECRET_CONTEXT_BLOCKED",
+        "SOURCE_OF_TRUTH_UNKNOWN",
+        "UNTRUSTED_INSTRUCTION_INJECTION"
+      ]
+    },
+    {
+      "domain": "AUTONOMOUS_QUEUE",
+      "default_operator_action": "park the affected Task or system; never infer implementation authority",
+      "signals": [
+        "AUTONOMY_TASK_NOT_AUTHORIZED",
+        "FILE_OWNERSHIP_CONFLICT",
+        "HUMAN_GATE_REQUIRED",
+        "SYSTEM_BLOCKED",
+        "TASK_BLOCKED"
+      ],
+      "codes": [
+        "AUTONOMOUS_TASK_ID_DUPLICATE",
+        "AUTONOMOUS_TASK_INVALID",
+        "AUTONOMOUS_WORK_MODE_INVALID",
+        "AUTONOMY_NO_RUNNABLE_TASK",
+        "AUTONOMY_TASK_DEPENDENCY_CYCLE",
+        "AUTONOMY_TASK_DEPENDENCY_MISSING",
+        "HUMAN_GATE_INVALID",
+        "HUMAN_GATE_SATISFACTION_UNVERIFIED",
+        "HUMAN_GATE_TAMPERED",
+        "HUMAN_GATE_TASK_MISMATCH",
+        "SPECULATIVE_IMPLEMENTATION"
+      ]
+    },
+    {
+      "domain": "SESSION_ROTATION",
+      "default_operator_action": "retain the current safe state and rebuild or revalidate the checkpoint/handoff",
+      "signals": ["ROTATION_DEFERRED_ATOMIC_UNIT", "SESSION_ROTATION_REQUIRED"],
+      "codes": [
+        "SESSION_CHECKPOINT_FAILED",
+        "SESSION_HANDOFF_INVALID",
+        "SESSION_HANDOFF_SOURCE_CHANGED",
+        "SESSION_HANDOFF_TOO_LARGE",
+        "SESSION_RESUME_STATE_CHANGED",
+        "SESSION_ROTATION_POLICY_INVALID",
+        "SESSION_STATE_INVALID"
+      ]
+    },
+    {
+      "domain": "CODEX_ADAPTER",
+      "default_operator_action": "do not dispatch; repair capability, gate, plan or Evidence binding",
+      "signals": ["PARKED", "UNKNOWN"],
+      "codes": [
+        "CODEX_ADAPTER_INPUT_INVALID",
+        "CODEX_CAPABILITY_EVIDENCE_REQUIRED",
+        "CODEX_CAPABILITY_GATE_REQUIRED",
+        "CODEX_CAPABILITY_NOT_DISPATCHABLE",
+        "CODEX_CAPABILITY_PROBE_INVALID",
+        "CODEX_CAPABILITY_PROBE_TAMPERED",
+        "CODEX_CONVERSATION_DEPENDENCY_FORBIDDEN",
+        "CODEX_RESULT_EVIDENCE_REQUIRED",
+        "CODEX_RESULT_INVALID"
+      ]
+    },
+    {
+      "domain": "AUTONOMY_HARDENING",
+      "default_operator_action": "enter review/recovery; never auto-promote Knowledge or auto-take over a Lease",
+      "signals": [
+        "AUTOMATION_LEASE_CONFLICT",
+        "MISSED_SCHEDULE_REPLAN",
+        "PROVIDER_UNAVAILABLE_SUSPENDED",
+        "RECOVERY_GATE_REQUIRED",
+        "STALE_LEASE_REVIEW_REQUIRED",
+        "TEST_FAILURE_REPAIR",
+        "USAGE_LIMIT_SUSPENDED"
+      ],
+      "codes": [
+        "AUTONOMY_FAILURE_EVIDENCE_INVALID",
+        "AUTONOMY_HARDENING_INPUT_INVALID",
+        "AUTONOMY_LEASE_INVALID",
+        "AUTONOMY_LEASE_TAMPERED"
+      ]
+    },
+    {
+      "domain": "SAFETY_FIRST_ROUTING",
+      "default_operator_action": "block routing until exact Authority, Evidence and input binding are restored",
+      "signals": [
+        "AUTHORITY_NOT_VERIFIED",
+        "CAPABILITY_NOT_SUPPORTED",
+        "CAPABILITY_TIER_NOT_ALLOWED",
+        "COST_LIMIT_EXCEEDED",
+        "DEV_PROFILE_NOT_SUPPORTED",
+        "MODEL_CONTROL_NOT_PASSED",
+        "NATIVE_EXECUTION_NOT_AUTHORIZED",
+        "PAID_EXECUTION_NOT_AUTHORIZED",
+        "PROVIDER_NOT_AVAILABLE",
+        "QUALITY_NOT_PASSED",
+        "SAFETY_FLOOR_NOT_MET"
+      ],
+      "codes": [
+        "AUTONOMY_ROUTE_AUTHORIZATION_EVIDENCE_INVALID",
+        "AUTONOMY_ROUTE_DECISION_INPUT_MISMATCH",
+        "AUTONOMY_ROUTE_DECISION_INVALID",
+        "AUTONOMY_ROUTE_INPUT_INVALID",
+        "AUTONOMY_ROUTING_CONTEXT_MISMATCH"
+      ]
+    }
+  ]
+}
