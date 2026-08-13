@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: e34ea55bf00a4d91a88b012b3882499fc06809918fd682e70d796b44d09e00eb
-  size_bytes: 9739
+  sha256: f5b9215cd9dcd0f0414e683efef6230d4028fed25dfe5a63ca70610399c7da74
+  size_bytes: 9940
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: ba896ef9ca7c19f4503fd36c37c142f41f424456c9eeae0adf5857f333075e77
-  size_bytes: 12072
+  sha256: 27a907523b937af12d4a5734a7bcd7178640e8cbe0c9525e8d5e230e075e18ad
+  size_bytes: 12739
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 445d4859b71ec5828f71000104399493339506a120f2cb1cf3ac591cb3f53321
-  size_bytes: 2006
+  sha256: 964db6ef320f2cf6f2ccbf0f533d8a714ba875ee6096977bbc68b5b21b022b8f
+  size_bytes: 2153
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7985,6 +7985,28 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
+- document_id: 04EF0822E26996D4
+  path: tasks/TASK-018/phase-g-w2-context-cost-and-merge-gate-decision-2026-08-14.md
+  title: 'TASK-018 Phase G W2 Context Cost and Merge Gate Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 91ab99a23e69ca61e0f4fc82c57fbdd2230d6f5bfdb7267f35f5d083a43261b6
+  size_bytes: 3406
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 36C4B414FA7FD0F4
+  path: tasks/TASK-018/phase-g-w2-pilot-context-cost-checkpoint-2026-08-14.json
+  title: 'TASK-018 Phase G W2 Pilot Context Cost Checkpoint'
+  category: evidence
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 2e749afcf003710582aec6d2dc882a3834eae549cee9ba741b0bc27c1c222f7a
+  size_bytes: 7476
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
 - document_id: 072D3803098E1ED0
   path: tasks/TASK-018/phase-h2-pilot-hardening-design-review-plan-and-authorization-2026-08-13.md
   title: 'TASK-018 Phase H2 Pilot Hardening Design, Review Plan and Authorization'
@@ -8160,11 +8182,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_PHASE_G_M3A_NATIVE_CHECKPOINT
+registry_status: CURRENT_DURING_TASK018_PHASE_G_TASK036_W2_CONTEXT_CHECKPOINT
 registry_status_details:
-  documents: 663
+  documents: 665
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / PHASE_G_M3A_NATIVE_CHECKPOINT_PASS / TASK036_W2_ACTIVE / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
-  next_task: TASK-018 TASK-036 W0-W1 closure and W2; then empirical H2 and I1
+  current_task: TASK-018 ACTIVE / TASK036_W2_PASS / W2_CONTEXT_CHECKPOINT_PASS / POST_W2_RESTART_PENDING / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
+  next_task: TASK-018 TASK-036 W0-W1 disposition, post-W2 conversation-free restart, final Context Cost, exact release decision
