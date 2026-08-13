@@ -1,6 +1,6 @@
 {
   "name": "bai-development-os",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "BAI Development OS core governance, lifecycle, context guard, and reusable project-development foundation",
   "type": "module",
