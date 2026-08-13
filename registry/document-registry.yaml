@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: d92e11acbd2e58a27ca89f9b79302a029cdf64a33133937ec794a4c2b97ad5a1
-  size_bytes: 9991
+  sha256: 104cbec6e3f291f490d7dbee9f940556205e6fd4fc7d592688505665db722a0e
+  size_bytes: 9904
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: ad37260256039d049ae0711feff1410b67c64b6d30cbb5895569c2867bdaf6e0
-  size_bytes: 6111
+  sha256: 88e8f589e02f845a0ae208a41d9e1316b9cfe30269baee005dce4af93daa16dd
+  size_bytes: 6237
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 2359e3309c283ea181a87fba8e62a65e83fa7e21ed5461c11affa22a951b84a2
-  size_bytes: 13485
+  sha256: ebf2d837401a4e02986b129a9ddfa370ef8ac66248b82455eccf238ae2727504
+  size_bytes: 14061
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 918e925daaed126294b4b153c5e0df7f03ca6cc2d3ca9aa0e5a2277fa46cc4cd
-  size_bytes: 2373
+  sha256: 72ddc09fb00fc7e2d36f91f2b19ae806928e3626c8b9dccebba91ebace1361cc
+  size_bytes: 2223
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7859,8 +7859,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 3477ff2e6524f345e8b8508570fef1eb6aed1027772549fe51d611d20ef0b623
-  size_bytes: 1104
+  sha256: 7d728ac66adc0eb569fd989b6a15f76919dabe2db12f18309e6e8c1bcb5f0aa4
+  size_bytes: 1031
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7870,8 +7870,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: f474d9de97dc9646ec895b5a2ab137ee6309f7c65f47689c6b207e6c586fce83
-  size_bytes: 2085
+  sha256: 9aff9fcd5ac87216df1d86ec4d63ea32f176b147e4af43a1f6eb02f4f5cfc65f
+  size_bytes: 2134
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -8106,6 +8106,50 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
+- document_id: 300CCF76F46700D0
+  path: tasks/TASK-018/phase-h2b-final-empirical-hardening-design-and-authorization-2026-08-14.md
+  title: 'TASK-018 Phase H2B Final Empirical Hardening Design and Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 81415959713745ced02be0905b7b0646d597c988e70a490ec482b255c1675757
+  size_bytes: 2476
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 314B1DF9E388CDBC
+  path: tasks/TASK-018/phase-h2b-final-empirical-hardening-builder-evidence-2026-08-14.md
+  title: 'TASK-018 Phase H2B Final Empirical Hardening Builder Evidence'
+  category: evidence
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 5c36090a870152e36e75f34a19bc58b77e068602ef0ed869c47ea0c999548b96
+  size_bytes: 3406
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: F144966428720563
+  path: tasks/TASK-018/phase-h2b-final-empirical-hardening-critic-review-2026-08-14.md
+  title: 'TASK-018 Phase H2B Final Empirical Hardening Critic Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 642e97c33c70efe16e453cbbe3a5dd00c12b7fff9b38f3e8165fab32524ac7a3
+  size_bytes: 1354
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: A0E076F2EB812034
+  path: tasks/TASK-018/phase-h2b-final-empirical-hardening-judge-decision-2026-08-14.md
+  title: 'TASK-018 Phase H2B Final Empirical Hardening Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: d74ac7185cf67a207f5c89ce93ff0b1f04a33fa2194901e84f016cdb0dc2c8df
+  size_bytes: 1239
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -8237,11 +8281,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_PHASE_G_CONSUMER_V0_20_0_RELEASE_COMPLETE_H2_ACTIVE
+registry_status: CURRENT_DURING_TASK018_H2_EMPIRICAL_HARDENING_PASS_I1_DECISION_NEXT
 registry_status_details:
-  documents: 670
+  documents: 674
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / PHASE_G_CONSUMER_V0_20_0_RELEASE_COMPLETE / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
-  next_task: TASK-018 Phase H2 empirical hardening; overall TASK-036/M3B and TASK-018 I1 remain
+  current_task: TASK-018 ACTIVE / PHASE_G_CONSUMER_V0_20_0_RELEASE_COMPLETE / H2_EMPIRICAL_HARDENING_PASS / I1_EXACT_OS_CLOSURE_DECISION_NEXT
+  next_task: TASK-018 I1 exact OS Closure/version/tag/Release decision; overall TASK-036/M3B remains unclaimed

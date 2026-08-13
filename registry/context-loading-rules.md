@@ -49,7 +49,7 @@ TASK-017 Phase 0 is paused at `07af447` for TASK-018 P0. When TASK-017 resume is
 
 TASK-018 is the active P0 route. Load the Roadmap supplement, TASK-018 summary, Phase A Final Plan and the exact current bounded authorization. Phase B reads only ContextControl, relevant Context Guard estimation contracts, its schema and tests. Do not load all Automation/Integration/Security history by default.
 
-For Phase G provenance or Phase H2 continuation, load `tasks/TASK-018/phase-g-consumer-release-closure-evidence-2026-08-14.md` first, then the final Pilot Context Cost and only the exact parked TASK-036 W0/W1 contract/Evidence needed. Treat Consumer main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88` and stable Release `v0.20.0` as the accepted Phase G release checkpoint. Do not reload raw Resolve/Cubase artifacts or superseded frontier documents unless a specific discrepancy requires them. W2 PASS does not authorize overall TASK-036/M3B completion; TASK-018 OS Tag/Release remains a separate I1 closure decision.
+For Phase G/H2 provenance, load the H2B Judge and `tasks/TASK-018/phase-g-consumer-release-closure-evidence-2026-08-14.md` first, then the final Pilot Context Cost and only the exact parked TASK-036 W0/W1 contract/Evidence needed. Treat Consumer main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88` and stable Release `v0.20.0` as the accepted checkpoint. Do not reload raw Resolve/Cubase artifacts or superseded frontier documents unless a discrepancy requires them. A Draft PR's skipped matrix or stale checks never count as merge-ready; require fresh checks for the exact non-draft head. W2/H2 PASS does not authorize overall TASK-036/M3B completion.
 
 Use Balanced Execution: two review/fix cycles maximum per bounded Phase. Zero unresolved Critical/High plus required PASS permits advancement; unchanged artifacts do not justify repeated Critic execution.
 
@@ -57,4 +57,4 @@ For H1.2 routing work, load `src/automation/safety-first-routing.mjs`, its outpu
 
 For autonomy operation and integration questions, load the exact Ver.1.0 Operator/Consumer/Handoff/Context/Codex specification and `registry/autonomy-failure-registry.json`; do not reload the P0 handoff pack or all source modules by default.
 
-For TASK-018 Closure, load the I0 current report, Evidence index and `specifications/BAI_Development_OS_TASK018_Closure_Readiness_Ver1.0.md`. `I0_PREPARED` is not completion and never authorizes a Completion Record, Tag or Release.
+For TASK-018 Closure, load the H2B Judge, I0 current report, Evidence index and `specifications/BAI_Development_OS_TASK018_Closure_Readiness_Ver1.0.md`. `I0_PREPARED` and H2 PASS are not completion; I1 must make the exact OS version/tag/Release decision and pass final readiness before any Completion Record, Tag or Release.
