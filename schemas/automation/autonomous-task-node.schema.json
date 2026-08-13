@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/autonomous-task-node.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id", "priority", "owner_priority", "dev_profile", "authorization", "dependencies",
+    "state", "human_gates", "native_gate_required", "paid_execution_required",
+    "destructive_operation_required", "release_or_deploy_required", "credential_required",
+    "design_runnable", "implementation_runnable", "files_owned", "expected_context_cost",
+    "expected_runtime_minutes", "context_locality", "roadmap_order"
+  ],
+  "properties": {
+    "task_id": { "type": "string", "minLength": 1 },
+    "priority": { "enum": ["P0", "P1", "P2", "P3"] },
+    "owner_priority": { "type": "integer", "minimum": 0 },
+    "dev_profile": { "type": "string", "minLength": 1 },
+    "authorization": {
+      "enum": ["AUTHORIZED", "DESIGN_ONLY", "NOT_AUTHORIZED", "SUSPENDED", "REVOKED", "AUTHORITY_CONFLICT"]
+    },
+    "dependencies": { "$ref": "#/$defs/stringArray" },
+    "state": { "enum": ["PENDING", "ACTIVE", "PARKED", "BLOCKED", "COMPLETED"] },
+    "human_gates": { "type": "array", "items": { "$ref": "human-gate.schema.json" } },
+    "native_gate_required": { "type": "boolean" },
+    "paid_execution_required": { "type": "boolean" },
+    "destructive_operation_required": { "type": "boolean" },
+    "release_or_deploy_required": { "type": "boolean" },
+    "credential_required": { "type": "boolean" },
+    "design_runnable": { "type": "boolean" },
+    "implementation_runnable": { "type": "boolean" },
+    "files_owned": { "$ref": "#/$defs/stringArray" },
+    "expected_context_cost": { "type": "integer", "minimum": 0 },
+    "expected_runtime_minutes": { "type": "integer", "minimum": 0 },
+    "context_locality": { "type": "integer", "minimum": 0, "maximum": 100 },
+    "roadmap_order": { "type": "integer", "minimum": 0 }
+  },
+  "$defs": {
+    "stringArray": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  }
+}

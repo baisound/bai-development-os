@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/context-control/context-cost-record.schema.json",
+  "title": "BAI Development OS Context Cost Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "context_cost_schema_version",
+    "record_id",
+    "task_id",
+    "session_id",
+    "phase",
+    "recorded_at",
+    "confidence",
+    "sources",
+    "usage",
+    "quality_gate",
+    "efficiency",
+    "metrics",
+    "overfetch_policy",
+    "repeated_overfetch_count",
+    "findings",
+    "content_checksum"
+  ],
+  "properties": {
+    "context_cost_schema_version": { "const": "1.0.0" },
+    "record_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" },
+    "session_id": { "type": "string", "minLength": 1 },
+    "phase": { "type": "string", "minLength": 1 },
+    "recorded_at": { "type": "string", "format": "date-time" },
+    "confidence": {
+      "enum": [
+        "EXACT_PROVIDER_REPORTED",
+        "PROVIDER_STRUCTURED_ESTIMATE",
+        "LOCAL_TOKENIZER_ESTIMATE",
+        "CHARACTER_HEURISTIC",
+        "MIXED",
+        "UNAVAILABLE"
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "usage": { "$ref": "#/$defs/usage" },
+    "quality_gate": { "$ref": "#/$defs/qualityGate" },
+    "efficiency": { "$ref": "#/$defs/efficiency" },
+    "metrics": { "$ref": "#/$defs/metrics" },
+    "overfetch_policy": { "$ref": "#/$defs/policy" },
+    "repeated_overfetch_count": { "type": "integer", "minimum": 0 },
+    "findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding" }
+    },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  },
+  "$defs": {
+    "nullableString": { "type": ["string", "null"], "minLength": 1 },
+    "nullableBoolean": { "type": ["boolean", "null"] },
+    "nullableTokens": { "type": ["integer", "null"], "minimum": 0 },
+    "ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "source_type",
+        "path_or_ref",
+        "sha256",
+        "estimated_tokens",
+        "observed_tokens",
+        "selected_reason",
+        "mandatory",
+        "cacheable",
+        "changed_since_previous_session",
+        "used_in_decision",
+        "used_in_patch",
+        "duplicate_of",
+        "stale",
+        "trust_level"
+      ],
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1 },
+        "source_type": { "type": "string", "minLength": 1 },
+        "path_or_ref": { "$ref": "#/$defs/nullableString" },
+        "sha256": {
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+          ]
+        },
+        "estimated_tokens": { "type": "integer", "minimum": 0 },
+        "observed_tokens": { "$ref": "#/$defs/nullableTokens" },
+        "selected_reason": { "type": "string", "minLength": 1 },
+        "mandatory": { "type": "boolean" },
+        "cacheable": { "type": "boolean" },
+        "changed_since_previous_session": { "$ref": "#/$defs/nullableBoolean" },
+        "used_in_decision": { "$ref": "#/$defs/nullableBoolean" },
+        "used_in_patch": { "$ref": "#/$defs/nullableBoolean" },
+        "duplicate_of": { "$ref": "#/$defs/nullableString" },
+        "stale": { "$ref": "#/$defs/nullableBoolean" },
+        "trust_level": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "estimated_input_tokens",
+        "observed_input_tokens",
+        "observed_cached_input_tokens",
+        "observed_output_tokens",
+        "billed_tokens"
+      ],
+      "properties": {
+        "estimated_input_tokens": { "type": "integer", "minimum": 0 },
+        "observed_input_tokens": { "$ref": "#/$defs/nullableTokens" },
+        "observed_cached_input_tokens": { "$ref": "#/$defs/nullableTokens" },
+        "observed_output_tokens": { "$ref": "#/$defs/nullableTokens" },
+        "billed_tokens": { "$ref": "#/$defs/nullableTokens" }
+      }
+    },
+    "qualityGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "gate_id"],
+      "properties": {
+        "status": { "enum": ["PASS", "FAIL", "UNKNOWN"] },
+        "gate_id": { "$ref": "#/$defs/nullableString" }
+      }
+    },
+    "efficiency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "score", "formula"],
+      "properties": {
+        "status": { "enum": ["AVAILABLE", "UNAVAILABLE"] },
+        "score": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+        "formula": { "const": "useful_ratio*(1-duplicate_ratio)*(1-stale_ratio)*100" }
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_count",
+        "estimated_input_tokens",
+        "duplicate_tokens",
+        "stale_tokens",
+        "useful_tokens",
+        "avoidable_tokens",
+        "duplicate_ratio",
+        "stale_ratio",
+        "useful_ratio",
+        "avoidable_ratio"
+      ],
+      "properties": {
+        "source_count": { "type": "integer", "minimum": 0 },
+        "estimated_input_tokens": { "type": "integer", "minimum": 0 },
+        "duplicate_tokens": { "type": "integer", "minimum": 0 },
+        "stale_tokens": { "type": "integer", "minimum": 0 },
+        "useful_tokens": { "type": "integer", "minimum": 0 },
+        "avoidable_tokens": { "type": "integer", "minimum": 0 },
+        "duplicate_ratio": { "$ref": "#/$defs/ratio" },
+        "stale_ratio": { "$ref": "#/$defs/ratio" },
+        "useful_ratio": { "$ref": "#/$defs/ratio" },
+        "avoidable_ratio": { "$ref": "#/$defs/ratio" }
+      }
+    },
+    "policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "warning_ratio",
+        "major_ratio",
+        "critical_ratio",
+        "critical_repeat_count"
+      ],
+      "properties": {
+        "warning_ratio": { "$ref": "#/$defs/ratio" },
+        "major_ratio": { "$ref": "#/$defs/ratio" },
+        "critical_ratio": { "$ref": "#/$defs/ratio" },
+        "critical_repeat_count": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "severity", "avoidable_ratio", "repeated_occurrences"],
+      "properties": {
+        "code": { "const": "CONTEXT_OVERFETCH" },
+        "severity": { "enum": ["INFO", "WARNING", "MAJOR", "CRITICAL"] },
+        "avoidable_ratio": { "$ref": "#/$defs/ratio" },
+        "repeated_occurrences": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

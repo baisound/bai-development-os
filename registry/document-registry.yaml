@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-11T15:26:00+09:00'
+registry_generated_at: '2026-08-13T00:00:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 68ad69fd6607c44b81d3db49d1de9579296f41d76cc76aa5b72a8b713fb4322e
-  size_bytes: 8294
+  sha256: be915296d9edf4187bbddd4c156b42dab4437270236825c84f4b48e696c3ae3f
+  size_bytes: 8764
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 53a36d67d5a0644569683522ededb66ff2de7304db82a51f91ce7eaca6e0117e
-  size_bytes: 5531
+  sha256: ff490e75081329538227d509e650f05053a7ecc73b2ef5c724df862204de66c9
+  size_bytes: 5823
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -45,8 +45,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 73ea98565e5f01330f765625dd08b97fd7b34de1972861195d06d923016537c5
-  size_bytes: 12617
+  sha256: 18e200a172e26178ca4441a273c4bf1eb49fb1ba03e70d02a8942d1ed37d595a
+  size_bytes: 12767
   preferred_loading: summary-or-on-demand
 - document_id: 8EC74867938C777A
   path: architecture/AI_Development_OS_Architecture_Ver1.0.docx
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: 1a4ab430eef6e58d8cf5786a89d98c12d1f06e7b0ba25fb20b0beeb95f899ddf
-  size_bytes: 5166
+  sha256: cda4e86d3618d6460c79cf5cdc2e2bb17c986af26cd7af65443c0dd0f1add97e
+  size_bytes: 5276
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 0718a440ab1eaac530c60dfaf6ba72e1b0b4ebe64478ee9cae7d2e0cfcb1b557
-  size_bytes: 8474
+  sha256: 6b422829a45c04fbc927f37d53b0b6130daa0877814528248f24a989c43d75f0
+  size_bytes: 9504
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: bfa2f972d0f521fbc576dd5dda7283ad5027d7f780688afe2ac735469f9a8bbe
-  size_bytes: 4112
+  sha256: 1d0d155558f33f4749595e8c473747a8be062d8c59e06a858e3473ac7dd21630
+  size_bytes: 4664
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 18ae715ffe4e24faedb6314567cbee6576551023e050250f994d2780e1b8d9c5
-  size_bytes: 7903
+  sha256: 2d6b950038e38c44126b68787e9681104bf6cbda7dbe9c099151037e00ae8b80
+  size_bytes: 10122
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: fbaa6594fa9e776ad281d400b73ef299d3aa47f173cc0e64dd4b15f0e8a8c65c
-  size_bytes: 27758
+  sha256: 47a61f9eb2d9a21bba9403168f3d4a948c1214dd7992a223f400334c6479f466
+  size_bytes: 29221
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -539,8 +539,8 @@ documents:
   category: review
   authority: supporting-artifact
   importance_level: C
-  sha256: 39acb2bd7e6170f255f02950af66d0c22dace1ce7c38e73e8823a94917b09165
-  size_bytes: 15684
+  sha256: 4e56759d69654326978dbc0558a93fa878250c5ae679747cbd58cbb7eda730cd
+  size_bytes: 15990
   preferred_loading: on-demand
 - document_id: 2F2372321F6974A5
   path: reviews/TASK-004_TASK-005_Φ▓¼σïÖσóâτòî_τ╡▒σÉêΦ¿¡Φ¿êπâ¼πâôπâÑπâ╝_Ver1.0.summary.md
@@ -548,8 +548,8 @@ documents:
   category: review
   authority: navigation-aid
   importance_level: B
-  sha256: 0da355f24776f482f578c6c353191e2e7247a24cee653026fabc2e2a98089432
-  size_bytes: 5045
+  sha256: 63994c579ba7994012fed59dbdd54d24d0706b9efaad6a618d32942895eba980
+  size_bytes: 5139
   preferred_loading: summary-or-on-demand
 - document_id: 52D16D0E0E38EDE4
   path: roles/README-Builder.md
@@ -5867,8 +5867,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 26da4024d45bb738d424da9f47d82568a76b815d6980e86736162f406c09ca59
-  size_bytes: 3135
+  sha256: 5336bba2f97fc8743ceed9c25f30c860498ec55d6374fc60175f9725ab24ce87
+  size_bytes: 3170
 - document_id: D8D14C8D8828EB6B
   path: tasks/TASK-016/TASK-016.summary.md
   title: TASK-016 Summary
@@ -5880,8 +5880,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 8fe0a25e1adff15a16184f8ab4968b505646befabd7bc68bbe282e1fb4216df6
-  size_bytes: 1754
+  sha256: 72ed5b91f351507eff161a130ae93fa60821ac9ed6b7b04a3864c49d9d4e3bd6
+  size_bytes: 1769
 - document_id: 10A28BD49AFC34D7
   path: architecture/BAI_Development_OS_Architecture_Ver2.28.docx
   title: BAI Development OS Architecture Ver.2.28
@@ -5984,8 +5984,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f5772363dd996d1fff844847e8064383f4f2484a0fda0dd96b0decd49c76716c
-  size_bytes: 2104
+  sha256: a790a4ff7e339d9e48aeda63d71db5f19903c27961af769e876a9d2d6511cb65
+  size_bytes: 2133
 - document_id: 6E0658004570CE0F
   path: tasks/TASK-017/TASK-017.summary.md
   title: TASK-017 Summary
@@ -5997,8 +5997,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: e46695248d802f39090d67cc0dde6e5695bcaaea09f04022b2ddda5fd937697d
-  size_bytes: 2531
+  sha256: 42b8e0b5830fcfb763710fca4d9b2d68d7f2eb9d06ce2b0e351996e3ef926469
+  size_bytes: 3096
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6011,8 +6011,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 67a3cdf3c27ab84e914ee2836223402b443c00ebf026eb967d502a397dbcb1c5
-  size_bytes: 9910
+  sha256: 1eb8c4268c5a147136b36fef482403876fa9da8c61f5bd72e5ba388c3face8b4
+  size_bytes: 10130
 - document_id: 5E9FD2C48CA16FB0
   path: tasks/TASK-016/phase0-consumer-knowledge-capture-bridge-detailed-design.md
   title: TASK-016 Phase 0 Consumer Knowledge Capture Bridge Detailed Design
@@ -6024,8 +6024,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d0ef193315e8f8cfcddf7db2a308cccbbdb986a2cad6805f46ec235ec57f9994
-  size_bytes: 8916
+  sha256: 5b5fadb2ff0ca9f9ab1b5be96711c7fdab21e4f293d94db4ef5f59f03781c739
+  size_bytes: 9139
 - document_id: 7F39A8432F021EBB
   path: tasks/TASK-017/knowledge-evolution-detailed-roadmap.md
   title: TASK-017 Knowledge Evolution Detailed Roadmap
@@ -6037,8 +6037,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 3b2a493a1adee5ff3f562246f144f6b1849bdbd4819dd6c48cf1d6fb3e644982
-  size_bytes: 5860
+  sha256: a78d70b3665e7e8aca7af9946cd32d595c089b5245fa3d9c9af378d70e21d6bd
+  size_bytes: 6371
 - document_id: F98D4889B66968D3
   path: reviews/BAI_Development_OS_Consumer_Knowledge_Three_Role_Roadmap_Review_2026-08-11.md
   title: Consumer Knowledge Evolution Three-Role Roadmap Review
@@ -6050,8 +6050,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: c7264e11da1c737408967adb633684fdc60e4f1de4996aa153e4a3127becbb60
-  size_bytes: 2321
+  sha256: cec763738c70f7b5773031861b39d37a2e0e1238e900e47062bdac764486986b
+  size_bytes: 2374
 - document_id: 26C4879761B9DDD7
   path: architecture/ADR_Knowledge_Hub_PostgreSQL_VPS_Optional_Hub_Ver1.0.md
   title: ADR Knowledge Hub PostgreSQL VPS-First Optional-Hub Ver.1.0
@@ -6063,8 +6063,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 639a94255bb35bbd513a1133b7a23fa1cd3d99050136a809502092ef02adc8de
-  size_bytes: 1314
+  sha256: 30811d49b1f686603570f99dd31396abc0541ee6a680b8c53a4cb64e8182c1c3
+  size_bytes: 1336
 - document_id: D3BB53150283C339
   path: schemas/knowledge-evolution/knowledge-evidence.schema.json
   title: Knowledge Evidence Schema 1.0
@@ -6076,8 +6076,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 88fbedd4780eb84f58862eac387f987ebe27c6239e661926becbca71b13cf3d2
-  size_bytes: 3235
+  sha256: 61b0ecf1a527a70cf870660ab16ef320e92425ad1c5ab3da788bfee9f055c1b8
+  size_bytes: 3403
 - document_id: 950CBE04C1529D2C
   path: schemas/knowledge-evolution/knowledge-candidate.schema.json
   title: Knowledge Candidate Schema 1.0
@@ -6089,8 +6089,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 011889d6a72c4d9fd9db19f104bcdd7255d9352a13fc5a53be4a80ba15ccba3d
-  size_bytes: 1754
+  sha256: c37d9ab157c4a1e3aec34317c32185b0c27b8f0635fc44303f19072d8e7b7b7b
+  size_bytes: 1850
 - document_id: 9F74B7C9F42DF84A
   path: schemas/knowledge-evolution/snapshot-manifest.schema.json
   title: Consumer Knowledge Snapshot Manifest Schema 1.0
@@ -6102,8 +6102,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: ccf1868e288b01cebb028c0f2eb9b040af6e064853b45cefb994e846730f205f
-  size_bytes: 1863
+  sha256: ae31c6b6f5755884d18a66cf010542a4d7aca4d40dd3824806d8da468c5b0209
+  size_bytes: 1962
 - document_id: 885122326CD64797
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.1.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.1
@@ -6116,8 +6116,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 2fbc7ece46933845f268f44bb7879ec21859bc79e7af4646da0783c38f43b967
-  size_bytes: 15450
+  sha256: 0a509ad7f01f1fc930db325d161affdf973f8af47c9d48fabaaef764ad2bb102
+  size_bytes: 15820
 - document_id: 8A6579B825D5D74F
   path: architecture/ADR_Consumer_Runtime_Independence_Consumer_Evidence_Integration_Kit_Ver1.0.md
   title: ADR Consumer Runtime Independence Consumer Evidence Integration Kit Ver.1.0
@@ -6129,8 +6129,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1a52293d7c0ae38bcdf82da285fb9f3f289eadceaf1906eacdcdb5eff13542e9
-  size_bytes: 2516
+  sha256: 76d7077d69b58e2f580b4574b9cff01bd2ca09497bfa0d31b3f5ba3e9d9bc5dd
+  size_bytes: 2549
 - document_id: E4E980A816861FD1
   path: specifications/Consumer_Evidence_Integration_Kit_Planning_Specification_Ver1.0.md
   title: Consumer Evidence Integration Kit Planning Specification Ver.1.0
@@ -6142,8 +6142,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 79a54ee23f32d9ebb854269d0c46085bd7ad4b56c3aef91af935fce52c94350a
-  size_bytes: 5099
+  sha256: 4f478a05d94a7ade4513c31c6a966b446599cbaff4f9482976220e4d99165c50
+  size_bytes: 5219
 - document_id: EC9A2FEE5F8D5501
   path: specifications/BAI_Knowledge_Hub_Public_Ingestion_API_Planning_Specification_Ver1.0.md
   title: BAI Knowledge Hub Public Ingestion API Planning Specification Ver.1.0
@@ -6155,8 +6155,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 33791667fffcc9b270e29256e5f75446751882cc34ca9900770cb8c88ab6f939
-  size_bytes: 3626
+  sha256: 0490483226546328798cbfa3a3f9239a244ff9797a134cc8d2744661212fbf7e
+  size_bytes: 3723
 - document_id: 1686E47ECF67B38A
   path: tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md
   title: TASK-017 Phase 0 Consumer Evidence Hub Pilot Transport Slice Detailed Design
@@ -6168,8 +6168,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 621aaf11104691389b7e461c45cf52806f14f6ba56d2a9251188b4dface2c494
-  size_bytes: 9031
+  sha256: ef9c1c5fb70aea33b986b33601872b734f3fe43f8559d4c5a12e63c1b029077c
+  size_bytes: 9186
 - document_id: 62502207CCC33A68
   path: schemas/knowledge-evolution/consumer-evidence-envelope.schema.json
   title: Consumer Evidence Envelope Planning Schema
@@ -6181,8 +6181,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f44d45fa2b4310a473578c505c1f179facfeef67466260dfd9bf11244d09e090
-  size_bytes: 429
+  sha256: b83543a7b892ecdd2e9e21fb9469f0faa576b7d8b903861d31bbb3bab6a31353
+  size_bytes: 437
 - document_id: ED3BB54A3409FA62
   path: schemas/knowledge-evolution/consumer-evidence-batch.schema.json
   title: Consumer Evidence Batch Planning Schema
@@ -6194,8 +6194,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b4293cae164a16637030722f64e685b40459a69f4879f059265be0f35d2d894f
-  size_bytes: 1988
+  sha256: ac0a12e27566a013b4def2897350f38f593357e7e6af7433ef8abfc6bd91403e
+  size_bytes: 2068
 - document_id: 328CB96C920D9878
   path: schemas/knowledge-evolution/client-policy.schema.json
   title: Consumer Evidence Client Policy Planning Schema
@@ -6207,8 +6207,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 4d7acdbf086516417e6520d38f337fc145a90c303b88be0e7cb4a953c79e21b2
-  size_bytes: 1608
+  sha256: 5110035ac35b87e186578ba2b9af63cd827489a7780cfb627db89f56487346fd
+  size_bytes: 1682
 - document_id: 16197091C4E88FFF
   path: schemas/knowledge-evolution/delivery-receipt.schema.json
   title: Consumer Evidence Delivery Receipt Planning Schema
@@ -6220,8 +6220,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f0dc34c5cae983fb08485db2933201de0f8bdf1f392315f10731fcf69d5d5839
-  size_bytes: 1639
+  sha256: c5e1818da242e30653c8c49472ddd057daa64e2f5da44f270655958abd390043
+  size_bytes: 1716
 - document_id: 7D9DCB27A5AA8774
   path: reviews/BAI_Development_OS_Consumer_Evidence_Three_Role_Roadmap_Revalidation_2026-08-11.md
   title: Consumer Evidence Roadmap Three-Role Revalidation 2026-08-11
@@ -6233,8 +6233,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 39832fcb28f0d658c8422f891760406911bc46fa99ecc2ff79822fe7962a45bc
-  size_bytes: 2216
+  sha256: 9b4d3afc102b9ae0ca71d477f04ab48236245687f95f4ed993df252cb358dbe2
+  size_bytes: 2251
 - document_id: B4A5AA1EF39B8F94
   path: tasks/TASK-016/phase0-owner-authorization-2026-08-11.md
   title: TASK-016 Phase 0 Owner Authorization 2026-08-11
@@ -6246,8 +6246,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 6f0415f86a97d0c986393b6d4cc16585ab838f8bd04fc6dfeffff02d393471b3
-  size_bytes: 718
+  sha256: 42610d7e1566b2da7656349a1fd475c8a5d9f0411827bdc057b0f7d9ead4c71b
+  size_bytes: 726
 - document_id: 1E192006E6D9353B
   path: tasks/TASK-016/phase0-implementation-result-2026-08-11.md
   title: TASK-016 Phase 0 Implementation Result 2026-08-11
@@ -6259,8 +6259,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f5fda074e0ebd2478916839f4d305d17e7da2fa14e5c5fe87a82874687bda753
-  size_bytes: 6322
+  sha256: 9d7efdcbc092ea7e58fbeabaf901cbbf1906f8ea5abb82f7ee81f9b7ebd2a28c
+  size_bytes: 6460
 - document_id: AF6240ECEE0EF85C
   path: tasks/TASK-016/phase0-critic-review-2026-08-11.md
   title: TASK-016 Phase 0 Critic Review 2026-08-11
@@ -6272,8 +6272,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 831346a7801ac84caa6ae233289f6f1b95b0293120a4dc73d30f0d39c10fa550
-  size_bytes: 2952
+  sha256: f583aa8c9c931fb0cf91dc994a57ac52e2243573eebb489970efe699ac0488fb
+  size_bytes: 3009
 - document_id: 334635530B594C2E
   path: tasks/TASK-016/phase0-judge-review-2026-08-11.md
   title: TASK-016 Phase 0 Judge Consistency Review 2026-08-11
@@ -6285,8 +6285,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1dc45ae3f9978148912f26d0bdfe8ba0ba9f4873922954fc01435f5bc90a2de9
-  size_bytes: 2345
+  sha256: 6accaa7f308ea5d77046db0cb49a97a68891800600e1a6671bc6f34a4dd80a60
+  size_bytes: 2390
 - document_id: 1D9325DB8E45B064
   path: specifications/BAI_Knowledge_Hub_Public_Ingestion_API_OpenAPI_Ver1.0.yaml
   title: BAI Knowledge Hub Public Ingestion API OpenAPI Ver.1.0
@@ -6298,8 +6298,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 13c3e673dfc45542bd5afd8427d30e49c4006609ef2978c2c22b084776e22ed0
-  size_bytes: 1621
+  sha256: 10e2519914b911d8d70f0e32bfd5c2c71885408ba774f8221677a2af1add2196
+  size_bytes: 1662
 - document_id: DA588D70B8243223
   path: knowledge/intake/bai-video-production-provisional-2026-08-11/reviews/review-summary.md
   title: Provisional BAI VIDEO PRODUCTION Pattern C Review
@@ -6311,8 +6311,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 9d8b308f2706f0c5285af6c1f1c868a0b4789945bf0e552413f18c36dedf3165
-  size_bytes: 1464
+  sha256: 3a923987ed6a3d58954f2fef5c51ecf5889f115c08a08aa2617e698ab351f0b3
+  size_bytes: 1485
 - document_id: 14A0D9B014512220
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.2.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.2
@@ -6324,8 +6324,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: efd41b58723cbbb50fcd347c015e6bab28bb1f867184f2f0e1fc1002e32e482a
-  size_bytes: 7060
+  sha256: d73b83fd25ba97712e85cf1920d7cee618fd16f4c43cbee9eae2906928e98a85
+  size_bytes: 7198
 - document_id: 022CDE9769E35D91
   path: tasks/TASK-016/phase0-rc2-product-feedback-adjudication-2026-08-11.md
   title: TASK-016 Phase 0 RC2 BAI VIDEO PRODUCTION Product Feedback Adjudication
@@ -6337,8 +6337,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 60c09fdb729745a4ad64c59179593f76590ba2607abb6570e648c88403b653c6
-  size_bytes: 1905
+  sha256: b789dba545924262b3a87c35ac625df3f8c1701fad4d87167af8b247189de219
+  size_bytes: 1947
 - document_id: 6C5070A2CB3C9656
   path: tasks/TASK-016/phase0-rc2-owner-authorization-2026-08-11.md
   title: TASK-016 Phase 0 RC2 Owner Authorization
@@ -6350,8 +6350,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: add8cca9023548551d1476696ff28eab99c808f35750d1b3af0289c17c44d47a
-  size_bytes: 975
+  sha256: f87f6517900c7dabb8f8e08f42f9d559bbe5e491d6c897d715a4b794f268148f
+  size_bytes: 998
 - document_id: 510B78DC56E249E6
   path: schemas/knowledge-evolution/consumer-evidence-event.schema.json
   title: Consumer Evidence Event Schema Ver.1.0
@@ -6363,8 +6363,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f44cbbbc25fcd249e0462e5ab7fe8e360ca2fd4b0e3f188fa7d5ed81bc2ae7df
-  size_bytes: 2459
+  sha256: fb229fb70fb53bc6aeaf274ed3b2039ae6a04abad775a05fbcc4b5efc8cd76d7
+  size_bytes: 2581
 - document_id: 758FE6EB59074D14
   path: schemas/knowledge-evolution/consumer-evidence-event-catalog.v1.json
   title: Consumer Evidence Event Catalog Machine Contract Ver.1.0
@@ -6376,8 +6376,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d1f6e4a7d5b900bd8cc8a65546e536bde8e42d5e77c67f06bfe68ea8c0ac97af
-  size_bytes: 1585
+  sha256: f8f223c86b27524e8fad777cb912116a449fa5372e88562a9128d9bc316dd4da
+  size_bytes: 1658
 - document_id: F1C767CE0EF0AF9A
   path: schemas/knowledge-evolution/repository-snapshot-reference.schema.json
   title: Repository Snapshot Reference Schema Ver.1.0
@@ -6389,8 +6389,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: ff9fbb525e4d30fcc96c5e8c86a4c969416501a0cf21c58f6eee05b57986ec62
-  size_bytes: 3933
+  sha256: 5dd2ff7b72aff057cefed0af276a40428d0ce042429dc9e7a61f8f2f34403442
+  size_bytes: 4110
 - document_id: 15D4A1407C8823B6
   path: specifications/Consumer_Evidence_Canonical_Contract_Ver1.0.md
   title: Consumer Evidence Canonical Contract Ver.1.0
@@ -6402,8 +6402,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1f9e934dc35e773fd35dc5ffff6d102227bc08fbf62159a442fb7044f3f7fb3b
-  size_bytes: 1973
+  sha256: e77d66cf9b9e1656a6873af13c169a61e8e3011291dd1e329be7f130a0961389
+  size_bytes: 2004
 - document_id: 67A71A8F8F5564CA
   path: specifications/Consumer_Evidence_Event_Catalog_Ver1.0.md
   title: Consumer Evidence Event Catalog Ver.1.0
@@ -6415,8 +6415,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1ab37c6646d25e79ad80eb09fd2a884e9267490df06541db29295097f38dc61d
-  size_bytes: 970
+  sha256: 2b1161f5f4fe1b4166bd54f9523896b6cfafbfdc5a40eb6e318b9a44883c22eb
+  size_bytes: 984
 - document_id: 4A28701DF65DDF5F
   path: specifications/Consumer_Evidence_Privacy_and_Forbidden_Fields_Ver1.0.md
   title: Consumer Evidence Privacy and Forbidden Fields Ver.1.0
@@ -6428,8 +6428,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 31a6a70a2848ad980a3b3396325aee922c9873f38c29e70fac9df05bee26b2f2
-  size_bytes: 750
+  sha256: 4c6b562033ec2589fd1cd24eccc09f17d394cc13ef3d0195b11519354772fdb7
+  size_bytes: 762
 - document_id: 9AF9A43FD6D05082
   path: specifications/Consumer_Evidence_Object_Storage_Artifact_Profile_Ver1.0.md
   title: Consumer Evidence Object Storage Artifact Profile Ver.1.0
@@ -6441,8 +6441,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: c3d1af5c09dea0b91a197013a51ef235f749b757c08170a159359c7576d5921d
-  size_bytes: 1655
+  sha256: 0b714f9066cb2053c396c341b9e8f1c3921fdcee65e8e4d2845d3fdef6ef03f4
+  size_bytes: 1694
 - document_id: 4A0568AC6504C70F
   path: specifications/Consumer_Evidence_Versioning_and_Migration_Policy_Ver1.0.md
   title: Consumer Evidence Versioning and Migration Policy Ver.1.0
@@ -6454,8 +6454,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1b1ed6535e8dec2ac5fc5ed72dbc3ea1b0a018f665ee48589c316a1f653ceee9
-  size_bytes: 654
+  sha256: 239e02ae47ef5028de6ada53c018a4c8ddae1f28f837b7b15677e830bdb35043
+  size_bytes: 667
 - document_id: BB88BE50DD525F86
   path: specifications/Consumer_Evidence_Product_Implementation_Guide_Ver1.0.md
   title: Consumer Evidence Product Implementation Guide Ver.1.0
@@ -6467,8 +6467,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: da4fd6bf4f5f7f407eed45d1473c1bf6ed81ff11fe1a81521d8d72c174233bc7
-  size_bytes: 1564
+  sha256: a4634c1f2287e1cd06c74ac71f243119d59737941f7ea337f1201c693befbbed
+  size_bytes: 1588
 - document_id: D23D547F6E85FBA9
   path: specifications/Consumer_Evidence_Repository_Snapshot_Reference_Ver1.0.md
   title: Consumer Evidence Repository Snapshot Reference Ver.1.0
@@ -6480,8 +6480,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d8321d642908ef8e64ccc13ae2e688c3233e8fd2d06edfce70be82df706d2240
-  size_bytes: 1909
+  sha256: dd1450c6ca412b8903aa58562c73edf77fe1c6205c91c6c2e1885b1b4c23e5cb
+  size_bytes: 1950
 - document_id: C98460082D4CFD4E
   path: tasks/TASK-016/phase0-rc2-implementation-result-2026-08-11.md
   title: TASK-016 Phase 0 RC2 Implementation Result
@@ -6493,8 +6493,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 787c44ce014966968c99fd3234202425f39bbb1b7861556b639882164c73020f
-  size_bytes: 4075
+  sha256: 1c640c7c366b1a645d8ce7797a3f2a65a6235ae858a52e5f39ff40edc9276efb
+  size_bytes: 4153
 - document_id: 047CAFF38CA4373A
   path: tasks/TASK-016/phase0-rc2-critic-review-2026-08-11.md
   title: TASK-016 Phase 0 RC2 Critic Review
@@ -6506,8 +6506,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 258ce3205e77d72355e9d175032e7ccbf6b2ece9bbdf52b1018c24e7ef708b06
-  size_bytes: 2420
+  sha256: 90b6e98f69283813f87b69b318de5e728d0dfc1369e97b9b15317463b0928f46
+  size_bytes: 2455
 - document_id: CD208AD47E625A32
   path: tasks/TASK-016/phase0-rc2-judge-review-2026-08-11.md
   title: TASK-016 Phase 0 RC2 Judge Review and Closure Decision
@@ -6519,8 +6519,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 46cfeec8627a3eddd53c4c08ac34140a711f11f69eb6eca1134feb32c927d852
-  size_bytes: 1838
+  sha256: 3667f82d51a5dae8d118f82503f2c68d5b930f54c23f0ad8f9482d7218bd55ab
+  size_bytes: 1864
 - document_id: 261F63D6E5F9B742
   path: knowledge/intake/bai-video-production-github-main-2026-08-11/reviews/review-summary.md
   title: BAI VIDEO PRODUCTION GitHub Main Snapshot Review
@@ -6532,8 +6532,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: c186cdc56fba546fa2c649457f2b9521bdbfa8d9a525c829542ab75eaca42935
-  size_bytes: 1288
+  sha256: 61170af3c594a17de4f990d8c892fabd7e546027330fdeaec7c86fb7b7e20280
+  size_bytes: 1310
 - document_id: 73F9C0C70E618A27
   path: tasks/TASK-017/phase0-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Owner Authorization
@@ -6545,8 +6545,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: c0eedceeec13d0741871f0b0957bad0076512c86b9726dab25e8c6519aefce7c
-  size_bytes: 1316
+  sha256: d82a1309cec1662fb86185f7802e7b9158a94c61f29ec95de2a657c03319e43b
+  size_bytes: 1347
 - document_id: 95A51FE2F5344725
   path: specifications/BAI_Knowledge_Hub_Local_Foundation_Ver1.0.md
   title: BAI Knowledge Hub Local Foundation Specification Ver.1.0
@@ -6558,8 +6558,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 4db11d6b73fab9964ee387c68a67d242581096bb80e5812b3be96f12974c9776
-  size_bytes: 4115
+  sha256: 5fe81184453e3c56e024d86b6f1b5c53052ec5f075d29553666fc840a8cf9aab
+  size_bytes: 4220
 - document_id: 87A3DA6761CE6AA4
   path: tasks/TASK-017/phase0-local-hub-foundation-implementation-result-2026-08-11.md
   title: TASK-017 Phase 0 Local Hub Foundation Implementation Result
@@ -6571,8 +6571,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 63cfb9803a3bd08e66fc66d5389c978098da36a58d3b3fb3871d087522940146
-  size_bytes: 2115
+  sha256: 878bc6edea1a5423912ac9c65a98b8c53d82ffc1d5fa0b67271f085a01ec4458
+  size_bytes: 2150
 - document_id: 2FD0F440DFE06983
   path: tasks/TASK-017/phase0-local-hub-foundation-critic-review-2026-08-11.md
   title: TASK-017 Phase 0 Local Hub Foundation Critic Review
@@ -6584,8 +6584,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 1c91921176df052f83501460c5fbcf836fd97900d8d11d65be3c142d5f6a7770
-  size_bytes: 2262
+  sha256: 8ecec3fea2b207b4f9e4572073dd7856bcc25f4cff5af891fd1b6fed73197476
+  size_bytes: 2306
 - document_id: B2AC2EC68F0F7220
   path: tasks/TASK-017/phase0-local-hub-foundation-judge-review-2026-08-11.md
   title: TASK-017 Phase 0 Local Hub Foundation Judge Review
@@ -6597,8 +6597,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: e2754fdbda4f5fff68fc7e02b3f49ab02eaa73067b8d2ea8538acaca7ee21a8f
-  size_bytes: 1466
+  sha256: ac86f55cfa0d88015996f7df5fe0ec476a872f51277c1a22f8a02a013f97757a
+  size_bytes: 1492
 - document_id: 6C4533997293FE0D
   path: deploy/knowledge-hub/README.md
   title: BAI Knowledge Hub TASK-017 Phase 0 Compose / PostgreSQL Tuning
@@ -6610,8 +6610,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f5abdb8a068afe9d3a2a0b4aadaf6a09aba785d2f10d1323215cd6933fe3d5ab
-  size_bytes: 6368
+  sha256: 846d8055d6d9fba12d06c0e48132684b145a9653f14f93142873411829da5edb
+  size_bytes: 13973
 - document_id: CFE15B7F801ACAC9
   path: deploy/knowledge-hub/postgres/001_initial.sql
   title: BAI Knowledge Hub PostgreSQL Initial Schema
@@ -6623,8 +6623,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 164c49f5d3c4904028b191cded4ca8d2731f739c8a874e0f61c24d2e3b18e282
-  size_bytes: 1286
+  sha256: 8e55eecd7d2d061908ba26d16c97b2cdd55070cfc24f8aad74f10bcb7a468ffb
+  size_bytes: 1322
 - document_id: 24CE4F2EDE1FED29
   path: specifications/BAI_Knowledge_Hub_Deployment_Readiness_Ver1.0.md
   title: BAI Knowledge Hub Deployment Readiness Specification Ver.1.0
@@ -6636,8 +6636,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: cf3ed42d949db6173631f1d3994eba6066882a1052ba0ff05a41f5312b885716
-  size_bytes: 5925
+  sha256: fa7782d30383112be8c36f86f101a0bcdc8dd4dce647674f753dd7eea32773db
+  size_bytes: 6004
 - document_id: 0E45033EFABA8C35
   path: tasks/TASK-017/phase0-deployment-readiness-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Owner Authorization
@@ -6649,8 +6649,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 6c29c7adab9a9f142512bbeb32d3f40c090e0aacfab93a51af0bbd924415e314
-  size_bytes: 941
+  sha256: e17a98c21aea3f470cd5a041359f07d519aef2aa59c4d84483413f41fe14b94c
+  size_bytes: 967
 - document_id: 54FBAC809138FDF7
   path: tasks/TASK-017/phase0-deployment-readiness-implementation-result-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Implementation Result
@@ -6662,8 +6662,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 66a513c4997329fd6768d75c48c16a21a84482fa911219bb55f861f36b86967d
-  size_bytes: 3100
+  sha256: b6a55b284494b517867bee18a10de717fabeb049fb079ed67c27c11ed0c71d97
+  size_bytes: 3143
 - document_id: 6859176677FCA8C0
   path: tasks/TASK-017/phase0-deployment-readiness-critic-review-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Critic Review
@@ -6675,8 +6675,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 595cceb33dc75bcf3576e2c9baed32e9bf77b0c53218c3738eff63ec0db5dd57
-  size_bytes: 3270
+  sha256: 62478c3272f21301ae2bcd58df9194d54ffa6ad696f7bde274de6a94ca56bc5a
+  size_bytes: 3320
 - document_id: 8F3A284011FE4B53
   path: tasks/TASK-017/phase0-deployment-readiness-judge-review-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Judge Review
@@ -6688,8 +6688,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: a84ac7ce65edef62ff5c00ab351afba18c932ef5e058ef9a4cf681248b38975d
-  size_bytes: 1946
+  sha256: 3daafcb36ebccc79c85cf15055a347140ba32edefd98ee43054294f29d444aa3
+  size_bytes: 1978
 - document_id: 9A9787A2FFF036C8
   path: tasks/TASK-017/phase0-live-rehearsal-harness-implementation-result-2026-08-11.md
   title: 'TASK-017 Phase 0 — Live Rehearsal Harness Implementation Result'
@@ -6701,8 +6701,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 86309d87a85f8e8d5ccc63a688ce12bee4b10f8f4fd00925345ca938cb8df8f7
-  size_bytes: 2126
+  sha256: 5babf065424c00eec2f4fce67140912239972f135344cbced0948736efbc6da2
+  size_bytes: 2167
 - document_id: 394A59CEEE90FFB5
   path: tasks/TASK-017/phase0-live-rehearsal-harness-critic-review-2026-08-11.md
   title: 'TASK-017 Phase 0 — Live Rehearsal Harness Critic Review'
@@ -6714,8 +6714,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: acbc4928490aad0e6f9fe17371d57b02b676e1133977e32466c44fdb12ee8209
-  size_bytes: 1072
+  sha256: 7f0c960b86522c19245a750947f8059c0ab3e11dd6b19728ff7be936c2b81930
+  size_bytes: 1095
 - document_id: 8C468D388ECCF6F1
   path: tasks/TASK-017/phase0-live-rehearsal-harness-judge-review-2026-08-11.md
   title: 'TASK-017 Phase 0 — Live Rehearsal Harness Judge Review'
@@ -6727,8 +6727,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 4b945a90585505dbed35bbf15591f2856a4b7e8e0023f6c801392aac3e59ae0d
-  size_bytes: 731
+  sha256: 342de93d0d8113b6507d5126ba05c1cb6055a5b6fa550ca031a1e18989557edc
+  size_bytes: 743
 - document_id: 1CB888B3754D592C
   path: tasks/TASK-017/phase0-integration-kit-rc-implementation-result-2026-08-11.md
   title: 'TASK-017 Phase 0 — Consumer Evidence Integration Kit RC Implementation Result'
@@ -6740,8 +6740,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 77fd722c7bec3fd2d00173dc27b08a2581d1f36ae3bce59347c5aef283321371
-  size_bytes: 2110
+  sha256: f057608fc099a97c33f088244f765181276c4d2703005f2ad7928aae36afd96b
+  size_bytes: 2146
 - document_id: 054218EA52BAA8A8
   path: tasks/TASK-017/phase0-integration-kit-rc-critic-review-2026-08-11.md
   title: 'TASK-017 Phase 0 — Consumer Evidence Integration Kit RC Critic Review'
@@ -6753,8 +6753,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 6efdf0230340c6992a97141ad81121865c596125262c8ae2017331fd4d045a30
-  size_bytes: 1236
+  sha256: 2aede6a064fb4e5b0e781e2b7f61f7fb95941cbe7385f9923221ad478ef801c5
+  size_bytes: 1254
 - document_id: 3695BB63C4469DD2
   path: tasks/TASK-017/phase0-integration-kit-rc-judge-review-2026-08-11.md
   title: 'TASK-017 Phase 0 — Consumer Evidence Integration Kit RC Judge Review'
@@ -6766,8 +6766,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 3360564153689c1482ebe113f9651bcb05e428c280ef7217d2c4570acab44dcb
-  size_bytes: 751
+  sha256: 751bf09ed3cc7f93f07efb81658b186c5277a6f499ee24c92d0172889f26a5f8
+  size_bytes: 763
 - document_id: 989AB1064FE217C3
   path: tasks/TASK-017/phase0-prelive-hardening-implementation-result-2026-08-11.md
   title: 'TASK-017 Phase 0 — Pre-Live Hardening Implementation Result'
@@ -6779,8 +6779,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: fa46f9987bf2f1c4a675e67f367d75d9a4919810390a4745a8bd5c95266a71dc
-  size_bytes: 2213
+  sha256: ede5c3dac48ed944df6c9532c5b39156b2d559f24722b04a24f60de95b22dc27
+  size_bytes: 2243
 - document_id: F4752C4947536892
   path: tasks/TASK-017/phase0-prelive-hardening-critic-review-2026-08-11.md
   title: 'TASK-017 Phase 0 — Pre-Live Hardening Critic Review'
@@ -6792,8 +6792,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: ba6fb1900e09aacf37cfe78ca605ce8b4e6206ee34182ff7aaa1f5b9e394641c
-  size_bytes: 1217
+  sha256: 2db6794fad4cc5e8509dbe3d0ff352690df586ac76586344f56e42bb558808e8
+  size_bytes: 1233
 - document_id: 0C3F46EB0F517CF0
   path: tasks/TASK-017/phase0-prelive-hardening-judge-review-2026-08-11.md
   title: 'TASK-017 Phase 0 — Pre-Live Hardening Judge Review'
@@ -6805,8 +6805,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 512227b2cff4b749c5593c1a88d003d3aa9046bf361d05845bee258ab0cd8b19
-  size_bytes: 748
+  sha256: afc747bee16a48b35555e5b0cacaf0f9e563d5b0d36bae428d51951e696f1a3a
+  size_bytes: 760
 - document_id: C2E76A9A48BB76B6
   path: deploy/knowledge-hub/postgres/README.md
   title: BAI Knowledge Hub PostgreSQL Tuning Profiles
@@ -6818,8 +6818,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: d99e399f9f91cbf2fb9a817fc39f435dde221762f9bcf60107f87ff2e9c6615d
-  size_bytes: 2421
+  sha256: b55b4ebc4b9555fd6d07595926a0b47c7db4323200fe80456ea3bcd1fbd03737
+  size_bytes: 4091
 - document_id: 2ECFC600B4067F25
   path: deploy/knowledge-hub/postgres/postgresql.tuned-2gb.conf
   title: BAI Knowledge Hub PostgreSQL Tuned 2 GiB Profile
@@ -6831,8 +6831,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 6ec2dd7f61f7854168395a60a49d3b7cf9af906c31cecd2f2787380479d7340f
-  size_bytes: 2553
+  sha256: 0465e0412c652afc5c45ff21d9b6b21780a275a991c0c4e8fb5994c07cfb8819
+  size_bytes: 2623
 - document_id: 64A024641C289057
   path: deploy/knowledge-hub/postgres/postgresql.tuned-4gb.conf
   title: BAI Knowledge Hub PostgreSQL Tuned 4 GiB Profile
@@ -6844,8 +6844,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 59d5aa4043976324bc31fd6d777b28a603d691bcc5d382ed0bac789dcb7f2810
-  size_bytes: 2161
+  sha256: d90d38a10a0f7ca1b3f791b113ea09bd84c0811fa8c8ec66e8b44b73eec12e6b
+  size_bytes: 2226
 - document_id: B32A5CB50FD019D1
   path: deploy/knowledge-hub/postgres/verify-tuning.sql
   title: BAI Knowledge Hub PostgreSQL Active Tuning Verification SQL
@@ -6857,8 +6857,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 7a9dd37259ac11ee9eb132db1547d60b1dbd7128add476af276c7a8f632018c4
-  size_bytes: 643
+  sha256: a2039639d5e51214908270e3da8bc6c10e00e56d6673ca3ac87c6edd81747f1f
+  size_bytes: 670
 - document_id: 5CDAF3EBC7F1D6CD
   path: specifications/BAI_Knowledge_Hub_PostgreSQL_Docker_Compose_Tuning_Ver1.0.md
   title: BAI Knowledge Hub PostgreSQL Docker Compose Tuning Specification Ver.1.0
@@ -6870,8 +6870,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 82fd8a9d7864a11d1c7ab77163573e28acd8a5380f25c7df1351ee22cdf575e4
-  size_bytes: 3161
+  sha256: b7dace7d86424c44dd18abfbf22e88c4e3c948ebdd1a2cfa3ee68b4020816286
+  size_bytes: 3220
 - document_id: B5EF4971698291C9
   path: tasks/TASK-017/phase0-compose-postgres-tuning-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Docker Compose PostgreSQL Tuning Owner Authorization
@@ -6883,8 +6883,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 3fcb8e4dfce99b565f20f130b863531a149f71fcfd0222fa652988fb52333b5d
-  size_bytes: 687
+  sha256: 51fec30c366d6d99f98e63ccdfeac66ee30a2ed65450be539300c37a01d08947
+  size_bytes: 696
 - document_id: D1C28DB4DFE69054
   path: tasks/TASK-017/phase0-compose-postgres-tuning-implementation-result-2026-08-11.md
   title: TASK-017 Phase 0 Docker Compose PostgreSQL Tuning Implementation Result
@@ -6896,8 +6896,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 0136bad5a223069aabf960950190f5ae84fcb9764546b56cf90d4fade6603b04
-  size_bytes: 2410
+  sha256: 16ae12f5d8792365d8fd9d2530ca169f614c4f20f8d5bb344370acb5e2bd3da9
+  size_bytes: 2457
 - document_id: BBB0BE5B9034B4C9
   path: tasks/TASK-017/phase0-compose-postgres-tuning-critic-review-2026-08-11.md
   title: TASK-017 Phase 0 Docker Compose PostgreSQL Tuning Critic Review
@@ -6909,8 +6909,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: f97f4f0f9aec785d771e15fa2f29d4a276c925e0a130e0a09b1216299b2036d4
-  size_bytes: 1931
+  sha256: af5bb8d663745ac9297e250af2bed0bb4b900be68f875144228586534ab4d0e3
+  size_bytes: 1968
 - document_id: 7A2AA46C6A8798BE
   path: tasks/TASK-017/phase0-compose-postgres-tuning-judge-review-2026-08-11.md
   title: TASK-017 Phase 0 Docker Compose PostgreSQL Tuning Judge Review
@@ -6922,8 +6922,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b04528efbc9101c68f684065747e4d7a34acc7b1f26ffd68697cb536d1a90f9a
-  size_bytes: 591
+  sha256: 0b28797a59dfac027750e952b4462a0c116e1bffdd1128cb4d404eea14aaefd3
+  size_bytes: 599
 - document_id: 87635786BEC82931
   path: .github/workflows/knowledge-hub-live-gate.yml
   title: BAI Knowledge Hub Live Gate
@@ -6935,8 +6935,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 64d16b645377c459bfb161c878b83896fd03a368faaf6b6a10693a3b65bac462
-  size_bytes: 4407
+  sha256: 535ccd17b7ea7043e7380f735a0d4b289e1bf4a6225dfe7ac435962c63792718
+  size_bytes: 4917
 - document_id: 89DA656D04FF65DB
   path: schemas/knowledge-evolution/knowledge-hub-ci-live-gate-evidence.schema.json
   title: BAI Knowledge Hub CI Live Gate Evidence Schema
@@ -6948,8 +6948,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: af13ba17c75580947d1d9512e95c9cde78d63af57685e37b250a379c22b63f9b
-  size_bytes: 1826
+  sha256: a5dab2db7a97a566596f5c80482cafd8acf4d918680f9e86f1dd49cdb54be856
+  size_bytes: 1865
 - document_id: 6E2B8140BAE3F51C
   path: specifications/BAI_Knowledge_Hub_GitHub_Actions_Live_Gate_Ver1.0.md
   title: BAI Knowledge Hub GitHub Actions Live Gate Specification Ver.1.0
@@ -6961,8 +6961,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 691b5ef86136d77e8f3a0d02c281b36acc6c28053477d42f65fb8c248b25afb5
-  size_bytes: 3680
+  sha256: 668600b6c84d135f64264c16c96ab294c009028fa146bf3ae12e882df5dca590
+  size_bytes: 3736
 - document_id: C90F140F085A75EA
   path: tasks/TASK-017/phase0-github-actions-live-gate-implementation-result-2026-08-11.md
   title: TASK-017 Phase 0 GitHub Actions Live Gate Implementation Result
@@ -6974,8 +6974,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b32d422b5f8fecf2a6ad032b3d51e97bf1132b9aefa674c69520a15566a2b3fc
-  size_bytes: 1495
+  sha256: edaaf53f051ae490d4d5975500ec22e67c53bb13d8643d5ff495eda4f6b911b0
+  size_bytes: 1519
 - document_id: EB339FFBA957AAF3
   path: tasks/TASK-017/phase0-github-actions-live-gate-critic-review-2026-08-11.md
   title: TASK-017 Phase 0 GitHub Actions Live Gate Critic Review
@@ -6987,8 +6987,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 3db72f4b15fe0322aa514d54df19ac5568bd9b063b1166df7311037e880bbc1e
-  size_bytes: 761
+  sha256: 6fa1818e41ea3761ecdd9a43975c81d39f6d473d4c239dfafb19223280de479e
+  size_bytes: 777
 - document_id: 5A3446C7A20407BF
   path: tasks/TASK-017/phase0-github-actions-live-gate-judge-review-2026-08-11.md
   title: TASK-017 Phase 0 GitHub Actions Live Gate Judge Review
@@ -7000,8 +7000,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 3deeaa0a78d4d66e1d5666a3be09fa3fd3d545fcde38699ebbda04b38892e6a9
-  size_bytes: 622
+  sha256: 07fa86110d82a75e63bd373a943f0b2862a6a2c94146f743e17390a4f82d0eb3
+  size_bytes: 629
 - document_id: 771852D1EECA90EA
   path: specifications/BAI_Knowledge_Hub_Runtime_Lock_Candidate_Policy_Ver1.0.md
   title: BAI Knowledge Hub Runtime Lock Candidate Policy Ver.1.0
@@ -7013,8 +7013,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: aa1fa18a6559c2d6d8a305944e4543878ca408f4dddb3e1445d12d90af841b0a
-  size_bytes: 1453
+  sha256: 9df9b506a5a9f45c172f86182be709c7b51e9ff038628be213bc8e896b72ee39
+  size_bytes: 1486
 - document_id: D5439499189021B6
   path: tasks/TASK-017/phase0-runtime-lock-candidate-policy-implementation-result-2026-08-11.md
   title: TASK-017 Phase 0 Runtime Lock Candidate Policy Implementation Result
@@ -7026,8 +7026,459 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: b46c2fc5aec9c95e88520dc0b0ef73ee2b70c3cb1733ccbc681576cfdc275a30
-  size_bytes: 647
+  sha256: 7ceea6877fcfa7db49239c92466497b989d412ec1074796ee02ac06c00c76be1
+  size_bytes: 654
+- document_id: DF508439668670B1
+  path: architecture/BAI_Development_OS_Architecture_Ver2.29.document-sync-and-visual-qa.md
+  title: 'Architecture Ver.2.29 Document Sync and Visual QA'
+  category: architecture-document
+  authority: owner-directed-task-governance
+  importance_level: B
+  sha256: 892cda7754f8f447cee70dbf5cc0ca123a4cc6bed7ab04aa7b474f8df604ec61
+  size_bytes: 1288
+  preferred_loading: summary-or-on-demand
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 3B8B8EAE987E3E85
+  path: architecture/BAI_Development_OS_Architecture_Ver2.29.docx
+  title: 'BAI_Development_OS_Architecture_Ver2.29.docx'
+  category: architecture-human-copy
+  authority: human-readable-copy
+  importance_level: A
+  sha256: 8050bfe726887653c81e314952cc12b654278733768d31ac40ddd135b29b9e35
+  size_bytes: 167125
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 0847B59492CA0D01
+  path: architecture/BAI_Development_OS_Architecture_Ver2.29.md
+  title: 'BAI Development OS Architecture Ver.2.29 — Codex Autonomy P0 Roadmap Integration'
+  category: architecture-document
+  authority: architecture-canonical
+  importance_level: A
+  sha256: fdc3f7873982cc80477b42591da4359535d65b8b23ba5b43fa4d011fb4d9b3fd
+  size_bytes: 353130
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 6E97BF88D4A4F26B
+  path: architecture/BAI_Development_OS_Architecture_Ver2.29.summary.md
+  title: 'BAI Development OS Architecture Ver.2.29 — AI Summary'
+  category: architecture-document
+  authority: owner-directed-task-governance
+  importance_level: B
+  sha256: 4530c9b131cbcb441172d2cdcba23a2322a56b79867fd3e298dff1c098e67ad6
+  size_bytes: 1412
+  preferred_loading: summary-or-on-demand
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: E6F1BC2AD723250D
+  path: architecture/BAI_Development_OS_Codex_Autonomy_P0_Roadmap_Refinement_Ver1.0.md
+  title: 'BAI Development OS — Codex Autonomy P0 Roadmap Refinement Ver.1.0'
+  category: architecture-document
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 8402163cc664e90c297a846a2668862e60df28ea73baddd09d2caf15250d7969
+  size_bytes: 3786
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: A64B52F840A1338B
+  path: schemas/automation/autonomous-session-state.schema.json
+  title: 'autonomous-session-state.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 55ad889e24ebdbd27cc8301e585a3affa9165c75b38f6215f77099f5c5996e4f
+  size_bytes: 2170
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: AE24A01F08396941
+  path: schemas/automation/autonomous-task-node.schema.json
+  title: 'autonomous-task-node.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 3ad4909772b12b82a127f4c8299fd6a80b8d120c1c8f6006a170ac94d6968729
+  size_bytes: 2047
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 81B065755555AA5E
+  path: schemas/automation/human-gate.schema.json
+  title: 'human-gate.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: a9660554a44c48256c93b6b4bb700c527e1504892af7074d71e20def85072572
+  size_bytes: 2811
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 26DA434EB8783534
+  path: schemas/context-control/context-cost-record.schema.json
+  title: 'context-cost-record.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: b1b2f03f3f58a74f774ed636c55e979abec1a23801364973bc7e05aa473dd290
+  size_bytes: 6842
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: B5C3FD6D71F93DEA
+  path: schemas/context-control/handoff-bootstrap-result.schema.json
+  title: 'handoff-bootstrap-result.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 33eb64d39210d02fa92c752fbbd02ca57dc5275f6138f61e83c6a78620c5ac9f
+  size_bytes: 3784
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 13AF4265452F0C4F
+  path: tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md
+  title: 'TASK-017 Phase 0 — Development Pause and Resume Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 5635f2e14ebdb44f0ccad720e4565f14cb598a2102bacc48b859624661be9c9e
+  size_bytes: 3899
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: FDB28D39A9A9BE9F
+  path: tasks/TASK-018/owner-continuous-development-authorization-2026-08-13.md
+  title: 'TASK-018 — Owner Continuous Development Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 903e3b3724f4b3b98c55e8389f886a6082c8b234f6f44b8fe8728264f8b17a13
+  size_bytes: 1001
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: C81A0C008584C419
+  path: tasks/TASK-018/owner-implementation-authorization-2026-08-13.md
+  title: 'TASK-018 — Owner Implementation Authorization Record'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: b72ca4c31685e07d2a12e3fb7a08a59f42d430808c7eeae4d3a0714c2ea9d750
+  size_bytes: 1104
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 6E367620B503D7A6
+  path: tasks/TASK-018/phase-a-builder-detailed-design-2026-08-13.md
+  title: 'TASK-018 Phase A — Builder Detailed Design'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 2d98246a0f4701c6675f8bdc6b3c2336f10e8c59b6a277739bfc0ac3645e91d2
+  size_bytes: 2857
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 14193EADB2F9FB92
+  path: tasks/TASK-018/phase-a-builder-response-2026-08-13.md
+  title: 'TASK-018 Phase A — Builder Response'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: bb6bd6424fd1a0cd2259801b512198eaa4ba477b69db1381cd5f27543bc2f20c
+  size_bytes: 461
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 96D8518000A233E6
+  path: tasks/TASK-018/phase-a-critic-review-2026-08-13.md
+  title: 'TASK-018 Phase A — Critic Design Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 0d7b9d2cc0aeeddcd8511443b8ceacd3355c6ac6865248e9ae709a69996662eb
+  size_bytes: 3282
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 0A3325068EE504F8
+  path: tasks/TASK-018/phase-a-current-os-audit-2026-08-13.md
+  title: 'TASK-018 Phase A — Current OS Audit'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: ffff47a14274a115a5b23f8c843f61c68b6a0bca26167d4f7585f10944b594a3
+  size_bytes: 4507
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: F7F63CB205595EA2
+  path: tasks/TASK-018/phase-a-final-plan-2026-08-13.md
+  title: 'TASK-018 Phase A — Final Plan'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 242da14cc971038b34ce3fe67b7515ed290633bfd8f86a838363b069b15d1c14
+  size_bytes: 2999
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 3D3F1BCF05BA1AF9
+  path: tasks/TASK-018/phase-a-final-plan-consistency-check-2026-08-13.md
+  title: 'TASK-018 Phase A — Final Plan Consistency Check'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: c379528bcdc4d0bba43e24868402b98233c24ae0d5e0fdfe3d3b19ffc9ba58e0
+  size_bytes: 700
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: CC64ED09249B83EB
+  path: tasks/TASK-018/phase-a-judge-design-decision-2026-08-13.md
+  title: 'TASK-018 Phase A — Judge Design Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 37be8cef4bd94f882ef81698aea08491bce3011b2cf8338484f23dff8a3c7255
+  size_bytes: 784
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 3B674B8A8F425B6E
+  path: tasks/TASK-018/phase-b-builder-implementation-evidence-2026-08-13.md
+  title: 'TASK-018 Phase B — Builder Implementation Evidence'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 9c927f2d92a66d033678ffa8ddee71b53f65cf3c72936c0335545d6eba38b623
+  size_bytes: 1897
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: B52775B8ADE11BCF
+  path: tasks/TASK-018/phase-b-builder-response-2026-08-13.md
+  title: 'TASK-018 Phase B — Builder Response'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 981ad4611a5cae090d40ec6ec0c2a27027af3e13f5f6c6715456738f6ab5c449
+  size_bytes: 275
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: C68C5069E135C5F8
+  path: tasks/TASK-018/phase-b-critic-review-2026-08-13.md
+  title: 'TASK-018 Phase B — Critic Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 5ee09c21d044efbefbdf5c8d3517196caa8fc55d3559ea2524683b963ae6685b
+  size_bytes: 1191
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 7452CAC13EAD4A4F
+  path: tasks/TASK-018/phase-b-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phase B — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 3dbe8b10027fe263b7bb8920de44028f9c05890e26b2719dc56f2b764c40966b
+  size_bytes: 778
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 3F3915D7772C92CE
+  path: tasks/TASK-018/phase-c-builder-detailed-design-2026-08-13.md
+  title: 'TASK-018 Phase C — Handoff Bootstrap Builder Detailed Design'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 4905d0876cae9a4d52ac9c6cd37237590a831908229b429621b79f35e005e491
+  size_bytes: 1811
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 8D60DD187CCA8C7A
+  path: tasks/TASK-018/phase-c-builder-implementation-evidence-2026-08-13.md
+  title: 'TASK-018 Phase C — Builder Implementation Evidence'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 6017e70ae07867b78a35481b7fc1749588d7ba4afab6830d1c453fc653a6c1d8
+  size_bytes: 851
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 9D7576725914A9C0
+  path: tasks/TASK-018/phase-c-critic-design-review-2026-08-13.md
+  title: 'TASK-018 Phase C — Critic Design Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 7c23c0324f17714597d997a26c7fea157f1dbc8bf57a31162e604c41708a4613
+  size_bytes: 888
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 16E3C3D4D3535A05
+  path: tasks/TASK-018/phase-c-critic-implementation-review-2026-08-13.md
+  title: 'TASK-018 Phase C — Critic Implementation Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 83b6c15de8c410fe038848f074afc34ff0a3d59ac943f748827871e234246d94
+  size_bytes: 779
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 72F10870FF882847
+  path: tasks/TASK-018/phase-c-final-plan-and-authorization-2026-08-13.md
+  title: 'TASK-018 Phase C — Final Plan and Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 9d33676280160213b01c3b15545c9a46ced8232190ad4528d8010a0202c115a7
+  size_bytes: 805
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: FFE31A5A25CEAEC1
+  path: tasks/TASK-018/phase-c-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phase C — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 2007b695a5b1b68a30b74bda569675c80329403b6ac0661338892c57bbd9860e
+  size_bytes: 509
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: FB7DDF54D6B22C9D
+  path: tasks/TASK-018/phase-d-builder-implementation-evidence-2026-08-13.md
+  title: 'TASK-018 Phase D — Builder Implementation Evidence'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 6001c20a6461708c4021365567c5793967c72fa096364ba400d820ba3dad8573
+  size_bytes: 731
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: D4DDF8202DA87616
+  path: tasks/TASK-018/phase-d-critic-implementation-review-2026-08-13.md
+  title: 'TASK-018 Phase D — Critic Implementation Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 90f7c4c2f4fae0a8e6e23fadc0af531c97d6b3be44c345ede7d4c97abff43ab2
+  size_bytes: 634
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: F002F1F8B7243B2E
+  path: tasks/TASK-018/phase-d-design-review-plan-and-authorization-2026-08-13.md
+  title: 'TASK-018 Phase D — Queue / Human Gate Plan and Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: c413ee6344d8c68197f0b34052850ea42f3372d96f254657179498f6f9403ab2
+  size_bytes: 1543
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 475B0DC2398B24CD
+  path: tasks/TASK-018/phase-d-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phase D — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 2dba4bb86fdfbfa1ec91f35a5e98cc7b8e623f2068c6b5150d5dd70b97f32fe7
+  size_bytes: 519
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 80293DAC4D85B090
+  path: tasks/TASK-018/phase-e-builder-implementation-evidence-2026-08-13.md
+  title: 'TASK-018 Phase E — Builder Implementation Evidence'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: d4102005705c9b53ef1133f24da16ae9c17b2236f301d21eb4da2f04eabaca39
+  size_bytes: 729
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 1ECADB603DE7B8C1
+  path: tasks/TASK-018/phase-e-critic-review-2026-08-13.md
+  title: 'TASK-018 Phase E — Critic Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 18d73412586d8737825441b566517de50295d5f8ea5fb70846dfab92ed7673eb
+  size_bytes: 515
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: A13C214294E22BCD
+  path: tasks/TASK-018/phase-e-design-review-plan-and-authorization-2026-08-13.md
+  title: 'TASK-018 Phase E — Session Rotation Plan and Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 9926fa4989dc4c09e60c71f387a678ac945a2dc90c746da903b15eb9de0c51aa
+  size_bytes: 1363
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: E48A9298AB0EE78F
+  path: tasks/TASK-018/phase-e-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phase E — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 6b5d21ecb73e2a269e7658d6595b4689ba133bfd54c56ba120fabf66d5432ac5
+  size_bytes: 505
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: D1668494C9816589
+  path: tasks/TASK-018/task.md
+  title: 'TASK-018 — Codex Autonomous Development Control Plane'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 7deb0c47a2584a1ab108da7d7794dc0e49376e3d422ef4cbdca02ff7a9e47854
+  size_bytes: 2609
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 5029BDC6C4BD624B
+  path: tasks/TASK-018/TASK-018.summary.md
+  title: 'TASK-018 Summary'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: B
+  sha256: 711946430a237059b1dc675505bfbca70c5741af600b1e682059a66bdec28b58
+  size_bytes: 1628
+  preferred_loading: summary-or-on-demand
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 77ECE3B29FDC5FC7
+  path: tasks/TASK-018/phases-a-to-e-checkpoint-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phases A-E Checkpoint — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: fb6e49f523e9630ec9bde1efbc7959154c36ecd1c9d14a22d7a6b450e40dcb54
+  size_bytes: 1785
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -7151,7 +7602,7 @@ current_canonical_document_sets:
     status: ACTIVE_PHASE0_COMPLETED_PHASE1_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: ACTIVE / PHASE0 COMPOSE POSTGRES TUNING ACCEPTED / LIVE DOCKER + PRODUCTION PILOT PENDING / PHASE1+ NOT AUTHORIZED
+  task_017_status: PAUSED_AT_07AF447_FOR_TASK018_P0 / PRODUCTION_ACTIVATION_BLOCKED
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
@@ -7159,11 +7610,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK017_PHASE0_AFTER_COMPOSE_POSTGRES_TUNING
+registry_status: CURRENT_DURING_TASK018_P0_PHASES_B_TO_E_PASS
 registry_status_details:
-  documents: 564
+  documents: 613
   missing: 0
   hash_size_mismatch: 0
-  current_architecture: '2.28'
-  current_task: TASK-017 ACTIVE / PHASE0 COMPOSE POSTGRES TUNING ACCEPTED / LIVE DOCKER + PRODUCTION PILOT PENDING
-  next_task: TASK-017 Phase 0 run tuned Docker/PostgreSQL live rehearsal and capture machine Evidence; production endpoint remains separately gated
+  current_architecture: '2.29'
+  current_task: TASK-018 ACTIVE / PHASES_B_C_D_E_PASS / PHASE_F_NEXT
+  next_task: TASK-018 Phase F bounded Codex Adapter; external Automation invocation remains gated

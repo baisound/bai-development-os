@@ -330,3 +330,20 @@ Knowledge Hub v1 target infrastructure cost is 1,500–2,500 JPY/month with a ha
 | OP-115 | Fork-safe split between static PR contracts and trusted live container execution; prohibit `pull_request_target` | Implemented | TASK-017 Phase 0 |
 | OP-116 | CI-generated deployment runtime lock candidate consumed by Docker `npm ci` and retained as review artifact | Implemented locally; accepted lock commit pending | TASK-017 Phase 0 |
 | OP-117 | Commit/run-bound sanitized CI live-gate Evidence for Judge review | Implemented locally; remote Evidence pending | TASK-017 Phase 0 |
+
+## TASK-018 Codex Autonomy P0 Allocation — 2026-08-13
+
+The later explicit Owner Directive supersedes prior “No TASK-018” planning statements for current routing only. TASK-017 is paused at `07af447`; its scope and Evidence remain intact.
+
+| ID | Improvement | Status | Target |
+|---|---|---|---|
+| OP-118 | Context Cost Observatory with estimate/observed/billed separation | P0 implementation active | TASK-018 Phase B |
+| OP-119 | Context Manifest duplicate/stale/unused measurement and CONTEXT_OVERFETCH | P0 implementation active | TASK-018 Phase B |
+| OP-120 | Stale-safe Handoff Bootstrap and Source of Truth resolution | P0 next phase | TASK-018 Phase C |
+| OP-121 | Authorized runnable queue and Human Gate Parking | P0 planned | TASK-018 Phase D |
+| OP-122 | Safe checkpoint, compressed handoff and Session Rotation | P0 planned | TASK-018 Phase E |
+| OP-123 | Protocol-independent Dynamic Capability exposure and bounded Codex adapter | P0 foundation/planned | TASK-018 Phase D/F |
+| OP-124 | BAI VIDEO PRODUCTION autonomy consumer pilot without runtime dependency | Separate Consumer/native gate | TASK-018 Phase G |
+| OP-125 | Balanced Execution: two-cycle review cap and gate-based advancement | Active governance control | TASK-018 all phases |
+
+WebMCP remains Experimental. Visual Compliance remains Consumer-owned. Release, Tag, Deploy, paid execution, credit purchase/top-up and unauthorized native mutation remain outside this allocation.

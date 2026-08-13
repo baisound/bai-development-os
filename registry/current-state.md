@@ -5,7 +5,7 @@
 - Product: `BAI Development OS`
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
-- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.28`
+- Current Architecture Canonical: `BAI Development OS Architecture Ver.2.29`
 - Current Lifecycle Canonical: `TASK-004 Lifecycle Foundation Ver.1.6`
 - Current Knowledge Canonical: `TASK-005 Knowledge Operating System Ver.1.2`
 - Current Automation Canonical: `TASK-006 Orchestration & Automation Foundation Ver.1.0`
@@ -20,10 +20,12 @@
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- TASK-017: `ACTIVE / PHASE0_PUBLIC_TLS_STAGING_GATE_IMPLEMENTED / VPS_STAGING_EXECUTION_PENDING` — Production ACME/public activation remains separately gated
-- Current development route: `TASK-017 Phase 0 — VPS Public TLS staging Evidence, Production Certificate decision, Offsite Backup/Restore, then BAI VIDEO PRODUCTION TASK-036 pilot`
+- TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
+- TASK-018: `ACTIVE / PHASES_B_C_D_E_PASS / PHASE_F_NEXT` — `BAI-OS-AUTONOMY-001`, P0 maximum
+- Current development route: `TASK-018 P0 — bounded Codex Adapter next; TASK-017 resumes only through its 2026-08-13 pause/resume decision`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
+- Last Updated by P0 insertion: `2026-08-13`
 
 ## Current Product Boundary
 
@@ -36,7 +38,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1308 / 1308 PASS` (Public TLS Staging Gate implementation; prior Public IP TLS/Caddy baseline 1303/1303)
+- Full BAI Development OS: `1366 / 1366 PASS` on WSL2 Ubuntu ext4 (TASK-018 Phases B-E; prior TASK-017 Public TLS Staging baseline `1308 / 1308`)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
@@ -48,7 +50,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `564 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `613 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -83,3 +85,29 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Security: exact staging CA + explicit ACK, no firewall mutation, no Production ACME, no volume deletion, no Evidence overwrite, mandatory Caddy stop before PASS.
 - Evidence: closed sanitized `PUBLIC_TLS_STAGING_REHEARSAL_PASS` record with certificate digest/validity and no secret/raw certificate.
 - Remaining: merge this implementation, pull Canonical main on VPS, explicitly authorize/run staging and review its Evidence.
+
+## TASK-017 P0 Pause — 2026-08-13
+
+- Current Phase: Phase 0 deployment/security gates.
+- Pause state: `PAUSED_AT_SAFE_CHECKPOINT_FOR_TASK018_P0`.
+- Stop point: clean checkout `07af4470397e85ccdf86ec57b6b7c00c6992b974` after PR #12.
+- Completed range: Local Hub, Deployment Readiness, Integration Kit RC, Pre-Live Hardening, PostgreSQL/runtime gates, Public IP TLS/Caddy and Public TLS Staging implementation/static PASS.
+- Last passed repository Gate: `PUBLIC_TLS_STAGING_IMPLEMENTED / STATIC_PASS`.
+- Unfinished range: real VPS staging Evidence; unapplied Remaining Deployment Gates patch; encrypted restore rehearsal; Production certificate/activation; Product credentials/pilot/real ingestion.
+- Preserved patch: SHA-256 `721c9593bf8fa07c59b5b49f6690dd73ceeae33da2fa2b586cc58757b6d2e0dc`; source identity `3add23b`; not present in checkout.
+- Resume point: re-audit Git/authority and re-evaluate the patch against the then-current checkout.
+- Resume condition: TASK-018/Owner routing decision plus exact authority for the bounded TASK-017 unit.
+- Production Activation: `BLOCKED`.
+- Canonical decision: `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`.
+
+## TASK-018 P0 Entry — 2026-08-13
+
+- Canonical Task: `TASK-018`; Design Identity `BAI-OS-AUTONOMY-001`.
+- DEV Profile: `DEV_4_FOUNDATION_CRITICAL`, selector score `40`.
+- Roadmap supplement: `architecture/BAI_Development_OS_Codex_Autonomy_P0_Roadmap_Refinement_Ver1.0.md`.
+- Completed units: Phase B Context Cost Observatory (`CONTEXT_OBSERVABILITY_MVP_PASS`), Phase C Handoff Bootstrap (`HANDOFF_BOOTSTRAP_PASS`), Phase D Queue/Human Gate (`AUTONOMOUS_QUEUE_PASS`), Phase E Session Rotation (`SESSION_ROTATION_PASS`).
+- Current next unit: Phase F bounded Codex Adapter.
+- Phase A-E checkpoint: `CHECKPOINT_PR_ELIGIBLE`; TASK-018 remains active and Phase F-H remain unfinished.
+- Governance balance: maximum two Critic/fix cycles per bounded Phase; required PASS plus unresolved Critical/High `0/0` advances the work.
+- Tag and GitHub Release are Owner-authorized only after TASK-018 completion, PR all-green and merge to `main`; their exact version/tag is a Closure decision.
+- Deploy, Production Activation, paid/native execution and direct push to `main` remain prohibited.

@@ -54,9 +54,10 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-014`: Adaptive Governance Calibration & Policy Learning — `COMPLETED`
 - `TASK-015`: Distributed Orchestration & Event Fabric — `COMPLETED`
 - `TASK-016`: Resilience, Recovery & Scalability Certification OS — `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `ACTIVE / PHASE0_PUBLIC_TLS_STAGING_GATE_IMPLEMENTED / VPS_EXECUTION_PENDING`
+- `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / PRODUCTION_BLOCKED`
+- `TASK-018`: Codex Autonomous Development Control Plane — `ACTIVE / P0_MAXIMUM / PHASE_B_AUTHORIZED`
 
-TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. The bounded TASK-017 Phase 0 transport/deployment route is active. Production ACME, persistent public activation, real Product credentials and Product pilot remain separate explicit gates.
+TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-018 is the current P0 route. Production ACME, persistent public activation, real Product credentials and Product pilot remain separate explicit gates.
 
 ## Governance
 
@@ -106,6 +107,8 @@ TASK-015 is `COMPLETED`. `DistributedOS` provides the optional event/execution f
 ## Post-TASK-015 Roadmap Refinement
 
 Architecture Ver.2.27 created `TASK-016 — Resilience, Recovery & Scalability Certification OS` as `NEXT / NOT_STARTED / NOT_AUTHORIZED`. Architecture Ver.2.28 preserves TASK-016 as NEXT and adds `TASK-017 — Knowledge Evolution & Federated Evidence Governance OS` as `NOT_STARTED / NOT_AUTHORIZED` after TASK-016 based on BAI CREATIVE OS audit feedback. TASK-017 adds Rejected Pattern, multi-dimensional quality Evidence, cross-project reproducibility, hard reject gates, signed/versioned knowledge rollback and privacy-minimized federated Evidence; no TASK-018 is created.
+
+Architecture Ver.2.29 records the later explicit 2026-08-13 Owner decision creating TASK-018 at P0 and pausing TASK-017 at its safe checkpoint. The earlier “no TASK-018” statement remains historical for Ver.2.28 and is superseded only for current routing.
 
 
 ## TASK-016 Phase 0 Consumer Knowledge Capture Foundation

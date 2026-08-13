@@ -1,0 +1,4 @@
+import assert from 'node:assert/strict';import {readFile} from 'node:fs/promises';import test from 'node:test';
+const url=new URL('../../schemas/automation/autonomous-session-state.schema.json',import.meta.url);
+test('session handoff schema is closed Draft 2020-12',async()=>{const s=JSON.parse(await readFile(url,'utf8'));assert.equal(s.$schema,'https://json-schema.org/draft/2020-12/schema');assert.equal(s.additionalProperties,false);assert.deepEqual(new Set(s.required),new Set(Object.keys(s.properties)));});
+test('session schema caps handoff and forbids conversation dependency',async()=>{const s=JSON.parse(await readFile(url,'utf8'));assert.equal(s.properties.estimated_total_tokens.maximum,2000);assert.equal(s.properties.previous_conversation_required.const,false);assert.equal(s.$defs.ref.additionalProperties,false);});
