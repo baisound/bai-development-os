@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: bbbe7cfc77a349c2d3dff7cb32798f3d0b082cacfc1f87f752115cdfe3915c9c
-  size_bytes: 10044
+  sha256: 6faa7204603fe168dae1e77f64041906876fd6092b8a97f55fb0e2dbe31df44a
+  size_bytes: 10032
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 4cee35e7e7d54267f959eda4980d882b80474b14fb091f668153e5266681cb17
-  size_bytes: 6381
+  sha256: 2f1407909ab062f54f363dba1010cd68c9999f46a95af15cec0d527109ff2de4
+  size_bytes: 6380
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6f69b2816e06b4727c6cfed3d3e4b3d7651d66288f2e501a50573439cf6a8cb6
-  size_bytes: 14347
+  sha256: 5b2845ebb60bc9a26cd702e59877f0ec378117dee5635ffc3b7433c108970f2b
+  size_bytes: 14597
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 9db6e2c00c325ddeb865112d83435ef0a2d9c7d9109e15f5307b9214a521a240
-  size_bytes: 1913
+  sha256: 0357edfa6f27fc56d01df468bddfce59e59e671e8af0df74bcce211ad3d50c8c
+  size_bytes: 1943
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7859,8 +7859,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 662041aa023b2ff1e5974679c83013e24f8f025e0fe78c5d85824bd10d9ef9c3
-  size_bytes: 1195
+  sha256: a6a30a27300610d7af58aee8589269f1f1b3cc9ae59b3df480a86ea556a315dc
+  size_bytes: 1198
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -8172,6 +8172,50 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-14'
+- document_id: E69A66A66DA59BA0
+  path: tasks/TASK-018/phase-i1-final-readiness-2026-08-14.json
+  title: 'TASK-018 Phase I1 Final Readiness'
+  category: evidence
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: dc42854183109d42a3083663e61c3d5a8f5f78a435f6b8fea38caa8ed297cc81
+  size_bytes: 1053
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 4020959B744A4E24
+  path: tasks/TASK-018/phase-i1-completion-record-2026-08-14.json
+  title: 'TASK-018 Phase I1 Completion Record'
+  category: closure-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 69eaa84b5901f011d9a575c1f88349b09e1a670ec4975d55e88055f5892644c5
+  size_bytes: 1014
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 8A65261018342D31
+  path: tasks/TASK-018/phase-i1-critic-review-2026-08-14.md
+  title: 'TASK-018 Phase I1 Final Critic Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 7163f61f8d00e12d3b500cb055fba2344cb698ae796d8b9ccd37902a7caaf601
+  size_bytes: 1437
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 09FE0CA7B811D41A
+  path: tasks/TASK-018/phase-i1-judge-and-completion-approval-2026-08-14.md
+  title: 'TASK-018 Phase I1 Judge and Completion Approval'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 8704d44d878f229256ecf104967d7c82a6d998c4fda73e8fe265f4e303239690
+  size_bytes: 1475
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -8303,11 +8347,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_I1_EXACT_1_1_0_DECISION_FINAL_READINESS_NEXT
+registry_status: CURRENT_DURING_TASK018_I1_COMPLETION_APPROVED_RELEASE_PUBLICATION_PENDING
 registry_status_details:
-  documents: 676
+  documents: 680
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / PHASE_G_PASS / H2_PASS / I1_EXACT_OS_1_1_0_RELEASE_DECISION_ESTABLISHED
-  next_task: TASK-018 I1 final machine readiness, Completion Record and all-green PR; overall TASK-036/M3B remains unclaimed
+  current_task: TASK-018 COMPLETION_APPROVED / PHASE_G_PASS / H2_PASS / I1_RELEASE_FINALIZATION_PASS
+  next_task: exact all-green I1 PR merge, annotated v1.1.0, stable source-only GitHub Release and branch cleanup; overall TASK-036/M3B remains unclaimed

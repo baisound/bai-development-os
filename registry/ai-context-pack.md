@@ -7,7 +7,7 @@
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / P0 MAXIMUM`; Phases B-G, H1-H2 and I0 passed; Consumer `v0.20.0` release integration passed; exact OS decision is `1.1.0 / v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`; final machine readiness is next
+- Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETION_APPROVED`; I1 final readiness and Completion Record passed; exact all-green PR merge, annotated `v1.1.0`, stable source-only GitHub Release and branch cleanup are next
 - Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
 - Roadmap authority: Architecture Ver.2.29 Part XV + Part XXX, `56 / 56 PASS`
 
@@ -58,7 +58,7 @@ For local-only work, do not load or enable DistributedOS unless topology require
 7. `tasks/TASK-018/owner-implementation-authorization-2026-08-13.md`
 8. only the exact source modules/tests for the current bounded Phase
 
-Phases B-G, H1-H2 and I0 are complete. Consumer `v0.20.0` release integration passed at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`. H2 accepted deterministic restart/context precedence, live exact-head CI revalidation, Human Gate parking, bounded recovery and branch rotation. The final Pilot Context is `11,888` estimated tokens (`50.91%` below W2), with provider/cached/output/billed fields `null`. W0/W1 remains partial under exact Consumer Human Gates; overall TASK-036/M3B completion is unclaimed. The exact OS decision is `1.1.0 / v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`. Next load the I0 readiness report/index, exact I1 decision and Closure specification, then run final readiness before Completion Record/PR/Tag/Release.
+Phases B-G, H1-H2, I0 and I1 readiness are complete. Consumer `v0.20.0` release integration passed at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`. H2 accepted deterministic restart/context precedence, live exact-head CI revalidation, Human Gate parking, bounded recovery and branch rotation. The final Pilot Context is `11,888` estimated tokens (`50.91%` below W2), with provider/cached/output/billed fields `null`. W0/W1 remains partial under exact Consumer Human Gates; overall TASK-036/M3B completion is unclaimed. The exact OS decision is `1.1.0 / v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`; machine readiness, Critic, Judge and Completion Record pass. Next merge only the exact all-green I1 PR head, then verify main before Tag/Release.
 
 Balanced Execution: maximum two review/fix cycles per bounded Phase. When required gates pass and unresolved Critical/High findings are `0/0`, continue to the next authorized unit rather than repeating Critic on unchanged artifacts.
 

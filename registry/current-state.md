@@ -21,8 +21,8 @@
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
-- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_PASS / I1_OS_1_1_0_EXACT_DECISION_ESTABLISHED / FINAL_READINESS_NEXT` — `BAI-OS-AUTONOMY-001`, P0 maximum
-- Current development route: `TASK-018 P0 — exact OS 1.1.0 source-only stable Release decision established; run final readiness and Completion Record before release PR, while TASK-017 remains paused`
+- TASK-018: `COMPLETION_APPROVED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_PR_MERGE_TAG_RELEASE_PENDING` — `BAI-OS-AUTONOMY-001`, P0 maximum
+- Current development route: `TASK-018 P0 — final readiness and Completion Record accepted; merge the exact all-green I1 PR, then publish annotated v1.1.0 and the stable source-only GitHub Release, while TASK-017 remains paused`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -31,6 +31,7 @@
 - Last Updated by Phase G Consumer release closure: `2026-08-14`
 - Last Updated by Phase H2 empirical hardening: `2026-08-14`
 - Last Updated by I1 exact OS release decision: `2026-08-14`
+- Last Updated by I1 Completion approval: `2026-08-14`
 
 ## Current Product Boundary
 
@@ -119,7 +120,7 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Consumer release closure: `PASS`. Metadata head `3e43b550ad3eb1db9c6b51843c0051d692c1732c` passed isolated WSL2 `805 / 805` plus fresh hosted PR checks `9 / 9`; PR #20 merged at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`; annotated tag and stable GitHub Release `v0.20.0` target that SHA. The formal Release workflow passed and published verified wheel/source assets.
 - Phase H2 final empirical assessment: `H2_EMPIRICAL_HARDENING_PASS / AUTONOMY_HARDENED_WITH_BOUNDED_CONSUMER_HUMAN_GATES`. Three accepted Context records retained quality PASS; the final restart is `11,888` estimated tokens, `50.91%` below W2. Current/sanitized Evidence precedence, live exact-head CI revalidation, explicit Human Gate parking, bounded recovery and post-merge branch rotation are retained. Model/provider/cadence changes and Knowledge promotion remain inactive for insufficient comparative/recurrence Evidence.
 - I1 exact OS release decision: `1.1.0 / v1.1.0 / BAI Development OS v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`. The repository has no prior GitHub Release and no configured long-lived binary signing identity; no ephemeral key or unsigned Consumer-installable bundle is invented.
-- Current next unit: machine-verifiable final readiness, Completion Record and all-green I1 PR. Overall TASK-036/M3B and parked W0/W1 remain unclaimed; OS Tag and GitHub Release have not yet been created.
+- I1 final readiness: `I1_RELEASE_FINALIZATION_ELIGIBLE`; ClosureOS: `CLOSURE_READY`; Critic/Judge: `PASS`; Completion Record accepted. Current next unit is the exact all-green I1 PR merge, then annotated `v1.1.0`, stable source-only GitHub Release and branch cleanup. Overall TASK-036/M3B and parked W0/W1 remain unclaimed; OS Tag and GitHub Release have not yet been created.
 - H2A Pilot hardening checkpoint: PASS. Current/recent Evidence precedence, external PR-state revalidation, sanitized native-Evidence loading and post-merge branch/session rotation are adopted. Model/provider/cadence optimization and Knowledge promotion remain inactive because one Pilot sample is insufficient.
 - Phase H1 Consumer-independent Core Hardening: `AUTONOMY_CORE_HARDENING_PASS`; Phase H1.2 Safety-first Routing: `SAFETY_FIRST_ROUTING_PASS`; Phase H2 remains `WAITING_PILOT_EVIDENCE`.
 - H1.2 permits verified Context Cost to break only quality-and-reliability ties after all Authority/Safety/DEV/capability/provider/budget gates pass; it cannot create Authority or dispatch work.
