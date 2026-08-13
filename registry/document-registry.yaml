@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 3187fd738f48646d8afafc86bbea44c8ff0849b065dcfe08d0c6ad274cedbf37
-  size_bytes: 9874
+  sha256: d92e11acbd2e58a27ca89f9b79302a029cdf64a33133937ec794a4c2b97ad5a1
+  size_bytes: 9991
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: dd6a88b601e6b56637e93c643ad451dfdbad799d008fe4ccf54d7243a6b24625
-  size_bytes: 6014
+  sha256: ad37260256039d049ae0711feff1410b67c64b6d30cbb5895569c2867bdaf6e0
+  size_bytes: 6111
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 06b89d06fa27417c767f54d61f13210f6c5ef37af9f0e72a0c71221a1be32626
-  size_bytes: 12884
+  sha256: 2359e3309c283ea181a87fba8e62a65e83fa7e21ed5461c11affa22a951b84a2
+  size_bytes: 13485
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 1d503296e5409a435e1ab233835390a1010b74e1a678de3ae8723dab5ba1f85a
-  size_bytes: 2200
+  sha256: 918e925daaed126294b4b153c5e0df7f03ca6cc2d3ca9aa0e5a2277fa46cc4cd
+  size_bytes: 2373
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7859,8 +7859,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 7455bcb6ca37fc5d90b77af48ac57fcab5d27aadf04ddb69942bd4d1326622e4
-  size_bytes: 913
+  sha256: 3477ff2e6524f345e8b8508570fef1eb6aed1027772549fe51d611d20ef0b623
+  size_bytes: 1104
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7870,8 +7870,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 304dd1a00df9a9f71dd8a98a1f6d8ecde910137ea740827ed91facb8ee39a04f
-  size_bytes: 1313
+  sha256: f474d9de97dc9646ec895b5a2ab137ee6309f7c65f47689c6b207e6c586fce83
+  size_bytes: 2085
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -8015,6 +8015,50 @@ documents:
   importance_level: A
   sha256: e019bd8b59b64291dc3ad4959c181073890dacfa9055875f44f493b9bb136ec5
   size_bytes: 3355
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 9B28CF2BC3855DD9
+  path: tasks/TASK-018/phase-g-post-w2-conversation-free-restart-evidence-2026-08-14.md
+  title: 'TASK-018 Phase G Post-W2 Conversation-free Restart Evidence'
+  category: evidence
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: e9b302216f2300fcd916d15aee08c6516533933d3dda0310a3a77c094d366702
+  size_bytes: 4956
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 8059D574A4EA8DF2
+  path: tasks/TASK-018/phase-g-final-pilot-context-cost-2026-08-14.json
+  title: 'TASK-018 Phase G Final Pilot Context Cost'
+  category: evidence
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: d350645703f6f4444ff2030727820ca42fb251b7ad69e728ae7bb6719a33d236
+  size_bytes: 5397
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: D086712E87276605
+  path: tasks/TASK-018/phase-g-exact-consumer-release-decision-2026-08-14.md
+  title: 'TASK-018 Phase G Exact Consumer Release Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: ccdcdc5abd561d9e4657cf0820498151cb0e9bfa55ca8968010a0bdf9bc1b0b7
+  size_bytes: 3974
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-14'
+- document_id: 1CCDB95C469B3A77
+  path: tasks/TASK-018/phase-g-consumer-release-closure-evidence-2026-08-14.md
+  title: 'TASK-018 Phase G Consumer Release Closure Evidence'
+  category: evidence
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: af85e69df6f595aa54a66faa509e775bdc584ebf360b56e3ab90f5ea54f162a9
+  size_bytes: 3160
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-14'
@@ -8193,11 +8237,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_PHASE_G_POST_W2_RESTART_READY
+registry_status: CURRENT_DURING_TASK018_PHASE_G_CONSUMER_V0_20_0_RELEASE_COMPLETE_H2_ACTIVE
 registry_status_details:
-  documents: 666
+  documents: 670
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / TASK036_W2_PASS / W0_W1_REMAINDER_PARKED / W2_CONTEXT_CHECKPOINT_PASS / POST_W2_RESTART_READY / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
-  next_task: TASK-018 independent post-W2 conversation-free restart, final Context Cost, exact release decision
+  current_task: TASK-018 ACTIVE / PHASE_G_CONSUMER_V0_20_0_RELEASE_COMPLETE / H2A_PASS_H2_OVERALL_ACTIVE / I1_BLOCKED
+  next_task: TASK-018 Phase H2 empirical hardening; overall TASK-036/M3B and TASK-018 I1 remain
