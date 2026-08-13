@@ -35,7 +35,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
 - TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 completed; Phase 1+ unauthorized
 - TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `ACTIVE`; Phase 0 paused at `07af447` for TASK-018 P0; Production Activation blocked
-- TASK-018 Codex Autonomous Development Control Plane: `ACTIVE / P0_MAXIMUM`; Phases B-F + H1 + H1.2 passed; Phase G parked; H2 waits Pilot Evidence
+- TASK-018 Codex Autonomous Development Control Plane: `ACTIVE / P0_MAXIMUM`; Phases B-F + H1 + H1.2 + H1.3 passed; Phase G parked; H2 waits Pilot Evidence
 
 TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-018 is current. Production ACME/public activation and Product pilot remain separately gated.
 
@@ -50,7 +50,7 @@ Architecture Ver.2.29 Part XV is the current consolidated roadmap scope and Part
 ## Current verification baseline
 
 - DistributedOS: `73 / 73 PASS`
-- Full OS: `1409 / 1409 PASS` on WSL2 Ubuntu ext4
+- Full OS: `1412 / 1412 PASS` on WSL2 Ubuntu ext4
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
