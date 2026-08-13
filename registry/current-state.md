@@ -21,7 +21,7 @@
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
-- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE` — `BAI-OS-AUTONOMY-001`, P0 maximum
+- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_I0_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE / I1_BLOCKED` — `BAI-OS-AUTONOMY-001`, P0 maximum
 - Current development route: `TASK-018 P0 — H1 Core Hardening and H1.2 Safety-first Routing passed; Phase G Consumer/native Pilot parked; H2 waits Pilot Evidence; TASK-017 resumes only through its 2026-08-13 pause/resume decision`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
@@ -38,7 +38,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1412 / 1412 PASS` on WSL2 Ubuntu ext4 (TASK-018 Phases B-F + H1 Core Hardening + H1.2 Routing + H1.3 Operational Contracts)
+- Full BAI Development OS: `1423 / 1423 PASS` on WSL2 Ubuntu ext4 (TASK-018 through Phase I0 Closure Readiness)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
@@ -50,7 +50,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `641 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `651 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -111,6 +111,7 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Phase H1 Consumer-independent Core Hardening: `AUTONOMY_CORE_HARDENING_PASS`; Phase H1.2 Safety-first Routing: `SAFETY_FIRST_ROUTING_PASS`; Phase H2 remains `WAITING_PILOT_EVIDENCE`.
 - H1.2 permits verified Context Cost to break only quality-and-reliability ties after all Authority/Safety/DEV/capability/provider/budget gates pass; it cannot create Authority or dispatch work.
 - H1.3 Operational Contracts: `AUTONOMY_OPERATIONAL_CONTRACTS_PASS`; required manuals/specifications and the exact exception/signal Failure Registry are published.
+- Phase I0 Closure Readiness: `I0_PREPARED / I1_RELEASE_FINALIZATION_BLOCKED`; checklist, Changelog draft, Release plan draft, rollback and Evidence index are prepared without Completion Record, Tag or Release.
 - BAI VIDEO PRODUCTION is separately under local development; its checkout was not located, read, mutated, executed or pushed by H1.
 - Phase A-E checkpoint was merged through all-green PR #13; Phase F is complete and TASK-018 remains active with Phase G-H unfinished.
 - Governance balance: maximum two Critic/fix cycles per bounded Phase; required PASS plus unresolved Critical/High `0/0` advances the work.

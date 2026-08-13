@@ -127,6 +127,17 @@
         "AUTONOMY_ROUTE_INPUT_INVALID",
         "AUTONOMY_ROUTING_CONTEXT_MISMATCH"
       ]
+    },
+    {
+      "domain": "TASK018_CLOSURE_READINESS",
+      "default_operator_action": "keep I1 blocked; complete missing Evidence or exact Closure decision without creating external effects",
+      "signals": ["I0_BLOCKED", "I1_RELEASE_FINALIZATION_BLOCKED", "WORKTREE_NOT_CLEAN"],
+      "codes": [
+        "TASK018_I0_EXTERNAL_EFFECT_CLAIM_FORBIDDEN",
+        "TASK018_I0_INPUT_INVALID",
+        "TASK018_I0_RESULT_INVALID",
+        "TASK018_I0_TASK_MISMATCH"
+      ]
     }
   ]
 }

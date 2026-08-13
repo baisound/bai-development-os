@@ -54,3 +54,5 @@ Use Balanced Execution: two review/fix cycles maximum per bounded Phase. Zero un
 For H1.2 routing work, load `src/automation/safety-first-routing.mjs`, its output schema and focused tests plus the Context Cost validator. Do not load or inspect the BAI VIDEO PRODUCTION checkout. Context Cost may order only routes that already pass exact Authority, Safety, DEV, capability, quality, reliability, provider and budget requirements.
 
 For autonomy operation and integration questions, load the exact Ver.1.0 Operator/Consumer/Handoff/Context/Codex specification and `registry/autonomy-failure-registry.json`; do not reload the P0 handoff pack or all source modules by default.
+
+For TASK-018 Closure, load the I0 current report, Evidence index and `specifications/BAI_Development_OS_TASK018_Closure_Readiness_Ver1.0.md`. `I0_PREPARED` is not completion and never authorizes a Completion Record, Tag or Release.

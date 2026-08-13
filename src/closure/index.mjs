@@ -1,4 +1,5 @@
 import { randomUUID } from 'node:crypto';
+export * from './task018-i0-readiness.mjs';
 const REQUIRED=['technical','quality','policy','status','risk','follow_up','knowledge','resources','cost','owner'];
 export class ClosureError extends Error { constructor(code,message=code){super(message);this.code=code;} }
 export function evaluateClosureReadiness(input={}){
