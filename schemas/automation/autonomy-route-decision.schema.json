@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/autonomy-route-decision.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["route_decision_version", "result", "task_id", "selected_route_id", "eligible_route_ids", "rejected_routes", "context_optimization_applied", "context_record_checksum", "routing_input_checksum", "authority_created", "content_checksum"],
+  "properties": {
+    "route_decision_version": { "const": "1.0.0" },
+    "result": { "enum": ["AUTONOMY_ROUTE_READY", "AUTONOMY_ROUTE_BLOCKED"] },
+    "task_id": { "type": "string", "minLength": 1 },
+    "selected_route_id": { "type": ["string", "null"] },
+    "eligible_route_ids": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "rejected_routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["route_id", "reasons"],
+        "properties": {
+          "route_id": { "type": "string", "minLength": 1 },
+          "reasons": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+        }
+      }
+    },
+    "context_optimization_applied": { "type": "boolean" },
+    "context_record_checksum": { "type": ["string", "null"], "pattern": "^sha256:[a-f0-9]{64}$" },
+    "routing_input_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "authority_created": { "const": false },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "result": { "const": "AUTONOMY_ROUTE_READY" } } },
+      "then": {
+        "properties": {
+          "selected_route_id": { "type": "string", "minLength": 1 },
+          "eligible_route_ids": { "minItems": 1 }
+        }
+      },
+      "else": {
+        "properties": {
+          "selected_route_id": { "type": "null" },
+          "eligible_route_ids": { "maxItems": 0 }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "context_optimization_applied": { "const": true } } },
+      "then": { "properties": { "context_record_checksum": { "type": "string" } } }
+    }
+  ]
+}
