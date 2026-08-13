@@ -24,4 +24,8 @@ Phases B-G, H1-H2, I0 and I1 are complete. PR #23 exact head passed four hosted 
 - Linux regression: `1423 / 1423 PASS` on WSL2 Ubuntu ext4
 - Blocking Critic findings: `0 Critical / 0 High`
 - TASK closure: `COMPLETED`; repository publication verified; TASK-017 remains separately paused
-- Tag / Release: Consumer `v0.20.0` formal stable Release complete; TASK-018 OS Tag/Release remains ineligible
+- Tag / Release: Consumer `v0.20.0` formal Phase G Release and BAI Development OS `v1.1.0` stable source-only Release are complete
+
+## Post-release Consumer supplement
+
+BAI VIDEO PRODUCTION subsequently published `v0.20.1` from release-code merge `c2e12d59f869a6b612848aab7ba8319e9cb8a4b4`; its later documentation-only main is `7873488c85cf1fd9e49b8061e4c201b6fec976d6`. Full regression is `810 / 810 PASS`, and W0/W1/W2 plus overall TASK-036/M3B are now `PASS`. This append-only supplement validates Human Gate parking and re-entry without reopening TASK-018 or changing OS `v1.1.0`. See `post-release-bvp-v0.20.1-consumer-supplement-2026-08-14.md`.

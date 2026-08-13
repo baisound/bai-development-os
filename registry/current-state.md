@@ -22,7 +22,7 @@
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
 - TASK-018: `COMPLETED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_RELEASE_PUBLISHED` — `BAI-OS-AUTONOMY-001`, P0 maximum
-- Current development route: `TASK-018 P0 complete; v1.1.0 stable source-only Release published and verified. TASK-017 remains paused pending a separate Owner-routed resume decision`
+- Current development route: `TASK-018 P0 complete; OS v1.1.0 remains published. The post-release BAI VIDEO PRODUCTION v0.20.1 supplement closes TASK-036/M3B; the next Consumer route is the governed R2 foundation promotion. TASK-017 remains paused pending a separate Owner-routed resume decision`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -33,6 +33,7 @@
 - Last Updated by I1 exact OS release decision: `2026-08-14`
 - Last Updated by I1 Completion approval: `2026-08-14`
 - Last Updated by I1 Release publication: `2026-08-14`
+- Last Updated by BAI VIDEO PRODUCTION v0.20.1 post-release supplement: `2026-08-14`
 
 ## Current Product Boundary
 
@@ -57,7 +58,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `674 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `682 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -121,14 +122,15 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Consumer release closure: `PASS`. Metadata head `3e43b550ad3eb1db9c6b51843c0051d692c1732c` passed isolated WSL2 `805 / 805` plus fresh hosted PR checks `9 / 9`; PR #20 merged at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`; annotated tag and stable GitHub Release `v0.20.0` target that SHA. The formal Release workflow passed and published verified wheel/source assets.
 - Phase H2 final empirical assessment: `H2_EMPIRICAL_HARDENING_PASS / AUTONOMY_HARDENED_WITH_BOUNDED_CONSUMER_HUMAN_GATES`. Three accepted Context records retained quality PASS; the final restart is `11,888` estimated tokens, `50.91%` below W2. Current/sanitized Evidence precedence, live exact-head CI revalidation, explicit Human Gate parking, bounded recovery and post-merge branch rotation are retained. Model/provider/cadence changes and Knowledge promotion remain inactive for insufficient comparative/recurrence Evidence.
 - I1 exact OS release decision: `1.1.0 / v1.1.0 / BAI Development OS v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`. The repository has no prior GitHub Release and no configured long-lived binary signing identity; no ephemeral key or unsigned Consumer-installable bundle is invented.
-- I1 Release publication: `PASS`. PR #23 exact head `d4366c8402eeb0134b032b55b8edaef189c4cb1d` passed four hosted checks and merged at exact main SHA `81a8445ab8a94fd75034e4c25b63eb7849f5608c`. Annotated `v1.1.0` and the stable source-only GitHub Release target that SHA; publication branch cleanup is verified. Overall TASK-036/M3B and parked W0/W1 remain unclaimed.
+- I1 Release publication: `PASS`. PR #23 exact head `d4366c8402eeb0134b032b55b8edaef189c4cb1d` passed four hosted checks and merged at exact main SHA `81a8445ab8a94fd75034e4c25b63eb7849f5608c`. Annotated `v1.1.0` and the stable source-only GitHub Release target that SHA; publication branch cleanup is verified. At this chronological checkpoint, overall TASK-036/M3B and parked W0/W1 were unclaimed.
+- Post-release Consumer supplement: `PASS`. BAI VIDEO PRODUCTION PR #22 merged release code at `c2e12d59f869a6b612848aab7ba8319e9cb8a4b4`; annotated tag and stable GitHub Release `v0.20.1` target that SHA, Release workflow `31742523107` passed, and the later documentation-only PR #23 produced current main `7873488c85cf1fd9e49b8061e4c201b6fec976d6`. Full regression is `810 / 810 PASS`; W0/W1/W2, overall TASK-036 and M3B are now `PASS`. This newer status supplements rather than rewrites the original Phase G/H2/I1 Evidence.
 - H2A Pilot hardening checkpoint: PASS. Current/recent Evidence precedence, external PR-state revalidation, sanitized native-Evidence loading and post-merge branch/session rotation are adopted. Model/provider/cadence optimization and Knowledge promotion remain inactive because one Pilot sample is insufficient.
-- Phase H1 Consumer-independent Core Hardening: `AUTONOMY_CORE_HARDENING_PASS`; Phase H1.2 Safety-first Routing: `SAFETY_FIRST_ROUTING_PASS`; Phase H2 remains `WAITING_PILOT_EVIDENCE`.
+- Phase H1 Consumer-independent Core Hardening: `AUTONOMY_CORE_HARDENING_PASS`; Phase H1.2 Safety-first Routing: `SAFETY_FIRST_ROUTING_PASS`; Phase H2: `H2_EMPIRICAL_HARDENING_PASS`.
 - H1.2 permits verified Context Cost to break only quality-and-reliability ties after all Authority/Safety/DEV/capability/provider/budget gates pass; it cannot create Authority or dispatch work.
 - H1.3 Operational Contracts: `AUTONOMY_OPERATIONAL_CONTRACTS_PASS`; required manuals/specifications and the exact exception/signal Failure Registry are published.
-- Phase I0 Closure Readiness: `I0_PREPARED`; Phase G and H2 Evidence are complete. I1 is now ready for the exact OS Closure/version/tag/Release decision, without any existing Completion Record, OS Tag or OS Release claim.
+- Phase I0 Closure Readiness and Phase I1 Release Finalization are complete. Stable source-only OS `v1.1.0` remains the exact published result; the Consumer post-release supplement does not require an OS republish.
 - BAI VIDEO PRODUCTION is separately under local development; its checkout was not located, read, mutated, executed or pushed by H1.
-- Phase A-E checkpoint was merged through all-green PR #13; Phase F is complete and TASK-018 remains active with Phase G-H unfinished.
+- Phase A-E checkpoint was merged through all-green PR #13; Phase F-G, H1-H2 and I0-I1 subsequently completed. TASK-018 remains closed.
 - Governance balance: maximum two Critic/fix cycles per bounded Phase; required PASS plus unresolved Critical/High `0/0` advances the work.
 - Tag and GitHub Release are Owner-authorized only after TASK-018 completion, PR all-green and merge to `main`; their exact version/tag is a Closure decision.
 - Deploy, Production Activation, paid-provider execution and direct push to `main` remain prohibited. Separately authorized bounded native Consumer execution is Evidence-gated.
