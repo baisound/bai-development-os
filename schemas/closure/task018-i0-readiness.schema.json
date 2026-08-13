@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/closure/task018-i0-readiness.schema.json",
+  "title": "TASK-018 Phase I0 Closure Readiness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task018_i0_readiness_version", "task_id", "i0_result", "i0_blockers", "finalization_result", "finalization_blockers", "planning_artifacts", "evidence", "evidence_index_checksum", "unresolved_critical", "unresolved_high", "worktree_clean", "exact_release_decision_verified", "completion_record_created", "tag_created", "release_created", "external_effect_performed", "content_checksum"],
+  "properties": {
+    "task018_i0_readiness_version": { "const": "1.0.0" },
+    "task_id": { "const": "TASK-018" },
+    "i0_result": { "enum": ["I0_PREPARED", "I0_BLOCKED"] },
+    "i0_blockers": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+    "finalization_result": { "enum": ["I1_RELEASE_FINALIZATION_ELIGIBLE", "I1_RELEASE_FINALIZATION_BLOCKED"] },
+    "finalization_blockers": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+    "planning_artifacts": { "type": "object", "additionalProperties": false, "required": ["closure_checklist", "changelog_draft", "release_plan_draft", "rollback_plan", "evidence_index"], "properties": { "closure_checklist": { "type": "boolean" }, "changelog_draft": { "type": "boolean" }, "release_plan_draft": { "type": "boolean" }, "rollback_plan": { "type": "boolean" }, "evidence_index": { "type": "boolean" } } },
+    "evidence": { "type": "object", "additionalProperties": false, "required": ["phase_g", "phase_h2", "consumer_regression", "conversation_free_restart", "context_cost_report", "full_os_regression"], "properties": { "phase_g": { "$ref": "#/$defs/gate" }, "phase_h2": { "$ref": "#/$defs/gate" }, "consumer_regression": { "$ref": "#/$defs/gate" }, "conversation_free_restart": { "$ref": "#/$defs/gate" }, "context_cost_report": { "$ref": "#/$defs/gate" }, "full_os_regression": { "$ref": "#/$defs/gate" } } },
+    "evidence_index_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "unresolved_critical": { "type": "integer", "minimum": 0 },
+    "unresolved_high": { "type": "integer", "minimum": 0 },
+    "worktree_clean": { "type": "boolean" },
+    "exact_release_decision_verified": { "type": "boolean" },
+    "completion_record_created": { "const": false },
+    "tag_created": { "const": false },
+    "release_created": { "const": false },
+    "external_effect_performed": { "const": false },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "i0_result": { "const": "I0_PREPARED" } } },
+      "then": { "properties": { "i0_blockers": { "maxItems": 0 } } }
+    },
+    {
+      "if": { "properties": { "finalization_result": { "const": "I1_RELEASE_FINALIZATION_ELIGIBLE" } } },
+      "then": { "properties": { "finalization_blockers": { "maxItems": 0 }, "i0_result": { "const": "I0_PREPARED" }, "worktree_clean": { "const": true }, "exact_release_decision_verified": { "const": true } } }
+    }
+  ],
+  "$defs": { "gate": { "enum": ["PASS", "FAIL", "WAITING", "PARKED_HUMAN_GATE", "NOT_PROVEN"] } }
+}

@@ -12,6 +12,7 @@ const sourcePaths = [
   'src/automation/codex-adapter.mjs',
   'src/automation/autonomy-hardening.mjs',
   'src/automation/safety-first-routing.mjs',
+  'src/closure/task018-i0-readiness.mjs',
 ];
 
 test('Failure Registry exactly covers thrown bounded-autonomy error codes', async () => {
@@ -32,6 +33,7 @@ test('Failure Registry exactly covers thrown bounded-autonomy error codes', asyn
     'CONTEXT_OVERFETCH', 'HUMAN_GATE_REQUIRED', 'AUTOMATION_LEASE_CONFLICT',
     'RECOVERY_GATE_REQUIRED', 'PAID_EXECUTION_NOT_AUTHORIZED',
     'NATIVE_EXECUTION_NOT_AUTHORIZED', 'SESSION_ROTATION_REQUIRED',
+    'I1_RELEASE_FINALIZATION_BLOCKED',
   ]) assert.ok(signals.includes(expected), `missing operational signal: ${expected}`);
 });
 

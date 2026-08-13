@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: db72924b7259f62f82d5cfe37b749c30625eb24cb04cda277266e7131b9abbf1
-  size_bytes: 6004
+  sha256: 634f7c602731d45415fbd0da721a1ab98d20a6d0b16e07251460b6a3933243e4
+  size_bytes: 6023
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: a7cc44aa1e6d77123900090785472ea64f7a00dccb8237044ce01026a63dd970
-  size_bytes: 9681
+  sha256: 3724593d20ae3f784725fda9cd16ddc4456daa060bf3352cc7d29e8202933f58
+  size_bytes: 9610
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 521ff231f0a1afb073e28d477b3fb300ab1646b393771c359b878f4668674fcc
-  size_bytes: 5257
+  sha256: 419b24b2054c0c6db5a2ecdb39c7d07156fde73b67cade0a073e404ca77af80d
+  size_bytes: 5490
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 26046a785b3afbc72ecce4ec161ac3db6c78f49c05dc74600e78458f01b774b5
-  size_bytes: 11150
+  sha256: 44cd26e8789a24edbc8a5fff1f26284580d1775d26c87ab14546c2a1149d4cb9
+  size_bytes: 11337
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 91ad8e0abbac5aeb37225e2fe6fef5713d8c8f5e4cbfb4f4458329a35abd406b
-  size_bytes: 1904
+  sha256: a8fb85af9619ab583c8e7f4d3b86f9b76f0048b648b7007d0e7d036226effbaf
+  size_bytes: 1881
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7672,8 +7672,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 61a756eb8fb255681483223c73a23403a2916c1ab0aad35dcd4c4caf42364986
-  size_bytes: 4521
+  sha256: 70a1ca0b2c043b4100ed3318bc448b6c8e655721c5d8b222cfb0842caa2c2f40
+  size_bytes: 4995
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7784,6 +7784,116 @@ documents:
   importance_level: A
   sha256: 0f2de5557972a49dcebf8a5ddbd9bf707eafe5cd80fdfe02e9fb3e8af4efb382
   size_bytes: 1289
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 878ABA68EB7C7CDD
+  path: schemas/closure/task018-i0-readiness.schema.json
+  title: 'task018-i0-readiness.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 704b0a8800ec44de3fdb12b89cb8f0d483282b6804554f5b063101e97158e31c
+  size_bytes: 3255
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 29396802A8AB5149
+  path: specifications/BAI_Development_OS_TASK018_Closure_Readiness_Ver1.0.md
+  title: 'BAI Development OS TASK-018 Closure Readiness Ver.1.0'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: c1c439f4dcac935a13d142b5690748e34f9446a33cb361fb1ce1f6700e3ae0dd
+  size_bytes: 1470
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: F69703E860D1EE40
+  path: tasks/TASK-018/phase-i0-builder-implementation-evidence-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Builder Implementation Evidence'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: adefd7ba3a4f4f36b9ba20accb2b4dce213954c67708b6bf70ba5a592d5ff6af
+  size_bytes: 1125
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: C36605DE374B295A
+  path: tasks/TASK-018/phase-i0-changelog-draft-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Changelog Draft'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 8353b8c811daa8b16d4a974149a7df3b8aefa9d0bbc5d3e62437d1601aaf6b50
+  size_bytes: 865
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 609EB1EDB90612D7
+  path: tasks/TASK-018/phase-i0-closure-readiness-design-review-plan-and-authorization-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Closure Readiness Design, Review Plan and Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 69bdf70b003737c9f54627bf1d06d0ca46fc5e671b349ac356a51ea615a6cce5
+  size_bytes: 1363
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 9408A9775F39A63F
+  path: tasks/TASK-018/phase-i0-critic-review-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Critic Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 9818c5918c870cae19778ab37821b25449f2b095cc27eeae886e8e4b7ff2d240
+  size_bytes: 1038
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 6CBA2749C5C14827
+  path: tasks/TASK-018/phase-i0-current-closure-readiness-report-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Current Closure Readiness Report'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: a925f90703aa8dd683fa3c81fb04303ea1950498403b8ddc2e66eea11ca35ae9
+  size_bytes: 842
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 4CD3ED9D29A2424C
+  path: tasks/TASK-018/phase-i0-evidence-index-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Evidence Index'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 17568fd137eda1965804f47f4f8c70dbf75bcad97fb1d556555d30ce03216394
+  size_bytes: 885
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: EBA2C6C34F43DC0B
+  path: tasks/TASK-018/phase-i0-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 7b43a5741ac37e9d070dba0e584a58a32975ecd7f5b4d0eee82946aa23521f8d
+  size_bytes: 655
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 8FD06352ABE4CFA0
+  path: tasks/TASK-018/phase-i0-release-plan-draft-2026-08-13.md
+  title: 'TASK-018 Phase I0 — Repository Release Plan Draft'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: ab1b1ae25c5faf0f974670f8a84a973aaf9b10182e24d0c019963877585e8615
+  size_bytes: 888
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7918,11 +8028,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_P0_PHASES_B_TO_F_H1_H1_2_H1_3_PASS
+registry_status: CURRENT_DURING_TASK018_P0_THROUGH_I0_PASS
 registry_status_details:
-  documents: 641
+  documents: 651
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE
-  next_task: TASK-018 Phase G Consumer Pilot remains parked; H2 waits Pilot Evidence
+  current_task: TASK-018 ACTIVE / CONSUMER_INDEPENDENT_THROUGH_I0_PASS / PHASE_G_PARKED / H2_WAITING / I1_BLOCKED
+  next_task: TASK-018 Phase G Consumer Pilot; then H2 and I1
