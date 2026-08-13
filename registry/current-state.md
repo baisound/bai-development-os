@@ -21,12 +21,13 @@
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
-- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_I0_H2A_PASS / PHASE_G_TASK036_W2_PASS_W0_W1_PARKED_CONTEXT_CHECKPOINT_PASS_RESTART_READY / H2_OVERALL_ACTIVE / I1_BLOCKED` — `BAI-OS-AUTONOMY-001`, P0 maximum
-- Current development route: `TASK-018 P0 — Phase G TASK-036 W2 passed and W0/W1 remainder is parked to H2 on Consumer PR #20; post-W2 fresh restart, final Context Cost and exact release decision remain; TASK-017 remains paused and resumes only through its 2026-08-13 pause/resume decision`
+- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_I0_H2A_PASS / PHASE_G_POST_W2_RESTART_FINAL_CONTEXT_PASS_CONSUMER_0_20_0_DECIDED / H2_OVERALL_ACTIVE / I1_BLOCKED` — `BAI-OS-AUTONOMY-001`, P0 maximum
+- Current development route: `TASK-018 P0 — Phase G post-W2 restart and final Context Cost passed; exact Consumer 0.20.0 release decision is established, while release metadata/CI/PR integration remains; TASK-017 remains paused and resumes only through its 2026-08-13 pause/resume decision`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
 - Last Updated by Phase G W2 checkpoint: `2026-08-14`
+- Last Updated by Phase G post-W2 restart audit: `2026-08-14`
 
 ## Current Product Boundary
 
@@ -51,7 +52,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `666 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `669 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -110,8 +111,10 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Completed units now include Phase F bounded Codex Adapter (`CODEX_ADAPTER_PASS`).
 - Phase G Consumer checkpoint: BAI VIDEO PRODUCTION TASK-010/011/012 native PASS; Windows `778 passed, 1 skipped`; WSL2 Ubuntu `779 passed`; conversation-free restart PASS; PR #19 all-green and merged at exact main SHA `0861d8635480932a1e5703e5b0304fa56c87e04d`.
 - TASK-036 W2 checkpoint: Consumer HEAD `b30da2298a47cad49d650133b6ab2ccf78f11c29` contains `PACKAGED_NATIVE_E2E_PASS` plus the formal W0/W1 remainder parking decision. Clean-profile, missing-WebView2, long-path, full DPI/mixed-monitor and screen-reader cases remain partial and are parked to H2, not promoted to PASS. PR #20 remains open and unmerged because the Phase G closure order is not complete.
-- Context checkpoint: `24,215` estimated input tokens, provider/cached/output/billed values `null`, duplicate/stale/avoidable ratio `0 / 0 / 0`. This is not final G-E18 because post-W2 conversation-free restart remains pending.
-- Current next unit: use `phase-g-post-w2-conversation-free-restart-bootstrap-2026-08-14.md` in an independent fresh task/run, finalize Pilot Context Cost and make the exact release decision. TASK-036 Product completion and I1 remain blocked.
+- Post-W2 restart audit: `PASS` at Consumer HEAD `b30da2298a47cad49d650133b6ab2ccf78f11c29`; PR #20 is open/mergeable with nine checks PASS, package/latest release remains `0.19.0`, and 75 pre-existing untracked native artifacts were preserved without tracked/staged mutation.
+- Final Pilot Context Cost: `11,888` estimated input tokens, down `12,327` / `50.91%` from the W2 checkpoint `24,215`; provider/cached/output/billed values remain `null`, duplicate/stale/avoidable ratio `0 / 0 / 0`.
+- Exact Consumer release decision: `0.20.0 / v0.20.0 / BAI Video Production v0.20.0 / stable`; metadata finalization is authorized, but Consumer merge, tag and GitHub Release were not performed. W0/W1 limitations remain mandatory release notes and overall TASK-036/M3B completion remains unclaimed.
+- Current next unit: finalize bounded Consumer `0.20.0` release metadata on the work branch, rerun regression/CI and integrate through PR #20 in the recorded order. TASK-036 Product completion, H2 overall and TASK-018 I1 remain blocked.
 - H2A Pilot hardening checkpoint: PASS. Current/recent Evidence precedence, external PR-state revalidation, sanitized native-Evidence loading and post-merge branch/session rotation are adopted. Model/provider/cadence optimization and Knowledge promotion remain inactive because one Pilot sample is insufficient.
 - Phase H1 Consumer-independent Core Hardening: `AUTONOMY_CORE_HARDENING_PASS`; Phase H1.2 Safety-first Routing: `SAFETY_FIRST_ROUTING_PASS`; Phase H2 remains `WAITING_PILOT_EVIDENCE`.
 - H1.2 permits verified Context Cost to break only quality-and-reliability ties after all Authority/Safety/DEV/capability/provider/budget gates pass; it cannot create Authority or dispatch work.

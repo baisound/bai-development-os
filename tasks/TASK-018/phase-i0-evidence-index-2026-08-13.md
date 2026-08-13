@@ -16,12 +16,15 @@
 - real Consumer regression: `PASS` — Windows `778 passed, 1 skipped`; WSL2 Ubuntu `779 passed`.
 - conversation-free restart: `PASS_WITH_TASK036_BOUNDARY` — task `019ffb0b-99d4-71f1-a920-f507fe569155`.
 - Pilot Context Cost checkpoint: recorded with estimated usage; provider-observed and billed usage unavailable and represented as `null`.
+- post-W2 conversation-free restart: `PASS` — task `019ffc2c-12dc-7891-af27-837a2eeffdce`, Consumer HEAD `b30da2298a47cad49d650133b6ab2ccf78f11c29`.
+- final Pilot Context Cost: `11,888` estimated input tokens, `50.91%` below the W2 checkpoint; provider/cached/output/billed fields remain `null`.
+- exact Consumer release decision: `0.20.0 / v0.20.0 / stable`, with metadata/CI/merge/tag/Release execution still pending.
 
 ## Required before I1
 
-- Phase G: `M3A_NATIVE_CHECKPOINT_PASS / TASK036_W2_ACTIVE`.
+- Phase G: `POST_W2_RESTART_AND_FINAL_CONTEXT_PASS / CONSUMER_RELEASE_INTEGRATION_PENDING`.
 - Phase H2: `PARTIALLY_UNBLOCKED / EMPIRICAL_HARDENING_PENDING`.
-- TASK-036: `W0_PARTIAL / W1_PARTIAL / W2_BLOCKED_NOT_WIRED`.
-- exact version/tag/Release Closure decision: `PENDING`.
+- TASK-036: `W0_PARTIAL_PARKED / W1_PARTIAL_PARKED / W2_PACKAGED_NATIVE_E2E_PASS`; overall completion remains unclaimed.
+- exact TASK-018 OS Closure version/tag/Release decision: `PENDING` and separate from the decided Consumer `0.20.0` release.
 
 Each future Evidence item must be referenced by path/URL and immutable checksum before I1 assessment.

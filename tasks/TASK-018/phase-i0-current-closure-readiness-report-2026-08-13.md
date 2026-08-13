@@ -12,10 +12,10 @@ Expected decision after I0 artifacts and tests: `I0_PREPARED / I1_RELEASE_FINALI
 
 ## I1 blockers
 
-- `EVIDENCE_NOT_PASS:phase_g:TASK036_W2_BLOCKED_NOT_WIRED`
+- `EVIDENCE_NOT_PASS:phase_g:CONSUMER_RELEASE_INTEGRATION_PENDING`
 - `EVIDENCE_NOT_PASS:phase_h2:EMPIRICAL_HARDENING_PENDING`
-- `EXACT_RELEASE_DECISION_NOT_VERIFIED`
+- `EXACT_OS_CLOSURE_RELEASE_DECISION_NOT_VERIFIED`
 
-Resolved since I0 preparation: real M3A native Evidence, Consumer regression, conversation-free restart and Pilot Context Cost checkpoint. Their PASS does not override TASK-036/H2/exact-release blockers.
+Resolved since I0 preparation: real M3A native Evidence, Consumer regression, TASK-036 W2 packaged native E2E, post-W2 conversation-free restart, final Pilot Context Cost and the exact Consumer `0.20.0` release decision. Their PASS does not complete Consumer release integration, Phase H2 or the separate TASK-018 OS Closure decision.
 
 Completion Record, Tag, Release and external effect fields remain `false`. This is the intended safe result, not a failed I0 implementation.
