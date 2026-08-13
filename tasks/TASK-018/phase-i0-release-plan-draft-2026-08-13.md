@@ -1,6 +1,6 @@
 # TASK-018 Phase I0 — Repository Release Plan Draft
 
-Status: `FINALIZED / I1_PR_MERGE_TAG_RELEASE_PENDING`
+Status: `EXECUTED / V1_1_0_RELEASE_PUBLICATION_VERIFIED`
 
 - Repository: `https://github.com/baisound/bai-development-os`
 - Default branch: `main`
@@ -19,4 +19,4 @@ Status: `FINALIZED / I1_PR_MERGE_TAG_RELEASE_PENDING`
 5. Create annotated tag, push tag and create the stable GitHub Release.
 6. Verify published tag/Release and source archives against the exact commit.
 
-No step in this draft authorizes execution.
+Execution evidence: `tasks/TASK-018/phase-i1-release-publication-evidence-2026-08-14.md`.
