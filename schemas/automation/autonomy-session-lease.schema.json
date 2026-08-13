@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/autonomy-session-lease.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["lease_schema_version", "lease_id", "project_id", "session_id", "branch", "task_id", "acquired_at", "expires_at", "heartbeat_at", "content_checksum"],
+  "properties": {
+    "lease_schema_version": { "const": "1.0.0" },
+    "lease_id": { "type": "string", "minLength": 1 },
+    "project_id": { "type": "string", "minLength": 1 },
+    "session_id": { "type": "string", "minLength": 1 },
+    "branch": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "acquired_at": { "type": "string", "format": "date-time" },
+    "expires_at": { "type": "string", "format": "date-time" },
+    "heartbeat_at": { "type": "string", "format": "date-time" },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  }
+}

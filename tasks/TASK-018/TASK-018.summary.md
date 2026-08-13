@@ -2,7 +2,7 @@
 
 - Identity: `TASK-018` / `BAI-OS-AUTONOMY-001`
 - Priority: `P0_MAXIMUM`
-- Status: `ACTIVE / PHASES_B_C_D_E_F_PASS / PHASE_G_PARKED_HUMAN_GATE`
+- Status: `ACTIVE / PHASES_B_C_D_E_F_H1_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE`
 - DEV Profile: `DEV_4_FOUNDATION_CRITICAL` (selector score `40`)
 - Branch: `autonomy/task-018/codex-autonomy-p0`
 - Baseline: `07af4470397e85ccdf86ec57b6b7c00c6992b974`
@@ -16,7 +16,7 @@ Continuous local implementation is Owner-authorized for the P0 scope. External A
 
 ## Next implementation unit
 
-Phases B-F are complete: Context Cost Observatory, stale-safe Handoff Bootstrap, authorized Queue/Human Gate Parking, Session Rotation, and the bounded Codex Adapter. Phase G BAI VIDEO PRODUCTION Pilot is parked pending a separately bound Consumer/native authorization. Phase H empirical hardening waits on Pilot Evidence. No external Codex Automation invocation has been performed.
+Phases B-F and Phase H1 Consumer-independent Core Hardening are complete. H1 adds Context-to-Failure/Knowledge Candidate bridging, single-worker Session Lease safety and fail-closed crash/partial-state Recovery assessment. Phase G BAI VIDEO PRODUCTION Pilot is parked while that Product is separately developed locally; its checkout was not inspected or changed. Phase H2 empirical optimization waits on Pilot Evidence. No external Codex Automation invocation has been performed.
 
 ## Current checkpoint
 
