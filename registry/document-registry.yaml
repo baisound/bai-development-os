@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: ff490e75081329538227d509e650f05053a7ecc73b2ef5c724df862204de66c9
-  size_bytes: 5823
+  sha256: cd2ec67e422ace814b16a85513a792cdf285809102fbfd879a8176f87691c674
+  size_bytes: 5825
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6b422829a45c04fbc927f37d53b0b6130daa0877814528248f24a989c43d75f0
-  size_bytes: 9504
+  sha256: 8df27a6adc9f16da4d40932268486ed883c7eb2eb43cd9bef4dca720303ddb2d
+  size_bytes: 9565
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 2d6b950038e38c44126b68787e9681104bf6cbda7dbe9c099151037e00ae8b80
-  size_bytes: 10122
+  sha256: 7b75a9761c302609ab2f2b1f5344bef88054b8521cd03bf0e81535c281c8e6c8
+  size_bytes: 10357
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 711946430a237059b1dc675505bfbca70c5741af600b1e682059a66bdec28b58
-  size_bytes: 1628
+  sha256: 5423ee9034a6115a9c3fb866ad1a9aec3f39167994bd89c2ac34e824a5591f69
+  size_bytes: 1765
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7476,6 +7476,61 @@ documents:
   importance_level: A
   sha256: fb6e49f523e9630ec9bde1efbc7959154c36ecd1c9d14a22d7a6b450e40dcb54
   size_bytes: 1785
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 6110BF269A326396
+  path: schemas/automation/codex-capability-probe.schema.json
+  title: 'codex-capability-probe.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 92848097fdf0c6381db1b9fc68563ac959461bf6518038e29df15c393769284a
+  size_bytes: 1296
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: D523FDC6E092A000
+  path: tasks/TASK-018/phase-f-builder-implementation-evidence-2026-08-13.md
+  title: 'TASK-018 Phase F — Builder Implementation Evidence'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: bb93653338761d59af1d9a94291ecd2ed6d9b65d3a8c0dd781423a469cc0b409
+  size_bytes: 1502
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 6D552F963EC0CD54
+  path: tasks/TASK-018/phase-f-critic-review-2026-08-13.md
+  title: 'TASK-018 Phase F — Critic Review'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: d40c45ef98039b6a4b8583383af404dcbb8419014bdaaefb8897e1e6c431e374
+  size_bytes: 1314
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: E1B51283FFF35AF6
+  path: tasks/TASK-018/phase-f-design-review-plan-and-authorization-2026-08-13.md
+  title: 'TASK-018 Phase F — Design, Review Plan and Authorization'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: 17e2c5b78055a3fb2bb1aed7935202f44ac6c9b0127ece6917e448082bb5142f
+  size_bytes: 2605
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_P0
+  effective_date: '2026-08-13'
+- document_id: 98BDAA24872BE4F9
+  path: tasks/TASK-018/phase-f-judge-decision-2026-08-13.md
+  title: 'TASK-018 Phase F — Judge Decision'
+  category: task-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: c0d7c8d013b36ff18c1b4797e4bb6efa4b276b7c7b28dd705813f233409f396a
+  size_bytes: 791
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -7610,11 +7665,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_DURING_TASK018_P0_PHASES_B_TO_E_PASS
+registry_status: CURRENT_DURING_TASK018_P0_PHASES_B_TO_F_PASS
 registry_status_details:
-  documents: 613
+  documents: 618
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
-  current_task: TASK-018 ACTIVE / PHASES_B_C_D_E_PASS / PHASE_F_NEXT
-  next_task: TASK-018 Phase F bounded Codex Adapter; external Automation invocation remains gated
+  current_task: TASK-018 ACTIVE / PHASES_B_C_D_E_F_PASS / PHASE_G_PARKED_HUMAN_GATE
+  next_task: TASK-018 Phase G Consumer/native Pilot pending separate authority; Phase H waits Pilot Evidence

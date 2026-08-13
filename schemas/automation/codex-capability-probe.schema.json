@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/codex-capability-probe.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["probe_schema_version", "provider", "environment", "observed_at", "capabilities", "content_checksum"],
+  "properties": {
+    "probe_schema_version": { "const": "1.0.0" },
+    "provider": { "enum": ["CODEX_AUTOMATION", "CODEX_MANUAL"] },
+    "environment": { "enum": ["LOCAL_DESKTOP", "CLOUD", "UNKNOWN"] },
+    "observed_at": { "type": "string", "format": "date-time" },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["capability_id", "status", "evidence_refs", "source_trust"],
+        "properties": {
+          "capability_id": { "type": "string", "pattern": "^[a-z][a-z0-9]*(\\.[a-z0-9-]+)+$" },
+          "status": { "enum": ["AVAILABLE", "UNAVAILABLE", "UNKNOWN"] },
+          "evidence_refs": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+          "source_trust": { "enum": ["OBSERVED_LOCAL", "VERIFIED_PROVIDER", "UNTRUSTED_DESCRIPTION"] }
+        }
+      }
+    },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  }
+}

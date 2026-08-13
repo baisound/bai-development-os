@@ -13,4 +13,5 @@ export * from './outbox.mjs';
 export * from './scheduler.mjs';
 export * from './autonomous-queue.mjs';
 export * from './session-rotation.mjs';
+export * from './codex-adapter.mjs';
 export * from './service.mjs';
