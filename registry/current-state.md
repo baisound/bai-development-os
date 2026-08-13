@@ -21,8 +21,8 @@
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
-- TASK-018: `ACTIVE / PHASES_B_C_D_E_PASS / PHASE_F_NEXT` — `BAI-OS-AUTONOMY-001`, P0 maximum
-- Current development route: `TASK-018 P0 — bounded Codex Adapter next; TASK-017 resumes only through its 2026-08-13 pause/resume decision`
+- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_PASS / PHASE_G_PARKED_HUMAN_GATE` — `BAI-OS-AUTONOMY-001`, P0 maximum
+- Current development route: `TASK-018 P0 — Phase G Consumer/native Pilot parked; Phase H waits Pilot Evidence; TASK-017 resumes only through its 2026-08-13 pause/resume decision`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -38,7 +38,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 ## Verification
 
 - TASK-015 Distributed suite: `73 / 73 PASS`
-- Full BAI Development OS: `1366 / 1366 PASS` on WSL2 Ubuntu ext4 (TASK-018 Phases B-E; prior TASK-017 Public TLS Staging baseline `1308 / 1308`)
+- Full BAI Development OS: `1378 / 1378 PASS` on WSL2 Ubuntu ext4 (TASK-018 Phases B-F; prior Phase E checkpoint `1366 / 1366`)
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Extension / Calibration / Maintenance / Conformance / Release / Security Conformance: `PASS`
@@ -50,7 +50,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `613 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `618 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 
@@ -106,8 +106,9 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - DEV Profile: `DEV_4_FOUNDATION_CRITICAL`, selector score `40`.
 - Roadmap supplement: `architecture/BAI_Development_OS_Codex_Autonomy_P0_Roadmap_Refinement_Ver1.0.md`.
 - Completed units: Phase B Context Cost Observatory (`CONTEXT_OBSERVABILITY_MVP_PASS`), Phase C Handoff Bootstrap (`HANDOFF_BOOTSTRAP_PASS`), Phase D Queue/Human Gate (`AUTONOMOUS_QUEUE_PASS`), Phase E Session Rotation (`SESSION_ROTATION_PASS`).
-- Current next unit: Phase F bounded Codex Adapter.
-- Phase A-E checkpoint: `CHECKPOINT_PR_ELIGIBLE`; TASK-018 remains active and Phase F-H remain unfinished.
+- Completed units now include Phase F bounded Codex Adapter (`CODEX_ADAPTER_PASS`).
+- Current next unit: Phase G BAI VIDEO PRODUCTION Consumer Pilot, `PARKED_HUMAN_GATE` pending separately bound Consumer/native authority.
+- Phase A-E checkpoint was merged through all-green PR #13; Phase F is complete and TASK-018 remains active with Phase G-H unfinished.
 - Governance balance: maximum two Critic/fix cycles per bounded Phase; required PASS plus unresolved Critical/High `0/0` advances the work.
 - Tag and GitHub Release are Owner-authorized only after TASK-018 completion, PR all-green and merge to `main`; their exact version/tag is a Closure decision.
 - Deploy, Production Activation, paid/native execution and direct push to `main` remain prohibited.
