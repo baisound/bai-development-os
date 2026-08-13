@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 634f7c602731d45415fbd0da721a1ab98d20a6d0b16e07251460b6a3933243e4
-  size_bytes: 6023
+  sha256: 7b22b572b5abbe1104b6611b7ecc9eee77d1a81d188e5ec5722d31edab21b40f
+  size_bytes: 6288
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 64d45e14557c2688a204a2a8a0198d7520db4bfd6643fedda67791c7c8ca9e8c
-  size_bytes: 9968
+  sha256: 225c000937e6745e4abd4e456d544826f88d3bed0c7204d70608607edc6a65a1
+  size_bytes: 10184
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: d291bbef54130d3a18eef031965ca3311ba4f8c9f625671e8a9eaca7d328ec7b
-  size_bytes: 6364
+  sha256: 6cb648dfad59e8a76e09580c59da413246219dbc5be77285927d374509c6e832
+  size_bytes: 6546
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: b3059302e2fb607c81a7ae72cc10182fa222052a50618091423e3aaadcb8327e
-  size_bytes: 14573
+  sha256: bff2b510ffb8434c3d80a1eb96bdeb50a58f909c5a28feb93e9e228558c573a1
+  size_bytes: 15323
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 47a61f9eb2d9a21bba9403168f3d4a948c1214dd7992a223f400334c6479f466
-  size_bytes: 29221
+  sha256: 34484c3768e0ad3c5c3c68e39df4d82bb8f9b742bfad8988594130e14059fe6e
+  size_bytes: 29455
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: d52229276b256f5303f8d17bb6b4345129ee3b8b6ba8868fd88cf038913aa87f
-  size_bytes: 1888
+  sha256: 8ea26ff6931e25beeaa310239e835fc954f331339318fef460a6b9d1b479421c
+  size_bytes: 2429
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -8227,6 +8227,17 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-14'
+- document_id: ED253BB66A00003B
+  path: tasks/TASK-018/post-release-bvp-v0.20.1-consumer-supplement-2026-08-14.md
+  title: 'TASK-018 Post-release BAI VIDEO PRODUCTION v0.20.1 Consumer Supplement'
+  category: closure-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: e55cd2a3e3a421d888a108dce0f9298e190d2f3434c855cfa6b6ce92b67a8afe
+  size_bytes: 3838
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_POST_RELEASE_CONSUMER_SUPPLEMENT
+  effective_date: '2026-08-14'
 current_canonical_document_sets:
   effective_date: '2026-08-10'
   promotion_authority: Owner
@@ -8358,11 +8369,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK018_COMPLETION_AND_V1_1_0_RELEASE_PUBLICATION
+registry_status: CURRENT_AFTER_TASK018_POST_RELEASE_BVP_V0_20_1_SUPPLEMENT
 registry_status_details:
-  documents: 681
+  documents: 682
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
   current_task: TASK-018 COMPLETED / PHASE_G_PASS / H2_PASS / I1_RELEASE_FINALIZATION_PASS / V1_1_0_RELEASE_PUBLISHED
-  next_task: Owner-routed next development decision; TASK-017 remains paused and overall TASK-036/M3B remains unclaimed
+  next_task: BAI VIDEO PRODUCTION governed R2 foundation promotion; TASK-017 remains paused and Production Activation remains BLOCKED; Consumer TASK-036/M3B PASS

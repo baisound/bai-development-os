@@ -345,5 +345,6 @@ The later explicit Owner Directive supersedes prior “No TASK-018” planning s
 | OP-123 | Protocol-independent Dynamic Capability exposure and bounded Codex adapter | P0 foundation/planned | TASK-018 Phase D/F |
 | OP-124 | BAI VIDEO PRODUCTION autonomy consumer pilot without runtime dependency | Separate Consumer/native gate | TASK-018 Phase G |
 | OP-125 | Balanced Execution: two-cycle review cap and gate-based advancement | Active governance control | TASK-018 all phases |
+| OP-126 | Append-only post-release Consumer supplements distinguish historical Gate claims, release-code SHA and later documentation-main SHA while proving Human Gate re-entry | Implemented | TASK-018 post-release Consumer closure |
 
 WebMCP remains Experimental. Visual Compliance remains Consumer-owned. Release, Tag, Deploy, paid execution, credit purchase/top-up and unauthorized native mutation remain outside this allocation.

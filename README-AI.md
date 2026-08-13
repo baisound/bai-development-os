@@ -35,9 +35,9 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
 - TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 completed; Phase 1+ unauthorized
 - TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `ACTIVE`; Phase 0 paused at `07af447` for TASK-018 P0; Production Activation blocked
-- TASK-018 Codex Autonomous Development Control Plane: `ACTIVE / P0_MAXIMUM`; Consumer-independent work through I0 passed; Phase G parked; H2 waits Pilot Evidence; I1 blocked
+- TASK-018 Codex Autonomous Development Control Plane: `COMPLETED / P0_MAXIMUM`; Phase G/H2/I1 passed and OS `v1.1.0` was published; the later BAI VIDEO PRODUCTION `v0.20.1` supplement closes TASK-036/M3B without reopening TASK-018
 
-TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-018 is current. Production ACME/public activation and Product pilot remain separately gated.
+TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-018 is completed, including its Phase G Consumer Pilot; the later BAI VIDEO PRODUCTION v0.20.1 supplement is the current Consumer closure record. Production ACME/public activation remains separately gated.
 
 ## CalibrationOS loading rule
 
@@ -85,6 +85,6 @@ TASK-016 Phase 0 is active and implemented pending the full Product+OS snapshot 
 
 TASK-017 bounded Phase 0 is paused at `07af447`. On explicit resume, first load `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`, then its summary and detailed roadmap. Public TLS staging execution requires exact acknowledgement; Production ACME/public activation and Product pilot remain separately gated.
 
-## TASK-018 active P0 context
+## TASK-018 completed P0 context
 
-Load `registry/current-state.md`, the P0 Roadmap supplement, `tasks/TASK-018/TASK-018.summary.md`, the Phase A Final Plan and bounded Authorization. Phases H1/H1.2 are Consumer-independent and passed; H1.2 routing never lets Context Cost outrank Authority, Safety, DEV, capability, quality or reliability. Use maximum two review/fix cycles per Phase; required PASS plus Critical/High `0/0` advances work. No unchanged-artifact Critic loop.
+Load `registry/current-state.md` and `tasks/TASK-018/TASK-018.summary.md` first. For current BAI VIDEO PRODUCTION status, load `tasks/TASK-018/post-release-bvp-v0.20.1-consumer-supplement-2026-08-14.md`; load the original Phase G/H2 records only for provenance. Phases H1/H1.2 passed; H1.2 routing never lets Context Cost outrank Authority, Safety, DEV, capability, quality or reliability. Use maximum two review/fix cycles per bounded Phase; required PASS plus Critical/High `0/0` advances work. No unchanged-artifact Critic loop.
