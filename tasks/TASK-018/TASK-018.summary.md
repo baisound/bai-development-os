@@ -4,8 +4,8 @@
 - Priority: `P0_MAXIMUM`
 - Status: `ACTIVE / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_PASS / I1_OS_1_1_0_EXACT_DECISION_ESTABLISHED / FINAL_READINESS_NEXT`
 - DEV Profile: `DEV_4_FOUNDATION_CRITICAL` (selector score `40`)
-- Branch: `codex/task-018-phase-g-post-w2-audit`
-- Baseline: `f3617da991d580f5ea1391581652a9012635521a`
+- Branch: `codex/task-018-i1-release-finalization`
+- Baseline: `16991d71b06a85acb9b2f8ba2a16d4d33ba8c689`
 - Source of Truth: current checkout for code; Owner Directive and canonical Governance for authority
 
 ## Current phase
