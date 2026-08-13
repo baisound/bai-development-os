@@ -24,8 +24,8 @@
 ## Required before I1
 
 - Phase G: `CONSUMER_RELEASE_INTEGRATION_PASS`.
-- Phase H2: `PARTIALLY_UNBLOCKED / EMPIRICAL_HARDENING_PENDING`.
+- Phase H2: `H2_EMPIRICAL_HARDENING_PASS / AUTONOMY_HARDENED_WITH_BOUNDED_CONSUMER_HUMAN_GATES`.
 - TASK-036: `W0_PARTIAL_PARKED / W1_PARTIAL_PARKED / W2_PACKAGED_NATIVE_E2E_PASS`; overall completion remains unclaimed.
-- exact TASK-018 OS Closure version/tag/Release decision: `PENDING` and separate from the decided Consumer `0.20.0` release.
+- exact TASK-018 OS Closure version/tag/Release decision: `PENDING / NEXT I1 UNIT` and separate from the completed Consumer `0.20.0` release.
 
 Each future Evidence item must be referenced by path/URL and immutable checksum before I1 assessment.
