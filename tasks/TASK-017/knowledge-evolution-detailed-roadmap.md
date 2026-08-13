@@ -1,7 +1,7 @@
 # TASK-017 — Knowledge Evolution & Federated Evidence Governance OS Detailed Roadmap Ver.1.3
 
-Status: `ACTIVE / PHASE0_COMPOSE_POSTGRES_TUNING_IMPLEMENTED / LIVE_DOCKER_REHEARSAL_AND_PRODUCTION_PILOT_PENDING`
-Roadmap Position: `PHASE 0 AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`.
+Status: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING`
+Roadmap Position: `TASK-018 P0 INSERTED AT SAFE CHECKPOINT; TASK-017 RESUMES BY EXPLICIT RESUME DECISION; PHASE 1+ STILL SEPARATELY AUTHORIZED`.
 Database decision: `PostgreSQL`.
 Infrastructure ceiling: `3,000 JPY/month`.
 
@@ -13,13 +13,19 @@ Transform Development OS, Consumer development and distributed runtime Evidence 
 
 ```text
 TASK-016 Phase 0 Pattern C + contracts
- -> TASK-017 Phase 0 Hub/client pilot
+ -> TASK-017 Phase 0 through Public TLS Staging implementation at 07af447
+ -> PAUSE TASK-017 and preserve Remaining Deployment Gates patch unapplied
+ -> TASK-018 Codex Autonomy P0
+ -> explicit TASK-017 resume decision
+ -> TASK-017 remaining authorized Phase 0 Hub/client pilot gates
  -> TASK-016 Phase 1+ resilience certification
  -> TASK-017 Phase 1+ advanced Knowledge evolution
  -> TASK-017 Late Pattern B
 ```
 
 This replaces the earlier fully linear `TASK-016 complete -> TASK-017` planning sequence. TASK-016 Phase 0 is now complete. Owner authorization dated 2026-08-11 permits the bounded local TASK-017 Phase 0 implementation; public production activation remains separately gated.
+
+The 2026-08-13 Owner-directed supplement inserts TASK-018 before further TASK-017 execution. The canonical pause/resume record is `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`. Production Activation remains `BLOCKED`.
 
 ## 3. Phase 0 — Early Pilot Transport Slice
 

@@ -2,13 +2,14 @@
 
 ## Current authority
 
-- Architecture: `BAI Development OS Architecture Ver.2.28 CURRENT_CANONICAL`
+- Architecture: `BAI Development OS Architecture Ver.2.29 CURRENT_CANONICAL`
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
-- Current route: `TASK-017 Phase 0 / ACTIVE`; VPS private/runtime gates = `PASS`; Public TLS Staging Gate = `IMPLEMENTED / VPS EXECUTION_PENDING`; Production Certificate, Offsite Backup/Restore and Product pilot remain separate gates
-- Roadmap authority: Architecture Ver.2.28 Part XV, `56 / 56 PASS`
+- Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / P0 MAXIMUM`; Phases B-E passed; Phase F bounded Codex Adapter next
+- Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
+- Roadmap authority: Architecture Ver.2.29 Part XV + Part XXX, `56 / 56 PASS`
 
 ## Current subsystem map
 
@@ -32,7 +33,7 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 ## Evidence baseline
 
 - TASK-015: `73 / 73 PASS`
-- Full OS: `1308 / 1308 PASS` (TASK-017 Public TLS Staging Gate; prior Public IP TLS/Caddy baseline 1303/1303)
+- Full OS: `1366 / 1366 PASS` on WSL2 Ubuntu ext4 (TASK-018 Phases B-E; prior TASK-017 Public TLS Staging baseline `1308 / 1308`)
 - Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Roadmap: `56 / 56 PASS`
@@ -46,6 +47,21 @@ Use summaries first. For distributed behavior, start with `tasks/TASK-015/TASK-0
 
 For local-only work, do not load or enable DistributedOS unless topology requires it. For exact subsystem authority, load the owning TASK-004〜014 canonical. A distributed envelope, worker advertisement, queue receipt, quorum-like agreement or high confidence score is coordination/evidence only and never replaces Owner/Policy/Security authority.
 
+## TASK-018 P0 mandatory loading order
+
+1. `registry/current-state.md`
+2. `registry/ai-context-pack.md`
+3. `registry/context-loading-rules.md`
+4. `architecture/BAI_Development_OS_Codex_Autonomy_P0_Roadmap_Refinement_Ver1.0.md`
+5. `tasks/TASK-018/TASK-018.summary.md`
+6. `tasks/TASK-018/phase-a-final-plan-2026-08-13.md`
+7. `tasks/TASK-018/owner-implementation-authorization-2026-08-13.md`
+8. only the exact source modules/tests for the current bounded Phase
+
+Phases B-E are complete and their checkpoint is PR-eligible without closing TASK-018. Current Phase F target is the bounded Codex Adapter; it must consume canonical capabilities and cannot create Authority or business logic. External Automation invocation remains separately gated.
+
+Balanced Execution: maximum two review/fix cycles per bounded Phase. When required gates pass and unresolved Critical/High findings are `0/0`, continue to the next authorized unit rather than repeating Critic on unchanged artifacts.
+
 
 ## TASK-016 completed Phase 0 context
 
@@ -57,6 +73,8 @@ BAI VIDEO PRODUCTION is referenced by immutable Git commit/tree and explicit key
 ## TASK-017 active Phase 0 context
 
 TASK-017 Phase 0 is `ACTIVE`. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`, then the Local Hub / Deployment Readiness / Integration Kit RC implementation, Critic and Judge records.
+
+TASK-017 is now paused at clean checkpoint `07af447` for TASK-018 P0 insertion. Before any TASK-017 resume, read `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`, then its summary and detailed roadmap. The Remaining Deployment Gates patch is preserved unapplied with SHA-256 `721c9593bf8fa07c59b5b49f6690dd73ceeae33da2fa2b586cc58757b6d2e0dc`; it must be re-evaluated against the future checkout.
 
 The accepted Deployment Readiness baseline builds on Local Hub Foundation with one-VPS Docker Compose packaging, private PostgreSQL/API default networking, production-compatible PostgreSQL runtime and immutable migration checksums, server-side hashed API-key credential lifecycle, liveness/readiness separation, explicit-public-profile Caddy TLS template, and safe backup/restore-rehearsal tooling. Public Clients cannot self-assign Trust or backfill provenance. No production key/DB secret is committed.
 

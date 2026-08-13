@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/context-control/handoff-bootstrap-result.schema.json",
+  "title": "BAI Development OS Handoff Bootstrap Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "handoff_bootstrap_schema_version",
+    "project_id",
+    "current_task",
+    "recorded_head",
+    "current_head",
+    "source_truth_mode",
+    "handoff_status",
+    "authorization_state",
+    "implementation_allowed",
+    "next_action",
+    "authority_sources",
+    "loading_plan",
+    "estimated_bootstrap_tokens",
+    "findings",
+    "manifest_sha256",
+    "content_checksum"
+  ],
+  "properties": {
+    "handoff_bootstrap_schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "current_task": { "type": "string", "minLength": 1 },
+    "recorded_head": { "type": "string", "pattern": "^[a-f0-9]{7,64}$" },
+    "current_head": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "pattern": "^[a-f0-9]{7,64}$" }
+      ]
+    },
+    "source_truth_mode": {
+      "enum": ["LOCAL_CHECKOUT", "REMOTE_FEATURE_BRANCH", "HANDOFF_ONLY_READONLY"]
+    },
+    "handoff_status": {
+      "enum": ["CURRENT", "HANDOFF_STALE", "CHECKOUT_STALE", "UNVERIFIED_CHECKOUT"]
+    },
+    "authorization_state": {
+      "enum": ["AUTHORIZED", "NOT_AUTHORIZED", "SUSPENDED", "REVOKED", "AUTHORITY_CONFLICT"]
+    },
+    "implementation_allowed": { "type": "boolean" },
+    "next_action": { "type": "string", "minLength": 1 },
+    "authority_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/authoritySource" }
+    },
+    "loading_plan": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/loadingEntry" }
+    },
+    "estimated_bootstrap_tokens": { "type": "integer", "minimum": 0 },
+    "findings": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/finding" }
+    },
+    "manifest_sha256": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  },
+  "$defs": {
+    "trustLevel": {
+      "enum": [
+        "OWNER_AUTHORITY",
+        "CANONICAL_GOVERNANCE",
+        "AUTHORIZED_TASK",
+        "PROJECT_DOCUMENTATION",
+        "SOURCE_CODE_DATA",
+        "EXTERNAL_UNTRUSTED"
+      ]
+    },
+    "authoritySource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "trust_level", "path_or_ref"],
+      "properties": {
+        "source_id": { "type": "string", "minLength": 1 },
+        "trust_level": { "$ref": "#/$defs/trustLevel" },
+        "path_or_ref": { "type": "string", "minLength": 1 }
+      }
+    },
+    "loadingEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "trust_level", "selected_reason", "estimated_tokens"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "trust_level": { "$ref": "#/$defs/trustLevel" },
+        "selected_reason": {
+          "enum": ["CRITICAL_BOOTSTRAP", "CURRENT_TASK_RELEVANT", "CHANGED_NON_STALE"]
+        },
+        "estimated_tokens": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "severity"],
+      "properties": {
+        "code": {
+          "enum": [
+            "HANDOFF_STALE",
+            "CHECKOUT_STALE",
+            "SOURCE_OF_TRUTH_UNKNOWN",
+            "CRITICAL_SOURCE_CHANGED_IN_NEWER_CHECKOUT",
+            "DIRTY_WORKTREE_PRESERVED",
+            "AUTHORITY_CONFLICT",
+            "AUTONOMY_TASK_NOT_AUTHORIZED"
+          ]
+        },
+        "severity": { "enum": ["INFO", "WARNING", "MAJOR", "CRITICAL"] }
+      }
+    }
+  }
+}

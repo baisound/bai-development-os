@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/autonomous-session-state.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["handoff_schema_version", "handoff_id", "project_id", "task_id", "branch", "head", "dirty", "dirty_paths", "checkpoint_id", "checkpoint_checksum", "last_completed_unit", "gates", "next_action", "files_to_read", "files_not_to_touch", "source_references", "summary_estimated_tokens", "estimated_total_tokens", "previous_conversation_required", "content_checksum"],
+  "properties": {
+    "handoff_schema_version": { "const": "1.0.0" }, "handoff_id": { "type": "string", "minLength": 1 },
+    "project_id": { "type": "string", "minLength": 1 }, "task_id": { "type": "string", "minLength": 1 },
+    "branch": { "type": "string", "minLength": 1 }, "head": { "type": "string", "pattern": "^[a-f0-9]{7,64}$" },
+    "dirty": { "type": "boolean" }, "dirty_paths": { "$ref": "#/$defs/strings" },
+    "checkpoint_id": { "type": "string", "minLength": 1 }, "checkpoint_checksum": { "$ref": "#/$defs/sha" },
+    "last_completed_unit": { "type": "string", "minLength": 1 }, "gates": { "$ref": "#/$defs/strings" },
+    "next_action": { "type": "string", "minLength": 1 }, "files_to_read": { "$ref": "#/$defs/strings" },
+    "files_not_to_touch": { "$ref": "#/$defs/strings" }, "source_references": { "type": "array", "items": { "$ref": "#/$defs/ref" } },
+    "summary_estimated_tokens": { "type": "integer", "minimum": 0 }, "estimated_total_tokens": { "type": "integer", "minimum": 0, "maximum": 2000 },
+    "previous_conversation_required": { "const": false }, "content_checksum": { "$ref": "#/$defs/sha" }
+  },
+  "$defs": {
+    "strings": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+    "sha": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "ref": { "type": "object", "additionalProperties": false, "required": ["path_or_ref", "sha256", "estimated_tokens"], "properties": { "path_or_ref": { "type": "string", "minLength": 1 }, "sha256": { "$ref": "#/$defs/sha" }, "estimated_tokens": { "type": "integer", "minimum": 0 } } }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/human-gate.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "human_gate_schema_version", "gate_id", "task_id", "type", "status", "reason_code",
+    "required_environment", "safe_to_continue_other_tasks", "blocking_capabilities",
+    "non_blocking_candidates", "evidence_required", "authorized_by", "authority_verification_result",
+    "authorization_evidence_checksum", "satisfaction_evidence",
+    "created_by_session", "created_at",
+    "content_checksum"
+  ],
+  "properties": {
+    "human_gate_schema_version": { "const": "1.0.0" },
+    "gate_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "type": {
+      "enum": [
+        "HUMAN_FINAL_AUTHORITY", "NATIVE_EXTERNAL_APPLICATION", "PAID_PROVIDER_EXECUTION",
+        "DESTRUCTIVE_OPERATION", "RELEASE_OR_DEPLOYMENT", "SECURITY_EXCEPTION",
+        "CREDENTIAL_REQUIRED", "DATA_MIGRATION_APPROVAL", "UX_HUMAN_ACCEPTANCE",
+        "UNRESOLVED_AUTHORITY_CONFLICT"
+      ]
+    },
+    "status": { "enum": ["WAITING_OWNER", "SATISFIED", "CANCELLED", "EXPIRED"] },
+    "reason_code": { "type": "string", "minLength": 1 },
+    "required_environment": { "$ref": "#/$defs/stringArray" },
+    "safe_to_continue_other_tasks": { "type": "boolean" },
+    "blocking_capabilities": { "$ref": "#/$defs/stringArray" },
+    "non_blocking_candidates": { "$ref": "#/$defs/stringArray" },
+    "evidence_required": { "$ref": "#/$defs/stringArray" },
+    "authorized_by": { "type": ["string", "null"], "minLength": 1 },
+    "authority_verification_result": {
+      "oneOf": [{ "type": "null" }, { "const": "OWNER_AUTHORIZATION_VERIFIED" }]
+    },
+    "authorization_evidence_checksum": {
+      "oneOf": [
+        { "type": "null" },
+        { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+      ]
+    },
+    "satisfaction_evidence": { "$ref": "#/$defs/stringArray" },
+    "created_by_session": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "SATISFIED" } }, "required": ["status"] },
+      "then": {
+        "properties": {
+          "authorized_by": { "type": "string", "minLength": 1 },
+          "authority_verification_result": { "const": "OWNER_AUTHORIZATION_VERIFIED" },
+          "authorization_evidence_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+          "satisfaction_evidence": { "minItems": 1 }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "stringArray": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+  }
+}

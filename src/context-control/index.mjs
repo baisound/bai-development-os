@@ -65,3 +65,21 @@ export function resolveContextSources(sources){
 }
 
 export { TRUST as CONTEXT_TRUST_LEVELS, SENSITIVITY as CONTEXT_SENSITIVITY_LEVELS, checksum as contextManifestChecksum };
+export {
+  CONTEXT_COST_CONFIDENCE_LEVELS,
+  DEFAULT_CONTEXT_OVERFETCH_POLICY,
+  ContextCostObservatoryError,
+  contextCostRecordChecksum,
+  createContextCostRecord,
+  validateContextCostRecord,
+} from './context-cost-observatory.mjs';
+export {
+  HANDOFF_AUTHORIZATION_STATES,
+  HANDOFF_GIT_RELATIONS,
+  HANDOFF_TRUST_LEVELS,
+  HandoffBootstrapError,
+  bootstrapHandoff,
+  handoffBootstrapResultChecksum,
+  handoffManifestChecksum,
+  validateHandoffBootstrapResult,
+} from './handoff-bootstrap.mjs';

@@ -11,4 +11,6 @@ export * from './engine.mjs';
 export * from './probe.mjs';
 export * from './outbox.mjs';
 export * from './scheduler.mjs';
+export * from './autonomous-queue.mjs';
+export * from './session-rotation.mjs';
 export * from './service.mjs';

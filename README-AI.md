@@ -20,7 +20,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 
 ## Current canonicals
 
-- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.28.md`
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.29.md`
 - TASK-004 Lifecycle: Ver.1.6
 - TASK-005 KnowledgeOS: Ver.1.2
 - TASK-006 AutomationOS: Ver.1.0
@@ -34,9 +34,10 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
 - TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
 - TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 completed; Phase 1+ unauthorized
-- TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `ACTIVE`; bounded Phase 0 Public TLS Staging Gate implemented, VPS execution pending
+- TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `ACTIVE`; Phase 0 paused at `07af447` for TASK-018 P0; Production Activation blocked
+- TASK-018 Codex Autonomous Development Control Plane: `ACTIVE / P0_MAXIMUM`; Phases B-E passed; Phase F bounded Codex Adapter next
 
-TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 Phase 0 is active under bounded deployment authority; Production ACME/public activation and Product pilot remain separately gated.
+TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-018 is current. Production ACME/public activation and Product pilot remain separately gated.
 
 ## CalibrationOS loading rule
 
@@ -44,12 +45,12 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 
 ## Roadmap authority
 
-Architecture Ver.2.28 Part XV is the sole current consolidated roadmap scope. The lossless checker preserves `56 / 56` accumulated source sections. Historical roadmap addenda are provenance only and must not override Part XV. For TASK-015 scope, read Part XV; do not reconstruct current scope by merging historical fragments manually.
+Architecture Ver.2.29 Part XV is the current consolidated roadmap scope and Part XXX records TASK-018 priority plus TASK-017 pause/resume. The lossless checker preserves `56 / 56` accumulated prior source sections. Historical addenda remain provenance.
 
 ## Current verification baseline
 
 - DistributedOS: `73 / 73 PASS`
-- Full OS: `1308 / 1308 PASS`
+- Full OS: `1366 / 1366 PASS` on WSL2 Ubuntu ext4
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
@@ -82,4 +83,8 @@ TASK-016 Phase 0 is active and implemented pending the full Product+OS snapshot 
 
 ## TASK-017 active Phase 0 context
 
-TASK-017 bounded Phase 0 is active. Load `tasks/TASK-017/TASK-017.summary.md`, the pilot detailed design and the current gate design relevant to the assignment. Public TLS staging execution requires exact acknowledgement; Production ACME/public activation and Product pilot remain separately gated. Promotion score/frequency is never authority, hard Safety/Security/Rights/Privacy gates are non-compensable, and Consumer creative/personal/confidential content remains local by default.
+TASK-017 bounded Phase 0 is paused at `07af447`. On explicit resume, first load `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`, then its summary and detailed roadmap. Public TLS staging execution requires exact acknowledgement; Production ACME/public activation and Product pilot remain separately gated.
+
+## TASK-018 active P0 context
+
+Load `registry/current-state.md`, the P0 Roadmap supplement, `tasks/TASK-018/TASK-018.summary.md`, the Phase A Final Plan and bounded Authorization. Use maximum two review/fix cycles per Phase; required PASS plus Critical/High `0/0` advances work. No unchanged-artifact Critic loop.

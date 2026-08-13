@@ -4,15 +4,16 @@
 
 1. `registry/current-state.md`
 2. `registry/ai-context-pack.md`
-3. `PROJECT.md`
-4. Relevant completed Task summary
-5. Exact canonical specification/source modules/tests needed for the decision
+3. Active P0 Roadmap supplement and active Task summary
+4. Bound Final Plan and Implementation Authorization
+5. `PROJECT.md` only when the decision needs broader Product context
+6. Exact canonical specification/source modules/tests needed for the decision
 
 Do not load the whole Architecture or every prior Task by default.
 
 ## 2. Current architecture and roadmap
 
-Architecture Ver.2.28 is current. Part XV preserves the sole consolidated roadmap authority with `56 / 56` source sections. TASK-004〜015 are completed. Owner-directed supplements now make TASK-016 `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED` and TASK-017 `ACTIVE / PHASE0`, with the bounded Hub/Product pilot slice interleaved before TASK-016 Phase 1+. Historical Architecture routing statements remain provenance, not current execution state.
+Architecture Ver.2.29 is current. Part XV preserves the consolidated `56 / 56` source history and Part XXX integrates the Owner-directed TASK-018 P0 route. TASK-004〜015 are completed. TASK-016 remains `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`; TASK-017 is paused at its safe checkpoint. Historical routing statements remain provenance, not current execution state.
 
 ## 3. Completed subsystem loading
 
@@ -42,4 +43,10 @@ For TASK-016 planning, load `tasks/TASK-016/TASK-016.summary.md`, then `tasks/TA
 
 ## 8. TASK-017 planning context
 
-TASK-017 Phase 0 is active under Owner-authorized local/non-production scope. Load `tasks/TASK-017/TASK-017.summary.md`, then `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`. For the current Product/deployment handoff also load the Integration Kit RC and Pre-Live Hardening implementation/Critic/Judge records. Load the CREATIVE OS audit adjudication/refinement only for prior-gap provenance. Production VPS/DNS/TLS/real credential activation remains separately gated.
+TASK-017 Phase 0 is paused at `07af447` for TASK-018 P0. When TASK-017 resume is explicitly selected, load `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`, then `TASK-017.summary.md`, then `knowledge-evolution-detailed-roadmap.md`, and only the exact gate design/evidence needed. Re-audit the preserved patch and current Git before mutation. Production VPS/DNS/TLS/real credential activation remains separately gated and Production Activation is `BLOCKED`.
+
+## 9. TASK-018 P0 planning and execution context
+
+TASK-018 is the active P0 route. Load the Roadmap supplement, TASK-018 summary, Phase A Final Plan and the exact current bounded authorization. Phase B reads only ContextControl, relevant Context Guard estimation contracts, its schema and tests. Do not load all Automation/Integration/Security history by default.
+
+Use Balanced Execution: two review/fix cycles maximum per bounded Phase. Zero unresolved Critical/High plus required PASS permits advancement; unchanged artifacts do not justify repeated Critic execution.
