@@ -2,9 +2,9 @@
 
 - Identity: `TASK-018` / `BAI-OS-AUTONOMY-001`
 - Priority: `P0_MAXIMUM`
-- Status: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_I0_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE / I1_BLOCKED`
+- Status: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_I0_H2A_PASS / PHASE_G_M3A_NATIVE_CHECKPOINT_PASS_TASK036_W2_ACTIVE / H2_OVERALL_ACTIVE / I1_BLOCKED`
 - DEV Profile: `DEV_4_FOUNDATION_CRITICAL` (selector score `40`)
-- Branch: `autonomy/task-018/phase-i0-closure-readiness`
+- Branch: `autonomy/task-018/phase-g-consumer-pilot`
 - Baseline: `07af4470397e85ccdf86ec57b6b7c00c6992b974`
 - Source of Truth: current checkout for code; Owner Directive and canonical Governance for authority
 
@@ -16,7 +16,7 @@ Continuous local implementation is Owner-authorized for the P0 scope. External A
 
 ## Next implementation unit
 
-Consumer-independent Phases through I0 are complete. I0 provides a deterministic, tamper-evident readiness assessment plus Closure checklist, Changelog/Release drafts, rollback and Evidence index. Its current correct decision is `I0_PREPARED / I1_RELEASE_FINALIZATION_BLOCKED`. Phase G remains parked and H2 waits on its Pilot Evidence. No Consumer checkout access or external Automation invocation occurred.
+Consumer-independent Phases through I0 are complete. Phase G now has real TASK-010/011/012 native PASS, Windows/WSL2 Consumer regression PASS, an all-green merged Consumer PR and conversation-free restart PASS. H2A converted that evidence into bounded context-precedence, external-state-freshness and branch/session-rotation hardening without activating model/cadence policy. TASK-036 W0/W1 is partial and W2 is active but not wired, so the correct decision remains `I0_PREPARED / I1_RELEASE_FINALIZATION_BLOCKED`.
 
 ## Current checkpoint
 

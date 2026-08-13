@@ -21,8 +21,8 @@
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
-- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_I0_PASS / PHASE_G_PARKED_HUMAN_GATE / H2_WAITING_PILOT_EVIDENCE / I1_BLOCKED` — `BAI-OS-AUTONOMY-001`, P0 maximum
-- Current development route: `TASK-018 P0 — H1 Core Hardening and H1.2 Safety-first Routing passed; Phase G Consumer/native Pilot parked; H2 waits Pilot Evidence; TASK-017 resumes only through its 2026-08-13 pause/resume decision`
+- TASK-018: `ACTIVE / PHASES_B_C_D_E_F_H1_H1_2_H1_3_I0_H2A_PASS / PHASE_G_M3A_NATIVE_CHECKPOINT_PASS_TASK036_W2_ACTIVE / H2_OVERALL_ACTIVE / I1_BLOCKED` — `BAI-OS-AUTONOMY-001`, P0 maximum
+- Current development route: `TASK-018 P0 — Phase G M3A native checkpoint merged; TASK-036 W0/W1 partial and W2 active; H2 may consume accepted Pilot Evidence; TASK-017 remains paused and resumes only through its 2026-08-13 pause/resume decision`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -107,7 +107,9 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Roadmap supplement: `architecture/BAI_Development_OS_Codex_Autonomy_P0_Roadmap_Refinement_Ver1.0.md`.
 - Completed units: Phase B Context Cost Observatory (`CONTEXT_OBSERVABILITY_MVP_PASS`), Phase C Handoff Bootstrap (`HANDOFF_BOOTSTRAP_PASS`), Phase D Queue/Human Gate (`AUTONOMOUS_QUEUE_PASS`), Phase E Session Rotation (`SESSION_ROTATION_PASS`).
 - Completed units now include Phase F bounded Codex Adapter (`CODEX_ADAPTER_PASS`).
-- Current next unit: Phase G BAI VIDEO PRODUCTION Consumer Pilot, `PARKED_HUMAN_GATE` pending separately bound Consumer/native authority.
+- Phase G Consumer checkpoint: BAI VIDEO PRODUCTION TASK-010/011/012 native PASS; Windows `778 passed, 1 skipped`; WSL2 Ubuntu `779 passed`; conversation-free restart PASS; PR #19 all-green and merged at exact main SHA `0861d8635480932a1e5703e5b0304fa56c87e04d`.
+- Current next unit: TASK-036 W0/W1 bounded closure/parking and W2 minimum-editing E2E on Consumer branch `feature/task-036-phase-g-w2`. TASK-036 Product completion remains blocked.
+- H2A Pilot hardening checkpoint: PASS. Current/recent Evidence precedence, external PR-state revalidation, sanitized native-Evidence loading and post-merge branch/session rotation are adopted. Model/provider/cadence optimization and Knowledge promotion remain inactive because one Pilot sample is insufficient.
 - Phase H1 Consumer-independent Core Hardening: `AUTONOMY_CORE_HARDENING_PASS`; Phase H1.2 Safety-first Routing: `SAFETY_FIRST_ROUTING_PASS`; Phase H2 remains `WAITING_PILOT_EVIDENCE`.
 - H1.2 permits verified Context Cost to break only quality-and-reliability ties after all Authority/Safety/DEV/capability/provider/budget gates pass; it cannot create Authority or dispatch work.
 - H1.3 Operational Contracts: `AUTONOMY_OPERATIONAL_CONTRACTS_PASS`; required manuals/specifications and the exact exception/signal Failure Registry are published.
@@ -116,4 +118,4 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Phase A-E checkpoint was merged through all-green PR #13; Phase F is complete and TASK-018 remains active with Phase G-H unfinished.
 - Governance balance: maximum two Critic/fix cycles per bounded Phase; required PASS plus unresolved Critical/High `0/0` advances the work.
 - Tag and GitHub Release are Owner-authorized only after TASK-018 completion, PR all-green and merge to `main`; their exact version/tag is a Closure decision.
-- Deploy, Production Activation, paid/native execution and direct push to `main` remain prohibited.
+- Deploy, Production Activation, paid-provider execution and direct push to `main` remain prohibited. Separately authorized bounded native Consumer execution is Evidence-gated.

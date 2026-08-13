@@ -12,11 +12,10 @@ Expected decision after I0 artifacts and tests: `I0_PREPARED / I1_RELEASE_FINALI
 
 ## I1 blockers
 
-- `EVIDENCE_NOT_PASS:phase_g:PARKED_HUMAN_GATE`
-- `EVIDENCE_NOT_PASS:phase_h2:WAITING`
-- `EVIDENCE_NOT_PASS:consumer_regression:NOT_PROVEN`
-- `EVIDENCE_NOT_PASS:conversation_free_restart:NOT_PROVEN`
-- `EVIDENCE_NOT_PASS:context_cost_report:NOT_PROVEN`
+- `EVIDENCE_NOT_PASS:phase_g:TASK036_W2_BLOCKED_NOT_WIRED`
+- `EVIDENCE_NOT_PASS:phase_h2:EMPIRICAL_HARDENING_PENDING`
 - `EXACT_RELEASE_DECISION_NOT_VERIFIED`
+
+Resolved since I0 preparation: real M3A native Evidence, Consumer regression, conversation-free restart and Pilot Context Cost checkpoint. Their PASS does not override TASK-036/H2/exact-release blockers.
 
 Completion Record, Tag, Release and external effect fields remain `false`. This is the intended safe result, not a failed I0 implementation.

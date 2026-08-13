@@ -49,6 +49,8 @@ TASK-017 Phase 0 is paused at `07af447` for TASK-018 P0. When TASK-017 resume is
 
 TASK-018 is the active P0 route. Load the Roadmap supplement, TASK-018 summary, Phase A Final Plan and the exact current bounded authorization. Phase B reads only ContextControl, relevant Context Guard estimation contracts, its schema and tests. Do not load all Automation/Integration/Security history by default.
 
+For Phase G continuation, load `tasks/TASK-018/phase-g-consumer-pilot-checkpoint-2026-08-13.md`, then the conversation-free restart and Pilot Context Cost records, then only the exact Consumer TASK-036 contract/Evidence needed. Treat Consumer main SHA `0861d8635480932a1e5703e5b0304fa56c87e04d` as the accepted M3A checkpoint. Do not reload raw Resolve/Cubase artifacts or superseded frontier documents unless a specific discrepancy requires them. TASK-036 partial Evidence cannot authorize M3B completion, Tag or Release.
+
 Use Balanced Execution: two review/fix cycles maximum per bounded Phase. Zero unresolved Critical/High plus required PASS permits advancement; unchanged artifacts do not justify repeated Critic execution.
 
 For H1.2 routing work, load `src/automation/safety-first-routing.mjs`, its output schema and focused tests plus the Context Cost validator. Do not load or inspect the BAI VIDEO PRODUCTION checkout. Context Cost may order only routes that already pass exact Authority, Safety, DEV, capability, quality, reliability, provider and budget requirements.
