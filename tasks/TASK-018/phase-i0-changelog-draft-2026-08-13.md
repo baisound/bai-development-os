@@ -1,6 +1,8 @@
 # TASK-018 Phase I0 — Changelog Draft
 
-Status: `DRAFT / VERSION_PENDING_CLOSURE_DECISION`
+Status: `FINALIZED_FOR_1_1_0 / I1_PR_MERGE_TAG_RELEASE_PENDING`
+
+Exact release decision: `1.1.0 / v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`.
 
 ## Added
 
@@ -16,4 +18,4 @@ Status: `DRAFT / VERSION_PENDING_CLOSURE_DECISION`
 
 - no Authority creation, protected-main direct push, automatic paid/native execution, Deploy or Production Activation;
 - Consumer runtime remains independent;
-- Tag/version and final Release notes remain undecided until Phase G/H2 and exact Closure decision.
+- TASK-036 W0/W1 and overall M3B remain unclaimed.

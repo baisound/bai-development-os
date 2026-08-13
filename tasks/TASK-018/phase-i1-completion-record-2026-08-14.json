@@ -1,0 +1,22 @@
+{
+  "completion_record_version": "1.0.0",
+  "completion_id": "a33e6e48-dd93-4e76-9ea2-a22a0363c15c",
+  "task_id": "TASK-018",
+  "status": "COMPLETED",
+  "closure_result": "CLOSURE_READY",
+  "evidence": [
+    "tasks/TASK-018/phase-i1-final-readiness-2026-08-14.json",
+    "tasks/TASK-018/phase-h2b-final-empirical-hardening-judge-decision-2026-08-14.md",
+    "tasks/TASK-018/phase-g-consumer-release-closure-evidence-2026-08-14.md",
+    "tasks/TASK-018/phase-g-post-w2-conversation-free-restart-evidence-2026-08-14.md",
+    "tasks/TASK-018/phase-g-final-pilot-context-cost-2026-08-14.json"
+  ],
+  "accepted_risks": [
+    "TASK-036 W0/W1 remain PARTIAL/PARKED_TO_PHASE_H2; overall TASK-036/M3B is not claimed",
+    "provider/cached/output/billed Context Cost fields remain null; no billing reduction is claimed",
+    "OS v1.1.0 is GIT_SOURCE_RELEASE_ONLY; no Consumer-installable signed bundle is claimed"
+  ],
+  "follow_up_task_ids": [],
+  "knowledge_candidates": [],
+  "completed_at": "2026-08-13T19:07:01.712Z"
+}

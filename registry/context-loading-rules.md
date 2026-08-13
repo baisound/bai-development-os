@@ -57,4 +57,4 @@ For H1.2 routing work, load `src/automation/safety-first-routing.mjs`, its outpu
 
 For autonomy operation and integration questions, load the exact Ver.1.0 Operator/Consumer/Handoff/Context/Codex specification and `registry/autonomy-failure-registry.json`; do not reload the P0 handoff pack or all source modules by default.
 
-For TASK-018 Closure, load the H2B Judge, I0 current report, Evidence index and `specifications/BAI_Development_OS_TASK018_Closure_Readiness_Ver1.0.md`. `I0_PREPARED` and H2 PASS are not completion; I1 must make the exact OS version/tag/Release decision and pass final readiness before any Completion Record, Tag or Release.
+For TASK-018 Closure, load the H2B Judge, I0 Evidence index, exact I1 decision, final-readiness JSON, I1 Judge/Completion approval and `specifications/BAI_Development_OS_TASK018_Closure_Readiness_Ver1.0.md`. The exact decision is `1.1.0 / v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`; final readiness and Completion approval passed. Merge only the exact all-green I1 PR head; Tag/Release must follow exact main merge verification and cannot broaden TASK-036/M3B claims.

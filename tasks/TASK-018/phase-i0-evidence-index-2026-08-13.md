@@ -7,7 +7,8 @@
 - Phase H1 Core Hardening Judge and PR #15.
 - Phase H1.2 Safety-first Routing Judge and PR #16.
 - Phase H1.3 Operational Contracts Judge and PR #17.
-- Current WSL2 Ubuntu ext4 regression baseline: `1412 / 1412 PASS` before I0 implementation.
+- Current full WSL2 Ubuntu ext4 regression: `1423 / 1423 PASS` through H2/I0.
+- I1 focused Release regression: `93 / 93 PASS` on WSL2 Ubuntu ext4; Release conformance `PASS / 8 schemas`.
 - Current unresolved Critical/High: `0/0`.
 
 ## Phase G evidence now accepted
@@ -21,11 +22,13 @@
 - exact Consumer release decision: `0.20.0 / v0.20.0 / stable`.
 - Consumer release integration: `PASS` — metadata head `3e43b550ad3eb1db9c6b51843c0051d692c1732c`; isolated WSL2 `805 / 805`; hosted checks `9 / 9`; PR #20 main merge `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88`; annotated/stable `v0.20.0`; formal Release workflow PASS; branch cleanup verified.
 
-## Required before I1
+## I1 accepted checkpoint
 
 - Phase G: `CONSUMER_RELEASE_INTEGRATION_PASS`.
 - Phase H2: `H2_EMPIRICAL_HARDENING_PASS / AUTONOMY_HARDENED_WITH_BOUNDED_CONSUMER_HUMAN_GATES`.
 - TASK-036: `W0_PARTIAL_PARKED / W1_PARTIAL_PARKED / W2_PACKAGED_NATIVE_E2E_PASS`; overall completion remains unclaimed.
-- exact TASK-018 OS Closure version/tag/Release decision: `PENDING / NEXT I1 UNIT` and separate from the completed Consumer `0.20.0` release.
+- exact TASK-018 OS Closure version/tag/Release decision: `1.1.0 / v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`.
+- exact decision record: `tasks/TASK-018/phase-i1-exact-os-release-decision-2026-08-14.md`.
+- final Release notes: `tasks/TASK-018/phase-i1-v1.1.0-release-notes.md`.
 
-Each future Evidence item must be referenced by path/URL and immutable checksum before I1 assessment.
+The next machine assessment binds this Evidence index by immutable checksum. Completion Record, Tag and Release remain false until their ordered gates.
