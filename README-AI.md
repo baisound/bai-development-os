@@ -34,10 +34,10 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-014 CalibrationOS / Adaptive Governance Calibration & Policy Learning: Ver.1.0
 - TASK-015 DistributedOS / Distributed Orchestration & Event Fabric: Ver.1.0
 - TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 completed; Phase 1+ unauthorized
-- TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `ACTIVE`; Phase 0 paused at `07af447` for TASK-018 P0; Production Activation blocked
-- TASK-018 Codex Autonomous Development Control Plane: `COMPLETED / P0_MAXIMUM`; Phase G/H2/I1 passed and OS `v1.1.0` was published; the later BAI VIDEO PRODUCTION `v0.20.1` supplement closes TASK-036/M3B without reopening TASK-018
+- TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `PAUSED_AT_07AF447`; Production Activation blocked
+- TASK-018 Codex Autonomous Development Control Plane: `COMPLETED / P0_MAXIMUM`; Phase G/H2/I1 passed and OS `v1.1.0` was published; append-only BAI VIDEO PRODUCTION supplements record `v0.20.1` TASK-036/M3B closure and the later R2/R3 plus bounded R4 adapter progression without reopening TASK-018
 
-TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-018 is completed, including its Phase G Consumer Pilot; the later BAI VIDEO PRODUCTION v0.20.1 supplement is the current Consumer closure record. Production ACME/public activation remains separately gated.
+TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-018 is completed, including its Phase G Consumer Pilot. For current Consumer position, prefer the R2-R4 supplement; the earlier v0.20.1 supplement remains release/TASK-036 provenance. Production ACME/public activation remains separately gated.
 
 ## CalibrationOS loading rule
 
@@ -45,7 +45,7 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 
 ## Roadmap authority
 
-Architecture Ver.2.29 Part XV is the current consolidated roadmap scope and Part XXX records TASK-018 priority plus TASK-017 pause/resume. The lossless checker preserves `56 / 56` accumulated prior source sections. Historical addenda remain provenance.
+Architecture Ver.2.29 Part XV is the current consolidated roadmap scope and Part XXX records TASK-018 priority plus TASK-017 pause/resume. `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md` is the current status overlay: TASK-018 complete, TASK-017 paused, BAI VIDEO PRODUCTION R2/R3 complete and bounded R4 adapter hosted-closed with native completion parked. It does not create the next roadmap. The lossless checker preserves `56 / 56` accumulated prior source sections. Historical addenda remain provenance.
 
 ## Current verification baseline
 
@@ -87,4 +87,4 @@ TASK-017 bounded Phase 0 is paused at `07af447`. On explicit resume, first load 
 
 ## TASK-018 completed P0 context
 
-Load `registry/current-state.md` and `tasks/TASK-018/TASK-018.summary.md` first. For current BAI VIDEO PRODUCTION status, load `tasks/TASK-018/post-release-bvp-v0.20.1-consumer-supplement-2026-08-14.md`; load the original Phase G/H2 records only for provenance. Phases H1/H1.2 passed; H1.2 routing never lets Context Cost outrank Authority, Safety, DEV, capability, quality or reliability. Use maximum two review/fix cycles per bounded Phase; required PASS plus Critical/High `0/0` advances work. No unchanged-artifact Critic loop.
+Load `registry/current-state.md` and `tasks/TASK-018/TASK-018.summary.md` first. For current BAI VIDEO PRODUCTION status, load `tasks/TASK-018/post-release-bvp-r2-r4-consumer-supplement-2026-08-14.md`; then load the earlier `post-release-bvp-v0.20.1-consumer-supplement-2026-08-14.md` only for exact release/TASK-036 provenance. Load the original Phase G/H2 records only when chronology is required. Phases H1/H1.2 passed; H1.2 routing never lets Context Cost outrank Authority, Safety, DEV, capability, quality or reliability. Use maximum two review/fix cycles per bounded Phase; required PASS plus Critical/High `0/0` advances work. Park only the exact blocked unit and continue independent authorized work. No unchanged-artifact Critic loop.

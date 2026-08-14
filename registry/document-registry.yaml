@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-13T00:00:00+09:00'
+registry_generated_at: '2026-08-14T13:49:55+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: be915296d9edf4187bbddd4c156b42dab4437270236825c84f4b48e696c3ae3f
-  size_bytes: 8764
+  sha256: 671f0584c28ffeef8afcadac11909577eb10664f7236232b51ff2c539c5cf983
+  size_bytes: 9152
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 7b22b572b5abbe1104b6611b7ecc9eee77d1a81d188e5ec5722d31edab21b40f
-  size_bytes: 6288
+  sha256: bdbc86f022457c5d29000acd3ed8aa8e37ae347645409688c5a97520e7e5df11
+  size_bytes: 6864
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 225c000937e6745e4abd4e456d544826f88d3bed0c7204d70608607edc6a65a1
-  size_bytes: 10184
+  sha256: bacaa956efddb352165c9f0261f178e8eb0c35f1fff8a2248d49177d68b0de66
+  size_bytes: 10700
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6cb648dfad59e8a76e09580c59da413246219dbc5be77285927d374509c6e832
-  size_bytes: 6546
+  sha256: ce5c538f521b96ef0c9386367b12d9fd25671c4bb30cc2064d82b4bf8e27b033
+  size_bytes: 7143
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: bff2b510ffb8434c3d80a1eb96bdeb50a58f909c5a28feb93e9e228558c573a1
-  size_bytes: 15323
+  sha256: 58c24c6a0e478218a165b426819f186a6bf63afab7a61e461dcdd4ceaf3fbef4
+  size_bytes: 16368
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7463,8 +7463,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: B
-  sha256: 8ea26ff6931e25beeaa310239e835fc954f331339318fef460a6b9d1b479421c
-  size_bytes: 2429
+  sha256: 013623dc76cd37dc802954c92d381d4e9d6e3d95381f9bf4cea7c0b469c5c9be
+  size_bytes: 3143
   preferred_loading: summary-or-on-demand
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -8238,18 +8238,44 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_POST_RELEASE_CONSUMER_SUPPLEMENT
   effective_date: '2026-08-14'
+- document_id: 012F811653471320
+  path: tasks/TASK-018/post-release-bvp-r2-r4-consumer-supplement-2026-08-14.md
+  title: 'TASK-018 Post-release BAI VIDEO PRODUCTION R2-R4 Consumer Supplement'
+  category: closure-record
+  authority: owner-directed-task-governance
+  importance_level: A
+  sha256: decdc4d7fdd63dfdf404e2bd41ae58d7c2a2323b24a0e3fe756fedd10820f424
+  size_bytes: 4975
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK018_POST_RELEASE_R2_R4_CONSUMER_SUPPLEMENT
+  effective_date: '2026-08-14'
+- document_id: B7CCAA96395FED7B
+  path: architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md
+  title: 'BAI Development OS — Current Roadmap Position Supplement — 2026-08-14'
+  category: architecture-document
+  authority: owner-directed-current-position
+  importance_level: A
+  sha256: 06d628a49645b33213f2fe019f4f0f54bb1e3abcd5fed929b1aec065b106e95c
+  size_bytes: 2757
+  preferred_loading: read-first
+  status: CURRENT_CANONICAL_ROADMAP_POSITION_SUPPLEMENT
+  effective_date: '2026-08-14'
 current_canonical_document_sets:
-  effective_date: '2026-08-10'
+  effective_date: '2026-08-14'
   promotion_authority: Owner
-  consistency_result: CROSS_FORMAT_CONSISTENCY_PASS
-  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.28.document-sync-and-visual-qa.md
+  consistency_result: STRUCTURAL_SYNC_PASS_VISUAL_QA_UNAVAILABLE
+  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.29.document-sync-and-visual-qa.md
   architecture:
-    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_28
-    version: '2.28'
+    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_29
+    version: '2.29'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.28.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.28.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.28.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.29.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.29.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.29.summary.md
+  roadmap_position:
+    document_id: BAI_DEVELOPMENT_OS_CURRENT_ROADMAP_POSITION_SUPPLEMENT_2026_08_14
+    status: CURRENT_CANONICAL_ROADMAP_POSITION_SUPPLEMENT
+    machine: architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md
   task_004_lifecycle:
     document_id: TASK_004_LIFECYCLE_FOUNDATION
     version: '1.6'
@@ -8260,9 +8286,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_TASK017_PHASE0_COMPOSE_POSTGRES_TUNING
+  registry_sync_status: CURRENT_AFTER_TASK018_BVP_R2_R4_CONSUMER_AND_ROADMAP_POSITION_SYNC
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK016_PHASE0_COMPLETE_TASK017_PHASE0_COMPOSE_POSTGRES_TUNING_ACCEPTED_LIVE_DOCKER_GATE_PENDING
+  roadmap_expansion_status: TASK018_COMPLETE_OS_V1_1_0_PUBLISHED_BVP_R2_R3_COMPLETE_R4_ADAPTER_HOSTED_CLOSED_NATIVE_PARKED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -8272,7 +8298,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK-017 Phase 0 — live Docker/PostgreSQL rehearsal using tuned Compose profile — ENVIRONMENT GATE
+  next_canonical_route: FUTURE_ROADMAP_DECISION_PENDING_OWNER_PROCESS; TASK-017 remains PAUSED and Production Activation BLOCKED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -8329,7 +8355,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 56
-  roadmap_refinement_status: C_COMPLETE_A_COMPOSE_POSTGRES_TUNING_ACCEPTED_LIVE_DOCKER_AND_PRODUCTION_PILOT_PENDING_B_LATE
+  roadmap_refinement_status: TASK018_COMPLETE_OS_V1_1_0_PUBLISHED; TASK017_PAUSED; BVP_R2_R3_COMPLETE_R4_ADAPTER_HOSTED_CLOSED_NATIVE_PARKED
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -8365,15 +8391,15 @@ current_canonical_document_sets:
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: ACTIVE_PHASE0_COMPOSE_POSTGRES_TUNING_ACCEPTED_LIVE_DOCKER_AND_PRODUCTION_PILOT_PENDING
+    status: PAUSED_AT_07AF447_PRODUCTION_ACTIVATION_BLOCKED
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK018_POST_RELEASE_BVP_V0_20_1_SUPPLEMENT
+registry_status: CURRENT_AFTER_TASK018_BVP_R2_R4_CONSUMER_AND_ROADMAP_POSITION_SYNC
 registry_status_details:
-  documents: 682
+  documents: 684
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
   current_task: TASK-018 COMPLETED / PHASE_G_PASS / H2_PASS / I1_RELEASE_FINALIZATION_PASS / V1_1_0_RELEASE_PUBLISHED
-  next_task: BAI VIDEO PRODUCTION governed R2 foundation promotion; TASK-017 remains paused and Production Activation remains BLOCKED; Consumer TASK-036/M3B PASS
+  next_task: FUTURE_ROADMAP_DECISION_PENDING_OWNER_PROCESS; TASK-017 remains paused and Production Activation BLOCKED; Consumer R2/R3 complete; R4 adapter hosted-closed; native H3 completion parked
