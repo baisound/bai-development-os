@@ -23,8 +23,8 @@
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - TASK-017: `PAUSED_AT_07AF447 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
 - TASK-018: `COMPLETED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_RELEASE_PUBLISHED` — `BAI-OS-AUTONOMY-001`, P0 maximum
-- TASK-019: `ACTIVE / P0_MAXIMUM / FOUNDATION_COMPLETE_LOCAL / IMPLEMENTATION_PR_PENDING`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`
-- Current development route: `Architecture Ver.2.30 merged at 0b36b96c9bdd5d647e680dc945ee5745a4c5fcf5. TASK-019 Foundation is implemented and DEV-4 local gates pass. Merge the implementation PR, verify exact main SHA, then perform final Closure/Registry sync. TASK-017 remains paused pending a separate Owner-routed resume decision`
+- TASK-019: `COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`; implementation PR #29 merged at `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`
+- Current development route: `TASK-019 is completed and its final Registry state is recorded. The Owner-directed next Authority is BAI VIDEO PRODUCTION V6 Product Integration from a fresh target-branch checkout; no TASK-017 resume is implied`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -40,6 +40,7 @@
 - Last Updated by Consumer Design Governance preimplementation design: `2026-08-14`
 - Last Updated by TASK-019 Owner priority and roadmap promotion: `2026-08-14`
 - Last Updated by TASK-019 Foundation local implementation: `2026-08-14`
+- Last Updated by TASK-019 exact implementation merge and completion: `2026-08-14`
 
 ## TASK-019 Consumer Design Governance Priority Promotion — 2026-08-14
 
@@ -51,10 +52,10 @@
 - Owner roadmap decision / Task identity: `ACCEPTED / TASK-019`.
 - Priority: `P0 / MAXIMUM / HIGHEST_ACROSS_ALL_CURRENT_WORK`.
 - Roadmap promotion: `AUTHORIZED`; Architecture Ver.2.30 is the current Canonical after merge.
-- Foundation implementation: `COMPLETE_LOCAL / IMPLEMENTATION_PR_PENDING`; checksum-bound Allowed Files and DEV-4 Gates passed.
+- Foundation implementation: `COMPLETED / PR #29 MERGED`; exact main merge SHA `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`; Ready CI run `31789155119` all-green.
 - TASK-017 resume: `NOT_AUTHORIZED`.
 - Production Activation: `BLOCKED`.
-- Resume point: read this state, the TASK-019 summary, Owner authorization, accepted roadmap source, accepted detailed design and exact authorization boundary. Verify the roadmap merge SHA, then use a fresh TASK-019 implementation branch.
+- Resume point: TASK-019 has no remaining implementation. Finish the dedicated Closure PR and cleanup, then follow the Owner-directed BAI VIDEO PRODUCTION V6 handoff from its `README-FIRST.md` under Consumer Authority.
 
 ## Current Product Boundary
 
