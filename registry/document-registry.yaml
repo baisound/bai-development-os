@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-14T23:30:00+09:00'
+registry_generated_at: '2026-08-14T23:55:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: ded1c660aa750fbcc257ad2f1d36f5283c642cc2704643a1b875cadff894020f
-  size_bytes: 9695
+  sha256: 0a1d754fb45fe39a1cb7769ac118e9fc40f282ac03b13d69ba7202a536746f62
+  size_bytes: 9518
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: bdbc86f022457c5d29000acd3ed8aa8e37ae347645409688c5a97520e7e5df11
-  size_bytes: 6864
+  sha256: 96e38674db304579c8ab388ef65df97c521d5eb2e22f73969caea2aa55c8108b
+  size_bytes: 6879
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: de8f5d8d6102ce50d6c8e7cce25797357bce70aa077ccfa014a10065f3c7ef3c
-  size_bytes: 11877
+  sha256: 89817753f52516ac3ac1786c4394bae9e06ad24c42b1a81daa563c724a2dd048
+  size_bytes: 11765
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: af6f2d8864612e0e98bf009fb4b209eb8a7c203dab7109b0950b44b9c13ae23c
-  size_bytes: 7933
+  sha256: 4ca2ea66190bf4645a16af6ad2476ac8879ea04207e24038a007b33fb579f66a
+  size_bytes: 8162
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 86da87b6c18cb39842d93fb5471d4525fdb3628fc4f770b869d4cea6400db463
-  size_bytes: 17707
+  sha256: d6f525523ea20fca4010ae9c148dfefe842c1ffb3cf5b7fdc75edf40bdc0ff2e
+  size_bytes: 18009
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8337,18 +8337,150 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: IMPLEMENTATION_NOT_AUTHORIZED
   effective_date: '2026-08-14'
+- document_id: F7FCA1F7F44138A4
+  path: architecture/BAI_Development_OS_Architecture_Ver2.30.md
+  title: 'BAI Development OS Architecture Ver.2.30 — TASK-019 Consumer Design Governance Priority Integration'
+  category: architecture-document
+  authority: architecture-canonical
+  importance_level: A
+  sha256: 630b36088ba7c92a57b0dae22863550c3d72542eb4cd57f882d3d26685b3ea7e
+  size_bytes: 357780
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK019_P0
+  effective_date: '2026-08-14'
+- document_id: BF5B9EFCEC156D57
+  path: architecture/BAI_Development_OS_Architecture_Ver2.30.docx
+  title: 'BAI_Development_OS_Architecture_Ver2.30.docx'
+  category: architecture-human-copy
+  authority: human-readable-copy
+  importance_level: A
+  sha256: 1d131fbafd8161b5c014b4e7b688de64181dbb933a686f186f5e87e655a8ec7a
+  size_bytes: 168934
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK019_P0
+  effective_date: '2026-08-14'
+- document_id: 227683CB9B2A6C29
+  path: architecture/BAI_Development_OS_Architecture_Ver2.30.summary.md
+  title: 'BAI Development OS Architecture Ver.2.30 Summary'
+  category: architecture-document
+  authority: navigation-aid
+  importance_level: B
+  sha256: 4bdaa4526af6ccf59db4005dcf9f93dd5611ab7305bb69527f3180e2da9928b8
+  size_bytes: 1224
+  preferred_loading: summary-or-on-demand
+  status: CURRENT_TASK019_P0
+  effective_date: '2026-08-14'
+- document_id: FC8F9F7717A516F5
+  path: architecture/BAI_Development_OS_Architecture_Ver2.30.document-sync-and-visual-qa.md
+  title: 'Architecture Ver.2.30 Document Sync and Visual QA'
+  category: architecture-document
+  authority: qa-evidence
+  importance_level: B
+  sha256: db8c8e66736a5b0f30a3da20063e7a7b8fb65903423d6463b157f73d5a2f1e7c
+  size_bytes: 1536
+  preferred_loading: summary-or-on-demand
+  status: STRUCTURAL_PASS_VISUAL_UNAVAILABLE
+  effective_date: '2026-08-14'
+- document_id: F242DC6BB1475A37
+  path: architecture/BAI_Development_OS_Post_TASK018_Consumer_Design_Governance_Roadmap_Refinement_Ver1.0.md
+  title: 'BAI Development OS — Post-TASK-018 Consumer Design Governance Roadmap Refinement Ver.1.0'
+  category: architecture-document
+  authority: owner-directed-roadmap-decision
+  importance_level: A
+  sha256: c1577533c4a5a6b7d6ef5038d8c3c708b2131376bedb1d3d73c729750b954498
+  size_bytes: 4321
+  preferred_loading: read-first-or-current-phase
+  status: OWNER_ACCEPTED_CURRENT_ROADMAP_SOURCE
+  effective_date: '2026-08-14'
+- document_id: 04C5747CC9255EED
+  path: tasks/TASK-019/owner-priority-roadmap-and-implementation-authorization-2026-08-14.md
+  title: 'TASK-019 — Owner Priority, Roadmap and Implementation Authorization'
+  category: task-record
+  authority: owner-authorization
+  importance_level: A
+  sha256: 61a95c420bf017fa38ab8f0a12d1f6414fe4e76ee85fb234968206602df05add
+  size_bytes: 1873
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK019_P0
+  effective_date: '2026-08-14'
+- document_id: 47231D6211FD875E
+  path: tasks/TASK-019/task.md
+  title: 'TASK-019 — Consumer Design Intake, Roadmap Reconciliation & Acceptance Assurance OS'
+  category: task-record
+  authority: task-canonical
+  importance_level: A
+  sha256: 3b0aeab36c43d76bbb8f578a5bcbc987131fe063c8183d3083af2de7ab20ae2a
+  size_bytes: 2268
+  preferred_loading: read-first-or-current-phase
+  status: ACTIVE_ROADMAP_PROMOTION
+  effective_date: '2026-08-14'
+- document_id: A7F09C6F71E22040
+  path: tasks/TASK-019/TASK-019.summary.md
+  title: 'TASK-019 Summary'
+  category: task-record
+  authority: navigation-aid
+  importance_level: A
+  sha256: b60607ebdd9b287db107971dd1dc697d4d28232f128a39c4d320d61ccd80ec56
+  size_bytes: 669
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK019_P0
+  effective_date: '2026-08-14'
+- document_id: 8D83FAA94DD290EE
+  path: tasks/TASK-019/roadmap-promotion-final-plan-and-authorization-2026-08-14.md
+  title: 'TASK-019 — Roadmap Promotion Final Plan and Authorization'
+  category: task-record
+  authority: final-plan-authorization
+  importance_level: A
+  sha256: bd11006021b1b926bb953db73243426e9acaed49a490f4a4c283afb840d24429
+  size_bytes: 1830
+  preferred_loading: read-first-or-current-phase
+  status: ROADMAP_PROMOTION_AUTHORIZED
+  effective_date: '2026-08-14'
+- document_id: D83F2ADCB52B9AEE
+  path: tasks/TASK-019/roadmap-promotion-critic-review-2026-08-14.md
+  title: 'TASK-019 — Roadmap Promotion Critic Review'
+  category: review-evidence
+  authority: critic-review-evidence
+  importance_level: A
+  sha256: 684963c2b8de9b8950dc6760fc472ebbf8dd7e94bd79f1c0e15338417a19d70a
+  size_bytes: 666
+  preferred_loading: read-first-or-current-phase
+  status: CRITIC_PASS
+  effective_date: '2026-08-14'
+- document_id: FBC55AAEFBEF52CD
+  path: tasks/TASK-019/roadmap-promotion-judge-decision-2026-08-14.md
+  title: 'TASK-019 — Roadmap Promotion Judge Decision'
+  category: decision-evidence
+  authority: judge-decision
+  importance_level: A
+  sha256: dfa522401e6b9d4425dac835fc5c89204e200c2f0a29f31f70c78ae0fa23ac5c
+  size_bytes: 629
+  preferred_loading: read-first-or-current-phase
+  status: ROADMAP_PROMOTION_AUTHORIZED
+  effective_date: '2026-08-14'
+- document_id: AF4E79C61389BEA2
+  path: tasks/TASK-019/roadmap-promotion-validation-evidence-2026-08-14.md
+  title: 'TASK-019 — Roadmap Promotion Validation Evidence'
+  category: task-record
+  authority: validation-evidence
+  importance_level: A
+  sha256: 94960532743f4155e03861a4dbcf6d1e017b05e40d40f5fd9cec5c77b1a97806
+  size_bytes: 918
+  preferred_loading: read-first-or-current-phase
+  status: LOCAL_PASS_GITHUB_ACTIONS_PENDING
+  effective_date: '2026-08-14'
 current_canonical_document_sets:
   effective_date: '2026-08-14'
   promotion_authority: Owner
   consistency_result: STRUCTURAL_SYNC_PASS_VISUAL_QA_UNAVAILABLE
-  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.29.document-sync-and-visual-qa.md
+  consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.30.document-sync-and-visual-qa.md
   architecture:
-    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_29
-    version: '2.29'
+    document_id: BAI_DEVELOPMENT_OS_ARCHITECTURE_VER2_30
+    version: '2.30'
     status: CURRENT_CANONICAL
-    human: architecture/BAI_Development_OS_Architecture_Ver2.29.docx
-    machine: architecture/BAI_Development_OS_Architecture_Ver2.29.md
-    summary: architecture/BAI_Development_OS_Architecture_Ver2.29.summary.md
+    human: architecture/BAI_Development_OS_Architecture_Ver2.30.docx
+    machine: architecture/BAI_Development_OS_Architecture_Ver2.30.md
+    summary: architecture/BAI_Development_OS_Architecture_Ver2.30.summary.md
   roadmap_position:
     document_id: BAI_DEVELOPMENT_OS_CURRENT_ROADMAP_POSITION_SUPPLEMENT_2026_08_14
     status: CURRENT_CANONICAL_ROADMAP_POSITION_SUPPLEMENT
@@ -8363,9 +8495,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_AFTER_TASK018_BVP_R2_R4_CONSUMER_AND_ROADMAP_POSITION_SYNC
+  registry_sync_status: CURRENT_DURING_TASK019_ROADMAP_PROMOTION
   commit_status: LOCAL_COMPLETION_COMMIT_CREATED_IN_DELIVERABLE
-  roadmap_expansion_status: TASK018_COMPLETE_OS_V1_1_0_PUBLISHED_BVP_R2_R3_COMPLETE_R4_ADAPTER_HOSTED_CLOSED_NATIVE_PARKED
+  roadmap_expansion_status: TASK018_COMPLETE_TASK019_P0_MAXIMUM_TASK017_PAUSED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -8375,7 +8507,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: FUTURE_ROADMAP_DECISION_PENDING_OWNER_PROCESS; TASK-017 remains PAUSED and Production Activation BLOCKED
+  next_canonical_route: TASK-019 FOUNDATION AFTER EXACT ROADMAP MERGE; TASK-017 remains PAUSED and Production Activation BLOCKED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -8431,8 +8563,8 @@ current_canonical_document_sets:
     human: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.docx
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
-  roadmap_lossless_source_count: 56
-  roadmap_refinement_status: TASK018_COMPLETE_OS_V1_1_0_PUBLISHED; TASK017_PAUSED; BVP_R2_R3_COMPLETE_R4_ADAPTER_HOSTED_CLOSED_NATIVE_PARKED
+  roadmap_lossless_source_count: 57
+  roadmap_refinement_status: TASK018_COMPLETE; TASK019_P0_MAXIMUM; TASK017_PAUSED
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -8471,12 +8603,20 @@ current_canonical_document_sets:
     status: PAUSED_AT_07AF447_PRODUCTION_ACTIVATION_BLOCKED
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
+  task_018_status: COMPLETED / OS_V1_1_0_RELEASE_PUBLISHED
+  task_019_status: ACTIVE / P0_MAXIMUM / FOUNDATION_AUTHORIZED_AFTER_ROADMAP_MERGE
+  task_019_consumer_design_governance:
+    document_id: TASK_019_CONSUMER_DESIGN_GOVERNANCE
+    version: roadmap-1.0
+    status: ACTIVE_P0_MAXIMUM
+    machine: tasks/TASK-019/task.md
+    summary: tasks/TASK-019/TASK-019.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_AFTER_TASK018_BVP_R2_R4_CONSUMER_AND_ROADMAP_POSITION_SYNC
+registry_status: CURRENT_DURING_TASK019_ROADMAP_PROMOTION
 registry_status_details:
-  documents: 691
+  documents: 703
   missing: 0
   hash_size_mismatch: 0
-  current_architecture: '2.29'
-  current_task: TASK-018 COMPLETED / PHASE_G_PASS / H2_PASS / I1_RELEASE_FINALIZATION_PASS / V1_1_0_RELEASE_PUBLISHED
-  next_task: FUTURE_ROADMAP_DECISION_PENDING_OWNER_PROCESS; TASK-017 remains paused and Production Activation BLOCKED; Consumer R2/R3 complete; R4 adapter hosted-closed; native H3 completion parked
+  current_architecture: '2.30'
+  current_task: TASK-019 ACTIVE / P0_MAXIMUM / ROADMAP_PROMOTION
+  next_task: TASK-019 FOUNDATION AFTER EXACT ROADMAP MERGE; TASK-017 remains paused and Production Activation BLOCKED

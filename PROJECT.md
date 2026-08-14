@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.29.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.30.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -56,13 +56,13 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-016`: Resilience, Recovery & Scalability Certification OS — `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `PAUSED_AT_07AF447 / PRODUCTION_ACTIVATION_BLOCKED`
 - `TASK-018`: Codex Autonomous Development Control Plane — `COMPLETED / P0_MAXIMUM / OS_V1_1_0_RELEASE_PUBLISHED`
-- Post-TASK-018 Consumer Design Governance — `DESIGN_COMPLETE / OWNER_DECISION_REQUIRED / IMPLEMENTATION_NOT_AUTHORIZED`; working identity only, no Task number allocated
+- `TASK-019`: Consumer Design Intake, Audit and Promotion Governance Foundation — `ACTIVE / P0_MAXIMUM / HIGHEST_ACROSS_ALL_CURRENT_WORK`
 
-TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-018 P0 is completed and OS `v1.1.0` is published. The current Consumer supplement records BAI VIDEO PRODUCTION R2/R3 completion plus the hosted-closed R4 local Comfy adapter while its native H3 completion remains parked. Production ACME, persistent public activation and real Product credentials remain separate explicit gates.
+TASK-009 through TASK-015 and TASK-018 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-019 is the current P0/MAXIMUM route and is inserted immediately after TASK-018, before any separate TASK-017 resume decision. Production ACME, persistent public activation and real Product credentials remain separate explicit gates.
 
 Current roadmap position: `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md`. It synchronizes completed/current position only and intentionally does not create the next future roadmap.
 
-The later Consumer Design Governance proposal has completed independent audit, coverage/gap analysis, detailed design and Critic/Judge review. It recommends insertion after TASK-018 and before any TASK-017 resume, but remains outside Canonical Architecture until the Owner accepts the route, allocates a Task identity and grants checksum-bound implementation authority.
+The Owner accepted Consumer Design Governance as TASK-019, allocated it highest priority across current work and granted checksum-bound Foundation implementation authority. Architecture Ver.2.30 first promotes the route through its own PR; source implementation begins only from a fresh branch after exact main merge verification.
 
 ## Governance
 
@@ -88,7 +88,7 @@ npm run test:knowledge-evolution
 
 ## Historical Roadmap / Completion Navigation
 
-TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.28 Part XV is the sole current consolidated roadmap authority (`56 / 56 PASS` target after refinement); completed subsystem behavior is governed by each TASK-004〜015 canonical design. External publication remains TASK-008 authorized side-effect territory.
+TASK-005〜011 completion/refinement history is preserved in Architecture Parts VII〜XXI and task evidence. Do not reconstruct current scope from those historical notes. Architecture Ver.2.30 Part XV is the sole current consolidated roadmap authority (`57 / 57 PASS`); completed subsystem behavior is governed by each TASK-004〜015 canonical design. External publication remains TASK-008 authorized side-effect territory.
 
 ## TASK-013 Domain Adapter / Plugin SDK Completion
 

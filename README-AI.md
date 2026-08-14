@@ -20,7 +20,7 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 
 ## Current canonicals
 
-- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.29.md`
+- Architecture: `architecture/BAI_Development_OS_Architecture_Ver2.30.md`
 - TASK-004 Lifecycle: Ver.1.6
 - TASK-005 KnowledgeOS: Ver.1.2
 - TASK-006 AutomationOS: Ver.1.0
@@ -36,8 +36,9 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 completed; Phase 1+ unauthorized
 - TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `PAUSED_AT_07AF447`; Production Activation blocked
 - TASK-018 Codex Autonomous Development Control Plane: `COMPLETED / P0_MAXIMUM`; Phase G/H2/I1 passed and OS `v1.1.0` was published; append-only BAI VIDEO PRODUCTION supplements record `v0.20.1` TASK-036/M3B closure and the later R2/R3 plus bounded R4 adapter progression without reopening TASK-018
+- TASK-019 Consumer Design Intake, Roadmap Reconciliation & Acceptance Assurance OS: `ACTIVE / P0_MAXIMUM / HIGHEST_ACROSS_ALL_CURRENT_WORK`; Foundation implementation starts only after exact roadmap merge verification
 
-TASK-004〜015 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-018 is completed, including its Phase G Consumer Pilot. For current Consumer position, prefer the R2-R4 supplement; the earlier v0.20.1 supplement remains release/TASK-036 provenance. Production ACME/public activation remains separately gated.
+TASK-004〜015 and TASK-018 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-019 is the current P0/MAXIMUM route. For current Consumer position, prefer the R2-R4 supplement; the earlier v0.20.1 supplement remains release/TASK-036 provenance. Production ACME/public activation remains separately gated.
 
 ## CalibrationOS loading rule
 
@@ -45,7 +46,7 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 
 ## Roadmap authority
 
-Architecture Ver.2.29 Part XV is the current consolidated roadmap scope and Part XXX records TASK-018 priority plus TASK-017 pause/resume. `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md` is the current status overlay: TASK-018 complete, TASK-017 paused, BAI VIDEO PRODUCTION R2/R3 complete and bounded R4 adapter hosted-closed with native completion parked. It does not create the next roadmap. The lossless checker preserves `56 / 56` accumulated prior source sections. Historical addenda remain provenance.
+Architecture Ver.2.30 Part XV is the current consolidated roadmap scope and Part XXXI records the Owner-directed TASK-019 insertion after completed TASK-018 and before any separate TASK-017 resume. The lossless checker preserves `57 / 57` accumulated source sections. Historical addenda and the earlier current-position overlay remain provenance.
 
 ## Current verification baseline
 
@@ -54,7 +55,7 @@ Architecture Ver.2.29 Part XV is the current consolidated roadmap scope and Part
 - JavaScript Roulette Consumer: `10 / 10 PASS`
 - Distributed Conformance: `10 schemas / 13 shared contracts PASS`
 - Calibration / Extension / Maintenance / Conformance / Release / Security Conformance: PASS
-- Roadmap: `56 / 56 PASS`
+- Roadmap: `57 / 57 PASS`
 - Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; TASK-017 Knowledge Hub: `68 / 68 PASS`; Python reference compile/Mock Hub smoke: PASS
 
