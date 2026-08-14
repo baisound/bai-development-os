@@ -24,7 +24,7 @@ TASK-004 — AI Development OS Lifecycle Foundation: `COMPLETED`.
 
 Current machine canonicals:
 
-- `architecture/BAI_Development_OS_Architecture_Ver2.28.md`
+- `architecture/BAI_Development_OS_Architecture_Ver2.29.md`
 - `specifications/TASK-004_BAI_Development_OS_Lifecycle_Foundation_Ver1.6.md`
 - `specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.md`
 - `specifications/TASK-006_BAI_Development_OS_Orchestration_Automation_Foundation_Ver1.0.md`
@@ -54,10 +54,12 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-014`: Adaptive Governance Calibration & Policy Learning — `COMPLETED`
 - `TASK-015`: Distributed Orchestration & Event Fabric — `COMPLETED`
 - `TASK-016`: Resilience, Recovery & Scalability Certification OS — `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / PRODUCTION_BLOCKED`
-- `TASK-018`: Codex Autonomous Development Control Plane — `ACTIVE / P0_MAXIMUM / PHASE_B_AUTHORIZED`
+- `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `PAUSED_AT_07AF447 / PRODUCTION_ACTIVATION_BLOCKED`
+- `TASK-018`: Codex Autonomous Development Control Plane — `COMPLETED / P0_MAXIMUM / OS_V1_1_0_RELEASE_PUBLISHED`
 
-TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-018 is the current P0 route. Production ACME, persistent public activation, real Product credentials and Product pilot remain separate explicit gates.
+TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-018 P0 is completed and OS `v1.1.0` is published. The current Consumer supplement records BAI VIDEO PRODUCTION R2/R3 completion plus the hosted-closed R4 local Comfy adapter while its native H3 completion remains parked. Production ACME, persistent public activation and real Product credentials remain separate explicit gates.
+
+Current roadmap position: `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md`. It synchronizes completed/current position only and intentionally does not create the next future roadmap.
 
 ## Governance
 

@@ -8,8 +8,9 @@
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
 - Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETED`; exact PR #23 merge, annotated `v1.1.0`, stable source-only GitHub Release and publication-branch cleanup are verified
+- Current Consumer: BAI VIDEO PRODUCTION R2/R3 complete; bounded R4 local Comfy adapter `HOSTED_CLOSED` at exact main `7d6486059c468009042e4c186d54b566d6e1477e`; native H3 completion `PARKED_TO_SAFE_RUNTIME_REVIEW`
 - Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
-- Roadmap authority: Architecture Ver.2.29 Part XV + Part XXX, `56 / 56 PASS`
+- Roadmap authority: Architecture Ver.2.29 Part XV + Part XXX, with `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md` as the current-position overlay; `56 / 56 PASS`; no next roadmap is allocated by the overlay
 
 ## Current subsystem map
 
@@ -58,7 +59,7 @@ For local-only work, do not load or enable DistributedOS unless topology require
 7. `tasks/TASK-018/owner-implementation-authorization-2026-08-13.md`
 8. only the exact source modules/tests for the current bounded Phase
 
-Phases B-G, H1-H2, I0 and I1 are complete. Consumer `v0.20.0` release integration at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88` was the accepted Phase G checkpoint. H2 accepted deterministic restart/context precedence, live exact-head CI revalidation, Human Gate parking, bounded recovery and branch rotation. The final Pilot Context is `11,888` estimated tokens (`50.91%` below W2), with provider/cached/output/billed fields `null`. A later post-release Consumer supplement records BAI VIDEO PRODUCTION `v0.20.1`: release-code SHA `c2e12d59f869a6b612848aab7ba8319e9cb8a4b4`, documentation-main SHA `7873488c85cf1fd9e49b8061e4c201b6fec976d6`, full regression `810 / 810 PASS`, and W0/W1/W2 plus overall TASK-036/M3B `PASS`. BAI Development OS `v1.1.0` remains published at exact main SHA `81a8445ab8a94fd75034e4c25b63eb7849f5608c`; TASK-018 is not reopened. TASK-017 remains paused; do not resume it without the separate current Owner route.
+Phases B-G, H1-H2, I0 and I1 are complete. Consumer `v0.20.0` release integration at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88` was the accepted Phase G checkpoint. H2 accepted deterministic restart/context precedence, live exact-head CI revalidation, Human Gate parking, bounded recovery and branch rotation. The final Pilot Context is `11,888` estimated tokens (`50.91%` below W2), with provider/cached/output/billed fields `null`. The first post-release supplement records BAI VIDEO PRODUCTION `v0.20.1`, TASK-036/M3B PASS and release-code/documentation-main separation. The current R2-R4 supplement records later R2/R3 completion plus the hosted-closed R4 local Comfy adapter at main `7d648605`; its native H3 completion remains parked after a known sampler failure and an Owner-confirmed Windows force restart with durable `QUEUED / RECOVERY_REQUIRED`. BAI Development OS `v1.1.0` remains published at exact main SHA `81a8445ab8a94fd75034e4c25b63eb7849f5608c`; TASK-018 is not reopened. TASK-017 remains paused; do not resume it without the separate current Owner route.
 
 Balanced Execution: maximum two review/fix cycles per bounded Phase. When required gates pass and unresolved Critical/High findings are `0/0`, continue to the next authorized unit rather than repeating Critic on unchanged artifacts.
 

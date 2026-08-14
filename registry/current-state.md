@@ -6,6 +6,7 @@
 - Canonical Product Root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - Current Architecture Canonical: `BAI Development OS Architecture Ver.2.29`
+- Current Roadmap Position Supplement: `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md`
 - Current Lifecycle Canonical: `TASK-004 Lifecycle Foundation Ver.1.6`
 - Current Knowledge Canonical: `TASK-005 Knowledge Operating System Ver.1.2`
 - Current Automation Canonical: `TASK-006 Orchestration & Automation Foundation Ver.1.0`
@@ -20,9 +21,9 @@
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- TASK-017: `ACTIVE / PHASE0_PAUSED_AT_07AF447_FOR_TASK018_P0 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
+- TASK-017: `PAUSED_AT_07AF447 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
 - TASK-018: `COMPLETED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_RELEASE_PUBLISHED` — `BAI-OS-AUTONOMY-001`, P0 maximum
-- Current development route: `TASK-018 P0 complete; OS v1.1.0 remains published. The post-release BAI VIDEO PRODUCTION v0.20.1 supplement closes TASK-036/M3B; the next Consumer route is the governed R2 foundation promotion. TASK-017 remains paused pending a separate Owner-routed resume decision`
+- Current development route: `TASK-018 P0 complete; OS v1.1.0 remains published. BAI VIDEO PRODUCTION R2/R3 are complete and its bounded R4 local Comfy adapter is hosted-closed at main 7d648605; native H3 completion is PARKED_TO_SAFE_RUNTIME_REVIEW. The next roadmap is not allocated by this synchronization. TASK-017 remains paused pending a separate Owner-routed resume decision`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -34,6 +35,7 @@
 - Last Updated by I1 Completion approval: `2026-08-14`
 - Last Updated by I1 Release publication: `2026-08-14`
 - Last Updated by BAI VIDEO PRODUCTION v0.20.1 post-release supplement: `2026-08-14`
+- Last Updated by BAI VIDEO PRODUCTION R2-R4 post-release supplement: `2026-08-14`
 
 ## Current Product Boundary
 
@@ -58,9 +60,10 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `682 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `684 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
+- Architecture Ver.2.29 triplet structural synchronization: `PASS`; visual render inspection: `UNAVAILABLE_IN_CURRENT_WINDOWS_RUNTIME` (no visual PASS claimed)
 
 ## Accepted Residual
 
@@ -124,6 +127,7 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - I1 exact OS release decision: `1.1.0 / v1.1.0 / BAI Development OS v1.1.0 / stable / GIT_SOURCE_RELEASE_ONLY`. The repository has no prior GitHub Release and no configured long-lived binary signing identity; no ephemeral key or unsigned Consumer-installable bundle is invented.
 - I1 Release publication: `PASS`. PR #23 exact head `d4366c8402eeb0134b032b55b8edaef189c4cb1d` passed four hosted checks and merged at exact main SHA `81a8445ab8a94fd75034e4c25b63eb7849f5608c`. Annotated `v1.1.0` and the stable source-only GitHub Release target that SHA; publication branch cleanup is verified. At this chronological checkpoint, overall TASK-036/M3B and parked W0/W1 were unclaimed.
 - Post-release Consumer supplement: `PASS`. BAI VIDEO PRODUCTION PR #22 merged release code at `c2e12d59f869a6b612848aab7ba8319e9cb8a4b4`; annotated tag and stable GitHub Release `v0.20.1` target that SHA, Release workflow `31742523107` passed, and the later documentation-only PR #23 produced current main `7873488c85cf1fd9e49b8061e4c201b6fec976d6`. Full regression is `810 / 810 PASS`; W0/W1/W2, overall TASK-036 and M3B are now `PASS`. This newer status supplements rather than rewrites the original Phase G/H2/I1 Evidence.
+- R2-R4 Consumer supplement: `PASS`. BAI VIDEO PRODUCTION R2/R3 promotions are complete. TASK-013's bounded local Comfy adapter implementation PR #41 passed `9 / 9` and merged at `74d6b5af0c6de66168f5ab6ab63a6a049b11acd4`; hosted-closure PR #42 passed `9 / 9` and produced current main `7d6486059c468009042e4c186d54b566d6e1477e`. Exact focused `35 / 35` and full WSL2 `919 / 919` passed. Native H3 attempt 01 failed in the real sampler path; attempt 02 ended in an Owner-confirmed Windows force restart and remains `QUEUED / RECOVERY_REQUIRED` with no automatic replay. The exact Native Gate is parked, not promoted to PASS.
 - H2A Pilot hardening checkpoint: PASS. Current/recent Evidence precedence, external PR-state revalidation, sanitized native-Evidence loading and post-merge branch/session rotation are adopted. Model/provider/cadence optimization and Knowledge promotion remain inactive because one Pilot sample is insufficient.
 - Phase H1 Consumer-independent Core Hardening: `AUTONOMY_CORE_HARDENING_PASS`; Phase H1.2 Safety-first Routing: `SAFETY_FIRST_ROUTING_PASS`; Phase H2: `H2_EMPIRICAL_HARDENING_PASS`.
 - H1.2 permits verified Context Cost to break only quality-and-reliability ties after all Authority/Safety/DEV/capability/provider/budget gates pass; it cannot create Authority or dispatch work.
