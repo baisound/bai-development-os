@@ -56,10 +56,13 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-016`: Resilience, Recovery & Scalability Certification OS — `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
 - `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `PAUSED_AT_07AF447 / PRODUCTION_ACTIVATION_BLOCKED`
 - `TASK-018`: Codex Autonomous Development Control Plane — `COMPLETED / P0_MAXIMUM / OS_V1_1_0_RELEASE_PUBLISHED`
+- Post-TASK-018 Consumer Design Governance — `DESIGN_COMPLETE / OWNER_DECISION_REQUIRED / IMPLEMENTATION_NOT_AUTHORIZED`; working identity only, no Task number allocated
 
 TASK-009 through TASK-015 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-018 P0 is completed and OS `v1.1.0` is published. The current Consumer supplement records BAI VIDEO PRODUCTION R2/R3 completion plus the hosted-closed R4 local Comfy adapter while its native H3 completion remains parked. Production ACME, persistent public activation and real Product credentials remain separate explicit gates.
 
 Current roadmap position: `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md`. It synchronizes completed/current position only and intentionally does not create the next future roadmap.
+
+The later Consumer Design Governance proposal has completed independent audit, coverage/gap analysis, detailed design and Critic/Judge review. It recommends insertion after TASK-018 and before any TASK-017 resume, but remains outside Canonical Architecture until the Owner accepts the route, allocates a Task identity and grants checksum-bound implementation authority.
 
 ## Governance
 

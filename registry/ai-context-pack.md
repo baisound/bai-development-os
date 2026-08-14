@@ -8,9 +8,16 @@
 - TASK-004〜015: `COMPLETED`
 - Current Task: `TASK-016 / ACTIVE`; Phase 0 = `COMPLETED`; Phase 1+ = `NOT_AUTHORIZED`
 - Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETED`; exact PR #23 merge, annotated `v1.1.0`, stable source-only GitHub Release and publication-branch cleanup are verified
+- Current design intake: `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001 / DESIGN_COMPLETE / OWNER_DECISION_REQUIRED / IMPLEMENTATION_NOT_AUTHORIZED`; no Task number is allocated
 - Current Consumer: BAI VIDEO PRODUCTION R2/R3 complete; bounded R4 local Comfy adapter `HOSTED_CLOSED` at exact main `7d6486059c468009042e4c186d54b566d6e1477e`; native H3 completion `PARKED_TO_SAFE_RUNTIME_REVIEW`
 - Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
 - Roadmap authority: Architecture Ver.2.29 Part XV + Part XXX, with `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md` as the current-position overlay; `56 / 56 PASS`; no next roadmap is allocated by the overlay
+
+## Post-TASK-018 Consumer Design Governance context
+
+The 2026-08-14 Consumer Design Governance handoff is Evidence/input, not Authority. Its package hashes and current OS baseline were independently verified. The resulting preimplementation design recommends a new OS orchestration boundary after TASK-018 and before any separate TASK-017 resume, while reusing TASK-016 provenance, TASK-018 handoff/context/human-gate/session controls, KnowledgeOS, MaintenanceOS, CalibrationOS and SecurityOS.
+
+Load `architecture/BAI_Development_OS_Consumer_Design_Governance_Preimplementation_Design_Package_Ver1.0.md`, then the Critic and Judge/Owner decision records and the implementation authorization boundary. Technical design is ready; Owner roadmap acceptance, Task identity and checksum-bound Allowed Files authorization are missing. Do not guess TASK-019, reopen TASK-018, resume TASK-017, promote Architecture, implement code, use WebMCP/paid providers, release, deploy or activate production from this state.
 
 ## Current subsystem map
 
