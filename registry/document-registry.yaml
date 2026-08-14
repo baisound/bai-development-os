@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-14T13:49:55+09:00'
+registry_generated_at: '2026-08-14T23:30:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 671f0584c28ffeef8afcadac11909577eb10664f7236232b51ff2c539c5cf983
-  size_bytes: 9152
+  sha256: ded1c660aa750fbcc257ad2f1d36f5283c642cc2704643a1b875cadff894020f
+  size_bytes: 9695
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: bacaa956efddb352165c9f0261f178e8eb0c35f1fff8a2248d49177d68b0de66
-  size_bytes: 10700
+  sha256: de8f5d8d6102ce50d6c8e7cce25797357bce70aa077ccfa014a10065f3c7ef3c
+  size_bytes: 11877
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -494,8 +494,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: ce5c538f521b96ef0c9386367b12d9fd25671c4bb30cc2064d82b4bf8e27b033
-  size_bytes: 7143
+  sha256: af6f2d8864612e0e98bf009fb4b209eb8a7c203dab7109b0950b44b9c13ae23c
+  size_bytes: 7933
   preferred_loading: read-first
 - document_id: 273700F9733DD9C4
   path: registry/current-state.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 58c24c6a0e478218a165b426819f186a6bf63afab7a61e461dcdd4ceaf3fbef4
-  size_bytes: 16368
+  sha256: 86da87b6c18cb39842d93fb5471d4525fdb3628fc4f770b869d4cea6400db463
+  size_bytes: 17707
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8260,6 +8260,83 @@ documents:
   preferred_loading: read-first
   status: CURRENT_CANONICAL_ROADMAP_POSITION_SUPPLEMENT
   effective_date: '2026-08-14'
+- document_id: F83EBCF9F78F70F7
+  path: architecture/BAI_Development_OS_Post_TASK018_Consumer_Design_Governance_Roadmap_Refinement_Proposal_Ver1.0.md
+  title: 'BAI Development OS — Post-TASK-018 Consumer Design Governance Roadmap Refinement Proposal Ver.1.0'
+  category: architecture-document
+  authority: owner-review-proposal
+  importance_level: A
+  sha256: 87bb33b5267223e29f83923fc5c5e168b57b3595216c71e25cdf75658bdf066b
+  size_bytes: 18048
+  preferred_loading: read-first-or-current-phase
+  status: OWNER_REVIEW_REQUIRED_NO_IMPLEMENTATION_AUTHORITY
+  effective_date: '2026-08-14'
+- document_id: AB835969EF7AE4D7
+  path: architecture/BAI_Development_OS_Consumer_Design_Intake_Roadmap_Reconciliation_Full_Detailed_Design_Mandate_Ver1.0.md
+  title: 'BAI Development OS — Consumer Design Intake / Roadmap Reconciliation'
+  category: architecture-document
+  authority: owner-directed-design-mandate
+  importance_level: A
+  sha256: 74580f0b879ad770737308078e6f8c4062ff6029d0fae5e52ca46942026b974b
+  size_bytes: 6430
+  preferred_loading: read-first-or-current-phase
+  status: MANDATORY_DESIGN_BRIEF_NO_IMPLEMENTATION_AUTHORITY
+  effective_date: '2026-08-14'
+- document_id: D7F8BA001396DDCA
+  path: reviews/BAI_Development_OS_Consumer_Handoff_Independent_Revalidation_Checklist_2026-08-14.md
+  title: 'BAI Development OS — Consumer Handoff Independent Revalidation Checklist'
+  category: review-checklist
+  authority: mandatory-audit-aid
+  importance_level: A
+  sha256: eb02b43a6707a8b384e5a4c41af718bedb2cc5b683f7393debf89d0e2a7e9381
+  size_bytes: 2904
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_PENDING_DESIGN_DECISION
+  effective_date: '2026-08-14'
+- document_id: A14057492D13D492
+  path: architecture/BAI_Development_OS_Consumer_Design_Governance_Preimplementation_Design_Package_Ver1.0.md
+  title: 'BAI Development OS — Consumer Design Governance Preimplementation Design Package Ver.1.0'
+  category: architecture-document
+  authority: preimplementation-design
+  importance_level: A
+  sha256: 770870aa48e9d4b575a1139cfcac8e4f5289065baad980386077357dab561188
+  size_bytes: 27617
+  preferred_loading: read-first-or-current-phase
+  status: DESIGN_COMPLETE_OWNER_DECISION_REQUIRED
+  effective_date: '2026-08-14'
+- document_id: E799B86347075D92
+  path: reviews/BAI_Development_OS_Consumer_Design_Governance_Critic_Review_2026-08-14.md
+  title: 'BAI Development OS — Consumer Design Governance Critic Review'
+  category: review-evidence
+  authority: critic-review-evidence
+  importance_level: A
+  sha256: fe68032e9664480ad7de584d7bfc32e6c406cf1439a565c4823e18bd4c0445ad
+  size_bytes: 4227
+  preferred_loading: read-first-or-current-phase
+  status: CRITIC_PASS_WITH_BOUNDARY_CONDITIONS
+  effective_date: '2026-08-14'
+- document_id: 9FC8D4650ACFB2FC
+  path: reviews/BAI_Development_OS_Consumer_Design_Governance_Judge_Owner_Decision_2026-08-14.md
+  title: 'BAI Development OS — Consumer Design Governance Judge / Owner Decision Record'
+  category: decision-evidence
+  authority: judge-decision-owner-pending
+  importance_level: A
+  sha256: 33ad522e2c16e57daa20f5edf5d8038c122c5f654631bc8fe6041c3a3577cdfc
+  size_bytes: 2070
+  preferred_loading: read-first-or-current-phase
+  status: DESIGN_READY_FOR_OWNER_DECISION
+  effective_date: '2026-08-14'
+- document_id: B9D19C524F837E21
+  path: architecture/BAI_Development_OS_Consumer_Design_Governance_Implementation_Authorization_Boundary_Ver1.0.md
+  title: 'BAI Development OS — Consumer Design Governance Implementation Authorization Boundary Ver.1.0'
+  category: authorization-boundary
+  authority: candidate-boundary-no-authorization
+  importance_level: A
+  sha256: adbe190bccead085c0468131b7ee8985d56dda1e2c6d7f65957b39762d500e6b
+  size_bytes: 2957
+  preferred_loading: read-first-or-current-phase
+  status: IMPLEMENTATION_NOT_AUTHORIZED
+  effective_date: '2026-08-14'
 current_canonical_document_sets:
   effective_date: '2026-08-14'
   promotion_authority: Owner
@@ -8397,7 +8474,7 @@ current_canonical_document_sets:
 product_root: /home/baisound/bai-development-os
 registry_status: CURRENT_AFTER_TASK018_BVP_R2_R4_CONSUMER_AND_ROADMAP_POSITION_SYNC
 registry_status_details:
-  documents: 684
+  documents: 691
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.29'
