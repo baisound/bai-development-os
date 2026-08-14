@@ -12,6 +12,7 @@ const task013RefinementPath = path.join(root, 'architecture/BAI_Development_OS_P
 const task014RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK014_Roadmap_Refinement_Ver1.0.md');
 const task015RefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK015_Roadmap_Refinement_Ver1.0.md');
 const creativeKnowledgeRefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_CREATIVE_OS_Knowledge_Audit_Roadmap_Refinement_Ver1.0.md');
+const consumerDesignGovernanceRefinementPath = path.join(root, 'architecture/BAI_Development_OS_Post_TASK018_Consumer_Design_Governance_Roadmap_Refinement_Ver1.0.md');
 
 const state = fs.readFileSync(statePath, 'utf8');
 const versionMatch = state.match(/Current Architecture Canonical: `BAI Development OS Architecture Ver\.([0-9.]+)`/);
@@ -137,7 +138,18 @@ for (const task of ['017']) {
   body = body.replace(/\n## Operational improvement allocation[\s\S]*$/, '').trim();
   creativeKnowledgeSections.push({ heading, body });
 }
-const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections, ...task014Sections, ...task015Sections, ...creativeKnowledgeSections];
+const consumerDesignGovernanceRefinement = fs.readFileSync(consumerDesignGovernanceRefinementPath, 'utf8');
+const consumerDesignGovernanceSections = [];
+for (const task of ['019']) {
+  const heading = `## TASK-${task}`;
+  const start = consumerDesignGovernanceRefinement.indexOf(heading);
+  if (start < 0) throw new Error(`ROADMAP_CHECK_FAIL: TASK-${task} post-TASK-018 refinement missing`);
+  const bodyStart = consumerDesignGovernanceRefinement.indexOf('\n', start) + 1;
+  const next = consumerDesignGovernanceRefinement.indexOf('\n## ', bodyStart);
+  const body = consumerDesignGovernanceRefinement.slice(bodyStart, next < 0 ? consumerDesignGovernanceRefinement.length : next).trim();
+  consumerDesignGovernanceSections.push({ heading, body });
+}
+const allSections = [...sections, ...task009Sections, ...task010Sections, ...task011Sections, ...task012Sections, ...task013Sections, ...task014Sections, ...task015Sections, ...creativeKnowledgeSections, ...consumerDesignGovernanceSections];
 const missing = allSections.filter((s) => !consolidated.includes(s.body));
 if (missing.length) {
   console.error('ROADMAP_CHECK_MISSING_SECTIONS');
@@ -161,6 +173,15 @@ const task17Required = [
 ];
 for (const required of task17Required) {
   if (!consolidated.includes(required)) throw new Error(`ROADMAP_CHECK_FAIL: TASK-017 identity fragment missing: ${required}`);
+}
+
+const task19Required = [
+  'TASK-019 — Consumer Design Intake, Roadmap Reconciliation & Acceptance Assurance OS',
+  'canonical_authority=false',
+  'recommendation-only Roadmap Impact record',
+];
+for (const required of task19Required) {
+  if (!consolidated.includes(required)) throw new Error(`ROADMAP_CHECK_FAIL: TASK-019 identity fragment missing: ${required}`);
 }
 
 const task13Required = [
