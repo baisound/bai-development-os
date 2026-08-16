@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 446e971e1ba206cc1a9a8f67d7f07f19cdd9500c45dba72b507394d97ecbbcb4
-  size_bytes: 9500
+  sha256: 32adcf77836b0bcb8e5292be33d39a592f9c0b6c21bb7dda462f8f80b5b7f9c9
+  size_bytes: 9550
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: f53871dfa11f43bfc60d51dd2468b53c73f35eecb1b88f89b595309ca363afe3
-  size_bytes: 7331
+  sha256: 997a545429c8a2c42a9b6188b16083a4a33a76faded15ddd5796fd8e9891cb47
+  size_bytes: 7283
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: 1653cc96c6977b125accaf33311439bd5f54d87385fb5c219a79c9c8ed13c92b
-  size_bytes: 5774
+  sha256: cfb023933e91d7e0581df0772545af4e0d5fc3ce70582d77f21db4be2a90bd84
+  size_bytes: 5911
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: a84763620f39e9439eae5b7471261b100bdce61cb72925a512d3725d0fc32b30
-  size_bytes: 12908
+  sha256: 6d520870c1592394d2050bd25ebff29ffdc134d5c8d1df1121c01963e947d169
+  size_bytes: 12904
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 9ee2c78b9dbfd33cd2eba711a75b65b04527d9328ff3b0a1a22ef43fce93719d
-  size_bytes: 19483
+  sha256: a2868561223a18c0a848eded7336c7752ee672ad9a4f172e3a2bddad29acd2e3
+  size_bytes: 19392
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8640,8 +8640,8 @@ documents:
   category: architecture
   authority: owner-directed-roadmap-refinement
   importance_level: A
-  sha256: e332cbc089769dbd28becbd4fc5580bcf8fa8e5b0ed2713e6e9c94f860de2fc8
-  size_bytes: 2286
+  sha256: 188140bcb90c254d4918b27804183ba0e7e468c4f04bdf59406839be625b760b
+  size_bytes: 2307
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK020_ROADMAP_REFINEMENT
   effective_date: '2026-08-16'
@@ -8662,10 +8662,10 @@ documents:
   category: task-record
   authority: current-task-definition
   importance_level: A
-  sha256: 53c04f4168cd03f12abd284511849e5b779463e39791abe70765766367ce5764
-  size_bytes: 3099
+  sha256: fed53560de24fd6f41102b50d1a645667ae79d3a40696312000a1c0088814029
+  size_bytes: 3060
   preferred_loading: read-first-or-current-phase
-  status: FOUNDATION_IMPLEMENTED_PUBLICATION_NOT_STARTED
+  status: IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS_PUBLICATION_NOT_STARTED
   effective_date: '2026-08-16'
 - document_id: 441DCD19E5B5C972
   path: tasks/TASK-020/TASK-020.summary.md
@@ -8673,8 +8673,8 @@ documents:
   category: task-summary
   authority: navigation-aid
   importance_level: A
-  sha256: c069efec538baf8500946a86199145a0d117d6e21f7d52944eec409459621eff
-  size_bytes: 878
+  sha256: 8fc456d23a3e8aa6ad805e2c27f656e9913eb4eb070bc164c4030bf352bda6a4
+  size_bytes: 748
   preferred_loading: read-first
   status: CURRENT_TASK020_SUMMARY
   effective_date: '2026-08-16'
@@ -8706,10 +8706,10 @@ documents:
   category: task-evidence
   authority: implementation-evidence
   importance_level: A
-  sha256: 4a3dae2e0c74bb37857f07264f6b0fd064e666f7300a603658519826fbf7784c
-  size_bytes: 3513
+  sha256: 72cde06ab94959a86899b872f9a4e6ec29d557fa74465a8c11804819c88c1869
+  size_bytes: 3921
   preferred_loading: read-first-or-current-phase
-  status: TASK020_FOUNDATION_IMPLEMENTATION_PASS_WITH_BASELINE_KNOWN_FAILURES
+  status: TASK020_IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS
   effective_date: '2026-08-16'
 current_canonical_document_sets:
   effective_date: '2026-08-16'
@@ -8737,8 +8737,8 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_TASK020_FOUNDATION_IMPLEMENTED
-  commit_status: TASK020_IMPLEMENTATION_COMMIT_0429B82
+  registry_sync_status: CURRENT_TASK020_IMPLEMENTATION_COMPLETE
+  commit_status: TASK020_DURABLE_RUNTIME_COMMIT_F9365B2
   roadmap_expansion_status: TASK019_COMPLETE_TASK020_ACTIVE_TASK017_PAUSED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
@@ -8749,7 +8749,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK020 LOCAL IMPLEMENTATION VALIDATION; TASK-017 remains PAUSED and Production Activation BLOCKED
+  next_canonical_route: TASK020 DRAFT PR PUBLICATION; TASK-017 remains PAUSED and Production Activation BLOCKED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -8853,19 +8853,19 @@ current_canonical_document_sets:
     status: COMPLETED_P0_MAXIMUM_TASK019_COMPLETION_PASS
     machine: tasks/TASK-019/task.md
     summary: tasks/TASK-019/TASK-019.summary.md
-  task_020_status: FOUNDATION_IMPLEMENTED / PUBLICATION_NOT_STARTED / BASELINE_KNOWN_FAILURES_4
+  task_020_status: IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED
   task_020_autonomous_worklane_durable_dispatch:
     document_id: TASK_020_AUTONOMOUS_WORKLANE_DURABLE_DISPATCH
     version: '1.0'
-    status: FOUNDATION_IMPLEMENTED_PUBLICATION_NOT_STARTED
+    status: IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS_PUBLICATION_NOT_STARTED
     machine: tasks/TASK-020/task.md
     summary: tasks/TASK-020/TASK-020.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_TASK020_FOUNDATION_IMPLEMENTED
+registry_status: CURRENT_TASK020_IMPLEMENTATION_COMPLETE
 registry_status_details:
   documents: 725
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
-  current_task: TASK-020 FOUNDATION_IMPLEMENTED / PUBLICATION_NOT_STARTED / BASELINE_KNOWN_FAILURES_4
-  next_task: TASK020 PUBLICATION REVIEW; TASK-017 remains paused and Production Activation BLOCKED
+  current_task: TASK-020 IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED
+  next_task: TASK020 DRAFT PR PUBLICATION; TASK-017 remains paused and Production Activation BLOCKED

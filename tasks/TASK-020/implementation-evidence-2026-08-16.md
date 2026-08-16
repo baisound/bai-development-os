@@ -2,9 +2,9 @@
 
 ## Result
 
-`TASK020_FOUNDATION_IMPLEMENTATION_PASS_WITH_BASELINE_KNOWN_FAILURES`
+`TASK020_IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS`
 
-TASK-020の設計・ロードマップ・純粋なfoundation実装は完了した。Release、Deploy、Production Activation、Consumer mutation、外部/native/paid effectは実行していない。OS全体のProduct completionは宣言しない。
+TASK-020の設計・ロードマップ・foundationおよび耐久実行基盤の実装は完了した。Release、Deploy、Production Activation、Consumer mutation、外部/native/paid effectは実行していない。公開前のためOS全体のProduct completionは宣言しない。
 
 ## Implementation identity
 
@@ -12,6 +12,7 @@ TASK-020の設計・ロードマップ・純粋なfoundation実装は完了し�
 - Implementation commit: `0429b8255ec7f574fca47fbc461be3c8de2b6d08`
 - Changed files in commit: `38`
 - Commit message: `feat: TASK-020自律ワークレーン基盤を実装`
+- Durable-runtime commit: `f9365b2e225d316e857c1ac3482216bb333b446c`
 
 ## Implemented contracts
 
@@ -23,23 +24,26 @@ TASK-020の設計・ロードマップ・純粋なfoundation実装は完了し�
 - effect-class/fencing/reconciliation-gated takeover assessment;
 - merged/reachable/clean/capability-bound branch cleanup eligibility;
 - same-revision current Gate/Judge/Lifecycle/Closure Product completion guard;
-- seven closed Draft 2020-12 schemas, public exports, Role/Workflow and Registry synchronization.
+- complete content-addressed Coordination Intent objects with reference lifecycle and GC tombstones;
+- lease-fenced Dispatch Outbox, durable Target Inbox, notification retry/ACK and no-progress Lane Runner;
+- hash-chained Audit Event envelopes and exact TASK-004 COMMITTED-event coordination materialization;
+- twelve closed Draft 2020-12 schemas, public exports, Role/Workflow and Registry synchronization.
 
 ## Validation
 
 | Gate | Result |
 |---|---|
-| TASK-020 focused + integration | `25 / 25 PASS` |
+| TASK-020 focused + integration | `39 / 39 PASS` |
 | Context Guard regression after PROJECT context-budget correction | `7 / 7 PASS` |
 | Roadmap consolidation | `57 / 57 PASS` |
 | Document Registry YAML parse | `PASS` |
 | `git diff --cached --check` at implementation commit | `PASS` |
-| Clean WSL2 ext4 full regression | `1476 / 1480 PASS`, four baseline-known failures |
+| Clean WSL2 ext4 Git clone full regression | `1494 / 1494 PASS` |
 | Product Boundary check | `NOT_CONFIRMED`: external reference Consumer `.bai-os/project.json` absent |
 
-## Baseline-known failures
+## Closed baseline failures
 
-The four failures are all in `tests/knowledge-evolution/python-reference.test.mjs` and reproduce on clean `origin/main` `3dd77892187aec65dffa0ef9723d5bc7537c06dc` without TASK-020. The failure is Node assertion handling of an undefined message after the external Python command path, not a TASK-020 module failure.
+The four Python reference failures reproduced on `origin/main` were closed in the authorized continuation by detecting `python3`/`python`/Windows launcher explicitly and disabling Python bytecode writes during parallel tests. This also prevents a transient `__pycache__` copy race with the generator test. The Python security/reference behavior itself executes and passes; it is not skipped in the clean WSL2 Gate.
 
 TASK-020 initially caused one additional Context Guard override failure because `PROJECT.md` crossed the bounded context-size threshold. The top-level roadmap note was compressed while the full design remained in its canonical specification. Clean WSL2 revalidation then returned Context Guard `7 / 7 PASS`; that regression is closed.
 
@@ -57,6 +61,6 @@ Pre-existing untracked `.codex/`, `deliverables/`, the BAI VIDEO PRODUCTION deta
 
 ## Terminal
 
-`ATOMIC_UNIT_COMPLETE_NEXT_UNIT_PUBLICATION_DECISION_REQUIRED`
+`ATOMIC_UNIT_COMPLETE_NEXT_UNIT_DRAFT_PR_PUBLICATION`
 
-The safe next unit is publication through a dedicated PR after review. Fixing the four pre-existing Knowledge Evolution tests and restoring the external reference Consumer adapter are separate Tasks/scopes.
+The safe next unit is publication through a dedicated Draft PR. Restoring the external reference Consumer adapter remains outside TASK-020.

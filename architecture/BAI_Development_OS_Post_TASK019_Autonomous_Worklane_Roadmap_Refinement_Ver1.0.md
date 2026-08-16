@@ -34,7 +34,7 @@ TASK-004 remains Lifecycle authority, TASK-008 Cost Guard remains budget authori
 ## Current order
 
 1. TASK-019 remains completed.
-2. TASK-020 is the current Owner-directed BAI Development OS implementation route.
+2. TASK-020 implementation and full regression are complete; Draft PR publication is the current route.
 3. TASK-016 Phase 1+ and TASK-017 resume remain separately unauthorized and are not implied by TASK-020.
 4. Consumer Product work remains independently owned and cannot be absorbed into OS Core.
 

@@ -24,8 +24,8 @@
 - TASK-017: `PAUSED_AT_07AF447 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
 - TASK-018: `COMPLETED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_RELEASE_PUBLISHED` — `BAI-OS-AUTONOMY-001`, P0 maximum
 - TASK-019: `COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`; implementation PR #29 merged at `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`
-- TASK-020: `FOUNDATION_IMPLEMENTED / PUBLICATION_NOT_STARTED / BASELINE_KNOWN_FAILURES_4`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`
-- Current development route: `TASK-020 publication review; no TASK-017 resume is implied`
+- TASK-020: `IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`
+- Current development route: `TASK-020 Draft PR publication; no TASK-017 resume is implied`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -51,7 +51,7 @@
 - Roadmap: `architecture/BAI_Development_OS_Post_TASK019_Autonomous_Worklane_Roadmap_Refinement_Ver1.0.md`.
 - Design assurance: three independent Critic passes followed by Judge `PASS_DESIGN_READY_FOR_SEPARATE_IMPLEMENTATION_AUTHORITY`; residual Critical/High/Medium `0/0/0`.
 - Implemented foundation: immutable worklanes, deny-first standing-authority evaluation, target-persisted durable dispatch/inbox, exact Atomic Unit terminals, scoped Human Gate V2, fencing-aware takeover, branch-cleanup eligibility and revision-bound Product completion.
-- Validation: TASK-020 `25/25 PASS`; clean WSL2 full regression `1476/1480`, with all four remaining failures reproduced on clean `origin/main` and therefore retained as baseline-known separate scope.
+- Validation: TASK-020 focused/integration `39/39 PASS`; clean WSL2 Git clone full regression `1494/1494 PASS`.
 - Boundaries: no direct main push, Release, Deploy, Production Activation, Consumer mutation, external/native/paid execution or destructive branch cleanup.
 
 ## TASK-019 Consumer Design Governance Priority Promotion — 2026-08-14

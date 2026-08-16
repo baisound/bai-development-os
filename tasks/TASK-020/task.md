@@ -5,7 +5,7 @@
 - Design ID: `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`
 - Priority: `P0 / OWNER_DIRECTED`
 - DEV Profile: `DEV_4_FOUNDATION_CRITICAL`
-- Status: `FOUNDATION_IMPLEMENTED / PUBLICATION_NOT_STARTED / BASELINE_KNOWN_FAILURES_4`
+- Status: `IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED`
 - Branch: `codex/task-020-autonomous-worklane-durable-dispatch`
 
 ## Owner directive
@@ -27,7 +27,7 @@ Design review result:
 - residual Critical/High/Medium: `0/0/0`;
 - reviewed R4 SHA-256: `555DD99B848F271708029BBAF9C088E60CCC6F11A7525891AF42F86EB1580DA0`.
 
-## Foundation implementation scope
+## Implementation scope
 
 1. Worklane, resource ownership and standing-authority contracts.
 2. Durable producer Outbox and target Inbox state machines.
@@ -57,5 +57,5 @@ Design review result:
 - `TASK020_AUTHORITY_FENCING_PASS`: `PASS`
 - `TASK020_DELIVERY_RECOVERY_PASS`: `PASS`
 - `TASK020_BRANCH_COMPLETION_PASS`: `PASS`
-- `TASK020_FULL_REGRESSION_PASS`: `NOT_ESTABLISHED_BASELINE_KNOWN_FAILURES_4`
+- `TASK020_FULL_REGRESSION_PASS`: `PASS_1494_OF_1494`
 - `TASK020_COMPLETION_JUDGE_PASS`: `NOT_RUN_PUBLICATION_NOT_STARTED`
