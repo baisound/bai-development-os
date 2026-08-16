@@ -24,8 +24,8 @@
 - TASK-017: `PAUSED_AT_07AF447 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
 - TASK-018: `COMPLETED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_RELEASE_PUBLISHED` — `BAI-OS-AUTONOMY-001`, P0 maximum
 - TASK-019: `COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`; implementation PR #29 merged at `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`
-- TASK-020: `IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`
-- Current development route: `TASK-020 Draft PR publication; no TASK-017 resume is implied`
+- TASK-020: `COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`; exact main merge `304b70ab5805c825bd35cf902fd2ef96290f9859`
+- Current development route: `NO_IMPLICIT_NEXT_TASK`; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized routes
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -43,6 +43,7 @@
 - Last Updated by TASK-019 Foundation local implementation: `2026-08-14`
 - Last Updated by TASK-019 exact implementation merge and completion: `2026-08-14`
 - Last Updated by TASK-020 design, three-Critic review, Judge and local implementation: `2026-08-16`
+- Last Updated by TASK-020 Ready CI, PR #31 merge and completion closure: `2026-08-16`
 
 ## TASK-020 Autonomous Worklane & Durable Dispatch — 2026-08-16
 
@@ -52,6 +53,8 @@
 - Design assurance: three independent Critic passes followed by Judge `PASS_DESIGN_READY_FOR_SEPARATE_IMPLEMENTATION_AUTHORITY`; residual Critical/High/Medium `0/0/0`.
 - Implemented foundation: immutable worklanes, deny-first standing-authority evaluation, target-persisted durable dispatch/inbox, exact Atomic Unit terminals, scoped Human Gate V2, fencing-aware takeover, branch-cleanup eligibility and revision-bound Product completion.
 - Validation: TASK-020 focused/integration `39/39 PASS`; clean WSL2 Git clone full regression `1494/1494 PASS`.
+- Publication: PR #31 head `0dc810d8c00db493dc0a194f894b66e180ed7986`; Ready CI run `31941846270` all-green; main merge `304b70ab5805c825bd35cf902fd2ef96290f9859`.
+- Completion: `TASK020_COMPLETION_PASS`; residual completion Critic/Judge Critical/High/Medium `0/0/0`.
 - Boundaries: no direct main push, Release, Deploy, Production Activation, Consumer mutation, external/native/paid execution or destructive branch cleanup.
 
 ## TASK-019 Consumer Design Governance Priority Promotion — 2026-08-14
