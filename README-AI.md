@@ -36,10 +36,10 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-016 Resilience / Recovery / Scalability Certification OS: `ACTIVE`; Phase 0 completed; Phase 1+ unauthorized
 - TASK-017 Knowledge Evolution & Federated Evidence Governance OS: `PAUSED_AT_07AF447`; Production Activation blocked
 - TASK-018 Codex Autonomous Development Control Plane: `COMPLETED / P0_MAXIMUM`; Phase G/H2/I1 passed and OS `v1.1.0` was published; append-only BAI VIDEO PRODUCTION supplements record `v0.20.1` TASK-036/M3B closure and the later R2/R3 plus bounded R4 adapter progression without reopening TASK-018
-- TASK-019 Consumer Design Intake, Roadmap Reconciliation & Acceptance Assurance OS: `ACTIVE / P0_MAXIMUM / HIGHEST_ACROSS_ALL_CURRENT_WORK`; Foundation implementation starts only after exact roadmap merge verification
-- TASK-020 Autonomous Worklane & Durable Dispatch OS: `IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED`
+- TASK-019 Consumer Design Intake, Roadmap Reconciliation & Acceptance Assurance OS: `COMPLETED / TASK019_COMPLETION_PASS`
+- TASK-020 Autonomous Worklane & Durable Dispatch OS: `COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS`
 
-TASK-004〜015 and TASK-018 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-019 is the current P0/MAXIMUM route. For current Consumer position, prefer the R2-R4 supplement; the earlier v0.20.1 supplement remains release/TASK-036 provenance. Production ACME/public activation remains separately gated.
+TASK-004〜015 and TASK-018〜020 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. No next Task is inferred by TASK-020 completion. For current Consumer position, prefer the R2-R4 supplement; the earlier v0.20.1 supplement remains release/TASK-036 provenance. Production ACME/public activation remains separately gated.
 
 ## CalibrationOS loading rule
 
