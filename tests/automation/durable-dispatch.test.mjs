@@ -9,7 +9,7 @@ import {
 const base = () => createDispatchEnvelope({
   dispatch_id: 'D-1', semantic_operation_id: semanticOperationId({ lane_id: 'L-1', atomic_unit_id: 'U-1', operation_kind: 'NEXT', payload: { n: 1 } }),
   lane_id: 'L-1', target_inbox_id: 'I-1', authority_grant_id: 'A-1',
-  payload_checksum: 'sha256:payload', state: 'CREATED', created_at: '2026-08-16T00:00:00.000Z',
+  payload_checksum: 'sha256:239f59ed55e737c77147cf55ad0c1b030b6d7ee748a7426952f9b852d5a935e5', state: 'CREATED', created_at: '2026-08-16T00:00:00.000Z',
 });
 
 test('durable dispatch ACK means target persistence and terminal is separate', () => {
@@ -29,6 +29,6 @@ test('at-least-once redelivery is idempotent and semantic collision rejects', ()
   const duplicate = persistToTargetInbox(base(), inbox, { persisted_coordinate: 'inbox:row:2', at: '2026-08-16T00:00:02.000Z' });
   assert.equal(duplicate.target_persisted_coordinate, 'inbox:row:1');
   assert.equal(inbox.operations.size, 1);
-  assert.throws(() => persistToTargetInbox(createDispatchEnvelope({ ...base(), payload_checksum: 'sha256:different', content_checksum: undefined }), inbox, { persisted_coordinate: 'inbox:row:3', at: '2026-08-16T00:00:03.000Z' }), (error) => error.code === 'SEMANTIC_OPERATION_COLLISION');
+  assert.throws(() => persistToTargetInbox(createDispatchEnvelope({ ...base(), payload_checksum: 'sha256:9d6f965ac832e40a5df6c06afe983e3b4c1e654d657d4748a24fcf2a8342e5d1', content_checksum: undefined }), inbox, { persisted_coordinate: 'inbox:row:3', at: '2026-08-16T00:00:03.000Z' }), (error) => error.code === 'SEMANTIC_OPERATION_COLLISION');
   assert.equal(first.state, 'TARGET_PERSISTED');
 });

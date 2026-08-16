@@ -27,6 +27,7 @@ export function createDispatchEnvelope(input){
     updated_at: requireString(input?.updated_at ?? input?.created_at, 'updated_at', DurableDispatchError),
   };
   if(!DISPATCH_STATES.includes(envelope.state)) throw new DurableDispatchError('DISPATCH_STATE_INVALID', envelope.state);
+  for(const [field, value] of [['semantic_operation_id', envelope.semantic_operation_id], ['payload_checksum', envelope.payload_checksum]]) if(!/^sha256:[a-f0-9]{64}$/.test(value)) throw new DurableDispatchError('DISPATCH_CHECKSUM_INVALID', field);
   if(!Number.isSafeInteger(envelope.delivery_attempt) || envelope.delivery_attempt < 0) throw new DurableDispatchError('DISPATCH_ATTEMPT_INVALID', String(envelope.delivery_attempt));
   if(envelope.state === 'CREATED' && (envelope.target_persisted_coordinate || envelope.terminal_coordinate)) throw new DurableDispatchError('DISPATCH_COORDINATE_PREMATURE', envelope.dispatch_id);
   if(['TARGET_PERSISTED', 'CLAIMED', 'TERMINAL'].includes(envelope.state) && !envelope.target_persisted_coordinate) throw new DurableDispatchError('DISPATCH_TARGET_ACK_MISSING', envelope.dispatch_id);

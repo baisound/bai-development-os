@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/notification-envelope.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "notification_id", "semantic_notification_id", "event_coordinate", "notification_class", "audience", "public_payload", "state", "attempt_count", "acknowledged_at", "expires_at", "superseded_by", "created_at", "updated_at", "content_checksum"],
+  "properties": {
+    "schema": { "const": "BAI_NOTIFICATION_ENVELOPE_V1" }, "notification_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "semantic_notification_id": { "$ref": "#/$defs/checksum" },
+    "event_coordinate": { "$ref": "#/$defs/nonempty" }, "notification_class": { "enum": ["ROUTINE", "MILESTONE", "DECISION_REQUIRED", "INCIDENT"] }, "audience": { "$ref": "#/$defs/nonempty" },
+    "public_payload": { "type": "object", "additionalProperties": { "type": "string" } }, "state": { "enum": ["LEDGER_ONLY", "PENDING", "DELIVERED", "ACKNOWLEDGED", "SUPERSEDED", "EXPIRED", "TERMINAL_FAILED"] },
+    "attempt_count": { "type": "integer", "minimum": 0 }, "acknowledged_at": { "type": ["string", "null"], "format": "date-time" }, "expires_at": { "type": ["string", "null"], "format": "date-time" },
+    "superseded_by": { "type": ["string", "null"] }, "created_at": { "type": "string", "format": "date-time" }, "updated_at": { "type": "string", "format": "date-time" }, "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": { "nonempty": { "type": "string", "minLength": 1 }, "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" } }
+}

@@ -10,6 +10,11 @@ const files = [
   'product-completion-policy.schema.json',
   'human-gate-v2.schema.json',
   'effect-takeover-assessment.schema.json',
+  'coordination-intent-object.schema.json',
+  'target-inbox.schema.json',
+  'notification-envelope.schema.json',
+  'audit-event-envelope.schema.json',
+  'lifecycle-coordination-bundle.schema.json',
 ];
 
 for(const file of files){

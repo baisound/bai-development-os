@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/lifecycle-coordination-bundle.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "transaction_id", "task_id", "expected_lifecycle_revision", "requested_after_state", "atomic_terminal_coordinate", "checkpoint_coordinate", "intent_object", "intent_object_coordinate", "created_at", "content_checksum"],
+  "properties": {
+    "schema": { "const": "BAI_LIFECYCLE_COORDINATION_BUNDLE_V1" }, "transaction_id": { "$ref": "#/$defs/nonempty" }, "task_id": { "$ref": "#/$defs/nonempty" }, "expected_lifecycle_revision": { "type": "integer", "minimum": 0 },
+    "requested_after_state": { "$ref": "#/$defs/nonempty" }, "atomic_terminal_coordinate": { "$ref": "#/$defs/nonempty" }, "checkpoint_coordinate": { "$ref": "#/$defs/nonempty" },
+    "intent_object": { "type": "object" }, "intent_object_coordinate": { "type": "object" }, "created_at": { "type": "string", "format": "date-time" }, "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": { "nonempty": { "type": "string", "minLength": 1 }, "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" } }
+}

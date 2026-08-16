@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/audit-event-envelope.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "sequence", "previous_event_hash", "event_type", "lane_id", "actor_id", "session_id", "role", "correlation_id", "semantic_operation_id", "authority_epoch", "lane_epoch", "lease_epoch", "before_digest", "after_digest", "signer_key_id", "signature_coordinate", "occurred_at", "event_hash", "content_checksum"],
+  "properties": {
+    "schema": { "const": "BAI_AUDIT_EVENT_ENVELOPE_V1" }, "sequence": { "type": "integer", "minimum": 0 }, "previous_event_hash": { "$ref": "#/$defs/checksum" }, "event_type": { "$ref": "#/$defs/nonempty" },
+    "lane_id": { "$ref": "#/$defs/nonempty" }, "actor_id": { "$ref": "#/$defs/nonempty" }, "session_id": { "$ref": "#/$defs/nonempty" }, "role": { "$ref": "#/$defs/nonempty" },
+    "correlation_id": { "$ref": "#/$defs/nonempty" }, "semantic_operation_id": { "$ref": "#/$defs/nonempty" }, "authority_epoch": { "type": "integer", "minimum": 0 }, "lane_epoch": { "type": "integer", "minimum": 0 }, "lease_epoch": { "type": "integer", "minimum": 0 },
+    "before_digest": { "type": ["string", "null"] }, "after_digest": { "type": ["string", "null"] }, "signer_key_id": { "$ref": "#/$defs/nonempty" }, "signature_coordinate": { "$ref": "#/$defs/nonempty" },
+    "occurred_at": { "type": "string", "format": "date-time" }, "event_hash": { "$ref": "#/$defs/checksum" }, "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": { "nonempty": { "type": "string", "minLength": 1 }, "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" } }
+}
