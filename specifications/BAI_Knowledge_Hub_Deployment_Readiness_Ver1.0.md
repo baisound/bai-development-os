@@ -47,7 +47,7 @@ Caddy is disabled unless the explicit Compose `public` profile is activated. Pub
 
 ## 7. Backup/restore
 
-`backup-postgres.sh` produces a custom-format `pg_dump` plus SHA-256 sidecar using restrictive umask. `restore-rehearsal.sh` refuses operation unless `BAI_RESTORE_ACK=REHEARSAL_ONLY` and the target database name ends in `_restore_rehearsal`. Supplied automation is therefore safe-by-default for rehearsal and does not provide an unattended destructive production restore.
+`backup-postgres.sh` produces a custom-format `pg_dump` plus a bound manifest and SHA-256 sidecar using restrictive permissions. The legacy `restore-rehearsal.sh` is permanently disabled and performs no database operation. The only supported rehearsal path is `run-encrypted-backup-restore-rehearsal.sh`, which requires canonical signed authority, a local isolated target, closed archive-object admission and an immutable committed Evidence bundle. The supplied automation does not provide an unattended production restore.
 
 ## 8. Runtime independence
 

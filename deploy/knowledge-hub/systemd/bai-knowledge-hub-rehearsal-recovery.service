@@ -1,0 +1,42 @@
+[Unit]
+Description=BAI Knowledge Hub canonical rehearsal recovery seal
+After=postgresql.service
+
+[Service]
+Type=oneshot
+TimeoutStartSec=45s
+TimeoutStopSec=30s
+KillMode=control-group
+SendSIGKILL=yes
+User=root
+Group=root
+EnvironmentFile=/run/bai-development-os/knowledge-hub/rehearsal-recovery.env
+UnsetEnvironment=BASH_ENV ENV NODE_OPTIONS NODE_PATH LD_PRELOAD LD_LIBRARY_PATH PGOPTIONS PGSERVICE PGSERVICEFILE PGPASSWORD
+ExecStartPre=/usr/bin/node /opt/bai-development-os/deploy/knowledge-hub/systemd/validate-rehearsal-recovery-environment.mjs --require-loaded /run/bai-development-os/knowledge-hub/rehearsal-recovery.env
+ExecStart=/usr/bin/flock --shared /etc/bai-development-os/knowledge-hub/rehearsal-authority.lock /usr/bin/node /opt/bai-development-os/scripts/recover-knowledge-hub-rehearsal.mjs ${RECOVERY_JOURNAL_FILE} ${RECOVERY_AUTHORIZATION_FILE}
+UMask=0077
+LimitCORE=0
+NoNewPrivileges=yes
+PrivateNetwork=yes
+PrivateTmp=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictRealtime=yes
+LockPersonality=yes
+PrivateDevices=yes
+ProtectProc=invisible
+ProcSubset=pid
+RestrictAddressFamilies=AF_UNIX
+RestrictNamespaces=yes
+CapabilityBoundingSet=
+AmbientCapabilities=
+RemoveIPC=yes
+SystemCallArchitectures=native
+ReadWritePaths=/var/lib/bai-development-os/knowledge-hub/rehearsals

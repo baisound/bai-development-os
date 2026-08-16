@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-16T14:00:00+09:00'
+registry_generated_at: '2026-08-16T21:30:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: cfb023933e91d7e0581df0772545af4e0d5fc3ce70582d77f21db4be2a90bd84
-  size_bytes: 5911
+  sha256: 0803a0c51a7f4e95a2bbca545e48cadfeb712da6cb5f0c1f85d9b4845081986f
+  size_bytes: 6032
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 6d520870c1592394d2050bd25ebff29ffdc134d5c8d1df1121c01963e947d169
-  size_bytes: 12904
+  sha256: a61f5392c995b3755df92e9c171a76f25ed71089bee77d054ded91af526aec25
+  size_bytes: 13290
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: a2868561223a18c0a848eded7336c7752ee672ad9a4f172e3a2bddad29acd2e3
-  size_bytes: 19392
+  sha256: 92de062707d153ff20a47ee444ed98fb69c2fa2062468f63a7fb84998f0ae5b1
+  size_bytes: 21210
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -5980,12 +5980,12 @@ documents:
   authority: task-definition
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_PHASE0_COMPOSE_POSTGRES_TUNING_IMPLEMENTED_LIVE_DOCKER_AND_PRODUCTION_PILOT_PENDING
+  status: ACTIVE_PHASE0_REMAINING_DEPLOYMENT_GATES_WIP_OPEN_CRITIC_FINDINGS
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: a790a4ff7e339d9e48aeda63d71db5f19903c27961af769e876a9d2d6511cb65
-  size_bytes: 2133
+  sha256: 072ca286f8eacbe0b64768ad7d51f03a28e924672bab632261d5e08a39a9b683
+  size_bytes: 2316
 - document_id: 6E0658004570CE0F
   path: tasks/TASK-017/TASK-017.summary.md
   title: TASK-017 Summary
@@ -5993,12 +5993,12 @@ documents:
   authority: navigation-aid
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_PHASE0_COMPOSE_POSTGRES_TUNING_IMPLEMENTED_LIVE_DOCKER_AND_PRODUCTION_PILOT_PENDING
+  status: ACTIVE_PHASE0_REMAINING_DEPLOYMENT_GATES_WIP_OPEN_CRITIC_FINDINGS
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 42b8e0b5830fcfb763710fca4d9b2d68d7f2eb9d06ce2b0e351996e3ef926469
-  size_bytes: 3096
+  sha256: 4c7e4fb12a7d5b622efcd78d83bc4e90ca92ec76a002ebe2103409df0f908cf6
+  size_bytes: 3666
 - document_id: 2EF2BA3236099E11
   path: architecture/BAI_Development_OS_Consumer_Knowledge_Evolution_Roadmap_Refinement_Ver1.0.md
   title: BAI Development OS Consumer Knowledge Evolution Roadmap Refinement Ver.1.0
@@ -6033,12 +6033,12 @@ documents:
   authority: planning-design
   importance_level: A
   preferred_loading: read-first
-  status: ACTIVE_PHASE0_COMPOSE_POSTGRES_TUNING_IMPLEMENTED
+  status: ACTIVE_PHASE0_REMAINING_DEPLOYMENT_GATES_IMPLEMENTATION_CANDIDATE
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: a78d70b3665e7e8aca7af9946cd32d595c089b5245fa3d9c9af378d70e21d6bd
-  size_bytes: 6371
+  sha256: 952ba526ceedc0af9ec0e688ea3188534f9a118783bee8b9a2893eba295177b4
+  size_bytes: 7187
 - document_id: F98D4889B66968D3
   path: reviews/BAI_Development_OS_Consumer_Knowledge_Three_Role_Roadmap_Review_2026-08-11.md
   title: Consumer Knowledge Evolution Three-Role Roadmap Review
@@ -6610,8 +6610,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: 846d8055d6d9fba12d06c0e48132684b145a9653f14f93142873411829da5edb
-  size_bytes: 13973
+  sha256: e94dbfd7b2d1936741098bb3717c89a638e7f8d3ff785202a82a5131d676cf74
+  size_bytes: 14951
 - document_id: CFE15B7F801ACAC9
   path: deploy/knowledge-hub/postgres/001_initial.sql
   title: BAI Knowledge Hub PostgreSQL Initial Schema
@@ -6636,8 +6636,8 @@ documents:
   writable: false
   effective_date: '2026-08-11'
   verified_by: Orchestrator
-  sha256: fa7782d30383112be8c36f86f101a0bcdc8dd4dce647674f753dd7eea32773db
-  size_bytes: 6004
+  sha256: 40bcc65a0bf92c8e2b47de442f07b9446122708a396ae5fd85c99d471b0ff859
+  size_bytes: 6077
 - document_id: 0E45033EFABA8C35
   path: tasks/TASK-017/phase0-deployment-readiness-owner-authorization-2026-08-11.md
   title: TASK-017 Phase 0 Deployment Readiness Owner Authorization
@@ -8711,6 +8711,760 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: TASK020_IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS
   effective_date: '2026-08-16'
+- document_id: 2E529CD51A052059
+  path: deploy/knowledge-hub/runtime/create-consistent-backup.mjs
+  title: 'create-consistent-backup.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: c48e15673529994cf3a570b3bb09c64a03fda1b27d2b651605a9954ce61da233
+  size_bytes: 27866
+- document_id: 82BD7F3D1FBCD8B2
+  path: deploy/knowledge-hub/runtime/package.json
+  title: 'bai-knowledge-hub-runtime'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 7c9fd6a8bfb7798c69d797aa609a6bbbab460b39e34c65674c0dcf2fc9ccffd7
+  size_bytes: 223
+- document_id: 0A422D082EE15D43
+  path: deploy/knowledge-hub/runtime/package-lock.json
+  title: 'bai-knowledge-hub-runtime'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 9b221c4ed9742d7667255c88dad34dd46443fbe0d45be1c257e5df340e0ecd4d
+  size_bytes: 8066
+- document_id: 2477316A937DBCFF
+  path: deploy/knowledge-hub/scripts/backup-postgres.sh
+  title: 'backup-postgres.sh'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: cbafc40d81c5fa26f4e5a65cda45c28ca8c7f2e6bbf563edaff55d6f08c23c9b
+  size_bytes: 18313
+- document_id: BD0C2EEEA0E77FAB
+  path: deploy/knowledge-hub/scripts/restore-rehearsal.sh
+  title: 'restore-rehearsal.sh'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: dcac16db7d98b9a793242367161089ec60b4ef1ae669359e0ea3b8f6cf1584b3
+  size_bytes: 176
+- document_id: 610ACDB20F9DB6C4
+  path: deploy/knowledge-hub/scripts/run-encrypted-backup-restore-rehearsal.sh
+  title: 'run-encrypted-backup-restore-rehearsal.sh'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 2e3c94f1d0eca5111625c8f510456ea8a27df97332e7b6601218e05fb233c248
+  size_bytes: 64664
+- document_id: 2B03E98880390F5D
+  path: schemas/knowledge-evolution/knowledge-hub-backup-rehearsal-bundle.schema.json
+  title: 'BAI Knowledge Hub Committed Backup Rehearsal Bundle'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 1fec1429723643821ecdf291d1da9448e4cd346698d1598dddb065af75fb6dcb
+  size_bytes: 2028
+- document_id: 63B0FC82ADB39851
+  path: schemas/knowledge-evolution/knowledge-hub-backup-restore-rehearsal-evidence.schema.json
+  title: 'BAI Knowledge Hub Encrypted Backup Restore Rehearsal Evidence'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 0725ff7d1705832c260eebbd67a5889ebc81132b2cca25333b65e99357a89e41
+  size_bytes: 4907
+- document_id: 2E9B863846443CE4
+  path: schemas/knowledge-evolution/knowledge-hub-backup-source-manifest.schema.json
+  title: 'BAI Knowledge Hub Backup Source Manifest'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 560deb0bcd17fa079083392de02c880c7bb4212221d270136f60689a6c2e4ce5
+  size_bytes: 4404
+- document_id: F752D709BFD71DB9
+  path: schemas/knowledge-evolution/knowledge-hub-gate-prerequisite-evidence.schema.json
+  title: 'BAI Knowledge Hub Gate Prerequisite Evidence'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 37e6d1aabf433911863a9087306de35c6f199e2a182665c125f67911c82f03c7
+  size_bytes: 978
+- document_id: 8FC2EE0054DE8A21
+  path: schemas/knowledge-evolution/knowledge-hub-limited-product-pilot-decision.schema.json
+  title: 'BAI Knowledge Hub Limited Product Pilot Decision Readiness'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: baf206d21427abc26302cb862aa9ce286e638d0bb32e3165c2d5baeedfbd221d
+  size_bytes: 2938
+- document_id: 5DA25DA70679BAAF
+  path: schemas/knowledge-evolution/knowledge-hub-production-certificate-decision.schema.json
+  title: 'BAI Knowledge Hub Production Certificate Decision Readiness'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: f2683ee151c6f73f96acbb3994b8a1b5aa9dd1917f5dc16ee4ea39a95f24c271
+  size_bytes: 2454
+- document_id: 833A99A4C4F0A4D1
+  path: schemas/knowledge-evolution/knowledge-hub-production-tls-evidence.schema.json
+  title: 'BAI Knowledge Hub Production TLS Activation Evidence'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 4a2ceef21a61b8016821ad4911c22de984c361c4f2cd9925c449c959bfff103f
+  size_bytes: 2364
+- document_id: A90F2D9886324204
+  path: schemas/knowledge-evolution/knowledge-hub-rehearsal-authority-head.schema.json
+  title: 'BAI Knowledge Hub Rehearsal Authority Current Head'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: f56e2d3070a4410d153441ebad832c89e8f73340d87ac18866f44ca03d1e0e76
+  size_bytes: 999
+- document_id: 92BAE5B938823E94
+  path: schemas/knowledge-evolution/knowledge-hub-rehearsal-authority-revocations.schema.json
+  title: 'BAI Knowledge Hub Rehearsal Authority Revocations'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 00fde7e8a712d8f4ef7712da5e0143b2a3c07461baba9bd569a3c787c2c2aa69
+  size_bytes: 958
+- document_id: 9C9CBFE711323859
+  path: schemas/knowledge-evolution/knowledge-hub-rehearsal-authority-trust-root.schema.json
+  title: 'BAI Knowledge Hub Rehearsal Authority Trust Root'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: c9d112f02472fc63e04468e7074348f63ab06657eda595938684dbd398096304
+  size_bytes: 720
+- document_id: 5216ACA7F7BFE33A
+  path: schemas/knowledge-evolution/knowledge-hub-rehearsal-target-authorization.schema.json
+  title: 'BAI Knowledge Hub Non-Production Rehearsal Target Authorization'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: f4366848bef1f9d620e394026419a47bc90e7a1a8c35d6bb79f71efb44fbaa8b
+  size_bytes: 4127
+- document_id: 1DCB3D47496CB902
+  path: scripts/build-knowledge-hub-decision-readiness.mjs
+  title: 'build-knowledge-hub-decision-readiness.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 458e227bc3f3b8e0f26dc494c50ae2b55e6a0b1df726fdac0d3575cc0856f9ea
+  size_bytes: 4439
+- document_id: D3C18D2CDA0BFD03
+  path: scripts/check-knowledge-hub-deployment-readiness.mjs
+  title: 'check-knowledge-hub-deployment-readiness.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: d65d7304d7cf8dce93b04db192283ee422982eb4e69426d990adcb015656d6f0
+  size_bytes: 11860
+- document_id: 9A23E28FF22BA662
+  path: scripts/check-knowledge-hub-remaining-deployment-gates.mjs
+  title: 'check-knowledge-hub-remaining-deployment-gates.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: b3b6397533a70ea62f851edea9e66441d1ccd0ea0df9929e75da625a88ceaec2
+  size_bytes: 4499
+- document_id: BBA585E969EC4815
+  path: scripts/commit-knowledge-hub-backup-rehearsal-bundle.mjs
+  title: 'commit-knowledge-hub-backup-rehearsal-bundle.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 2a25e2b4ca8002c8ee49a2142bb302442c345804da220e52e4a9c9cd44a2d759
+  size_bytes: 35120
+- document_id: 33EF476368367F00
+  path: scripts/validate-knowledge-hub-pg-restore-list.mjs
+  title: 'validate-knowledge-hub-pg-restore-list.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: a2887aa526517e31074004d2c12246dc35ed6776a4076d4cd1419b52b2e46b41
+  size_bytes: 3848
+- document_id: 9E1675799948269D
+  path: scripts/validate-knowledge-hub-remaining-deployment-gates.mjs
+  title: 'validate-knowledge-hub-remaining-deployment-gates.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: a0b02afffe4396502a10f193d9f5961ce57ea37711340e36a2e20593ee87f3db
+  size_bytes: 28924
+- document_id: 9C86A4716B351902
+  path: scripts/verify-knowledge-hub-rehearsal-target-authorization.mjs
+  title: 'verify-knowledge-hub-rehearsal-target-authorization.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 341dcfc8dfb2b75c53a831ceeed7d0ceb25312b0a8b3251437e494642b6cabb5
+  size_bytes: 24894
+- document_id: 26E6C17A99818ECB
+  path: scripts/write-knowledge-hub-rehearsal-recovery-journal.mjs
+  title: 'write-knowledge-hub-rehearsal-recovery-journal.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 8aa5b42cee47dc95b73a7969fdcd71f7c55b0ba3b0bda6927db9f88f4bb809a1
+  size_bytes: 11720
+- document_id: FB99CFAAFDE63B04
+  path: specifications/TASK-017_Knowledge_Hub_Remaining_Deployment_Gates_Ver1.0.md
+  title: 'TASK-017 Knowledge Hub Remaining Deployment Gates Detailed Design Ver.1.0'
+  category: task-design
+  authority: task017-repository-local-design
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 5611389ef9035d4ddf69fa8dadbc731022bd04dfe7804974826dc00f116ccd64
+  size_bytes: 18502
+- document_id: 1B599C35C1E7D279
+  path: tasks/TASK-017/phase0-resume-and-remaining-gates-owner-direction-2026-08-16.md
+  title: 'TASK-017 Phase 0 — Resume and Remaining Gates Owner Direction — 2026-08-16'
+  category: task-evidence
+  authority: owner-direction
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 6175567b81a8052e92e930f32c84b1d33afc57a3afcea495d827e6433fdb41af
+  size_bytes: 1382
+- document_id: 3D280EA464ABE498
+  path: tasks/TASK-017/phase0-remaining-gates-pause-checkpoint-2026-08-16.md
+  title: 'TASK-017 Phase 0 Remaining Gates — Pause Checkpoint'
+  category: task-evidence
+  authority: safe-pause-checkpoint
+  importance_level: A
+  preferred_loading: read-first
+  status: PAUSED_CRITIC_REMEDIATION_INCOMPLETE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: d11ce83f8939123141442fe08501bce64dba6cb02f8a02066f859983cc2a3711
+  size_bytes: 4164
+- document_id: BD49711E03BC7078
+  path: tasks/TASK-017/remaining-deployment-gates-operator-runbook.md
+  title: 'TASK-017 Remaining Deployment Gates — Operator Runbook'
+  category: operator-runbook
+  authority: task017-repository-local-operations
+  importance_level: B
+  preferred_loading: summary-or-on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 5715965fd693c3635d64a6bdf5ed70fc7e73375d402fc05d7897b44fdb370252
+  size_bytes: 13731
+- document_id: A4069285D5D14312
+  path: tests/knowledge-hub/deployment-readiness.test.mjs
+  title: 'deployment-readiness.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 03488d51f62c4b7e51255972d6fdf78abc11520a3059179d170ddb323ba97e01
+  size_bytes: 5769
+- document_id: DFA59933C0D2677E
+  path: tests/knowledge-hub/runtime-lock-candidate.test.mjs
+  title: 'runtime-lock-candidate.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 784031a0d4fc48e49c7a674e358590abdadf41ffd656b08d3bcea0c3d1ee053d
+  size_bytes: 2100
+- document_id: 6960D465228AD9FC
+  path: tests/knowledge-hub/remaining-deployment-gates.test.mjs
+  title: 'remaining-deployment-gates.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 62c551438fb9a9bee51e74e6482bf02c3593feab2614657f90620184367eb504
+  size_bytes: 55223
+- document_id: A59A0CEE96422ADC
+  path: schemas/knowledge-evolution/knowledge-hub-backup-source-authorization.schema.json
+  title: 'BAI Knowledge Hub Non-Production Backup Source Authorization'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 647e18168bdbc224357af4f7246fb1cdef173bb326ada8ea16131a3eefb47579
+  size_bytes: 3082
+- document_id: CBE42FACE44AC12A
+  path: schemas/knowledge-evolution/knowledge-hub-rehearsal-recovery-authorization.schema.json
+  title: 'BAI Knowledge Hub Rehearsal Recovery Authorization'
+  category: schema
+  authority: task017-repository-local-contract
+  importance_level: A
+  preferred_loading: read-first
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 8debe3b2434476b34a9c2269981515ae3d9e357d9f15857b34d2450df7498f1c
+  size_bytes: 2350
+- document_id: C8296A2C7C5A8773
+  path: scripts/recover-knowledge-hub-rehearsal.mjs
+  title: 'recover-knowledge-hub-rehearsal.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 0e54cece47f06a7ccbd90abf1e303b00cb19c357cb5f3413b34b42485bb3a17c
+  size_bytes: 7478
+- document_id: 4F7D642148F108E5
+  path: scripts/validate-knowledge-hub-schema-sql.mjs
+  title: 'validate-knowledge-hub-schema-sql.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: e0ce0d2851e000507ab37f11be1e5c44dfd9607e8e7116afb80668586d56898a
+  size_bytes: 12777
+- document_id: 832EFEC9796FADCE
+  path: deploy/knowledge-hub/systemd/bai-knowledge-hub-source-backup.service
+  title: 'BAI Knowledge Hub Source Backup Service'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: ef84697bc834fd95913f113e05f7274952216b39c9fc5e8ae112a7cb172e6de6
+  size_bytes: 1590
+- document_id: 2B7E78EE4760A30B
+  path: deploy/knowledge-hub/systemd/bai-knowledge-hub-restore-rehearsal.service
+  title: 'BAI Knowledge Hub Restore Rehearsal Service'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: f748abd7d5c629f8addf1cd885b42639c7f0434b54d1d695b7d4b1b825755dc9
+  size_bytes: 1686
+- document_id: F902009A00555154
+  path: deploy/knowledge-hub/systemd/bai-knowledge-hub-rehearsal-recovery.service
+  title: 'BAI Knowledge Hub Rehearsal Recovery Service'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: cbd75bb54413e4a321d4656142f157a9f2369bfca18f89191005ff7832765d61
+  size_bytes: 1437
+- document_id: BC7AE052B42BE184
+  path: deploy/knowledge-hub/systemd/rehearsal-recovery.env.example
+  title: 'Knowledge Hub Rehearsal Recovery Environment Template'
+  category: operator-template
+  authority: task017-repository-local-operations
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: c3ec57e414bad6140f9a4abb2938946b178cff7c7638fe69970c467349f5f265
+  size_bytes: 571
+- document_id: 88E60741326751CE
+  path: deploy/knowledge-hub/systemd/validate-rehearsal-recovery-environment.mjs
+  title: 'validate-rehearsal-recovery-environment.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 827aeb0c0c02726788d5ff7674c3703fb2fbb36f897d2c9cd7c010dfad3479bf
+  size_bytes: 7862
+- document_id: DEA682526668ECD4
+  path: scripts/knowledge-hub-phase0-schema-inventory.mjs
+  title: 'knowledge-hub-phase0-schema-inventory.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 6f9961634458cb4879720a3afa6d376587378d4cc1d3365fa4a6e11a4b356620
+  size_bytes: 5468
+- document_id: F1A612DAABDAAE4A
+  path: tests/knowledge-hub/authority-fencing-remediation.test.mjs
+  title: 'authority-fencing-remediation.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 394ab001c85c73d07ec8ce03046cd29eed2963486b462f3a13d58316ef383cbf
+  size_bytes: 10854
+- document_id: 3482D49059D42066
+  path: tests/knowledge-hub/bundle-publication-state.test.mjs
+  title: 'bundle-publication-state.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: e4e9be86b3a87834c4cd11dac30094de291b6547936bf6ff7e58288cedcee883
+  size_bytes: 2293
+- document_id: A783B8DB147110C5
+  path: tests/knowledge-hub/recovery-operations-remediation.test.mjs
+  title: 'recovery-operations-remediation.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 19c3ade86c59821b4d420b46ac722141c4ae097b4aa6191b9bc1353321da280d
+  size_bytes: 10603
+- document_id: 8E00A62ADC828B85
+  path: tests/knowledge-hub/schema-semantic-allowlist.test.mjs
+  title: 'schema-semantic-allowlist.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 2939bb5dfb06725dd4816bdbcad2c8d354211ed247a283cfaee4a7c271aeec80
+  size_bytes: 4894
+- document_id: 44BC816269F386ED
+  path: tests/knowledge-hub/fixtures/phase0-schema.sql
+  title: 'Phase-0 Knowledge Hub Canonical Schema Fixture'
+  category: implementation-test-fixture
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_CANDIDATE
+  writable: false
+  effective_date: '2026-08-16'
+  verified_by: Orchestrator
+  sha256: 44050ce83dbd04b1d32f4b1ec8612b2b5cce2c453ef681d89958fd460a65ad87
+  size_bytes: 3409
+- document_id: D70E9E944DDD8706
+  path: scripts/validate-knowledge-hub-data-only-copy.mjs
+  title: 'validate-knowledge-hub-data-only-copy.mjs'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: d70e9e944ddd87068fb612f9a129cdfa5cb3b61852e37150b24b3279bbcabad8
+  size_bytes: 3960
+- document_id: 9044611EB425DAE9
+  path: schemas/knowledge-evolution/knowledge-hub-backup-source-authorization-consumption.schema.json
+  title: 'Knowledge Hub Backup Source Authorization Consumption Schema'
+  category: implementation-schema
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: 9044611eb425dae9a17d1505dd13de027848d9e54f57a8bfc4d29816e589f511
+  size_bytes: 1019
+- document_id: 2E8315A9022D7BE6
+  path: schemas/knowledge-evolution/knowledge-hub-rehearsal-authority-audit-checkpoints.schema.json
+  title: 'Knowledge Hub Rehearsal Authority Audit Checkpoints Schema'
+  category: implementation-schema
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: 2e8315a9022d7be648f76271d8498fd2197414c1c3acd8b93b6265e0ffe2f5e2
+  size_bytes: 1857
+- document_id: FB6814752A6C7EA0
+  path: schemas/knowledge-evolution/knowledge-hub-rehearsal-post-effect-completion.schema.json
+  title: 'Knowledge Hub Rehearsal Post-Effect Completion Schema'
+  category: implementation-schema
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: fb6814752a6c7ea01cae9fa92112a14a12c9e974ae5c972cf4d282ca12c9bb07
+  size_bytes: 1287
+- document_id: 672290F817007408
+  path: deploy/knowledge-hub/systemd/validate-rehearsal-execution-environment.mjs
+  title: 'Knowledge Hub Rehearsal Execution Environment Validator'
+  category: implementation-artifact
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: 672290f817007408f5c099e3627166c0ae6fc6a3eebb6c4bebe7658bf55fbfc1
+  size_bytes: 8508
+- document_id: EA5807E6C6798437
+  path: deploy/knowledge-hub/systemd/source-backup.env.example
+  title: 'Knowledge Hub Source Backup Environment Template'
+  category: deployment-template
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: ea5807e6c6798437c16252f79afe15e8cf3f082c230d3089c8ab684774e7ea40
+  size_bytes: 875
+- document_id: E7C2905375EE546F
+  path: deploy/knowledge-hub/systemd/restore-rehearsal.env.example
+  title: 'Knowledge Hub Restore Rehearsal Environment Template'
+  category: deployment-template
+  authority: task017-repository-local-implementation
+  importance_level: B
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: e7c2905375ee546fb6c8b812b7fb880a8d271ae47a7d0828c7ef2f0e2c107cde
+  size_bytes: 1567
+- document_id: 7694E24D795DFAB3
+  path: tests/knowledge-hub/security-authority-remediation-a.test.mjs
+  title: 'security-authority-remediation-a.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: 7694e24d795dfab3438add09aeafc6fd5028a861145fd415d3d97890bf77047c
+  size_bytes: 8805
+- document_id: DA01F32BDD3D54C8
+  path: tests/knowledge-hub/runtime-recovery-fencing.test.mjs
+  title: 'runtime-recovery-fencing.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: da01f32bdd3d54c82361248eaa174dbf0f621e7ab1fd1ab9f2ad51fbc3d6b9c5
+  size_bytes: 4639
+- document_id: DC05BDEEDAA0BB5D
+  path: tests/knowledge-hub/remediation-c-completeness.test.mjs
+  title: 'remediation-c-completeness.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: dc05bdeedaa0bb5dd549c388491e1722bdc23efdb8865b9c076cc51794a8c87e
+  size_bytes: 9927
+- document_id: 1F483DC8CBFE955F
+  path: tests/knowledge-hub/task017-registry-consistency.test.mjs
+  title: 'task017-registry-consistency.test.mjs'
+  category: implementation-test
+  authority: task017-repository-local-evidence
+  importance_level: C
+  preferred_loading: on-demand
+  status: IMPLEMENTATION_REMEDIATION_CANDIDATE_THREE_REAUDITS_PENDING
+  writable: false
+  effective_date: '2026-08-17'
+  verified_by: Orchestrator
+  sha256: 1f483dc8cbfe955ffaf3d355a28d1644b71b223f31ca499b0bf06c54bc466937
+  size_bytes: 1733
 current_canonical_document_sets:
   effective_date: '2026-08-16'
   promotion_authority: Owner
@@ -8737,9 +9491,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_TASK020_IMPLEMENTATION_COMPLETE
+  registry_sync_status: TASK017_WIP_CHECKPOINT_OPEN_CRITIC_FINDINGS
   commit_status: TASK020_DURABLE_RUNTIME_COMMIT_F9365B2
-  roadmap_expansion_status: TASK019_COMPLETE_TASK020_ACTIVE_TASK017_PAUSED
+  roadmap_expansion_status: TASK019_COMPLETE_TASK020_IMPLEMENTED_TASK017_WIP_CHECKPOINT_OPEN_CRITIC_FINDINGS
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -8749,7 +9503,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: TASK020 DRAFT PR PUBLICATION; TASK-017 remains PAUSED and Production Activation BLOCKED
+  next_canonical_route: TASK017 close open Critic findings, then fresh fixed-snapshot reaudits and Final Judge; external effects and Production Activation BLOCKED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -8806,7 +9560,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 57
-  roadmap_refinement_status: TASK018_COMPLETE; TASK019_COMPLETE; TASK020_ACTIVE; TASK017_PAUSED
+  roadmap_refinement_status: TASK018_COMPLETE; TASK019_COMPLETE; TASK020_IMPLEMENTED; TASK017_WIP_CHECKPOINT_OPEN_CRITIC_FINDINGS
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -8838,11 +9592,11 @@ current_canonical_document_sets:
     status: ACTIVE_PHASE0_COMPLETED_PHASE1_NOT_AUTHORIZED
     machine: tasks/TASK-016/task.md
     summary: tasks/TASK-016/TASK-016.summary.md
-  task_017_status: PAUSED_AT_07AF447_FOR_TASK018_P0 / PRODUCTION_ACTIVATION_BLOCKED
+  task_017_status: WIP_CHECKPOINT / OPEN_CRITIC_FINDINGS / FINAL_JUDGE_NOT_PASS / PRODUCTION_ACTIVATION_BLOCKED
   task_017_knowledge_evolution_federated_evidence_governance:
     document_id: TASK_017_KNOWLEDGE_EVOLUTION_FEDERATED_EVIDENCE_GOVERNANCE
     version: roadmap-1.0
-    status: PAUSED_AT_07AF447_PRODUCTION_ACTIVATION_BLOCKED
+    status: WIP_CHECKPOINT_OPEN_CRITIC_FINDINGS_FINAL_JUDGE_NOT_PASS_PRODUCTION_ACTIVATION_BLOCKED
     machine: tasks/TASK-017/task.md
     summary: tasks/TASK-017/TASK-017.summary.md
   task_018_status: COMPLETED / OS_V1_1_0_RELEASE_PUBLISHED
@@ -8861,11 +9615,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-020/task.md
     summary: tasks/TASK-020/TASK-020.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_TASK020_IMPLEMENTATION_COMPLETE
+registry_status: TASK017_WIP_CHECKPOINT_OPEN_CRITIC_FINDINGS_FINAL_JUDGE_NOT_PASS
 registry_status_details:
-  documents: 725
+  documents: 783
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
-  current_task: TASK-020 IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED
-  next_task: TASK020 DRAFT PR PUBLICATION; TASK-017 remains paused and Production Activation BLOCKED
+  current_task: TASK-017 WIP CHECKPOINT / OPEN CRITIC FINDINGS / FINAL JUDGE NOT PASS
+  next_task: TASK-017 close open findings, then three zero-finding fixed-snapshot reaudits and Final Judge; external effects remain separate

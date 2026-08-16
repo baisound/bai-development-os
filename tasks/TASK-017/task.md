@@ -1,6 +1,6 @@
 # TASK-017 — Knowledge Evolution & Federated Evidence Governance OS
 
-Status: `ACTIVE / PHASE0_COMPOSE_POSTGRES_TUNING_IMPLEMENTED / LIVE_DOCKER_POSTGRES_AND_PRODUCTION_PILOT_PENDING`
+Status: `WIP_CHECKPOINT / OPEN_CRITIC_FINDINGS / FINAL_JUDGE_NOT_PASS / EXTERNAL_EFFECT_GATES_PENDING`
 Roadmap Position: `PHASE 0 REPRIORITIZED AFTER TASK-016 PHASE 0; PHASE 1+ AFTER TASK-016 RESILIENCE EVIDENCE`
 Development Profile: `DEV_4_FOUNDATION_CRITICAL` (expected; must be re-evaluated at design gate)
 Parent Scope: Architecture Ver.2.28 Part XV, Post-CREATIVE-OS Knowledge Audit Roadmap Refinement Ver.1.0, and Consumer Knowledge Evolution Roadmap Refinement Ver.1.2.
@@ -26,4 +26,4 @@ The remaining advanced TASK-017 scope stays after TASK-016 resilience evidence.
 
 Read first: `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, then `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md` for the early slice.
 
-Implementation authorization: `TASK-017 PHASE 0 LOCAL + NON-PRODUCTION DEPLOYMENT READINESS — OWNER AUTHORIZED 2026-08-11`. Production VPS/DNS/TLS/real credential activation remains `NOT_AUTHORIZED`.
+Implementation authorization: `TASK-017 PHASE 0 LOCAL + NON-PRODUCTION DEPLOYMENT READINESS — OWNER AUTHORIZED 2026-08-11`, resumed for repository-local remaining-roadmap development by the Owner direction dated 2026-08-16. The external VPS is declared prepared, a domain is declared obtainable and Let’s Encrypt is selected; VPS/DNS/ACME/real credential/remote backup/Product pilot effects remain separately authorized.

@@ -1,0 +1,45 @@
+[Unit]
+Description=BAI Knowledge Hub bounded encrypted restore rehearsal
+After=postgresql.service
+ConditionPathIsReadWrite=/var/lib/bai-development-os/knowledge-hub/rehearsals
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+EnvironmentFile=/run/bai-development-os/knowledge-hub/restore-rehearsal.env
+UnsetEnvironment=BASH_ENV ENV NODE_OPTIONS NODE_PATH LD_PRELOAD LD_LIBRARY_PATH PGOPTIONS PGSERVICE PGSERVICEFILE PGPASSWORD
+ExecStartPre=/usr/bin/node /opt/bai-development-os/deploy/knowledge-hub/systemd/validate-rehearsal-execution-environment.mjs restore --require-loaded /run/bai-development-os/knowledge-hub/restore-rehearsal.env
+ExecStart=/usr/bin/flock --shared /etc/bai-development-os/knowledge-hub/rehearsal-authority.lock /bin/bash --noprofile --norc /opt/bai-development-os/deploy/knowledge-hub/scripts/run-encrypted-backup-restore-rehearsal.sh
+TimeoutStartSec=24h
+TimeoutStopSec=30s
+KillMode=control-group
+SendSIGKILL=yes
+UMask=0077
+LimitCORE=0
+NoNewPrivileges=yes
+PrivateNetwork=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectClock=yes
+ProtectHostname=yes
+ProtectKernelLogs=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictNamespaces=yes
+RestrictRealtime=yes
+RestrictAddressFamilies=AF_UNIX AF_NETLINK
+LockPersonality=yes
+ProtectProc=invisible
+RemoveIPC=yes
+SystemCallArchitectures=native
+CapabilityBoundingSet=CAP_SETUID CAP_SETGID CAP_KILL
+AmbientCapabilities=
+ReadWritePaths=/var/lib/bai-development-os/knowledge-hub/rehearsals /var/lib/bai-development-os/knowledge-hub/authority-consumption /run/bai-development-os/knowledge-hub/plaintext
+
+[Install]
+WantedBy=multi-user.target

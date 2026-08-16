@@ -32,7 +32,7 @@ test('deployment files contain safety controls and no embedded API credential',(
  const caddy=read('deploy/knowledge-hub/Caddyfile');assert.match(caddy,/Strict-Transport-Security/);assert.match(caddy,/max_size 1MB/);
  const migration=read('deploy/knowledge-hub/postgres/002_auth_and_operations.sql');assert.match(migration,/secret_hash/);assert.doesNotMatch(migration,/raw_secret|plaintext_secret/i);
  const env=read('deploy/knowledge-hub/.env.example');assert.doesNotMatch(env,/bkh1\.|ghp_|sk-proj-/);
- const restore=read('deploy/knowledge-hub/scripts/restore-rehearsal.sh');assert.match(restore,/_restore_rehearsal/);assert.match(restore,/REHEARSAL_ONLY/);
+ const restore=read('deploy/knowledge-hub/scripts/restore-rehearsal.sh');assert.match(restore,/Legacy restore rehearsal entrypoint is disabled/);assert.doesNotMatch(restore,/\b(createdb|pg_restore|dropdb)\b/);
 });
 
 test('deployment readiness checker and runtime scripts parse',()=>{

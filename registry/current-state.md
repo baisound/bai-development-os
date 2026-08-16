@@ -21,11 +21,11 @@
 - Current Distributed Canonical: `TASK-015 Distributed Orchestration & Event Fabric Ver.1.0`
 - TASK-004〜015: `COMPLETED`
 - TASK-016: `ACTIVE / PHASE0_COMPLETED / PHASE1+ NOT_AUTHORIZED`
-- TASK-017: `PAUSED_AT_07AF447 / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
+- TASK-017: `PHASE0_REMAINING_GATES_WIP_CHECKPOINT / OPEN_CRITIC_FINDINGS / EXTERNAL_GATES_PENDING` — Production Activation remains `BLOCKED`
 - TASK-018: `COMPLETED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_RELEASE_PUBLISHED` — `BAI-OS-AUTONOMY-001`, P0 maximum
 - TASK-019: `COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`; implementation PR #29 merged at `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`
 - TASK-020: `IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`
-- Current development route: `TASK-020 Draft PR publication; no TASK-017 resume is implied`
+- Current development route: `TASK-017 repository-local remaining deployment gates resumed after TASK-020 local implementation; external effects remain blocked`
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -65,7 +65,7 @@
 - Priority: `P0 / MAXIMUM / HIGHEST_ACROSS_ALL_CURRENT_WORK`.
 - Roadmap promotion: `AUTHORIZED`; Architecture Ver.2.30 is the current Canonical after merge.
 - Foundation implementation: `COMPLETED / PR #29 MERGED`; exact main merge SHA `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`; Ready CI run `31789155119` all-green.
-- TASK-017 resume: `NOT_AUTHORIZED`.
+- TASK-017 repository-local resume: `OWNER_DIRECTED_2026-08-16`; VPS/DNS/ACME/remote backup/credential/pilot effects: `NOT_AUTHORIZED_BY_RESUME`.
 - Production Activation: `BLOCKED`.
 - Resume point: TASK-019 has no remaining implementation. Finish the dedicated Closure PR and cleanup, then follow the Owner-directed BAI VIDEO PRODUCTION V6 handoff from its `README-FIRST.md` under Consumer Authority.
 
@@ -90,11 +90,11 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Roadmap Consolidation: `57 / 57 PASS` after TASK-019 Consumer Design Governance priority synchronization
 - Root `DistributedOS` export: `PASS`
 - TASK-016 Phase 0 Knowledge Evolution focused suite: `50 / 50 PASS`
-- TASK-017 Phase 0 Knowledge Hub focused suite: `68 / 68 PASS`; Knowledge Evolution / Product Integration focused suite: `52 / 52 PASS`
+- TASK-017 Phase 0 Knowledge Hub suite: `119 / 119 PASS` with the required Git Bash tool path; Remaining Deployment Gates focused suite: `51 / 51 PASS`; executable no-effect kill/recovery stubs PASS. Live Linux root/systemd/PostgreSQL/real-age execution remains an Environment Gate and is not substituted by repository tests. Knowledge Evolution / Product Integration focused suite: `52 / 52 PASS`
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
-- Blocking Critic findings: `0`
-- Document Registry: `717 documents / Missing 0 / Hash-Size mismatch 0`
+- Blocking Critic findings: `OPEN / SECURITY C0-H3-M3 / RUNTIME C0-H4-M1 / FINAL_JUDGE_NOT_PASS`
+- Document Registry: `783 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 - Architecture Ver.2.30 triplet structural synchronization: `PASS`; visual render inspection: `UNAVAILABLE_IN_CURRENT_WINDOWS_AND_WSL2_RUNTIME` (no visual PASS claimed)
@@ -131,10 +131,10 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Evidence: closed sanitized `PUBLIC_TLS_STAGING_REHEARSAL_PASS` record with certificate digest/validity and no secret/raw certificate.
 - Remaining: merge this implementation, pull Canonical main on VPS, explicitly authorize/run staging and review its Evidence.
 
-## TASK-017 P0 Pause — 2026-08-13
+## TASK-017 P0 Historical Pause — 2026-08-13
 
-- Current Phase: Phase 0 deployment/security gates.
-- Pause state: `PAUSED_AT_SAFE_CHECKPOINT_FOR_TASK018_P0`.
+- Historical Phase: Phase 0 deployment/security gates.
+- Historical pause state: `PAUSED_AT_SAFE_CHECKPOINT_FOR_TASK018_P0`; superseded for repository-local work by the Owner resume direction dated 2026-08-16.
 - Stop point: clean checkout `07af4470397e85ccdf86ec57b6b7c00c6992b974` after PR #12.
 - Completed range: Local Hub, Deployment Readiness, Integration Kit RC, Pre-Live Hardening, PostgreSQL/runtime gates, Public IP TLS/Caddy and Public TLS Staging implementation/static PASS.
 - Last passed repository Gate: `PUBLIC_TLS_STAGING_IMPLEMENTED / STATIC_PASS`.
@@ -144,6 +144,13 @@ Pre-Live hardening uses split PostgreSQL fields instead of Compose-side password
 - Resume condition: TASK-018/Owner routing decision plus exact authority for the bounded TASK-017 unit.
 - Production Activation: `BLOCKED`.
 - Canonical decision: `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`.
+
+## TASK-017 P0 Repository-Local Resume — 2026-08-16
+
+- Current state: `WIP_CHECKPOINT / OPEN_CRITIC_FINDINGS / FINAL_JUDGE_NOT_PASS`; the earlier safe-pause state remains historical Evidence in `tasks/TASK-017/phase0-remaining-gates-pause-checkpoint-2026-08-16.md`, and the current remote-checkpoint boundary is recorded in `tasks/TASK-017/phase0-remediation-reaudit-pause-checkpoint-2026-08-17.md`.
+- Local Evidence: Knowledge Hub `119 / 119 PASS`; focused Remaining Deployment Gates `51 / 51 PASS`; Git Bash execution, static checker, diff check and roadmap consolidation PASS. Automated PASS does not close the latest fixed-snapshot Critic findings: Security is `C0/H3/M3`, Runtime/Recovery is `C0/H4/M1`, and no Final Judge PASS exists.
+- Environment boundary: live PostgreSQL/`age` rehearsal, VPS login or mutation, DNS registration, Let’s Encrypt issuance, Production activation and Product pilot remain separately authorized and evidenced Gates.
+- Declared inputs: an external VPS is prepared; a domain is being acquired; Let’s Encrypt is selected. No SSH key, target host, user, FQDN or authenticated external-effect receipt is currently bound.
 
 ## TASK-018 P0 Entry — 2026-08-13
 

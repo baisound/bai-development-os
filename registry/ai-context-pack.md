@@ -10,7 +10,7 @@
 - Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETED`; exact PR #23 merge, annotated `v1.1.0`, stable source-only GitHub Release and publication-branch cleanup are verified
 - Current design intake: `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001 / TASK-019 / COMPLETED / PR_29_MERGED_AT_D30F94A53D5C3D51CB8ED9D9F84FE226CE7E9BF0`
 - Current Consumer: BAI VIDEO PRODUCTION R2/R3 complete; bounded R4 local Comfy adapter `HOSTED_CLOSED` at exact main `7d6486059c468009042e4c186d54b566d6e1477e`; native H3 completion `PARKED_TO_SAFE_RUNTIME_REVIEW`
-- Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
+- Current route: `TASK-017 Phase 0 / REMAINING_GATES_WIP_CHECKPOINT / OPEN_CRITIC_FINDINGS / FINAL_JUDGE_NOT_PASS`; Production Activation remains `BLOCKED`
 - Roadmap authority: Architecture Ver.2.30 Part XV + Part XXXI; TASK-019 is inserted after completed TASK-018 and before any TASK-017 resume; `57 / 57 PASS`
 - Current development overlay: `architecture/BAI_Development_OS_Post_TASK019_Autonomous_Worklane_Roadmap_Refinement_Ver1.0.md`; TASK-020 adds bounded autonomous worklanes and durable dispatch after completed TASK-019 without reopening earlier Tasks
 
@@ -58,7 +58,7 @@ DistributedOS never replaces existing authority. Transport carries already-autho
 - Roadmap: `57 / 57 PASS`
 - Security / Release / Conformance / Maintenance / Extension / Calibration / Product Boundary: PASS
 - TASK-016 Phase 0 Knowledge Evolution: `50 / 50 PASS`; Python Product-owned reference compile/Mock Hub smoke: PASS
-- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub focused: `68 / 68 PASS`; Product Integration focused: `52 / 52 PASS`; VPS private/runtime gates: `PASS`; Public TLS Staging implementation: `STATIC_PASS / VPS_EXECUTION_PENDING`; blocking Critic findings: `0`
+- TASK-016 Phase 0 Judge: `PHASE0_COMPLETED / NEXT_ROUTE_ELIGIBLE`; TASK-017 Knowledge Hub: `119 / 119 PASS` in the required Git Bash tool environment; Remaining Deployment Gates focused: `51 / 51 PASS`; Product Integration focused: `52 / 52 PASS`; VPS private/runtime gates: `PASS`; Public TLS Staging implementation: `STATIC_PASS / VPS_EXECUTION_PENDING`; current review state: `OPEN_CRITIC_FINDINGS / SECURITY_C0_H3_M3 / RUNTIME_C0_H4_M1 / FINAL_JUDGE_NOT_PASS`
 
 ## Loading guidance
 
@@ -77,7 +77,7 @@ For local-only work, do not load or enable DistributedOS unless topology require
 7. `tasks/TASK-018/owner-implementation-authorization-2026-08-13.md`
 8. only the exact source modules/tests for the current bounded Phase
 
-Phases B-G, H1-H2, I0 and I1 are complete. Consumer `v0.20.0` release integration at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88` was the accepted Phase G checkpoint. H2 accepted deterministic restart/context precedence, live exact-head CI revalidation, Human Gate parking, bounded recovery and branch rotation. The final Pilot Context is `11,888` estimated tokens (`50.91%` below W2), with provider/cached/output/billed fields `null`. The first post-release supplement records BAI VIDEO PRODUCTION `v0.20.1`, TASK-036/M3B PASS and release-code/documentation-main separation. The current R2-R4 supplement records later R2/R3 completion plus the hosted-closed R4 local Comfy adapter at main `7d648605`; its native H3 completion remains parked after a known sampler failure and an Owner-confirmed Windows force restart with durable `QUEUED / RECOVERY_REQUIRED`. BAI Development OS `v1.1.0` remains published at exact main SHA `81a8445ab8a94fd75034e4c25b63eb7849f5608c`; TASK-018 is not reopened. TASK-017 remains paused; do not resume it without the separate current Owner route.
+Phases B-G, H1-H2, I0 and I1 are complete. Consumer `v0.20.0` release integration at exact main SHA `1fc8bae6ee5bf0c63c1c7d92e21e1eb6dd966c88` was the accepted Phase G checkpoint. H2 accepted deterministic restart/context precedence, live exact-head CI revalidation, Human Gate parking, bounded recovery and branch rotation. The final Pilot Context is `11,888` estimated tokens (`50.91%` below W2), with provider/cached/output/billed fields `null`. The first post-release supplement records BAI VIDEO PRODUCTION `v0.20.1`, TASK-036/M3B PASS and release-code/documentation-main separation. The current R2-R4 supplement records later R2/R3 completion plus the hosted-closed R4 local Comfy adapter at main `7d648605`; its native H3 completion remains parked after a known sampler failure and an Owner-confirmed Windows force restart with durable `QUEUED / RECOVERY_REQUIRED`. BAI Development OS `v1.1.0` remains published at exact main SHA `81a8445ab8a94fd75034e4c25b63eb7849f5608c`; TASK-018 is not reopened. TASK-017 repository-local work resumed under the Owner direction dated 2026-08-16. External VPS, DNS, ACME, credential and Product-pilot effects remain separately gated.
 
 Balanced Execution: maximum two review/fix cycles per bounded Phase. When required gates pass and unresolved Critical/High findings are `0/0`, continue to the next authorized unit rather than repeating Critic on unchanged artifacts.
 
@@ -91,9 +91,9 @@ BAI VIDEO PRODUCTION is referenced by immutable Git commit/tree and explicit key
 
 ## TASK-017 active Phase 0 context
 
-TASK-017 Phase 0 is `ACTIVE`. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, `tasks/TASK-017/phase0-consumer-evidence-hub-pilot-detailed-design.md`, then the Local Hub / Deployment Readiness / Integration Kit RC implementation, Critic and Judge records.
+TASK-017 Phase 0 is `ACTIVE`. Read `tasks/TASK-017/TASK-017.summary.md`, `tasks/TASK-017/knowledge-evolution-detailed-roadmap.md`, `tasks/TASK-017/phase0-resume-and-remaining-gates-owner-direction-2026-08-16.md`, `specifications/TASK-017_Knowledge_Hub_Remaining_Deployment_Gates_Ver1.0.md`, then the earlier Local Hub / Deployment Readiness / Integration Kit RC records.
 
-TASK-017 is now paused at clean checkpoint `07af447` for TASK-018 P0 insertion. Before any TASK-017 resume, read `tasks/TASK-017/phase0-development-pause-and-resume-decision-2026-08-13.md`, then its summary and detailed roadmap. The Remaining Deployment Gates patch is preserved unapplied with SHA-256 `721c9593bf8fa07c59b5b49f6690dd73ceeae33da2fa2b586cc58757b6d2e0dc`; it must be re-evaluated against the future checkout.
+TASK-017 repository-local Phase 0 resumed by Owner direction on 2026-08-16 after TASK-018 and TASK-020 local implementation. The formerly referenced Remaining Deployment Gates patch/source commit was unavailable and is not Evidence; the implementation was reconstructed from current canonical state. External VPS mutation, DNS acquisition, Let’s Encrypt issuance, offsite backup, credentials and Product pilot remain separate Gates.
 
 The accepted Deployment Readiness baseline builds on Local Hub Foundation with one-VPS Docker Compose packaging, private PostgreSQL/API default networking, production-compatible PostgreSQL runtime and immutable migration checksums, server-side hashed API-key credential lifecycle, liveness/readiness separation, explicit-public-profile Caddy TLS template, and safe backup/restore-rehearsal tooling. Public Clients cannot self-assign Trust or backfill provenance. No production key/DB secret is committed.
 

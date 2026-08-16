@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://baisound.dev/schemas/knowledge-evolution/knowledge-hub-rehearsal-authority-trust-root.schema.json",
+  "title": "BAI Knowledge Hub Rehearsal Authority Trust Root",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "result", "issuer_id", "algorithm", "public_key_pem"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "result": {"const": "KNOWLEDGE_HUB_REHEARSAL_AUTHORITY_TRUST_ROOT"},
+    "issuer_id": {"type": "string", "pattern": "^[A-Za-z0-9._:-]{1,128}$"},
+    "algorithm": {"const": "ED25519"},
+    "public_key_pem": {"type": "string", "pattern": "^-----BEGIN PUBLIC KEY-----"}
+  }
+}

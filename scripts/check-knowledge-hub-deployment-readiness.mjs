@@ -61,7 +61,7 @@ must('deploy/knowledge-hub/.env.example',/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=ht
 must('deploy/knowledge-hub/scripts/prepare-compose-env.sh',/BAI_KNOWLEDGE_HUB_ACME_CA_DIRECTORY=https:\/\/acme-staging-v02\.api\.letsencrypt\.org\/directory/,'generated env must remain fail-safe on Let\'s Encrypt staging');
 must('deploy/knowledge-hub/postgres/002_auth_and_operations.sql',/secret_hash/,'hashed credential storage missing');
 mustNot('deploy/knowledge-hub/postgres/002_auth_and_operations.sql',/api_key\s+text|raw_secret|plaintext_secret/i,'raw credential column prohibited');
-must('deploy/knowledge-hub/scripts/restore-rehearsal.sh',/_restore_rehearsal/,'restore target safety suffix missing');
+must('deploy/knowledge-hub/scripts/restore-rehearsal.sh',/Legacy restore rehearsal entrypoint is disabled/,'legacy restore entrypoint is not fail-closed');
 must('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/down -v --remove-orphans/,'live rehearsal must self-clean volumes');
 must('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/BAI_KNOWLEDGE_HUB_REHEARSAL_EVIDENCE_OUT/,'machine-readable rehearsal evidence output missing');
 must('deploy/knowledge-hub/scripts/run-live-rehearsal.sh',/cleanup_complete/,'rehearsal evidence must bind successful cleanup');

@@ -1,6 +1,6 @@
 # BAI Knowledge Hub — TASK-017 Phase 0 Deployment Readiness
 
-Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
+Status: `IMPLEMENTATION_CANDIDATE / LIVE_REHEARSAL_NOT_YET_EVIDENCED / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 
 ## Included
 
@@ -14,8 +14,11 @@ Status: `LOCAL_REHEARSAL_READY / PUBLIC_ACTIVATION_NOT_AUTHORIZED`
 - `postgres/postgresql.tuned-8gb.conf` — explicit 8 GiB startup-production profile.
 - `postgres/verify-tuning.sql` + `scripts/verify-postgres-tuning.sh` — active-setting verification.
 - `Caddyfile` — fail-closed public HTTPS gateway contract: Caddy 2.11.4, explicit Let's Encrypt ACME issuer, `shortlived` profile for IP certificates, admin API disabled, and HTTP/3 disabled until UDP/443 is separately adopted.
-- `scripts/backup-postgres.sh` — restrictive custom-format backup + SHA-256.
-- `scripts/restore-rehearsal.sh` — restore rehearsal only; safety suffix + acknowledgement required.
+- `scripts/backup-postgres.sh` + `runtime/create-consistent-backup.mjs` — exported-snapshot custom-format backup staged only on tmpfs, age-encrypted before persistent publication, with exact toolchain/archive manifest and last-write commit marker using the locked runtime `pg` dependency.
+- `scripts/restore-rehearsal.sh` — legacy entrypoint, permanently fail-closed. It performs no database operation.
+- `scripts/run-encrypted-backup-restore-rehearsal.sh` — the only restore-rehearsal entrypoint; it requires canonical signed authority, one-time nonce consumption, isolated local target proof, exact archive/schema admission, tmpfs plaintext and a durable Evidence bundle.
+- `systemd/bai-knowledge-hub-*.service` — the only supported privileged source/restore/recovery launch boundary. It removes environment-injection variables before interpreter startup, disables core dumps, isolates networking and holds the shared canonical-authority lease.
+- `scripts/backup-postgres.sh` requires a separately signed, current, non-revoked source-backup authorization and one-time consumption receipt before database access.
 - `scripts/ensure-runtime-db-credentials.sh` — atomically augments an existing host-only environment with a dedicated runtime DB credential without changing the bootstrap/admin password.
 - `scripts/verify-runtime-db-role.sh` — verifies the live API identity and least-privilege PostgreSQL role contract.
 

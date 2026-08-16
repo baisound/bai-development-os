@@ -78,7 +78,8 @@
     "check:knowledge-hub-deployment": "node scripts/check-knowledge-hub-deployment-readiness.mjs",
     "check:knowledge-hub-postgres-tuning": "node scripts/check-knowledge-hub-postgres-tuning.mjs",
     "check:knowledge-hub-ci-live-gate": "node scripts/check-knowledge-hub-ci-live-gate.mjs",
-    "check:knowledge-hub-public-tls-staging": "node scripts/check-knowledge-hub-public-tls-staging-gate.mjs"
+    "check:knowledge-hub-public-tls-staging": "node scripts/check-knowledge-hub-public-tls-staging-gate.mjs",
+    "check:knowledge-hub-remaining-deployment-gates": "node scripts/check-knowledge-hub-remaining-deployment-gates.mjs"
   },
   "engines": {
     "node": ">=20.19.0"
