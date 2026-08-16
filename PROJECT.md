@@ -57,7 +57,7 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `PAUSED_AT_07AF447 / PRODUCTION_ACTIVATION_BLOCKED`
 - `TASK-018`: Codex Autonomous Development Control Plane — `COMPLETED / P0_MAXIMUM / OS_V1_1_0_RELEASE_PUBLISHED`
 - `TASK-019`: Consumer Design Intake, Audit and Promotion Governance Foundation — `ACTIVE / P0_MAXIMUM / HIGHEST_ACROSS_ALL_CURRENT_WORK`
-- `TASK-020`: Autonomous Worklane / Durable Dispatch — `ACTIVE`
+- `TASK-020`: Autonomous Worklane / Durable Dispatch — `FOUNDATION_IMPLEMENTED`
 
 TASK-009 through TASK-015 and TASK-018 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-019 is the current P0/MAXIMUM route and is inserted immediately after TASK-018, before any separate TASK-017 resume decision. Production ACME, persistent public activation and real Product credentials remain separate explicit gates.
 
