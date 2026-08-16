@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/dispatch-envelope.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "dispatch_id", "semantic_operation_id", "lane_id", "target_inbox_id", "authority_grant_id", "payload_checksum", "state", "delivery_attempt", "target_persisted_coordinate", "terminal_coordinate", "created_at", "updated_at", "content_checksum"],
+  "properties": {
+    "schema": { "const": "BAI_DURABLE_DISPATCH_ENVELOPE_V1" },
+    "dispatch_id": { "$ref": "#/$defs/nonempty" },
+    "semantic_operation_id": { "$ref": "#/$defs/checksum" },
+    "lane_id": { "$ref": "#/$defs/nonempty" },
+    "target_inbox_id": { "$ref": "#/$defs/nonempty" },
+    "authority_grant_id": { "$ref": "#/$defs/nonempty" },
+    "payload_checksum": { "$ref": "#/$defs/checksum" },
+    "state": { "enum": ["CREATED", "TARGET_PERSISTED", "CLAIMED", "TERMINAL"] },
+    "delivery_attempt": { "type": "integer", "minimum": 0 },
+    "target_persisted_coordinate": { "type": ["string", "null"] },
+    "terminal_coordinate": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": {
+    "nonempty": { "type": "string", "minLength": 1 },
+    "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  }
+}

@@ -50,6 +50,7 @@
     "test:system-sync": "node --test tests/system-sync/*.test.mjs",
     "test:knowledge": "node --test tests/knowledge/*.test.mjs",
     "test:automation": "node --test tests/automation/*.test.mjs tests/integration/task006*.test.mjs",
+    "test:worklane": "node --test tests/automation/worklane.test.mjs tests/automation/standing-authority.test.mjs tests/automation/durable-dispatch.test.mjs tests/automation/atomic-completion.test.mjs tests/automation/human-gate-fencing.test.mjs tests/automation/task020-schema-contracts.test.mjs tests/integration/task020-autonomous-worklane.test.mjs",
     "test:monitoring": "node --test tests/monitoring/*.test.mjs tests/integration/task007*.test.mjs",
     "test:integration": "node --test tests/external-integration/*.test.mjs tests/integration/task008*.test.mjs",
     "check:roadmap": "node scripts/check-roadmap-consolidation.mjs",

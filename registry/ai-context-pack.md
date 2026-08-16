@@ -6,12 +6,23 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Current Task: `TASK-019 / COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`
+- Current Task: `TASK-020 / ACTIVE / DEV_4_FOUNDATION_CRITICAL / LOCAL_IMPLEMENTATION`
 - Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETED`; exact PR #23 merge, annotated `v1.1.0`, stable source-only GitHub Release and publication-branch cleanup are verified
 - Current design intake: `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001 / TASK-019 / COMPLETED / PR_29_MERGED_AT_D30F94A53D5C3D51CB8ED9D9F84FE226CE7E9BF0`
 - Current Consumer: BAI VIDEO PRODUCTION R2/R3 complete; bounded R4 local Comfy adapter `HOSTED_CLOSED` at exact main `7d6486059c468009042e4c186d54b566d6e1477e`; native H3 completion `PARKED_TO_SAFE_RUNTIME_REVIEW`
 - Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
 - Roadmap authority: Architecture Ver.2.30 Part XV + Part XXXI; TASK-019 is inserted after completed TASK-018 and before any TASK-017 resume; `57 / 57 PASS`
+- Current development overlay: `architecture/BAI_Development_OS_Post_TASK019_Autonomous_Worklane_Roadmap_Refinement_Ver1.0.md`; TASK-020 adds bounded autonomous worklanes and durable dispatch after completed TASK-019 without reopening earlier Tasks
+
+## TASK-020 mandatory loading order
+
+1. `registry/current-state.md`
+2. `tasks/TASK-020/TASK-020.summary.md`
+3. `tasks/TASK-020/final-plan-and-owner-authorization-2026-08-16.md`
+4. `specifications/TASK-020_BAI_Development_OS_Autonomous_Worklane_Durable_Dispatch_Ver1.0.md`
+5. only the exact `src/automation/`, schemas and tests needed for the bounded unit
+
+Standing authority is verified input, never inferred from a task title or prior conversation. Target persistence ACK is not execution completion. Human Gate V2 blocks its signed scope; fallback is explicit. Automatic takeover requires stale lease, a new valid fencing token, effect eligibility, reconciliation and ALLOW authority. Product completion requires same-revision current Gate receipts, independent Judge PASS, Lifecycle COMPLETED and Closure CLOSED.
 
 ## Post-TASK-018 Consumer Design Governance context
 

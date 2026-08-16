@@ -57,10 +57,11 @@ TASK-004 includes the completed Lifecycle foundation through Phase 6. TASK-005 i
 - `TASK-017`: Knowledge Evolution & Federated Evidence Governance OS — `PAUSED_AT_07AF447 / PRODUCTION_ACTIVATION_BLOCKED`
 - `TASK-018`: Codex Autonomous Development Control Plane — `COMPLETED / P0_MAXIMUM / OS_V1_1_0_RELEASE_PUBLISHED`
 - `TASK-019`: Consumer Design Intake, Audit and Promotion Governance Foundation — `ACTIVE / P0_MAXIMUM / HIGHEST_ACROSS_ALL_CURRENT_WORK`
+- `TASK-020`: Autonomous Worklane / Durable Dispatch — `ACTIVE`
 
 TASK-009 through TASK-015 and TASK-018 are `COMPLETED`. TASK-016 Phase 0 is completed; Phase 1+ remains unauthorized. TASK-017 is paused at the clean `07af447` checkpoint with its Remaining Deployment Gates patch preserved unapplied. TASK-019 is the current P0/MAXIMUM route and is inserted immediately after TASK-018, before any separate TASK-017 resume decision. Production ACME, persistent public activation and real Product credentials remain separate explicit gates.
 
-Current roadmap position: `architecture/BAI_Development_OS_Current_Roadmap_Position_Supplement_2026-08-14.md`. It synchronizes completed/current position only and intentionally does not create the next future roadmap.
+TASK-020 refinement: `architecture/BAI_Development_OS_Post_TASK019_Autonomous_Worklane_Roadmap_Refinement_Ver1.0.md`.
 
 The Owner accepted Consumer Design Governance as TASK-019, allocated it highest priority across current work and granted checksum-bound Foundation implementation authority. Architecture Ver.2.30 first promotes the route through its own PR; source implementation begins only from a fresh branch after exact main merge verification.
 
