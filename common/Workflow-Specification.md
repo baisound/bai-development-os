@@ -38,9 +38,11 @@ PAUSED, BLOCKED, and STALLED are distinct safe-stop states. Resume requires a va
 
 ## Routing
 
-Only Orchestrator routes the next Role.
+Orchestrator exclusively creates or changes cross-lane routing, scope and authority. Inside an already authorized Autonomous Worklane, a verified Atomic Unit Terminal may durably dispatch the exact next unit to the bound Target Inbox without a chat relay. This intra-lane continuation cannot widen files, capabilities, authority epoch, effect class or completion criteria.
 
 A Role may recommend a next action but that recommendation is advisory.
+
+Human Gate V2 parks only its exact signed resource/capability scope unless `system_wide_block=true`. A parked lane may select only an explicitly bound, resource-disjoint RUNNABLE fallback. Legacy V1 gates require migration evidence and remain fail-closed where scope is not exact.
 
 ## Rework loops
 

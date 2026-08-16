@@ -348,3 +348,19 @@ The later explicit Owner Directive supersedes prior “No TASK-018” planning s
 | OP-126 | Append-only post-release Consumer supplements distinguish historical Gate claims, release-code SHA and later documentation-main SHA while proving Human Gate re-entry | Implemented | TASK-018 post-release Consumer closure |
 
 WebMCP remains Experimental. Visual Compliance remains Consumer-owned. Release, Tag, Deploy, paid execution, credit purchase/top-up and unauthorized native mutation remain outside this allocation.
+
+## TASK-020 Autonomous Worklane & Durable Dispatch Allocation — 2026-08-16
+
+| ID | Improvement | Status | Target |
+|---|---|---|---|
+| OP-127 | Resource-disjoint autonomous worklanes with explicit fallback lanes | Foundation implemented | TASK-020 |
+| OP-128 | Deny-first, subject/epoch/resource-bound Standing Authority evaluation | Foundation implemented | TASK-020 |
+| OP-129 | At-least-once durable dispatch with semantic idempotency and target-persisted ACK | Foundation implemented | TASK-020 |
+| OP-130 | Target Inbox claim/terminal state separated from transport ACK | Foundation implemented | TASK-020 |
+| OP-131 | Atomic Unit terminal exact-one routing to next intent, Human Gate or completion | Foundation implemented | TASK-020 |
+| OP-132 | Human Gate V2 signed scope and explicit safe fallback; legacy V1 fail-closed migration | Foundation implemented | TASK-020 |
+| OP-133 | Effect-class/fencing/reconciliation-gated automatic takeover | Foundation implemented | TASK-020 |
+| OP-134 | Merge/reachability/worktree/lock/capability-bound branch cleanup eligibility | Foundation implemented | TASK-020 |
+| OP-135 | Same-revision current Gate/Judge/Lifecycle/Closure product-completion policy | Foundation implemented | TASK-020 |
+
+TASK-020 does not delete branches or perform external effects by itself. It produces deterministic eligibility and routing decisions; effect execution remains separately authorized and evidenced.

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/target-inbox.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "inbox_id", "semantic_operation_id", "payload_checksum", "persisted_coordinate", "state", "claim", "effect_coordinate", "result_coordinate", "terminal_coordinate"],
+  "properties": {
+    "schema": { "const": "BAI_TARGET_INBOX_OPERATION_V1" }, "inbox_id": { "$ref": "#/$defs/nonempty" }, "semantic_operation_id": { "$ref": "#/$defs/checksum" }, "payload_checksum": { "$ref": "#/$defs/checksum" },
+    "persisted_coordinate": { "$ref": "#/$defs/nonempty" }, "state": { "enum": ["RECEIVED", "CLAIMED", "EXECUTING", "EFFECT_STARTED", "EFFECT_RECONCILING", "EFFECT_COMMITTED", "RESULT_RECORDED", "TERMINAL_PASS", "TERMINAL_FAIL", "TERMINAL_BLOCKED", "TERMINAL_CANCELLED", "TERMINAL_UNKNOWN", "REJECTED", "RECOVERY_REQUIRED"] },
+    "claim": { "type": ["object", "null"] }, "effect_coordinate": { "type": ["string", "null"] }, "result_coordinate": { "type": ["string", "null"] }, "terminal_coordinate": { "type": ["string", "null"] }
+  },
+  "$defs": { "nonempty": { "type": "string", "minLength": 1 }, "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" } }
+}

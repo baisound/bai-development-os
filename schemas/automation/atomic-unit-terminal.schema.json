@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/atomic-unit-terminal.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "terminal_id", "lane_id", "atomic_unit_id", "type", "evidence_coordinate", "next_unit_intent", "human_gate_coordinate", "completion_coordinate", "failure_code", "created_at", "content_checksum"],
+  "properties": {
+    "schema": { "const": "BAI_ATOMIC_UNIT_TERMINAL_V1" },
+    "terminal_id": { "$ref": "#/$defs/nonempty" },
+    "lane_id": { "$ref": "#/$defs/nonempty" },
+    "atomic_unit_id": { "$ref": "#/$defs/nonempty" },
+    "type": { "enum": ["NEXT_UNIT_READY", "HUMAN_GATE", "PRODUCT_COMPLETED", "FAILED_KNOWN", "UNKNOWN"] },
+    "evidence_coordinate": { "$ref": "#/$defs/nonempty" },
+    "next_unit_intent": { "type": ["string", "null"] },
+    "human_gate_coordinate": { "type": ["string", "null"] },
+    "completion_coordinate": { "type": ["string", "null"] },
+    "failure_code": { "type": ["string", "null"] },
+    "created_at": { "type": "string", "format": "date-time" },
+    "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": {
+    "nonempty": { "type": "string", "minLength": 1 },
+    "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  }
+}

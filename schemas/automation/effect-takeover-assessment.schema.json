@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/effect-takeover-assessment.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["operation_id", "effect_class", "prior_lease_state", "new_fencing_token_valid", "authority_result", "reconciliation_receipts"],
+  "properties": {
+    "operation_id": { "type": "string", "minLength": 1 },
+    "effect_class": { "enum": ["PURE", "IDEMPOTENT_KEYED", "FENCED_REVERSIBLE", "UNFENCEABLE"] },
+    "prior_lease_state": { "enum": ["ACTIVE", "STALE", "REVOKED", "UNKNOWN"] },
+    "new_fencing_token_valid": { "type": "boolean" },
+    "authority_result": { "enum": ["ALLOW", "DENY", "UNKNOWN"] },
+    "reconciliation_receipts": { "type": "array", "uniqueItems": true, "items": { "type": "string", "minLength": 1 } }
+  }
+}

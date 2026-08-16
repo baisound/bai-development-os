@@ -20,7 +20,8 @@ Orchestrator controls workflow routing, gate readiness, dependency loading, and 
 - Determine current phase and gate readiness.
 - Verify required artifact path, authoring Role, structure, Result, and scope.
 - Load only the common and Role specifications required for the next action.
-- Route to the next independent Role.
+- Create or change cross-lane routing, scope and authority bindings.
+- Verify Autonomous Worklane ownership, authority epoch and Target Inbox binding.
 - Generate an exact downstream prompt.
 - Preserve evidence during Progress Stall.
 - Report authorization exactly as recorded.
@@ -118,7 +119,7 @@ Verify:
 
 ## Handoff rules
 
-Only Orchestrator routes the next Role.
+Only Orchestrator creates or changes cross-lane routing. A verified Atomic Unit Terminal may continue within the same already-authorized Worklane through durable Target Inbox dispatch; this is execution of an existing route, not a new Role or authority decision.
 
 A valid handoff MUST use the Routing Envelope.
 

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/coordination-intent-object.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "transaction_id", "task_id", "lane_id", "lane_revision", "intent_kind", "intent_payload", "authority_coordinate", "lane_coordinate", "lease_coordinate", "fence_coordinate", "expected_lifecycle_revision", "requested_after_state", "payload_byte_length", "payload_sha256", "object_id", "created_at", "content_checksum"],
+  "properties": {
+    "schema": { "const": "BAI_COORDINATION_INTENT_OBJECT_V1" },
+    "transaction_id": { "$ref": "#/$defs/nonempty" }, "task_id": { "$ref": "#/$defs/nonempty" }, "lane_id": { "$ref": "#/$defs/nonempty" },
+    "lane_revision": { "type": "integer", "minimum": 0 }, "intent_kind": { "enum": ["NEXT_UNIT", "HUMAN_GATE", "LANE_COMPLETION"] },
+    "intent_payload": { "type": "object" }, "authority_coordinate": { "$ref": "#/$defs/nonempty" }, "lane_coordinate": { "$ref": "#/$defs/nonempty" },
+    "lease_coordinate": { "$ref": "#/$defs/nonempty" }, "fence_coordinate": { "$ref": "#/$defs/nonempty" }, "expected_lifecycle_revision": { "type": "integer", "minimum": 0 },
+    "requested_after_state": { "$ref": "#/$defs/nonempty" }, "payload_byte_length": { "type": "integer", "minimum": 2 }, "payload_sha256": { "$ref": "#/$defs/checksum" },
+    "object_id": { "type": "string", "pattern": "^[a-f0-9]{64}$" }, "created_at": { "type": "string", "format": "date-time" }, "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": { "nonempty": { "type": "string", "minLength": 1 }, "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" } }
+}

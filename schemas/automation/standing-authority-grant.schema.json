@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bai.dev/schemas/automation/standing-authority-grant.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "grant_id", "issuer_id", "subject_id", "epoch", "valid_from", "valid_until", "allowed_capabilities", "denied_capabilities", "resource_scope", "evidence_coordinate", "signature_evidence", "revocation_coordinate", "content_checksum"],
+  "properties": {
+    "schema": { "const": "BAI_STANDING_AUTHORITY_GRANT_V1" },
+    "grant_id": { "$ref": "#/$defs/nonempty" },
+    "issuer_id": { "$ref": "#/$defs/nonempty" },
+    "subject_id": { "$ref": "#/$defs/nonempty" },
+    "epoch": { "type": "integer", "minimum": 1 },
+    "valid_from": { "type": "string", "format": "date-time" },
+    "valid_until": { "type": "string", "format": "date-time" },
+    "allowed_capabilities": { "$ref": "#/$defs/uniqueStrings" },
+    "denied_capabilities": { "$ref": "#/$defs/uniqueStrings" },
+    "resource_scope": { "$ref": "#/$defs/uniqueStrings" },
+    "evidence_coordinate": { "$ref": "#/$defs/nonempty" },
+    "signature_evidence": { "$ref": "#/$defs/nonempty" },
+    "revocation_coordinate": { "type": ["string", "null"] },
+    "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": {
+    "nonempty": { "type": "string", "minLength": 1 },
+    "uniqueStrings": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/nonempty" } },
+    "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
+  }
+}

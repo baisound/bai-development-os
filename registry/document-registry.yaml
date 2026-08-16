@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-14T23:55:00+09:00'
+registry_generated_at: '2026-08-16T14:00:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -27,8 +27,8 @@ documents:
   category: workspace-document
   authority: product-authority
   importance_level: A
-  sha256: 0a1d754fb45fe39a1cb7769ac118e9fc40f282ac03b13d69ba7202a536746f62
-  size_bytes: 9518
+  sha256: 32adcf77836b0bcb8e5292be33d39a592f9c0b6c21bb7dda462f8f80b5b7f9c9
+  size_bytes: 9550
   preferred_loading: read-first
 - document_id: 3B1BB0D79619CBC9
   path: README-AI.md
@@ -36,8 +36,8 @@ documents:
   category: workspace-document
   authority: supporting-artifact
   importance_level: B
-  sha256: 96e38674db304579c8ab388ef65df97c521d5eb2e22f73969caea2aa55c8108b
-  size_bytes: 6879
+  sha256: 997a545429c8a2c42a9b6188b16083a4a33a76faded15ddd5796fd8e9891cb47
+  size_bytes: 7283
   preferred_loading: summary-or-on-demand
 - document_id: B335630551682C19
   path: README.md
@@ -384,8 +384,8 @@ documents:
   category: common-specification
   authority: shared-specification
   importance_level: B
-  sha256: 6a6cd787f1cf82de1d8a01865f674a9c0b93ded04e8f810c18c5d7fccd03ae22
-  size_bytes: 2771
+  sha256: c71db52bf184678742937093069745aa76afb2d306a905c7b98d002499a1b66a
+  size_bytes: 3386
   preferred_loading: summary-or-on-demand
 - document_id: 927DE6577978D659
   path: common/common-specifications.summary.md
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: 3e5d2fe2472844fe3794cb2d34636a592d99f25c98fa01b5464082f568656ff7
-  size_bytes: 5420
+  sha256: cfb023933e91d7e0581df0772545af4e0d5fc3ce70582d77f21db4be2a90bd84
+  size_bytes: 5911
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 474bf1586ef9ce3f3972ccfeb2b6f1dfabebf69ffe71a71e60173a7e79a3512f
-  size_bytes: 11814
+  sha256: 6d520870c1592394d2050bd25ebff29ffdc134d5c8d1df1121c01963e947d169
+  size_bytes: 12904
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: abd18e5b1d16911fa74c7b05eada55ff71329c3e60bb071accae6eb76f285d25
-  size_bytes: 18237
+  sha256: a2868561223a18c0a848eded7336c7752ee672ad9a4f172e3a2bddad29acd2e3
+  size_bytes: 19392
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -512,8 +512,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: B
-  sha256: 34484c3768e0ad3c5c3c68e39df4d82bb8f9b742bfad8988594130e14059fe6e
-  size_bytes: 29455
+  sha256: 2fb54b55570b11ac0045b60cc8212d4df6150024d2f39bf7f9b59ed6607ffc4c
+  size_bytes: 30895
   preferred_loading: summary-or-on-demand
 - document_id: B29D9C6CD49F9C42
   path: resume-check.mjs
@@ -557,8 +557,8 @@ documents:
   category: role-specification
   authority: shared-specification
   importance_level: B
-  sha256: f1e6fd8f9cbe4c771858774118c334addf60c9e7072b41ad892796ad4f590326
-  size_bytes: 3960
+  sha256: a9273012ecbe594c6cf6c57748a704ce4ed5d21df624a0b682fd529ff8d870d6
+  size_bytes: 4349
   preferred_loading: summary-or-on-demand
 - document_id: D02A74F2AEBEFDDA
   path: roles/README-Critic.md
@@ -584,8 +584,8 @@ documents:
   category: role-specification
   authority: shared-specification
   importance_level: A
-  sha256: 1a5a138f9106850bf443e0cbe869e46e9a5bd0f4b55ce1c4939bfa66a8de5340
-  size_bytes: 4896
+  sha256: 8934ff5330b54cf40c5d2ffb8306a0f8fe7a31662dd3fc23ff54da8a1cf3b96e
+  size_bytes: 5232
   preferred_loading: read-first
 - document_id: DADBCFFACDF7DDE7
   path: roles/README-Project-Policy.md
@@ -8634,8 +8634,85 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: TASK019_COMPLETION_PASS
   effective_date: '2026-08-14'
+- document_id: E0C9A7AC48692A37
+  path: architecture/BAI_Development_OS_Post_TASK019_Autonomous_Worklane_Roadmap_Refinement_Ver1.0.md
+  title: BAI Development OS Post-TASK-019 Autonomous Worklane Roadmap Refinement Ver.1.0
+  category: architecture
+  authority: owner-directed-roadmap-refinement
+  importance_level: A
+  sha256: 188140bcb90c254d4918b27804183ba0e7e468c4f04bdf59406839be625b760b
+  size_bytes: 2307
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK020_ROADMAP_REFINEMENT
+  effective_date: '2026-08-16'
+- document_id: 496BFCBFC0CD3A1F
+  path: specifications/TASK-020_BAI_Development_OS_Autonomous_Worklane_Durable_Dispatch_Ver1.0.md
+  title: TASK-020 BAI Development OS Autonomous Worklane & Durable Dispatch Detailed Design Ver.1.0
+  category: specification
+  authority: machine-readable-canonical
+  importance_level: A
+  sha256: 555dd99b848f271708029bbaf9c088e60ccc6f11a7525891af42f86eb1580da0
+  size_bytes: 55907
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK020_DESIGN
+  effective_date: '2026-08-16'
+- document_id: 8D9D88BA06521AF3
+  path: tasks/TASK-020/task.md
+  title: TASK-020 — Autonomous Worklane & Durable Dispatch OS
+  category: task-record
+  authority: current-task-definition
+  importance_level: A
+  sha256: fed53560de24fd6f41102b50d1a645667ae79d3a40696312000a1c0088814029
+  size_bytes: 3060
+  preferred_loading: read-first-or-current-phase
+  status: IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS_PUBLICATION_NOT_STARTED
+  effective_date: '2026-08-16'
+- document_id: 441DCD19E5B5C972
+  path: tasks/TASK-020/TASK-020.summary.md
+  title: TASK-020 Summary
+  category: task-summary
+  authority: navigation-aid
+  importance_level: A
+  sha256: 8fc456d23a3e8aa6ad805e2c27f656e9913eb4eb070bc164c4030bf352bda6a4
+  size_bytes: 748
+  preferred_loading: read-first
+  status: CURRENT_TASK020_SUMMARY
+  effective_date: '2026-08-16'
+- document_id: 48C95281BCFE0F92
+  path: tasks/TASK-020/design-review-and-judge-evidence-2026-08-16.md
+  title: TASK-020 Design Review and Judge Evidence
+  category: task-evidence
+  authority: review-evidence
+  importance_level: A
+  sha256: c54de750396efb6f4225a6c4c71b5056abd91fef2a322a3c979a46a012a7af13
+  size_bytes: 1556
+  preferred_loading: read-first-or-current-phase
+  status: DESIGN_JUDGE_PASS
+  effective_date: '2026-08-16'
+- document_id: AB6BF66B688C1948
+  path: tasks/TASK-020/final-plan-and-owner-authorization-2026-08-16.md
+  title: TASK-020 — Final Plan and Owner Implementation Authorization
+  category: task-record
+  authority: owner-implementation-authorization
+  importance_level: A
+  sha256: 0333fb5b508747820af617b98e53e722569767a02b4750cc17aeb325c289a9c1
+  size_bytes: 2183
+  preferred_loading: read-first-or-current-phase
+  status: TASK020_FOUNDATION_IMPLEMENTATION_AUTHORIZED
+  effective_date: '2026-08-16'
+- document_id: 70448E022BF59C46
+  path: tasks/TASK-020/implementation-evidence-2026-08-16.md
+  title: TASK-020 — Foundation Implementation Evidence
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  sha256: 72cde06ab94959a86899b872f9a4e6ec29d557fa74465a8c11804819c88c1869
+  size_bytes: 3921
+  preferred_loading: read-first-or-current-phase
+  status: TASK020_IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS
+  effective_date: '2026-08-16'
 current_canonical_document_sets:
-  effective_date: '2026-08-14'
+  effective_date: '2026-08-16'
   promotion_authority: Owner
   consistency_result: STRUCTURAL_SYNC_PASS_VISUAL_QA_UNAVAILABLE
   consistency_evidence: /home/baisound/bai-development-os/architecture/BAI_Development_OS_Architecture_Ver2.30.document-sync-and-visual-qa.md
@@ -8660,9 +8737,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_TASK019_COMPLETED
-  commit_status: TASK019_COMPLETION_RECORDED
-  roadmap_expansion_status: TASK018_COMPLETE_TASK019_P0_MAXIMUM_TASK017_PAUSED
+  registry_sync_status: CURRENT_TASK020_IMPLEMENTATION_COMPLETE
+  commit_status: TASK020_DURABLE_RUNTIME_COMMIT_F9365B2
+  roadmap_expansion_status: TASK019_COMPLETE_TASK020_ACTIVE_TASK017_PAUSED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -8672,7 +8749,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: OWNER-DIRECTED BAI VIDEO PRODUCTION V6 HANDOFF AFTER TASK019 CLOSURE PR AND CLEANUP; TASK-017 remains PAUSED and Production Activation BLOCKED
+  next_canonical_route: TASK020 DRAFT PR PUBLICATION; TASK-017 remains PAUSED and Production Activation BLOCKED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -8729,7 +8806,7 @@ current_canonical_document_sets:
     machine: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.md
     summary: specifications/TASK-012_BAI_Development_OS_Self_Maintenance_Ver1.0.summary.md
   roadmap_lossless_source_count: 57
-  roadmap_refinement_status: TASK018_COMPLETE; TASK019_P0_MAXIMUM; TASK017_PAUSED
+  roadmap_refinement_status: TASK018_COMPLETE; TASK019_COMPLETE; TASK020_ACTIVE; TASK017_PAUSED
   task_013_status: COMPLETED
   task_013_domain_adapter_plugin_sdk:
     document_id: TASK_013_DOMAIN_ADAPTER_PLUGIN_SDK
@@ -8776,12 +8853,19 @@ current_canonical_document_sets:
     status: COMPLETED_P0_MAXIMUM_TASK019_COMPLETION_PASS
     machine: tasks/TASK-019/task.md
     summary: tasks/TASK-019/TASK-019.summary.md
+  task_020_status: IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED
+  task_020_autonomous_worklane_durable_dispatch:
+    document_id: TASK_020_AUTONOMOUS_WORKLANE_DURABLE_DISPATCH
+    version: '1.0'
+    status: IMPLEMENTATION_COMPLETE_FULL_REGRESSION_PASS_PUBLICATION_NOT_STARTED
+    machine: tasks/TASK-020/task.md
+    summary: tasks/TASK-020/TASK-020.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_TASK019_COMPLETED
+registry_status: CURRENT_TASK020_IMPLEMENTATION_COMPLETE
 registry_status_details:
-  documents: 718
+  documents: 725
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
-  current_task: TASK-019 COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS
-  next_task: OWNER-DIRECTED BAI VIDEO PRODUCTION V6 HANDOFF AFTER CLOSURE PR AND CLEANUP; TASK-017 remains paused and Production Activation BLOCKED
+  current_task: TASK-020 IMPLEMENTATION_COMPLETE / FULL_REGRESSION_PASS / PUBLICATION_NOT_STARTED
+  next_task: TASK020 DRAFT PR PUBLICATION; TASK-017 remains paused and Production Activation BLOCKED

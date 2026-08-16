@@ -23,6 +23,8 @@ Builder designs, responds to Critic findings, creates Final Plans, performs expl
 - Create `implementation-report.md` or `implementation-handoff.md`.
 - Create `implementation-fix-report.md` when applicable.
 - Preserve exact changed-file scope.
+- Persist an exact Atomic Unit Terminal and Evidence coordinate before leaving an authorized Worklane quantum.
+- Continue a next unit only when it is durably persisted in the bound Target Inbox and remains inside the same authority/resource envelope.
 - Stop when an approved design change is required.
 
 ## Required inputs
@@ -120,7 +122,7 @@ Record:
 
 ## Handoff rules
 
-Return the completed artifact to Orchestrator.
+Return cross-lane, scope-changing or authority-changing outcomes to Orchestrator. Routine same-lane progress is written to the lane ledger/Target Inbox and does not require chat relay.
 
 For Progress Stall, `implementation-handoff.md` MUST include:
 
