@@ -2,7 +2,7 @@
 
 - Identity: `TASK-021 / BAI-OS-DESIGN-ONLY-CLOSURE-001`.
 - Priority: `P0 / OWNER_DIRECTED`.
-- Status: `ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE`.
+- Status: `ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`.
 - Baseline: `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`.
 - Candidate OS version: `1.2.0` (`no Release/Tag`).
 - Result: explicit signed design-only classification and honest Canonical `FINAL_PLAN/PASS → COMPLETED/CLOSURE/PASS` without false implementation-phase passage.
@@ -13,4 +13,6 @@
 - Tests: Windows focused `30/30`; WSL2 ext4 focused `145/145`; WSL2 ext4 full `1533/1533`; Governance `17/17`; diff check clean.
 - Consumer checkpoint: `415ac2ce1bcc5a38a3bdd366536d7350b3c64c14`.
 - Consumer action: wait for exact TASK-021 main merge commit, then follow `consumer-migration-and-operation-runbook-2026-08-27.md` with separate Owner classification/completion authority and verifier evidence.
-- Remaining Gate: protected-main merge plus Consumer authority/trust/mutation gates. Native, paid provider, credential, Production Activation, Release, Deploy, Tag, real queue activation and destructive operations remain separately gated.
+- Draft PR: `#33`, head `20dfc2c9611d3b3b4278e9aa1ad152c8d2edd9da`, mergeable against exact main baseline.
+- CI: Draft skipped regression/conformance, so quality-gate correctly reported FAIL under its success-only rule. Owner must mark PR Ready for Review to run the required jobs, then approve/execute protected-main merge only after green CI.
+- Remaining Gate: PR Ready conversion and protected-main merge plus Consumer authority/trust/mutation gates. Native, paid provider, credential, Production Activation, Release, Deploy, Tag, real queue activation and destructive operations remain separately gated.

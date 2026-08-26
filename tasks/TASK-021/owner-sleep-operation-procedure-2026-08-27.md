@@ -25,17 +25,19 @@ This authority does not authorize protected-main direct push, force push, releas
 9. Created a second local validation clone `/tmp/task021-full-git-20260827-05` after the first temporary clone lost Git metadata during repeated validation. It was checked against the same baseline, received a non-deleting source overlay, and was used only for the final full regression.
 10. Created replacement local validation clones `-06`, `-07` and `-08` when WSL `/tmp` cleanup removed earlier clones between bounded validation commands. Each used the same exact baseline and a non-deleting source overlay excluding `.git`; no canonical checkout or remote was changed.
 11. Ran the final latest-diff validation in clone `-08`: ext4 focused `145/145 PASS` and full regression `1533/1533 PASS`. Re-ran the focused suite to capture its exact aggregate count.
+12. Created local checkpoint commit `20dfc2c9611d3b3b4278e9aa1ad152c8d2edd9da`, pushed only `codex/task-021-design-only-closure`, and created Japanese Draft PR #33. No protected-main mutation occurred.
+13. Inspected PR #33 and its CI. The PR is mergeable at exact base `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`. Draft mode skipped regression/conformance; the success-only quality-gate therefore failed with both dependency results `skipped`. Ready-for-review conversion was not performed because it is outside the explicit Draft-creation authority.
 
 ## Settings changed
 
 - Candidate package version changed from `1.1.0` to `1.2.0` in the TASK-021 branch to identify the additive lifecycle API. No tag, release or deployment was created.
 - No operating-system, application, credential, provider, production or Consumer setting was changed.
 
-## Remaining authorized operations
+## Remaining Owner operation
 
-1. Commit explicit TASK-021 paths only, using a Japanese commit message.
-2. Push only `codex/task-021-design-only-closure` and create a Draft PR in Japanese. Do not merge protected main.
-3. Send this procedure and final outcome to the BAI Development OS secretary.
+1. Mark Draft PR #33 Ready for Review so regression/conformance CI can run.
+2. After all required CI is green, approve and execute the protected-main merge.
+3. Confirm the exact main merge commit before any BAI VOICE APP migration.
 
 Completed assurance: three independent implementation Critics returned Critical/High `0/0`, and the independent Judge returned `PASS_IMPLEMENTATION_READY_FOR_CHECKPOINT`.
 

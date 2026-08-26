@@ -5,7 +5,7 @@
 - Design ID: `BAI-OS-DESIGN-ONLY-CLOSURE-001`
 - Priority: `P0 / OWNER_DIRECTED`
 - DEV Profile: `DEV_4_FOUNDATION_CRITICAL`
-- Status: `ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE`
+- Status: `ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`
 - Candidate OS version: `1.2.0` (no Release/Tag authority)
 - Branch: `codex/task-021-design-only-closure`
 - Baseline: `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`

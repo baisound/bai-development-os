@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 272cc27f3e09ed26118c5a8558ff81e536922b66608b4456bc5a8a69cd1e0387
-  size_bytes: 14286
+  sha256: 0c1ceb1223cac2388d854c1b2a583a04cd28764504b529263be4f70c5d01699c
+  size_bytes: 14528
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 2f8e253e4498b64863e8913b3c12b7200b24921718e63188d40d84e57f2704f0
-  size_bytes: 21564
+  sha256: 87b54919b430d0adae8e9ac7aef9025b0d442f2799fd1c5bf5b22503f29b098a
+  size_bytes: 21919
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8827,8 +8827,8 @@ documents:
   category: task-evidence
   authority: implementation-evidence
   importance_level: A
-  sha256: 7001f4b86fe4cebe38f48e0bb5457113da1800cf7d0145c3445c55628c0e02d6
-  size_bytes: 3658
+  sha256: e4b9703df3686893056d803e9d5c79b6101441c1b8594435e5c84ac7c3ba4ca3
+  size_bytes: 4129
   preferred_loading: read-first-or-current-phase
   status: IMPLEMENTATION_CHECKPOINT_READY
   effective_date: '2026-08-27'
@@ -8849,8 +8849,8 @@ documents:
   category: task-record
   authority: owner-directed-operation-record
   importance_level: A
-  sha256: 7bdb8500b3445600b323b0c36184905e392701cb17c3f1461763c19267a40986
-  size_bytes: 4110
+  sha256: f51dad8a16fcaefd42f66ab5f48575983f440afc0eca394c37237932474cc19d
+  size_bytes: 4621
   preferred_loading: read-first-or-current-phase
   status: OPERATION_RECORD_CURRENT
   effective_date: '2026-08-27'
@@ -8860,10 +8860,10 @@ documents:
   category: task-summary
   authority: navigation-aid
   importance_level: A
-  sha256: 9fc28da76f62ec1ac0922af6cee91e866a947a33de3f1c1635eac9db48e4c17f
-  size_bytes: 1448
+  sha256: 2a2be359fb5389ed148e17eddc620e2f46f5cbabee04fae8040aeb2a66193d36
+  size_bytes: 1838
   preferred_loading: read-first
-  status: TASK021_CHECKPOINT_SUMMARY
+  status: TASK021_HUMAN_GATE_REQUIRED_SUMMARY
   effective_date: '2026-08-27'
 - document_id: EB990E7DC9DD3034
   path: tasks/TASK-021/task.md
@@ -8871,10 +8871,10 @@ documents:
   category: task-record
   authority: current-task-definition
   importance_level: A
-  sha256: 7ad3d400a012c5893cf816e7eb56853307a5d1f49303269ae90ff3aea6d08ce0
-  size_bytes: 2684
+  sha256: 6818207b20472407e2273e75b35177a9d16d3cfab837d00494b76d31a626fb25
+  size_bytes: 2705
   preferred_loading: read-first-or-current-phase
-  status: ACTIVE_CHECKPOINT_WAITING_PROTECTED_MAIN_MERGE
+  status: ACTIVE_CHECKPOINT_HUMAN_GATE_REQUIRED_PR33_READY_REVIEW_REQUIRED
   effective_date: '2026-08-27'
 - document_id: 9A231914E993BEE9
   path: schemas/lifecycle/canonical-status-binding.schema.json
@@ -9135,11 +9135,11 @@ current_canonical_document_sets:
     status: COMPLETED_PR31_MERGED_TASK020_COMPLETION_PASS
     machine: tasks/TASK-020/task.md
     summary: tasks/TASK-020/TASK-020.summary.md
-  task_021_status: ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE
+  task_021_status: ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED
   task_021_design_only_canonical_closure:
     document_id: TASK_021_DESIGN_ONLY_CANONICAL_CLOSURE
     version: '1.0'
-    status: ACTIVE_CHECKPOINT_WAITING_PROTECTED_MAIN_MERGE
+    status: ACTIVE_CHECKPOINT_HUMAN_GATE_REQUIRED_PR33_READY_REVIEW_REQUIRED
     machine: tasks/TASK-021/task.md
     summary: tasks/TASK-021/TASK-021.summary.md
 product_root: /home/baisound/bai-development-os
@@ -9149,5 +9149,5 @@ registry_status_details:
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
-  current_task: TASK-021 ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE
-  next_task: NO IMPLICIT NEXT TASK; TASK-021 protected-main merge is gated; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED
+  current_task: TASK-021 ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED
+  next_task: 'NO IMPLICIT NEXT TASK; TASK-021 PR #33 Ready conversion and protected-main merge are gated; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED'

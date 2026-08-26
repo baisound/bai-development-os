@@ -25,8 +25,8 @@
 - TASK-018: `COMPLETED / PHASES_B_C_D_E_F_G_H1_H1_2_H1_3_H2_I0_I1_PASS / OS_V1_1_0_RELEASE_PUBLISHED` — `BAI-OS-AUTONOMY-001`, P0 maximum
 - TASK-019: `COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`; implementation PR #29 merged at `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`
 - TASK-020: `COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`; exact main merge `304b70ab5805c825bd35cf902fd2ef96290f9859`
-- TASK-021: `ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE`; design identity `BAI-OS-DESIGN-ONLY-CLOSURE-001`; candidate OS `1.2.0`; main merge commit pending
-- Current development route: `TASK-021 PROTECTED_MAIN_MERGE_GATE`; no next Task is implied; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized routes
+- TASK-021: `ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`; design identity `BAI-OS-DESIGN-ONLY-CLOSURE-001`; candidate OS `1.2.0`; main merge commit pending
+- Current development route: `TASK-021 PR_33 READY_REVIEW_AND_PROTECTED_MAIN_MERGE_GATE`; no next Task is implied; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized routes
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -55,7 +55,8 @@
 - Assurance: three independent implementation Critics and independent Judge PASS; residual Critical/High `0/0`.
 - Validation: Windows focused `30/30 PASS`; WSL2 ext4 focused `145/145 PASS`; WSL2 ext4 full regression `1533/1533 PASS`; Governance `17/17 PASS`; diff check clean.
 - Consumer: BAI VOICE APP exact checkpoint `415ac2ce1bcc5a38a3bdd366536d7350b3c64c14`; migration/runbook ready but execution waits for exact OS main merge commit, separate signed Owner classification/completion authority and verifier evidence.
-- Status: `ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE`. No completion, Release, Tag, Deploy, Production Activation, Consumer mutation, native/paid/credential operation, real queue activation or destructive cleanup is claimed.
+- Publication checkpoint: Draft PR #33, exact head `20dfc2c9611d3b3b4278e9aa1ad152c8d2edd9da`, exact base `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`, mergeable. Draft mode skipped regression/conformance, causing the success-only quality-gate to fail; Ready conversion requires Owner input.
+- Status: `ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`. No completion, Release, Tag, Deploy, Production Activation, Consumer mutation, native/paid/credential operation, real queue activation or destructive cleanup is claimed.
 
 ## TASK-020 Autonomous Worklane & Durable Dispatch — 2026-08-16
 
