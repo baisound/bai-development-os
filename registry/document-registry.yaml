@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 64cbe7947371c0ee1f3c7608a99374382bb8f782aea9e9497e8384482b91c363
-  size_bytes: 14983
+  sha256: 628888f32f71f65f7d695507c4c20e261d096c0908ff3a06ff4c1a3669346e33
+  size_bytes: 15140
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 1d95b31e334696d0647b7089994e0c1191b114e291172404df3577314389fbdf
-  size_bytes: 22495
+  sha256: 9c8287d8c47c23f6e3923eda37170916e70a7157910b1d2fe9d40e11845927f2
+  size_bytes: 22836
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8849,8 +8849,8 @@ documents:
   category: task-record
   authority: owner-directed-operation-record
   importance_level: A
-  sha256: ea57eec784b16ae944d878362d23450cd6d0d29ff064dd739e1596629b94bcca
-  size_bytes: 5990
+  sha256: 7b40ec9f2a9b3f29c7d5f457bdb3023ef583e1d99ab2c084429ed822968fed4b
+  size_bytes: 6502
   preferred_loading: read-first-or-current-phase
   status: OPERATION_RECORD_CURRENT
   effective_date: '2026-08-27'
@@ -8860,8 +8860,8 @@ documents:
   category: task-summary
   authority: navigation-aid
   importance_level: A
-  sha256: b355022c22639c40e488d20768ec2f8a012a5d96b0d75fa6aec4d7a8eb635d7a
-  size_bytes: 2193
+  sha256: 114100f6cb425bd82b7f06406d163ab2fd36616a4e5d9212ccb3756a74e1dc95
+  size_bytes: 2505
   preferred_loading: read-first
   status: TASK021_COMPLETION_PAYLOAD_CLOSURE_SYNC_GATED
   effective_date: '2026-08-27'
@@ -8871,8 +8871,8 @@ documents:
   category: task-record
   authority: current-task-definition
   importance_level: A
-  sha256: c4227afc6ae0227e2540333fbc00788484b3bdf474a9659464afb43b8c152f84
-  size_bytes: 3031
+  sha256: 8d5986dc187fb8b62337e13f47873395770df6fcd1726339578d495c3b56cd91
+  size_bytes: 3118
   preferred_loading: read-first-or-current-phase
   status: COMPLETION_PAYLOAD_EFFECTIVE_ON_CLOSURE_SYNC_MERGE
   effective_date: '2026-08-27'
@@ -8882,8 +8882,8 @@ documents:
   category: task-evidence
   authority: publication-closure-evidence
   importance_level: A
-  sha256: 5825583d7680237b099eee26f74785ccfe7411a4e151ce0502df419c2a5d051b
-  size_bytes: 3543
+  sha256: afb79b2f8904a9b02d89bf1891850e8508b1f68a0e620371627837e21db8aae8
+  size_bytes: 4173
   preferred_loading: read-first-or-current-phase
   status: COMPLETION_CANDIDATE_CLOSURE_SYNC_GATED
   effective_date: '2026-08-27'

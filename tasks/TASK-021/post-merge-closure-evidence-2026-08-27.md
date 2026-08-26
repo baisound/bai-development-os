@@ -42,3 +42,14 @@ After verified Canonical completion, dependency and queue readiness must be reco
 ## Closure boundary
 
 No Release, Deploy, Tag, Production Activation, Consumer mutation, native/paid-provider/credential operation, real queue activation, destructive cleanup, TASK-016 Phase 1+ or TASK-017 resume is authorized or claimed. No next Task is inferred.
+
+## Closure synchronization checkpoint
+
+- Branch: `codex/task-021-post-merge-closure`.
+- Initial closure commit: `03ca77bff187c5afbb0515b42af6d7aa893a9a58`.
+- Draft PR: `#34`.
+- Exact base: `d7532441f425f27303f6072624a80a454c74d84d`.
+- Initial PR state: `OPEN / DRAFT / MERGEABLE`.
+- Draft CI run: `33022987866`; regression and conformance were `SKIPPED`, so the success-only quality-gate returned `FAILURE`.
+
+The Draft result is neither a closure PASS nor an implementation failure. Owner input is required to authorize PR #34 Ready conversion and ordinary protected-main merge only after the resulting required CI is all green.

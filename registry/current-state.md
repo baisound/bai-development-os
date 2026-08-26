@@ -26,7 +26,7 @@
 - TASK-019: `COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`; implementation PR #29 merged at `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`
 - TASK-020: `COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`; exact main merge `304b70ab5805c825bd35cf902fd2ef96290f9859`
 - TASK-021: `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`; design identity `BAI-OS-DESIGN-ONLY-CLOSURE-001`; OS `1.2.0` source at exact main merge `d7532441f425f27303f6072624a80a454c74d84d`; this proposed Canonical status is effective only when the closure synchronization containing it is merged to protected main
-- Current development route: `TASK-021 POST_MERGE_CLOSURE_SYNC_GATE`; no next Task is implied; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized routes
+- Current development route: `TASK-021 DRAFT_PR_34_POST_MERGE_CLOSURE_SYNC_GATE`; no next Task is implied; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized routes
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -57,6 +57,7 @@
 - Validation: Windows focused `30/30 PASS`; WSL2 ext4 focused `145/145 PASS`; WSL2 ext4 full regression `1533/1533 PASS`; Governance `17/17 PASS`; diff check clean.
 - Consumer: BAI VOICE APP read-only preflight confirms clean exact checkpoint `415ac2ce1bcc5a38a3bdd366536d7350b3c64c14`, TASK-001 revision `13`/expected tuple and no transaction/legacy journal, audit lock or lease. Migration execution remains blocked on separate signed Owner classification and `COMPLETE_TASK`, independent verifier/protected trust material and Consumer repository mutation authority.
 - Publication: PR #33 Ready CI run `33022231250` passed conformance, quality-gate, Node `20.19.0` and Node `22.x`; ordinary protected-main merge completed at `d7532441f425f27303f6072624a80a454c74d84d` on `2026-08-26T23:10:22Z`.
+- Closure synchronization: Draft PR #34 is mergeable at exact base `d7532441f425f27303f6072624a80a454c74d84d`; initial closure commit `03ca77bff187c5afbb0515b42af6d7aa893a9a58`. Draft CI run `33022987866` skipped regression/conformance, so the success-only quality-gate failed; Ready/merge requires new explicit Owner authority.
 - Status payload: `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`, effective only after this post-merge synchronization is separately Ready-reviewed with required checks green and merged. Until that event, the current Canonical main remains active. No Release, Tag, Deploy, Production Activation, Consumer mutation, native/paid/credential operation, real queue activation or destructive cleanup is claimed.
 
 ## TASK-020 Autonomous Worklane & Durable Dispatch — 2026-08-16
