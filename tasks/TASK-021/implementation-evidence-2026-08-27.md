@@ -45,7 +45,7 @@ The final ext4 clone `/tmp/task021-full-git-20260827-08` was created locally fro
 
 BAI VOICE APP MUST wait for all of the following:
 
-1. TASK-021 protected-main merge and exact merge commit.
+1. Exact approved OS main merge `d7532441f425f27303f6072624a80a454c74d84d` from PR `#33`.
 2. OS package/API version `1.2.0` available from that exact approved commit.
 3. Consumer still at exact checkpoint `415ac2ce1bcc5a38a3bdd366536d7350b3c64c14`, or a new reviewed migration plan.
 4. Owner-authorized drain/backup and exact source revision/checksum proof.
@@ -56,6 +56,8 @@ The Consumer uses the OS as external tooling/package. It MUST NOT copy or bundle
 
 ## Checkpoint status
 
-`IMPLEMENTATION_CHECKPOINT_READY / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`
+`IMPLEMENTATION_MERGED / CLOSURE_SYNC_HUMAN_GATE_REQUIRED`
 
-Draft PR #33 was created at head `20dfc2c9611d3b3b4278e9aa1ad152c8d2edd9da` and is mergeable against exact main `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`. Its Draft workflow skipped regression/conformance, then the success-only quality-gate failed because both results were `skipped`. This is not recorded as an implementation PASS or implementation failure. TASK-021 is not complete. Owner input is required to mark PR #33 Ready for Review, allow required CI jobs to run, and approve/execute protected-main merge only after green CI. Consumer execution remains separately Human-Gated.
+PR #33 was marked Ready under explicit Owner authority. Ready CI run `33022231250` passed conformance, quality-gate, Node `20.19.0` regression and Node `22.x` regression. The protected branch accepted the ordinary merge at `2026-08-26T23:10:22Z`; exact main merge `d7532441f425f27303f6072624a80a454c74d84d` has parents `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc` and implementation head `259152384596171023572e5f1545a29277f120ce`.
+
+This post-merge Evidence synchronization is not yet Canonical on main. TASK-021 remains active until a separately authorized closure synchronization is Ready-reviewed and merged; the existing authority for PR #33 does not silently authorize that new merge. Consumer execution remains separately Human-Gated.

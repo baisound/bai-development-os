@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 0c1ceb1223cac2388d854c1b2a583a04cd28764504b529263be4f70c5d01699c
-  size_bytes: 14528
+  sha256: 628888f32f71f65f7d695507c4c20e261d096c0908ff3a06ff4c1a3669346e33
+  size_bytes: 15140
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 87b54919b430d0adae8e9ac7aef9025b0d442f2799fd1c5bf5b22503f29b098a
-  size_bytes: 21919
+  sha256: 9c8287d8c47c23f6e3923eda37170916e70a7157910b1d2fe9d40e11845927f2
+  size_bytes: 22836
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8772,8 +8772,8 @@ documents:
   category: migration-record
   authority: implementation-runbook
   importance_level: A
-  sha256: e3c53d868b3b8d50a3f426a61ed0c2ea8b84d506a4763ef035d37c0c33e50acb
-  size_bytes: 9140
+  sha256: 43769bdc15120d9807ace4e833179555e154e9f504665fcb7bdca5f2b2572f3e
+  size_bytes: 10182
   preferred_loading: read-first-or-current-phase
   status: RUNBOOK_READY_EXECUTION_GATED
   effective_date: '2026-08-27'
@@ -8827,10 +8827,10 @@ documents:
   category: task-evidence
   authority: implementation-evidence
   importance_level: A
-  sha256: e4b9703df3686893056d803e9d5c79b6101441c1b8594435e5c84ac7c3ba4ca3
-  size_bytes: 4129
+  sha256: 4f4834fdec123de364a23f0608686be734c77d65889b0e0a9c21a44ac88a97f2
+  size_bytes: 4287
   preferred_loading: read-first-or-current-phase
-  status: IMPLEMENTATION_CHECKPOINT_READY
+  status: IMPLEMENTATION_MERGED_CLOSURE_SYNC_GATED
   effective_date: '2026-08-27'
 - document_id: 8C2146DC7E1773A7
   path: tasks/TASK-021/implementation-judge-decision-2026-08-27.md
@@ -8849,8 +8849,8 @@ documents:
   category: task-record
   authority: owner-directed-operation-record
   importance_level: A
-  sha256: f51dad8a16fcaefd42f66ab5f48575983f440afc0eca394c37237932474cc19d
-  size_bytes: 4621
+  sha256: 7b40ec9f2a9b3f29c7d5f457bdb3023ef583e1d99ab2c084429ed822968fed4b
+  size_bytes: 6502
   preferred_loading: read-first-or-current-phase
   status: OPERATION_RECORD_CURRENT
   effective_date: '2026-08-27'
@@ -8860,10 +8860,10 @@ documents:
   category: task-summary
   authority: navigation-aid
   importance_level: A
-  sha256: 2a2be359fb5389ed148e17eddc620e2f46f5cbabee04fae8040aeb2a66193d36
-  size_bytes: 1838
+  sha256: 114100f6cb425bd82b7f06406d163ab2fd36616a4e5d9212ccb3756a74e1dc95
+  size_bytes: 2505
   preferred_loading: read-first
-  status: TASK021_HUMAN_GATE_REQUIRED_SUMMARY
+  status: TASK021_COMPLETION_PAYLOAD_CLOSURE_SYNC_GATED
   effective_date: '2026-08-27'
 - document_id: EB990E7DC9DD3034
   path: tasks/TASK-021/task.md
@@ -8871,10 +8871,21 @@ documents:
   category: task-record
   authority: current-task-definition
   importance_level: A
-  sha256: 6818207b20472407e2273e75b35177a9d16d3cfab837d00494b76d31a626fb25
-  size_bytes: 2705
+  sha256: 8d5986dc187fb8b62337e13f47873395770df6fcd1726339578d495c3b56cd91
+  size_bytes: 3118
   preferred_loading: read-first-or-current-phase
-  status: ACTIVE_CHECKPOINT_HUMAN_GATE_REQUIRED_PR33_READY_REVIEW_REQUIRED
+  status: COMPLETION_PAYLOAD_EFFECTIVE_ON_CLOSURE_SYNC_MERGE
+  effective_date: '2026-08-27'
+- document_id: C40A42639A82BC08
+  path: tasks/TASK-021/post-merge-closure-evidence-2026-08-27.md
+  title: 'TASK-021 — Post-merge Closure Evidence'
+  category: task-evidence
+  authority: publication-closure-evidence
+  importance_level: A
+  sha256: afb79b2f8904a9b02d89bf1891850e8508b1f68a0e620371627837e21db8aae8
+  size_bytes: 4173
+  preferred_loading: read-first-or-current-phase
+  status: COMPLETION_CANDIDATE_CLOSURE_SYNC_GATED
   effective_date: '2026-08-27'
 - document_id: 9A231914E993BEE9
   path: schemas/lifecycle/canonical-status-binding.schema.json
@@ -9135,19 +9146,19 @@ current_canonical_document_sets:
     status: COMPLETED_PR31_MERGED_TASK020_COMPLETION_PASS
     machine: tasks/TASK-020/task.md
     summary: tasks/TASK-020/TASK-020.summary.md
-  task_021_status: ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED
+  task_021_status: COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS (EFFECTIVE_ON_CLOSURE_SYNC_MERGE)
   task_021_design_only_canonical_closure:
     document_id: TASK_021_DESIGN_ONLY_CANONICAL_CLOSURE
     version: '1.0'
-    status: ACTIVE_CHECKPOINT_HUMAN_GATE_REQUIRED_PR33_READY_REVIEW_REQUIRED
+    status: COMPLETED_PR33_MERGED_TASK021_COMPLETION_PASS_EFFECTIVE_ON_CLOSURE_SYNC_MERGE
     machine: tasks/TASK-021/task.md
     summary: tasks/TASK-021/TASK-021.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_TASK021_CHECKPOINT_PENDING_MAIN
+registry_status: TASK021_COMPLETION_PAYLOAD_PENDING_CLOSURE_SYNC_MAIN
 registry_status_details:
-  documents: 750
+  documents: 751
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
-  current_task: TASK-021 ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED
-  next_task: 'NO IMPLICIT NEXT TASK; TASK-021 PR #33 Ready conversion and protected-main merge are gated; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED'
+  current_task: TASK-021 COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS only when closure synchronization is merged; current upstream main remains ACTIVE until then
+  next_task: 'NO IMPLICIT NEXT TASK; TASK-021 closure synchronization Ready conversion and protected-main merge are gated; Consumer classification/completion/mutation remains separately gated; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED'

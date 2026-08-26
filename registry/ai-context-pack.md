@@ -6,7 +6,7 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Current Task: `TASK-021 / ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`
+- Current Task: `TASK-021 / COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS` only after this closure synchronization is merged; current upstream main remains active until then
 - Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETED`; exact PR #23 merge, annotated `v1.1.0`, stable source-only GitHub Release and publication-branch cleanup are verified
 - Current design intake: `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001 / TASK-019 / COMPLETED / PR_29_MERGED_AT_D30F94A53D5C3D51CB8ED9D9F84FE226CE7E9BF0`
 - Current Consumer: BAI VIDEO PRODUCTION R2/R3 complete; bounded R4 local Comfy adapter `HOSTED_CLOSED` at exact main `7d6486059c468009042e4c186d54b566d6e1477e`; native H3 completion `PARKED_TO_SAFE_RUNTIME_REVIEW`
@@ -21,9 +21,10 @@
 3. `tasks/TASK-021/final-plan-and-owner-authorization-2026-08-27.md`
 4. `specifications/TASK-021_BAI_Development_OS_Design_Only_Canonical_Closure_Lifecycle_Ver1.0.md`
 5. `tasks/TASK-021/implementation-evidence-2026-08-27.md`
-6. only the exact Lifecycle, automation binding, dependency, schema and migration files required for the bounded unit
+6. `tasks/TASK-021/post-merge-closure-evidence-2026-08-27.md`
+7. only the exact Lifecycle, automation binding, dependency, schema and migration files required for the bounded unit
 
-TASK-021 is `ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`, not completed. Three independent implementation Critics and the Judge passed with residual Critical/High `0/0`; Windows focused `30/30`, WSL2 ext4 focused `145/145`, full regression `1533/1533` and Governance `17/17` passed. Draft PR #33 at head `20dfc2c9611d3b3b4278e9aa1ad152c8d2edd9da` is mergeable, but Draft mode skipped regression/conformance and the success-only quality-gate failed. Owner must mark it Ready for Review, wait for green CI and approve protected-main merge. Candidate OS version is `1.2.0`, but no Release or Tag exists. BAI VOICE APP must wait for the exact approved main merge commit and separate signed Owner classification/completion authority before running the Consumer migration runbook. Queue or projection state never replaces Canonical Status.
+TASK-021 implementation is merged. Draft PR #34 carries `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`, which is effective only when PR #34 is Ready-reviewed with required checks green and merged to protected main; upstream main remains active until then. Three independent implementation Critics, the implementation Judge and the independent post-merge Closure Judge passed with residual Critical/High `0/0`; Windows focused `30/30`, WSL2 ext4 focused `145/145`, full regression `1533/1533` and Governance `17/17` passed. PR #33 Ready CI run `33022231250` passed conformance, quality-gate, Node `20.19.0` and Node `22.x`; exact main merge is `d7532441f425f27303f6072624a80a454c74d84d`. Draft PR #34 initial closure commit is `03ca77bff187c5afbb0515b42af6d7aa893a9a58`; its Draft CI skipped regression/conformance and the success-only quality-gate failed, which is not a closure PASS or implementation failure. OS source version is `1.2.0`, but no Release or Tag exists. PR #34 Ready/merge requires new explicit Owner authority. BAI VOICE APP must retain exact checkpoint `415ac2ce1bcc5a38a3bdd366536d7350b3c64c14` and obtain separate signed Owner classification and `COMPLETE_TASK`, verifier/trust material and Consumer mutation authority before running the migration. Queue or projection state never replaces Canonical Status.
 
 ## TASK-020 mandatory loading order
 
