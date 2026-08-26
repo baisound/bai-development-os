@@ -8,9 +8,15 @@
 - Expected tuple: `ACTIVE / FINAL_PLAN / PASS / PENDING / NOT_ELIGIBLE`
 - Existing Gate: `HG-TASK-001-DESIGN-ONLY-CLOSURE-001 / WAITING_OWNER`
 - Minimum BAI Development OS package version: `1.2.0`
-- Required OS runtime commit: `TASK-021_MAIN_MERGE_COMMIT_PENDING`
+- Required OS runtime commit: `d7532441f425f27303f6072624a80a454c74d84d`
 
-The pending value is intentionally not a usable commit. Consumer execution is forbidden until the TASK-021 PR is merged and this document or the final Evidence names the exact 40-character main merge commit. A branch commit, abbreviated SHA, Draft PR number, queue projection or copied OS Core is not a substitute.
+PR #33 is merged and the exact 40-character main commit above is the only approved TASK-021 runtime coordinate. A branch commit, abbreviated SHA, PR number, queue projection or copied OS Core is not a substitute. Availability of the OS commit does not authorize Consumer mutation: the classification, completion, verifier/trust and Consumer repository gates below remain mandatory.
+
+## Confirmed read-only Consumer preflight — 2026-08-27
+
+The BAI VOICE APP authority task reported that the Canonical `D:\BAI\BAI VOICE APP` repository is clean at exact HEAD/checkpoint `415ac2ce1bcc5a38a3bdd366536d7350b3c64c14`; TASK-001 is revision `13` with the expected tuple; and no transaction journal, legacy-attestation journal, audit append lock or lifecycle lease exists. These observations satisfy only the corresponding read-only preflight checks and MUST be revalidated immediately before any mutation.
+
+The explicit signed Owner `COMPLETE_TASK` envelope, independent verifier attestation and protected trust material are unconfirmed. The classification authority/envelope and Consumer repository mutation authority must also be loaded and validated in the protected environment. Until all are present, `HG-TASK-001-DESIGN-ONLY-CLOSURE-001` remains `WAITING_OWNER` and no classification, closure, queue activation or dependency-unblock mutation may run.
 
 ## Preflight — no mutation
 

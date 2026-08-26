@@ -27,23 +27,32 @@ This authority does not authorize protected-main direct push, force push, releas
 11. Ran the final latest-diff validation in clone `-08`: ext4 focused `145/145 PASS` and full regression `1533/1533 PASS`. Re-ran the focused suite to capture its exact aggregate count.
 12. Created local checkpoint commit `20dfc2c9611d3b3b4278e9aa1ad152c8d2edd9da`, pushed only `codex/task-021-design-only-closure`, and created Japanese Draft PR #33. No protected-main mutation occurred.
 13. Inspected PR #33 and its CI. The PR is mergeable at exact base `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`. Draft mode skipped regression/conformance; the success-only quality-gate therefore failed with both dependency results `skipped`. Ready-for-review conversion was not performed because it is outside the explicit Draft-creation authority.
+14. Received explicit Owner authority to mark PR #33 Ready, merge only after all required CI was green, and use Codex task `01a004a9-a34d-7f20-b5d1-4805690d6804` (display name `秘書`) as the procedure destination.
+15. Verified Ready CI run `33022231250`: conformance, quality-gate, Node `20.19.0` regression and Node `22.x` regression all returned `SUCCESS`.
+16. Verified ordinary protected-main merge of PR #33 at `2026-08-26T23:10:22Z`. Exact merge commit is `d7532441f425f27303f6072624a80a454c74d84d`; its second parent is implementation head `259152384596171023572e5f1545a29277f120ce`.
+17. Sent this procedure to the explicitly approved secretary task. No credential, installation, download, release, deployment, tag, Product mutation or destructive cleanup was performed.
+18. Created isolated post-merge closure branch `codex/task-021-post-merge-closure` from exact `origin/main` without changing protected main.
 
 ## Settings changed
 
 - Candidate package version changed from `1.1.0` to `1.2.0` in the TASK-021 branch to identify the additive lifecycle API. No tag, release or deployment was created.
 - No operating-system, application, credential, provider, production or Consumer setting was changed.
 
+## Completed publication operation
+
+1. PR #33 Ready conversion: completed under explicit Owner authority.
+2. Required CI: all green in run `33022231250`.
+3. Protected-main merge: completed at exact commit `d7532441f425f27303f6072624a80a454c74d84d`.
+
 ## Remaining Owner operation
 
-1. Mark Draft PR #33 Ready for Review so regression/conformance CI can run.
-2. After all required CI is green, approve and execute the protected-main merge.
-3. Confirm the exact main merge commit before any BAI VOICE APP migration.
+Authorize Ready conversion and protected-main merge of the separate post-merge closure synchronization PR after its checks are green. This is not inferred from the PR #33 authority. BAI VOICE APP classification, `COMPLETE_TASK`, verifier/trust material and repository mutation remain separate gates.
 
 Completed assurance: three independent implementation Critics returned Critical/High `0/0`, and the independent Judge returned `PASS_IMPLEMENTATION_READY_FOR_CHECKPOINT`.
 
 ## Recovery and cleanup
 
-- The isolated worktree remains the recoverable source until PR disposition.
+- The implementation is recoverable from exact main merge `d7532441f425f27303f6072624a80a454c74d84d`; the isolated closure branch contains only post-merge governance synchronization until its PR disposition.
 - Temporary WSL `/tmp/task021-*` validation copies may be removed only after verifying their resolved absolute paths. Their removal does not affect either canonical checkout.
 - Branch rollback before merge is by PR closure or a new corrective commit; no `reset --hard` or force push is permitted.
 - Consumer execution waits for an exact approved main merge commit and the runbook preconditions.
