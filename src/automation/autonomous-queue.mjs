@@ -1,5 +1,6 @@
 import { createHash } from 'node:crypto';
 import { deepFreeze } from './util.mjs';
+import { assertCanonicalCompletion, assertCanonicalSnapshot } from './canonical-status-binding.mjs';
 
 const PRIORITY = Object.freeze({ P0: 4, P1: 3, P2: 2, P3: 1 });
 const AUTHORIZATION = Object.freeze([
@@ -141,13 +142,18 @@ export function validateHumanGate(gate) {
   return deepFreeze({ result: 'HUMAN_GATE_VALID', gate_id: gate.gate_id });
 }
 
-const normalizeTask = (task, index) => {
+const normalizeTask = (task, index, canonicalStatusTrust, expectedProjectId) => {
   const priority = text(task?.priority, 'priority');
   const authorization = text(task?.authorization, 'authorization');
   const state = text(task?.state, 'state');
   if (!Object.hasOwn(PRIORITY, priority) || !AUTHORIZATION.includes(authorization)
     || !TASK_STATES.includes(state)) {
     throw new AutonomousQueueError('AUTONOMOUS_TASK_INVALID');
+  }
+  if (expectedProjectId !== null
+    && (typeof expectedProjectId !== 'string' || !expectedProjectId.trim()
+      || task?.project_id !== expectedProjectId)) {
+    throw new AutonomousQueueError('AUTONOMOUS_TASK_PROJECT_MISMATCH');
   }
   const ownerPriority = nonNegativeInteger(task.owner_priority, 'owner_priority');
   const contextLocality = nonNegativeInteger(task.context_locality, 'context_locality');
@@ -157,8 +163,12 @@ const normalizeTask = (task, index) => {
     if (gate.task_id !== task.task_id) throw new AutonomousQueueError('HUMAN_GATE_TASK_MISMATCH');
     return gate;
   });
+  if (state === 'COMPLETED') {
+    try { assertCanonicalCompletion(task, canonicalStatusTrust, expectedProjectId); } catch { throw new AutonomousQueueError('QUEUE_COMPLETION_CANONICAL_MISMATCH'); }
+  }
   return deepFreeze({
     task_id: text(task.task_id, 'task_id'),
+    project_id: task.project_id == null ? null : text(task.project_id, 'project_id'),
     priority,
     owner_priority: ownerPriority,
     dev_profile: text(task.dev_profile, 'dev_profile'),
@@ -189,6 +199,7 @@ const normalizeTask = (task, index) => {
     roadmap_order: task.roadmap_order == null
       ? index
       : nonNegativeInteger(task.roadmap_order, 'roadmap_order'),
+    canonical_binding: task.canonical_binding == null ? null : structuredClone(task.canonical_binding),
   });
 };
 
@@ -227,9 +238,11 @@ const compareCandidates = (left, right) => PRIORITY[right.task.priority] - PRIOR
   || left.task.roadmap_order - right.task.roadmap_order
   || left.task.task_id.localeCompare(right.task.task_id);
 
-export function selectAutonomousTask(tasks, { locked_files = [] } = {}) {
+export function selectAutonomousTask(tasks, { project_id = null, locked_files = [], canonical_status_trust = null, canonical_status_snapshot = null, canonical_snapshot_trust = null, canonical_snapshot_usage = null, consume_snapshot = false } = {}) {
   if (!Array.isArray(tasks)) throw new AutonomousQueueError('AUTONOMOUS_TASK_INVALID');
-  const normalized = tasks.map(normalizeTask);
+  const normalized = tasks.map((task, index) => normalizeTask(task, index, canonical_status_trust, project_id));
+  try { assertCanonicalSnapshot(normalized, canonical_status_snapshot, { snapshot_trust: canonical_snapshot_trust, canonical_status_trust, usage_ledger: canonical_snapshot_usage, consume: consume_snapshot }); }
+  catch { throw new AutonomousQueueError('QUEUE_COMPLETION_CANONICAL_MISMATCH'); }
   if (new Set(normalized.map((task) => task.task_id)).size !== normalized.length) {
     throw new AutonomousQueueError('AUTONOMOUS_TASK_ID_DUPLICATE');
   }

@@ -1,6 +1,6 @@
 {
   "name": "bai-development-os",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "description": "BAI Development OS core governance, lifecycle, context guard, and reusable project-development foundation",
   "type": "module",
@@ -40,6 +40,8 @@
     "test:governance": "node --test tests/governance/*.test.mjs",
     "test:context-guard": "node --test tests/context-guard/*.test.mjs",
     "test:lifecycle": "node --test tests/lifecycle/*.test.mjs tests/lifecycle/recovery/*.test.mjs",
+    "test:design-only-closure": "node --test tests/lifecycle/phase1/design-only-closure.test.mjs tests/lifecycle/phase1/design-only-closure-schema.test.mjs tests/automation/canonical-status-binding.test.mjs tests/integration/task021-design-only-closure.test.mjs",
+    "test:design-only-closure-ext4": "node --test tests/lifecycle/phase1/design-only-closure.test.mjs tests/lifecycle/phase1/design-only-closure-schema.test.mjs tests/lifecycle/phase1/lifecycle-store.test.mjs tests/lifecycle/migration.test.mjs tests/automation/canonical-status-binding.test.mjs tests/automation/autonomous-queue.test.mjs tests/dependency/dependency.test.mjs tests/integration/task021-design-only-closure.test.mjs",
     "check:boundaries": "node scripts/check-product-boundaries.mjs",
     "test:foundation-guard": "node --test tests/foundation-guard/*.test.mjs",
     "test:cost-guard": "node --test tests/cost-guard/*.test.mjs",

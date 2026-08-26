@@ -31,3 +31,4 @@ export * from './target-inbox.mjs';
 export * from './notification-outbox.mjs';
 export * from './lane-runner.mjs';
 export * from './lifecycle-coordination.mjs';
+export * from './canonical-status-binding.mjs';

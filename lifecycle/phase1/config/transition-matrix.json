@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "lease_timeout_seconds": 60,
   "lease_extension_allowed": false,
   "forward_phases": [
@@ -29,4 +29,9 @@
   ],
   "undefined_transition": "UNDEFINED_TRANSITION",
   "terminal_reopen": "TERMINAL_REOPEN_FORBIDDEN"
+  ,"design_only_routes": {
+    "classification": "ACTIVE/FINAL_PLAN/PASS/UNKNOWN -> ACTIVE/FINAL_PLAN/PASS/DESIGN_ONLY",
+    "closure": "ACTIVE/FINAL_PLAN/PASS/DESIGN_ONLY -> COMPLETED/CLOSURE/PASS/REVIEW_PENDING",
+    "skipped_phases": ["IMPLEMENTATION_AUTHORIZATION", "IMPLEMENTATION", "TESTING", "IMPLEMENTATION_REVIEW", "FINAL_JUDGMENT", "POLICY_REVIEW"]
+  }
 }

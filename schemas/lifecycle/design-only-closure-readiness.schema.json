@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "design-only-closure-readiness.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["readiness_schema_version", "project_id", "task_id", "record_revision", "canonical_checksum", "task_classification", "base_context_checksum", "dimensions", "unresolved_critical", "unresolved_high", "critic_evidence_checksums", "implementation_deliverables", "content_checksum"],
+  "properties": {
+    "readiness_schema_version": { "const": "1.0.0" },
+    "project_id": { "type": "string", "minLength": 1 },
+    "task_id": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" },
+    "record_revision": { "type": "integer", "minimum": 1 },
+    "canonical_checksum": { "$ref": "#/$defs/checksum" },
+    "task_classification": { "const": "DESIGN_ONLY" },
+    "base_context_checksum": { "$ref": "#/$defs/checksum" },
+    "dimensions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["technical", "quality", "policy", "status", "risk", "follow_up", "knowledge", "resources", "cost", "owner"],
+      "properties": {
+        "technical": { "$ref": "#/$defs/dimension" }, "quality": { "$ref": "#/$defs/dimension" },
+        "policy": { "$ref": "#/$defs/dimension" }, "status": { "$ref": "#/$defs/dimension" },
+        "risk": { "$ref": "#/$defs/dimension" }, "follow_up": { "$ref": "#/$defs/dimension" },
+        "knowledge": { "$ref": "#/$defs/dimension" }, "resources": { "$ref": "#/$defs/dimension" },
+        "cost": { "$ref": "#/$defs/dimension" }, "owner": { "$ref": "#/$defs/dimension" }
+      }
+    },
+    "unresolved_critical": { "const": 0 },
+    "unresolved_high": { "const": 0 },
+    "critic_evidence_checksums": { "type": "array", "minItems": 3, "maxItems": 3, "uniqueItems": true, "items": { "$ref": "#/$defs/checksum" } },
+    "implementation_deliverables": {
+      "type": "object", "additionalProperties": false,
+      "required": ["implementation_authorization", "implementation", "testing", "implementation_review", "final_judgment", "policy_implementation"],
+      "properties": {
+        "implementation_authorization": { "const": "NOT_APPLICABLE" }, "implementation": { "const": "NOT_APPLICABLE" },
+        "testing": { "const": "NOT_APPLICABLE" }, "implementation_review": { "const": "NOT_APPLICABLE" },
+        "final_judgment": { "const": "NOT_APPLICABLE" }, "policy_implementation": { "const": "NOT_APPLICABLE" }
+      }
+    },
+    "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": {
+    "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "dimension": {
+      "type": "object", "additionalProperties": false, "required": ["result", "reason", "evidence_checksums"],
+      "properties": { "result": { "enum": ["PASS", "ACCEPTED", "NOT_APPLICABLE"] }, "reason": { "type": ["string", "null"] }, "evidence_checksums": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/checksum" } } }
+    }
+  }
+}

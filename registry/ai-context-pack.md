@@ -6,13 +6,24 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Current Task: `TASK-020 / COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS`
+- Current Task: `TASK-021 / ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`
 - Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETED`; exact PR #23 merge, annotated `v1.1.0`, stable source-only GitHub Release and publication-branch cleanup are verified
 - Current design intake: `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001 / TASK-019 / COMPLETED / PR_29_MERGED_AT_D30F94A53D5C3D51CB8ED9D9F84FE226CE7E9BF0`
 - Current Consumer: BAI VIDEO PRODUCTION R2/R3 complete; bounded R4 local Comfy adapter `HOSTED_CLOSED` at exact main `7d6486059c468009042e4c186d54b566d6e1477e`; native H3 completion `PARKED_TO_SAFE_RUNTIME_REVIEW`
 - Parked route: `TASK-017 Phase 0 / PAUSED_AT_07AF447`; Production Activation remains `BLOCKED`
 - Roadmap authority: Architecture Ver.2.30 Part XV + Part XXXI; TASK-019 is inserted after completed TASK-018 and before any TASK-017 resume; `57 / 57 PASS`
-- Current development overlay: `architecture/BAI_Development_OS_Post_TASK019_Autonomous_Worklane_Roadmap_Refinement_Ver1.0.md`; TASK-020 adds bounded autonomous worklanes and durable dispatch after completed TASK-019 without reopening earlier Tasks
+- Current development overlay: `architecture/BAI_Development_OS_Post_TASK020_Design_Only_Closure_Roadmap_Refinement_Ver1.0.md`; TASK-021 adds an honest design-only Canonical closure route after completed TASK-020 without reopening earlier Tasks
+
+## TASK-021 mandatory loading order
+
+1. `registry/current-state.md`
+2. `tasks/TASK-021/TASK-021.summary.md`
+3. `tasks/TASK-021/final-plan-and-owner-authorization-2026-08-27.md`
+4. `specifications/TASK-021_BAI_Development_OS_Design_Only_Canonical_Closure_Lifecycle_Ver1.0.md`
+5. `tasks/TASK-021/implementation-evidence-2026-08-27.md`
+6. only the exact Lifecycle, automation binding, dependency, schema and migration files required for the bounded unit
+
+TASK-021 is `ACTIVE / CHECKPOINT / HUMAN_GATE_REQUIRED / PR_33_READY_REVIEW_REQUIRED`, not completed. Three independent implementation Critics and the Judge passed with residual Critical/High `0/0`; Windows focused `30/30`, WSL2 ext4 focused `145/145`, full regression `1533/1533` and Governance `17/17` passed. Draft PR #33 at head `20dfc2c9611d3b3b4278e9aa1ad152c8d2edd9da` is mergeable, but Draft mode skipped regression/conformance and the success-only quality-gate failed. Owner must mark it Ready for Review, wait for green CI and approve protected-main merge. Candidate OS version is `1.2.0`, but no Release or Tag exists. BAI VOICE APP must wait for the exact approved main merge commit and separate signed Owner classification/completion authority before running the Consumer migration runbook. Queue or projection state never replaces Canonical Status.
 
 ## TASK-020 mandatory loading order
 

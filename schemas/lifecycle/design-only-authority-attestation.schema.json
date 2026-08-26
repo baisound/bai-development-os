@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "design-only-authority-attestation.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["attestation_schema_version", "result", "issuer", "subject", "operation_coordinate_checksum", "owner_payload_checksum", "owner_signature_checksum", "owner_key_id", "owner_key_checksum", "authority_epoch", "revocation_proof_checksum", "authority_ledger_coordinate", "history_proof", "revoked", "effective_at", "expires_at", "verified_at", "key_id", "signature_algorithm", "signed_at", "signature", "payload_checksum"],
+  "properties": {
+    "attestation_schema_version": { "const": "1.0.0" }, "result": { "const": "ALLOW" },
+    "issuer": { "type": "string", "minLength": 1 }, "subject": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" },
+    "operation_coordinate_checksum": { "$ref": "#/$defs/checksum" }, "owner_payload_checksum": { "$ref": "#/$defs/checksum" }, "owner_signature_checksum": { "$ref": "#/$defs/checksum" },
+    "owner_key_id": { "type": "string", "minLength": 1 }, "owner_key_checksum": { "$ref": "#/$defs/checksum" },
+    "authority_epoch": { "type": "integer", "minimum": 1 }, "revocation_proof_checksum": { "$ref": "#/$defs/checksum" },
+    "authority_ledger_coordinate": { "$ref": "#/$defs/coordinate" },
+    "history_proof": { "type": "object", "additionalProperties": false, "required": ["proof_schema_version", "epoch_source_coordinate", "revocation_source_coordinate", "inclusion_checksum"], "properties": { "proof_schema_version": { "const": "1.0.0" }, "epoch_source_coordinate": { "$ref": "#/$defs/coordinateNoTime" }, "revocation_source_coordinate": { "$ref": "#/$defs/coordinate" }, "inclusion_checksum": { "$ref": "#/$defs/checksum" } } },
+    "revoked": { "const": false }, "effective_at": { "type": "string", "format": "date-time" }, "expires_at": { "type": "string", "format": "date-time" }, "verified_at": { "type": "string", "format": "date-time" },
+    "key_id": { "type": "string", "minLength": 1 }, "signature_algorithm": { "const": "Ed25519" }, "signed_at": { "type": "string", "format": "date-time" }, "signature": { "type": "string", "minLength": 1 }, "payload_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": {
+    "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "coordinateNoTime": { "type": "object", "additionalProperties": false, "required": ["source_id", "revision", "content_checksum"], "properties": { "source_id": { "type": "string", "minLength": 1 }, "revision": { "type": "integer", "minimum": 1 }, "content_checksum": { "$ref": "#/$defs/checksum" } } },
+    "coordinate": { "type": "object", "additionalProperties": false, "required": ["source_id", "revision", "content_checksum", "observed_at"], "properties": { "source_id": { "type": "string", "minLength": 1 }, "revision": { "type": "integer", "minimum": 1 }, "content_checksum": { "$ref": "#/$defs/checksum" }, "observed_at": { "type": "string", "format": "date-time" } } }
+  }
+}

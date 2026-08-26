@@ -6,7 +6,7 @@
   "additionalProperties": false,
   "required": ["record_schema_version", "task_id", "project_id", "record_revision", "task_status", "current_phase", "gate_status", "authorization_status", "archive_status", "status_reason", "entered_at", "updated_at", "last_verified_at", "requested_by", "authorized_by", "applied_by", "authorization_reference", "authoritative_evidence", "blocking_items", "next_eligible_phases", "verification_result", "last_transition_id", "content_checksum"],
   "properties": {
-    "record_schema_version": { "const": "1.1.0" },
+    "record_schema_version": { "enum": ["1.1.0", "1.2.0"] },
     "task_id": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" },
     "project_id": { "type": "string", "minLength": 1 },
     "record_revision": { "type": "integer", "minimum": 1 },
@@ -28,6 +28,11 @@
     "next_eligible_phases": { "type": "array" },
     "verification_result": { "enum": ["PASS", "FAIL", "NOT_CONFIRMED"] },
     "last_transition_id": { "type": "string", "minLength": 1 },
-    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" }
-  }
+    "content_checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "task_classification": { "enum": ["DESIGN_ONLY", "IMPLEMENTATION", "UNKNOWN"] }
+  },
+  "allOf": [
+    { "if": { "properties": { "record_schema_version": { "const": "1.1.0" } } }, "then": { "not": { "required": ["task_classification"] } } },
+    { "if": { "properties": { "record_schema_version": { "const": "1.2.0" } } }, "then": { "required": ["task_classification"] } }
+  ]
 }
