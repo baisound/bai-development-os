@@ -54,10 +54,12 @@ BAI VOICE APP MUST wait for all of the following:
 
 The Consumer uses the OS as external tooling/package. It MUST NOT copy or bundle OS Core and MUST NOT treat queue/projection state as Canonical authority.
 
-## Checkpoint status
+## Final implementation and closure status
 
-`IMPLEMENTATION_MERGED / CLOSURE_SYNC_HUMAN_GATE_REQUIRED`
+`COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`
 
 PR #33 was marked Ready under explicit Owner authority. Ready CI run `33022231250` passed conformance, quality-gate, Node `20.19.0` regression and Node `22.x` regression. The protected branch accepted the ordinary merge at `2026-08-26T23:10:22Z`; exact main merge `d7532441f425f27303f6072624a80a454c74d84d` has parents `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc` and implementation head `259152384596171023572e5f1545a29277f120ce`.
 
-This post-merge Evidence synchronization is not yet Canonical on main. TASK-021 remains active until a separately authorized closure synchronization is Ready-reviewed and merged; the existing authority for PR #33 does not silently authorize that new merge. Consumer execution remains separately Human-Gated.
+PR #34 then synchronized the completion payload. Ready CI run `33023419495` passed conformance, quality-gate, Node `20.19.0` and Node `22.x`; exact closure main merge is `89d6a91323bf62248dac893f7445debdd60d6eb7` at `2026-08-26T23:28:32Z`. TASK-021 is Canonically complete.
+
+For Consumer execution, `d7532441f425f27303f6072624a80a454c74d84d` remains the exact Owner-approved lifecycle implementation/operation coordinate. `89d6a91323bf62248dac893f7445debdd60d6eb7` is the current Canonical Governance/Evidence coordinate. Consumer execution remains separately Human-Gated on the protected signed artifacts and trust-provider bindings recorded in the runbook.

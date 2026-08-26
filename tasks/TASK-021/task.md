@@ -5,11 +5,11 @@
 - Design ID: `BAI-OS-DESIGN-ONLY-CLOSURE-001`
 - Priority: `P0 / OWNER_DIRECTED`
 - DEV Profile: `DEV_4_FOUNDATION_CRITICAL`
-- Proposed Canonical Status: `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`
-- Effective condition: post-merge closure synchronization Ready-reviewed with required checks green and merged to protected `main`; until then Canonical main remains `ACTIVE / CHECKPOINT`
+- Status: `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`
+- Canonical completion sync: PR `#34`, exact main merge `89d6a91323bf62248dac893f7445debdd60d6eb7`
 - Candidate OS version: `1.2.0` (no Release/Tag authority)
 - Branch: `codex/task-021-design-only-closure`
-- Closure synchronization branch: `codex/task-021-post-merge-closure` (Draft PR `#34`)
+- Closure synchronization branch: `codex/task-021-post-merge-closure` (PR `#34`, merged)
 - Baseline: `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`
 - Implementation head: `259152384596171023572e5f1545a29277f120ce`
 - Exact main merge: `d7532441f425f27303f6072624a80a454c74d84d` (PR `#33`)

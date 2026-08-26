@@ -34,6 +34,10 @@ This authority does not authorize protected-main direct push, force push, releas
 18. Created isolated post-merge closure branch `codex/task-021-post-merge-closure` from exact `origin/main` without changing protected main.
 19. Recorded closure Evidence, passed Governance `17/17`, verified Document Registry YAML `751/751` and exact changed-document hashes, then committed `03ca77bff187c5afbb0515b42af6d7aa893a9a58` and pushed only the closure branch.
 20. Created Japanese Draft PR #34. It is mergeable against exact base `d7532441f425f27303f6072624a80a454c74d84d`. Draft CI run `33022987866` skipped regression/conformance and therefore the success-only quality-gate returned `FAILURE`; this was not recorded as PASS or implementation failure.
+21. Received explicit bounded Owner approval for BAI VOICE APP TASK-001 classification, `COMPLETE_TASK`, `CANONICAL_STATE_COMMIT`, revisions 14/15, audit Evidence and queue recalculation against exact OS commit `d7532441f425f27303f6072624a80a454c74d84d`.
+22. Inspected the Consumer repository read-only. It remains clean at the exact checkpoint, but no tracked protected Owner/verifier/Canonical Store/snapshot key or provider loader exists. No secret was read, emitted or created, and no Consumer mutation was attempted.
+23. Verified PR #34 Ready CI run `33023419495`: conformance, quality-gate, Node `20.19.0` and Node `22.x` all returned `SUCCESS`.
+24. Verified ordinary protected-main merge of PR #34 at `2026-08-26T23:28:32Z`. Exact closure synchronization commit is `89d6a91323bf62248dac893f7445debdd60d6eb7`, with exact head `4945a620ab70b0960d270cc47cc6795f73cfb8eb` and base `d7532441f425f27303f6072624a80a454c74d84d`.
 
 ## Settings changed
 
@@ -46,9 +50,9 @@ This authority does not authorize protected-main direct push, force push, releas
 2. Required CI: all green in run `33022231250`.
 3. Protected-main merge: completed at exact commit `d7532441f425f27303f6072624a80a454c74d84d`.
 
-## Remaining Owner operation
+## Remaining protected Consumer operation
 
-Authorize Ready conversion of Draft PR #34 and ordinary protected-main merge only after its required Ready CI is all green. This is not inferred from the PR #33 authority. BAI VOICE APP classification, `COMPLETE_TASK`, verifier/trust material and repository mutation remain separate gates.
+Supply authorized access to the existing protected Owner signer, independent verifier, Authority Ledger, Canonical Store binding signer and snapshot coordinator. Their signed outputs/trust handles must validate exactly as the runbook specifies; Credential creation is not authorized. PR #34 has no remaining Gate.
 
 Completed assurance: three independent implementation Critics returned Critical/High `0/0`, and the independent Judge returned `PASS_IMPLEMENTATION_READY_FOR_CHECKPOINT`.
 
