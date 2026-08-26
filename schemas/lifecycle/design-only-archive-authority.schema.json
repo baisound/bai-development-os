@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "design-only-archive-authority.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["archive_authority_schema_version", "owner_authorization", "authority_ledger_coordinate", "history_proof", "content_checksum"],
+  "properties": {
+    "archive_authority_schema_version": { "const": "1.0.0" },
+    "owner_authorization": { "$ref": "#/$defs/ownerAuthorization" },
+    "authority_ledger_coordinate": { "$ref": "#/$defs/coordinate" },
+    "history_proof": { "$ref": "#/$defs/historyProof" },
+    "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": {
+    "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" },
+    "coordinateNoTime": { "type": "object", "additionalProperties": false, "required": ["source_id", "revision", "content_checksum"], "properties": { "source_id": { "type": "string", "minLength": 1 }, "revision": { "type": "integer", "minimum": 1 }, "content_checksum": { "$ref": "#/$defs/checksum" } } },
+    "coordinate": { "type": "object", "additionalProperties": false, "required": ["source_id", "revision", "content_checksum", "observed_at"], "properties": { "source_id": { "type": "string", "minLength": 1 }, "revision": { "type": "integer", "minimum": 1 }, "content_checksum": { "$ref": "#/$defs/checksum" }, "observed_at": { "type": "string", "format": "date-time" } } },
+    "historyProof": { "type": "object", "additionalProperties": false, "required": ["proof_schema_version", "epoch_source_coordinate", "revocation_source_coordinate", "inclusion_checksum"], "properties": { "proof_schema_version": { "const": "1.0.0" }, "epoch_source_coordinate": { "$ref": "#/$defs/coordinateNoTime" }, "revocation_source_coordinate": { "$ref": "#/$defs/coordinate" }, "inclusion_checksum": { "$ref": "#/$defs/checksum" } } },
+    "ownerAuthorization": {
+      "type": "object", "additionalProperties": false,
+      "required": ["authorization_envelope_version", "approval_id", "authorized", "task_id", "project_id", "phase", "role", "operation", "authority_epoch", "revocation_proof_checksum", "authority_path", "authority_checksum", "effective_at", "expires_at", "key_id", "signature_algorithm", "signed_at", "signature", "payload_checksum"],
+      "properties": {
+        "authorization_envelope_version": { "const": "1.0.0" }, "approval_id": { "type": "string", "minLength": 1 }, "authorized": { "const": true }, "task_id": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" }, "project_id": { "type": "string", "minLength": 1 }, "phase": { "const": "ARCHIVE" }, "role": { "const": "Owner" }, "operation": { "const": "ARCHIVE" }, "authority_epoch": { "type": "integer", "minimum": 1 }, "revocation_proof_checksum": { "$ref": "#/$defs/checksum" }, "authority_path": { "type": "string", "minLength": 1 }, "authority_checksum": { "$ref": "#/$defs/checksum" }, "effective_at": { "type": "string", "format": "date-time" }, "expires_at": { "type": "string", "format": "date-time" }, "key_id": { "type": "string", "minLength": 1 }, "signature_algorithm": { "const": "Ed25519" }, "signed_at": { "type": "string", "format": "date-time" }, "signature": { "type": "string", "minLength": 1 }, "payload_checksum": { "$ref": "#/$defs/checksum" }
+      }
+    }
+  }
+}

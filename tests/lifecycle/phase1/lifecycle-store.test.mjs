@@ -2,11 +2,12 @@ import assert from 'node:assert/strict';
 import { execFile as execFileCallback } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
+import { hostname, tmpdir } from 'node:os';
 import path from 'node:path';
 import { promisify } from 'node:util';
 import test from 'node:test';
 import { checksum, LifecycleStore, validateActor, validateRecord } from '../../../src/lifecycle/phase1/index.mjs';
+import { createDesignOnlyClosureMigrationPlan, evaluateDesignOnlyRollback } from '../../../src/lifecycle/migration.mjs';
 
 const execFile = promisify(execFileCallback);
 const fixtureBase = path.join(process.cwd(), '.lifecycle-phase1-fixtures');
@@ -90,6 +91,49 @@ test('D-03: recovers PREPARED crash with original revision and released lease', 
   await new LifecycleStore(dir, { projectRoot: path.dirname(dir) }).recover();
   assert.equal((await new LifecycleStore(dir).readRecord()).record_revision, 1);
   await assert.rejects(() => readFile(path.join(dir, 'lease.json'), 'utf8'));
+});
+
+test('TASK-021 recovery never aborts a live matching transaction lease', async (t) => {
+  let concurrentCode = null;
+  const { dir, evidence, store } = await setup(t, { beforeCommit: async () => {
+    await assert.rejects(() => new LifecycleStore(dir, { projectRoot: path.dirname(dir) }).recover(), (error) => { concurrentCode = error.code; return error.code === 'TRANSACTION_IN_PROGRESS'; });
+  } });
+  const next = await store.transition(request(await store.readRecord(), evidence), applied);
+  assert.equal(concurrentCode, 'TRANSACTION_IN_PROGRESS'); assert.equal(next.record_revision, 2);
+});
+
+test('TASK-021 hostile journal paths fail closed without deleting outside files', async (t) => {
+  const { root, dir, evidence, store } = await setup(t, { crashAt: 'PREPARED' });
+  const current = await store.readRecord();
+  await assert.rejects(() => store.transition(request(current, evidence), applied), /SIMULATED_CRASH/);
+  const protectedFile = path.join(root, 'must-survive.txt'); await writeFile(protectedFile, 'protected');
+  const journalPath = path.join(dir, 'transaction-journal.json'); const journal = JSON.parse(await readFile(journalPath, 'utf8')); journal.snapshot_tmp = protectedFile; await writeFile(journalPath, JSON.stringify(journal));
+  await assert.rejects(() => new LifecycleStore(dir, { projectRoot: root }).recover(), (error) => error.code === 'COMMIT_STATE_UNKNOWN');
+  assert.equal(await readFile(protectedFile, 'utf8'), 'protected');
+});
+
+test('TASK-021 dead append owner is fenced and its tokenized lock is recoverable', async (t) => {
+  const { dir, evidence, store } = await setup(t); const now = new Date();
+  await writeFile(path.join(dir, 'audit-append.lock'), JSON.stringify({ lock_schema_version: '1.0.0', lock_token: crypto.randomUUID(), pid: 2147483647, host: hostname(), owner_instance_id: crypto.randomUUID(), fencing_token: now.getTime(), acquired_at: now.toISOString(), expires_at: new Date(now.getTime() + 60_000).toISOString() }));
+  const invalid = { ...request(await store.readRecord(), evidence), expected_revision: 99 };
+  await assert.rejects(() => store.transition(invalid, applied), (error) => error.code === 'REVISION_CONFLICT');
+  await assert.rejects(() => readFile(path.join(dir, 'audit-append.lock'), 'utf8'));
+});
+
+test('TASK-021 migration evidence rejects parent-path escape', async (t) => {
+  const { root, dir } = await setup(t); const outside = path.join(path.dirname(root), 'TASK-004-outside.txt'); await writeFile(outside, 'outside'); t.after(() => rm(outside, { force: true }));
+  const mapping = { mapping_id: crypto.randomUUID(), source_task_id: 'TASK-004', legacy_expression: 'legacy', mapped_state: { task_status: 'ACTIVE', current_phase: 'DESIGN', gate_status: 'FAIL', authorization_status: 'NOT_REQUIRED', archive_status: 'NOT_ELIGIBLE' }, confidence: 'HIGH', source_evidence: [{ path: `../${path.basename(outside)}`, checksum: `sha256:${createHash('sha256').update('outside').digest('hex')}` }], mapped_by: 'migration-manager', created_at: new Date().toISOString() }; mapping.checksum = checksum(mapping);
+  await writeFile(path.join(dir, 'migration-mapping.jsonl'), `${JSON.stringify(mapping)}\n`);
+  await assert.rejects(() => new LifecycleStore(dir, { projectRoot: root }).recover(), (error) => ['EVIDENCE_INVALID', 'NOT_CONFIRMED'].includes(error.code));
+});
+
+test('TASK-021 real LifecycleStore proof binds rollback identity and any Event 1.2 is downgrade PONR', async (t) => {
+  const { evidence, store } = await setup(t); const current = await store.readRecord();
+  const plan = createDesignOnlyClosureMigrationPlan({ task_id: current.task_id, project_id: current.project_id, baseline_commit: 'a'.repeat(40), required_runtime_commit: 'b'.repeat(40), source_record_revision: current.record_revision, source_record_checksum: current.content_checksum, writer_drained: true, lease_absent: true, journal_absent: true, backup_checksum: `sha256:${'c'.repeat(64)}`, owner_authorization_checksum: `sha256:${'d'.repeat(64)}` });
+  assert.equal((await evaluateDesignOnlyRollback(plan, { lifecycle_store: store })).decision, 'ROLLBACK_ALLOWED');
+  const malformed = { ...request(current, evidence), operation_domain: 'TASK_CLASSIFICATION', owner_authorized: false, closure_ready: false };
+  await assert.rejects(() => store.transition(malformed, applied));
+  assert.equal((await evaluateDesignOnlyRollback(plan, { lifecycle_store: store })).decision, 'DOWNGRADE_FORBIDDEN');
 });
 
 test('D-05/IC5-01: recovers APPLIED journal only after complete durable acknowledgement', async (t) => {
@@ -349,7 +393,8 @@ test('IC6-01: journal transaction mismatch and VERIFIED missing identity retain 
       await writeFile(journalPath, JSON.stringify(journal));
 
       await assert.rejects(() => new LifecycleStore(dir).recover(), (error) => error.code === 'COMMIT_STATE_UNKNOWN');
-      assert.equal(JSON.parse(await readFile(journalPath, 'utf8')).stage, 'RECOVERY_REQUIRED');
+      const retainedStage = JSON.parse(await readFile(journalPath, 'utf8')).stage;
+      assert.equal(retainedStage, label === 'journal transition mismatch' ? 'APPLIED' : 'RECOVERY_REQUIRED');
       await readFile(path.join(dir, 'lease.json'), 'utf8');
       await readFile(journal.event_tmp, 'utf8');
       const events = (await readFile(path.join(dir, 'transition-log.jsonl'), 'utf8')).split('\n').filter(Boolean);

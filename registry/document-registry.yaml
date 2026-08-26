@@ -1,5 +1,5 @@
 schema_version: '1.1'
-registry_generated_at: '2026-08-16T14:00:00+09:00'
+registry_generated_at: '2026-08-27T23:59:00+09:00'
 purpose: AI向けの文書探索・優先読込・整合性確認に使用するBAI Development OS索引。正本文書そのものではない。
 field_definitions:
   document_id: パスから生成した安定識別子。権限や正本性を意味しない。
@@ -429,8 +429,8 @@ documents:
   category: runtime-state-or-schema
   authority: supporting-artifact
   importance_level: B
-  sha256: 425649ac0c4c1039ad5aadeab2625a821cd6cd9d40482fb4522d7100921b2ee1
-  size_bytes: 759
+  sha256: 3d51824ddb780a6da30a9852dce20e6a91ba7181be11811ea9af331201009dbe
+  size_bytes: 1122
   preferred_loading: summary-or-on-demand
 - document_id: 19CAB4DA2BB8ADCA
   path: lifecycle/phase1/schemas/canonical-status-record.schema.json
@@ -438,8 +438,8 @@ documents:
   category: runtime-state-or-schema
   authority: supporting-artifact
   importance_level: B
-  sha256: d138e0fa3f0a1307dd2bb5524670019e6d43640cf0c40c324183a86a2162713c
-  size_bytes: 2424
+  sha256: a7e1a839f312f3d03b1398efd5888d027cb0a4bd843b24d788b9d4e380485970
+  size_bytes: 2811
   preferred_loading: summary-or-on-demand
 - document_id: 3D92DD3D39FC93CD
   path: lifecycle/phase1/tasks/TASK-004/canonical-status.json
@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: cfb023933e91d7e0581df0772545af4e0d5fc3ce70582d77f21db4be2a90bd84
-  size_bytes: 5911
+  sha256: b506f553820bfead524d954eb14b7cafc88c0fd077d8ab09e2a8588791e00c50
+  size_bytes: 6607
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 3fbf229eec0ed4819b9f1dcf2d66e77c47673a937ada008911289b8df9206b33
-  size_bytes: 13195
+  sha256: 272cc27f3e09ed26118c5a8558ff81e536922b66608b4456bc5a8a69cd1e0387
+  size_bytes: 14286
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 185670b4af3d17ddf1971647414b6ee309902e77c8aff36a86411a168f126049
-  size_bytes: 19822
+  sha256: 2f8e253e4498b64863e8913b3c12b7200b24921718e63188d40d84e57f2704f0
+  size_bytes: 21564
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -7672,8 +7672,8 @@ documents:
   category: task-record
   authority: owner-directed-task-governance
   importance_level: A
-  sha256: 70a1ca0b2c043b4100ed3318bc448b6c8e655721c5d8b222cfb0842caa2c2f40
-  size_bytes: 4995
+  sha256: cf26f078a8ff15620c5339e573ee20f87d87ef5b539214d790522862c955f337
+  size_bytes: 5086
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK018_P0
   effective_date: '2026-08-13'
@@ -8744,6 +8744,248 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: TASK020_COMPLETION_PASS
   effective_date: '2026-08-16'
+- document_id: AD0DC23AF80C6ADA
+  path: architecture/BAI_Development_OS_Post_TASK020_Design_Only_Closure_Roadmap_Refinement_Ver1.0.md
+  title: 'BAI Development OS — Post-TASK-020 Design-only Closure Roadmap Refinement Ver.1.0'
+  category: architecture
+  authority: owner-directed-roadmap-refinement
+  importance_level: A
+  sha256: 29e0c8eb4fefd2b53fd1c83e0ce5a028256c2f8d027ccc365fe064546174de9a
+  size_bytes: 1474
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_ROADMAP_REFINEMENT
+  effective_date: '2026-08-27'
+- document_id: 4096E4021E45371A
+  path: specifications/TASK-021_BAI_Development_OS_Design_Only_Canonical_Closure_Lifecycle_Ver1.0.md
+  title: 'TASK-021 — Design-only Canonical Closure Lifecycle Ver.1.0'
+  category: specification
+  authority: machine-readable-canonical-candidate
+  importance_level: A
+  sha256: 6fa976261dbdf56b8d95345f6cf26fd608c3c7151cf98e1ffdcf66acd283371f
+  size_bytes: 23679
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_DESIGN
+  effective_date: '2026-08-27'
+- document_id: 5FFC560B316D4852
+  path: tasks/TASK-021/consumer-migration-and-operation-runbook-2026-08-27.md
+  title: 'TASK-021 BAI VOICE APP migration and operation runbook'
+  category: migration-record
+  authority: implementation-runbook
+  importance_level: A
+  sha256: e3c53d868b3b8d50a3f426a61ed0c2ea8b84d506a4763ef035d37c0c33e50acb
+  size_bytes: 9140
+  preferred_loading: read-first-or-current-phase
+  status: RUNBOOK_READY_EXECUTION_GATED
+  effective_date: '2026-08-27'
+- document_id: C8A1188F58971A99
+  path: tasks/TASK-021/design-critic-three-rounds-2026-08-27.md
+  title: 'TASK-021 — Independent Design Critic Three-round Evidence'
+  category: task-evidence
+  authority: review-evidence
+  importance_level: A
+  sha256: 2463f963e32913c161cb9a066134d5ad7706545c61bba734a2e5c3dac98a7b93
+  size_bytes: 2419
+  preferred_loading: read-first-or-current-phase
+  status: DESIGN_CRITIC_PASS
+  effective_date: '2026-08-27'
+- document_id: B49FF04750758931
+  path: tasks/TASK-021/design-judge-decision-2026-08-27.md
+  title: 'TASK-021 — Design Judge Decision'
+  category: task-evidence
+  authority: judge-evidence
+  importance_level: A
+  sha256: db7db20373e9745d0ec34e2dc88d04ca70aff87bbf55127803a07eacf7320027
+  size_bytes: 1581
+  preferred_loading: read-first-or-current-phase
+  status: DESIGN_JUDGE_PASS
+  effective_date: '2026-08-27'
+- document_id: FA28E8CD39E4D9DE
+  path: tasks/TASK-021/final-plan-and-owner-authorization-2026-08-27.md
+  title: 'TASK-021 — Final Plan and Owner Authorization'
+  category: task-record
+  authority: owner-implementation-authorization
+  importance_level: A
+  sha256: 86bd319cbbb705a745e2f445108d37eee32933dc9fa7f0f22a681d5ecb92de57
+  size_bytes: 4025
+  preferred_loading: read-first-or-current-phase
+  status: TASK021_IMPLEMENTATION_AUTHORIZED
+  effective_date: '2026-08-27'
+- document_id: 73FE90BEE7F6C9FE
+  path: tasks/TASK-021/implementation-critic-three-rounds-2026-08-27.md
+  title: 'TASK-021 — Independent Implementation Critic Three-round Evidence'
+  category: task-evidence
+  authority: review-evidence
+  importance_level: A
+  sha256: 910920089d2c414fcbed8bc6ba5544b6e9017f9f4302f3138645a32f1f5bc8cb
+  size_bytes: 3230
+  preferred_loading: read-first-or-current-phase
+  status: IMPLEMENTATION_CRITIC_3_ROUNDS_PASS
+  effective_date: '2026-08-27'
+- document_id: C55BC91B89F33C5C
+  path: tasks/TASK-021/implementation-evidence-2026-08-27.md
+  title: 'TASK-021 — Implementation and Validation Evidence'
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  sha256: 7001f4b86fe4cebe38f48e0bb5457113da1800cf7d0145c3445c55628c0e02d6
+  size_bytes: 3658
+  preferred_loading: read-first-or-current-phase
+  status: IMPLEMENTATION_CHECKPOINT_READY
+  effective_date: '2026-08-27'
+- document_id: 8C2146DC7E1773A7
+  path: tasks/TASK-021/implementation-judge-decision-2026-08-27.md
+  title: 'TASK-021 — Independent Implementation Judge Decision'
+  category: task-evidence
+  authority: judge-evidence
+  importance_level: A
+  sha256: 1c04e5d1a483b78987f5a35b4766291bdcf7ba2ca70623d57e00ba3bb77e57e4
+  size_bytes: 2086
+  preferred_loading: read-first-or-current-phase
+  status: IMPLEMENTATION_JUDGE_PASS
+  effective_date: '2026-08-27'
+- document_id: 016F67566573BA4F
+  path: tasks/TASK-021/owner-sleep-operation-procedure-2026-08-27.md
+  title: 'TASK-021 Owner sleep operation procedure and activity record'
+  category: task-record
+  authority: owner-directed-operation-record
+  importance_level: A
+  sha256: 7bdb8500b3445600b323b0c36184905e392701cb17c3f1461763c19267a40986
+  size_bytes: 4110
+  preferred_loading: read-first-or-current-phase
+  status: OPERATION_RECORD_CURRENT
+  effective_date: '2026-08-27'
+- document_id: D075D24EC188C143
+  path: tasks/TASK-021/TASK-021.summary.md
+  title: 'TASK-021 Summary'
+  category: task-summary
+  authority: navigation-aid
+  importance_level: A
+  sha256: 9fc28da76f62ec1ac0922af6cee91e866a947a33de3f1c1635eac9db48e4c17f
+  size_bytes: 1448
+  preferred_loading: read-first
+  status: TASK021_CHECKPOINT_SUMMARY
+  effective_date: '2026-08-27'
+- document_id: EB990E7DC9DD3034
+  path: tasks/TASK-021/task.md
+  title: 'TASK-021 — Design-only Canonical Closure Lifecycle'
+  category: task-record
+  authority: current-task-definition
+  importance_level: A
+  sha256: 7ad3d400a012c5893cf816e7eb56853307a5d1f49303269ae90ff3aea6d08ce0
+  size_bytes: 2684
+  preferred_loading: read-first-or-current-phase
+  status: ACTIVE_CHECKPOINT_WAITING_PROTECTED_MAIN_MERGE
+  effective_date: '2026-08-27'
+- document_id: 9A231914E993BEE9
+  path: schemas/lifecycle/canonical-status-binding.schema.json
+  title: 'canonical-status-binding.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: eddc50220c998cd3efc5e8ff6348f28450ba111b85b08b2fe75077281d658579
+  size_bytes: 2025
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: 9B0F8F44617477D0
+  path: schemas/lifecycle/canonical-status-snapshot.schema.json
+  title: 'canonical-status-snapshot.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 22ac2bfb8d673e5ac3029263bfc7666a4a37f17ca4167ea05b6b473035560b5e
+  size_bytes: 1636
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: F57DF6F45A4C6343
+  path: schemas/lifecycle/design-only-archive-authority.schema.json
+  title: 'design-only-archive-authority.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 0cf783e6a929658b4a9056643516ee6c06dfd09e56b863b69de97de249162d7b
+  size_bytes: 3287
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: AEF0148331BC41D3
+  path: schemas/lifecycle/design-only-authority-attestation.schema.json
+  title: 'design-only-authority-attestation.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 867d97fa5c92a1736fe5545823d3d63a1a4fe10a99ac561529ab6629133a624f
+  size_bytes: 3014
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: 06F62210620DDA0C
+  path: schemas/lifecycle/design-only-closure-audit-receipt.schema.json
+  title: 'design-only-closure-audit-receipt.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: c3502a84f6b33c59dced495ee2be89f403ffae78671702264351768bae01b59d
+  size_bytes: 1793
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: EDFAC958C249AA82
+  path: schemas/lifecycle/design-only-closure-readiness.schema.json
+  title: 'design-only-closure-readiness.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 26d21cacf32aac7059eef8a19faa185b186ea3de41888fe7af349037c41bab3f
+  size_bytes: 2970
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: 1A9D3534E8FD532B
+  path: schemas/lifecycle/design-only-critic-evidence.schema.json
+  title: 'design-only-critic-evidence.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: fd043625b664abc7ef3a83366f236fd1c5f0dab2c966340ccb0db73c95f9528d
+  size_bytes: 1107
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: B47740189E477F3B
+  path: schemas/lifecycle/design-only-operation-bundle.schema.json
+  title: 'design-only-operation-bundle.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: af8ceeecb27b1449d8a039cddadb041e52051749251b7d0525135eaae7775749
+  size_bytes: 7221
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: FD473F220E2633BB
+  path: schemas/lifecycle/legacy-completion-attestation.schema.json
+  title: 'legacy-completion-attestation.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: ebd31f9c63c9039f607c991bef92176cbba420f2c9572514ba9bb6f9cddb308f
+  size_bytes: 1331
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
+- document_id: 0F83D4BCB88A8DB5
+  path: schemas/lifecycle/lifecycle-event-1.2.schema.json
+  title: 'lifecycle-event-1.2.schema.json'
+  category: schema
+  authority: machine-readable-contract
+  importance_level: A
+  sha256: 90c49f8d6874ad135f686f13c2e6848b7fcb3c13c78ebb6be48ecffe54c84b55
+  size_bytes: 14974
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK021_CANDIDATE
+  effective_date: '2026-08-27'
 current_canonical_document_sets:
   effective_date: '2026-08-16'
   promotion_authority: Owner
@@ -8893,12 +9135,19 @@ current_canonical_document_sets:
     status: COMPLETED_PR31_MERGED_TASK020_COMPLETION_PASS
     machine: tasks/TASK-020/task.md
     summary: tasks/TASK-020/TASK-020.summary.md
+  task_021_status: ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE
+  task_021_design_only_canonical_closure:
+    document_id: TASK_021_DESIGN_ONLY_CANONICAL_CLOSURE
+    version: '1.0'
+    status: ACTIVE_CHECKPOINT_WAITING_PROTECTED_MAIN_MERGE
+    machine: tasks/TASK-021/task.md
+    summary: tasks/TASK-021/TASK-021.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: CURRENT_TASK020_COMPLETION_PASS
+registry_status: CURRENT_TASK021_CHECKPOINT_PENDING_MAIN
 registry_status_details:
-  documents: 728
+  documents: 750
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
-  current_task: TASK-020 COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS
-  next_task: NO IMPLICIT NEXT TASK; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED
+  current_task: TASK-021 ACTIVE / CHECKPOINT / WAITING_PROTECTED_MAIN_MERGE
+  next_task: NO IMPLICIT NEXT TASK; TASK-021 protected-main merge is gated; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED

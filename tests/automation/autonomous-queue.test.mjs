@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { generateKeyPairSync } from 'node:crypto';
 import test from 'node:test';
 import {
   assertAutonomousWorkMode,
@@ -6,6 +7,15 @@ import {
   selectAutonomousTask,
   validateHumanGate,
 } from '../../src/automation/index.mjs';
+import { createCanonicalStatusSnapshotManifest, createCanonicalTaskBinding } from '../../src/lifecycle/phase1/design-only-closure.mjs';
+
+const bindingKeys = generateKeyPairSync('ed25519');
+const snapshotKeys = generateKeyPairSync('ed25519');
+const fixedClock = () => new Date('2026-08-27T00:00:00.000Z');
+const canonical_status_trust = { public_key: bindingKeys.publicKey, expected_key_id: 'CANONICAL-STORE', clock: fixedClock };
+const canonical_snapshot_trust = { public_key: snapshotKeys.publicKey, expected_key_id: 'SNAPSHOT-COORDINATOR', clock: fixedClock };
+const completionBinding = (task_id) => createCanonicalTaskBinding({ source: 'LIFECYCLE_STORE_VERIFIED_READ', observation_id: crypto.randomUUID(), project_id: 'fixture', task_id, task_status: 'COMPLETED', task_classification: 'IMPLEMENTATION', record_revision: 1, canonical_checksum: `sha256:${'a'.repeat(64)}`, transition_id: crypto.randomUUID(), event_checksum: `sha256:${'b'.repeat(64)}`, receipt_checksum: null, canonical_authority: false, observed_at: fixedClock().toISOString(), expires_at: '2026-08-27T00:01:00.000Z' }, { private_key: bindingKeys.privateKey, key_id: 'CANONICAL-STORE', clock: fixedClock });
+const snapshot = (bindings) => createCanonicalStatusSnapshotManifest(bindings, { private_key: snapshotKeys.privateKey, key_id: 'SNAPSHOT-COORDINATOR', binding_trust: canonical_status_trust, clock: fixedClock });
 
 const gate = (task_id, extra = {}) => createHumanGate({
   gate_id: `HG-${task_id}-001`,
@@ -143,11 +153,12 @@ test('design-ahead can run but cannot become speculative implementation', () => 
 });
 
 test('dependency and file ownership conflicts do not become runnable', () => {
+  const completed = completionBinding('TASK-A');
   const result = selectAutonomousTask([
-    task('TASK-A', { state: 'COMPLETED' }),
-    task('TASK-B', { dependencies: ['TASK-A'], files_owned: ['shared.mjs'] }),
-    task('TASK-C', { dependencies: ['TASK-B'] }),
-  ], { locked_files: ['shared.mjs'] });
+    task('TASK-A', { project_id: 'fixture', state: 'COMPLETED', canonical_binding: completed }),
+    task('TASK-B', { project_id: 'fixture', dependencies: ['TASK-A'], files_owned: ['shared.mjs'] }),
+    task('TASK-C', { project_id: 'fixture', dependencies: ['TASK-B'] }),
+  ], { project_id: 'fixture', locked_files: ['shared.mjs'], canonical_status_trust, canonical_status_snapshot: snapshot([completed]), canonical_snapshot_trust });
   assert.equal(result.selected, null);
   assert.equal(result.parked[0].reason, 'FILE_OWNERSHIP_CONFLICT');
   assert.equal(result.waiting[0].reason, 'DEPENDENCY_WAIT');
@@ -181,4 +192,11 @@ test('explicit BLOCKED task is not silently reselected', () => {
   assert.equal(result.selected, null);
   assert.equal(result.parked[0].reason, 'TASK_BLOCKED');
   assert.equal(result.system_blocked, false);
+});
+
+test('wrong-project runnable task is rejected before selection', () => {
+  assert.throws(
+    () => selectAutonomousTask([task('TASK-WRONG', { project_id: 'other' })], { project_id: 'fixture' }),
+    (error) => error.code === 'AUTONOMOUS_TASK_PROJECT_MISMATCH',
+  );
 });

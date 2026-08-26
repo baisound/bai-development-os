@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "design-only-closure-audit-receipt.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["receipt_schema_version", "transition_id", "task_id", "operation", "resulting_revision", "canonical_checksum", "event_checksum", "operation_audit_checksum", "event_acknowledgement", "committed_at", "content_checksum"],
+  "properties": {
+    "receipt_schema_version": { "const": "1.0.0" },
+    "transition_id": { "type": "string", "format": "uuid" },
+    "task_id": { "type": "string", "pattern": "^TASK-[0-9]{3,}$" },
+    "operation": { "enum": ["TASK_CLASSIFICATION", "DESIGN_ONLY_CLOSURE", "LEGACY_COMPLETION_ATTEST"] },
+    "resulting_revision": { "type": "integer", "minimum": 1 },
+    "canonical_checksum": { "$ref": "#/$defs/checksum" },
+    "event_checksum": { "$ref": "#/$defs/checksum" },
+    "operation_audit_checksum": { "$ref": "#/$defs/checksum" },
+    "event_acknowledgement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["transition_id", "entry_checksum", "resulting_revision", "event_appended", "log_file_synced", "log_directory_synced", "event_verified"],
+      "properties": {
+        "transition_id": { "type": "string", "format": "uuid" }, "entry_checksum": { "$ref": "#/$defs/checksum" },
+        "resulting_revision": { "type": "integer", "minimum": 1 },
+        "event_appended": { "const": true }, "log_file_synced": { "const": true },
+        "log_directory_synced": { "const": true }, "event_verified": { "const": true }
+      }
+    },
+    "committed_at": { "type": "string", "format": "date-time" },
+    "content_checksum": { "$ref": "#/$defs/checksum" }
+  },
+  "$defs": { "checksum": { "type": "string", "pattern": "^sha256:[a-f0-9]{64}$" } }
+}
