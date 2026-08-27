@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: ccfc9c9757c95371172ccdf498d8c9a3f8558668e2c9c720abf66d819c1db039
-  size_bytes: 15297
+  sha256: 24c7ba81fa444d7485102f189ec23d48d3c65f82bb896ee418df0e881ac3b598
+  size_bytes: 15429
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 56c5d41a3e2297a1c4a335b30ede3dbec1a1e1abf620e9276bb0108961189acd
-  size_bytes: 22668
+  sha256: 9fd39d7f5d7b5b0ae05c2ca4438d2e8d0dbb4133d3e8d5df62f768aa0b1b5a92
+  size_bytes: 23095
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8777,6 +8777,39 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: RUNBOOK_READY_EXECUTION_GATED
   effective_date: '2026-08-27'
+- document_id: D3F741CB65F97912
+  path: tasks/TASK-021/consumer-protected-trust-key-provisioning-runbook-2026-08-27.md
+  title: 'BAI VOICE APP TASK-001 — Protected trust key provisioning runbook'
+  category: operation-runbook
+  authority: owner-authorized-credential-provisioning-procedure
+  importance_level: A
+  sha256: ce9733c57445c61710ceb220cd26ccbb45bbddad923d24838335d201f18705ba
+  size_bytes: 6309
+  preferred_loading: read-first-or-current-phase
+  status: KEY_PROVISIONING_PASS
+  effective_date: '2026-08-27'
+- document_id: 85A6E977280BE4CA
+  path: tasks/TASK-021/generate-bai-voice-task001-trust-keys.mjs
+  title: 'TASK-021 BAI VOICE TASK-001 trust key generator'
+  category: operation-script
+  authority: owner-authorized-credential-provisioning-tool
+  importance_level: A
+  sha256: 568c441f140c7246d219a423793d1fb05d6831ac3e56e8106704a8a76c59299f
+  size_bytes: 4639
+  preferred_loading: current-phase-only
+  status: VERIFIED_KEY_GENERATOR
+  effective_date: '2026-08-27'
+- document_id: CE7C8B3EFEEA0E19
+  path: tasks/TASK-021/new-bai-voice-task001-trust-keys.ps1
+  title: 'TASK-021 BAI VOICE TASK-001 protected key provisioning wrapper'
+  category: operation-script
+  authority: owner-authorized-credential-provisioning-tool
+  importance_level: A
+  sha256: 4f99879117c8d19868f78e36172fed6d5b8e3e35668afcf78fb4dbd6b5510be5
+  size_bytes: 2121
+  preferred_loading: current-phase-only
+  status: EXECUTED_KEY_PROVISIONING_PASS
+  effective_date: '2026-08-27'
 - document_id: C8A1188F58971A99
   path: tasks/TASK-021/design-critic-three-rounds-2026-08-27.md
   title: 'TASK-021 — Independent Design Critic Three-round Evidence'
@@ -9156,7 +9189,7 @@ current_canonical_document_sets:
 product_root: /home/baisound/bai-development-os
 registry_status: TASK021_COMPLETED_PR34_MERGED
 registry_status_details:
-  documents: 751
+  documents: 754
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'

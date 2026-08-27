@@ -56,6 +56,7 @@
 - Assurance: three independent implementation Critics and implementation Judge PASS; independent post-merge Closure Judge PASS; residual Critical/High `0/0`.
 - Validation: Windows focused `30/30 PASS`; WSL2 ext4 focused `145/145 PASS`; WSL2 ext4 full regression `1533/1533 PASS`; Governance `17/17 PASS`; diff check clean.
 - Consumer: BAI VOICE APP read-only preflight confirms clean exact checkpoint `415ac2ce1bcc5a38a3bdd366536d7350b3c64c14`, TASK-001 revision `13`/expected tuple and no transaction/legacy journal, audit lock or lease. Owner approved bounded classification, `COMPLETE_TASK`, Canonical revisions 14/15, audit Evidence and queue recalculation. Mutation remains blocked because distinct signed envelopes, independent verifier attestations and existing protected trust-provider bindings are unconfirmed; no Credential creation is authorized.
+- Consumer protected trust provisioning: later explicit Owner authority permitted new TASK-001-only keys. Four distinct Ed25519 pairs were created under `C:\key\Private|Public\bai-voice-app-task-001`; self-tests, restricted private ACL and overwrite-rejection passed. Private material is not in either repository or Evidence. The BAI VOICE APP authority task owns Authority Ledger/bundle assembly and revision 14/15 execution.
 - Publication: PR #33 Ready CI run `33022231250` passed conformance, quality-gate, Node `20.19.0` and Node `22.x`; ordinary protected-main merge completed at `d7532441f425f27303f6072624a80a454c74d84d` on `2026-08-26T23:10:22Z`.
 - Closure synchronization: PR #34 Ready CI run `33023419495` passed conformance, quality-gate, Node `20.19.0` and Node `22.x`; exact head `4945a620ab70b0960d270cc47cc6795f73cfb8eb`, base `d7532441f425f27303f6072624a80a454c74d84d`, main merge `89d6a91323bf62248dac893f7445debdd60d6eb7` at `2026-08-26T23:28:32Z`.
 - Status: `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`. No Release, Tag, Deploy, Production Activation, Consumer mutation, native/paid/credential operation, real queue activation or destructive cleanup is claimed.
@@ -113,7 +114,7 @@ TASK-015 is `COMPLETED`. `DistributedOS` is an optional coordination layer: vers
 - Root `KnowledgeEvolutionOS` export: `PASS`
 - Product-owned Python reference compile + local Mock Hub smoke: `PASS`
 - Blocking Critic findings: `0`
-- Document Registry: `751 documents / Missing 0 / Hash-Size mismatch 0`
+- Document Registry: `754 documents / Missing 0 / Hash-Size mismatch 0`
 - Detailed Design DOCX visual QA: `9 / 9 PASS`
 - Architecture Ver.2.28 DOCX visual QA: `153 / 153 PASS` (86 inherited pages pixel-identical to Ver.2.27; 67 changed/reflowed/new pages individually reviewed)
 - Architecture Ver.2.30 triplet structural synchronization: `PASS`; visual render inspection: `UNAVAILABLE_IN_CURRENT_WINDOWS_AND_WSL2_RUNTIME` (no visual PASS claimed)
