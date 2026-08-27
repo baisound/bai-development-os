@@ -42,6 +42,7 @@
     "test:lifecycle": "node --test tests/lifecycle/*.test.mjs tests/lifecycle/recovery/*.test.mjs",
     "test:design-only-closure": "node --test tests/lifecycle/phase1/design-only-closure.test.mjs tests/lifecycle/phase1/design-only-closure-schema.test.mjs tests/automation/canonical-status-binding.test.mjs tests/integration/task021-design-only-closure.test.mjs",
     "test:design-only-closure-ext4": "node --test tests/lifecycle/phase1/design-only-closure.test.mjs tests/lifecycle/phase1/design-only-closure-schema.test.mjs tests/lifecycle/phase1/lifecycle-store.test.mjs tests/lifecycle/migration.test.mjs tests/automation/canonical-status-binding.test.mjs tests/automation/autonomous-queue.test.mjs tests/dependency/dependency.test.mjs tests/integration/task021-design-only-closure.test.mjs",
+    "test:task021-key-acl": "node --test tests/security/task021-key-acl-provisioning.test.mjs",
     "check:boundaries": "node scripts/check-product-boundaries.mjs",
     "test:foundation-guard": "node --test tests/foundation-guard/*.test.mjs",
     "test:cost-guard": "node --test tests/cost-guard/*.test.mjs",

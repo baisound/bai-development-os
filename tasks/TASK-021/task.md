@@ -13,6 +13,7 @@
 - Baseline: `8e13c81a986adbe41be7cfa6f4ffa8bb72ab40fc`
 - Implementation head: `259152384596171023572e5f1545a29277f120ce`
 - Exact main merge: `d7532441f425f27303f6072624a80a454c74d84d` (PR `#33`)
+- Corrective Amendment: `TASK-021-ACL-CORRECTION-AMENDMENT-001 / ACL_CORRECTION_IMPLEMENTATION_PASS / DRAFT_PR_ONLY`; this does not reopen the completed lifecycle Core. PR #36's original private-file ACL usability PASS remains revoked as historical false Evidence; the corrected exact-nine ACL Evidence is separate.
 
 ## Owner directive
 

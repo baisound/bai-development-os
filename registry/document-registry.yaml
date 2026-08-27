@@ -474,8 +474,8 @@ documents:
   category: configuration
   authority: machine-readable-contract
   importance_level: B
-  sha256: b506f553820bfead524d954eb14b7cafc88c0fd077d8ab09e2a8588791e00c50
-  size_bytes: 6607
+  sha256: 033d70391a94bc65303d3a3700ec4fe7ed460fd0ef6828e9d356cd9d83712b22
+  size_bytes: 6703
   preferred_loading: on-demand
   status: CURRENT_IMPLEMENTATION_CONTRACT
   effective_date: '2026-08-08'
@@ -485,8 +485,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 24c7ba81fa444d7485102f189ec23d48d3c65f82bb896ee418df0e881ac3b598
-  size_bytes: 15429
+  sha256: 5a00aff372ea2e9479a139d6f6897884b8071744728898246ca6878b605fff27
+  size_bytes: 15663
   preferred_loading: read-first
 - document_id: F3B4F17ADE1CE039
   path: registry/context-loading-rules.md
@@ -503,8 +503,8 @@ documents:
   category: registry
   authority: navigation-aid
   importance_level: A
-  sha256: 9fd39d7f5d7b5b0ae05c2ca4438d2e8d0dbb4133d3e8d5df62f768aa0b1b5a92
-  size_bytes: 23095
+  sha256: a4bafc223e966caf2cbfb98017eb8e36ac1219a41c9f38f12280505b72245377
+  size_bytes: 23518
   preferred_loading: read-first
 - document_id: 903B34A9E98FB098
   path: registry/operational-improvements.md
@@ -8783,10 +8783,10 @@ documents:
   category: operation-runbook
   authority: owner-authorized-credential-provisioning-procedure
   importance_level: A
-  sha256: ce9733c57445c61710ceb220cd26ccbb45bbddad923d24838335d201f18705ba
-  size_bytes: 6309
+  sha256: d46c7bc5b23452735aa94f63a2ecee50974ccb10c2ff03fb17c908c31cebd9fd
+  size_bytes: 13107
   preferred_loading: read-first-or-current-phase
-  status: KEY_PROVISIONING_PASS
+  status: ORIGINAL_PASS_REVOKED_ACL_CORRECTION_IMPLEMENTATION_PASS
   effective_date: '2026-08-27'
 - document_id: 85A6E977280BE4CA
   path: tasks/TASK-021/generate-bai-voice-task001-trust-keys.mjs
@@ -8805,10 +8805,76 @@ documents:
   category: operation-script
   authority: owner-authorized-credential-provisioning-tool
   importance_level: A
-  sha256: 4f99879117c8d19868f78e36172fed6d5b8e3e35668afcf78fb4dbd6b5510be5
-  size_bytes: 2121
+  sha256: 6ffc1f31dd42c2121468128a4531f9a2225a67bd712f3129b97663279dcd3a55
+  size_bytes: 2316
   preferred_loading: current-phase-only
-  status: EXECUTED_KEY_PROVISIONING_PASS
+  status: EXECUTED_KEY_PROVISIONING_PASS_REVOKED_ZERO_ACE_EPERM
+  effective_date: '2026-08-27'
+- document_id: 0B00E65DF08D5FD0
+  path: tasks/TASK-021/key-acl-correction-amendment-2026-08-27.md
+  title: 'TASK-021 — Protected Trust Key ACL Correction Amendment'
+  category: task-record
+  authority: owner-authorized-corrective-amendment
+  importance_level: A
+  sha256: 657886538293c082be73b86a50c0bfb3d04fabd7ba53a80145e219a260d1b417
+  size_bytes: 6250
+  preferred_loading: read-first-or-current-phase
+  status: ACL_CORRECTION_IMPLEMENTATION_PASS_DRAFT_PR_ONLY
+  effective_date: '2026-08-27'
+- document_id: CADA060BDAE16FBC
+  path: tasks/TASK-021/repair-bai-voice-task001-trust-key-acl.ps1
+  title: 'TASK-021 BAI VOICE TASK-001 private-key ACL correction tool'
+  category: operation-script
+  authority: owner-authorized-acl-only-correction-tool
+  importance_level: A
+  sha256: e81c96d494202bc63b25c73991f509cec2528e270b37e9f5e81a1c38f4426d1e
+  size_bytes: 17362
+  preferred_loading: current-phase-only
+  status: REAL_KEY_ACL_REPAIR_AND_VERIFY_PASS
+  effective_date: '2026-08-27'
+- document_id: 79E333F4BBF305F3
+  path: tests/security/task021-key-acl-provisioning.test.mjs
+  title: 'TASK-021 protected trust key ACL correction regression tests'
+  category: test
+  authority: verification-evidence
+  importance_level: A
+  sha256: 6a168708c63d6baccd1aef751b89575e9ef39e58151d2219edb82ef7b178caf4
+  size_bytes: 22977
+  preferred_loading: current-phase-only
+  status: FOCUSED_17_OF_17_PASS
+  effective_date: '2026-08-27'
+- document_id: 92D18F8745FD1B8C
+  path: tasks/TASK-021/key-acl-correction-implementation-evidence-2026-08-27.md
+  title: 'TASK-021 — Protected Trust Key ACL Correction Implementation Evidence'
+  category: task-evidence
+  authority: implementation-evidence
+  importance_level: A
+  sha256: e3b6103b3afadd37154d14b58a7ea90e0b3331dc3d64b443a4ade3eb0b729833
+  size_bytes: 4494
+  preferred_loading: read-first-or-current-phase
+  status: ACL_CORRECTION_IMPLEMENTATION_PASS
+  effective_date: '2026-08-27'
+- document_id: 4BF9F150CB5E683E
+  path: tasks/TASK-021/key-acl-correction-critic-three-rounds-2026-08-27.md
+  title: 'TASK-021 — Protected Trust Key ACL Correction Critic Three-round Evidence'
+  category: task-evidence
+  authority: review-evidence
+  importance_level: A
+  sha256: 61e4defe4ec910aa82293cefd289f64f36b5b3122bdc9cddd358a46ad62cd9e9
+  size_bytes: 2185
+  preferred_loading: read-first-or-current-phase
+  status: ACL_CORRECTION_CRITIC_PASS_0C_0H
+  effective_date: '2026-08-27'
+- document_id: C993361F749581FC
+  path: tasks/TASK-021/key-acl-correction-judge-decision-2026-08-27.md
+  title: 'TASK-021 — Protected Trust Key ACL Correction Judge Decision'
+  category: task-evidence
+  authority: judge-evidence
+  importance_level: A
+  sha256: a8c2405021cbf32801468000855dd25b58a8a70e3665aa4349a9717c7de54f04
+  size_bytes: 1888
+  preferred_loading: read-first-or-current-phase
+  status: ACL_CORRECTION_JUDGE_PASS
   effective_date: '2026-08-27'
 - document_id: C8A1188F58971A99
   path: tasks/TASK-021/design-critic-three-rounds-2026-08-27.md
@@ -8893,8 +8959,8 @@ documents:
   category: task-summary
   authority: navigation-aid
   importance_level: A
-  sha256: ed77f287f81102fc062b769a229b55821fedc1cf5b9d401fa51abe6120c0a16c
-  size_bytes: 2869
+  sha256: 0c9bd13005c62ad60acaa919d2ec9b108412f16a2ffd21ebc182756fd9301ab1
+  size_bytes: 3344
   preferred_loading: read-first
   status: TASK021_COMPLETION_PASS_SUMMARY
   effective_date: '2026-08-27'
@@ -8904,8 +8970,8 @@ documents:
   category: task-record
   authority: current-task-definition
   importance_level: A
-  sha256: a76c91dbfe0c4c0afb08e92f1b491ce1bf2dc3394c8e97f3828185c5806f3e25
-  size_bytes: 3012
+  sha256: 97353446489a3440a55862b439246efdbdc6fbcdfea5d16da38f5925779642b6
+  size_bytes: 3328
   preferred_loading: read-first-or-current-phase
   status: COMPLETED_PR33_MERGED_TASK021_COMPLETION_PASS
   effective_date: '2026-08-27'
@@ -9187,11 +9253,11 @@ current_canonical_document_sets:
     machine: tasks/TASK-021/task.md
     summary: tasks/TASK-021/TASK-021.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: TASK021_COMPLETED_PR34_MERGED
+registry_status: TASK021_COMPLETED_PR34_MERGED_ACL_CORRECTION_PASS_DRAFT_PENDING
 registry_status_details:
-  documents: 754
+  documents: 760
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
   current_task: TASK-021 COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS / PR_34_CLOSURE_SYNC_MERGED_89D6A91323BF62248DAC893F7445DEBDD60D6EB7
-  next_task: 'NO IMPLICIT NEXT TASK; Consumer protected signer/verifier/Authority Ledger/Canonical Store binding/snapshot coordinator remains gated; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED'
+  next_task: 'NO IMPLICIT NEXT TASK; TASK-021 ACL correction implementation and real-key verification PASS, Draft PR publication authorized, Ready/merge separately gated; Consumer Canonical mutation remains forbidden; Production Activation BLOCKED'
