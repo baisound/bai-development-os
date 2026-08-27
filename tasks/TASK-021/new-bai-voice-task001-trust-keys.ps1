@@ -11,6 +11,13 @@ $publicBase = Join-Path $KeyRoot 'Public'
 $privateTarget = Join-Path $privateBase 'bai-voice-app-task-001'
 $publicTarget = Join-Path $publicBase 'bai-voice-app-task-001'
 $generator = Join-Path $PSScriptRoot 'generate-bai-voice-task001-trust-keys.mjs'
+$aclRepair = Join-Path $PSScriptRoot 'repair-bai-voice-task001-trust-key-acl.ps1'
+$canonicalKeyRoot = [System.IO.Path]::GetFullPath('C:\key').TrimEnd('\')
+$resolvedKeyRoot = [System.IO.Path]::GetFullPath($KeyRoot).TrimEnd('\')
+
+if (-not $resolvedKeyRoot.Equals($canonicalKeyRoot, [System.StringComparison]::OrdinalIgnoreCase)) {
+  throw "Key provisioning is restricted to the exact Owner-authorized root: $canonicalKeyRoot"
+}
 
 if (-not (Test-Path -LiteralPath $privateBase -PathType Container)) {
   throw "Private key base directory is missing: $privateBase"
@@ -21,10 +28,8 @@ if (-not (Test-Path -LiteralPath $publicBase -PathType Container)) {
 if (-not (Test-Path -LiteralPath $generator -PathType Leaf)) {
   throw "Generator is missing: $generator"
 }
-
-$privateBaseOwner = (Get-Acl -LiteralPath $privateBase).Owner
-if ([string]::IsNullOrWhiteSpace($privateBaseOwner)) {
-  throw 'Could not resolve the existing Private directory owner.'
+if (-not (Test-Path -LiteralPath $aclRepair -PathType Leaf)) {
+  throw "ACL repair and verifier is missing: $aclRepair"
 }
 
 & node $generator --private-dir $privateTarget --public-dir $publicTarget
@@ -32,19 +37,9 @@ if ($LASTEXITCODE -ne 0) {
   throw "Key generation failed with exit code $LASTEXITCODE"
 }
 
-$aclArguments = @(
-  $privateTarget,
-  '/inheritance:r',
-  '/grant:r',
-  "${privateBaseOwner}:(OI)(CI)F",
-  '*S-1-5-18:(OI)(CI)F',
-  '*S-1-5-32-544:(OI)(CI)F',
-  '/T',
-  '/C'
-)
-& icacls.exe @aclArguments | Out-Host
+& $aclRepair -KeyRoot $KeyRoot
 if ($LASTEXITCODE -ne 0) {
-  throw "Private key ACL hardening failed with exit code $LASTEXITCODE"
+  throw "Private key ACL hardening and verification failed with exit code $LASTEXITCODE"
 }
 
 $privateFiles = @(Get-ChildItem -LiteralPath $privateTarget -Recurse -File -Filter '*.pem')
