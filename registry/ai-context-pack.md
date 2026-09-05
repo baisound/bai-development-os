@@ -6,7 +6,7 @@
 - Product root: `/home/baisound/bai-development-os`
 - Reference Consumer: `/home/baisound/projects/javascript-roulette`
 - TASK-004〜015: `COMPLETED`
-- Current Task: `TASK-021 / COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`; exact Canonical completion sync `89d6a91323bf62248dac893f7445debdd60d6eb7`
+- Current Task: `TASK-022 / BAI-OS-GPT6-ASTRA-OPERATING-RULES-001 / DESIGN_INTEGRATED / VALIDATION_PASS`
 - Current route: `TASK-018 / BAI-OS-AUTONOMY-001 / COMPLETED`; exact PR #23 merge, annotated `v1.1.0`, stable source-only GitHub Release and publication-branch cleanup are verified
 - Current design intake: `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001 / TASK-019 / COMPLETED / PR_29_MERGED_AT_D30F94A53D5C3D51CB8ED9D9F84FE226CE7E9BF0`
 - Current Consumer: BAI VIDEO PRODUCTION R2/R3 complete; bounded R4 local Comfy adapter `HOSTED_CLOSED` at exact main `7d6486059c468009042e4c186d54b566d6e1477e`; native H3 completion `PARKED_TO_SAFE_RUNTIME_REVIEW`
@@ -14,6 +14,19 @@
 - Roadmap authority: Architecture Ver.2.30 Part XV + Part XXXI; TASK-019 is inserted after completed TASK-018 and before any TASK-017 resume; `57 / 57 PASS`
 - Current development overlay: `architecture/BAI_Development_OS_Post_TASK020_Design_Only_Closure_Roadmap_Refinement_Ver1.0.md`; TASK-021 adds an honest design-only Canonical closure route after completed TASK-020 without reopening earlier Tasks
 - Current corrective overlay: `TASK-021-ACL-CORRECTION-AMENDMENT-001 / ACL_CORRECTION_IMPLEMENTATION_PASS / DRAFT_PR_ONLY`; PR #36's original key usability PASS remains revoked, while the exact-nine ACL correction and independent verification now pass. Consumer remains unchanged at revision 13 pending signed runtime artifacts.
+
+## TASK-022 mandatory loading order
+
+Load only when the selected model ID is exactly `gpt-6-astra` or the Task concerns its operating profile:
+
+1. `registry/current-state.md`
+2. active Task summary and direct dependency contracts
+3. `tasks/TASK-022/TASK-022.summary.md`
+4. `registry/gpt-6-astra-operating-rules.md`
+5. `specifications/TASK-022_BAI_Development_OS_GPT6_Astra_Operating_Rules_Ver1.0.md` when exact rationale, failure states or rollback is required
+6. `tasks/TASK-022/source-adjudication-2026-09-06.md` only when source provenance or the X-thread mapping is required
+
+The profile applies after vendor-neutral Model Control selects `gpt-6-astra`. It does not make GPT-6 Astra the default, grant provider authority or weaken Authority, Safety, Human Gate, Context Economy, Critic/Judge independence, test floors or Evidence requirements. Before paid or production use, revalidate current official OpenAI compatibility and pricing. No API call, credential creation, paid activity, Consumer mutation, Release, Deploy, Tag or Production Activation is authorized by TASK-022.
 
 ## TASK-021 mandatory loading order
 
