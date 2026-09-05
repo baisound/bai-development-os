@@ -26,7 +26,8 @@
 - TASK-019: `COMPLETED / P0_MAXIMUM / TASK019_COMPLETION_PASS`; design identity `BAI-OS-CONSUMER-DESIGN-GOVERNANCE-001`; implementation PR #29 merged at `d30f94a53d5c3d51cb8ed9d9f84fe226ce7e9bf0`
 - TASK-020: `COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS`; design identity `BAI-OS-AUTONOMOUS-WORKLANE-DURABLE-DISPATCH-001`; exact main merge `304b70ab5805c825bd35cf902fd2ef96290f9859`
 - TASK-021: `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`; design identity `BAI-OS-DESIGN-ONLY-CLOSURE-001`; implementation merge `d7532441f425f27303f6072624a80a454c74d84d`; Canonical completion sync `89d6a91323bf62248dac893f7445debdd60d6eb7`
-- Current development route: `TASK-021-ACL-CORRECTION-AMENDMENT-001 / OWNER_AUTHORIZED / DRAFT_PR_ONLY`; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized routes
+- TASK-022: `DESIGN_INTEGRATED / VALIDATION_PASS`; design identity `BAI-OS-GPT6-ASTRA-OPERATING-RULES-001`; exact-model conditional profile only
+- Current development route: `TASK-022 / OWNER_DIRECTED / DESIGN_ONLY`; TASK-021 ACL correction, TASK-016 Phase 1+ and TASK-017 resume remain separate routes
 - Permanent model-routing vendor policy: unchanged
 - Last Updated: `2026-08-12`
 - Last Updated by P0 insertion: `2026-08-13`
@@ -47,6 +48,18 @@
 - Last Updated by TASK-020 Ready CI, PR #31 merge and completion closure: `2026-08-16`
 - Last Updated by TASK-021 design-only closure implementation checkpoint: `2026-08-27`
 - Last Updated by TASK-021 PR #33 main integration Evidence: `2026-08-27`
+- Last Updated by TASK-022 GPT-6 Astra operating-rules design integration: `2026-09-06`
+
+## TASK-022 GPT-6 Astra Operating Rules — 2026-09-06
+
+- Owner direction: incorporate the supplied X thread, including numbered replies `1` through `7`, into GPT-6 use rules.
+- Design: `specifications/TASK-022_BAI_Development_OS_GPT6_Astra_Operating_Rules_Ver1.0.md`.
+- Operational profile: `registry/gpt-6-astra-operating-rules.md`, loaded only after exact `gpt-6-astra` selection.
+- Source adjudication: `tasks/TASK-022/source-adjudication-2026-09-06.md`; X is secondary Evidence, current official OpenAI documentation controls technical compatibility.
+- Preserved boundaries: vendor-neutral routing order, Authority/Safety/Human Gates, Context Economy, risk-scaled testing and observed-cost Evidence.
+- No provider call, credential, paid execution, default-model promotion, Consumer mutation, Release, Deploy, Tag or Production Activation is authorized.
+- Validation: existing Model Control `10/10 PASS`; seven-reply coverage and required paths `PASS`; final `git diff --check` `PASS`. The isolated-clone Product Boundary check is `NOT_CONFIRMED` because its required `.bai-os/project.json` Consumer adapter is absent.
+- Status: `DESIGN_INTEGRATED / VALIDATION_PASS`.
 
 ## TASK-021 Design-only Canonical Closure — 2026-08-27
 

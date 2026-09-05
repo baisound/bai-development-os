@@ -9096,6 +9096,72 @@ documents:
   preferred_loading: read-first-or-current-phase
   status: CURRENT_TASK021_CANDIDATE
   effective_date: '2026-08-27'
+- document_id: 678C011673AC104C
+  path: specifications/TASK-022_BAI_Development_OS_GPT6_Astra_Operating_Rules_Ver1.0.md
+  title: 'TASK-022 — BAI Development OS GPT-6 Astra Operating Rules Ver.1.0'
+  category: specification
+  authority: machine-readable-canonical-candidate
+  importance_level: A
+  sha256: 46bfd8faa37fafd3a2b264a24b87dcdd2360da01ea3d4d72eb32438270f1129c
+  size_bytes: 7450
+  preferred_loading: read-first-or-current-phase
+  status: CURRENT_TASK022_DESIGN
+  effective_date: '2026-09-06'
+- document_id: 9ECA03DB53A5BAA8
+  path: registry/gpt-6-astra-operating-rules.md
+  title: 'GPT-6 Astra Operating Rules'
+  category: governance
+  authority: model-specific-operating-profile
+  importance_level: A
+  sha256: 8687cb03bea6cc81242466cd771a48aed7c4de2d2debf7270f9eb90373b0fbba
+  size_bytes: 7358
+  preferred_loading: read-first-when-gpt6-astra-selected
+  status: CURRENT_TASK022_OPERATING_PROFILE
+  effective_date: '2026-09-06'
+- document_id: DBEEA0DE7EE18542
+  path: tasks/TASK-022/task.md
+  title: 'TASK-022 — GPT-6 Astra Operating Rules'
+  category: task-record
+  authority: owner-directed-task-definition
+  importance_level: A
+  sha256: 248db6df869d8b09c104aecd3f15f55f92e90938a680ade35f45f4694246b2f5
+  size_bytes: 2128
+  preferred_loading: read-first-or-current-phase
+  status: DESIGN_INTEGRATED_VALIDATION_PASS
+  effective_date: '2026-09-06'
+- document_id: 3181DB12EF18941D
+  path: tasks/TASK-022/TASK-022.summary.md
+  title: 'TASK-022 Summary'
+  category: task-record
+  authority: current-task-summary
+  importance_level: A
+  sha256: abadcf3417bf90227023d401945aff30e0fc8cf6e4b80b82b67645857941acfb
+  size_bytes: 1288
+  preferred_loading: read-first-or-current-phase
+  status: DESIGN_INTEGRATED_VALIDATION_PASS
+  effective_date: '2026-09-06'
+- document_id: C8018F24E0E60ED5
+  path: tasks/TASK-022/source-adjudication-2026-09-06.md
+  title: 'TASK-022 — GPT-6 Astra Source Adjudication'
+  category: evidence
+  authority: source-adjudication
+  importance_level: A
+  sha256: 30a11b6bbe5c2301758ce37b9111dc30404c1ea1ebfdf17bc8d09bf783f0a6d2
+  size_bytes: 3174
+  preferred_loading: read-when-source-provenance-required
+  status: ACCEPT_WITH_AUTHORITY_AND_EVIDENCE_GUARDS
+  effective_date: '2026-09-06'
+- document_id: AC311E430C5395AF
+  path: tasks/TASK-022/validation-evidence-2026-09-06.md
+  title: 'TASK-022 — Validation Evidence'
+  category: task-record
+  authority: validation-evidence
+  importance_level: A
+  sha256: 47d271d081c70e62634c58c5b4dc2b58e8cf06029fd6b7858bfbc5ec49d6951a
+  size_bytes: 1499
+  preferred_loading: read-first-or-current-phase
+  status: TASK022_DESIGN_INTEGRATION_VALIDATION_PASS
+  effective_date: '2026-09-06'
 current_canonical_document_sets:
   effective_date: '2026-08-16'
   promotion_authority: Owner
@@ -9122,9 +9188,9 @@ current_canonical_document_sets:
   task_004_status: COMPLETED
   closure_status: CLOSURE_READY
   archive_status: READY_NOT_ARCHIVED
-  registry_sync_status: CURRENT_TASK020_COMPLETION_PASS
+  registry_sync_status: TASK022_DESIGN_INTEGRATION_VALIDATION_PASS
   commit_status: TASK020_PR31_MERGED_304B70AB5805C825BD35CF902FD2EF96290F9859
-  roadmap_expansion_status: TASK019_COMPLETE_TASK020_COMPLETE_TASK017_PAUSED
+  roadmap_expansion_status: TASK019_COMPLETE_TASK020_COMPLETE_TASK021_COMPLETE_TASK022_DESIGN_INTEGRATED_TASK017_PAUSED
   task_005_knowledge:
     document_id: TASK_005_KNOWLEDGE_OPERATING_SYSTEM
     version: '1.2'
@@ -9134,7 +9200,7 @@ current_canonical_document_sets:
     summary: specifications/TASK-005_BAI_Development_OS_Knowledge_Operating_System_Ver1.2.summary.md
   task_005_status: COMPLETED
   task_006_status: COMPLETED
-  next_canonical_route: NO IMPLICIT NEXT TASK; TASK-016 Phase 1+ and TASK-017 resume remain separately authorized; Production Activation BLOCKED
+  next_canonical_route: TASK-022 Owner-directed GPT-6 Astra operating-rules design integration; TASK-016 Phase 1+ and TASK-017 resume remain separate; Production Activation BLOCKED
   task_006_orchestration_automation:
     document_id: TASK_006_ORCHESTRATION_AUTOMATION_FOUNDATION
     version: '1.0'
@@ -9252,12 +9318,19 @@ current_canonical_document_sets:
     status: COMPLETED_PR33_MERGED_TASK021_COMPLETION_PASS
     machine: tasks/TASK-021/task.md
     summary: tasks/TASK-021/TASK-021.summary.md
+  task_022_status: DESIGN_INTEGRATED / VALIDATION_PASS
+  task_022_gpt6_astra_operating_rules:
+    document_id: TASK_022_GPT6_ASTRA_OPERATING_RULES
+    version: '1.0'
+    status: DESIGN_INTEGRATED_VALIDATION_PASS
+    machine: tasks/TASK-022/task.md
+    summary: tasks/TASK-022/TASK-022.summary.md
 product_root: /home/baisound/bai-development-os
-registry_status: TASK021_COMPLETED_PR34_MERGED_ACL_CORRECTION_PASS_DRAFT_PENDING
+registry_status: TASK022_DESIGN_INTEGRATION_VALIDATION_PASS
 registry_status_details:
-  documents: 760
+  documents: 766
   missing: 0
   hash_size_mismatch: 0
   current_architecture: '2.30'
-  current_task: TASK-021 COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS / PR_34_CLOSURE_SYNC_MERGED_89D6A91323BF62248DAC893F7445DEBDD60D6EB7
-  next_task: 'NO IMPLICIT NEXT TASK; TASK-021 ACL correction implementation and real-key verification PASS, Draft PR publication authorized, Ready/merge separately gated; Consumer Canonical mutation remains forbidden; Production Activation BLOCKED'
+  current_task: TASK-022 / BAI-OS-GPT6-ASTRA-OPERATING-RULES-001 / DESIGN_INTEGRATED / VALIDATION_PASS
+  next_task: 'NO IMPLICIT NEXT TASK; GPT-6 Astra provider activation, paid execution, default-route promotion, Consumer mutation and Production Activation remain unauthorized'

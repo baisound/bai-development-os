@@ -38,8 +38,10 @@ Consumer repositories such as `/home/baisound/projects/javascript-roulette` are 
 - TASK-018 Codex Autonomous Development Control Plane: `COMPLETED / P0_MAXIMUM`; Phase G/H2/I1 passed and OS `v1.1.0` was published; append-only BAI VIDEO PRODUCTION supplements record `v0.20.1` TASK-036/M3B closure and the later R2/R3 plus bounded R4 adapter progression without reopening TASK-018
 - TASK-019 Consumer Design Intake, Roadmap Reconciliation & Acceptance Assurance OS: `COMPLETED / TASK019_COMPLETION_PASS`
 - TASK-020 Autonomous Worklane & Durable Dispatch OS: `COMPLETED / PR_31_MERGED / TASK020_COMPLETION_PASS`
+- TASK-021 Design-only Canonical Closure Lifecycle: `COMPLETED / PR_33_MERGED / TASK021_COMPLETION_PASS`
+- TASK-022 GPT-6 Astra Operating Rules: `DESIGN_INTEGRATED / VALIDATION_PASS`; exact-model conditional profile only
 
-TASK-004〜015 and TASK-018〜020 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. No next Task is inferred by TASK-020 completion. For current Consumer position, prefer the R2-R4 supplement; the earlier v0.20.1 supplement remains release/TASK-036 provenance. Production ACME/public activation remains separately gated.
+TASK-004〜015 and TASK-018〜021 are `COMPLETED`. TASK-016 Phase 0 is completed and Phase 1+ remains unauthorized. TASK-017 is paused through its 2026-08-13 pause/resume decision. TASK-022 is the current Owner-directed design-only route. For current Consumer position, prefer the R2-R4 supplement; the earlier v0.20.1 supplement remains release/TASK-036 provenance. Production ACME/public activation remains separately gated.
 
 ## CalibrationOS loading rule
 
@@ -50,6 +52,10 @@ For TASK-014 behavior, load `tasks/TASK-014/TASK-014.summary.md` first. Load `sp
 Architecture Ver.2.30 Part XV is the current consolidated roadmap scope and Part XXXI records the Owner-directed TASK-019 insertion after completed TASK-018 and before any separate TASK-017 resume. The lossless checker preserves `57 / 57` accumulated source sections. Historical addenda and the earlier current-position overlay remain provenance.
 
 The post-TASK-019 TASK-020 refinement is the current development overlay. Load `tasks/TASK-020/TASK-020.summary.md`, then its Final Plan and exact source/tests. It does not authorize Release, Deploy, Production Activation, Consumer mutation or external/native/paid effects.
+
+## GPT-6 Astra loading rule
+
+When the selected model is exactly `gpt-6-astra`, load the active Task first and then `registry/gpt-6-astra-operating-rules.md`. Load the TASK-022 specification only when exact compatibility, rationale, failure-state or rollback detail is required. The profile does not select the model or authorize provider use. Revalidate current official OpenAI guidance before paid or production use.
 
 ## Current verification baseline
 
