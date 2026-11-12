@@ -72,6 +72,10 @@ Every canonical artifact MUST include:
 - Known Limitations, when applicable
 - Handoff or Next-Gate Information, when applicable
 
+## UI work
+
+When a task creates, changes or reviews a user interface, load `common/skills/bai-ux-guard/SKILL.md` (BAI UX Guard, Owner 2026-11-12) and record its pre-ship gate as PASS / FAIL / NOT TESTED. Do not load it for non-UI work. Consumer repositories reference it from their `AGENTS.md` instead of copying it.
+
 ## Historical evidence rule
 
 Historical task evidence is read-only.
