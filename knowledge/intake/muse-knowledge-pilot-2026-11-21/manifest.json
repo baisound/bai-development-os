@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "intake_id": "KI-240894ef25f018686dcf53c9",
+  "created_at": "2026-11-21T00:00:00.000Z",
+  "state": "INTAKE_SUBMITTED",
+  "source": {
+    "kind": "file",
+    "snapshot_sha256": "sha256:240894ef25f018686dcf53c997da1fe6003a4b606dc6f69f7926f5d63c645926",
+    "raw_source_committed": true
+  },
+  "provenance_completeness": "DECLARED",
+  "evidence_count": 3,
+  "candidate_count": 6,
+  "canonical_authority": false,
+  "linked_issue": "https://github.com/baisound/bai-development-os/issues/40",
+  "note": "KnowledgeOS候補3件（K01-K03）とCalibrationOS候補3件（C01-C03）のMarkdown候補原稿。オーナー承認（2026-11-21）により intake へ投入したもので、候補投入だけでは何も ACTIVE 化されない。正式取込時に KnowledgeOS 側は JSON リビジョンへ変換する想定。"
+}
