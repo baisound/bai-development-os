@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "intake_id": "KI-13aa8d271933b94109101dd2",
+  "created_at": "2026-11-21T00:00:00.000Z",
+  "state": "INTAKE_SUBMITTED",
+  "source": {
+    "kind": "file",
+    "snapshot_sha256": "sha256:13aa8d271933b94109101dd21d6d60a9dfd895296a79025f33b0bbffba0a2b53",
+    "raw_source_committed": true
+  },
+  "provenance_completeness": "DECLARED",
+  "evidence_count": 10,
+  "candidate_count": 10,
+  "canonical_authority": false,
+  "linked_issue": "https://github.com/baisound/bai-development-os/issues/40",
+  "note": "KnowledgeOS候補8件（K04-K11）とCalibrationOS候補2件（C04-C05）のMarkdown候補原稿。パイロット（muse-knowledge-pilot-2026-11-21、PR #41）に続く第2バッチ。オーナー指示（2026-11-21「ナレッジを全て回収して、コミットしてしまいたい」）により intake へ投入したもので、候補投入だけでは何も ACTIVE 化されない。正式取込時に KnowledgeOS 側は JSON リビジョンへ変換する想定。snapshot_sha256 は candidates/ 内10ファイル（ファイル名昇順）の内容連結に対する SHA-256。evidence_count は本バッチが根拠として引用する一次情報・記録の distinct な出所数（宣言値）。"
+}
